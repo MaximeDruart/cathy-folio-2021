@@ -8,6 +8,8 @@ const store = (set, get) => ({
     !get().isMenuOpen ? enableBodyScroll("[data-lg-smooth]") : clearAllBodyScrollLocks()
     set((state) => ({ isMenuOpen: !state.isMenuOpen }))
   },
+  isDarkMode: true,
+  toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
 })
 
 // allows the use of the redux devtools extension with zustand

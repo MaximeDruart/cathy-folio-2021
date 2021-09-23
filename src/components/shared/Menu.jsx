@@ -11,7 +11,7 @@ const StyledMenu = styled.div`
   z-index: 90;
   top: 0;
   left: 0;
-  background: black;
+  background: ${({ theme }) => theme.colors.background};
   * {
     color: white;
   }

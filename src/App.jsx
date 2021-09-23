@@ -1,15 +1,56 @@
-import React, { useEffect } from "react"
-import { useHistory } from "react-router"
+import React, { useEffect, useMemo } from "react"
+import { useHistory, Switch, Route } from "react-router"
 import luge from "@waaark/luge"
 
-const App = ({ children }) => {
+import projectData from "./projectsData"
+import Loader from "./components/shared/Loader"
+import Header from "./components/shared/Header"
+import Menu from "./components/shared/Menu"
+import MouseFollower from "./components/shared/MouseFollower"
+
+import Home from "./components/pages/Home"
+import About from "./components/pages/About"
+import Works from "./components/pages/Works"
+import Archives from "./components/pages/Archives"
+import ProjectDetail from "./components/projects/ProjectDetail"
+import StyleSwitcher from "./components/shared/StyleSwitcher"
+
+const App = () => {
   let history = useHistory()
+
+  let projectRoutes = useMemo(
+    () =>
+      projectData.map((project, index) => (
+        <Route
+          path={`/works/${project.path}`}
+          key={index}
+          component={(props) => <ProjectDetail index={index} project={project} {...props} />}
+        />
+      )),
+    []
+  )
+
   useEffect(() => {
     history.listen(() => {
       luge.lifecycle.refresh()
     })
   }, [])
-  return <div>{children}</div>
+  return (
+    <>
+      <MouseFollower />
+      <Loader />
+      <Header />
+      <StyleSwitcher />
+      <Menu />
+      <Switch>
+        {projectRoutes}
+        <Route path="/works" exact component={Works} />
+        <Route path="/about" exact component={About} />
+        <Route path="/archives" exact component={Archives} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </>
+  )
 }
 
 export default App
