@@ -21,7 +21,7 @@ const StyleSwitcher = () => {
     <StyledStyleSwitcher>
       <button className="Color">COLOR</button>
       <button onClick={toggleDarkMode} className="theme-toggle">
-        {isDarkMode ? "light" : "dark"}
+        {isDarkMode ? "LIGHT MODE" : "DARK MODE"}
       </button>
     </StyledStyleSwitcher>
   )

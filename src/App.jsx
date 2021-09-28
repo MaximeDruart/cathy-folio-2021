@@ -42,13 +42,15 @@ const App = () => {
       <Header />
       <StyleSwitcher />
       <Menu />
-      <Switch>
-        {projectRoutes}
-        <Route path="/works" exact component={Works} />
-        <Route path="/about" exact component={About} />
-        <Route path="/archives" exact component={Archives} />
-        <Route path="/" component={Home} />
-      </Switch>
+      <div data-lg-smooth>
+        <Switch>
+          {projectRoutes}
+          <Route path="/works" exact component={Works} />
+          <Route path="/about" exact component={About} />
+          <Route path="/archives" exact component={Archives} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </div>
     </>
   )
 }

@@ -1,11 +1,13 @@
 import { css } from "styled-components"
 
-const lightTheme = {}
+const darkTheme = {}
 
-lightTheme.colors = {
-  background: "#FFF",
-  textStandard: "#E2E2E2",
-  textDisabled: "BEBEBE",
+darkTheme.colors = {
+  background: "#000",
+  text: {
+    standard: "#E2E2E2",
+    disabled: "BEBEBE",
+  },
   primary1: "#7D63FF",
   primary2: "6647FF",
   primary3: "441FFF",
@@ -29,9 +31,9 @@ lightTheme.colors = {
   warning1: "FFCC26",
 }
 
-lightTheme.textStyles = {
+darkTheme.textStyles = {
   h1: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 72px;
@@ -40,7 +42,7 @@ lightTheme.textStyles = {
     letter-spacing: 0.03em;
   `,
   h2: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 56px;
@@ -58,7 +60,7 @@ lightTheme.textStyles = {
     letter-spacing: 0.01em;
   `,
   h4: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 38px;
@@ -67,7 +69,7 @@ lightTheme.textStyles = {
     letter-spacing: 0.01em;
   `,
   h5: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -85,7 +87,7 @@ lightTheme.textStyles = {
     letter-spacing: 0.07em;
   `,
   text: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -94,7 +96,7 @@ lightTheme.textStyles = {
     letter-spacing: 0.01em;
   `,
   smallText: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -114,4 +116,4 @@ lightTheme.textStyles = {
   `,
 }
 
-export default lightTheme
+export default darkTheme

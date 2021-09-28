@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import useStore from "../../store"
+import CathyLogoSVG from "../../assets/icons/cathy.svg?component"
 
 const StyledHeader = styled.div`
   position: fixed;
@@ -9,22 +11,59 @@ const StyledHeader = styled.div`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  top: 20px;
+  top: 40px;
   z-index: 100;
-  padding: 0 20px;
+  padding: 0 40px;
   .logo {
+    width: 40px;
+    height: 40px;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: red;
+    }
   }
   .menu-toggle {
+    width: 40px;
+    height: 40px;
+    color: white;
+
+    .top,
+    .bottom {
+      width: 100%;
+      height: 2px;
+      background: white;
+    }
+    .bottom {
+      width: 50%;
+      margin-top: 8px;
+      transition: all ease-in-out 0.3s;
+    }
+
+    &.menu-opened {
+      .bottom {
+        width: 65%;
+      }
+    }
+    &:hover {
+      .bottom {
+        width: 80%;
+      }
+    }
   }
 `
 
 const Header = () => {
   const toggleMenu = useStore((state) => state.toggleMenu)
+  const isMenuOpen = useStore((state) => state.isMenuOpen)
   return (
     <StyledHeader>
-      <button className="logo">LOGO</button>
-      <button onClick={toggleMenu} className="menu-toggle">
-        MENU
+      <Link to="/" className="logo">
+        <CathyLogoSVG fill="#fff" />
+      </Link>
+      <button onClick={toggleMenu} className={`menu-toggle ${isMenuOpen ? "menu-opened" : ""}`}>
+        <div className="top"></div>
+        <div className="bottom"></div>
       </button>
     </StyledHeader>
   )

@@ -4,8 +4,10 @@ const darkTheme = {}
 
 darkTheme.colors = {
   background: "#000",
-  textStandard: "#E2E2E2",
-  textDisabled: "BEBEBE",
+  text: {
+    standard: "#E2E2E2",
+    disabled: "BEBEBE",
+  },
   primary1: "#7D63FF",
   primary2: "6647FF",
   primary3: "441FFF",
@@ -31,7 +33,7 @@ darkTheme.colors = {
 
 darkTheme.textStyles = {
   h1: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 72px;
@@ -40,7 +42,7 @@ darkTheme.textStyles = {
     letter-spacing: 0.03em;
   `,
   h2: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 56px;
@@ -58,7 +60,7 @@ darkTheme.textStyles = {
     letter-spacing: 0.01em;
   `,
   h4: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 38px;
@@ -67,7 +69,7 @@ darkTheme.textStyles = {
     letter-spacing: 0.01em;
   `,
   h5: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
@@ -85,7 +87,7 @@ darkTheme.textStyles = {
     letter-spacing: 0.07em;
   `,
   text: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -94,7 +96,7 @@ darkTheme.textStyles = {
     letter-spacing: 0.01em;
   `,
   smallText: css`
-    font-family: GilroyRegular;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

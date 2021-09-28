@@ -150,6 +150,41 @@ export default createGlobalStyle`
       -moz-box-shadow: none;
       box-shadow: none;
     }
+    
+
+    button {
+      border: none;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      overflow: visible;
+
+      background: transparent;
+
+      /* inherit font & color from ancestor */
+      color: inherit;
+      font: inherit;
+
+      /* Normalize line-height. Cannot be changed from normal in Firefox 4+. */
+      line-height: normal;
+
+      /* Corrects font smoothing for webkit */
+      -webkit-font-smoothing: inherit;
+      -moz-osx-font-smoothing: inherit;
+
+      /* Corrects inability to style clickable input types in iOS */
+      -webkit-appearance: none;
+    }
+
+    a {
+      text-decoration : none;
+    }
+
+    /* Remove excess padding and border in Firefox 4+ */
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
 
     /* FONTS */
 
@@ -174,17 +209,18 @@ export default createGlobalStyle`
     /* GLOBAL STYLES */
 
     * {
-    box-sizing: border-box;
+      box-sizing: border-box;
+      /* cursor: none; */
     }
 
     html::-webkit-scrollbar {
-    display: none;
+      display: none;
     }
 
     /* Hide scrollbar for IE, Edge and Firefox */
     html {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
 
 `

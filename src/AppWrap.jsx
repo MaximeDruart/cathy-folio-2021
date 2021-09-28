@@ -12,14 +12,12 @@ import App from "./App"
 const AppWrap = () => {
   const isDarkMode = useStore((state) => state.isDarkMode)
   return (
-    <div data-lg-smooth>
-      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-        <GlobalStyle />
-        <Router>
-          <App></App>
-        </Router>
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <GlobalStyle />
+      <Router>
+        <App></App>
+      </Router>
+    </ThemeProvider>
   )
 }
 
