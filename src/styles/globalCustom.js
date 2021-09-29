@@ -6,45 +6,54 @@ export default css`
     font-style: normal;
     font-weight: normal;
     font-size: 72px;
-    line-height: 140.62%;
+    line-height: 110.62%;
     /* or 101px */
     letter-spacing: 0.03em;
+    span.important_word {
+      font-size: 72px;
+      font-family: "SaolDisplaySemiboldItalic";
+      color: ${({ theme }) => theme.colors.primary1};
+    }
+    span.second_line {
+      font-size: 72px;
+      transform: translate3d(30%, 0, 0);
+    }
+    span.third_line {
+      font-size: 72px;
+      flex-direction: row;
+      transform: translate3d(10%, 0, 0);
+    }
   }
   .text-h2 {
-    font-family: NeueMontrealRegular;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 56px;
-    line-height: 140.62%;
-    /* identical to box height, or 79px */
-    letter-spacing: 0.0125em;
+    font-family: "NeueMontrealRegular";
+    font-size: 60px;
+    color: ${({ theme }) => theme.colors.text.standard};
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+    line-height: 64px;
+    span.important_word {
+      font-family: "SaolDisplaySemiboldItalic";
+      color: ${({ theme }) => theme.colors.primary1};
+      font-size: 60px;
+    }
   }
   .text-h3 {
-    font-family: GilroyMedium;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 140.62%;
-    /* identical to box height, or 67px */
-    letter-spacing: 0.01em;
+    font-family: "NeueMontrealLight";
+    font-size: 30px;
+    color: ${({ theme }) => theme.colors.text.standard};
+    margin-bottom: 2rem;
   }
   .text-h4 {
-    font-family: NeueMontrealRegular;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 38px;
-    line-height: 140.62%;
-    /* or 53px */
-    letter-spacing: 0.01em;
+    color: ${({ theme }) => theme.colors.text.standard};
+    font-size: 20px;
+    font-family: 6px;
   }
   .text-h5 {
-    font-family: NeueMontrealRegular;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 140.62%;
-    /* or 42px */
-    letter-spacing: 0.01em;
+    font-family: "SaolDisplayLight";
+    font-size: 2rem;
+    margin-top: 1.4rem;
+    line-height: 2.2rem;
+    color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h6 {
     font-family: GilroyMedium;
@@ -56,13 +65,11 @@ export default css`
     letter-spacing: 0.07em;
   }
   .text-regular {
-    font-family: NeueMontrealRegular;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 140.62%;
-    /* identical to box height, or 22px */
-    letter-spacing: 0.01em;
+    color: ${({ theme }) => theme.colors.text.standard};
+    // letter-spacing: 0.2rem;
+    line-height: 18px;
+    font-size: 14px;
+    font-family: "NeueMontrealRegular";
   }
   .text-small {
     font-family: NeueMontrealRegular;

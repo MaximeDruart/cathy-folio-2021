@@ -15,12 +15,12 @@ const StyledHeader = styled.div`
   z-index: 100;
   padding: 0 40px;
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     svg {
       width: 100%;
       height: 100%;
-      fill: red;
+      fill: ${({ theme }) => theme.colors.primary1};
     }
   }
   .menu-toggle {
