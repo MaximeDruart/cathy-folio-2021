@@ -1,9 +1,10 @@
-import NeueMontrealLight from "./assets/fonts/NeueMontreal-Light.otf"
-import NeueMontrealRegular from "./assets/fonts/NeueMontreal-Regular.otf"
-import SaolDisplayLight from "./assets/fonts/SaolDisplay-Light.ttf"
-import SaolDisplaySemiboldItalic from "./assets/fonts/SaolDisplay-SemiboldItalic.ttf"
+import NeueMontrealLight from "../assets/fonts/NeueMontreal-Light.otf"
+import NeueMontrealRegular from "../assets/fonts/NeueMontreal-Regular.otf"
+import SaolDisplayLight from "../assets/fonts/SaolDisplay-Light.ttf"
+import SaolDisplaySemiboldItalic from "../assets/fonts/SaolDisplay-SemiboldItalic.ttf"
 
 import { createGlobalStyle } from "styled-components"
+import globalCustom from "./globalCustom"
 
 export default createGlobalStyle`
     /* CSS RESET */
@@ -223,4 +224,5 @@ export default createGlobalStyle`
       scrollbar-width: none; /* Firefox */
     }
 
+    ${globalCustom}
 `

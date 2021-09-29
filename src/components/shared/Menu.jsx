@@ -28,7 +28,6 @@ const StyledMenu = styled(motion.div)`
       overflow: hidden;
       margin: 25px 0;
       li {
-        ${({ theme }) => theme.textStyles.h1};
         line-height: 0.9;
         text-transform: capitalize;
         a {
@@ -93,6 +92,7 @@ const Menu = () => {
             {pages.map((link, index) => (
               <motion.div key={index} className="wrapper">
                 <motion.li
+                  className="text-h1"
                   variants={item}
                   exit={item.hidden}
                   transition={{ type: "tween", duration: 0.4, ease: "circOut" }}

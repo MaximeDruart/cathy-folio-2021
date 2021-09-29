@@ -1,38 +1,7 @@
 import { css } from "styled-components"
 
-const darkTheme = {}
-
-darkTheme.colors = {
-  background: "#000",
-  text: {
-    standard: "#E2E2E2",
-    disabled: "BEBEBE",
-  },
-  primary1: "#7D63FF",
-  primary2: "6647FF",
-  primary3: "441FFF",
-  primary4: "2900F5",
-  primary5: "AA99FF",
-  primary6: "#CCC2FF",
-  primary7: "EEEBFF",
-  secondary1: "2A2A3C",
-  secondary2: "3B3B54",
-  secondary3: "191924",
-  secondary4: "08080C",
-  secondary5: "B8B8C0",
-  secondary6: "5D5D83",
-  secondary7: "707099",
-  neutral1: "CCCCCC",
-  neutral2: "FFFFFF",
-  neutral3: "EBEBEB",
-  neutral4: "E0E0E0",
-  negative1: "F5704F",
-  success1: "58BF7E",
-  warning1: "FFCC26",
-}
-
-darkTheme.textStyles = {
-  h1: css`
+export default css`
+  .text-h1 {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
@@ -40,8 +9,8 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* or 101px */
     letter-spacing: 0.03em;
-  `,
-  h2: css`
+  }
+  .text-h2 {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
@@ -49,8 +18,8 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* identical to box height, or 79px */
     letter-spacing: 0.0125em;
-  `,
-  h3: css`
+  }
+  .text-h3 {
     font-family: GilroyMedium;
     font-style: normal;
     font-weight: normal;
@@ -58,8 +27,8 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* identical to box height, or 67px */
     letter-spacing: 0.01em;
-  `,
-  h4: css`
+  }
+  .text-h4 {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
@@ -67,8 +36,8 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* or 53px */
     letter-spacing: 0.01em;
-  `,
-  h5: css`
+  }
+  .text-h5 {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
@@ -76,8 +45,8 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* or 42px */
     letter-spacing: 0.01em;
-  `,
-  h6: css`
+  }
+  .text-h6 {
     font-family: GilroyMedium;
     font-style: normal;
     font-weight: normal;
@@ -85,8 +54,8 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* or 28px */
     letter-spacing: 0.07em;
-  `,
-  text: css`
+  }
+  .text-regular {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
@@ -94,8 +63,8 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* identical to box height, or 22px */
     letter-spacing: 0.01em;
-  `,
-  smallText: css`
+  }
+  .text-small {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
@@ -103,8 +72,9 @@ darkTheme.textStyles = {
     line-height: 140.62%;
     /* identical to box height, or 20px */
     letter-spacing: 0.01em;
-  `,
-  button: css`
+  }
+
+  .text-button {
     font-family: GilroyMedium;
     font-style: normal;
     font-weight: normal;
@@ -113,7 +83,24 @@ darkTheme.textStyles = {
     /* identical to box height, or 20px */
     letter-spacing: 0.06em;
     text-transform: uppercase;
-  `,
-}
+  }
 
-export default darkTheme
+  .margin-small {
+    margin: 8px;
+    @media screen and (min-width: 480px) {
+      margin: 12px;
+    }
+    @media screen and (min-width: 768px) {
+      margin: 12px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin: 18px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 20px;
+    }
+    @media screen and (min-width: 1600px) {
+      margin: 2vw;
+    }
+  }
+`
