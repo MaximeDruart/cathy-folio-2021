@@ -6,7 +6,7 @@ darkTheme.colors = {
   text: {
     standard: "#FFFFFF",
     disabled: "BEBEBE",
-  }
+  },
 }
 
 export default darkTheme

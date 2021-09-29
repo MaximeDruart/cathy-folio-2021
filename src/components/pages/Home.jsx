@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import FigmaLogoSVG from "../../assets/icons/figma.svg?component"
+import SketchLogoSVG from "../../assets/icons/sketch.svg?component"
 
 const StyledHome = styled.div`
   background: ${({ theme }) => theme.colors.background};
@@ -19,7 +21,7 @@ const StyledHome = styled.div`
       }
       img{
         position: absolute;
-        right: 10vw;
+        right: 0vw;
       }
     }
     &.one_word{
@@ -33,13 +35,16 @@ const StyledHome = styled.div`
     .visual_container {
       height: 100%;
       padding: 150px 0;
-      // background-color: red;
     }
     .text_container {
       width: 50%;
       p {
         margin-top: 16px;
         width: 80%;
+        margin-bottom: 20px;
+      }
+      h3{
+        margin-bottom: 14px;
       }
       .skill_container {
         display: flex;
@@ -96,7 +101,7 @@ const Home = () => {
         <img src="src/assets/img/placeholder.png" alt="intro"></img>
       </section>
       <section className="wrapper one_word">
-        <span>I am...</span>
+        <span className="big_word">I am...</span>
       </section>
       <section className="wrapper presentation">
         <div className="text_container">
@@ -113,8 +118,10 @@ const Home = () => {
               <span className="text-h4">Xd</span>
             </div>
             <div className="skill_content">
+              <FigmaLogoSVG></FigmaLogoSVG>
             </div>
             <div className="skill_content">
+              <SketchLogoSVG></SketchLogoSVG>
             </div>
             <div className="skill_content">
               <span className="text-h4">Ai</span>

@@ -59,7 +59,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Link to="/" className="logo">
-        <CathyLogoSVG fill="#fff" />
+        <CathyLogoSVG />
       </Link>
       <button onClick={toggleMenu} className={`menu-toggle ${isMenuOpen ? "menu-opened" : ""}`}>
         <div className="top"></div>

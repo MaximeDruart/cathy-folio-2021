@@ -1,25 +1,29 @@
 import { css } from "styled-components"
 
 export default css`
+  .big_word{
+    font-size: 100px;
+    font-family: NeueMontrealRegular;
+  }
   .text-h1 {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
-    font-size: 72px;
-    line-height: 110.62%;
+    font-size: 80px;
+    line-height: 84px;
     /* or 101px */
     letter-spacing: 0.03em;
     span.important_word {
-      font-size: 72px;
+      font-size: 80px;
       font-family: "SaolDisplaySemiboldItalic";
       color: ${({ theme }) => theme.colors.primary1};
     }
     span.second_line {
-      font-size: 72px;
+      font-size: 80px;
       transform: translate3d(30%, 0, 0);
     }
     span.third_line {
-      font-size: 72px;
+      font-size: 80px;
       flex-direction: row;
       transform: translate3d(10%, 0, 0);
     }
@@ -41,7 +45,6 @@ export default css`
     font-family: "NeueMontrealLight";
     font-size: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
-    margin-bottom: 2rem;
   }
   .text-h4 {
     color: ${({ theme }) => theme.colors.text.standard};
