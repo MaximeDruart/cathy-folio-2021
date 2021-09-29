@@ -34,6 +34,7 @@ const App = () => {
     history.listen(() => {
       luge.lifecycle.refresh()
     })
+    console.clear()
   }, [])
   return (
     <>

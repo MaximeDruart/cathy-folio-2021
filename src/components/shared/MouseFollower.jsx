@@ -100,17 +100,15 @@ const MouseFollower = () => {
       mousePos = { x: clientX, y: clientY }
 
       if ($outerCircleWrapper.current) {
-        if (
-          target.nodeName === "BUTTON" ||
-          target.nodeName === "A" ||
-          target.parentElement.nodeName === "BUTTON" ||
-          target.parentElement.nodeName === "A" ||
-          target.classList.contains("mf-active")
-        ) {
-          gsap.to($outerCircle.current, { opacity: 0.3, background: "white" })
-        } else {
-          gsap.to($outerCircle.current, { opacity: 1, background: "none" })
+        let isHovering = false
+        if (target.nodeName === "BUTTON" || target.nodeName === "A" || target.classList.contains("mf-active"))
+          isHovering = true
+        if (target.parentElement) {
+          if (target.parentElement.nodeName === "BUTTON" || target.parentElement.nodeName === "A") isHovering = true
         }
+        isHovering
+          ? gsap.to($outerCircle.current, { opacity: 0.3, background: "white" })
+          : gsap.to($outerCircle.current, { opacity: 1, background: "none" })
       }
     }
 

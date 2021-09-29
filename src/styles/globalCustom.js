@@ -1,7 +1,7 @@
 import { css } from "styled-components"
 
 export default css`
-  .big_word{
+  .big_word {
     font-size: 100px;
     font-family: NeueMontrealRegular;
   }
@@ -93,6 +93,11 @@ export default css`
     /* identical to box height, or 20px */
     letter-spacing: 0.06em;
     text-transform: uppercase;
+  }
+
+  .text-spawn-anim {
+    display: inline-block;
+    overflow: hidden;
   }
 
   .margin-small {

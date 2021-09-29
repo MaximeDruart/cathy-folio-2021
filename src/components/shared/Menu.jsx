@@ -3,6 +3,7 @@ import React from "react"
 import { Link, useLocation } from "react-router-dom"
 import styled from "styled-components"
 import useStore from "../../store"
+import { EASE_IN_OUT } from "../../assets/utils/constants"
 
 const StyledMenu = styled(motion.div)`
   width: 100vw;
@@ -86,7 +87,7 @@ const Menu = () => {
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
-          transition={{ type: "tween", ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
+          transition={{ type: "tween", ease: EASE_IN_OUT, duration: 0.6 }}
         >
           <motion.ul variants={list} initial="hidden" animate="visible" className="links">
             {pages.map((link, index) => (
