@@ -32,10 +32,18 @@ const StyledMenu = styled(motion.div)`
         line-height: 0.9;
         text-transform: capitalize;
         a {
-          transition: color 0.4s;
           display: inline-block;
+          position: relative;
+          transition: transform ease-in-out 0.3s;
+
           &:hover {
-            color: red;
+            transform: translateY(-100%);
+          }
+
+          span.post {
+            position: absolute;
+            left: 0;
+            top: 100%;
           }
         }
       }
@@ -90,7 +98,8 @@ const Menu = () => {
                   transition={{ type: "tween", duration: 0.4, ease: "circOut" }}
                 >
                   <Link onClick={toggleMenu} className={`link ${pathname === link ? "active" : ""}`} to={`/${link}`}>
-                    {link}
+                    <span>{link}</span>
+                    <span className="post">{link}</span>
                   </Link>
                 </motion.li>
               </motion.div>
