@@ -11,9 +11,9 @@ const StyledHeader = styled.div`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  top: 40px;
+  top: 60px;
   z-index: 100;
-  padding: 0 40px;
+  padding: 0 calc(5vw - 25px);
   .logo {
     width: 50px;
     height: 50px;
