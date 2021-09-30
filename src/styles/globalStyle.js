@@ -223,6 +223,11 @@ export default createGlobalStyle`
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
+    
+    body {
+      background: ${({ theme }) => theme.colors.background};
+    }
+
 
     ${globalCustom}
 `

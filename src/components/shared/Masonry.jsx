@@ -2,7 +2,7 @@ import gsap from "gsap/all"
 import React, { useState, useEffect, useRef } from "react"
 import styled, { useTheme } from "styled-components"
 import designerImg from "../../assets/img/designer.png"
-import developerImg from "../../assets/img/developer.png"
+import developerImg from "../../assets/img/developer.jpg"
 
 const StyledMasonry = styled.div`
   display: grid;

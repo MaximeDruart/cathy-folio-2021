@@ -99,7 +99,11 @@ const Menu = () => {
                   exit={item.hidden}
                   transition={{ type: "tween", duration: 0.4, ease: "circOut" }}
                 >
-                  <Link onClick={toggleMenu} className={`link ${pathname === link ? "active" : ""}`} to={`/${link}`}>
+                  <Link
+                    onClick={toggleMenu}
+                    className={`link ${pathname === link ? "active" : ""}`}
+                    to={`/${link === "home" ? "" : link}`}
+                  >
                     <span>{link}</span>
                     <span className="post">{link}</span>
                   </Link>

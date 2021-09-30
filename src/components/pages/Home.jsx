@@ -3,9 +3,9 @@ import styled from "styled-components"
 import FigmaLogoSVG from "../../assets/icons/figma.svg?component"
 import SketchLogoSVG from "../../assets/icons/sketch.svg?component"
 import ReactLogoSVG from "../../assets/icons/react.svg?component"
+import Masonry from "../shared/Masonry"
 
 const StyledHome = styled.div`
-  background: ${({ theme }) => theme.colors.background};
   transition: background-color 0.6s;
   * {
     font-size: 40px;
@@ -23,7 +23,7 @@ const Home = () => {
             of<span className="important_word"> Cathy</span>
           </span>
         </h1>
-        <img src="src/assets/img/intro.png" alt="intro"></img>
+        <Masonry />
       </section>
       {/* I am */}
       <section className="wrapper one_word">
@@ -73,10 +73,9 @@ const Home = () => {
         <div className="text_container">
           <h2 className="text-h2">Front-end Developer</h2>
           <p className="text-regular">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            sequi, veniam aliquam, perspiciatis ipsa necessitatibus officia
-            eligendi temporibus pariatur voluptatibus quidem? Ex nostrum sapiente
-            quia soluta iste ipsum asperiores alias.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi, veniam aliquam, perspiciatis ipsa
+            necessitatibus officia eligendi temporibus pariatur voluptatibus quidem? Ex nostrum sapiente quia soluta
+            iste ipsum asperiores alias.
           </p>
           <h3 className="text-h3">Langages</h3>
           <div className="skill_container">

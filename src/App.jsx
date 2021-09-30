@@ -14,6 +14,7 @@ import Works from "./components/pages/Works"
 import Archives from "./components/pages/Archives"
 import ProjectDetail from "./components/projects/ProjectDetail"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
+import GLBackground from "./components/shared/GLBackground"
 
 const App = () => {
   let history = useHistory()
@@ -34,7 +35,7 @@ const App = () => {
     history.listen(() => {
       luge.lifecycle.refresh()
     })
-    console.clear()
+    // console.clear()
   }, [])
   return (
     <>
@@ -43,6 +44,7 @@ const App = () => {
       <Header />
       <StyleSwitcher />
       <Menu />
+      <Route path={["/", "/about"]} exact component={GLBackground} />
       <div data-lg-smooth>
         <Switch>
           {projectRoutes}
