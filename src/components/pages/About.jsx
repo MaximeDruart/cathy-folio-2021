@@ -76,9 +76,9 @@ const About = () => {
       </section>
       {/* spacer */}
       <div className="spacer"></div>
-      {/* selected work */}
+      {/* stream */}
       <section className="wrapper selected_work">
-        <h2 className="text-h2">Selected work*</h2>
+        <h2 className="text-h2">Oh and I stream on Twitch*</h2>
         <div className="content">
           <a href="">
             <div className="work_content work_1 work">

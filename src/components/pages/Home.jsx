@@ -23,7 +23,7 @@ const Home = () => {
             of<span className="important_word"> Cathy</span>
           </span>
         </h1>
-        <img src="src/assets/img/placeholder.png" alt="intro"></img>
+        <img src="src/assets/img/intro.png" alt="intro"></img>
       </section>
       {/* I am */}
       <section className="wrapper one_word">
