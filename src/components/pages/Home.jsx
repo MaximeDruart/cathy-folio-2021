@@ -2,89 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import FigmaLogoSVG from "../../assets/icons/figma.svg?component"
 import SketchLogoSVG from "../../assets/icons/sketch.svg?component"
+import ReactLogoSVG from "../../assets/icons/react.svg?component"
 
 const StyledHome = styled.div`
   background: ${({ theme }) => theme.colors.background};
   * {
     font-size: 40px;
     color: white;
-  }
-  section.wrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    &.intro {
-      h1 {
-        display: flex;
-        flex-direction: column;
-      }
-      img {
-        position: absolute;
-        right: 0vw;
-      }
-    }
-    &.one_word {
-      justify-content: center;
-    }
-    &.presentation {
-      height: 100vh;
-      display: flex;
-      justify-content: space-between;
-      .text_container,
-      .visual_container {
-        height: 100%;
-        padding: 150px 0;
-      }
-      .text_container {
-        width: 50%;
-        p {
-          margin-top: 16px;
-          width: 80%;
-          margin-bottom: 20px;
-        }
-        h3 {
-          margin-bottom: 14px;
-        }
-        .skill_container {
-          display: flex;
-          flex-direction: row;
-          .skill_content {
-            margin-right: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            border: solid 1px ${({ theme }) => theme.colors.text.standard};
-            border-radius: 8px;
-            span {
-              font-family: "NeueMontrealRegular";
-              color: ${({ theme }) => theme.colors.text.standard};
-              line-height: 0;
-              margin: 0;
-            }
-            svg {
-              height: 60%;
-              .a {
-                stroke: ${({ theme }) => theme.colors.text.standard};
-              }
-              .react {
-                fill: ${({ theme }) => theme.colors.text.standard};
-              }
-            }
-          }
-        }
-      }
-      .visual_container {
-        width: 40%;
-        img {
-          margin-top: 100px;
-          // display: flex;
-          width: 100%;
-        }
-      }
-    }
   }
 `
 
@@ -100,9 +24,11 @@ const Home = () => {
         </h1>
         <img src="src/assets/img/placeholder.png" alt="intro"></img>
       </section>
+      {/* I am */}
       <section className="wrapper one_word">
         <span className="big_word">I am...</span>
       </section>
+      {/* Designer */}
       <section className="wrapper presentation">
         <div className="text_container">
           <h2 className="text-h2">Designer</h2>
@@ -137,6 +63,68 @@ const Home = () => {
           <img src="src/assets/img/designer.png" alt="designer" />
         </div>
       </section>
+      {/* And also */}
+      <section className="wrapper one_word">
+        <span className="big_word">And also</span>
+      </section>
+      {/* Front end dev */}
+      <section className="wrapper presentation">
+        <div className="text_container">
+          <h2 className="text-h2">Front-end Developer</h2>
+          <p className="text-regular">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+            sequi, veniam aliquam, perspiciatis ipsa necessitatibus officia
+            eligendi temporibus pariatur voluptatibus quidem? Ex nostrum sapiente
+            quia soluta iste ipsum asperiores alias.
+          </p>
+          <h3 className="text-h3">Langages</h3>
+          <div className="skill_container">
+            <div className="skill_content">
+              <span className="text-h4">Html</span>
+            </div>
+            <div className="skill_content">
+              <span className="text-h4">Css</span>
+            </div>
+            <div className="skill_content">
+              <span className="text-h4">Js</span>
+            </div>
+            <div className="skill_content">
+              <span className="text-h4">Vue</span>
+            </div>
+            <div className="skill_content">
+              <ReactLogoSVG></ReactLogoSVG>
+            </div>
+          </div>
+        </div>
+        <div className="visual_container">
+          <img src="src/assets/img/designer.png" alt="designer" />
+        </div>
+      </section>
+      {/* spacer */}
+      <div className="spacer"></div>
+      {/* selected work */}
+      <section className="wrapper selected_work">
+        <h2 className="text-h2">Selected work*</h2>
+        <div className="content">
+          <a href="">
+            <div className="work_content work_1 work">
+              <h3 className="text-h3">Hologramme*</h3>
+            </div>
+          </a>
+          <a href="">
+            <div className="work_content work_2 work">
+              <h3 className="text-h3">Project X Paris*</h3>
+            </div>
+          </a>
+          <a href="">
+            <div className="work_content work_3 work">
+              <h3 className="text-h3">Grissini*</h3>
+            </div>
+          </a>
+        </div>
+      </section>
+      {/* spacer */}
+      <div className="spacer"></div>
     </StyledHome>
   )
 }
