@@ -26,13 +26,13 @@ const StyledHeader = styled.div`
   .menu-toggle {
     width: 40px;
     height: 40px;
-    color: white;
+    color: ${({ theme }) => theme.colors.text.standard};
 
     .top,
     .bottom {
       width: 100%;
       height: 2px;
-      background: white;
+      background: ${({ theme }) => theme.colors.text.standard};
     }
     .bottom {
       width: 50%;

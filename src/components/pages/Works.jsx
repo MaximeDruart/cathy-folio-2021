@@ -5,6 +5,7 @@ import styled from "styled-components"
 const StyledWorks = styled(motion.div)`
   height: 40vh;
   background: yellow;
+  transition: background-color 0.6s;
 `
 
 const Works = () => {

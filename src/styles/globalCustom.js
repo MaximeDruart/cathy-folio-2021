@@ -5,12 +5,14 @@ export default css`
   .big_word {
     font-size: 100px;
     font-family: NeueMontrealRegular;
+    color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h1 {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 80px;
+    color: ${({ theme }) => theme.colors.text.standard};
     line-height: 84px;
     /* or 101px */
     letter-spacing: 0.03em;
@@ -22,11 +24,13 @@ export default css`
     span.second_line {
       font-size: 80px;
       transform: translate3d(30%, 0, 0);
+      color: ${({ theme }) => theme.colors.text.standard};
     }
     span.third_line {
       font-size: 80px;
       flex-direction: row;
       transform: translate3d(10%, 0, 0);
+      color: ${({ theme }) => theme.colors.text.standard};
     }
   }
   .text-h2 {

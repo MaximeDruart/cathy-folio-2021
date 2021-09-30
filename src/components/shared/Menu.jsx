@@ -13,8 +13,9 @@ const StyledMenu = styled(motion.div)`
   top: 0;
   left: 0;
   background: ${({ theme }) => theme.colors.background};
+  transition: background-color 0.6s;
   * {
-    color: white;
+    color: ${({ theme }) => theme.colors.text.standard};
   }
 
   ul.links {

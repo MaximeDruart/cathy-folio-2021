@@ -6,6 +6,7 @@ import ReactLogoSVG from "../../assets/icons/react.svg?component"
 
 const StyledAbout = styled.div`
   background: ${({ theme }) => theme.colors.background};
+  transition: background-color 0.6s;
   * {
     font-size: 40px;
     color: white;
