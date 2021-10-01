@@ -4,6 +4,9 @@ import FigmaLogoSVG from "../../assets/icons/figma.svg?component"
 import SketchLogoSVG from "../../assets/icons/sketch.svg?component"
 import ReactLogoSVG from "../../assets/icons/react.svg?component"
 import Masonry from "../shared/Masonry"
+import SectionSelectedWork from "./sections/SectionSelectedWork"
+import SectionWord from "./sections/SectionWord"
+import SectionPresentation from "./sections/SectionPresentation"
 
 const StyledHome = styled.div`
   transition: background-color 0.6s;
@@ -26,13 +29,10 @@ const Home = () => {
         <Masonry />
       </section>
       {/* I am */}
-      <section className="wrapper one_word">
-        <span className="big_word">I am...</span>
-      </section>
+      <SectionWord word="I am..."/>
       {/* Designer */}
-      <section className="wrapper presentation">
-        <div className="text_container">
-          <h2 className="text-h2">Designer</h2>
+      <SectionPresentation imgSrc="src/assets/img/designer.png">
+        <h2 className="text-h2">Designer</h2>
           <p className="text-regular">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi, veniam aliquam, perspiciatis ipsa
             necessitatibus officia eligendi temporibus pariatur voluptatibus quidem? Ex nostrum sapiente quia soluta
@@ -59,19 +59,12 @@ const Home = () => {
               <span className="text-h4">Id</span>
             </div>
           </div>
-        </div>
-        <div className="visual_container">
-          <img src="src/assets/img/designer.png" alt="designer" />
-        </div>
-      </section>
+      </SectionPresentation>
       {/* And also */}
-      <section className="wrapper one_word">
-        <span className="big_word">And also</span>
-      </section>
+      <SectionWord word="And also"/>
       {/* Front end dev */}
-      <section className="wrapper presentation">
-        <div className="text_container">
-          <h2 className="text-h2">Front-end Developer</h2>
+      <SectionPresentation imgSrc="src/assets/img/designer.png">
+      <h2 className="text-h2">Front-end Developer</h2>
           <p className="text-regular">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi, veniam aliquam, perspiciatis ipsa
             necessitatibus officia eligendi temporibus pariatur voluptatibus quidem? Ex nostrum sapiente quia soluta
@@ -95,34 +88,11 @@ const Home = () => {
               <ReactLogoSVG></ReactLogoSVG>
             </div>
           </div>
-        </div>
-        <div className="visual_container">
-          <img src="src/assets/img/designer.png" alt="designer" />
-        </div>
-      </section>
+      </SectionPresentation>
       {/* spacer */}
       <div className="spacer"></div>
       {/* selected work */}
-      <section className="wrapper selected_work">
-        <h2 className="text-h2">Selected work*</h2>
-        <div className="content">
-          <a href="">
-            <div className="work_content work_1 work">
-              <h3 className="text-h3">Hologramme*</h3>
-            </div>
-          </a>
-          <a href="">
-            <div className="work_content work_2 work">
-              <h3 className="text-h3">Project X Paris*</h3>
-            </div>
-          </a>
-          <a href="">
-            <div className="work_content work_3 work">
-              <h3 className="text-h3">Grissini*</h3>
-            </div>
-          </a>
-        </div>
-      </section>
+      <SectionSelectedWork/>
       {/* spacer */}
       <div className="spacer"></div>
     </StyledHome>
