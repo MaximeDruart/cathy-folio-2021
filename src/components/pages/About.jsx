@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import ReactLogoSVG from "../../assets/icons/react.svg?component"
-import SectionSelectedWork from "./sections/SectionSelectedWork"
-import SectionWord from "./sections/SectionWord"
-import SectionPresentation from "./sections/SectionPresentation"
+import SectionSelectedWork from "../shared/sections/SectionSelectedWork"
+import SectionWord from "../shared/sections/SectionWord"
+import SectionPresentation from "../shared/sections/SectionPresentation"
+import Masonry from "../shared/Masonry"
 
 const StyledAbout = styled.div`
   transition: background-color 0.6s;
@@ -23,7 +24,7 @@ const About = () => {
             about<span className="important_word"> me</span>
           </span>
         </h1>
-        <img src="src/assets/img/placeholder.png" alt="intro"></img>
+        {/* <Masonry /> */}
       </section>
       {/* Me */}
       <SectionPresentation imgSrc="src/assets/img/designer.png">

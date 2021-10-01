@@ -4,9 +4,9 @@ import FigmaLogoSVG from "../../assets/icons/figma.svg?component"
 import SketchLogoSVG from "../../assets/icons/sketch.svg?component"
 import ReactLogoSVG from "../../assets/icons/react.svg?component"
 import Masonry from "../shared/Masonry"
-import SectionSelectedWork from "./sections/SectionSelectedWork"
-import SectionWord from "./sections/SectionWord"
-import SectionPresentation from "./sections/SectionPresentation"
+import SectionSelectedWork from "../shared/sections/SectionSelectedWork"
+import SectionWord from "../shared/sections/SectionWord"
+import SectionPresentation from "../shared/sections/SectionPresentation"
 
 const StyledHome = styled.div`
   transition: background-color 0.6s;

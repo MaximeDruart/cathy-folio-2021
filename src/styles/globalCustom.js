@@ -142,11 +142,11 @@ export default css`
         flex-direction: column;
         z-index: 1;
       }
-      img {
+      /* img {
         width: 560px;
         position: absolute;
         right: 10vw;
-      }
+      } */
     }
   }
 `
