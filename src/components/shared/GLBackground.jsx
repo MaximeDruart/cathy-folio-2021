@@ -26,6 +26,15 @@ function ShaderPlane() {
   useFrame((state, delta) => {
     ref.current.time += delta
   })
+
+  useEffect(() => {
+    let mousemoveHandler = ({ clientX, clientY }) => {
+      ref.current.mouse = { x: clientX / window.innerWidth, y: 1 - clientY / window.innerHeight }
+    }
+
+    window.addEventListener("mousemove", mousemoveHandler)
+    return () => window.removeEventListener("mousemove", mousemoveHandler)
+  }, [])
   return (
     <mesh scale={[width, height, 1]}>
       <planeGeometry args={[1, 1, 16, 16]} />

@@ -11,20 +11,22 @@ const StyledProjectDetail = styled.div`
     align-items: center;
     justify-content: center;
 
+    background: url(${(props) => props.coverImg});
+    background-size: cover;
+
     .text-h1 {
       text-transform: capitalize;
       color: white;
     }
   }
   .details {
-    height: 300vh;
   }
 `
 
 const ProjectDetail = ({ project }) => {
   const ProjectComponent = project.component
   return (
-    <StyledProjectDetail>
+    <StyledProjectDetail coverImg={project.coverImg}>
       <div className="hero">
         <h1 className="text-h1">{project.name}</h1>
       </div>
