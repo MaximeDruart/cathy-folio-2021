@@ -1,6 +1,9 @@
 import create from "zustand"
 import { devtools } from "zustand/middleware"
 import { enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock"
+import { createRef } from "react"
+
+const mfIsHoveringCanvas = createRef(false)
 
 const store = (set, get) => ({
   isMenuOpen: false,
@@ -17,5 +20,7 @@ const store = (set, get) => ({
 
 // allows the use of the redux devtools extension with zustand
 const useStore = create(devtools(store))
+
+export { mfIsHoveringCanvas }
 
 export default useStore

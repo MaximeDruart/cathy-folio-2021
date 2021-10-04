@@ -211,7 +211,7 @@ export default createGlobalStyle`
 
     * {
       box-sizing: border-box;
-      /* cursor: none; */
+      cursor: none;
     }
 
     html::-webkit-scrollbar {

@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"
-import styled from "styled-components"
+import styled, { useTheme } from "styled-components"
 import lerp from "lerp"
 import gsap from "gsap"
+import { mfIsHoveringCanvas } from "../../store"
 
 const StyledMouseFollower = styled.div`
   position: fixed;
@@ -30,12 +31,20 @@ const StyledMouseFollower = styled.div`
     height: 30pt;
 
     .cursor {
+      position: absolute;
       width: 30pt;
       height: 30pt;
       border: 1pt solid ${({ theme }) => theme.colors.text.standard};
       border-radius: 50%;
-      color: white;
+      color: ${({ theme }) => theme.colors.text.standard};
       font-size: 40px;
+
+      &.hover-circle {
+        border: none;
+        transform: scale(0.01);
+        background: ${({ theme }) => theme.colors.text.standard};
+        opacity: 0.3;
+      }
     }
   }
 `
@@ -46,6 +55,7 @@ const MouseFollower = () => {
   let $mouseFollower = useRef(null)
   let $outerCircleWrapper = useRef(null)
   let $outerCircle = useRef(null)
+  let $hoverCircle = useRef(null)
   let $innerCircle = useRef(null)
 
   const followerOuter = useRef({
@@ -61,10 +71,14 @@ const MouseFollower = () => {
     h: 5,
   })
 
+  const theme = useTheme()
+
   useEffect(() => {
     let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
     let isClicking = false
     let clickProgression = 0
+    let isHovering = false
+    let hoverProgression = 0
     const updatePos = () => {
       followerOuter.current.x = lerp(followerOuter.current.x, mousePos.x, 0.2)
       followerOuter.current.y = lerp(followerOuter.current.y, mousePos.y, 0.2)
@@ -75,6 +89,8 @@ const MouseFollower = () => {
       followerInner.current.y = lerp(followerInner.current.y, mousePos.y, 0.8)
       let innerL = followerInner.current.x + followerInner.current.w / 2
       let innerT = followerInner.current.y + followerInner.current.h / 2
+
+      hoverProgression = gsap.utils.clamp(0, 1, isHovering ? hoverProgression + 0.125 : hoverProgression - 0.125)
 
       if (isClicking) {
         clickProgression += 0.125
@@ -88,9 +104,20 @@ const MouseFollower = () => {
       if ($outerCircleWrapper.current && $innerCircle.current) {
         $outerCircleWrapper.current.style.transform = `
         translate3d(${outerL}px, ${outerT}px, 0)
-        scale(${gsap.utils.mapRange(0, 1, 1, 0.75, easeInOutQuad(clickProgression))})
+        scale(${
+          gsap.utils.mapRange(0, 1, 1, 0.75, easeInOutQuad(clickProgression)) + easeInOutQuad(hoverProgression) * 0.25
+        })
         `
-        $innerCircle.current.style.transform = `translate3d(${innerL}px, ${innerT}px, 0)`
+        $innerCircle.current.style.transform = `
+        translate3d(${innerL}px, ${innerT}px, 0)
+        `
+
+        // i wanna add the scale but then the little circle looks wierd i cant figure out why
+
+        // $innerCircle.current.style.transform = `
+        // translate3d(${innerL}px, ${innerT}px, 0)
+        // scale(${gsap.utils.mapRange(0, 1, 1, 1.3, easeInOutQuad(hoverProgression))})
+        // `
       }
 
       raf = requestAnimationFrame(updatePos)
@@ -99,16 +126,26 @@ const MouseFollower = () => {
     const mousemoveHandler = ({ clientX, clientY, target }) => {
       mousePos = { x: clientX, y: clientY }
 
+      isHovering = false
+
       if ($outerCircleWrapper.current) {
-        let isHovering = false
-        if (target.nodeName === "BUTTON" || target.nodeName === "A" || target.classList.contains("mf-active"))
+        if (
+          target.nodeName === "BUTTON" ||
+          target.nodeName === "A" ||
+          target.classList.contains("mf-active") ||
+          mfIsHoveringCanvas.current
+        )
           isHovering = true
         if (target.parentElement) {
           if (target.parentElement.nodeName === "BUTTON" || target.parentElement.nodeName === "A") isHovering = true
         }
-        isHovering
-          ? gsap.to($outerCircle.current, { opacity: 0.3, background: "white" })
-          : gsap.to($outerCircle.current, { opacity: 1, background: "none" })
+        if (isHovering) {
+          gsap.to($outerCircle.current, { borderColor: `${theme.colors.text.standard}00` })
+          gsap.to($hoverCircle.current, { scale: 1 })
+        } else {
+          gsap.to($outerCircle.current, { borderColor: theme.colors.text.standard })
+          gsap.to($hoverCircle.current, { scale: 0.01 })
+        }
       }
     }
 
@@ -138,6 +175,7 @@ const MouseFollower = () => {
       <div ref={$innerCircle} className="pointer"></div>
       <div ref={$outerCircleWrapper} className="cursor-wrapper">
         <div ref={$outerCircle} className="cursor"></div>
+        <div ref={$hoverCircle} className="cursor hover-circle"></div>
       </div>
     </StyledMouseFollower>
   )
