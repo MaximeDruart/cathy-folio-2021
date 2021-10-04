@@ -1,8 +1,14 @@
 import gsap from "gsap/all"
 import React, { useState, useEffect, useRef } from "react"
 import styled, { useTheme } from "styled-components"
-import designerImg from "../../assets/img/designer.png"
-import developerImg from "../../assets/img/developer.jpg"
+import amethyst1 from "../../assets/img/masonry/amethyst/1.png"
+import amethyst2 from "../../assets/img/masonry/amethyst/2.png"
+import amethyst3 from "../../assets/img/masonry/amethyst/3.png"
+import amethyst4 from "../../assets/img/masonry/amethyst/4.png"
+import amethyst5 from "../../assets/img/masonry/amethyst/5.png"
+import amethyst6 from "../../assets/img/masonry/amethyst/6.png"
+import amethyst7 from "../../assets/img/masonry/amethyst/7.png"
+import amethyst8 from "../../assets/img/masonry/amethyst/8.png"
 
 const StyledMasonry = styled.div`
   display: grid;
@@ -25,7 +31,7 @@ const StyledMasonry = styled.div`
     .overlay {
       width: 100%;
       height: 100%;
-      background: ${({ theme }) => theme.colors.placeholder};
+      background: black;
       position: absolute;
     }
 
@@ -52,8 +58,8 @@ const StyledMasonry = styled.div`
   }
 `
 
-const images = [designerImg, developerImg, designerImg, developerImg, designerImg]
-const imagesSecondRot = [developerImg, designerImg, developerImg, designerImg, developerImg]
+const images = [amethyst1, amethyst2, amethyst3, amethyst4, amethyst5]
+const imagesSecondRot = [amethyst6, amethyst8, amethyst7, amethyst2, amethyst3]
 
 const Masonry = (props) => {
   const theme = useTheme()
@@ -94,7 +100,7 @@ const Masonry = (props) => {
     gsap
       .timeline()
       .to(overlayRefs.current[index], { x: "-101%", duration: 0.4, ease: "Power3.easeInOut" })
-      .set(overlayRefs.current[index], { backgroundColor: theme.colors.primary1 })
+      .set(overlayRefs.current[index], { backgroundColor: theme.colors.background })
   }
 
   return (
