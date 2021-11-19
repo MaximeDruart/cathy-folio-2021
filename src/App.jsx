@@ -44,7 +44,7 @@ const App = () => {
       <Header />
       <StyleSwitcher />
       <Menu />
-      <Route path={["/", "/about"]} exact component={GLBackground} />
+      {/* <Route path={["/", "/about"]} exact component={GLBackground} /> */}
       <div data-lg-smooth>
         <Switch>
           {projectRoutes}

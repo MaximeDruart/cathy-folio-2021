@@ -137,7 +137,12 @@ const MouseFollower = () => {
         )
           isHovering = true
         if (target.parentElement) {
-          if (target.parentElement.nodeName === "BUTTON" || target.parentElement.nodeName === "A") isHovering = true
+          if (
+            target.parentElement.nodeName === "BUTTON" ||
+            target.parentElement.nodeName === "A" ||
+            target.parentElement.classList.contains("mf-active")
+          )
+            isHovering = true
         }
         if (isHovering) {
           gsap.to($outerCircle.current, { borderColor: `${theme.colors.text.standard}00` })

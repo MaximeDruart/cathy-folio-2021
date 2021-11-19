@@ -16,22 +16,6 @@ export default css`
     line-height: 90px;
     /* or 101px */
     letter-spacing: 0.03em;
-    span.important_word {
-      font-size: 100px;
-      font-family: "SaolDisplaySemiboldItalic";
-      color: ${({ theme }) => theme.colors.primary1};
-    }
-    span.second_line {
-      font-size: 100px;
-      transform: translate3d(30%, 0, 0);
-      color: ${({ theme }) => theme.colors.text.standard};
-    }
-    span.third_line {
-      font-size: 100px;
-      flex-direction: row;
-      transform: translate3d(10%, 0, 0);
-      color: ${({ theme }) => theme.colors.text.standard};
-    }
   }
   .text-h2 {
     font-family: "NeueMontrealRegular";
@@ -40,6 +24,16 @@ export default css`
     letter-spacing: 0;
     margin-bottom: 1rem;
     line-height: 64px;
+    span.important_word {
+      font-family: "SaolDisplaySemiboldItalic";
+      color: ${({ theme }) => theme.colors.primary1};
+      font-size: 60px;
+    }
+  }
+  .text-h2-5 {
+    font-family: "NeueMontrealRegular";
+    font-size: 45px;
+    color: ${({ theme }) => theme.colors.text.standard};
     span.important_word {
       font-family: "SaolDisplaySemiboldItalic";
       color: ${({ theme }) => theme.colors.primary1};
@@ -129,24 +123,4 @@ export default css`
   }
 
   /* SECTIONS */
-  section.wrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10vw;
-    /* intro */
-    &.intro {
-      h1 {
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-      }
-      /* img {
-        width: 560px;
-        position: absolute;
-        right: 10vw;
-      } */
-    }
-  }
 `

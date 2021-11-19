@@ -61,7 +61,12 @@ const Header = () => {
       <Link to="/" className="logo">
         <CathyLogoSVG />
       </Link>
-      <button onClick={toggleMenu} className={`menu-toggle ${isMenuOpen ? "menu-opened" : ""}`}>
+      <button
+        onClick={() => {
+          toggleMenu()
+        }}
+        className={`menu-toggle ${isMenuOpen ? "menu-opened" : ""}`}
+      >
         <div className="top"></div>
         <div className="bottom"></div>
       </button>

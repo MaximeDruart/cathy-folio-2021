@@ -1,6 +1,8 @@
 /* eslint-disable no-dupe-keys */
 import Grissini from "./components/projects/Grissini"
 import grissiniCover from "./assets/img/works/grissini/cover.jpg"
+import test1 from "./assets/img/archives/abidaisy.png"
+import test2 from "./assets/img/archives/affiches.png"
 
 export default [
   {
@@ -26,7 +28,7 @@ export default [
   {
     name: "PXP",
     path: "pxp",
-    coverImg: grissiniCover,
+    coverImg: test1,
     component: Grissini,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
@@ -46,7 +48,7 @@ export default [
   {
     name: "TEST",
     path: "test",
-    coverImg: grissiniCover,
+    coverImg: test2,
     component: Grissini,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
@@ -86,7 +88,7 @@ export default [
   {
     name: "TEST",
     path: "test",
-    coverImg: grissiniCover,
+    coverImg: test1,
     component: Grissini,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
@@ -106,7 +108,7 @@ export default [
   {
     name: "PXP",
     path: "pxp",
-    coverImg: grissiniCover,
+    coverImg: test2,
     component: Grissini,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",

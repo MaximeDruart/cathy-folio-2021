@@ -11,11 +11,13 @@ import { noiseFunction } from "../../assets/utils/glsl"
 import ArrowSVG from "../../assets/icons/arrow.svg?component"
 import { mfIsHoveringCanvas } from "../../store"
 import { mapRange } from "gsap/gsap-core"
-import gsap from "gsap/all"
+import gsap from "gsap"
+import { useHistory } from "react-router"
 
 const projectHeight = 70
 
 const scrollArea = createRef()
+const transitionPanel = createRef()
 
 const StyledWorks = styled(motion.div)`
   height: 100vh;
@@ -37,6 +39,8 @@ const StyledWorks = styled(motion.div)`
     }
 
     .name {
+      font-family: SaolDisplayLight;
+      text-transform: uppercase;
       white-space: nowrap;
     }
 
@@ -94,9 +98,34 @@ const StyledWorks = styled(motion.div)`
     transform: translateX(-50%);
     bottom: 60px;
     font-family: "NeueMontrealRegular";
-    color: white;
+    color: ${({ theme }) => theme.colors.text.standard};
     z-index: 1000;
     text-transform: uppercase;
+  }
+
+  .scroll-progress {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    width: 35vw;
+    height: 2px;
+    background: grey;
+
+    .scroll-bar {
+      background: ${({ theme }) => theme.colors.text.standard};
+      height: 100%;
+      width: 0;
+    }
+  }
+
+  .transition-panel {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
   }
 `
 
@@ -139,7 +168,8 @@ const DistortionMaterial = shaderMaterial(
       float r = texture2D(tex, vUv).r;
       float g = texture2D(tex, vUv - vec2(speed * 0.002)).g;
       float b = texture2D(tex, vUv + vec2(speed * 0.002)).b;
-      gl_FragColor = vec4(r, g, b, 1.);
+      vec3 color = mix(vec3(r, g, b), vec3(0.), 0.1 - hoverValue * 0.1);
+      gl_FragColor = vec4(color, 1.);
       // 0.004 : force de la distortion, une valeur plus haute = plus de mouvement
       // 30.0 : scale du noise, valeur plus haute = les distortions sont plus nombreuses mais plus petites
       // 0.45 : vitesse
@@ -155,8 +185,6 @@ let speed = 0
 function ShaderPlane(props) {
   const meshRef = useRef()
   const matRef = useRef()
-
-  const { viewport } = useThree()
 
   const [hovering, setHovering] = useState(false)
   // only using an object because thats what gsap wants
@@ -192,7 +220,14 @@ function ShaderPlane(props) {
   }, [hovering])
 
   const clickHandler = () => {
-    gsap.to(meshRef.current.scale, { x: 2, y: 2 })
+    // gsap.to(meshRef.current.scale, { y: 0 })
+    // console.log(props.project)
+    // gsap.to(transitionPanel.current, {
+    //   y: 0,
+    //   onComplete: () => {
+    //     props.history.push(`/works/${props.project.path}`)
+    //   },
+    // })
   }
 
   return (
@@ -205,7 +240,7 @@ function ShaderPlane(props) {
     >
       <planeGeometry args={[2.24, 1.26, 32, 32]} />
       <distortionMaterial ref={matRef} tex={props.texture} />
-      <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.15]}>
+      <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.25]}>
         <h1 className="text-h1 name">{props.project.name}</h1>
         <motion.div animate={{ x: hovering ? 15 : 0, transition: "tween" }} className="cta">
           <span className="text">open project</span>
@@ -220,7 +255,7 @@ function ShaderPlane(props) {
 
 let scrollValue = 0
 
-const Scene = () => {
+const Scene = ({ history }) => {
   const covers = useTexture(projectsData.map((p) => p.coverImg))
 
   const group = useRef()
@@ -249,6 +284,7 @@ const Scene = () => {
           key={project.name + index}
           texture={covers[index]}
           project={projectsData[index]}
+          history={history}
         />
       ))}
     </group>
@@ -256,9 +292,19 @@ const Scene = () => {
 }
 
 const Works = () => {
+  const history = useHistory()
+
   const scrollValue = useRef(0)
+  const scrollProgressBar = useRef(0)
+  const [hasScrolled, setHasScrolled] = useState(false)
   const onScroll = (e) => {
     scrollValue.current = e.target.scrollTop
+    !hasScrolled && setHasScrolled(true)
+
+    if (scrollProgressBar.current)
+      gsap.to(scrollProgressBar.current, {
+        width: (scrollValue.current / scrollArea.current.children[0].offsetHeight) * (1 / 0.89) * 100 + "%",
+      })
   }
 
   return (
@@ -278,13 +324,24 @@ const Works = () => {
         onCreated={(state) => state.events.connect(scrollArea.current)}
       >
         <Suspense fallback={null}>
-          <Scene />
+          <Scene history={history} />
         </Suspense>
       </Canvas>
       <div className="scroll-area" ref={scrollArea} onScroll={onScroll}>
         <div style={{ height: `${projectsData.length * projectHeight}vh`, width: "100vw" }} />
       </div>
-      <div className="scroll-inv">scroll</div>
+      <motion.div
+        transition={{ duration: 1.2, delay: 0.3 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: hasScrolled ? 0 : 1 }}
+        className="scroll-inv"
+      >
+        scroll
+      </motion.div>
+      <motion.div className="scroll-progress">
+        <div ref={scrollProgressBar} className="scroll-bar"></div>
+      </motion.div>
+      <motion.div initial={{ y: "100%" }} ref={transitionPanel} className="transition-panel"></motion.div>
     </StyledWorks>
   )
 }
