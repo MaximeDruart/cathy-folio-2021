@@ -6,7 +6,6 @@ import pxpCover from "./assets/img/works/pxp.jpg"
 import hologrammeCover from "./assets/img/works/hologramme.png"
 import arcaneCover from "./assets/img/works/arcane.png"
 import flamaliceCover from "./assets/img/works/flamalice.png"
-import test2 from "./assets/img/archives/affiches.png"
 
 export default [
   {
