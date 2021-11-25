@@ -14,7 +14,7 @@ import { mapRange } from "gsap/gsap-core"
 import gsap from "gsap"
 import { useHistory } from "react-router"
 
-const projectHeight = 70
+const projectHeight = 28.5
 
 const scrollArea = createRef()
 const transitionPanel = createRef()

@@ -55,12 +55,19 @@ const StyledHome = styled.div`
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
+        }
+      }
 
-          &::after {
+      .slider-container {
+        position: absolute;
+        bottom: -9vw;
+        right: 12.5vw;
+        &::after {
             position: absolute;
             content: "UI/UX Designer, front end developer & content creator based in paris";
             width: 14vw;
-            top: 2vw;
+            top: -3.2vw;
+            left: -4vw;
             font-family: NeueMontrealLight;
             font-size: 0.65vw;
             text-transform: uppercase;
@@ -70,13 +77,6 @@ const StyledHome = styled.div`
             line-height: 160.62%;
             letter-spacing: 0.01em;
           }
-        }
-      }
-
-      .slider-container {
-        position: absolute;
-        bottom: -9vw;
-        right: 11vw;
       }
     }
 
@@ -93,7 +93,7 @@ const StyledHome = styled.div`
       }
       span {
         font-family: NeueMontrealRegular;
-        text-transform: uppercase;
+        font-size: 1rem;
       }
       .arrow {
         margin-top: 5px;
