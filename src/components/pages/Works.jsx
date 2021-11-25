@@ -263,7 +263,13 @@ const Scene = ({ history }) => {
   const [planeInView, setPlaneInView] = useState(0)
 
   useFrame(({ camera }) => {
-    scrollValue = mapRange(0, 0.89, 0, 12, scrollArea.current.scrollTop / scrollArea.current.children[0].offsetHeight)
+    scrollValue = mapRange(
+      0,
+      1,
+      0,
+      projectsData.length - 1,
+      scrollArea.current.scrollTop / (scrollArea.current.children[0].offsetHeight - window.innerHeight)
+    )
 
     let planeInViewTemp = Math.round(scrollValue)
     if (planeInView !== planeInViewTemp) setPlaneInView(planeInViewTemp)
@@ -303,7 +309,7 @@ const Works = () => {
 
     if (scrollProgressBar.current)
       gsap.to(scrollProgressBar.current, {
-        width: (scrollValue.current / scrollArea.current.children[0].offsetHeight) * (1 / 0.89) * 100 + "%",
+        width: (scrollValue.current / (scrollArea.current.children[0].offsetHeight - window.innerHeight)) * 100 + "%",
       })
   }
 
@@ -328,7 +334,7 @@ const Works = () => {
         </Suspense>
       </Canvas>
       <div className="scroll-area" ref={scrollArea} onScroll={onScroll}>
-        <div style={{ height: `${projectsData.length * projectHeight}vh`, width: "100vw" }} />
+        <div style={{ height: `${(projectsData.length - 1) * projectHeight}vh`, width: "100vw" }} />
       </div>
       <motion.div
         transition={{ duration: 1.2, delay: 0.3 }}
