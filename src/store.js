@@ -5,17 +5,22 @@ import { createRef } from "react"
 
 const mfIsHoveringCanvas = createRef(false)
 
+export const colors = ["amethyst", "ruby", "emerald", "lila", "sakura"]
+
 const store = (set, get) => ({
   isMenuOpen: false,
   toggleMenu: () => {
-    !get().isMenuOpen ? enableBodyScroll("[data-lg-smooth]") : clearAllBodyScrollLocks()
+    !get().isMenuOpen ? enableBodyScroll("[data-app-container]") : clearAllBodyScrollLocks()
     set((state) => ({ isMenuOpen: !state.isMenuOpen }))
   },
-  isDarkMode: JSON.parse(localStorage.getItem("dark-mode-enabled")) || true,
+  isDarkMode: !!JSON.parse(localStorage.getItem("dark-mode-enabled")) || true,
   toggleDarkMode: () => {
     localStorage.setItem("dark-mode-enabled", !get().isDarkMode)
     set((state) => ({ isDarkMode: !state.isDarkMode }))
   },
+
+  activeColor: colors[0],
+  setActiveColor: (index) => set({ activeColor: colors[index] }),
 })
 
 // allows the use of the redux devtools extension with zustand

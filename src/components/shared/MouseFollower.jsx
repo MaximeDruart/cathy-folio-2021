@@ -111,13 +111,6 @@ const MouseFollower = () => {
         $innerCircle.current.style.transform = `
         translate3d(${innerL}px, ${innerT}px, 0)
         `
-
-        // i wanna add the scale but then the little circle looks wierd i cant figure out why
-
-        // $innerCircle.current.style.transform = `
-        // translate3d(${innerL}px, ${innerT}px, 0)
-        // scale(${gsap.utils.mapRange(0, 1, 1, 1.3, easeInOutQuad(hoverProgression))})
-        // `
       }
 
       raf = requestAnimationFrame(updatePos)
@@ -177,10 +170,10 @@ const MouseFollower = () => {
 
   return (
     <StyledMouseFollower ref={$mouseFollower}>
-      <div ref={$innerCircle} className="pointer"></div>
-      <div ref={$outerCircleWrapper} className="cursor-wrapper">
-        <div ref={$outerCircle} className="cursor"></div>
-        <div ref={$hoverCircle} className="cursor hover-circle"></div>
+      <div ref={$innerCircle} className='pointer'></div>
+      <div ref={$outerCircleWrapper} className='cursor-wrapper'>
+        <div ref={$outerCircle} className='cursor'></div>
+        <div ref={$hoverCircle} className='cursor hover-circle'></div>
       </div>
     </StyledMouseFollower>
   )

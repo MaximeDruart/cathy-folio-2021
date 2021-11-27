@@ -13,6 +13,10 @@ import ArrowSVG from "../../../assets/icons/arrow.svg?component"
 import { motion, useViewportScroll } from "framer-motion"
 import projectsData from "../../../projectsData"
 import HomeProjectDetail from "./HomeProjectDetail"
+import PageTemplate from "../PageTemplate"
+import { Link } from "react-router-dom"
+import InfiniteText from "../../shared/InfiniteText"
+import HomeProjects from "./HomeProjects"
 
 const StyledHome = styled.div`
   * {
@@ -63,20 +67,20 @@ const StyledHome = styled.div`
         bottom: -9vw;
         right: 12.5vw;
         &::after {
-            position: absolute;
-            content: "UI/UX Designer, front end developer & content creator based in paris";
-            width: 14vw;
-            top: -3.2vw;
-            left: -4vw;
-            font-family: NeueMontrealLight;
-            font-size: 0.65vw;
-            text-transform: uppercase;
-            white-space: initial;
-            color: ${({ theme }) => theme.colors.text.standard};
-            transform: translateX(2vw);
-            line-height: 160.62%;
-            letter-spacing: 0.01em;
-          }
+          position: absolute;
+          content: "UI/UX Designer, front end developer & content creator based in paris";
+          width: 14vw;
+          top: -3.2vw;
+          left: -4vw;
+          font-family: NeueMontrealLight;
+          font-size: 0.65vw;
+          text-transform: uppercase;
+          white-space: initial;
+          color: ${({ theme }) => theme.colors.text.standard};
+          transform: translateX(2vw);
+          line-height: 160.62%;
+          letter-spacing: 0.01em;
+        }
       }
     }
 
@@ -167,25 +171,6 @@ const StyledHome = styled.div`
 
   .skills {
     margin-top: 20vh;
-    .lines {
-      .line {
-        span {
-          text-transform: uppercase;
-          margin-right: 2vw;
-        }
-      }
-      .top-line {
-        span {
-          font-family: "SaolDisplaySemiboldI: ;talic";
-        }
-      }
-
-      .bottom-line {
-        margin-top: 20px;
-        span {
-        }
-      }
-    }
   }
 
   .projects {
@@ -197,84 +182,57 @@ const StyledHome = styled.div`
   }
 `
 
-const topWords = ["digital", "creative", "design", "test", "test2"]
-const bottomWords = ["digital", "creative", "design", "test", "test2"]
-
 const Home = () => {
   const { scrollY } = useViewportScroll()
   return (
-    <StyledHome>
-      <div className="hero">
-        <div className="text">
-          <div className="line first_line">Welcome to</div>
-          <div className="line second_line">the workspace</div>
-          <div className="line third_line">
-            of <span className="important_word">Cathy</span>
+    <PageTemplate initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
+      <StyledHome>
+        <div className='hero'>
+          <div className='text'>
+            <div className='line first_line'>Welcome to</div>
+            <div className='line second_line'>the workspace</div>
+            <div className='line third_line'>
+              of <span className='important_word'>Cathy</span>
+            </div>
+
+            <div className='slider-container'>
+              <Slider />
+            </div>
           </div>
-
-          <div className="slider-container">
-            <Slider />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: scrollY > 0 ? 0 : 1 }} className='discover'>
+            <span>discover</span>
+            <div className='arrow'>arrow</div>
+          </motion.div>
+        </div>
+        <div className='home-section what-i-do'>
+          <div className='headline'>what i do</div>
+          <div className='separator'></div>
+          <div className='title text-h2-5'>
+            Hello I'm Cathy, I can create the <span className='saol'>design</span> of your website, develop it, and also
+            create your brand identity.
           </div>
+          <Link to='/about' className='cta'>
+            <span className='text'>about me</span>
+            <button className='circle'>
+              <ArrowSVG />
+            </button>
+          </Link>
         </div>
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: scrollY > 0 ? 0 : 1 }} className="discover">
-          <span>discover</span>
-          <div className="arrow">arrow</div>
-        </motion.div>
-      </div>
-      <div className="home-section what-i-do">
-        <div className="headline">what i do</div>
-        <div className="separator"></div>
-        <div className="title text-h2-5">
-          Hello I'm Cathy, I can create the <span className="saol">design</span> of your website, develop it, and also
-          create your brand identity.
-        </div>
-        <div className="cta">
-          <span className="text">about me</span>
-          <button className="circle">
-            <ArrowSVG />
-          </button>
-        </div>
-      </div>
 
-      <div className="home-section skills">
-        <div className="headline">skills</div>
-        <div className="separator"></div>
-        <div className="lines">
-          <div className="line top-line">
-            {topWords.map((text, i) => (
-              <span key={i} className="text-h1">
-                {text}
-              </span>
-            ))}
-          </div>
-          <div className="line bottom-line">
-            {bottomWords.map((text, i) => (
-              <span key={i} className="text-h1">
-                {text}
-              </span>
-            ))}
-          </div>
+        <div className='home-section skills'>
+          <div className='headline'>skills</div>
+          <div className='separator'></div>
+          <InfiniteText />
+          <div className='separator'></div>
         </div>
-        <div className="separator"></div>
-      </div>
 
-      <div className="home-section projects">
-        <div className="headline">projects</div>
-        <div className="separator"></div>
-        {projectsData.slice(0, 3).map((project, index) => (
-          <HomeProjectDetail key={index} index={index} project={project} />
-        ))}
-      </div>
-
-      <div className="home-section contact">
-        <div className="headline">contact me</div>
-        <div className="separator"></div>
-
-        <div className="text-h1">
-          get in <span className="important-word">touch</span>
+        <div className='home-section projects'>
+          <div className='headline'>projects</div>
+          <div className='separator'></div>
+          <HomeProjects />
         </div>
-      </div>
-    </StyledHome>
+      </StyledHome>
+    </PageTemplate>
   )
 }
 

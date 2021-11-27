@@ -1,10 +1,10 @@
-import React, { createRef, Suspense, useEffect, useRef, useState } from "react"
+import React, { createRef, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
-import { Html, shaderMaterial, useTexture } from "@react-three/drei"
+import { Html, shaderMaterial, useProgress, useTexture } from "@react-three/drei"
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber"
 import { motion } from "framer-motion"
-import { lerp } from "three/src/math/MathUtils"
 import { Vector3 } from "three"
+import lerp from "@14islands/lerp"
 
 import projectsData from "../../projectsData"
 import { noiseFunction } from "../../assets/utils/glsl"
@@ -13,19 +13,17 @@ import { mfIsHoveringCanvas } from "../../store"
 import { mapRange } from "gsap/gsap-core"
 import gsap from "gsap"
 import { useHistory } from "react-router"
+import PageTemplate from "./PageTemplate"
 
-const projectHeight = 28.5
+const projectHeight = 70
 
 const scrollArea = createRef()
-const transitionPanel = createRef()
 
 const StyledWorks = styled(motion.div)`
   height: 100vh;
   width: 100vw;
   transition: background-color 0.6s;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
 
   .canvas-html {
     pointer-events: none;
@@ -33,6 +31,7 @@ const StyledWorks = styled(motion.div)`
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
+    z-index: -10;
 
     &.hidden {
       display: none;
@@ -118,15 +117,6 @@ const StyledWorks = styled(motion.div)`
       width: 0;
     }
   }
-
-  .transition-panel {
-    width: 100vw;
-    height: 100vh;
-    background: black;
-    z-index: 1000;
-    position: absolute;
-    bottom: 0;
-  }
 `
 
 const DistortionMaterial = shaderMaterial(
@@ -145,11 +135,10 @@ const DistortionMaterial = shaderMaterial(
       float noiseFreq = 3.5;
       float noiseAmp = 0.15; 
       vec3 noisePos = vec3(pos.x * noiseFreq + time, pos.y, pos.z);
-      pos.z += 0.1* hoverValue * snoise(noisePos) * noiseAmp;
+      pos.z += 0.1 * hoverValue * snoise(noisePos) * noiseAmp;
 
       gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
 
-      // gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
     }
   `,
   // fragment shader
@@ -166,8 +155,8 @@ const DistortionMaterial = shaderMaterial(
 
       // gl_FragColor = texture2D(tex, vUv + 0.004*snoise(vec3(vUv *30.0, time * 0.45)));
       float r = texture2D(tex, vUv).r;
-      float g = texture2D(tex, vUv - vec2(speed * 0.002)).g;
-      float b = texture2D(tex, vUv + vec2(speed * 0.002)).b;
+      float g = texture2D(tex, vUv - vec2(speed * 0.012)).g;
+      float b = texture2D(tex, vUv + vec2(speed * 0.012)).b;
       vec3 color = mix(vec3(r, g, b), vec3(0.), 0.1 - hoverValue * 0.1);
       gl_FragColor = vec4(color, 1.);
       // 0.004 : force de la distortion, une valeur plus haute = plus de mouvement
@@ -194,7 +183,7 @@ function ShaderPlane(props) {
     matRef.current.time += delta
 
     let newSpeed = Math.abs(scrollArea.current.scrollTop - lastScrollTop)
-    speed = lerp(speed, newSpeed, 0.03)
+    speed = lerp(speed, newSpeed, 0.03, delta)
 
     matRef.current.speed = speed
     lastScrollTop = scrollArea.current.scrollTop
@@ -220,14 +209,12 @@ function ShaderPlane(props) {
   }, [hovering])
 
   const clickHandler = () => {
-    // gsap.to(meshRef.current.scale, { y: 0 })
-    // console.log(props.project)
-    // gsap.to(transitionPanel.current, {
-    //   y: 0,
-    //   onComplete: () => {
-    //     props.history.push(`/works/${props.project.path}`)
-    //   },
-    // })
+    scrollArea.current.scrollTop =
+      props.index * ((scrollArea.current.children[0].offsetHeight - window.innerHeight) / (projectsData.length - 1))
+
+    setTimeout(() => {
+      props.history.push(`/works/${props.project.path}`)
+    }, 300)
   }
 
   return (
@@ -241,10 +228,10 @@ function ShaderPlane(props) {
       <planeGeometry args={[2.24, 1.26, 32, 32]} />
       <distortionMaterial ref={matRef} tex={props.texture} />
       <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.25]}>
-        <h1 className="text-h1 name">{props.project.name}</h1>
-        <motion.div animate={{ x: hovering ? 15 : 0, transition: "tween" }} className="cta">
-          <span className="text">open project</span>
-          <div className="circle">
+        <h1 className='text-h1 name'>{props.project.name}</h1>
+        <motion.div animate={{ x: hovering ? 15 : 0, transition: "tween" }} className='cta'>
+          <span className='text'>open project</span>
+          <div className='circle'>
             <ArrowSVG />
           </div>
         </motion.div>
@@ -262,7 +249,7 @@ const Scene = ({ history }) => {
   const vec3 = useRef(new Vector3())
   const [planeInView, setPlaneInView] = useState(0)
 
-  useFrame(({ camera }) => {
+  useFrame(({ camera }, delta) => {
     scrollValue = mapRange(
       0,
       1,
@@ -275,8 +262,11 @@ const Scene = ({ history }) => {
     if (planeInView !== planeInViewTemp) setPlaneInView(planeInViewTemp)
 
     const camPosition = vec3.current.setFromSphericalCoords(21.5, Math.PI / 2, 0.14 * scrollValue)
-    camera.position.lerp(camPosition, 0.1)
-    camera.position.y = lerp(camera.position.y, camera.position.y + scrollValue / 1.18, 0.1)
+
+    camera.position.x = lerp(camera.position.x, camPosition.x, 0.1, delta)
+    camera.position.y = lerp(camera.position.y, camPosition.y, 0.1, delta)
+    camera.position.z = lerp(camera.position.z, camPosition.z, 0.1, delta)
+    camera.position.y = lerp(camera.position.y, camera.position.y + scrollValue / 1.18, 0.1, delta)
     camera.lookAt(0, scrollValue / 1.18, 0)
     camera.updateProjectionMatrix()
   })
@@ -303,9 +293,15 @@ const Works = () => {
   const scrollValue = useRef(0)
   const scrollProgressBar = useRef(0)
   const [hasScrolled, setHasScrolled] = useState(false)
+
+  useLayoutEffect(() => {
+    scrollArea.current.scrollTop += 1
+  }, [])
+
   const onScroll = (e) => {
     scrollValue.current = e.target.scrollTop
-    !hasScrolled && setHasScrolled(true)
+    // 5 has no meaning
+    if (scrollArea.current.scrollTop > 5) !hasScrolled && setHasScrolled(true)
 
     if (scrollProgressBar.current)
       gsap.to(scrollProgressBar.current, {
@@ -314,41 +310,42 @@ const Works = () => {
   }
 
   return (
-    <StyledWorks exit={{ opacity: 0 }}>
-      <Canvas
-        dpr={[1, 1.5]}
-        mode="concurrent"
-        camera={{ position: [0, 0, 24], far: 3 }}
-        // scrolling offsets the raycaster, we need to compensate
-        raycaster={{
-          computeOffsets: ({ offsetX, offsetY }) => ({
-            offsetY: offsetY - scrollArea.current.scrollTop,
-            offsetX,
-          }),
-        }}
-        // as the canvas is under the scroll div, we can define the scroll div as the event receiver for the canvas
-        onCreated={(state) => state.events.connect(scrollArea.current)}
-      >
-        <Suspense fallback={null}>
-          <Scene history={history} />
-        </Suspense>
-      </Canvas>
-      <div className="scroll-area" ref={scrollArea} onScroll={onScroll}>
-        <div style={{ height: `${(projectsData.length - 1) * projectHeight}vh`, width: "100vw" }} />
-      </div>
-      <motion.div
-        transition={{ duration: 1.2, delay: 0.3 }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: hasScrolled ? 0 : 1 }}
-        className="scroll-inv"
-      >
-        scroll
-      </motion.div>
-      <motion.div className="scroll-progress">
-        <div ref={scrollProgressBar} className="scroll-bar"></div>
-      </motion.div>
-      <motion.div initial={{ y: "100%" }} ref={transitionPanel} className="transition-panel"></motion.div>
-    </StyledWorks>
+    <PageTemplate hasFooter={false} hasTransitionPanel={true}>
+      <StyledWorks>
+        <Canvas
+          dpr={[1, 1.5]}
+          mode='concurrent'
+          camera={{ position: [0, 0, 24], far: 3 }}
+          // scrolling offsets the raycaster, we need to compensate
+          raycaster={{
+            computeOffsets: ({ offsetX, offsetY }) => ({
+              offsetY: offsetY - scrollArea.current.scrollTop,
+              offsetX,
+            }),
+          }}
+          // as the canvas is under the scroll div, we can define the scroll div as the event receiver for the canvas
+          onCreated={(state) => state.events.connect(scrollArea.current)}
+        >
+          <Suspense fallback={null}>
+            <Scene history={history} />
+          </Suspense>
+        </Canvas>
+        <div className='scroll-area' ref={scrollArea} onScroll={onScroll}>
+          <div style={{ height: `${(projectsData.length - 1) * projectHeight}vh`, width: "100vw" }} />
+        </div>
+        <motion.div
+          transition={{ duration: 1.2, delay: 0.3 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: hasScrolled ? 0 : 1 }}
+          className='scroll-inv'
+        >
+          scroll
+        </motion.div>
+        <motion.div className='scroll-progress'>
+          <div ref={scrollProgressBar} className='scroll-bar'></div>
+        </motion.div>
+      </StyledWorks>
+    </PageTemplate>
   )
 }
 

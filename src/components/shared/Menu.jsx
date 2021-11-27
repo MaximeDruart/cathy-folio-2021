@@ -31,7 +31,8 @@ const StyledMenu = styled(motion.div)`
       margin: 25px 0;
       li {
         line-height: 0.9;
-        text-transform: capitalize;
+        text-transform: uppercase;
+        font-family: SaolDisplayLight;
         a {
           display: inline-block;
           position: relative;
@@ -48,6 +49,9 @@ const StyledMenu = styled(motion.div)`
           }
         }
       }
+    }
+    .active {
+      font-family: SaolDisplaySemiboldItalic;
     }
   }
 `
@@ -82,30 +86,36 @@ const Menu = () => {
   const isMenuOpen = useStore((state) => state.isMenuOpen)
   const toggleMenu = useStore((state) => state.toggleMenu)
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence>
       {isMenuOpen && (
         <StyledMenu
           initial={{ y: "100%" }}
           animate={{ y: 0 }}
-          exit={{ y: "100%" }}
+          // exit={{ y: "100%" }}
           transition={{ type: "tween", ease: EASE_IN_OUT, duration: 0.6 }}
         >
-          <motion.ul variants={list} initial="hidden" animate="visible" className="links">
+          <motion.ul variants={list} initial='hidden' animate='visible' className='links'>
             {pages.map((link, index) => (
-              <motion.div key={index} className="wrapper">
+              <motion.div key={index} className='wrapper'>
                 <motion.li
-                  className="text-h1"
+                  className='text-h1'
                   variants={item}
                   exit={item.hidden}
-                  transition={{ type: "tween", duration: 0.4, ease: "circOut" }}
+                  transition={{ type: "tween", duration: 0.6, ease: "circOut" }}
                 >
                   <Link
                     onClick={toggleMenu}
-                    className={`link ${pathname === link ? "active" : ""}`}
+                    className={`link ${
+                      pathname.slice(1) === link
+                        ? "active"
+                        : pathname.slice(1) === "" && link === "home"
+                        ? "active"
+                        : ""
+                    }`}
                     to={`/${link === "home" ? "" : link}`}
                   >
                     <span>{link}</span>
-                    <span className="post">{link}</span>
+                    <span className='post'>{link}</span>
                   </Link>
                 </motion.li>
               </motion.div>

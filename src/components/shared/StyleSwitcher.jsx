@@ -22,8 +22,10 @@ const StyleSwitcher = () => {
   const isDarkMode = useStore((state) => state.isDarkMode)
   return (
     <StyledStyleSwitcher>
-      <button className="Color">COLOR</button>
-      <button onClick={toggleDarkMode} className="theme-toggle">
+      <button className='style-item' className=''>
+        COLOR
+      </button>
+      <button className='style-item' onClick={toggleDarkMode} className='theme-toggle'>
         {isDarkMode ? "LIGHT" : "DARK"}
       </button>
     </StyledStyleSwitcher>

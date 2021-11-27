@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo } from "react"
+import React, { useEffect, useLayoutEffect, useMemo, useRef } from "react"
 import { useHistory, Switch, Route } from "react-router"
-import luge from "@waaark/luge"
 
 import projectData from "./projectsData"
 import Loader from "./components/shared/Loader"
@@ -14,10 +13,12 @@ import Works from "./components/pages/Works"
 import Archives from "./components/pages/Archives"
 import ProjectDetail from "./components/projects/ProjectDetail"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
-import GLBackground from "./components/shared/GLBackground"
+import { AnimatePresence } from "framer-motion"
 
 const App = () => {
   let history = useHistory()
+
+  const containerRef = useRef(null)
 
   let projectRoutes = useMemo(
     () =>
@@ -31,12 +32,6 @@ const App = () => {
     []
   )
 
-  useEffect(() => {
-    history.listen(() => {
-      luge.lifecycle.refresh()
-    })
-    // console.clear()
-  }, [])
   return (
     <>
       <MouseFollower />
@@ -44,15 +39,20 @@ const App = () => {
       <Header />
       <StyleSwitcher />
       <Menu />
-      {/* <Route path={["/", "/about"]} exact component={GLBackground} /> */}
-      <div data-lg-smooth>
-        <Switch>
-          {projectRoutes}
-          <Route path="/works" exact component={Works} />
-          <Route path="/about" exact component={About} />
-          <Route path="/archives" exact component={Archives} />
-          <Route path="/" component={Home} />
-        </Switch>
+      <div data-app-container ref={containerRef}>
+        <Route
+          render={({ location }) => (
+            <AnimatePresence exitBeforeEnter initial={true}>
+              <Switch location={location} key={location.pathname}>
+                {projectRoutes}
+                <Route path='/works' exact component={Works} />
+                <Route path='/about' exact component={About} />
+                <Route path='/archives' exact component={Archives} />
+                <Route path='/' component={Home} />
+              </Switch>
+            </AnimatePresence>
+          )}
+        />
       </div>
     </>
   )

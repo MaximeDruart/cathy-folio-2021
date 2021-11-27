@@ -1,13 +1,22 @@
 /* eslint-disable no-dupe-keys */
+import { v4 as uuidv4 } from "uuid"
+
 import Grissini from "./components/projects/Grissini"
-// Cover
 import grissiniCover from "./assets/img/works/grissini.png"
+
+import PXP from "./components/projects/PXP"
 import pxpCover from "./assets/img/works/pxp.jpg"
-import hologrammeCover from "./assets/img/works/hologramme.png"
-import arcaneCover from "./assets/img/works/arcane.png"
+
+import Flamalice from "./components/projects/Flamalice"
 import flamaliceCover from "./assets/img/works/flamalice.png"
 
-export default [
+import Arcane from "./components/projects/Arcane"
+import arcaneCover from "./assets/img/works/arcane.png"
+
+import Hologramme from "./components/projects/Hologramme"
+import hologrammeCover from "./assets/img/works/hologramme.png"
+
+let projectsData = [
   {
     name: "Grissini",
     path: "grissini",
@@ -32,7 +41,7 @@ export default [
     name: "PXP",
     path: "pxp",
     coverImg: pxpCover,
-    component: Grissini,
+    component: PXP,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
     techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
@@ -52,7 +61,7 @@ export default [
     name: "Hologramme",
     path: "Hologramme",
     coverImg: hologrammeCover,
-    component: Grissini,
+    component: Hologramme,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
     techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
@@ -72,7 +81,7 @@ export default [
     name: "Arcane",
     path: "Arcane",
     coverImg: arcaneCover,
-    component: Grissini,
+    component: Arcane,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
     techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
@@ -92,7 +101,7 @@ export default [
     name: "Flamalice",
     path: "Flamalice",
     coverImg: flamaliceCover,
-    component: Grissini,
+    component: Flamalice,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
     techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
@@ -109,3 +118,7 @@ export default [
     },
   },
 ]
+
+projectsData = projectsData.map((project) => ({ ...project, id: uuidv4() }))
+
+export default projectsData
