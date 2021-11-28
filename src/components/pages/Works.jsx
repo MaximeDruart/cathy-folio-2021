@@ -22,7 +22,7 @@ const scrollArea = createRef()
 
 const planeSizes = {
   mobile: [0.7, 1],
-  tablet: [1.4, 1.22],
+  tablet: [1.4, 0.9],
   desktop: [2.24, 1.26],
 }
 
@@ -133,7 +133,7 @@ const StyledWorks = styled(motion.div)`
 `
 
 const DistortionMaterial = shaderMaterial(
-  { time: 0, tex: undefined, speed: 0, hoverValue: 0 },
+  { time: 0, tex: undefined, speed: 0, hoverValue: 0, textureAspect: undefined, frameAspect: undefined },
   // vertex shader
   `
     uniform float time;
@@ -162,23 +162,34 @@ const DistortionMaterial = shaderMaterial(
     uniform sampler2D tex;
     varying vec2 vUv;
 
+    uniform float textureAspect;
+    uniform float frameAspect;
+
 
 
     ${noiseFunction}
 
-    // vec2 s = uScreenSize; // Screen
-    // vec2 i = uBGSize; // Image
-    // float rs = s.x / s.y;
-    // float ri = i.x / i.y;
-    // vec2 new = rs < ri ? vec2(i.x * s.y / i.y, s.y) : vec2(s.x, i.y * s.x / i.x);
-    // vec2 offset = (rs < ri ? vec2((new.x - s.x) / 2.0, 0.0) : vec2(0.0, (new.y - s.y) / 2.0)) / new;
-    // vec2 uv = vTexCoord * s / new + offset;
-    // gl_FragColor = texture2D(uBGTex, uv);
+
     
     void main() {
-      float r = texture2D(tex, vUv).r;
-      float g = texture2D(tex, vUv - vec2(speed * 0.012)).g;
-      float b = texture2D(tex, vUv + vec2(speed * 0.012)).b;
+      float scaleX = 1.;
+      float scaleY = 1.;
+      float textureFrameRatio = textureAspect / frameAspect;
+      bool portraitTexture = textureAspect < 1.;
+      bool portraitFrame = frameAspect < 1.;
+      
+      if(portraitFrame)
+        scaleX = 1.f / textureFrameRatio;
+      else
+        scaleY = textureFrameRatio;
+      
+      vec2 textureScale = vec2(scaleX, scaleY);
+      vec2 vTexCoordinate = textureScale * (vUv - 0.5) + 0.5;
+  
+
+      float r = texture2D(tex, vTexCoordinate).r;
+      float g = texture2D(tex, vTexCoordinate - vec2(speed * 0.012)).g;
+      float b = texture2D(tex, vTexCoordinate + vec2(speed * 0.012)).b;
       vec3 color = mix(vec3(r, g, b), vec3(0.), 0.1 - hoverValue * 0.1);
       gl_FragColor = vec4(color, 1.);
     }
@@ -250,7 +261,12 @@ function ShaderPlane(props) {
       ref={meshRef}
     >
       <planeGeometry args={[...planeSizes[media], 32, 32]} />
-      <distortionMaterial ref={matRef} tex={props.texture} />
+      <distortionMaterial
+        frameAspect={planeSizes[media][0] / planeSizes[media][1]}
+        textureAspect={props.texture.image.naturalWidth / props.texture.image.naturalHeight}
+        ref={matRef}
+        tex={props.texture}
+      />
       <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.25]}>
         <h1 className='text-h1 name'>{props.project.name}</h1>
         <motion.div animate={{ x: hovering ? 15 : 0, transition: "tween" }} className='cta'>
