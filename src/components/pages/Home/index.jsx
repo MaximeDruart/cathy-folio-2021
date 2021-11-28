@@ -37,6 +37,7 @@ const StyledHome = styled.div`
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
         font-size: 5.4vw;
+        line-height: 1.2;
 
         &.first_line {
           text-align: start;
@@ -120,11 +121,21 @@ const StyledHome = styled.div`
       height: 2px;
       background-color: ${({ theme }) => theme.colors.text.standard};
       opacity: 0.2;
+
+      @media (max-width: 769px) {
+        margin-top: 14px;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 480px) {
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
     }
   }
 
   .what-i-do {
-    margin-top: 50vh;
+    margin-top: 30vh;
 
     .title {
       text-align: center;

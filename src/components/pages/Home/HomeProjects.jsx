@@ -20,6 +20,22 @@ const Container = styled.div`
         font-family: SaolDisplayLight;
         text-transform: uppercase;
       }
+
+      @media (max-width: 769px) {
+        margin-bottom: 26px;
+
+        .title {
+          margin-left: 26px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        margin-bottom: 18px;
+
+        .title {
+          margin-left: 18px;
+        }
+      }
     }
 
     .hover-images {

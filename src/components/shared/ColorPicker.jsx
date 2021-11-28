@@ -1,29 +1,81 @@
-import React from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import React, { useState } from "react"
 import styled from "styled-components"
 import useStore, { colors } from "../../store"
 
-const Container = styled.div``
+const Container = styled.div`
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+  }
+`
 
-const ColorLi = styled.li`
+const ColorListItem = styled(motion.li)`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-left: 15px;
+  }
   .point {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
     background: ${({ activeColor }) => activeColor};
+  }
+
+  .text {
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.text.standard};
+    transform: rotate(180deg);
+    margin-bottom: 10px;
   }
 `
 
 const ColorPicker = () => {
   const activeColor = useStore((state) => state.activeColor)
   const setActiveColor = useStore((state) => state.setActiveColor)
+
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <Container>
       <ul>
-        {colors.map((color) => (
-          <ColorLi activeColor={activeColor}>
+        <AnimatePresence>
+          <ColorListItem onClick={() => setIsOpen((open) => !open)} activeColor={activeColor.color}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              key={activeColor.name}
+              className='text'
+            >
+              {activeColor.name}
+            </motion.div>
             <div className='point'></div>
-            <div className='text'></div>
-          </ColorLi>
-        ))}
+          </ColorListItem>
+          {isOpen &&
+            colors
+              .filter((color) => color.name !== activeColor.name)
+              .map((color, index) => (
+                <ColorListItem
+                  key={color.name}
+                  onClick={() => {
+                    setActiveColor(index)
+                    setIsOpen((open) => !open)
+                  }}
+                  activeColor={color.color}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  // exit={{ opacity: 0 }}
+                >
+                  <div className='text'>{color.name}</div>
+                  <div className='point'></div>
+                </ColorListItem>
+              ))}
+        </AnimatePresence>
       </ul>
     </Container>
   )

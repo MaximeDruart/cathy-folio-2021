@@ -5,7 +5,20 @@ import { createRef } from "react"
 
 const mfIsHoveringCanvas = createRef(false)
 
-export const colors = ["amethyst", "ruby", "emerald", "lila", "sakura"]
+export const colors = [
+  {
+    name: "amethyst",
+    color: "#FFFFFF",
+  },
+  {
+    name: "sakura",
+    color: "red",
+  },
+  {
+    name: "emerald",
+    color: "blue",
+  },
+]
 
 const store = (set, get) => ({
   isMenuOpen: false,
@@ -13,7 +26,7 @@ const store = (set, get) => ({
     !get().isMenuOpen ? enableBodyScroll("[data-app-container]") : clearAllBodyScrollLocks()
     set((state) => ({ isMenuOpen: !state.isMenuOpen }))
   },
-  isDarkMode: !!JSON.parse(localStorage.getItem("dark-mode-enabled")) || true,
+  isDarkMode: !!JSON.parse(localStorage.getItem("dark-mode-enabled")),
   toggleDarkMode: () => {
     localStorage.setItem("dark-mode-enabled", !get().isDarkMode)
     set((state) => ({ isDarkMode: !state.isDarkMode }))

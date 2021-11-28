@@ -9,12 +9,18 @@ const bottomWords = ["digital", "creative", "design", "test", "test2"]
 const Container = styled.div`
   .line {
     width: 100vw;
-    display: flex;
     justify-content: flex-end;
     flex-flow: row nowrap;
+    display: inline-flex;
+
+    .string {
+      display: inline-block;
+      height: auto;
+    }
 
     span {
       text-transform: uppercase;
+      line-height: auto;
 
       &:not(:last-child) {
         margin-right: 2vw;
@@ -30,7 +36,13 @@ const Container = styled.div`
   .bottom-line {
     margin-top: 20px;
     justify-content: flex-start;
-    span {
+
+    @media (max-width: 769px) {
+      margin-top: 12px;
+    }
+
+    @media (max-width: 480px) {
+      margin-top: 0px;
     }
   }
 `
@@ -43,10 +55,10 @@ const InfiniteText = () => {
 
   useLayoutEffect(() => {
     const topStringWidth = topStringRef.current.getBoundingClientRect().width
-    gsap.to(topLineContainer.current, { x: topStringWidth, ease: "linear", duration: 15, repeat: -1 })
+    // gsap.to(topLineContainer.current, { x: topStringWidth, ease: "linear", duration: 15, repeat: -1 })
 
     const bottomStringWidth = bottomStringRef.current.getBoundingClientRect().width
-    gsap.to(bottomLineContainer.current, { x: -bottomStringWidth, ease: "linear", duration: 15, repeat: -1 })
+    // gsap.to(bottomLineContainer.current, { x: -bottomStringWidth, ease: "linear", duration: 15, repeat: -1 })
   }, [])
   return (
     <Container>

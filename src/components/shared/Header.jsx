@@ -3,8 +3,10 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import useStore from "../../store"
 import CathyLogoSVG from "../../assets/icons/cathy.svg?component"
+import { horizontalPadding } from "../../styles/globalCustom"
 
 const StyledHeader = styled.div`
+  ${horizontalPadding};
   position: fixed;
   width: 100vw;
   display: flex;
@@ -13,7 +15,6 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   top: 60px;
   z-index: 100;
-  padding: 0 calc(5vw - 25px);
   .logo {
     width: 50px;
     height: 50px;
@@ -58,7 +59,7 @@ const Header = () => {
   const isMenuOpen = useStore((state) => state.isMenuOpen)
   return (
     <StyledHeader>
-      <Link to="/" className="logo">
+      <Link to='/' className='logo'>
         <CathyLogoSVG />
       </Link>
       <button
@@ -67,8 +68,8 @@ const Header = () => {
         }}
         className={`menu-toggle ${isMenuOpen ? "menu-opened" : ""}`}
       >
-        <div className="top"></div>
-        <div className="bottom"></div>
+        <div className='top'></div>
+        <div className='bottom'></div>
       </button>
     </StyledHeader>
   )

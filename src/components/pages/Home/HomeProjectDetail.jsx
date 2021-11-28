@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import lerp from "lerp"
+import { useMediaQuery } from "beautiful-react-hooks"
 
 const StyledHomeProjectDetail = styled.div`
   width: 100%;
@@ -16,6 +17,21 @@ const StyledHomeProjectDetail = styled.div`
 
       font-family: SaolDisplayLight;
       text-transform: uppercase;
+    }
+    @media (max-width: 769px) {
+      margin-bottom: 26px;
+
+      .title {
+        margin-left: 26px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 18px;
+
+      .title {
+        margin-left: 18px;
+      }
     }
   }
 
@@ -41,6 +57,8 @@ const StyledHomeProjectDetail = styled.div`
 const TextLink = motion(Link)
 
 const HomeProjectDetail = ({ project, index }) => {
+  const isDesktop = useMediaQuery("(min-width:769px)")
+
   const pos = useRef({ x: 0, y: 0 })
   const lerpedPos = useRef({ x: 0, y: 0 })
   const hoverImage = useRef(null)
@@ -57,11 +75,13 @@ const HomeProjectDetail = ({ project, index }) => {
 
       hoverImage.current.style.transform = `translate3d(${lerpedPos.current.x}px, ${lerpedPos.current.y}px, 0)`
     }
-    window.addEventListener("mousemove", mousemoveHandler)
+    if (isDesktop) {
+      window.addEventListener("mousemove", mousemoveHandler)
+    }
     return () => {
       window.removeEventListener("mousemove", mousemoveHandler)
     }
-  }, [])
+  }, [isDesktop])
 
   useEffect(() => {
     if (hovering) {
@@ -94,7 +114,7 @@ const HomeProjectDetail = ({ project, index }) => {
       </motion.div>
 
       <motion.div style={{ y: spring }} className='hover-images-wrapper'>
-        <motion.div style={{ opacity: hovering ? 1 : 0 }} ref={hoverImage} className='hover-images'>
+        <motion.div style={{ opacity: hovering && isDesktop ? 1 : 0 }} ref={hoverImage} className='hover-images'>
           <img src={project.coverImg} alt='' />
         </motion.div>
       </motion.div>

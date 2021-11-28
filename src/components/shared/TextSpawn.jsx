@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const Container = styled(motion.div)`
   span {
-    display: inline-block;
+    display: inline-flex;
     position: relative;
     overflow: hidden;
     white-space: nowrap;
@@ -33,7 +33,7 @@ const TextSpawn = ({ children, direction = "RIGHT", ...rest }) => {
           initial={{ x: 0 }}
           style={{ width }}
           animate={{
-            x: direction === "LEFT" ? "-100%" : "100%",
+            x: direction === "LEFT" ? "-101%" : "101%",
             transition: { duration: 0.4, ease: "easeOut", delay: 0.3 },
           }}
           className='overlay'

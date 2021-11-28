@@ -1,4 +1,4 @@
-import { css } from "styled-components"
+import styled, { css } from "styled-components"
 
 export default css`
   /* TYPO */
@@ -13,9 +13,18 @@ export default css`
     font-weight: normal;
     font-size: 100px;
     color: ${({ theme }) => theme.colors.text.standard};
-    line-height: 90px;
+    line-height: 0.9;
     /* or 101px */
     letter-spacing: 0.03em;
+
+    @media (max-width: 769px) {
+      font-size: 60px;
+      font-size: 60px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 35px;
+    }
   }
   .text-h2 {
     font-family: "NeueMontrealRegular";
@@ -23,11 +32,19 @@ export default css`
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
     margin-bottom: 1rem;
-    line-height: 64px;
+    line-height: 1.06;
     span.important_word {
       font-family: "SaolDisplaySemiboldItalic";
       color: ${({ theme }) => theme.colors.primary1};
       font-size: 60px;
+    }
+
+    @media (max-width: 769px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
     }
   }
   .text-h2-5 {
@@ -38,6 +55,14 @@ export default css`
       font-family: "SaolDisplaySemiboldItalic";
       color: ${({ theme }) => theme.colors.primary1};
       font-size: 60px;
+    }
+
+    @media (max-width: 769px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 18px;
     }
   }
   .text-h3 {
@@ -54,7 +79,7 @@ export default css`
     font-family: "SaolDisplayLight";
     font-size: 2rem;
     margin-top: 1.4rem;
-    line-height: 2.2rem;
+    line-height: 1.1;
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h6 {
@@ -69,7 +94,7 @@ export default css`
   .text-regular {
     color: ${({ theme }) => theme.colors.text.standard};
     // letter-spacing: 0.2rem;
-    line-height: 18px;
+    line-height: 1.28;
     font-size: 14px;
     font-family: "NeueMontrealRegular";
   }
@@ -123,4 +148,16 @@ export default css`
   }
 
   /* SECTIONS */
+`
+
+export const horizontalPadding = css`
+  padding: 0 80px;
+
+  @media (max-width: 769px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 28px;
+  }
 `

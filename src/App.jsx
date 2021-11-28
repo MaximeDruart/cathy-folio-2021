@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef } from "react"
 import { Switch, Route } from "react-router"
+import { useMediaQuery } from "beautiful-react-hooks"
 
 import projectData from "./projectsData"
 import Header from "./components/shared/Header"
@@ -29,9 +30,11 @@ const App = () => {
     []
   )
 
+  const isDesktop = useMediaQuery("(min-width:769px)")
+
   return (
     <>
-      <MouseFollower />
+      {isDesktop && <MouseFollower />}
       <Header />
       <StyleSwitcher />
       <Menu />

@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { horizontalPadding } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
 
 const StyledProjectDetail = styled.div`
@@ -15,6 +16,7 @@ const StyledProjectDetail = styled.div`
     background: url(${(props) => props.coverImg});
 
     background-size: cover;
+    background-position: center center;
   }
   .hero-title {
     position: absolute;
@@ -36,9 +38,9 @@ const StyledProjectDetail = styled.div`
   .details {
     width: 100%;
     margin-top: 5vh;
-    padding: 0 calc(5vw - 25px);
 
     height: 200vh;
+    ${horizontalPadding};
   }
 `
 

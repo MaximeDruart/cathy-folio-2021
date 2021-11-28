@@ -1,17 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 import useStore from "../../store"
+import { horizontalPadding } from "../../styles/globalCustom"
+import ColorPicker from "./ColorPicker"
 
 const StyledStyleSwitcher = styled.div`
   position: fixed;
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   bottom: 60px;
   z-index: 100;
-  padding: 0 calc(5vw - 25px);
+  ${horizontalPadding};
+
   color: ${({ theme }) => theme.colors.text.standard};
   font-family: "NeueMontrealRegular";
   font-size: 14px;
@@ -22,9 +25,7 @@ const StyleSwitcher = () => {
   const isDarkMode = useStore((state) => state.isDarkMode)
   return (
     <StyledStyleSwitcher>
-      <button className='style-item' className=''>
-        COLOR
-      </button>
+      <ColorPicker />
       <button className='style-item' onClick={toggleDarkMode} className='theme-toggle'>
         {isDarkMode ? "LIGHT" : "DARK"}
       </button>

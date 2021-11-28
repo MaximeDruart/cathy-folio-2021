@@ -1,10 +1,11 @@
 import React, { createRef, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
-import { Html, shaderMaterial, useProgress, useTexture } from "@react-three/drei"
-import { Canvas, extend, useFrame, useThree } from "@react-three/fiber"
+import { Html, shaderMaterial, useTexture } from "@react-three/drei"
+import { Canvas, extend, useFrame } from "@react-three/fiber"
 import { motion } from "framer-motion"
 import { Vector3 } from "three"
 import lerp from "@14islands/lerp"
+import { useMediaQuery } from "beautiful-react-hooks"
 
 import projectsData from "../../projectsData"
 import { noiseFunction } from "../../assets/utils/glsl"
@@ -18,6 +19,18 @@ import PageTemplate from "./PageTemplate"
 const projectHeight = 70
 
 const scrollArea = createRef()
+
+const planeSizes = {
+  mobile: [0.7, 1],
+  tablet: [1.4, 1.22],
+  desktop: [2.24, 1.26],
+}
+
+const planePositions = {
+  mobile: { distanceX: 0.06, distanceY: 3 },
+  tablet: { distanceX: 0.1, distanceY: 2 },
+  desktop: { distanceX: 0.14, distanceY: 1.18 },
+}
 
 const StyledWorks = styled(motion.div)`
   height: 100vh;
@@ -149,19 +162,25 @@ const DistortionMaterial = shaderMaterial(
     uniform sampler2D tex;
     varying vec2 vUv;
 
+
+
     ${noiseFunction}
+
+    // vec2 s = uScreenSize; // Screen
+    // vec2 i = uBGSize; // Image
+    // float rs = s.x / s.y;
+    // float ri = i.x / i.y;
+    // vec2 new = rs < ri ? vec2(i.x * s.y / i.y, s.y) : vec2(s.x, i.y * s.x / i.x);
+    // vec2 offset = (rs < ri ? vec2((new.x - s.x) / 2.0, 0.0) : vec2(0.0, (new.y - s.y) / 2.0)) / new;
+    // vec2 uv = vTexCoord * s / new + offset;
+    // gl_FragColor = texture2D(uBGTex, uv);
     
     void main() {
-
-      // gl_FragColor = texture2D(tex, vUv + 0.004*snoise(vec3(vUv *30.0, time * 0.45)));
       float r = texture2D(tex, vUv).r;
       float g = texture2D(tex, vUv - vec2(speed * 0.012)).g;
       float b = texture2D(tex, vUv + vec2(speed * 0.012)).b;
       vec3 color = mix(vec3(r, g, b), vec3(0.), 0.1 - hoverValue * 0.1);
       gl_FragColor = vec4(color, 1.);
-      // 0.004 : force de la distortion, une valeur plus haute = plus de mouvement
-      // 30.0 : scale du noise, valeur plus haute = les distortions sont plus nombreuses mais plus petites
-      // 0.45 : vitesse
     }
   `
 )
@@ -179,6 +198,11 @@ function ShaderPlane(props) {
   // only using an object because thats what gsap wants
   const hoverValue = useRef({ value: 0 })
 
+  const isTablet = useMediaQuery("(min-width: 480px) and (max-width: 769px)")
+  const isMobile = useMediaQuery("(max-width: 479px)")
+
+  const media = isMobile ? "mobile" : isTablet ? "tablet" : "desktop"
+
   useFrame((state, delta) => {
     matRef.current.time += delta
 
@@ -189,13 +213,13 @@ function ShaderPlane(props) {
     lastScrollTop = scrollArea.current.scrollTop
   })
   useEffect(() => {
-    meshRef.current.position.setFromSphericalCoords(20, Math.PI / 2, 0.14 * props.index)
+    meshRef.current.position.setFromSphericalCoords(20, Math.PI / 2, planePositions[media].distanceX * props.index)
     let pos = new Vector3().copy(meshRef.current.position)
     // by multiplying the vector by a scalar of 2 we can get the "opposite" of the vector from plane pos to origin
     pos = pos.multiplyScalar(2)
     meshRef.current.lookAt(pos)
-    meshRef.current.position.y += props.index / 1.18
-  }, [])
+    meshRef.current.position.y += props.index / planePositions[media].distanceY
+  }, [isTablet, isMobile])
 
   useEffect(() => {
     mfIsHoveringCanvas.current = hovering
@@ -225,7 +249,7 @@ function ShaderPlane(props) {
       onPointerOut={() => setHovering(false)}
       ref={meshRef}
     >
-      <planeGeometry args={[2.24, 1.26, 32, 32]} />
+      <planeGeometry args={[...planeSizes[media], 32, 32]} />
       <distortionMaterial ref={matRef} tex={props.texture} />
       <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.25]}>
         <h1 className='text-h1 name'>{props.project.name}</h1>
@@ -249,6 +273,11 @@ const Scene = ({ history }) => {
   const vec3 = useRef(new Vector3())
   const [planeInView, setPlaneInView] = useState(0)
 
+  const isTablet = useMediaQuery("(min-width: 480px) and (max-width: 769px)")
+  const isMobile = useMediaQuery("(max-width: 479px)")
+
+  const media = isMobile ? "mobile" : isTablet ? "tablet" : "desktop"
+
   useFrame(({ camera }, delta) => {
     scrollValue = mapRange(
       0,
@@ -261,13 +290,22 @@ const Scene = ({ history }) => {
     let planeInViewTemp = Math.round(scrollValue)
     if (planeInView !== planeInViewTemp) setPlaneInView(planeInViewTemp)
 
-    const camPosition = vec3.current.setFromSphericalCoords(21.5, Math.PI / 2, 0.14 * scrollValue)
+    const camPosition = vec3.current.setFromSphericalCoords(
+      21.5,
+      Math.PI / 2,
+      planePositions[media].distanceX * scrollValue
+    )
 
     camera.position.x = lerp(camera.position.x, camPosition.x, 0.1, delta)
     camera.position.y = lerp(camera.position.y, camPosition.y, 0.1, delta)
     camera.position.z = lerp(camera.position.z, camPosition.z, 0.1, delta)
-    camera.position.y = lerp(camera.position.y, camera.position.y + scrollValue / 1.18, 0.1, delta)
-    camera.lookAt(0, scrollValue / 1.18, 0)
+    camera.position.y = lerp(
+      camera.position.y,
+      camera.position.y + scrollValue / planePositions[media].distanceY,
+      0.1,
+      delta
+    )
+    camera.lookAt(0, scrollValue / planePositions[media].distanceY, 0)
     camera.updateProjectionMatrix()
   })
 
