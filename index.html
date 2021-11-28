@@ -4,9 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cathy Dolle</title>
+    <style>
+      html,
+      body {
+        background: black;
+        margin: 0;
+        padding: 0;
+      }
+
+      .pace {
+        display: none;
+        opacity: 0;
+      }
+
+      .loader {
+        background: black;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+      }
+
+      .loader .content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 40px;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+      }
+
+      .loader .content .text {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .loader .content .text .saol {
+        font-family: "SaolDisplayLight";
+      }
+
+      .loader .content .line {
+        width: 100%;
+        margin-top: 0px;
+        height: 2px;
+        background: white;
+        align-self: flex-start;
+      }
+
+      .text-h2 {
+        font-family: "NeueMontrealRegular";
+        font-size: 60px;
+        color: white;
+        letter-spacing: 0;
+        margin-bottom: 1rem;
+        line-height: 64px;
+      }
+    </style>
   </head>
   <body>
+    <div class="loader">
+      <div class="content">
+        <div class="text">
+          <div class="text-h2 saol">CATHY DOLLE</div>
+          <div class="text-h2 percentage">00%</div>
+        </div>
+        <div class="line"></div>
+      </div>
+    </div>
     <div id="root"></div>
+    <script type="module" src="./paceLoader.js"></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

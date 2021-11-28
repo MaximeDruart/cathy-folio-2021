@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import React from "react"
 import styled from "styled-components"
 
@@ -36,12 +37,36 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+
       .text-h1 {
+        display: flex;
+        align-items: baseline;
+        flex-flow: row nowrap;
+
+        text-transform: uppercase;
+
         .important-word {
           font-family: "SaolDisplaySemiboldItalic";
-          text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
+          overflow: hidden;
+          padding: 0 10px;
+          text-transform: uppercase;
+          .word {
+            display: inline-block;
+            position: relative;
+            transition: transform ease-in-out 0.3s;
+
+            &:hover {
+              transform: translateY(-100%);
+            }
+
+            span.post {
+              position: absolute;
+              left: 0;
+              top: 100%;
+            }
+          }
         }
       }
     }
@@ -69,6 +94,11 @@ const Container = styled.div`
   }
 `
 
+const item = {
+  visible: { y: 0 },
+  hidden: { y: "100%" },
+}
+
 const Footer = () => {
   return (
     <Container>
@@ -77,9 +107,20 @@ const Footer = () => {
         <div className='separator'></div>
 
         <div className='footer-body'>
-          <div className='text-h1'>
-            get in <span className='important-word'>touch</span>
-          </div>
+          <motion.a href='#' className='text-h1'>
+            get in
+            <motion.div
+              className='text-h1 important-word'
+              variants={item}
+              exit={item.hidden}
+              transition={{ type: "tween", duration: 0.6, ease: "circOut" }}
+            >
+              <span className='word'>
+                <span>touch</span>
+                <span className='post'>touch</span>
+              </span>
+            </motion.div>
+          </motion.a>
         </div>
         <div className='separator'></div>
         <div className='small-line'>

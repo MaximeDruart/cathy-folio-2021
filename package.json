@@ -16,6 +16,7 @@
     "framer-motion": "^4.1.17",
     "gsap": "^3.7.1",
     "lerp": "^1.0.3",
+    "pace-js": "^1.2.4",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router-dom": "^5.3.0",

@@ -1,8 +1,7 @@
 import React, { useEffect, useLayoutEffect, useMemo, useRef } from "react"
-import { useHistory, Switch, Route } from "react-router"
+import { Switch, Route } from "react-router"
 
 import projectData from "./projectsData"
-import Loader from "./components/shared/Loader"
 import Header from "./components/shared/Header"
 import Menu from "./components/shared/Menu"
 import MouseFollower from "./components/shared/MouseFollower"
@@ -16,8 +15,6 @@ import StyleSwitcher from "./components/shared/StyleSwitcher"
 import { AnimatePresence } from "framer-motion"
 
 const App = () => {
-  let history = useHistory()
-
   const containerRef = useRef(null)
 
   let projectRoutes = useMemo(
@@ -35,7 +32,6 @@ const App = () => {
   return (
     <>
       <MouseFollower />
-      <Loader />
       <Header />
       <StyleSwitcher />
       <Menu />

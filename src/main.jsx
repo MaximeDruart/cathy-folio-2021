@@ -6,5 +6,6 @@ ReactDOM.render(
   <React.StrictMode>
     <AppWrap />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById("root"),
+  () => (window.hasMounted = true)
 )

@@ -1,22 +1,16 @@
-import React from "react"
+import React, { useLayoutEffect } from "react"
 import styled from "styled-components"
-// import FigmaLogoSVG from "../../assets/icons/figma.svg?component"
-// import SketchLogoSVG from "../../assets/icons/sketch.svg?component"
-// import ReactLogoSVG from "../../assets/icons/react.svg?component"
-// import Masonry from "../shared/Masonry"
-// import SectionSelectedWork from "../shared/sections/SectionSelectedWork"
-// import SectionWord from "../shared/sections/SectionWord"
-// import SectionPresentation from "../shared/sections/SectionPresentation"
+
 import Slider from "../../shared/Slider"
+import ArrowDownSVG from "../../../assets/icons/arrow_down.svg?component"
 import ArrowSVG from "../../../assets/icons/arrow.svg?component"
 
-import { motion, useViewportScroll } from "framer-motion"
-import projectsData from "../../../projectsData"
-import HomeProjectDetail from "./HomeProjectDetail"
+import { motion, useTransform, useViewportScroll } from "framer-motion"
 import PageTemplate from "../PageTemplate"
 import { Link } from "react-router-dom"
 import InfiniteText from "../../shared/InfiniteText"
 import HomeProjects from "./HomeProjects"
+import TextSpawn from "../../shared/TextSpawn"
 
 const StyledHome = styled.div`
   * {
@@ -98,9 +92,10 @@ const StyledHome = styled.div`
       span {
         font-family: NeueMontrealRegular;
         font-size: 1rem;
+        text-transform: uppercase;
       }
-      .arrow {
-        margin-top: 5px;
+      svg {
+        margin-top: 10px;
       }
     }
   }
@@ -184,24 +179,32 @@ const StyledHome = styled.div`
 
 const Home = () => {
   const { scrollY } = useViewportScroll()
+
+  const discoverOpacity = useTransform(scrollY, (s) => 1 - s / 300)
   return (
     <PageTemplate initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
       <StyledHome>
         <div className='hero'>
           <div className='text'>
-            <div className='line first_line'>Welcome to</div>
-            <div className='line second_line'>the workspace</div>
+            <div className='line first_line'>
+              <TextSpawn>Welcome to</TextSpawn>
+            </div>
+            <div className='line second_line'>
+              <TextSpawn direction={"LEFT"}>the workspace</TextSpawn>
+            </div>
             <div className='line third_line'>
-              of <span className='important_word'>Cathy</span>
+              <TextSpawn direction={"LEFT"}>
+                of <span className='important_word'>Cathy</span>
+              </TextSpawn>
             </div>
 
             <div className='slider-container'>
               <Slider />
             </div>
           </div>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: scrollY > 0 ? 0 : 1 }} className='discover'>
+          <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
             <span>discover</span>
-            <div className='arrow'>arrow</div>
+            <ArrowDownSVG />
           </motion.div>
         </div>
         <div className='home-section what-i-do'>
