@@ -49,12 +49,12 @@ const ProjectDetail = ({ project }) => {
   const ProjectComponent = project.component
   const [imageHasLoaded, setImageHasLoaded] = useState(false)
   return (
-    <PageTemplate initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
+    <PageTemplate hasFooter={false} initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
       <StyledProjectDetail>
-        <div className="hero-title">
-          <h1 className="text-h1 title">{project.name}</h1>
+        <div className='hero-title'>
+          <h1 className='text-h1 title'>{project.name}</h1>
         </div>
-        <div className="hero">
+        <div className='hero'>
           <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
@@ -62,10 +62,10 @@ const ProjectDetail = ({ project }) => {
             src={project.coverImg}
           />
         </div>
-        <div className="details">
+        <div className='details'>
           {/* project shared data */}
-          <div className="text-h3">{project.date}</div>
-          <div className="text-regular">{project.description}</div>
+          <div className='text-h3'>{project.date}</div>
+          <div className='text-regular'>{project.description}</div>
           <ProjectComponent />
         </div>
       </StyledProjectDetail>
