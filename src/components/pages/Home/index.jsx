@@ -62,13 +62,13 @@ const StyledHome = styled.div`
 
       .slider-container {
         position: absolute;
-        bottom: -9vw;
+        bottom: -7.5vw;
         right: 12.5vw;
         &::after {
           position: absolute;
           content: "UI/UX Designer, front end developer & content creator based in paris";
           width: 14vw;
-          top: -4vw;
+          top: -3.2vw;
           left: -5vw;
           font-family: NeueMontrealLight;
           font-size: 0.65vw;
@@ -95,11 +95,12 @@ const StyledHome = styled.div`
       }
       span {
         font-family: NeueMontrealRegular;
-        font-size: 1rem;
+        font-size: 0.65rem;
         text-transform: uppercase;
       }
       svg {
-        margin-top: 10px;
+        margin-bottom: 2px;
+        height: 25px;
       }
     }
   }
@@ -217,7 +218,7 @@ const Home = () => {
             </div>
           </div>
           <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
-            <span>discover</span>
+            <span class="discover">discover</span>
             <ArrowDownSVG />
           </motion.div>
         </div>
