@@ -88,6 +88,8 @@ const Container = styled.div`
         li {
           text-transform: uppercase;
           margin-right: 10px;
+          font-size: 14px;
+          margin: 0 20px;
         }
       }
     }
