@@ -1,82 +1,250 @@
 import React from "react"
 import styled from "styled-components"
-import ReactLogoSVG from "../../assets/icons/react.svg?component"
-import SectionSelectedWork from "../shared/sections/SectionSelectedWork"
-import SectionWord from "../shared/sections/SectionWord"
-import SectionPresentation from "../shared/sections/SectionPresentation"
-import Masonry from "../shared/Masonry"
 import PageTemplate from "./PageTemplate"
+import InfiniteText from "../shared/InfiniteText"
+
+import Slider from "../shared/Slider"
+import ArrowDownSVG from "../../assets/icons/arrow_down.svg?component"
+import ArrowSVG from "../../assets/icons/arrow.svg?component"
+
+import { motion, useTransform, useViewportScroll } from "framer-motion"
+import { Link } from "react-router-dom"
+import HomeProjects from "./Home/HomeProjects"
+import TextSpawn from "../shared/TextSpawn"
 
 const StyledAbout = styled.div`
   transition: background-color 0.6s;
   * {
-    font-size: 40px;
-    color: white;
+    font-family: NeueMontrealRegular;
+    color: ${({ theme }) => theme.colors.text.standard};
+  }
+  .hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .text {
+      position: relative;
+      .line {
+        text-transform: uppercase;
+        width: 65vw;
+        white-space: nowrap;
+        margin-bottom: 0.2vw;
+
+        font-family: NeueMontrealRegular;
+        letter-spacing: 0.03em;
+        color: ${({ theme }) => theme.colors.text.standard};
+        font-size: 5.4vw;
+        line-height: 1.2;
+
+        &.first_line {
+          text-align: start;
+        }
+        &.second_line {
+          padding-left: 15vw;
+        }
+        &.third_line {
+          padding-left: 10vw;
+        }
+
+        .important_word {
+          font-family: "SaolDisplaySemiboldItalic";
+          text-transform: capitalize;
+          color: ${({ theme }) => theme.colors.primary1};
+          position: relative;
+        }
+      }
+
+      .slider-container {
+        position: absolute;
+        bottom: -9vw;
+        right: 12.5vw;
+        &::after {
+          position: absolute;
+          content: "UI/UX Designer, front end developer & content creator based in paris";
+          width: 14vw;
+          top: -3.2vw;
+          left: -4vw;
+          font-family: NeueMontrealLight;
+          font-size: 0.65vw;
+          text-transform: uppercase;
+          white-space: initial;
+          color: ${({ theme }) => theme.colors.text.standard};
+          transform: translateX(2vw);
+          line-height: 160.62%;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+
+    .discover {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      * {
+        color: white;
+      }
+      span {
+        font-family: NeueMontrealRegular;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+      svg {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .home-section {
+    margin: 0 auto;
+    width: 80vw;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .headline {
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .separator {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      width: 100%;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.text.standard};
+      opacity: 0.2;
+
+      @media (max-width: 769px) {
+        margin-top: 14px;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 480px) {
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .what-i-do {
+    margin-top: 30vh;
+
+    .title {
+      text-align: center;
+      .saol {
+        font-family: SaolDisplaySemiboldItalic;
+      }
+    }
+
+    .cta {
+      margin-top: 20px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      .text {
+        color: ${({ theme }) => theme.colors.text.standard};
+        font-family: NeueMontrealRegular;
+        text-transform: uppercase;
+      }
+
+      .circle {
+        margin-left: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: ${({ theme }) => theme.colors.text.standard};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 60%;
+          height: 60%;
+          fill: ${({ theme }) => theme.colors.background};
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .skills {
+    margin-top: 20vh;
+  }
+
+  .projects {
+    margin-top: 20vh;
+  }
+
+  .contact {
+    margin-top: 20vh;
   }
 `
 
 const About = () => {
+  const { scrollY } = useViewportScroll()
+  const discoverOpacity = useTransform(scrollY, (s) => 1 - s / 300)
   return (
     <PageTemplate hasTransitionPanel={true}>
       <StyledAbout>
-        <section className='wrapper intro'>
-          <h1 className='text-h1'>
-            Learn more
-            <span className='second_line'>
-              about<span className='important_word'> me</span>
-            </span>
-          </h1>
-          {/* <Masonry /> */}
-        </section>
-        {/* Me */}
-        <SectionPresentation imgSrc='src/assets/img/designer.jpg'>
-          <h2 className='text-h2'>
-            I am <span className='important_word'>Cathy</span>
-          </h2>
-          <p className='text-regular'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi, veniam aliquam, perspiciatis ipsa
-            necessitatibus officia eligendi temporibus pariatur voluptatibus quidem? Ex nostrum sapiente quia soluta
-            iste ipsum asperiores alias.
-          </p>
-          <h3 className='text-h3'>Softs</h3>
-        </SectionPresentation>
-        <SectionWord word='I love...' />
-        {/* Front end dev */}
-        <SectionPresentation imgSrc='src/assets/img/designer.jpg'>
-          <h2 className='text-h2'>
-            Practicing new <br />
-            <span className='important_word'>domains</span>
-          </h2>
-          <p className='text-regular'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi, veniam aliquam, perspiciatis ipsa
-            necessitatibus officia eligendi temporibus pariatur voluptatibus quidem? Ex nostrum sapiente quia soluta
-            iste ipsum asperiores alias.
-          </p>
-          <h3 className='text-h3'>In process...</h3>
-          <div className='skill_container'>
-            <div className='skill_content'>
-              <span className='text-h4'>3D</span>
+      <div className='hero'>
+          <div className='text'>
+            <div className='line first_line'>
+              <TextSpawn>Welcome to</TextSpawn>
             </div>
-            <div className='skill_content'>
-              <span className='text-h4'>Illu</span>
+            <div className='line second_line'>
+              <TextSpawn direction={"LEFT"}>the workspace</TextSpawn>
             </div>
-            <div className='skill_content'>
-              <span className='text-h4'>Js</span>
+            <div className='line third_line'>
+              <TextSpawn direction={"LEFT"}>
+                of <span className='important_word'>Cathy</span>
+              </TextSpawn>
             </div>
-            <div className='skill_content'>
-              <span className='text-h4'>??</span>
-            </div>
-            <div className='skill_content'>
-              <ReactLogoSVG></ReactLogoSVG>
+
+            <div className='slider-container'>
+              <Slider />
             </div>
           </div>
-        </SectionPresentation>
-        {/* spacer */}
-        <div className='spacer'></div>
-        {/* stream */}
-        <SectionSelectedWork />
-        {/* spacer */}
-        <div className='spacer'></div>
+          <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
+            <span>discover</span>
+            <ArrowDownSVG />
+          </motion.div>
+        </div>
+        <div className='home-section what-i-do'>
+          <div className='headline'>what i do</div>
+          <div className='separator'></div>
+          <div className='title text-h2-5'>
+            Hello I'm Cathy, I can create the <span className='saol'>design</span> of your website, develop it, and also
+            create your brand identity.
+          </div>
+          <Link to='/about' className='cta'>
+            <span className='text'>about me</span>
+            <button className='circle'>
+              <ArrowSVG />
+            </button>
+          </Link>
+        </div>
+
+        <div className='home-section skills'>
+          <div className='headline'>skills</div>
+          <div className='separator'></div>
+          <InfiniteText />
+          <div className='separator'></div>
+        </div>
+
+        <div className='home-section projects'>
+          <div className='headline'>projects</div>
+          <div className='separator'></div>
+          <HomeProjects />
+        </div>
       </StyledAbout>
     </PageTemplate>
   )
