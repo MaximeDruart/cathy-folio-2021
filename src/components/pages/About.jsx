@@ -3,13 +3,11 @@ import styled from "styled-components"
 import PageTemplate from "./PageTemplate"
 import InfiniteText from "../shared/InfiniteText"
 
-import Slider from "../shared/Slider"
 import ArrowDownSVG from "../../assets/icons/arrow_down.svg?component"
 import ArrowSVG from "../../assets/icons/arrow.svg?component"
 
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { Link } from "react-router-dom"
-import HomeProjects from "./Home/HomeProjects"
 import TextSpawn from "../shared/TextSpawn"
 
 const StyledAbout = styled.div`
@@ -37,45 +35,23 @@ const StyledAbout = styled.div`
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 5.4vw;
-        line-height: 1.2;
+        font-size: 5vw;
+        line-height: 1.3;
 
         &.first_line {
-          text-align: start;
+          text-align: center;
         }
         &.second_line {
-          padding-left: 15vw;
+          text-align: center;
         }
-        &.third_line {
-          padding-left: 10vw;
-        }
-
         .important_word {
+          line-height: 1.3;
+          font-size: 5.3vw;
+          margin-left: 1rem;
           font-family: "SaolDisplaySemiboldItalic";
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
-        }
-      }
-
-      .slider-container {
-        position: absolute;
-        bottom: -9vw;
-        right: 12.5vw;
-        &::after {
-          position: absolute;
-          content: "UI/UX Designer, front end developer & content creator based in paris";
-          width: 14vw;
-          top: -3.2vw;
-          left: -4vw;
-          font-family: NeueMontrealLight;
-          font-size: 0.65vw;
-          text-transform: uppercase;
-          white-space: initial;
-          color: ${({ theme }) => theme.colors.text.standard};
-          transform: translateX(2vw);
-          line-height: 160.62%;
-          letter-spacing: 0.01em;
         }
       }
     }
@@ -93,11 +69,12 @@ const StyledAbout = styled.div`
       }
       span {
         font-family: NeueMontrealRegular;
-        font-size: 1rem;
+        font-size: 0.65rem;
         text-transform: uppercase;
       }
       svg {
         margin-top: 10px;
+        height: 25px;
       }
     }
   }
@@ -180,10 +157,6 @@ const StyledAbout = styled.div`
     margin-top: 20vh;
   }
 
-  .projects {
-    margin-top: 20vh;
-  }
-
   .contact {
     margin-top: 20vh;
   }
@@ -198,19 +171,12 @@ const About = () => {
       <div className='hero'>
           <div className='text'>
             <div className='line first_line'>
-              <TextSpawn>Welcome to</TextSpawn>
+              <TextSpawn>Learn more</TextSpawn>
             </div>
             <div className='line second_line'>
-              <TextSpawn direction={"LEFT"}>the workspace</TextSpawn>
-            </div>
-            <div className='line third_line'>
               <TextSpawn direction={"LEFT"}>
-                of <span className='important_word'>Cathy</span>
+                About <span className='important_word'>me</span>
               </TextSpawn>
-            </div>
-
-            <div className='slider-container'>
-              <Slider />
             </div>
           </div>
           <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
@@ -238,12 +204,6 @@ const About = () => {
           <div className='separator'></div>
           <InfiniteText />
           <div className='separator'></div>
-        </div>
-
-        <div className='home-section projects'>
-          <div className='headline'>projects</div>
-          <div className='separator'></div>
-          <HomeProjects />
         </div>
       </StyledAbout>
     </PageTemplate>
