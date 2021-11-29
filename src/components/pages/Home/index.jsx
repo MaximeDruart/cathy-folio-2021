@@ -36,8 +36,8 @@ const StyledHome = styled.div`
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 5.4vw;
-        line-height: 1.2;
+        font-size: 5vw;
+        line-height: 1.12;
 
         &.first_line {
           text-align: start;
@@ -54,6 +54,9 @@ const StyledHome = styled.div`
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
+          line-height: 1.3;
+          font-size: 5.3vw;
+          margin-left: 1rem;
         }
       }
 
@@ -65,8 +68,8 @@ const StyledHome = styled.div`
           position: absolute;
           content: "UI/UX Designer, front end developer & content creator based in paris";
           width: 14vw;
-          top: -3.2vw;
-          left: -4vw;
+          top: -4vw;
+          left: -5vw;
           font-family: NeueMontrealLight;
           font-size: 0.65vw;
           text-transform: uppercase;

@@ -27,6 +27,7 @@ const StyledSlider = styled.div`
   .page {
     margin-top: 10px;
     text-align: right;
+    font-size: 11px;
     color: ${({ theme }) => theme.colors.text.standard};
   }
 `
