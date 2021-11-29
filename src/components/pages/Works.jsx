@@ -1,7 +1,7 @@
 import React, { createRef, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
-import { Html, shaderMaterial, useTexture } from "@react-three/drei"
-import { Canvas, extend, useFrame } from "@react-three/fiber"
+import { Html, Loader, shaderMaterial, useProgress, useTexture } from "@react-three/drei"
+import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber"
 import { motion } from "framer-motion"
 import { Vector3 } from "three"
 import lerp from "@14islands/lerp"
@@ -41,47 +41,50 @@ const StyledWorks = styled(motion.div)`
   .canvas-html {
     pointer-events: none;
 
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
     z-index: -10;
 
     &.hidden {
       display: none;
     }
 
-    .name {
-      font-family: SaolDisplayLight;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .cta {
-      margin-top: 20px;
+    .wrapper {
       display: flex;
-      flex-flow: row nowrap;
       align-items: center;
-      .text {
-        color: ${({ theme }) => theme.colors.text.standard};
-        font-family: NeueMontrealRegular;
+      flex-flow: column nowrap;
+      .name {
+        font-family: SaolDisplayLight;
         text-transform: uppercase;
+        white-space: nowrap;
       }
 
-      .circle {
-        margin-left: 20px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: ${({ theme }) => theme.colors.text.standard};
+      .cta {
+        margin-top: 20px;
         display: flex;
+        flex-flow: row nowrap;
         align-items: center;
-        justify-content: center;
+        .text {
+          color: ${({ theme }) => theme.colors.text.standard};
+          font-family: NeueMontrealRegular;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
 
-        svg {
-          width: 60%;
-          height: 60%;
-          fill: ${({ theme }) => theme.colors.background};
-          opacity: 0.6;
+        .circle {
+          margin-left: 20px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: ${({ theme }) => theme.colors.text.standard};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            width: 60%;
+            height: 60%;
+            fill: ${({ theme }) => theme.colors.background};
+            opacity: 0.6;
+          }
         }
       }
     }
@@ -133,7 +136,14 @@ const StyledWorks = styled(motion.div)`
 `
 
 const DistortionMaterial = shaderMaterial(
-  { time: 0, tex: undefined, speed: 0, hoverValue: 0, textureAspect: undefined, frameAspect: undefined },
+  {
+    time: 0,
+    tex: undefined,
+    speed: 0,
+    hoverValue: 0,
+    textureAspect: undefined,
+    frameAspect: undefined,
+  },
   // vertex shader
   `
     uniform float time;
@@ -185,11 +195,11 @@ const DistortionMaterial = shaderMaterial(
       
       vec2 textureScale = vec2(scaleX, scaleY);
       vec2 vTexCoordinate = textureScale * (vUv - 0.5) + 0.5;
-  
 
       float r = texture2D(tex, vTexCoordinate).r;
       float g = texture2D(tex, vTexCoordinate - vec2(speed * 0.012)).g;
       float b = texture2D(tex, vTexCoordinate + vec2(speed * 0.012)).b;
+
       vec3 color = mix(vec3(r, g, b), vec3(0.), 0.1 - hoverValue * 0.1);
       gl_FragColor = vec4(color, 1.);
     }
@@ -268,12 +278,14 @@ function ShaderPlane(props) {
         tex={props.texture}
       />
       <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.25]}>
-        <h1 className='text-h1 name'>{props.project.name}</h1>
-        <motion.div animate={{ x: hovering ? 15 : 0, transition: "tween" }} className='cta'>
-          <span className='text'>open project</span>
-          <div className='circle'>
-            <ArrowSVG />
-          </div>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='wrapper'>
+          <h1 className='text-h1 name'>{props.project.name}</h1>
+          <motion.div animate={{ x: hovering ? 15 : 0, transition: "tween" }} className='cta'>
+            <span className='text'>open project</span>
+            <div className='circle'>
+              <ArrowSVG />
+            </div>
+          </motion.div>
         </motion.div>
       </Html>
     </mesh>
@@ -345,8 +357,17 @@ const Works = () => {
   const history = useHistory()
 
   const scrollValue = useRef(0)
-  const scrollProgressBar = useRef(0)
+  const scrollProgressBar = useRef(null)
   const [hasScrolled, setHasScrolled] = useState(false)
+
+  const scrollProgressContainer = useRef(null)
+
+  const { progress } = useProgress()
+
+  useLayoutEffect(() => {
+    let width = mapRange(0, 100, 0, 35, progress) + "vw"
+    gsap.to(scrollProgressContainer.current, { width, duration: 1 })
+  }, [progress])
 
   useLayoutEffect(() => {
     scrollArea.current.scrollTop += 1
@@ -395,7 +416,12 @@ const Works = () => {
         >
           scroll
         </motion.div>
-        <motion.div className='scroll-progress'>
+        <motion.div
+          ref={scrollProgressContainer}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className='scroll-progress'
+        >
           <div ref={scrollProgressBar} className='scroll-bar'></div>
         </motion.div>
       </StyledWorks>

@@ -1,14 +1,14 @@
 import gsap from "gsap/all"
 import React, { useState, useEffect, useRef } from "react"
 import styled, { useTheme } from "styled-components"
-import amethyst1 from "../../assets/img/masonry/amethyst/1.png"
-import amethyst2 from "../../assets/img/masonry/amethyst/2.png"
-import amethyst3 from "../../assets/img/masonry/amethyst/3.png"
-import amethyst4 from "../../assets/img/masonry/amethyst/4.png"
-import amethyst5 from "../../assets/img/masonry/amethyst/5.png"
-import amethyst6 from "../../assets/img/masonry/amethyst/6.png"
-import amethyst7 from "../../assets/img/masonry/amethyst/7.png"
-import amethyst8 from "../../assets/img/masonry/amethyst/8.png"
+import amethyst1 from "../../assets/img/masonry/amethyst/1.jpg"
+import amethyst2 from "../../assets/img/masonry/amethyst/2.jpg"
+import amethyst3 from "../../assets/img/masonry/amethyst/3.jpg"
+import amethyst4 from "../../assets/img/masonry/amethyst/4.jpg"
+import amethyst5 from "../../assets/img/masonry/amethyst/5.jpg"
+import amethyst6 from "../../assets/img/masonry/amethyst/6.jpg"
+import amethyst7 from "../../assets/img/masonry/amethyst/7.jpg"
+import amethyst8 from "../../assets/img/masonry/amethyst/8.jpg"
 
 const StyledMasonry = styled.div`
   display: grid;
@@ -107,7 +107,7 @@ const Masonry = (props) => {
     <StyledMasonry {...props}>
       {images.map((src, index) => (
         <div key={index + src} className={`grid-item grid-item-${index + 1}`}>
-          <div ref={(el) => (overlayRefs.current[index] = el)} className="overlay"></div>
+          <div ref={(el) => (overlayRefs.current[index] = el)} className='overlay'></div>
           <img
             onLoad={() => {
               if (!hasLoaded[index]) fadeInLoad(index)
@@ -118,7 +118,7 @@ const Masonry = (props) => {
             }}
             ref={(el) => (imageRefs.current[index] = el)}
             src={src}
-            alt=""
+            alt=''
           />
         </div>
       ))}

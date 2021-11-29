@@ -29,7 +29,7 @@ const About = () => {
           {/* <Masonry /> */}
         </section>
         {/* Me */}
-        <SectionPresentation imgSrc='src/assets/img/designer.png'>
+        <SectionPresentation imgSrc='src/assets/img/designer.jpg'>
           <h2 className='text-h2'>
             I am <span className='important_word'>Cathy</span>
           </h2>
@@ -42,7 +42,7 @@ const About = () => {
         </SectionPresentation>
         <SectionWord word='I love...' />
         {/* Front end dev */}
-        <SectionPresentation imgSrc='src/assets/img/designer.png'>
+        <SectionPresentation imgSrc='src/assets/img/designer.jpg'>
           <h2 className='text-h2'>
             Practicing new <br />
             <span className='important_word'>domains</span>

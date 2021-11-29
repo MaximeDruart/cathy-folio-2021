@@ -2,19 +2,19 @@
 import { v4 as uuidv4 } from "uuid"
 
 import Grissini from "./components/projects/Grissini"
-import grissiniCover from "./assets/img/works/grissini.png"
+import grissiniCover from "./assets/img/works/grissini.jpg"
 
 import PXP from "./components/projects/PXP"
 import pxpCover from "./assets/img/works/pxp.jpg"
 
 import Flamalice from "./components/projects/Flamalice"
-import flamaliceCover from "./assets/img/works/flamalice.png"
+import flamaliceCover from "./assets/img/works/flamalice.jpg"
 
 import Arcane from "./components/projects/Arcane"
-import arcaneCover from "./assets/img/works/arcane.png"
+import arcaneCover from "./assets/img/works/arcane.jpg"
 
 import Hologramme from "./components/projects/Hologramme"
-import hologrammeCover from "./assets/img/works/hologramme.png"
+import hologrammeCover from "./assets/img/works/hologramme.jpg"
 
 let projectsData = [
   {

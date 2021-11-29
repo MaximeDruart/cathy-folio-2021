@@ -1,4 +1,5 @@
-import React from "react"
+import { motion } from "framer-motion"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { horizontalPadding } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
@@ -7,16 +8,16 @@ const StyledProjectDetail = styled.div`
   .hero {
     width: 100vw;
     height: 80vh;
-    background: blue;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
 
-    background: url(${(props) => props.coverImg});
-
-    background-size: cover;
-    background-position: center center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .hero-title {
     position: absolute;
@@ -46,17 +47,25 @@ const StyledProjectDetail = styled.div`
 
 const ProjectDetail = ({ project }) => {
   const ProjectComponent = project.component
+  const [imageHasLoaded, setImageHasLoaded] = useState(false)
   return (
     <PageTemplate initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
-      <StyledProjectDetail coverImg={project.coverImg}>
-        <div className='hero-title'>
-          <h1 className='text-h1 title'>{project.name}</h1>
+      <StyledProjectDetail>
+        <div className="hero-title">
+          <h1 className="text-h1 title">{project.name}</h1>
         </div>
-        <div className='hero'></div>
-        <div className='details'>
+        <div className="hero">
+          <motion.img
+            onLoad={() => setImageHasLoaded(true)}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: imageHasLoaded ? 1 : 0 }}
+            src={project.coverImg}
+          />
+        </div>
+        <div className="details">
           {/* project shared data */}
-          <div className='text-h3'>{project.date}</div>
-          <div className='text-regular'>{project.description}</div>
+          <div className="text-h3">{project.date}</div>
+          <div className="text-regular">{project.description}</div>
           <ProjectComponent />
         </div>
       </StyledProjectDetail>

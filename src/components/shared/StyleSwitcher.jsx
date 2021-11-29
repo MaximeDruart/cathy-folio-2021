@@ -15,9 +15,15 @@ const StyledStyleSwitcher = styled.div`
   z-index: 100;
   ${horizontalPadding};
 
+  pointer-events: none;
+
   color: ${({ theme }) => theme.colors.text.standard};
   font-family: "NeueMontrealRegular";
   font-size: 14px;
+
+  .theme-toggle {
+    pointer-events: auto;
+  }
 `
 
 const StyleSwitcher = () => {
@@ -26,7 +32,7 @@ const StyleSwitcher = () => {
   return (
     <StyledStyleSwitcher>
       <ColorPicker />
-      <button className='style-item' onClick={toggleDarkMode} className='theme-toggle'>
+      <button onClick={toggleDarkMode} className='theme-toggle'>
         {isDarkMode ? "LIGHT" : "DARK"}
       </button>
     </StyledStyleSwitcher>

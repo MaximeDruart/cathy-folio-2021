@@ -4,6 +4,8 @@ import styled from "styled-components"
 import useStore, { colors } from "../../store"
 
 const Container = styled.div`
+  pointer-events: auto;
+
   ul {
     display: flex;
     flex-flow: row nowrap;
@@ -72,7 +74,7 @@ const ColorPicker = () => {
                   // exit={{ opacity: 0 }}
                 >
                   <div className='text'>{color.name}</div>
-                  <div className='point'></div>
+                  <button className='point'></button>
                 </ColorListItem>
               ))}
         </AnimatePresence>

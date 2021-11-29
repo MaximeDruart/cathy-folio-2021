@@ -15,9 +15,12 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   top: 60px;
   z-index: 100;
+
+  pointer-events: none;
   .logo {
     width: 50px;
     height: 50px;
+    pointer-events: auto;
     svg {
       width: 100%;
       height: 100%;
@@ -27,6 +30,7 @@ const StyledHeader = styled.div`
   .menu-toggle {
     width: 40px;
     height: 40px;
+    pointer-events: auto;
     color: ${({ theme }) => theme.colors.text.standard};
 
     .top,
