@@ -46,10 +46,22 @@ const StyledProjectDetail = styled.div`
     }
     .text-h2.title{
       margin-top: 10vw;
+      width: 60%;
     }
-    .text-regular.description{
-      margin: 40px 0px;
+    .infos{
+      width: 100%;
+      display: flex;
+      .text-regular.description{
+      margin: 20px 0px;
       width: 50%;
+      font-size: 24px;
+      }
+      .infos-column{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
     }
   }
 `
@@ -74,10 +86,14 @@ const ProjectDetail = ({ project }) => {
         <div className='details'>
           {/* project shared data */}
           <h2 className='text-h2 title'>{project.title}</h2>
-          <div className='text-h6'>{project.date}</div>
-          <div className='text-regular description'>{project.description}</div>
-          <div className="text-h6">Rôles: {project.role}</div>
-
+          <div className="infos">
+            <div className='text-regular description'>{project.description}</div>
+            <div className="infos-column">
+              <h3 className="text-h3">Date</h3>
+              <div className='text-h6'>{project.date}</div>
+              <div className="text-h6">Rôles: {project.role}</div>
+            </div>
+          </div>
           {/* visual */}
           <img class="visual" src={project.visual1} alt="visual" />
           <ProjectComponent />

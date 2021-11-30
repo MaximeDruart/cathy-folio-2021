@@ -91,7 +91,7 @@ const StyledHome = styled.div`
       align-items: center;
       flex-direction: column;
       * {
-        color: white;
+        color: ${({ theme }) => theme.colors.text.standard};
       }
       span {
         font-family: NeueMontrealRegular;
@@ -101,6 +101,7 @@ const StyledHome = styled.div`
       svg {
         margin-bottom: 2px;
         height: 25px;
+        stroke : ${({ theme }) => theme.colors.text.standard};
       }
     }
   }

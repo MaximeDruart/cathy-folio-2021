@@ -32,7 +32,7 @@ export default css`
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
     margin-bottom: 1rem;
-    line-height: 1.06;
+    line-height: 1.2;
     span.important_word {
       font-family: "SaolDisplaySemiboldItalic";
       color: ${({ theme }) => theme.colors.primary1};
@@ -94,7 +94,7 @@ export default css`
     // letter-spacing: 0.2rem;
     line-height: 1.28;
     font-size: 14px;
-    opacity: 0.7;
+    opacity: 0.8;
     font-family: "NeueMontrealRegular";
   }
   .text-small {
