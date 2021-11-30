@@ -85,9 +85,9 @@ export default css`
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h6 {
-    font-family: "NeueMontrealRegular";
+    font-family: "SaolDisplayLight";
     color: ${({ theme }) => theme.colors.text.standard};
-    font-size: 16px;
+    font-size: 18px;
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.standard};

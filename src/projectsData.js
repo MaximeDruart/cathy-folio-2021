@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid"
 
 import Grissini from "./components/projects/Grissini"
 import grissiniCover from "./assets/img/works/grissini.jpg"
+import grissiniVisual1 from "./assets/img/works/grissini/visual1.jpg"
 
 import PXP from "./components/projects/PXP"
 import pxpCover from "./assets/img/works/pxp.jpg"
@@ -13,12 +14,15 @@ import flamaliceCover from "./assets/img/works/flamalice.jpg"
 
 import Arcane from "./components/projects/Arcane"
 import arcaneCover from "./assets/img/works/arcane.jpg"
+import arcaneVisual1 from "./assets/img/works/arcane/visual1.jpg"
 
 import Hologramme from "./components/projects/Hologramme"
 import hologrammeCover from "./assets/img/works/hologramme.jpg"
+import hologrammeVisual1 from "./assets/img/works/hologramme/visual1.jpg"
 
 import Shibuya from "./components/projects/Shibuya"
 import shibuyaCover from  "./assets/img/works/shibuya.jpg"
+import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
 
 let projectsData = [
   {
@@ -26,6 +30,7 @@ let projectsData = [
     path: "grissini",
     title: "Design and developtment of the Grissini website",
     coverImg: grissiniCover,
+    visual1: grissiniVisual1,
     component: Grissini,
     date: "Jul. 2021",
     role: "Design, Front end dev",
@@ -61,6 +66,7 @@ let projectsData = [
     path: "Shibuya",
     coverImg: shibuyaCover,
     title: "Logo creation for Shibuya",
+    visual1: shibuyaVisual1,
     component: Shibuya,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
@@ -80,6 +86,8 @@ let projectsData = [
   {
     name: "Hologramme",
     path: "Hologramme",
+    title: "UI/UX Homepage for Hologramme",
+    visual1: hologrammeVisual1,
     coverImg: hologrammeCover,
     component: Hologramme,
     date: "Jul. 2020",
@@ -100,7 +108,9 @@ let projectsData = [
   {
     name: "Arcane",
     path: "Arcane",
+    title: "UI design for Arcane",
     coverImg: arcaneCover,
+    visual1: arcaneVisual1,
     component: Arcane,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
@@ -120,6 +130,7 @@ let projectsData = [
   {
     name: "Flamalice",
     path: "Flamalice",
+    title: "Website for a digital artist : Flamalice",
     coverImg: flamaliceCover,
     component: Flamalice,
     date: "Jul. 2020",
