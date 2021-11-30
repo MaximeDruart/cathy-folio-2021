@@ -24,6 +24,7 @@ let projectsData = [
   {
     name: "Grissini",
     path: "grissini",
+    title: "Design and developtment of the Grissini website",
     coverImg: grissiniCover,
     component: Grissini,
     date: "Jul. 2021",
@@ -59,6 +60,7 @@ let projectsData = [
     name: "Shibuya",
     path: "Shibuya",
     coverImg: shibuyaCover,
+    title: "Logo creation for Shibuya",
     component: Shibuya,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",

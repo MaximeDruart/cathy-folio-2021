@@ -42,7 +42,7 @@ const StyledProjectDetail = styled.div`
     img.visual{
       width: 100vw;
       height: auto;
-      margin-left: -10vw;
+      margin: 20vh 0 20vh -10vw;
     }
     .text-h2.title{
       margin-top: 10vw;
@@ -50,9 +50,6 @@ const StyledProjectDetail = styled.div`
     .text-regular.description{
       margin: 40px 0px;
       width: 50%;
-    }
-    .text-h6.role{
-      margin-bottom: 20vh;
     }
   }
 `
@@ -79,7 +76,7 @@ const ProjectDetail = ({ project }) => {
           <h2 className='text-h2 title'>{project.title}</h2>
           <div className='text-h6'>{project.date}</div>
           <div className='text-regular description'>{project.description}</div>
-          <div className="text-h6 role">Rôles: {project.role}</div>
+          <div className="text-h6">Rôles: {project.role}</div>
 
           {/* visual */}
           <img class="visual" src={project.visual1} alt="visual" />
