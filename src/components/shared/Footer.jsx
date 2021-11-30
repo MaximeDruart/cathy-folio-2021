@@ -109,7 +109,7 @@ const Footer = () => {
         <div className='separator'></div>
 
         <div className='footer-body'>
-          <motion.a href='#' className='text-h1'>
+          <motion.a href='mailto:cathy.dolle@live.fr' className='text-h1'>
             get in
             <motion.div
               className='text-h1 important-word'

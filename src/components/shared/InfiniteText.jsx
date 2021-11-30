@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import gsap from "gsap"
 
-const topWords = ["digital", "creative", "design", "test", "test2"]
-const bottomWords = ["digital", "creative", "design", "test", "test2"]
+const topWords = ["digital", "creative", "design", "UI/UX", "Product "]
+const bottomWords = ["Art", "director", "design", "test", "test2"]
 
 const Container = styled.div`
   .line {

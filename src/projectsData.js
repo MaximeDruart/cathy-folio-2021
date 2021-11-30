@@ -6,6 +6,7 @@ import grissiniCover from "./assets/img/works/grissini.jpg"
 
 import PXP from "./components/projects/PXP"
 import pxpCover from "./assets/img/works/pxp.jpg"
+import pxpVisual1 from "./assets/img/works/pxp/visual1.jpg"
 
 import Flamalice from "./components/projects/Flamalice"
 import flamaliceCover from "./assets/img/works/flamalice.jpg"
@@ -15,6 +16,9 @@ import arcaneCover from "./assets/img/works/arcane.jpg"
 
 import Hologramme from "./components/projects/Hologramme"
 import hologrammeCover from "./assets/img/works/hologramme.jpg"
+
+import Shibuya from "./components/projects/Shibuya"
+import shibuyaCover from  "./assets/img/works/shibuya.jpg"
 
 let projectsData = [
   {
@@ -40,8 +44,22 @@ let projectsData = [
   {
     name: "PXP",
     path: "pxp",
+    title: "Refonte complète du site Project X Paris",
     coverImg: pxpCover,
     component: PXP,
+    date: "Jul. 2021",
+    role: "UI/UX Designer & web integrator",
+    techs: ["Wordpress, Elementor"],
+    description:
+      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
+    visual1: pxpVisual1,
+    websiteLink: "https://www.projectxparis.com/fr/",
+  },
+  {
+    name: "Shibuya",
+    path: "Shibuya",
+    coverImg: shibuyaCover,
+    component: Shibuya,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
     techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],

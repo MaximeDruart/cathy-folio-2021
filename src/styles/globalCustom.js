@@ -71,6 +71,8 @@ export default css`
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h4 {
+    font-family: "NeueMontrealLight";
+    font-size: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
     font-size: 20px;
     font-family: 6px;

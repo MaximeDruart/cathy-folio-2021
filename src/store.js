@@ -8,11 +8,11 @@ const mfIsHoveringCanvas = createRef(false)
 export const colors = [
   {
     name: "amethyst",
-    color: "#FFFFFF",
+    color: "#7176eb",
   },
   {
     name: "sakura",
-    color: "red",
+    color: "pink",
   },
   {
     name: "emerald",

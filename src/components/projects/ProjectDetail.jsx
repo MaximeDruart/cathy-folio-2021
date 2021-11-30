@@ -39,9 +39,12 @@ const StyledProjectDetail = styled.div`
   .details {
     width: 100%;
     margin-top: 5vh;
-
     height: 200vh;
     ${horizontalPadding};
+    img.visual{
+      width: 100%;
+      height: auto;
+    }
   }
 `
 
@@ -64,8 +67,12 @@ const ProjectDetail = ({ project }) => {
         </div>
         <div className='details'>
           {/* project shared data */}
-          <div className='text-h3'>{project.date}</div>
+          <h2 className='text-h2'>{project.title}</h2>
+          <div className='text-h5'>{project.date}</div>
           <div className='text-regular'>{project.description}</div>
+
+          {/* visual */}
+          <img class="visual" src={project.visual1} alt="visual" />
           <ProjectComponent />
         </div>
       </StyledProjectDetail>

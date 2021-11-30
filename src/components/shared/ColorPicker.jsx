@@ -19,7 +19,7 @@ const ColorListItem = styled(motion.li)`
   align-items: center;
 
   &:not(:first-child) {
-    margin-left: 15px;
+    margin-left: 8px;
   }
   .point {
     width: 20px;
@@ -33,7 +33,8 @@ const ColorListItem = styled(motion.li)`
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.text.standard};
     transform: rotate(180deg);
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    font-size:12px;
   }
 `
 
