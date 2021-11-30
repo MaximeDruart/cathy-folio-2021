@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import React, { useState } from "react"
 import styled from "styled-components"
-import { horizontalPadding } from "../../styles/globalCustom"
+import { marginPage } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
 
 const StyledProjectDetail = styled.div`
@@ -37,13 +37,22 @@ const StyledProjectDetail = styled.div`
     }
   }
   .details {
-    width: 100%;
-    margin-top: 5vh;
-    height: 200vh;
-    ${horizontalPadding};
+    height: auto;
+    ${marginPage};
     img.visual{
-      width: 100%;
+      width: 100vw;
       height: auto;
+      margin-left: -10vw;
+    }
+    .text-h2.title{
+      margin-top: 10vw;
+    }
+    .text-regular.description{
+      margin: 40px 0px;
+      width: 50%;
+    }
+    .text-h6.role{
+      margin-bottom: 20vh;
     }
   }
 `
@@ -67,9 +76,10 @@ const ProjectDetail = ({ project }) => {
         </div>
         <div className='details'>
           {/* project shared data */}
-          <h2 className='text-h2'>{project.title}</h2>
-          <div className='text-h5'>{project.date}</div>
-          <div className='text-regular'>{project.description}</div>
+          <h2 className='text-h2 title'>{project.title}</h2>
+          <div className='text-h6'>{project.date}</div>
+          <div className='text-regular description'>{project.description}</div>
+          <div className="text-h6 role">Rôles: {project.role}</div>
 
           {/* visual */}
           <img class="visual" src={project.visual1} alt="visual" />

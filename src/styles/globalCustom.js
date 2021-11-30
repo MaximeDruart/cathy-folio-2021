@@ -85,19 +85,16 @@ export default css`
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h6 {
-    font-family: GilroyMedium;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 140.62%;
-    /* or 28px */
-    letter-spacing: 0.07em;
+    font-family: "NeueMontrealRegular";
+    color: ${({ theme }) => theme.colors.text.standard};
+    font-size: 16px;
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.standard};
     // letter-spacing: 0.2rem;
     line-height: 1.28;
     font-size: 14px;
+    opacity: 0.7;
     font-family: "NeueMontrealRegular";
   }
   .text-small {
@@ -151,6 +148,19 @@ export default css`
 
   /* SECTIONS */
 `
+
+export const marginPage = css`
+  padding: 0 10vw;
+
+  @media (max-width: 769px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 28px;
+  }
+`
+
 
 export const horizontalPadding = css`
   padding: 0 80px;

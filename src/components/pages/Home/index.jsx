@@ -108,7 +108,6 @@ const StyledHome = styled.div`
   .home-section {
     margin: 0 auto;
     width: 80vw;
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
