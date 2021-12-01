@@ -46,7 +46,7 @@ const StyledProjectDetail = styled.div`
     }
     .text-h2.title{
       margin-top: 10vw;
-      width: 60%;
+      width: 50%;
     }
     .infos{
       width: 100%;
@@ -59,10 +59,15 @@ const StyledProjectDetail = styled.div`
       opacity: 1;
       }
       .infos-column{
+        margin-top: 20px;
+        padding-left: 15%;
         width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
+        .text-h6{
+          margin-bottom: 30px;
+        }
       }
     }
   }
@@ -91,9 +96,10 @@ const ProjectDetail = ({ project }) => {
           <div className="infos">
             <div className='text-regular description'>{project.description}</div>
             <div className="infos-column">
-              <h3 className="text-h3">Date</h3>
+              <h3 className="text-h5">Date</h3>
               <div className='text-h6'>{project.date}</div>
-              <div className="text-h6">Rôles: {project.role}</div>
+              <h3 className="text-h5">Roles</h3>
+              <div className="text-h6">{project.role}</div>
             </div>
           </div>
           {/* visual */}

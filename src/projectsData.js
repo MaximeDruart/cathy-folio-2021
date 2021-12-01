@@ -34,9 +34,8 @@ let projectsData = [
     date: "Jul. 2021",
     role: "UI/UX Designer & web integrator",
     techs: ["Wordpress, Elementor"],
-    description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    visual1: pxpVisual1,
+    description:"Spécialiste en vêtements streetwear née en 2015, Project X Paris propose un concept avant gardiste où se rencontrent hip hop, sport, streetwear, lifestyle et art. Ma mission dans ce projet était de faire une fonte de leur site officiel pour faciliter les achats aux clients, et avoir une interface plus ergonomique ainsi qu'une charte graphique qui correspond à la marque."
+    ,visual1: pxpVisual1,
     websiteLink: "https://www.projectxparis.com/fr/",
   },
   {

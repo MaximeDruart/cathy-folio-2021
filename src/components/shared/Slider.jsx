@@ -7,8 +7,8 @@ import projectsData from "../../projectsData"
 const StyledSlider = styled.div`
   .img-container {
     position: relative;
-    width: 15vw;
-    height: 9vw;
+    width: 250px;
+    height: 160px;
     overflow: hidden;
     img {
       width: 100%;
@@ -25,10 +25,16 @@ const StyledSlider = styled.div`
   }
 
   .page {
-    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    margin-top: 2px;
     text-align: right;
     font-size: 11px;
     color: ${({ theme }) => theme.colors.text.standard};
+    @media (max-width: 769px) {
+      left:0;
+      right: auto;
+    }
   }
 `
 

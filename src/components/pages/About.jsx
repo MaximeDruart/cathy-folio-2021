@@ -26,33 +26,36 @@ const StyledAbout = styled.div`
 
     .text {
       position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       .line {
-        text-transform: uppercase;
-        width: 65vw;
+        /* text-transform: uppercase; */
+        /* width: 65vw; */
         white-space: nowrap;
         margin-bottom: 0.2vw;
-
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 5vw;
-        line-height: 1.3;
-
-        &.first_line {
-          text-align: center;
-        }
-        &.second_line {
-          text-align: center;
+        font-size: 90px;
+        line-height: 1;
+        &.first_line{
+          margin-left: -200px;
         }
         .important_word {
           line-height: 1.3;
-          font-size: 5.3vw;
+          font-size: 90px;
           margin-left: 1rem;
           font-family: "SaolDisplaySemiboldItalic";
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
         }
+      }
+      .text-h4{
+        width: 50%;
+        text-align: left;
       }
     }
 
@@ -65,7 +68,7 @@ const StyledAbout = styled.div`
       align-items: center;
       flex-direction: column;
       * {
-        color: white;
+        color: ${({ theme }) => theme.colors.text.standard};
       }
       span {
         font-family: NeueMontrealRegular;
@@ -75,6 +78,7 @@ const StyledAbout = styled.div`
       svg {
         margin-top: 10px;
         height: 25px;
+        stroke : ${({ theme }) => theme.colors.text.standard};
       }
     }
   }
@@ -171,16 +175,17 @@ const About = () => {
       <div className='hero'>
           <div className='text'>
             <div className='line first_line'>
-              <TextSpawn>Learn more</TextSpawn>
+              <TextSpawn>Bonjour,</TextSpawn>
             </div>
             <div className='line second_line'>
               <TextSpawn direction={"LEFT"}>
-                About <span className='important_word'>me</span>
+                I'm<span className='important_word'>Cathy</span>
               </TextSpawn>
             </div>
+            <h4 className="text-h4">I’m a french designer based in France and available for full-time roles & freelance projects.</h4>
           </div>
           <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
-            <span>discover</span>
+            <span>discover me</span>
             <ArrowDownSVG />
           </motion.div>
         </div>

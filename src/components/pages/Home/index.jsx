@@ -27,26 +27,48 @@ const StyledHome = styled.div`
 
     .text {
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
       .line {
         text-transform: uppercase;
-        width: 65vw;
+        width: auto;
         white-space: nowrap;
         margin-bottom: 0.2vw;
-
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 5.4vw;
-        line-height: 1.1;
+        font-size: 90px;
+        line-height: 1;
 
         &.first_line {
           text-align: start;
         }
         &.second_line {
-          padding-left: 15vw;
+          padding-left: 240px;
         }
         &.third_line {
-          padding-left: 10vw;
+          position: relative;
+          padding-left: 150px;
+          .slider-container {
+            position: absolute;
+            top: 70px;
+            right: 160px;
+            &::after {
+              position: absolute;
+              content: "UI/UX Designer, front end developer & content creator based in paris";
+              width: 250px;
+              top: -50px;
+              left: -20px;
+              font-family: NeueMontrealRegular;
+              font-size: 12px;
+              text-transform: uppercase;
+              white-space: initial;
+              color: ${({ theme }) => theme.colors.text.standard};
+              line-height: 1.4;
+              letter-spacing: 0.01em;
+            }
+          }
         }
 
         .important_word {
@@ -55,29 +77,79 @@ const StyledHome = styled.div`
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
           line-height: 1.3;
-          font-size: 5.4vw;
           margin-left: 1rem;
         }
       }
+      @media (max-width: 1200px) {
+        .line{
+          font-size: 70px;
+          line-height: 1;
+          &.second_line{
+            padding-left: 150px;
+          }
+          &.third_line{
+            padding-left: 80px;
+            .slider-container{
+              right: 50px;
+            }
+          }
+        }
+      }
+      @media (max-width: 950px) {
+        .line{
+          font-size: 50px;
+          line-height: 1;
+          &.second_line{
+            padding-left: 100px;
+          }
+          &.third_line{
+            padding-left: 50px;
+            .slider-container{
+              right: -30px;
+              top: 60px;
+            }
+          }
+        }
+      }
+      @media (max-width: 769px) {
+        .line{
+          font-size: 50px;
+          line-height: 1;
+          &.second_line{
+            padding-left: 0px;
+          }
+          &.third_line{
+            padding-left: 0px;
+            .slider-container{
+              position: relative;
+              left: 0;
+              top: 60px;
+              &::after{
+                top: -50px;
+                left: 0;
+              }
+            }
+          }
+          .important_word{
+            margin-left: 5px;
+            font-size: 43px;
+            margin-top: -2px;
+          }
+        }
+      }
 
-      .slider-container {
-        position: absolute;
-        bottom: -7.5vw;
-        right: 12.5vw;
-        &::after {
-          position: absolute;
-          content: "UI/UX Designer, front end developer & content creator based in paris";
-          width: 14vw;
-          top: -3.2vw;
-          left: -5vw;
-          font-family: NeueMontrealLight;
-          font-size: 0.65vw;
-          text-transform: uppercase;
-          white-space: initial;
-          color: ${({ theme }) => theme.colors.text.standard};
-          transform: translateX(2vw);
-          line-height: 160.62%;
-          letter-spacing: 0.01em;
+      @media (max-width: 500px) {
+        .line{
+          font-size: 40px;
+          line-height: 1;
+          &.third_line{
+            .slider-container{
+              top: 50px;
+              &::after{
+                top: -40px;
+              }
+            }
+          }
         }
       }
     }
@@ -211,10 +283,9 @@ const Home = () => {
               <TextSpawn direction={"LEFT"}>
                 of <span className='important_word'>Cathy</span>
               </TextSpawn>
-            </div>
-
-            <div className='slider-container'>
-              <Slider />
+              <div className='slider-container'>
+                <Slider />
+              </div>
             </div>
           </div>
           <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>

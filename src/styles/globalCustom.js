@@ -71,23 +71,23 @@ export default css`
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h4 {
-    font-family: "NeueMontrealLight";
+    font-family: "NeueMontrealRegular";
     font-size: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
     font-size: 20px;
     font-family: 6px;
+    line-height: 1.2;
   }
   .text-h5 {
     font-family: "SaolDisplayLight";
-    font-size: 2rem;
-    margin-top: 1.4rem;
-    line-height: 1.1;
+    font-size: 24px;
+    line-height: 1.4;
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h6 {
-    font-family: "SaolDisplayLight";
+    font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.standard};
-    font-size: 18px;
+    font-size: 14px;
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.standard};
