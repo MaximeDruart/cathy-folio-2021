@@ -54,7 +54,9 @@ const StyledProjectDetail = styled.div`
       .text-regular.description{
       margin: 20px 0px;
       width: 50%;
-      font-size: 24px;
+      font-size: 19px;
+      line-height: 1.5;
+      opacity: 1;
       }
       .infos-column{
         width: 50%;

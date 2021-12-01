@@ -36,8 +36,8 @@ const StyledHome = styled.div`
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 5vw;
-        line-height: 1.12;
+        font-size: 5.4vw;
+        line-height: 1.1;
 
         &.first_line {
           text-align: start;
@@ -55,7 +55,7 @@ const StyledHome = styled.div`
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
           line-height: 1.3;
-          font-size: 5.3vw;
+          font-size: 5.4vw;
           margin-left: 1rem;
         }
       }
@@ -204,7 +204,7 @@ const Home = () => {
             <div className='line first_line'>
               <TextSpawn>Welcome to</TextSpawn>
             </div>
-            <div className='line second_line'>
+            <div className='line second_line important_word'>
               <TextSpawn direction={"LEFT"}>the workspace</TextSpawn>
             </div>
             <div className='line third_line'>

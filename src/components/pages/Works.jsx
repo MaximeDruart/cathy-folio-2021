@@ -55,6 +55,7 @@ const StyledWorks = styled(motion.div)`
         font-family: SaolDisplayLight;
         text-transform: uppercase;
         white-space: nowrap;
+        color: white;
       }
 
       .cta {
@@ -63,7 +64,7 @@ const StyledWorks = styled(motion.div)`
         flex-flow: row nowrap;
         align-items: center;
         .text {
-          color: ${({ theme }) => theme.colors.text.standard};
+          color: white;
           font-family: NeueMontrealRegular;
           text-transform: uppercase;
           white-space: nowrap;
@@ -74,7 +75,7 @@ const StyledWorks = styled(motion.div)`
           width: 30px;
           height: 30px;
           border-radius: 50%;
-          background: ${({ theme }) => theme.colors.text.standard};
+          background: white;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -82,7 +83,7 @@ const StyledWorks = styled(motion.div)`
           svg {
             width: 60%;
             height: 60%;
-            fill: ${({ theme }) => theme.colors.background};
+            fill: ${({ theme }) => theme.colors.standard};
             opacity: 0.6;
           }
         }

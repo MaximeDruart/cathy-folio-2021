@@ -27,7 +27,7 @@ export default css`
     }
   }
   .text-h2 {
-    font-family: "NeueMontrealRegular";
+    font-family: "SaolDisplayLight";
     font-size: 60px;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
