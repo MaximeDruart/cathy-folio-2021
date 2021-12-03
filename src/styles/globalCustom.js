@@ -2,11 +2,6 @@ import styled, { css } from "styled-components"
 
 export default css`
   /* TYPO */
-  .big_word {
-    font-size: 120px;
-    font-family: NeueMontrealRegular;
-    color: ${({ theme }) => theme.colors.text.standard};
-  }
   .text-h1 {
     font-family: NeueMontrealRegular;
     font-style: normal;
@@ -122,6 +117,15 @@ export default css`
   .text-spawn-anim {
     display: inline-block;
     overflow: hidden;
+  }
+
+  .text-description{
+    font-family: "NeueMontrealRegular";
+    color: ${({ theme }) => theme.colors.text.standard};
+    margin: 20px 0px;
+    font-size: 19px;
+    line-height: 1.5;
+    opacity: 1;
   }
 
   .text-link{

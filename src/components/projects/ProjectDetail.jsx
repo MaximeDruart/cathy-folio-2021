@@ -42,10 +42,9 @@ const StyledProjectDetail = styled.div`
     img.visual{
       width: 100vw;
       height: auto;
-      margin: 20vh 0 20vh -10vw;
+      margin-left: -10vw;
     }
     .text-h2.title{
-      margin-top: 10vw;
       width: 50%;
       @media (max-width: 1100px) {
         width: 100%;
@@ -58,13 +57,7 @@ const StyledProjectDetail = styled.div`
         width: 50%;
         display: flex;
         flex-direction: column;
-        .text-regular.description{
         /* font-family: "NeueMontrealLight"; */
-        margin: 20px 0px;
-        font-size: 19px;
-        line-height: 1.5;
-        opacity: 1;
-        }
         .text-link.website-link{
           position: relative;
           margin-top: 30px;
@@ -82,7 +75,7 @@ const StyledProjectDetail = styled.div`
         }
       }
       .infos-column{
-        margin-top: 20px;
+        margin-top: 15px;
         padding-left: 15%;
         width: 50%;
         display: flex;
@@ -123,13 +116,14 @@ const ProjectDetail = ({ project }) => {
             src={project.coverImg}
           />
         </div>
+        <div className="spacer"></div>
         <div className='details'>
           {/* project shared data */}
           <h2 className='text-h2 title'>{project.title}</h2>
           <div className="infos">
             <div className="infos-intro">
-              <p className='text-regular description'>{project.description}</p>
-              <a className="text-link website-link" href={project.websiteLink}>Visit the website</a>
+              <p className='text-description'>{project.description}</p>
+              <a className="text-link website-link" href={project.websiteLink} target='_blank'>Visit the website</a>
             </div>
             <div className="infos-column">
               <h3 className="text-h5">Date</h3>
@@ -140,8 +134,10 @@ const ProjectDetail = ({ project }) => {
               <div className="text-h6">{project.techs}</div>
             </div>
           </div>
+          <div className="spacer"></div>
           {/* visual */}
           <img class="visual" src={project.visual1} alt="visual" />
+          <div className="spacer"></div>
           <ProjectComponent />
         </div>
       </StyledProjectDetail>
