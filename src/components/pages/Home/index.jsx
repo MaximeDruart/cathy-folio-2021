@@ -297,8 +297,10 @@ const Home = () => {
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            Hello I'm Cathy, I can create the <span className='saol'>design</span> of your website, develop it, and also
-            create your brand identity.
+          Focused on creating meaningful
+experiences through <span class="saol">design</span>, I’m able to
+develop your ideas from concept to wireframe,
+passing through prototype and production.
           </div>
           <Link to='/about' className='cta'>
             <span className='text'>about me</span>

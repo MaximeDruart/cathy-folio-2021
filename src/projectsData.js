@@ -26,8 +26,8 @@ import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
 
 let projectsData = [
   {
-    name: "PXP",
-    path: "pxp",
+    name: "Project X",
+    path: "Project X Paris",
     title: "Refonte complète du site Project X Paris",
     coverImg: pxpCover,
     component: PXP,
@@ -36,7 +36,7 @@ let projectsData = [
     techs: ["Wordpress, Elementor"],
     description:"Spécialiste en vêtements streetwear née en 2015, Project X Paris propose un concept avant gardiste où se rencontrent hip hop, sport, streetwear, lifestyle et art. Ma mission dans ce projet était de faire une fonte de leur site officiel pour faciliter les achats aux clients, et avoir une interface plus ergonomique ainsi qu'une charte graphique qui correspond à la marque."
     ,visual1: pxpVisual1,
-    websiteLink: "https://www.projectxparis.com/fr/",
+    websiteLink: "https://www.projectxparis.com/",
   },
   {
     name: "Grissini",

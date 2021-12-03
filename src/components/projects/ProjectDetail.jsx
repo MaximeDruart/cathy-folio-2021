@@ -47,16 +47,39 @@ const StyledProjectDetail = styled.div`
     .text-h2.title{
       margin-top: 10vw;
       width: 50%;
+      @media (max-width: 1100px) {
+        width: 100%;
+      }
     }
     .infos{
       width: 100%;
       display: flex;
-      .text-regular.description{
-      margin: 20px 0px;
-      width: 50%;
-      font-size: 19px;
-      line-height: 1.5;
-      opacity: 1;
+      .infos-intro{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        .text-regular.description{
+        /* font-family: "NeueMontrealLight"; */
+        margin: 20px 0px;
+        font-size: 19px;
+        line-height: 1.5;
+        opacity: 1;
+        }
+        .text-link.website-link{
+          position: relative;
+          margin-top: 30px;
+          &::after{
+            position: absolute;
+            content: "→";
+            transform: translateX(10px);
+            transition: transform 0.4s;
+          }
+          &:hover{
+            &::after{
+              transform: translateX(15px);
+            }
+          }
+        }
       }
       .infos-column{
         margin-top: 20px;
@@ -67,6 +90,16 @@ const StyledProjectDetail = styled.div`
         align-items: flex-start;
         .text-h6{
           margin-bottom: 30px;
+        }
+      }
+      @media (max-width: 1100px) {
+        flex-direction: column;
+        .infos-intro,
+        .infos-column{
+          width: 100%;
+          /* background: red; */
+          padding-left: 0;
+          margin-bottom: 20px;
         }
       }
     }
@@ -94,12 +127,17 @@ const ProjectDetail = ({ project }) => {
           {/* project shared data */}
           <h2 className='text-h2 title'>{project.title}</h2>
           <div className="infos">
-            <div className='text-regular description'>{project.description}</div>
+            <div className="infos-intro">
+              <p className='text-regular description'>{project.description}</p>
+              <a className="text-link website-link" href={project.websiteLink}>Visit the website</a>
+            </div>
             <div className="infos-column">
               <h3 className="text-h5">Date</h3>
               <div className='text-h6'>{project.date}</div>
               <h3 className="text-h5">Roles</h3>
               <div className="text-h6">{project.role}</div>
+              <h3 className="text-h5">Techs</h3>
+              <div className="text-h6">{project.techs}</div>
             </div>
           </div>
           {/* visual */}

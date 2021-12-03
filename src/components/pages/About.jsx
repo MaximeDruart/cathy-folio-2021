@@ -34,28 +34,23 @@ const StyledAbout = styled.div`
         /* text-transform: uppercase; */
         /* width: 65vw; */
         white-space: nowrap;
-        margin-bottom: 0.2vw;
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 90px;
+        font-size: 130px;
         line-height: 1;
-        &.first_line{
-          margin-left: -200px;
-        }
         .important_word {
           line-height: 1.3;
-          font-size: 90px;
-          margin-left: 1rem;
           font-family: "SaolDisplaySemiboldItalic";
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
         }
       }
-      .text-h4{
-        width: 50%;
-        text-align: left;
+      .text-regular{
+        width: 70%;
+        text-align: center;
+        text-transform: uppercase;
       }
     }
 
@@ -175,14 +170,14 @@ const About = () => {
       <div className='hero'>
           <div className='text'>
             <div className='line first_line'>
-              <TextSpawn>Bonjour,</TextSpawn>
+              <TextSpawn>ABOUT</TextSpawn>
             </div>
             <div className='line second_line'>
               <TextSpawn direction={"LEFT"}>
-                I'm<span className='important_word'>Cathy</span>
+                <span className='important_word'>ME :)</span>
               </TextSpawn>
             </div>
-            <h4 className="text-h4">I’m a french designer based in France and available for full-time roles & freelance projects.</h4>
+            <p className="text-regular">A passionate person who wants to learn new things everyday</p>
           </div>
           <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
             <span>discover me</span>
@@ -190,11 +185,10 @@ const About = () => {
           </motion.div>
         </div>
         <div className='home-section what-i-do'>
-          <div className='headline'>what i do</div>
+          <div className='headline'>Currently</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            Hello I'm Cathy, I can create the <span className='saol'>design</span> of your website, develop it, and also
-            create your brand identity.
+            I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the 1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at Project X Paris
           </div>
           <Link to='/about' className='cta'>
             <span className='text'>about me</span>

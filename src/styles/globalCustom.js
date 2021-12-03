@@ -49,7 +49,8 @@ export default css`
   }
   .text-h2-5 {
     font-family: "NeueMontrealRegular";
-    font-size: 45px;
+    font-size: 40px;
+    line-height: 1.1;
     color: ${({ theme }) => theme.colors.text.standard};
     span.important_word {
       font-family: "SaolDisplaySemiboldItalic";
@@ -121,6 +122,11 @@ export default css`
   .text-spawn-anim {
     display: inline-block;
     overflow: hidden;
+  }
+
+  .text-link{
+    color: ${({ theme }) => theme.colors.text.standard};
+    font-family: NeueMontrealRegular;
   }
 
   /* SIZES */
