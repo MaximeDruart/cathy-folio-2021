@@ -19,6 +19,31 @@ const StyledProjectDetail = styled.div`
       object-fit: cover;
     }
   }
+  /* responsive */
+  .responsive{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 20%;
+      margin: 0 20px;
+    }
+  }
+  img.full-img{
+  width: 100vw;
+  margin-left: -10vw;
+  height: 80vh;
+  object-fit: cover;
+  @media (max-width: 769px) {
+        margin-left: -40px;
+      }
+      @media (max-width: 480px) {
+        margin-left: -28px;
+      }
+}
+  h2.text-h2{
+  margin-bottom: 20px;
+}
   h3.text-h3{
     margin-bottom: 40px;
   }
@@ -45,6 +70,30 @@ const StyledProjectDetail = styled.div`
       font-family: SaolDisplayLight;
     }
   }
+  /* Separator with text */
+  .headline {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .separator {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      width: 100%;
+      height: 2px;
+      background-color: ${({ theme }) => theme.colors.text.standard};
+      opacity: 0.2;
+
+      @media (max-width: 769px) {
+        margin-top: 14px;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 480px) {
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
+    }
   .details {
     height: auto;
     ${marginPage};
@@ -131,6 +180,9 @@ const StyledProjectDetail = styled.div`
       }
       .art-direction{
         width: 100%;
+        h4{
+          margin-bottom: 20px;
+        }
       }
       .typography,.colors{
         width: 50%;
@@ -152,7 +204,7 @@ const StyledProjectDetail = styled.div`
         }
       }
       .colors{
-        padding-left: 15%;
+        padding-left: 10%;
         @media (max-width: 900px) {
           padding-left: 0%;
         }
@@ -161,8 +213,8 @@ const StyledProjectDetail = styled.div`
         display:flex;
         flex-direction: column;
           span.text-typo{
-          font-size: 70px;
-          margin-bottom: 70px;
+          font-size: 60px;
+          margin-bottom: 40px;
           line-height:1.2;
           color: ${({ theme }) => theme.colors.text.standard};
           @media (max-width: 900px) {

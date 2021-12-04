@@ -16,27 +16,75 @@ img{
   width: 100%;
   margin-bottom: 50px;
 }
+.chart{
+  .typography{
+    span.text-typo{
+      &.one{
+        font-family: "Montserrat";
+      }
+      &.two{
+        font-family: "Gotham";
+      }
+    }
+  }
+  .colors{
+    .color{
+      &.one{
+        background-color: white;
+      }
+      &.two{
+        background-color: black;
+      }
+    }
+  }
+}
 `
 
 const Arcane = () => {
   return (
     <StyledArcane>
       <h2 className='text-h2'>Graphic Chart</h2>
+          {/* chart */}
+          <div className="chart">
+        <div className="art-direction">
+          <h4 className="text-h4">Art direction</h4>
+          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+        </div>
+        <div className="typography">
+          <h4 className="text-h4">Typography</h4>
+          <span className="text-typo one">Montserrat<br/>Aa 123</span>
+          <span className="text-typo two">Gotham<br/>Aa 123</span>
+
+        </div>
+        <div className="colors">
+          <h4 className="text-h4">Colors</h4>
+          <div className="color one">#FFFFFF</div>
+          <div className="color two">#000000</div>
+        </div>
+      </div>
+      {/* end chart */}
       <div className="spacer"></div>
-      <h2 className='text-h2'>Discover Jinx</h2>
+      <h2 className='text-h2'>Arcane UI Design</h2>
+      <div className="demi-spacer"></div>
+      <div className='headline text-regular'>Discover Jinx</div>
+      <div className='separator'></div>
       <img src={jinx} alt="arcane" />
       <img src={jinx2} alt="arcane" />
       <div className="spacer"></div>
-      <h2 className='text-h2'>Discover Silco</h2>
+      <div className='headline text-regular'>Discover Silco</div>
+      <div className='separator'></div>
       <img src={silco} alt="arcane" />
       <img src={silco2} alt="arcane" />
       <div className="spacer"></div>
-      <h2 className='text-h2'>Discover Sisters</h2>
+      <div className='headline text-regular'>Discover Sisters</div>
+      <div className='separator'></div>
       <img src={sisters} alt="arcane" />
       <img src={vi} alt="arcane" />
       <div className="spacer"></div>
-      <h2 className='text-h2'>Discover Ekko</h2>
+      <div className='headline text-regular'>Discover Ekko</div>
+      <div className='separator'></div>
       <img src={ekko} alt="arcane" />
+      <div className="spacer"></div>
     </StyledArcane>
   )
 }

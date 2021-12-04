@@ -22,8 +22,8 @@ export default css`
     }
   }
   .text-h2 {
-    /* font-family: "SaolDisplayLight"; */
-    font-family: NeueMontrealRegular;
+    font-family: "SaolDisplayLight";
+    /* font-family: NeueMontrealRegular; */
     font-size: 60px;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
@@ -136,6 +136,12 @@ export default css`
   /* SIZES */
   .spacer {
     height: 20vh;
+  }
+  .demi-spacer {
+    height: 10vh;
+  }
+  .big-spacer {
+    height: 40vh;
   }
   .margin-small {
     margin: 8px;

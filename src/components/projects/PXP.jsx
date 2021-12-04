@@ -6,21 +6,6 @@ import productPage from "../../assets/img/works/pxp/product_page.png"
 
 
 const StyledPXP = styled.div`
-h2.text-h2{
-  margin-bottom: 20px;
-}
-img.full-img{
-  width: 100vw;
-  margin-left: -10vw;
-  height: 80vh;
-  object-fit: cover;
-  @media (max-width: 769px) {
-        margin-left: -40px;
-      }
-      @media (max-width: 480px) {
-        margin-left: -28px;
-      }
-}
 video{
   width: 100%;
 }
@@ -74,6 +59,7 @@ const PXP = () => {
           <div className="color two">#000000</div>
         </div>
       </div>
+      {/* start case */}
       <div className="spacer"></div>
       <img className="full-img" src={pxpDesktop} alt="pxp" />
       <div className="spacer"></div>
@@ -82,10 +68,12 @@ const PXP = () => {
       <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
       {/* homepage */}
       <div className="spacer"></div>
-      <h3 className="text-h3">Homepage</h3>
+      <div className='headline text-regular'>homepage</div>
+      <div className='separator'></div>
       <img src={homepage} alt="pxp" />
       <div className="spacer"></div>
-      <h3 className="text-h3">Product page</h3>
+      <div className='headline text-regular'>product page</div>
+      <div className='separator'></div>
       <img src={productPage} alt="pxp" />
       <div className="spacer"></div>
       {/* responsive ui */}
