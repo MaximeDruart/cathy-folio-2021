@@ -12,7 +12,7 @@ const Container = styled.div`
     justify-content: flex-end;
     flex-flow: row nowrap;
     display: inline-flex;
-
+    /* margin-bottom: 20px; */
     .string {
       display: inline-block;
       height: auto;

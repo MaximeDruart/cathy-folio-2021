@@ -103,15 +103,32 @@ const StyledAbout = styled.div`
       height: 2px;
       background-color: ${({ theme }) => theme.colors.text.standard};
       opacity: 0.2;
-
+      &.text-top{
+        margin-bottom: 40px;
+      }
+      &.text-bot{
+        margin-top: 40px;
+      }
       @media (max-width: 769px) {
         margin-top: 14px;
         margin-bottom: 30px;
+        &.text-top{
+        margin-bottom: 20px;
+        }
+        &.text-bot{
+          margin-top: 20px;
+        }
       }
 
       @media (max-width: 480px) {
         margin-top: 10px;
         margin-bottom: 25px;
+        &.text-top{
+        margin-bottom: 10px;
+        }
+        &.text-bot{
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -198,9 +215,9 @@ const About = () => {
         </div>
         <div className='home-section skills'>
           <div className='headline'>skills</div>
-          <div className='separator'></div>
-          <InfiniteText />
-          <div className='separator'></div>
+          <div className='separator text-top'></div>
+          <InfiniteText /> 
+          <div className='separator text-bot'></div>
         </div>
         <div className="spacer"></div>
         <img className="about-visual" src={moodboard} alt="visual" />
