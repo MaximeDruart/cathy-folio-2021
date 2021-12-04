@@ -19,6 +19,15 @@ const StyledProjectDetail = styled.div`
       object-fit: cover;
     }
   }
+  h3.text-h3{
+    margin-bottom: 40px;
+  }
+  p{
+    width: 50%;
+    @media (max-width: 900px){
+    width: 100%;
+    }
+  }
   .hero-title {
     position: absolute;
     top: 0;
@@ -43,10 +52,16 @@ const StyledProjectDetail = styled.div`
       width: 100vw;
       height: auto;
       margin-left: -10vw;
+      @media (max-width: 769px) {
+        margin-left: -40px;
+      }
+      @media (max-width: 480px) {
+        margin-left: -28px;
+      }
     }
     .text-h2.title{
       width: 50%;
-      @media (max-width: 1100px) {
+      @media (max-width: 900px) {
         width: 100%;
       }
     }
@@ -58,6 +73,12 @@ const StyledProjectDetail = styled.div`
         display: flex;
         flex-direction: column;
         /* font-family: "NeueMontrealLight"; */
+        p{
+          width: 100%;
+        }
+        @media (max-width: 900px) {
+          width: 100%;
+        }
         .text-link.website-link{
           position: relative;
           margin-top: 30px;
@@ -84,8 +105,11 @@ const StyledProjectDetail = styled.div`
         .text-h6{
           margin-bottom: 30px;
         }
+        @media (max-width: 900px) {
+          width: 100%;
+        }
       }
-      @media (max-width: 1100px) {
+      @media (max-width: 900px) {
         flex-direction: column;
         .infos-intro,
         .infos-column{
@@ -93,6 +117,60 @@ const StyledProjectDetail = styled.div`
           /* background: red; */
           padding-left: 0;
           margin-bottom: 20px;
+        }
+      }
+    }
+    /* chart */
+    .chart{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      h4.text-h4{
+        margin-bottom: 40px;
+        margin-top: 50px;
+      }
+      .art-direction{
+        width: 100%;
+      }
+      .typography,.colors{
+        width: 50%;
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+        .color{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: ${({ theme }) => theme.colors.text.disabled};
+          font-family: NeueMontrealRegular;
+          font-size: 14px;
+          width: 60%;
+          height: 50px;
+          margin: 15px 0;
+          border-radius: 6px;
+          border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
+        }
+      }
+      .colors{
+        padding-left: 15%;
+        @media (max-width: 900px) {
+          padding-left: 0%;
+        }
+      }
+      .typography{
+        display:flex;
+        flex-direction: column;
+          span.text-typo{
+          font-size: 70px;
+          margin-bottom: 70px;
+          line-height:1.2;
+          color: ${({ theme }) => theme.colors.text.standard};
+          @media (max-width: 900px) {
+            font-size: 60px;
+          }
+          @media (max-width: 480px) {
+            font-size: 40px;
+          }
         }
       }
     }
@@ -120,11 +198,13 @@ const ProjectDetail = ({ project }) => {
         <div className='details'>
           {/* project shared data */}
           <h2 className='text-h2 title'>{project.title}</h2>
+          {/* intro */}
           <div className="infos">
             <div className="infos-intro">
               <p className='text-description'>{project.description}</p>
               <a className="text-link website-link" href={project.websiteLink} target='_blank'>Visit the website</a>
             </div>
+            {/* infos */}
             <div className="infos-column">
               <h3 className="text-h5">Date</h3>
               <div className='text-h6'>{project.date}</div>
@@ -138,6 +218,7 @@ const ProjectDetail = ({ project }) => {
           {/* visual */}
           <img class="visual" src={project.visual1} alt="visual" />
           <div className="spacer"></div>
+          {/* colors */}
           <ProjectComponent />
         </div>
       </StyledProjectDetail>

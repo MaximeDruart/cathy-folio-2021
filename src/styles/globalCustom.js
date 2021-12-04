@@ -22,7 +22,8 @@ export default css`
     }
   }
   .text-h2 {
-    font-family: "SaolDisplayLight";
+    /* font-family: "SaolDisplayLight"; */
+    font-family: NeueMontrealRegular;
     font-size: 60px;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
@@ -62,13 +63,12 @@ export default css`
     }
   }
   .text-h3 {
-    font-family: "NeueMontrealLight";
+    font-family: "NeueMontrealRegular";
     font-size: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h4 {
     font-family: "NeueMontrealRegular";
-    font-size: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
     font-size: 20px;
     font-family: 6px;

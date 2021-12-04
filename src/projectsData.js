@@ -37,6 +37,8 @@ let projectsData = [
     description:"Spécialiste en vêtements streetwear née en 2015, Project X Paris propose un concept avant gardiste où se rencontrent hip hop, sport, streetwear, lifestyle et art. Ma mission dans ce projet était de faire une fonte de leur site officiel pour faciliter les achats aux clients, et avoir une interface plus ergonomique ainsi qu'une charte graphique qui correspond à la marque."
     ,visual1: pxpVisual1,
     websiteLink: "https://www.projectxparis.com/",
+    color1: "#000000",
+    color2: "#FFFFFF"
   },
   {
     name: "Grissini",

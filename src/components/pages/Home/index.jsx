@@ -52,13 +52,13 @@ const StyledHome = styled.div`
           padding-left: 150px;
           .slider-container {
             position: absolute;
-            top: 70px;
+            top: 80px;
             right: 160px;
             &::after {
               position: absolute;
               content: "UI/UX Designer, front end developer & content creator based in paris";
               width: 250px;
-              top: -50px;
+              top: -60px;
               left: -20px;
               font-family: NeueMontrealRegular;
               font-size: 12px;
