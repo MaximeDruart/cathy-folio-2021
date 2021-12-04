@@ -3,6 +3,11 @@ import styled from "styled-components"
 import pxpDesktop from "../../assets/img/works/pxp/pxp_desktop.jpg"
 import homepage from "../../assets/img/works/pxp/homepage.jpg"
 import productPage from "../../assets/img/works/pxp/product_page.jpg"
+// mobile
+import homeMobile from "../../assets/img/works/pxp/homepage_mobile.png"
+import menuMobile from "../../assets/img/works/pxp/menu_mobile.png"
+import productMobile from "../../assets/img/works/pxp/product_mobile.png"
+import blogMobile from "../../assets/img/works/pxp/blog_mobile.png"
 
 
 const StyledPXP = styled.div`
@@ -79,7 +84,16 @@ const PXP = () => {
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
       <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
-      <div className="spacer"></div>   
+      <div className="demi-spacer"></div> 
+      <div className='headline text-regular'>responsive selection</div>
+      <div className='separator'></div>
+      <div className="responsive">
+        <img src={homeMobile} alt="responsive"></img>
+        <img src={menuMobile} alt="responsive"></img>
+        <img src={productMobile} alt="responsive"></img>
+        <img src={blogMobile} alt="responsive"></img>
+      </div>
+      <div className="spacer"></div>
     </StyledPXP>
   )
 }

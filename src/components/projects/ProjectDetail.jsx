@@ -24,9 +24,14 @@ const StyledProjectDetail = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     img{
       width: 20%;
       margin: 0 20px;
+      @media (max-width: 900px){
+      width: 40%;
+      margin: 20px;
+      }
     }
   }
   img.full-img{
