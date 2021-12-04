@@ -10,11 +10,16 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { Link } from "react-router-dom"
 import TextSpawn from "../shared/TextSpawn"
 
+import moodboard from "../../assets/img/about/moodboard.png"
+
 const StyledAbout = styled.div`
   transition: background-color 0.6s;
   * {
     font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
+  }
+  .about-visual{
+    width: 100%;
   }
   .hero {
     width: 100%;
@@ -190,20 +195,15 @@ const About = () => {
           <div className='title text-h2-5'>
             I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the 1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at Project X Paris
           </div>
-          <Link to='/about' className='cta'>
-            <span className='text'>about me</span>
-            <button className='circle'>
-              <ArrowSVG />
-            </button>
-          </Link>
         </div>
-
         <div className='home-section skills'>
           <div className='headline'>skills</div>
           <div className='separator'></div>
           <InfiniteText />
           <div className='separator'></div>
         </div>
+        <div className="spacer"></div>
+        <img className="about-visual" src={moodboard} alt="visual" />
       </StyledAbout>
     </PageTemplate>
   )

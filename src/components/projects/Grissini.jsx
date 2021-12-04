@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import moodboard from "../../assets/img/works/grissini/mooboard.png"
-import homepage from "../../assets/img/works/grissini/homepage.png"
-import contact from "../../assets/img/works/grissini/contact.png"
-import shop from "../../assets/img/works/grissini/shop.png"
-import shipping from "../../assets/img/works/grissini/shipping.png"
-import homeMobile from "../../assets/img/works/grissini/home_mobile.png"
-import menuMobile from "../../assets/img/works/grissini/menu_mobile.png"
-import shopMobile from "../../assets/img/works/grissini/shop_mobile.png"
-import contactMobile from "../../assets/img/works/grissini/contact_mobile.png"
+import moodboard from "../../assets/img/works/grissini/mooboard.jpg"
+import homepage from "../../assets/img/works/grissini/homepage.jpg"
+import contact from "../../assets/img/works/grissini/contact.jpg"
+import shop from "../../assets/img/works/grissini/shop.jpg"
+import shipping from "../../assets/img/works/grissini/shipping.jpg"
+import homeMobile from "../../assets/img/works/grissini/home_mobile.jpg"
+import menuMobile from "../../assets/img/works/grissini/menu_mobile.jpg"
+import shopMobile from "../../assets/img/works/grissini/shop_mobile.jpg"
+import contactMobile from "../../assets/img/works/grissini/contact_mobile.jpg"
 
 
 const StyledGrissini = styled.div`

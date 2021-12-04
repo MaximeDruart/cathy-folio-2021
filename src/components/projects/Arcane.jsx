@@ -1,12 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import jinx from "../../assets/img/works/arcane/jinx.png"
-import jinx2 from "../../assets/img/works/arcane/jinx2.png"
-import silco from "../../assets/img/works/arcane/silco.png"
-import silco2 from "../../assets/img/works/arcane/silco2.png"
-import vi from "../../assets/img/works/arcane/vi.png"
-import sisters from "../../assets/img/works/arcane/sisters.png"
-import ekko from "../../assets/img/works/arcane/ekko.png"
+import jinx from "../../assets/img/works/arcane/jinx.jpg"
+import jinx2 from "../../assets/img/works/arcane/jinx2.jpg"
+import silco from "../../assets/img/works/arcane/silco.jpg"
+import silco2 from "../../assets/img/works/arcane/silco2.jpg"
+import vi from "../../assets/img/works/arcane/vi.jpg"
+import sisters from "../../assets/img/works/arcane/sisters.jpg"
+import ekko from "../../assets/img/works/arcane/ekko.jpg"
 
 const StyledArcane = styled.div`
 h2{

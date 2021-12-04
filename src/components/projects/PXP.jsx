@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import pxpDesktop from "../../assets/img/works/pxp/pxp_desktop.png"
-import homepage from "../../assets/img/works/pxp/homepage.png"
-import productPage from "../../assets/img/works/pxp/product_page.png"
+import pxpDesktop from "../../assets/img/works/pxp/pxp_desktop.jpg"
+import homepage from "../../assets/img/works/pxp/homepage.jpg"
+import productPage from "../../assets/img/works/pxp/product_page.jpg"
 
 
 const StyledPXP = styled.div`

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import moodboard from "../../assets/img/works/shibuya/moodboard.png"
+import moodboard from "../../assets/img/works/shibuya/moodboard.jpg"
 import blackLatin from "../../assets/img/works/shibuya/black_latin.svg"
 import blackKanji from "../../assets/img/works/shibuya/black_kanji.svg"
 import pub from "../../assets/img/works/shibuya/pub.png"
@@ -98,22 +98,22 @@ return (
   {/* pub */}
   <div className='headline text-regular'>Advertising frames</div>
   <div className='separator'></div>
-  <img className="full-img" src={pub} alt="logo"></img>
+  <img src={pub} alt="logo"></img>
   <div className="big-spacer"></div>
   {/* city */}
   <div className='headline text-regular'>Advertisements in the neighborhood</div>
   <div className='separator'></div>
-  <img className="full-img" src={city} alt="logo"></img>
+  <img src={city} alt="logo"></img>
   <div className="big-spacer"></div>
   {/* city */}
   <div className='headline text-regular'>Advertisements in the neighborhood</div>
   <div className='separator'></div>
-  <img className="full-img" src={office} alt="logo"></img>
+  <img src={office} alt="logo"></img>
   <div className="big-spacer"></div>
   {/* city */}
   <div className='headline text-regular'>Advertisements in the neighborhood</div>
   <div className='separator'></div>
-  <img className="full-img" src={prints} alt="logo"></img>
+  <img src={prints} alt="logo"></img>
   <div className="big-spacer"></div>
 </StyledShibuya>
 )

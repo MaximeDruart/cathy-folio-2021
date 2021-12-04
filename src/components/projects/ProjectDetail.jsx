@@ -40,7 +40,7 @@ const StyledProjectDetail = styled.div`
       @media (max-width: 480px) {
         margin-left: -28px;
       }
-}
+  }
   h2.text-h2{
   margin-bottom: 20px;
 }
@@ -175,7 +175,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       flex-wrap: wrap;
       h4.text-h4{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         margin-top: 50px;
       }
       .art-direction{
@@ -195,9 +195,9 @@ const StyledProjectDetail = styled.div`
           align-items: center;
           color: ${({ theme }) => theme.colors.text.disabled};
           font-family: NeueMontrealRegular;
-          font-size: 14px;
-          width: 60%;
-          height: 50px;
+          font-size: 16px;
+          width: 70%;
+          height: 60px;
           margin: 15px 0;
           border-radius: 6px;
           border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
