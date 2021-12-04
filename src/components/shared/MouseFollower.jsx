@@ -15,7 +15,7 @@ const StyledMouseFollower = styled.div`
     pointer-events: none;
     width: 5pt;
     height: 5pt;
-    background: ${({ theme }) => theme.colors.text.standard};
+    background: ${({ theme }) => theme.colors.primary1};
     border-radius: 50%;
     position: fixed;
     top: -2.5pt;
@@ -34,15 +34,15 @@ const StyledMouseFollower = styled.div`
       position: absolute;
       width: 30pt;
       height: 30pt;
-      border: 1pt solid ${({ theme }) => theme.colors.text.standard};
+      border: 1pt solid ${({ theme }) => theme.colors.primary1};
       border-radius: 50%;
-      color: ${({ theme }) => theme.colors.text.standard};
+      color: ${({ theme }) => theme.colors.primary1};
       font-size: 40px;
 
       &.hover-circle {
         border: none;
         transform: scale(0.01);
-        background: ${({ theme }) => theme.colors.text.standard};
+        background: ${({ theme }) => theme.colors.primary1};
         opacity: 0.3;
       }
     }
