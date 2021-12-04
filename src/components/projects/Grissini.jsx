@@ -42,7 +42,7 @@ img{
       }
       &.three{
         background-color: #FDC463;
-        color: white;
+        color: white !important;
       }
     }
   }

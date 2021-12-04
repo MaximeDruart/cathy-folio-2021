@@ -40,7 +40,7 @@ export default css`
     }
 
     @media (max-width: 480px) {
-      font-size: 20px;
+      font-size: 40px;
     }
   }
   .text-h2-5 {
@@ -84,6 +84,7 @@ export default css`
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.standard};
     font-size: 14px;
+    line-height: 1.4;
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.standard};
@@ -136,12 +137,21 @@ export default css`
   /* SIZES */
   .spacer {
     height: 20vh;
+    @media screen and (max-width: 768px) {
+      height: 10vh;
+    }
   }
   .demi-spacer {
     height: 10vh;
+    @media screen and (max-width: 768px) {
+      height: 5vh;
+    }
   }
   .big-spacer {
     height: 40vh;
+    @media screen and (max-width: 768px) {
+      height: 25vh;
+    }
   }
   .margin-small {
     margin: 8px;

@@ -156,6 +156,7 @@ const StyledProjectDetail = styled.div`
         }
         @media (max-width: 900px) {
           width: 100%;
+          margin-top: 80px;
         }
       }
       @media (max-width: 900px) {
@@ -201,6 +202,9 @@ const StyledProjectDetail = styled.div`
           margin: 15px 0;
           border-radius: 6px;
           border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
+          @media (max-width: 900px) {
+          width: 100%;
+          }
         }
       }
       .colors{
