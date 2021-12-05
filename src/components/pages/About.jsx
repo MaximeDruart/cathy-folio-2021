@@ -11,6 +11,13 @@ import { Link } from "react-router-dom"
 import TextSpawn from "../shared/TextSpawn"
 
 import moodboard from "../../assets/img/about/moodboard.png"
+import game from "../../assets/img/about/pokemon.gif"
+import animes from "../../assets/img/about/animes.gif"
+import lofi from "../../assets/img/about/lofi.gif"
+import piano from "../../assets/img/about/piano.gif"
+import draw from "../../assets/img/about/draw.gif"
+import food from "../../assets/img/about/food.gif"
+
 
 const StyledAbout = styled.div`
   transition: background-color 0.6s;
@@ -95,6 +102,40 @@ const StyledAbout = styled.div`
       text-transform: uppercase;
       font-size: 14px;
     }
+    .passion_container{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-wrap:wrap;
+      .passion{
+      /* width: 100%; */
+      margin: 35px;
+      img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        opacity: 0.3;
+        transition: opacity 0.5s;
+        &:hover{
+          opacity: 1;
+        }
+        @media (max-width:900px){
+          opacity: 1;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .text-h4, .text-regular{
+        text-align: left;
+      }
+      .text-h4{
+        margin: 20px 0 2px 0;
+      }
+      @media (max-width:900px){
+          width: 100%;
+        }
+    }
+    }
 
     .separator {
       margin-top: 20px;
@@ -141,6 +182,10 @@ const StyledAbout = styled.div`
       .saol {
         font-family: SaolDisplaySemiboldItalic;
       }
+    }
+
+    img{
+      width: 100%;
     }
 
     .cta {
@@ -206,6 +251,7 @@ const About = () => {
             <ArrowDownSVG />
           </motion.div>
         </div>
+        {/* what-i-do */}
         <div className='home-section what-i-do'>
           <div className='headline'>Currently</div>
           <div className='separator'></div>
@@ -213,14 +259,71 @@ const About = () => {
             I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the 1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at Project X Paris
           </div>
         </div>
+        {/* personality */}
         <div className='home-section skills'>
-          <div className='headline'>skills</div>
+          <div className='headline'>personality</div>
           <div className='separator text-top'></div>
           <InfiniteText /> 
           <div className='separator text-bot'></div>
         </div>
-        <div className="spacer"></div>
+        {/* passions */}
+        <div className='home-section what-i-do'>
+          <div className='headline'>Learn more everyday</div>
+          <div className='separator'></div>
+          <div className='title text-h2-5'>
+            I'm want to learn <span className='saol'>new things</span> everyday and improve my skills. I'm passionate about digital and creative things
+          </div>
+          <div className="demi-spacer"></div>
+        </div>
         <img className="about-visual" src={moodboard} alt="visual" />
+        {/* passions */}
+        <div className='home-section what-i-do'>
+          <div className='headline'>My passions</div>
+          <div className='separator'></div>
+          {/* <div className='title text-h2-5'>
+            <span className='saol'>Passions</span> help me to blablabla. I'm passionate about digital and creative things
+            <div className="demi-spacer"></div>
+          </div> */}
+          <div className="passion_container">
+            {/* video games */}
+            <div className="passion">
+              <img src={game} alt="passion" /> 
+              <h4 className="text-h4">Video games</h4>  
+              <p className="text-regular">Improve my creativity</p>
+            </div>
+            {/* animes */}
+            <div className="passion">
+              <img src={animes} alt="passion" /> 
+              <h4 className="text-h4">Animes</h4>  
+              <p className="text-regular">Give me inspiration</p>
+            </div>
+            {/* lofi */}
+            <div className="passion">
+              <img src={lofi} alt="passion" /> 
+              <h4 className="text-h4">Lofi music</h4>  
+              <p className="text-regular">Help me to stay focus</p>
+            </div>            
+            {/* piano */}
+            <div className="passion">
+              <img src={piano} alt="passion" /> 
+              <h4 className="text-h4">Piano</h4>  
+              <p className="text-regular">Relax me</p>
+            </div>
+            {/* piano */}
+            <div className="passion">
+              <img src={draw} alt="passion" /> 
+              <h4 className="text-h4">Drawing</h4>  
+              <p className="text-regular">Improve my skill</p>
+            </div>
+             {/* piano */}
+             <div className="passion">
+              <img src={food} alt="passion" /> 
+              <h4 className="text-h4">Food</h4>  
+              <p className="text-regular">Regenerate me</p>
+            </div>                     
+          </div>
+          <div className="demi-spacer"></div>
+        </div>
       </StyledAbout>
     </PageTemplate>
   )
