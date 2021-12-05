@@ -222,15 +222,15 @@ const StyledProjectDetail = styled.div`
         display:flex;
         flex-direction: column;
           span.text-typo{
-          font-size: 60px;
+          font-size: 50px;
           margin-bottom: 40px;
-          line-height:1.2;
+          line-height:1.1;
           color: ${({ theme }) => theme.colors.text.standard};
           @media (max-width: 900px) {
-            font-size: 60px;
+            font-size: 40px;
           }
           @media (max-width: 480px) {
-            font-size: 40px;
+            font-size: 20px;
           }
         }
       }
