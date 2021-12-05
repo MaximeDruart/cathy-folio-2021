@@ -329,19 +329,19 @@ const About = () => {
             <div className="passion">
               <img src={draw} alt="passion" /> 
               <h4 className="text-h4">Drawing</h4>  
-              <p className="text-regular">Improve my skill</p>
+              <p className="text-regular">Improve my accuracy</p>
             </div>
              {/* piano */}
              <div className="passion">
               <img src={food} alt="passion" /> 
               <h4 className="text-h4">Food</h4>  
-              <p className="text-regular">Regenerate me</p>
+              <p className="text-regular">Especially japanese and korean food</p>
             </div>                     
           </div>
         </div>
         {/* twitch */}
         <div className='home-section what-i-do'>
-          <div className='headline'>Streaming</div>
+          <div className='headline'>Streamingv</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
             I'm also <span className='saol'>twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !
