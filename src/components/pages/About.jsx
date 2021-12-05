@@ -19,6 +19,7 @@ import draw from "../../assets/img/about/draw.gif"
 import food from "../../assets/img/about/food.gif"
 
 import twitch from "../../assets/img/about/twitch.jpg"
+import resume from "../../assets/img/about/resume.pdf"
 
 
 
@@ -187,10 +188,9 @@ const StyledAbout = styled.div`
       }
     }
 
-    img{
-      width: 100%;
-      &.twitch-img{
-        width: 100%;
+
+      img.twitch-img{
+        width: 60%;
         opacity: 0.5;
         transition: opacity 0.5s;
         &:hover{
@@ -202,7 +202,7 @@ const StyledAbout = styled.div`
           object-fit: cover;
         }
       }
-    }
+    
 
     .cta {
       margin-top: 20px;
@@ -274,6 +274,7 @@ const About = () => {
           <div className='title text-h2-5'>
             I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the 1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at Project X Paris
           </div>
+          <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
         {/* personality */}
         <div className='home-section skills'>
@@ -346,10 +347,9 @@ const About = () => {
           <div className='title text-h2-5'>
             I'm also <span className='saol'>twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !
           </div>
+          <a className="button" href="https://www.twitch.tv/katy_v4" target="_blank">Twitch.tv/Katy_v4</a>
           <div className="demi-spacer"></div>
-          <a href="https://www.twitch.tv/katy_v4" target="_blank">
-            <img className="twitch-img" src={twitch} alt="twitch" />
-          </a>
+          <img className="twitch-img" src={twitch} alt="twitch" />
         </div>
         <div className="spacer"></div>
       </StyledAbout>

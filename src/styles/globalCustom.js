@@ -134,6 +134,22 @@ export default css`
     font-family: NeueMontrealRegular;
   }
 
+  a.button{
+    border: solid 1px ${({ theme }) => theme.colors.text.disabled};
+    padding: 15px 50px;
+    border-radius: 30px;
+    color: ${({ theme }) => theme.colors.text.standard};
+    font-family: NeueMontrealRegular;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 40px;
+    transition: background-color 0.5s;
+    &:hover{
+      background-color:  ${({ theme }) => theme.colors.text.standard};
+      color:  ${({ theme }) => theme.colors.background};
+    }
+  }
+
   /* SIZES */
   .spacer {
     height: 20vh;
