@@ -18,6 +18,9 @@ import piano from "../../assets/img/about/piano.gif"
 import draw from "../../assets/img/about/draw.gif"
 import food from "../../assets/img/about/food.gif"
 
+import twitch from "../../assets/img/about/twitch.jpg"
+
+
 
 const StyledAbout = styled.div`
   transition: background-color 0.6s;
@@ -186,6 +189,19 @@ const StyledAbout = styled.div`
 
     img{
       width: 100%;
+      &.twitch-img{
+        width: 100%;
+        opacity: 0.5;
+        transition: opacity 0.5s;
+        &:hover{
+          opacity: 1;
+        }
+        @media (max-width:900px){
+          opacity: 1;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
     }
 
     .cta {
@@ -266,7 +282,7 @@ const About = () => {
           <InfiniteText /> 
           <div className='separator text-bot'></div>
         </div>
-        {/* passions */}
+        {/* learn */}
         <div className='home-section what-i-do'>
           <div className='headline'>Learn more everyday</div>
           <div className='separator'></div>
@@ -322,8 +338,20 @@ const About = () => {
               <p className="text-regular">Regenerate me</p>
             </div>                     
           </div>
-          <div className="demi-spacer"></div>
         </div>
+        {/* twitch */}
+        <div className='home-section what-i-do'>
+          <div className='headline'>Streaming</div>
+          <div className='separator'></div>
+          <div className='title text-h2-5'>
+            I'm also <span className='saol'>twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !
+          </div>
+          <div className="demi-spacer"></div>
+          <a href="https://www.twitch.tv/katy_v4" target="_blank">
+            <img className="twitch-img" src={twitch} alt="twitch" />
+          </a>
+        </div>
+        <div className="spacer"></div>
       </StyledAbout>
     </PageTemplate>
   )
