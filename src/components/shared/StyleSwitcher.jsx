@@ -13,6 +13,7 @@ const StyledStyleSwitcher = styled.div`
   justify-content: space-between;
   bottom: 60px;
   z-index: 100;
+  align-items: flex-end;
   ${horizontalPadding};
 
   pointer-events: none;
@@ -24,6 +25,11 @@ const StyledStyleSwitcher = styled.div`
   .theme-toggle {
     pointer-events: auto;
   }
+  @media (max-width: 600px){
+    bottom: 28px;
+    font-size: 12px;
+  }
+
 `
 
 const StyleSwitcher = () => {
