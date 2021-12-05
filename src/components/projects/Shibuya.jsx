@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import moodboard from "../../assets/img/works/shibuya/moodboard.jpg"
+import moodboard from "../../assets/img/works/shibuya/moodboard.png"
 import blackLatin from "../../assets/img/works/shibuya/black_latin.svg"
 import blackKanji from "../../assets/img/works/shibuya/black_kanji.svg"
 import pub from "../../assets/img/works/shibuya/pub.png"
@@ -83,13 +83,20 @@ return (
   </div>
   <div className="big-spacer"></div>
   {/* end chart */}
+  <h2 className='text-h2'>Some preview of Shibuya</h2>
+  <div className="demi-spacer"></div>
+  <div className='headline text-regular'>Night picture</div>
+  <div className='separator'></div>
+  <img src={moodboard} alt="moodboard"></img>
+  <div className="big-spacer"></div>
+  {/* logo */}
   <h2 className='text-h2'>Logo result</h2>
   <div className="demi-spacer"></div>
-  <div className='headline text-regular'>Logo in dark mode</div>
+  <div className='headline text-regular'>Latin Logo</div>
   <div className='separator'></div>
   <img className="logo-duo" src={blackLatin} alt="logo"></img>
   <div className="spacer"></div>
-  <div className='headline text-regular'>Logo in dark mode</div>
+  <div className='headline text-regular'>Kanji Logo</div>
   <div className='separator'></div>
   <img className="logo-duo" src={blackKanji} alt="logo"></img>
   <div className="big-spacer"></div>
