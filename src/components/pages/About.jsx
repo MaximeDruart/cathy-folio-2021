@@ -62,6 +62,9 @@ const StyledAbout = styled.div`
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
         }
+        @media (max-width:900px){
+          font-size: 80px;
+        }
       }
       .text-regular{
         width: 70%;
@@ -127,6 +130,7 @@ const StyledAbout = styled.div`
           opacity: 1;
           width: 100%;
           object-fit: cover;
+          height: 200px;
         }
       }
       .text-h4, .text-regular{
@@ -136,9 +140,10 @@ const StyledAbout = styled.div`
         margin: 20px 0 2px 0;
       }
       @media (max-width:900px){
-          width: 100%;
-        }
-    }
+        width: 100%;
+        margin: 35px 0;
+      }
+     }
     }
 
     .separator {
@@ -342,7 +347,7 @@ const About = () => {
         </div>
         {/* twitch */}
         <div className='home-section what-i-do'>
-          <div className='headline'>Streamingv</div>
+          <div className='headline'>Streaming</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
             I'm also <span className='saol'>twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !

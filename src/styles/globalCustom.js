@@ -18,7 +18,8 @@ export default css`
     }
 
     @media (max-width: 480px) {
-      font-size: 35px;
+      font-size: 40px;
+      line-height: 1.1;
     }
   }
   .text-h2 {
@@ -59,7 +60,8 @@ export default css`
     }
 
     @media (max-width: 480px) {
-      font-size: 18px;
+      font-size: 24px;
+      line-height: 1.2;
     }
   }
   .text-h3 {

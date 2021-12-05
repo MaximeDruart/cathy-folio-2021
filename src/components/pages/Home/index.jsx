@@ -30,6 +30,9 @@ const StyledHome = styled.div`
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      @media (max-width: 780px){
+        margin-top: -20vh;
+      }
       .line {
         text-transform: uppercase;
         width: auto;
@@ -107,6 +110,9 @@ const StyledHome = styled.div`
             .slider-container{
               right: -30px;
               top: 60px;
+              &:after{
+                top: -50px;
+              }
             }
           }
         }
@@ -114,25 +120,27 @@ const StyledHome = styled.div`
       @media (max-width: 769px) {
         .line{
           font-size: 50px;
-          line-height: 1;
+          line-height: 1.1;
           &.second_line{
             padding-left: 0px;
           }
           &.third_line{
             padding-left: 0px;
             .slider-container{
-              position: relative;
-              left: 0;
-              top: 60px;
+              display: flex;
+              justify-content: flex-end;
+              width: 100%;
+              top: 90px;
+              right: 0;
               &::after{
-                top: -50px;
+                top: -20px;
                 left: 0;
               }
             }
           }
           .important_word{
             margin-left: 5px;
-            font-size: 43px;
+            font-size: 50px;
             margin-top: -2px;
           }
         }
@@ -140,15 +148,23 @@ const StyledHome = styled.div`
 
       @media (max-width: 500px) {
         .line{
-          font-size: 40px;
-          line-height: 1;
+          font-size: 36px;
+          line-height: 1.1;
           &.third_line{
             .slider-container{
-              top: 50px;
+              display: flex;
+              justify-content: flex-end;
+              width: 100%;
+              top: 16vh;
+              right: 0;
               &::after{
-                top: -40px;
+                top: -80px;
               }
             }
+          }
+          .important_word{
+            margin-top: -1.5px;
+            font-size: 38px;
           }
         }
       }

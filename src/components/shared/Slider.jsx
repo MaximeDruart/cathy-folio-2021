@@ -22,6 +22,10 @@ const StyledSlider = styled.div`
       background: black;
       position: absolute;
     }
+    @media (max-width: 769px) {
+      width: 160px;
+      height: 200px;
+    }
   }
 
   .page {
@@ -31,10 +35,6 @@ const StyledSlider = styled.div`
     text-align: right;
     font-size: 11px;
     color: ${({ theme }) => theme.colors.text.standard};
-    @media (max-width: 769px) {
-      left:0;
-      right: auto;
-    }
   }
 `
 
