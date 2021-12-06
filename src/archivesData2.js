@@ -2,6 +2,9 @@
 import { v4 as uuidv4 } from "uuid"
 
 import cl from "./assets/img/archives/cl.jpg"
+import cl_print from "./assets/img/archives/cl_print.jpg"
+import shibuya_print from "./assets/img/archives/shibuya_print.jpg"
+import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
 import mandarin from "./assets/img/archives/mandarin.jpg"
 import yu_lin from "./assets/img/archives/yu_lin.jpg"
@@ -27,6 +30,33 @@ let archivesData = [
     description:
       "Cl Presave page",
     websiteLink: "",
+  },
+  {
+    name: "Cl Print",
+    path: "Cl Print",
+    coverImg: cl_print,
+    type: "Print",
+    description:
+      "Cl Print for her new album",
+    websiteLink: "",
+  },
+  {
+    name: "Shibuya Print Mockup",
+    path: "Shibuya Print Mockup",
+    coverImg: shibuya_print,
+    type: "Print",
+    description:
+      "Print for Shibuya",
+    websiteLink: "download",
+  },
+  {
+    name: "Shibuya Device Mockup",
+    path: "Shibuya Device Mockup",
+    coverImg: shibuya_device,
+    type: "Print",
+    description:
+      "A mockup for Ipad Device",
+    websiteLink: "download",
   },
   {
     name: "Mandala",
