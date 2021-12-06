@@ -1,113 +1,104 @@
 /* eslint-disable no-dupe-keys */
 import { v4 as uuidv4 } from "uuid"
 
-import Grissini from "./components/projects/Grissini"
-import grissiniCover from "./assets/img/works/grissini.jpg"
+import cl from "./assets/img/archives/cl.jpg"
+import mandala from "./assets/img/archives/mandala.jpg"
+import mandarin from "./assets/img/archives/mandarin.jpg"
+import yu_lin from "./assets/img/archives/yu_lin.jpg"
+import bank from "./assets/img/archives/bank.jpg"
+import abidaisy from "./assets/img/archives/abidaisy.jpg"
+import designr from "./assets/img/archives/designr.jpg"
+import etude from "./assets/img/archives/etude.jpg"
+import nike from "./assets/img/archives/nike.jpg"
 
-import PXP from "./components/projects/PXP"
-import pxpCover from "./assets/img/works/pxp.jpg"
 
-import Flamalice from "./components/projects/Flamalice"
-import flamaliceCover from "./assets/img/works/flamalice.jpg"
 
-import Arcane from "./components/projects/Arcane"
-import arcaneCover from "./assets/img/works/arcane.jpg"
 
-import Hologramme from "./components/projects/Hologramme"
-import hologrammeCover from "./assets/img/works/hologramme.jpg"
+
+
+
 
 let archivesData = [
   {
-    name: "Grissini",
-    path: "grissini",
-    coverImg: grissiniCover,
-    component: Grissini,
-    date: "Jul. 2021",
-    role: "Design, Front end dev",
-    techs: ["HTML/CSS/JS", "React", "Adobe XD", "Illustrator"],
+    name: "Cl presave",
+    path: "Cl presave",
+    coverImg: cl,
+    type: "Ui design",
     description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
+      "Cl Presave page",
+    websiteLink: "",
   },
   {
-    name: "PXP",
-    path: "pxp",
-    coverImg: pxpCover,
-    component: PXP,
-    date: "Jul. 2020",
-    role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    name: "Mandala",
+    path: "Mandala",
+    coverImg: mandala,
+    type: "Illustrator",
     description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
+      "I had to create a mandala for school, I choosed Chihiro theme",
+    websiteLink: "",
   },
   {
-    name: "Hologramme",
-    path: "Hologramme",
-    coverImg: hologrammeCover,
-    component: Hologramme,
-    date: "Jul. 2020",
-    role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    name: "Le mandarin",
+    path: "Le mandarin",
+    coverImg: mandarin,
+    type: "website",
     description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
+      "A website for the restaurant : Le mandarin",
+    websiteLink: "https://mandarin-merveilleux.com/",
   },
   {
-    name: "Arcane",
-    path: "Arcane",
-    coverImg: arcaneCover,
-    component: Arcane,
-    date: "Jul. 2020",
-    role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    name: "Yu Lin Beauté",
+    path: "Yu Lin Beauté",
+    coverImg: yu_lin,
+    type: "website",
     description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
+      "A website for Yu Lin Beauté",
+    websiteLink: "https://yulinbeaute.com/",
   },
   {
-    name: "Flamalice",
-    path: "Flamalice",
-    coverImg: flamaliceCover,
-    component: Flamalice,
-    date: "Jul. 2020",
-    role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    name: "Bank Login Page",
+    path: "Bank Login Page",
+    coverImg: bank,
+    type: "Ui design",
     description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
+      "Ui & web developtment of a Log in page for a Bank",
+    websiteLink: "https://loginbank.netlify.app/",
+  },
+  {
+    name: "Abidaisy Portfolio",
+    path: "Abidaisy Portfolio",
+    coverImg: abidaisy,
+    type: "website",
+    description:
+      "A portfolio for the artist Abidaisy",
+    websiteLink: "https://abidaisy.com/",
+  },
+  {
+    name: "DesignR",
+    path: "DesignR",
+    coverImg: designr,
+    type: "website",
+    description:
+      "An API for designR (work only on desktop)",
+    websiteLink: "https://designr.cathydolle.com/",
+  },
+  {
+    name: "Etude house",
+    path: "Etude house",
+    coverImg: etude,
+    type: "Ui Design",
+    description:
+      "UI Design for Étude House",
+    websiteLink: "",
+  },
+  {
+    name: "Nike homepage",
+    path: "Nike homepage",
+    coverImg: nike,
+    type: "Ui Design",
+    description:
+      "UI Design for Nike",
+    websiteLink: "",
   },
 ]
 

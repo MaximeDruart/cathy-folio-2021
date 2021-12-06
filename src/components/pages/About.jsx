@@ -129,7 +129,7 @@ const StyledAbout = styled.div`
         width: 300px;
         height: 180px;
         object-fit: cover;
-        opacity: 0.3;
+        opacity: 0.8;
         transition: opacity 0.5s;
         &:hover{
           opacity: 1;
@@ -144,8 +144,8 @@ const StyledAbout = styled.div`
       h3.number{
         margin-top: 20px;
         font-size: 60px;
-        /* font-family: "SaolDisplayLight";  */
-        font-family: "NeueMontrealLight";
+        font-family: "SaolDisplayLight"; 
+        /* font-family: "NeueMontrealLight"; */
         color: ${({ theme }) => theme.colors.text.disabled};
         margin-left: -4px;
         margin-right: 20px;
