@@ -117,9 +117,17 @@ const StyledAbout = styled.div`
       .passion{
       /* width: 100%; */
       margin: 35px;
+      .text-content{
+        display: flex;
+        .text-description{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
       img{
         width: 300px;
-        height: 300px;
+        height: 180px;
         object-fit: cover;
         opacity: 0.3;
         transition: opacity 0.5s;
@@ -133,11 +141,22 @@ const StyledAbout = styled.div`
           height: 200px;
         }
       }
+      h3.number{
+        margin-top: 20px;
+        font-size: 60px;
+        /* font-family: "SaolDisplayLight";  */
+        font-family: "NeueMontrealLight";
+        color: ${({ theme }) => theme.colors.text.disabled};
+        margin-left: -4px;
+        margin-right: 20px;
+        margin-bottom: 14px;
+
+      }
       .text-h4, .text-regular{
         text-align: left;
       }
       .text-h4{
-        margin: 20px 0 2px 0;
+        margin: 5px 0 2px 0;
       }
       @media (max-width:900px){
         width: 100%;
@@ -190,6 +209,7 @@ const StyledAbout = styled.div`
       text-align: center;
       .saol {
         font-family: SaolDisplaySemiboldItalic;
+        color: ${({ theme }) => theme.colors.primary1};
       }
     }
 
@@ -310,38 +330,67 @@ const About = () => {
             {/* video games */}
             <div className="passion">
               <img src={game} alt="passion" /> 
-              <h4 className="text-h4">Video games</h4>  
-              <p className="text-regular">Improve my creativity</p>
+              <div className="text-content">
+                <h3 className="text-h3 number">01</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Video games</h4>  
+                  <p className="text-regular">Improve my creativity</p>
+                </div>
+              </div>
             </div>
             {/* animes */}
             <div className="passion">
               <img src={animes} alt="passion" /> 
-              <h4 className="text-h4">Animes</h4>  
-              <p className="text-regular">Give me inspiration</p>
+              <div className="text-content">
+                <h3 className="text-h3 number">02</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Animes</h4>  
+                  <p className="text-regular">Give me inspiration</p>                </div>
+              </div>
             </div>
             {/* lofi */}
             <div className="passion">
               <img src={lofi} alt="passion" /> 
-              <h4 className="text-h4">Lofi music</h4>  
-              <p className="text-regular">Help me to stay focus</p>
+              <div className="text-content">
+                <h3 className="text-h3 number">03</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Lofi music</h4>  
+                  <p className="text-regular">Help me to stay focus</p>  
+                </div>
+              </div>              
             </div>            
             {/* piano */}
             <div className="passion">
-              <img src={piano} alt="passion" /> 
-              <h4 className="text-h4">Piano</h4>  
-              <p className="text-regular">Relax me</p>
+              <img src={piano} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">04</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Piano</h4>  
+                  <p className="text-regular">Relax me</p>                
+                </div>
+              </div>               
             </div>
             {/* piano */}
             <div className="passion">
-              <img src={draw} alt="passion" /> 
-              <h4 className="text-h4">Drawing</h4>  
-              <p className="text-regular">Improve my accuracy</p>
+              <img src={draw} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">05</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Drawing</h4>  
+                  <p className="text-regular">Improve my accuracy</p>
+                </div>
+              </div>               
             </div>
              {/* piano */}
              <div className="passion">
-              <img src={food} alt="passion" /> 
-              <h4 className="text-h4">Food</h4>  
-              <p className="text-regular">Especially japanese and korean food</p>
+              <img src={food} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">06</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Food</h4>  
+                  <p className="text-regular">Especially japanese and korean food</p>
+                </div>
+              </div>               
             </div>                     
           </div>
         </div>

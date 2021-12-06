@@ -251,36 +251,7 @@ const StyledHome = styled.div`
       text-align: center;
       .saol {
         font-family: SaolDisplaySemiboldItalic;
-      }
-    }
-
-    .cta {
-      margin-top: 20px;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      .text {
-        color: ${({ theme }) => theme.colors.text.standard};
-        font-family: NeueMontrealRegular;
-        text-transform: uppercase;
-      }
-
-      .circle {
-        margin-left: 20px;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: ${({ theme }) => theme.colors.text.standard};
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        svg {
-          width: 60%;
-          height: 60%;
-          fill: ${({ theme }) => theme.colors.background};
-          opacity: 0.6;
-        }
+        color: ${({ theme }) => theme.colors.primary1};
       }
     }
   }
@@ -336,11 +307,8 @@ experiences through <span class="saol">design</span>, I’m able to
 develop your ideas from concept to wireframe,
 passing through prototype and production.
           </div>
-          <Link to='/about' className='cta'>
-            <span className='text'>about me</span>
-            <button className='circle'>
-              <ArrowSVG />
-            </button>
+          <Link to='/about'>
+            <button className="button">About me</button>
           </Link>
         </div>
 

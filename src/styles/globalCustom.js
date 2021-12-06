@@ -136,7 +136,7 @@ export default css`
     font-family: NeueMontrealRegular;
   }
 
-  a.button{
+  .button{
     border: solid 1px ${({ theme }) => theme.colors.text.disabled};
     padding: 15px 50px;
     border-radius: 30px;
@@ -147,8 +147,8 @@ export default css`
     margin-top: 40px;
     transition: background-color 0.5s;
     &:hover{
-      background-color:  ${({ theme }) => theme.colors.text.standard};
-      color:  ${({ theme }) => theme.colors.background};
+      background-color:  ${({ theme }) => theme.colors.primary1};
+      color:  ${({ theme }) => theme.colors.text.standard};
     }
   }
 
