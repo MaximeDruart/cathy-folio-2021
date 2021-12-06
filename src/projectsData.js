@@ -24,6 +24,10 @@ import Shibuya from "./components/projects/Shibuya"
 import shibuyaCover from  "./assets/img/works/shibuya.jpg"
 import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
 
+import Bubble from "./components/projects/Bubble"
+import bubbleCover from  "./assets/img/works/bubble.jpg"
+import bubbleVisual1 from "./assets/img/works/bubble/bubbleVisual1.png"
+
 let projectsData = [
   {
     name: "Project X",
@@ -53,7 +57,6 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
     credits: {
       Development: { name: "Maxime Druart" },
       Designer: {
@@ -75,7 +78,6 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
     credits: {
       Development: { name: "Maxime Druart" },
       Designer: {
@@ -97,7 +99,6 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
     credits: {
       Development: { name: "Maxime Druart" },
       Designer: {
@@ -119,7 +120,6 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    githubLink: "https://github.com/MaximeDruart/pitchfork",
     credits: {
       Development: { name: "Maxime Druart" },
       Designer: {
@@ -149,6 +149,26 @@ let projectsData = [
   //     },
   //   },
   // },
+  {
+    name: "Bubble Tea",
+    path: "Bubble Tea",
+    title: "Bubble Tea maker",
+    coverImg: bubbleCover,
+    visual1: bubbleVisual1,
+    component: Bubble,
+    date: "Jul. 2020",
+    role: "Designer + Dev",
+    techs: ["HTML/CSS/JS"],
+    description:"I had to make a website using transition CSS at school, so I decided to make a Bubble Tea maker, enjoy :D",
+    websiteLink: "https://cathydolle.github.io/bubbleTea/",
+    credits: {
+      Development: { name: "Maxime Druart" },
+      Designer: {
+        name: "Aurélie Do",
+        link: "https://www.behance.net/aureliedo",
+      },
+    },
+  },
 ]
 
 projectsData = projectsData.map((project) => ({ ...project, id: uuidv4() }))

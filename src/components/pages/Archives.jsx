@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import React from "react"
 import styled from "styled-components"
-import archivesData from "../../archivesData"
+import archivesData from "../../archivesData2"
 import PageTemplate from "./PageTemplate"
 
 const Container = styled.div``
