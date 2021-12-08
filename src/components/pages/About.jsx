@@ -285,7 +285,7 @@ const About = () => {
                 <span className='important_word'>ME :)</span>
               </TextSpawn>
             </div>
-            <p className="text-regular">A passionate person who wants to learn new things everyday</p>
+            <p className="text-regular">A passionate person who wants to learn new things every day</p>
           </div>
           <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
             <span>discover me</span>
@@ -310,7 +310,7 @@ const About = () => {
         </div>
         {/* learn */}
         <div className='home-section what-i-do'>
-          <div className='headline'>Learn more everyday</div>
+          <div className='headline'>Learn more every day</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
             I'm want to learn <span className='saol'>new things</span> every day and improve my skills. I'm passionate about digital and creative things
