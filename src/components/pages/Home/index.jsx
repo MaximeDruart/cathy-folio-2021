@@ -11,11 +11,16 @@ import { Link } from "react-router-dom"
 import InfiniteText from "../../shared/InfiniteText"
 import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
+import moodboard from "../../../assets/img/myWork.png"
+
 
 const StyledHome = styled.div`
   * {
     font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
+  }
+  img.about-visual{
+    width: 100%;
   }
   .hero {
     width: 100%;
@@ -311,6 +316,9 @@ passing through prototype and production.
             <button className="button">About me</button>
           </Link>
         </div>
+        <div className="demi-spacer"></div>
+        <img className="about-visual" src={moodboard} alt="visual" />
+        <div className="demi-spacer"></div>
 
         <div className='home-section skills'>
           <div className='headline'>skills</div>
