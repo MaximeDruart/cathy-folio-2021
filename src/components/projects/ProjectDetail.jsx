@@ -5,6 +5,11 @@ import { marginPage } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
 
 const StyledProjectDetail = styled.div`
+  .hero-title{
+    h1{
+      opacity: 1 !important;
+    }
+  }
   .hero {
     width: 100vw;
     height: 80vh;
@@ -17,6 +22,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      /* opacity: 0.3 !important;  */
     }
   }
   /* responsive */
@@ -251,7 +257,7 @@ const ProjectDetail = ({ project }) => {
           <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
-            animate={{ opacity: imageHasLoaded ? 1 : 0 }}
+            animate={{ opacity: imageHasLoaded ? 0.6 : 0 }}
             src={project.coverImg}
           />
         </div>
