@@ -257,7 +257,7 @@ const ProjectDetail = ({ project }) => {
           <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
-            animate={{ opacity: imageHasLoaded ? 0.6 : 0 }}
+            animate={{ opacity: imageHasLoaded ? 1 : 0 }}
             src={project.coverImg}
           />
         </div>

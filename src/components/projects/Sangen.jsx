@@ -1,15 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-// bubble tea
-import light from "../../assets/img/works/bubble/light.svg"
-import dark from "../../assets/img/works/bubble/dark.svg"
-import step1 from "../../assets/img/works/bubble/step1.svg"
-import step2 from "../../assets/img/works/bubble/step2.svg"
-import step3 from "../../assets/img/works/bubble/step3.svg"
-import step4 from "../../assets/img/works/bubble/step4.svg"
-import step5 from "../../assets/img/works/bubble/step5.svg"
+// Row pattern
+import pastelRowx6 from "../../assets/img/works/sangen/pastelRowx6.png"
+import rowx4 from "../../assets/img/works/sangen/rowx4.png"
+// Random pattern
+import randomx3 from "../../assets/img/works/sangen/randomx3.png"
+import randomx4 from "../../assets/img/works/sangen/randomx4.png"
+import randomx6 from "../../assets/img/works/sangen/randomx6.png"
 
-const StyledArcane = styled.div`
+
+
+const StyledSangen = styled.div`
 h2{
   margin: 50px 0;
 }
@@ -17,7 +18,7 @@ img{
   width: 100%;
   margin-bottom: 50px;
   &.step{
-    width: 50%;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -44,22 +45,14 @@ img{
         background-color: #E7DBDA;
         color: white !important;
       }
-      &.three{
-        background-color: #282738;
-        color: white !important;
-      }
-      &.four{
-        background-color: #625F75;
-        color: white !important;
-      }
     }
   }
 }
 `
 
-const Arcane = () => {
+const Sangen = () => {
   return (
-    <StyledArcane>
+    <StyledSangen>
       <h2 className='text-h2'>Graphic Chart</h2>
           {/* chart */}
           <div className="chart">
@@ -75,47 +68,37 @@ const Arcane = () => {
           <h4 className="text-h4">Colors</h4>
           <div className="color one">#978B8A</div>
           <div className="color two">#E7DBDA</div>
-          <div className="color three">#282738</div>
-          <div className="color four">#625F75</div>
         </div>
       </div>
       {/* end chart */}
       <div className="spacer"></div>
-      <h2 className='text-h2'>Desktop</h2>
+      <h2 className='text-h2'>Row Pattern</h2>
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Dark mode</div>
+      <div className='headline text-regular'>Pattern 4x4</div>
       <div className='separator'></div>
-      <img src={dark} alt="bubble" />
+      <img className="step" src={rowx4} alt="bubble" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>Light mode</div>
+      <div className='headline text-regular'>Pattern 6x6</div>
       <div className='separator'></div>
-      <img src={light} alt="arcane" />
+      <img className="step" src={pastelRowx6} alt="arcane" />
       <div className="spacer"></div>
       {/* maker */}
-      <h2 className='text-h2'>Maker part</h2>
+      <h2 className='text-h2'>Random pattern</h2>
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Step 1 : Choose your size</div>
+      <div className='headline text-regular'>Pattern 3x3</div>
       <div className='separator'></div>
-      <img className="step" src={step1} alt="step" />
+      <img className="step" src={randomx3} alt="step" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>Step 2 : Choose your flavor</div>
+      <div className='headline text-regular'>Pattern 4x4</div>
       <div className='separator'></div>
-      <img className="step" src={step2} alt="step" />
+      <img className="step" src={randomx4} alt="step" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>Step 3 : Choose your toping</div>
+      <div className='headline text-regular'>Pattern 6x6</div>
       <div className='separator'></div>
-      <img className="step" src={step3} alt="step" />
+      <img className="step" src={randomx6} alt="step" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>Step 4 : Choose your size</div>
-      <div className='separator'></div>
-      <img className="step" src={step4} alt="step" />
-      <div className="spacer"></div>
-      <div className='headline text-regular'>Step 5 : Choose your straw</div>
-      <div className='separator'></div>
-      <img className="step" src={step5} alt="step" />
-      <div className="spacer"></div>
-    </StyledArcane>
+    </StyledSangen>
   )
 }
 
-export default Arcane
+export default Sangen
