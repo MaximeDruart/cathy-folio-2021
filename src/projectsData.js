@@ -32,6 +32,10 @@ import Sangen from "./components/projects/Sangen"
 import sangenCover from  "./assets/img/works/sangen.jpg"
 import sangenVisual1 from "./assets/img/works/sangen/sangenVisual1.jpg"
 
+import Desktop from "./components/projects/Desktop"
+import desktopCover from  "./assets/img/works/desktop.jpg"
+import desktopVisual1 from "./assets/img/works/desktop/desktopVisual1.jpg"
+
 let projectsData = [
   {
     name: "Sangen",
@@ -82,13 +86,6 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
   },
   {
     name: "Shibuya",
@@ -103,13 +100,19 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
+  },
+  {
+    name: "Desktop",
+    path: "Desktop",
+    title: "Desktop",
+    coverImg: desktopCover,
+    visual1: desktopVisual1,
+    component: Desktop,
+    date: "Jul. 2020",
+    role: "Designer + Dev",
+    techs: ["VueJS"],
+    description:"Wanna watch my content on a computer? Lets do it ! I developped this project to learn VueJS. Enjoy !!",
+    websiteLink: "https://cathydolle.github.io/#/",
   },
   {
     name: "Hologramme",
@@ -124,13 +127,6 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
   },
   {
     name: "Arcane",
@@ -145,13 +141,6 @@ let projectsData = [
     description:
       "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
     websiteLink: "https://pitchfork.herokuapp.com/",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
   },
   // {
   //   name: "Flamalice",

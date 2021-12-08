@@ -187,7 +187,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       flex-wrap: wrap;
       h4.text-h4{
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         margin-top: 50px;
       }
       .art-direction{
@@ -200,6 +200,9 @@ const StyledProjectDetail = styled.div`
         width: 50%;
         @media (max-width: 900px) {
           width: 100%;
+        }
+        h4.text-h4{
+          margin-bottom: 30px;
         }
         .color{
           display: flex;
@@ -230,7 +233,7 @@ const StyledProjectDetail = styled.div`
           span.text-typo{
           font-size: 50px;
           margin-bottom: 40px;
-          line-height:1.1;
+          line-height:1.3;
           color: ${({ theme }) => theme.colors.text.standard};
           @media (max-width: 900px) {
             font-size: 40px;

@@ -16,7 +16,7 @@ import step3 from "../../assets/img/works/bubble/step3.svg"
 import step4 from "../../assets/img/works/bubble/step4.svg"
 import step5 from "../../assets/img/works/bubble/step5.svg"
 
-const StyledArcane = styled.div`
+const StyledBubble = styled.div`
 h2{
   margin: 50px 0;
 }
@@ -64,9 +64,9 @@ img{
 }
 `
 
-const Arcane = () => {
+const Bubble = () => {
   return (
-    <StyledArcane>
+    <StyledBubble>
       <h2 className='text-h2'>Graphic Chart</h2>
           {/* chart */}
           <div className="chart">
@@ -121,8 +121,8 @@ const Arcane = () => {
       <div className='separator'></div>
       <img className="step" src={step5} alt="step" />
       <div className="spacer"></div>
-    </StyledArcane>
+    </StyledBubble>
   )
 }
 
-export default Arcane
+export default Bubble
