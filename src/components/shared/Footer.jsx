@@ -129,16 +129,16 @@ const Footer = () => {
           <div className='left'>@2021</div>
           <ul className='socials'>
             <li>
-              <a href='#'>linkedin</a>
+              <a href='https://www.linkedin.com/in/cathy-dolle/?originalSubdomain=fr' target="_blank">linkedin</a>
             </li>
             <li>
-              <a href='#'>instagram</a>
+              <a href='https://www.instagram.com/cathydolle/' target="_blank">instagram</a>
             </li>
             <li>
-              <a href='#'>behance</a>
+              <a href='https://www.behance.net/cathydolle' target="_blank">behance</a>
             </li>
             <li>
-              <a href='#'>discord</a>
+              <a href='https://discord.com/users/169782332247506944' target="_blank">discord</a>
             </li>
           </ul>
           <div className='right'></div>

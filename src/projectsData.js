@@ -28,6 +28,10 @@ import Bubble from "./components/projects/Bubble"
 import bubbleCover from  "./assets/img/works/bubble.jpg"
 import bubbleVisual1 from "./assets/img/works/bubble/bubbleVisual1.png"
 
+//import Sangen from "./components/projects/Sangen"
+import sangenCover from  "./assets/img/works/sangen.jpg"
+//import sangenVisual1 from "./assets/img/works/sangen/sangenVisual1.png"
+
 let projectsData = [
   {
     name: "Project X",
@@ -112,6 +116,27 @@ let projectsData = [
     path: "Arcane",
     title: "UI design for Arcane",
     coverImg: arcaneCover,
+    visual1: arcaneVisual1,
+    component: Arcane,
+    date: "Jul. 2020",
+    role: "Front end dev, back end dev",
+    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    description:
+      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
+    websiteLink: "https://pitchfork.herokuapp.com/",
+    credits: {
+      Development: { name: "Maxime Druart" },
+      Designer: {
+        name: "Aurélie Do",
+        link: "https://www.behance.net/aureliedo",
+      },
+    },
+  },
+  {
+    name: "Sangen",
+    path: "Sangen",
+    title: "UI design for Sangen",
+    coverImg: sangenCover,
     visual1: arcaneVisual1,
     component: Arcane,
     date: "Jul. 2020",

@@ -313,7 +313,7 @@ const About = () => {
           <div className='headline'>Learn more everyday</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            I'm want to learn <span className='saol'>new things</span> everyday and improve my skills. I'm passionate about digital and creative things
+            I'm want to learn <span className='saol'>new things</span> every day and improve my skills. I'm passionate about digital and creative things
           </div>
           <div className="demi-spacer"></div>
         </div>
