@@ -29,7 +29,7 @@ import bubbleCover from  "./assets/img/works/bubble.jpg"
 import bubbleVisual1 from "./assets/img/works/bubble/bubbleVisual1.png"
 
 import Sangen from "./components/projects/Sangen"
-import sangenCover from  "./assets/img/works/sangen.jpg"
+import sangenCover from  "./assets/img/works/sangen.svg"
 import sangenVisual1 from "./assets/img/works/sangen/sangenVisual1.jpg"
 
 import Desktop from "./components/projects/Desktop"
