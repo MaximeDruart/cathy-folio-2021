@@ -10,6 +10,15 @@ const StyledProjectDetail = styled.div`
       opacity: 1 !important;
     }
   }
+  img.step{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 900px){
+      width: 100%;
+    }
+  }
   .hero {
     width: 100vw;
     height: 80vh;

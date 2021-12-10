@@ -23,15 +23,6 @@ h2{
 img{
   width: 100%;
   margin-bottom: 50px;
-  &.step{
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 900px){
-      width: 100%;
-    }
-  }
 }
 .chart{
   .typography{

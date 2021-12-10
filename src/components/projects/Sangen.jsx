@@ -8,6 +8,21 @@ import randomx3 from "../../assets/img/works/sangen/randomx3.png"
 import randomx4 from "../../assets/img/works/sangen/randomx4.png"
 import randomx6 from "../../assets/img/works/sangen/randomx6.png"
 
+import sangenPreview from "../../assets/img/works/sangen/sangenPreview.jpg"
+
+// Print
+import kill from "../../assets/img/works/sangen/kill.png"
+import vol from "../../assets/img/works/sangen/vol.png"
+import low from "../../assets/img/works/sangen/low.png"
+import key from "../../assets/img/works/sangen/key.png"
+import cube from "../../assets/img/works/sangen/cube.png"
+import wave from "../../assets/img/works/sangen/wave.png"
+
+
+
+
+
+
 
 
 const StyledSangen = styled.div`
@@ -17,6 +32,9 @@ h2{
 img{
   width: 100%;
   margin-bottom: 50px;
+  &.full-img{
+    height: 100vh;
+  }
   &.step{
     width: 70%;
     display: block;
@@ -53,25 +71,6 @@ img{
 const Sangen = () => {
   return (
     <StyledSangen>
-      <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Lato<br/>Aa 123</span>
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#978B8A</div>
-          <div className="color two">#E7DBDA</div>
-        </div>
-      </div>
-      {/* end chart */}
-      <div className="spacer"></div>
       <h2 className='text-h2'>Row Pattern</h2>
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>Pattern 4x4</div>
@@ -89,14 +88,29 @@ const Sangen = () => {
       <div className='separator'></div>
       <img className="step" src={randomx3} alt="step" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>Pattern 4x4</div>
-      <div className='separator'></div>
-      <img className="step" src={randomx4} alt="step" />
-      <div className="spacer"></div>
       <div className='headline text-regular'>Pattern 6x6</div>
       <div className='separator'></div>
       <img className="step" src={randomx6} alt="step" />
+      <div className="big-spacer"></div>
+      <img className="full-img" src={sangenPreview} alt="pxp" />
       <div className="spacer"></div>
+      <h2 className='text-h2'>Print</h2>
+      <div className="demis-spacer"></div>
+      <p className="text-description">I also generate some pattern with processing to create a print collection</p>
+      <div className="demi-spacer"></div>
+      <div className='headline text-regular'>Dark Print</div>
+      <div className='separator'></div>
+      <img className="step" src={kill} alt="print" />
+      <img className="step" src={vol} alt="print" />
+      <img className="step" src={low} alt="print" />
+      <img className="step" src={key} alt="print" />
+      <div className="spacer"></div>
+      <div className='headline text-regular'>Light Print</div>
+      <div className='separator'></div>
+      <img className="step" src={cube} alt="print" />
+      <img className="step" src={wave} alt="print" />
+      <div className="spacer"></div>
+
     </StyledSangen>
   )
 }
