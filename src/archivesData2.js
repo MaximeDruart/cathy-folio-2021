@@ -14,21 +14,13 @@ import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
 
-
-
-
-
-
-
-
 let archivesData = [
   {
     name: "Cl presave",
     path: "Cl presave",
     coverImg: cl,
     type: "Ui design",
-    description:
-      "Cl Presave page",
+    description: "Cl Presave page",
     websiteLink: "",
   },
   {
@@ -36,8 +28,7 @@ let archivesData = [
     path: "Cl Print",
     coverImg: cl_print,
     type: "Print",
-    description:
-      "Cl Print for her new album",
+    description: "Cl Print for her new album",
     websiteLink: "",
   },
   {
@@ -45,8 +36,7 @@ let archivesData = [
     path: "Shibuya Print Mockup",
     coverImg: shibuya_print,
     type: "Print",
-    description:
-      "Print for Shibuya",
+    description: "Print for Shibuya",
     websiteLink: "download",
   },
   {
@@ -54,8 +44,7 @@ let archivesData = [
     path: "Shibuya Device Mockup",
     coverImg: shibuya_device,
     type: "Print",
-    description:
-      "A mockup for Ipad Device",
+    description: "A mockup for Ipad Device",
     websiteLink: "download",
   },
   {
@@ -63,8 +52,7 @@ let archivesData = [
     path: "Mandala",
     coverImg: mandala,
     type: "Illustrator",
-    description:
-      "I had to create a mandala for school, I choosed Chihiro theme",
+    description: "I had to create a mandala for school, I choosed Chihiro theme",
     websiteLink: "",
   },
   {
@@ -72,8 +60,7 @@ let archivesData = [
     path: "Le mandarin",
     coverImg: mandarin,
     type: "website",
-    description:
-      "A website for the restaurant : Le mandarin",
+    description: "A website for the restaurant : Le mandarin",
     websiteLink: "https://mandarin-merveilleux.com/",
   },
   {
@@ -81,8 +68,7 @@ let archivesData = [
     path: "Yu Lin Beauté",
     coverImg: yu_lin,
     type: "website",
-    description:
-      "A website for Yu Lin Beauté",
+    description: "A website for Yu Lin Beauté",
     websiteLink: "https://yulinbeaute.com/",
   },
   {
@@ -90,8 +76,7 @@ let archivesData = [
     path: "Bank Login Page",
     coverImg: bank,
     type: "Ui design",
-    description:
-      "Ui & web developtment of a Log in page for a Bank",
+    description: "Ui & web developtment of a Log in page for a Bank",
     websiteLink: "https://loginbank.netlify.app/",
   },
   {
@@ -99,8 +84,7 @@ let archivesData = [
     path: "Abidaisy Portfolio",
     coverImg: abidaisy,
     type: "website",
-    description:
-      "A portfolio for the artist Abidaisy",
+    description: "A portfolio for the artist Abidaisy",
     websiteLink: "https://abidaisy.com/",
   },
   {
@@ -108,8 +92,7 @@ let archivesData = [
     path: "DesignR",
     coverImg: designr,
     type: "website",
-    description:
-      "An API for designR (work only on desktop)",
+    description: "An API for designR (work only on desktop)",
     websiteLink: "https://designr.cathydolle.com/",
   },
   {
@@ -117,8 +100,7 @@ let archivesData = [
     path: "Etude house",
     coverImg: etude,
     type: "Ui Design",
-    description:
-      "UI Design for Étude House",
+    description: "UI Design for Étude House",
     websiteLink: "",
   },
   {
@@ -126,8 +108,7 @@ let archivesData = [
     path: "Nike homepage",
     coverImg: nike,
     type: "Ui Design",
-    description:
-      "UI Design for Nike",
+    description: "UI Design for Nike",
     websiteLink: "",
   },
 ]

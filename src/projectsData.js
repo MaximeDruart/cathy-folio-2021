@@ -21,40 +21,41 @@ import hologrammeCover from "./assets/img/works/hologramme.jpg"
 import hologrammeVisual1 from "./assets/img/works/hologramme/visual1.jpg"
 
 import Shibuya from "./components/projects/Shibuya"
-import shibuyaCover from  "./assets/img/works/shibuya.jpg"
+import shibuyaCover from "./assets/img/works/shibuya.jpg"
 import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
 
 import Bubble from "./components/projects/Bubble"
-import bubbleCover from  "./assets/img/works/bubble.jpg"
+import bubbleCover from "./assets/img/works/bubble.jpg"
 import bubbleVisual1 from "./assets/img/works/bubble/bubbleVisual1.png"
 
 import Sangen from "./components/projects/Sangen"
-import sangenCover from  "./assets/img/works/sangen.svg"
+import sangenCover from "./assets/img/works/sangen.svg"
 import sangenVisual1 from "./assets/img/works/sangen/sangenVisual1.jpg"
 
 import Desktop from "./components/projects/Desktop"
-import desktopCover from  "./assets/img/works/desktop.jpg"
+import desktopCover from "./assets/img/works/desktop.jpg"
 import desktopVisual1 from "./assets/img/works/desktop/desktopVisual1.jpg"
 
 let projectsData = [
   {
     name: "Project X",
-    path: "Project X Paris",
+    path: "project-x-paris",
     title: "Refonte complète du site Project X Paris",
     coverImg: pxpCover,
     component: PXP,
     date: "Jul. 2021",
     role: "UI/UX Designer & web integrator",
     techs: ["Wordpress, Elementor"],
-    description:"Spécialiste en vêtements streetwear née en 2015, Project X Paris propose un concept avant gardiste où se rencontrent hip hop, sport, streetwear, lifestyle et art. Ma mission dans ce projet était de faire une fonte de leur site officiel pour faciliter les achats aux clients, et avoir une interface plus ergonomique ainsi qu'une charte graphique qui correspond à la marque."
-    ,visual1: pxpVisual1,
+    description:
+      "Spécialiste en vêtements streetwear née en 2015, Project X Paris propose un concept avant gardiste où se rencontrent hip hop, sport, streetwear, lifestyle et art. Ma mission dans ce projet était de faire une fonte de leur site officiel pour faciliter les achats aux clients, et avoir une interface plus ergonomique ainsi qu'une charte graphique qui correspond à la marque.",
+    visual1: pxpVisual1,
     websiteLink: "https://www.projectxparis.com/",
     color1: "#000000",
-    color2: "#FFFFFF"
+    color2: "#FFFFFF",
   },
   {
     name: "Arcane",
-    path: "Arcane",
+    path: "arcane",
     title: "UI design for Arcane",
     coverImg: arcaneCover,
     visual1: arcaneVisual1,
@@ -68,7 +69,7 @@ let projectsData = [
   },
   {
     name: "Sangen",
-    path: "Sangen",
+    path: "sangen",
     title: "Processing Sangen",
     coverImg: sangenCover,
     visual1: sangenVisual1,
@@ -103,7 +104,7 @@ let projectsData = [
   },
   {
     name: "Shibuya",
-    path: "Shibuya",
+    path: "shibuya",
     coverImg: shibuyaCover,
     title: "Logo creation for Shibuya",
     visual1: shibuyaVisual1,
@@ -117,7 +118,7 @@ let projectsData = [
   },
   {
     name: "Desktop",
-    path: "Desktop",
+    path: "desktop",
     title: "Desktop",
     coverImg: desktopCover,
     visual1: desktopVisual1,
@@ -125,12 +126,13 @@ let projectsData = [
     date: "Jul. 2020",
     role: "Designer + Dev",
     techs: ["VueJS"],
-    description:"Wanna watch my content on a computer? Lets do it ! I developped this project to learn VueJS. Enjoy !!",
+    description:
+      "Wanna watch my content on a computer? Lets do it ! I developped this project to learn VueJS. Enjoy !!",
     websiteLink: "https://cathydolle.github.io/#/",
   },
   {
     name: "Hologramme",
-    path: "Hologramme",
+    path: "hologramme",
     title: "UI/UX Homepage for Hologramme",
     visual1: hologrammeVisual1,
     coverImg: hologrammeCover,
@@ -144,7 +146,7 @@ let projectsData = [
   },
   // {
   //   name: "Flamalice",
-  //   path: "Flamalice",
+  //   path: "flamalice",
   //   title: "Website for a digital artist : Flamalice",
   //   coverImg: flamaliceCover,
   //   component: Flamalice,
@@ -165,7 +167,7 @@ let projectsData = [
   // },
   {
     name: "Bubble Tea",
-    path: "Bubble Tea",
+    path: "bubble-tea",
     title: "Bubble Tea maker",
     coverImg: bubbleCover,
     visual1: bubbleVisual1,
@@ -173,7 +175,8 @@ let projectsData = [
     date: "Jul. 2020",
     role: "Designer + Dev",
     techs: ["HTML/CSS/JS"],
-    description:"I had to make a website using transition CSS at school, so I decided to make a Bubble Tea maker, enjoy :D",
+    description:
+      "I had to make a website using transition CSS at school, so I decided to make a Bubble Tea maker, enjoy :D",
     websiteLink: "https://cathydolle.github.io/bubbleTea/",
     credits: {
       Development: { name: "Maxime Druart" },
@@ -185,6 +188,6 @@ let projectsData = [
   },
 ]
 
-projectsData = projectsData.map((project) => ({ ...project, id: uuidv4() }))
+projectsData = projectsData.map((project, index) => ({ ...project, id: uuidv4(), index }))
 
 export default projectsData

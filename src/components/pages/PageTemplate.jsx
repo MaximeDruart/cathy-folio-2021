@@ -4,9 +4,10 @@ import { useViewportScroll, useTransform, useSpring, motion } from "framer-motio
 import styled from "styled-components"
 
 import Footer from "../shared/Footer"
+import { useMediaQuery } from "beautiful-react-hooks"
 
 const Container = styled(motion.div)`
-  position: fixed;
+  position: ${({ isTouch }) => (isTouch ? "static" : "fixed")};
   top: 0;
   left: 0;
   width: 100%;
@@ -57,6 +58,8 @@ const PageTemplate = ({ children, hasFooter = true, hasTransitionPanel = false, 
     return () => resizeObserver.disconnect()
   }, [scrollRef, resizePageHeight])
 
+  const isTouch = useMediaQuery("(max-width: 769px)")
+
   const { scrollY } = useViewportScroll() // measures how many pixels user has scrolled vertically
   // as scrollY changes between 0px and the scrollable height, create a negative scroll value...
   // ... based on current scroll position to translateY the document in a natural way
@@ -67,19 +70,16 @@ const PageTemplate = ({ children, hasFooter = true, hasTransitionPanel = false, 
   return (
     <>
       <Container
+        isTouch={isTouch}
         ref={scrollRef}
-        style={{ y: spring }} // translateY of scroll container using negative scroll value
-        className='scroll-container'
+        style={{ y: !isTouch ? spring : 0 }} // translateY of scroll container using negative scroll value
       >
         <motion.div className='page-container' {...rest}>
-          {React.cloneElement(children, { spring })}
-          {/* {children} */}
+          {children}
           {hasFooter && <Footer />}
         </motion.div>
       </Container>
-      {/* blank div that has a dynamic height based on the content's inherent height */}
-      {/* this is neccessary to allow the scroll container to scroll... */}
-      {/* ... using the browser's native scroll bar */}
+
       {hasTransitionPanel && (
         <TransitionPanel className='transition-panel-wrapper'>
           <motion.div
@@ -90,7 +90,10 @@ const PageTemplate = ({ children, hasFooter = true, hasTransitionPanel = false, 
           ></motion.div>
         </TransitionPanel>
       )}
-      <div style={{ height: pageHeight }} />
+      {/* blank div that has a dynamic height based on the content's inherent height */}
+      {/* this is neccessary to allow the scroll container to scroll... */}
+      {/* ... using the browser's native scroll bar */}
+      {!isTouch && <div style={{ height: pageHeight }} />}
     </>
   )
 }

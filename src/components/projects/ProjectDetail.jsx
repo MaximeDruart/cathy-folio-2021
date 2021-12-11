@@ -1,21 +1,23 @@
-import { motion } from "framer-motion"
-import React, { useState } from "react"
+import { motion, useSpring, useTransform, useViewportScroll } from "framer-motion"
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import { marginPage } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
+import projectsData from "../../projectsData"
+import { Link, useHistory } from "react-router-dom"
 
 const StyledProjectDetail = styled.div`
-  .hero-title{
-    h1{
+  .hero-title {
+    h1 {
       opacity: 1 !important;
     }
   }
-  img.step{
+  img.step {
     width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width: 900px){
+    @media (max-width: 900px) {
       width: 100%;
     }
   }
@@ -31,46 +33,45 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* opacity: 0.3 !important;  */
     }
   }
   /* responsive */
-  .responsive{
+  .responsive {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    img{
+    img {
       width: 20%;
       margin: 0 20px;
-      @media (max-width: 900px){
-      width: 40%;
-      margin: 20px;
+      @media (max-width: 900px) {
+        width: 40%;
+        margin: 20px;
       }
     }
   }
-  img.full-img{
-  width: 100vw;
-  margin-left: -10vw;
-  height: 80vh;
-  object-fit: cover;
-  @media (max-width: 769px) {
-        margin-left: -40px;
-      }
-      @media (max-width: 480px) {
-        margin-left: -28px;
-      }
+  img.full-img {
+    width: 100vw;
+    margin-left: -10vw;
+    height: 80vh;
+    object-fit: cover;
+    @media (max-width: 769px) {
+      margin-left: -40px;
+    }
+    @media (max-width: 480px) {
+      margin-left: -28px;
+    }
   }
-  h2.text-h2{
-  margin-bottom: 20px;
-}
-  h3.text-h3{
+  h2.text-h2 {
+    margin-bottom: 20px;
+  }
+  h3.text-h3 {
     margin-bottom: 40px;
   }
-  p{
+  p {
     width: 50%;
-    @media (max-width: 900px){
-    width: 100%;
+    @media (max-width: 900px) {
+      width: 100%;
     }
   }
   .hero-title {
@@ -88,36 +89,37 @@ const StyledProjectDetail = styled.div`
       text-transform: uppercase;
       color: white;
       font-family: SaolDisplayLight;
+      white-space: nowrap;
     }
   }
   /* Separator with text */
   .headline {
-      text-transform: uppercase;
-      text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .separator {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.text.standard};
+    opacity: 0.2;
+
+    @media (max-width: 769px) {
+      margin-top: 14px;
+      margin-bottom: 30px;
     }
 
-    .separator {
-      margin-top: 20px;
-      margin-bottom: 50px;
-      width: 100%;
-      height: 2px;
-      background-color: ${({ theme }) => theme.colors.text.standard};
-      opacity: 0.2;
-
-      @media (max-width: 769px) {
-        margin-top: 14px;
-        margin-bottom: 30px;
-      }
-
-      @media (max-width: 480px) {
-        margin-top: 10px;
-        margin-bottom: 25px;
-      }
+    @media (max-width: 480px) {
+      margin-top: 10px;
+      margin-bottom: 25px;
     }
+  }
   .details {
     height: auto;
     ${marginPage};
-    img.visual{
+    img.visual {
       width: 100vw;
       height: auto;
       margin-left: -10vw;
@@ -128,50 +130,50 @@ const StyledProjectDetail = styled.div`
         margin-left: -28px;
       }
     }
-    .text-h2.title{
+    .text-h2.title {
       width: 50%;
       @media (max-width: 900px) {
         width: 100%;
       }
     }
-    .infos{
+    .infos {
       width: 100%;
       display: flex;
-      .infos-intro{
+      .infos-intro {
         width: 50%;
         display: flex;
         flex-direction: column;
         /* font-family: "NeueMontrealLight"; */
-        p{
+        p {
           width: 100%;
         }
         @media (max-width: 900px) {
           width: 100%;
         }
-        .text-link.website-link{
+        .text-link.website-link {
           position: relative;
           margin-top: 30px;
-          &::after{
+          &::after {
             position: absolute;
             content: "→";
             transform: translateX(10px);
             transition: transform 0.4s;
           }
-          &:hover{
-            &::after{
+          &:hover {
+            &::after {
               transform: translateX(15px);
             }
           }
         }
       }
-      .infos-column{
+      .infos-column {
         margin-top: 15px;
         padding-left: 15%;
         width: 50%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        .text-h6{
+        .text-h6 {
           margin-bottom: 30px;
         }
         @media (max-width: 900px) {
@@ -182,7 +184,7 @@ const StyledProjectDetail = styled.div`
       @media (max-width: 900px) {
         flex-direction: column;
         .infos-intro,
-        .infos-column{
+        .infos-column {
           width: 100%;
           /* background: red; */
           padding-left: 0;
@@ -191,29 +193,30 @@ const StyledProjectDetail = styled.div`
       }
     }
     /* chart */
-    .chart{
+    .chart {
       display: flex;
       width: 100%;
       flex-wrap: wrap;
-      h4.text-h4{
+      h4.text-h4 {
         margin-bottom: 0px;
         margin-top: 50px;
       }
-      .art-direction{
+      .art-direction {
         width: 100%;
-        h4{
+        h4 {
           margin-bottom: 20px;
         }
       }
-      .typography,.colors{
+      .typography,
+      .colors {
         width: 50%;
         @media (max-width: 900px) {
           width: 100%;
         }
-        h4.text-h4{
+        h4.text-h4 {
           margin-bottom: 30px;
         }
-        .color{
+        .color {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -226,23 +229,23 @@ const StyledProjectDetail = styled.div`
           border-radius: 6px;
           border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
           @media (max-width: 900px) {
-          width: 100%;
+            width: 100%;
           }
         }
       }
-      .colors{
+      .colors {
         padding-left: 10%;
         @media (max-width: 900px) {
           padding-left: 0%;
         }
       }
-      .typography{
-        display:flex;
+      .typography {
+        display: flex;
         flex-direction: column;
-          span.text-typo{
+        span.text-typo {
           font-size: 50px;
           margin-bottom: 40px;
-          line-height:1.3;
+          line-height: 1.3;
           color: ${({ theme }) => theme.colors.text.standard};
           @media (max-width: 900px) {
             font-size: 40px;
@@ -254,14 +257,60 @@ const StyledProjectDetail = styled.div`
       }
     }
   }
+  .next-project {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      color: white;
+      font-family: SaolDisplayLight;
+      white-space: nowrap;
+    }
+  }
 `
 
 const ProjectDetail = ({ project }) => {
   const ProjectComponent = project.component
   const [imageHasLoaded, setImageHasLoaded] = useState(false)
+
+  const history = useHistory()
+
+  const page = useRef(null)
+
+  const pathToNextProject =
+    project.index >= projectsData.length - 1 ? null : `/works/${projectsData[project.index + 1].path}`
+
+  const { scrollY } = useViewportScroll() // measures how many pixels user has scrolled vertically
+  // as scrollY changes between 0px and the scrollable height, create a negative scroll value...
+  // ... based on current scroll position to translateY the document in a natural way
+  const physics = { damping: 20, mass: 0.21, stiffness: 100 } // easing of smooth scroll
+  const spring = useSpring(scrollY, physics) // apply easing to the negative scroll value
+
+  useLayoutEffect(() => {
+    const unsubscribeX = spring.onChange((y) => {
+      // guy needs to chill
+      if (Math.abs(spring.getVelocity()) > 200) return
+      if (y + 20 >= page.current.scrollHeight - window.innerHeight && pathToNextProject) history.push(pathToNextProject)
+    })
+
+    return () => unsubscribeX()
+  }, [scrollY, page])
+
   return (
     <PageTemplate hasFooter={false} initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
-      <StyledProjectDetail>
+      <StyledProjectDetail ref={page}>
         <div className='hero-title'>
           <h1 className='text-h1 title'>{project.name}</h1>
         </div>
@@ -273,33 +322,41 @@ const ProjectDetail = ({ project }) => {
             src={project.coverImg}
           />
         </div>
-        <div className="spacer"></div>
+        <div className='spacer'></div>
         <div className='details'>
           {/* project shared data */}
           <h2 className='text-h2 title'>{project.title}</h2>
           {/* intro */}
-          <div className="infos">
-            <div className="infos-intro">
+          <div className='infos'>
+            <div className='infos-intro'>
               <p className='text-description'>{project.description}</p>
-              <a className="text-link website-link" href={project.websiteLink} target='_blank'>Visit the website</a>
+              <a className='text-link website-link' href={project.websiteLink} target='_blank'>
+                Visit the website
+              </a>
             </div>
             {/* infos */}
-            <div className="infos-column">
-              <h3 className="text-h5">Date</h3>
+            <div className='infos-column'>
+              <h3 className='text-h5'>Date</h3>
               <div className='text-h6'>{project.date}</div>
-              <h3 className="text-h5">Roles</h3>
-              <div className="text-h6">{project.role}</div>
-              <h3 className="text-h5">Techs</h3>
-              <div className="text-h6">{project.techs}</div>
+              <h3 className='text-h5'>Roles</h3>
+              <div className='text-h6'>{project.role}</div>
+              <h3 className='text-h5'>Techs</h3>
+              <div className='text-h6'>{project.techs}</div>
             </div>
           </div>
-          <div className="spacer"></div>
+          <div className='spacer'></div>
           {/* visual */}
-          <img class="visual" src={project.visual1} alt="visual" />
-          <div className="spacer"></div>
+          <img className='visual' src={project.visual1} alt='visual' />
+          <div className='spacer'></div>
           {/* colors */}
           <ProjectComponent />
         </div>
+        {pathToNextProject && (
+          <Link className='next-project' to={pathToNextProject}>
+            <img src={projectsData[project.index + 1].coverImg} />
+            <div className='text-h1'>{projectsData[project.index + 1].name}</div>
+          </Link>
+        )}
       </StyledProjectDetail>
     </PageTemplate>
   )

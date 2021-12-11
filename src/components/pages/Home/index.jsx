@@ -13,13 +13,12 @@ import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import moodboard from "../../../assets/img/myWork.png"
 
-
 const StyledHome = styled.div`
   * {
     font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
   }
-  img.about-visual{
+  img.about-visual {
     width: 100%;
   }
   .hero {
@@ -35,7 +34,7 @@ const StyledHome = styled.div`
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      @media (max-width: 780px){
+      @media (max-width: 780px) {
         margin-top: -20vh;
       }
       .line {
@@ -89,33 +88,33 @@ const StyledHome = styled.div`
         }
       }
       @media (max-width: 1200px) {
-        .line{
+        .line {
           font-size: 70px;
           line-height: 1;
-          &.second_line{
+          &.second_line {
             padding-left: 150px;
           }
-          &.third_line{
+          &.third_line {
             padding-left: 80px;
-            .slider-container{
+            .slider-container {
               right: 50px;
             }
           }
         }
       }
       @media (max-width: 950px) {
-        .line{
+        .line {
           font-size: 50px;
           line-height: 1;
-          &.second_line{
+          &.second_line {
             padding-left: 100px;
           }
-          &.third_line{
+          &.third_line {
             padding-left: 50px;
-            .slider-container{
+            .slider-container {
               right: -30px;
               top: 60px;
-              &:after{
+              &:after {
                 top: -50px;
               }
             }
@@ -123,27 +122,27 @@ const StyledHome = styled.div`
         }
       }
       @media (max-width: 769px) {
-        .line{
+        .line {
           font-size: 50px;
           line-height: 1.1;
-          &.second_line{
+          &.second_line {
             padding-left: 0px;
           }
-          &.third_line{
+          &.third_line {
             padding-left: 0px;
-            .slider-container{
+            .slider-container {
               display: flex;
               justify-content: flex-end;
               width: 100%;
               top: 90px;
               right: 0;
-              &::after{
+              &::after {
                 top: -20px;
                 left: 0;
               }
             }
           }
-          .important_word{
+          .important_word {
             margin-left: 5px;
             font-size: 50px;
             margin-top: -2px;
@@ -152,22 +151,22 @@ const StyledHome = styled.div`
       }
 
       @media (max-width: 500px) {
-        .line{
+        .line {
           font-size: 36px;
           line-height: 1.1;
-          &.third_line{
-            .slider-container{
+          &.third_line {
+            .slider-container {
               display: flex;
               justify-content: flex-end;
               width: 100%;
               top: 16vh;
               right: 0;
-              &::after{
+              &::after {
                 top: -80px;
               }
             }
           }
-          .important_word{
+          .important_word {
             margin-top: -1.5px;
             font-size: 38px;
           }
@@ -194,7 +193,7 @@ const StyledHome = styled.div`
       svg {
         margin-bottom: 2px;
         height: 25px;
-        stroke : ${({ theme }) => theme.colors.text.standard};
+        stroke: ${({ theme }) => theme.colors.text.standard};
       }
     }
   }
@@ -218,20 +217,20 @@ const StyledHome = styled.div`
       height: 2px;
       background-color: ${({ theme }) => theme.colors.text.standard};
       opacity: 0.2;
-      &.text-top{
+      &.text-top {
         margin-bottom: 40px;
       }
-      &.text-bot{
+      &.text-bot {
         margin-top: 40px;
       }
 
       @media (max-width: 769px) {
         margin-top: 14px;
         margin-bottom: 30px;
-        &.text-top{
-        margin-bottom: 20px;
+        &.text-top {
+          margin-bottom: 20px;
         }
-        &.text-bot{
+        &.text-bot {
           margin-top: 20px;
         }
       }
@@ -239,10 +238,10 @@ const StyledHome = styled.div`
       @media (max-width: 480px) {
         margin-top: 10px;
         margin-bottom: 25px;
-        &.text-top{
-        margin-bottom: 10px;
+        &.text-top {
+          margin-bottom: 10px;
         }
-        &.text-bot{
+        &.text-bot {
           margin-top: 10px;
         }
       }
@@ -299,7 +298,7 @@ const Home = () => {
             </div>
           </div>
           <motion.div initial={{ opacity: 1 }} style={{ opacity: discoverOpacity }} className='discover'>
-            <span class="discover">discover</span>
+            <span className='discover'>discover</span>
             <ArrowDownSVG />
           </motion.div>
         </div>
@@ -307,18 +306,16 @@ const Home = () => {
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-          Focused on creating meaningful
-experiences through <span class="saol">design</span>, I’m able to
-develop your ideas from concept to wireframe,
-passing through prototype and production.
+            Focused on creating meaningful experiences through <span className='saol'>design</span>, I’m able to develop
+            your ideas from concept to wireframe, passing through prototype and production.
           </div>
           <Link to='/about'>
-            <button className="button">About me</button>
+            <button className='button'>About me</button>
           </Link>
         </div>
-        <div className="demi-spacer"></div>
-        <img className="about-visual" src={moodboard} alt="visual" />
-        <div className="demi-spacer"></div>
+        <div className='demi-spacer'></div>
+        <img className='about-visual' src={moodboard} alt='visual' />
+        <div className='demi-spacer'></div>
 
         <div className='home-section skills'>
           <div className='headline'>skills</div>
