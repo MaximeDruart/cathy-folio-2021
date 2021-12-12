@@ -95,7 +95,6 @@ const MouseFollower = () => {
       if (isClicking) {
         clickProgression += 0.125
         clickProgression = gsap.utils.clamp(0, 1, clickProgression)
-        if (clickProgression === 1) isClicking = false
       } else {
         clickProgression -= 0.275
         clickProgression = gsap.utils.clamp(0, 1, clickProgression)
@@ -147,13 +146,17 @@ const MouseFollower = () => {
       }
     }
 
-    const clickHandler = () => {
+    const mousedownHandler = () => {
       if ($mouseFollower.current) isClicking = true
+    }
+    const mouseupHandler = () => {
+      if ($mouseFollower.current) isClicking = false
     }
 
     let raf = requestAnimationFrame(updatePos)
     window.addEventListener("mousemove", mousemoveHandler)
-    window.addEventListener("click", clickHandler)
+    window.addEventListener("mousedown", mousedownHandler)
+    window.addEventListener("mouseup", mouseupHandler)
     window.addEventListener(
       "mousemove",
       () => {

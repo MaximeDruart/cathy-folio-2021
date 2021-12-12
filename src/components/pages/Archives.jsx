@@ -1,20 +1,22 @@
-import React, { Suspense, useRef, useState, useEffect, createRef, useLayoutEffect } from "react"
-import { Canvas, useFrame } from "@react-three/fiber"
+import React, { Suspense, useRef, useState, useEffect, useLayoutEffect, createRef } from "react"
+import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import styled from "styled-components"
 import archivesData from "../../archivesData2"
 import PageTemplate from "./PageTemplate"
-import { Dodecahedron, Html, OrbitControls, Plane, Text, useTexture } from "@react-three/drei"
+import { OrbitControls, Plane, Text, useTexture } from "@react-three/drei"
 import { mfIsHoveringCanvas } from "../../store"
-import gsap from "gsap"
 import lerp from "@14islands/lerp"
+import gsap from "gsap"
+
+import saolFont from "../../assets/fonts/SaolDisplay-Light.ttf"
 
 import * as THREE from "three"
-import { EffectComposer } from "@react-three/postprocessing"
-import { FishEyeEffect } from "../shared/3D/FishEye"
 import Effects, { myLensDistortionPass } from "../shared/3D/Effects"
-import { motion } from "framer-motion"
 
 const vec3 = new THREE.Vector3()
+
+const filterRef = createRef()
+const controlsRef = createRef()
 
 let speed = 0
 
@@ -51,6 +53,9 @@ const getNewPosition = (item, minRadius) => {
 function ShaderPlane(props) {
   const meshRef = useRef()
   const matRef = useRef()
+  const textMaterial = useRef()
+
+  const camera = useThree((state) => state.camera)
 
   const { width, height, x, y } = props.itemData
 
@@ -60,22 +65,35 @@ function ShaderPlane(props) {
 
   useFrame((state, delta) => {
     matRef.current.time += delta
-    matRef.current.speed = speed * 20
+    matRef.current.speed = speed * 15
   })
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     mfIsHoveringCanvas.current = hovering
 
     gsap.to(hoverValue.current, {
       value: hovering ? 1 : 0,
       onUpdate: () => {
         matRef.current.hoverValue = hoverValue.current.value
+        textMaterial.current.opacity = hoverValue.current.value
       },
     })
   }, [hovering])
 
   const clickHandler = () => {
     // props.history.push(`/works/${props.project.path}`)
+
+    gsap.to(meshRef.current.position, {
+      x: camera.position.x,
+      y: camera.position.y,
+      z: camera.position.z - 0.5,
+      duration: 0.6,
+      ease: "Power3.easeOut",
+    })
+    gsap
+      .timeline()
+      .set(filterRef.current.position, { z: camera.position.z - 0.6 })
+      .to(filterRef.current.material, { opacity: 0.7 })
   }
 
   return (
@@ -94,20 +112,37 @@ function ShaderPlane(props) {
         ref={matRef}
         tex={props.texture}
       />
-      <Text position-z={0.1}>HEYYY</Text>
+      <Text
+        font={saolFont}
+        anchorY='top'
+        anchorX='left'
+        textAlign='left'
+        maxWidth={width}
+        position={[-width / 2, -(height / 2 + 0.1), 0.001]}
+        fontSize={0.14}
+      >
+        <meshBasicMaterial ref={textMaterial} transparent={true} color='white' attach='material' />
+        TRYING OUT RANDOM TEXT
+      </Text>
     </mesh>
   )
 }
 
+const _v = new THREE.Vector3()
+const panMargin = 5
+
 const Scene = () => {
+  const camera = useThree((state) => state.camera)
+
   const covers = useTexture(archivesData.map((archiveItem) => archiveItem.coverImg))
-
-  let lastPos = useRef(new THREE.Vector3(0, 0, 0))
-  let isHolding = useRef(false)
-  let distortionStrength = useRef(0)
-  let focalStrength = useRef(0)
-
   const [itemsData, setItemsData] = useState([])
+
+  const lastPos = useRef(new THREE.Vector3(0, 0, 0))
+  const isHolding = useRef(false)
+  const distortionStrength = useRef(0)
+  const focalStrength = useRef(0)
+
+  const panLimits = useRef({ min: new THREE.Vector3(-10, -10, -10), max: new THREE.Vector3(10, 10, 10) })
 
   useFrame(({ camera }, delta) => {
     speed = lerp(speed, camera.position.distanceTo(lastPos.current), 0.2, delta)
@@ -127,6 +162,11 @@ const Scene = () => {
     if (!covers) return
 
     let items = []
+
+    let minX = 0
+    let minY = 0
+    let maxX = 0
+    let maxY = 0
 
     covers.forEach((cover, index) => {
       let size
@@ -155,34 +195,67 @@ const Scene = () => {
         positionIsValid = !isColliding(items, { ...item, ...tempPos })
 
         numberOfTests++
-        if (numberOfTests > 5) minRadius += 0.2
+        if (numberOfTests > 10) minRadius += 0.1
       }
+
+      minX = Math.min(minX, item.x)
+      maxX = Math.max(maxX, item.x)
+      minY = Math.min(minY, item.y)
+      maxY = Math.max(maxY, item.y)
+
       items.push({ ...item, ...tempPos })
     })
+
+    panLimits.current.min.set(minX - panMargin, minY - panMargin, -10)
+    panLimits.current.max.set(maxX + panMargin, maxY + panMargin, 10)
 
     setItemsData(items)
   }, [covers])
 
+  useLayoutEffect(() => {
+    const handlePan = () => {
+      _v.copy(controlsRef.current.target)
+      controlsRef.current.target.clamp(panLimits.current.min, panLimits.current.max)
+      _v.sub(controlsRef.current.target)
+      camera.position.sub(_v)
+    }
+
+    controlsRef.current.addEventListener("change", handlePan)
+    return () => controlsRef.current.removeEventListener("change", handlePan)
+  }, [])
+
   return (
-    <group>
-      <Plane
-        onPointerDown={() => (isHolding.current = true)}
-        onPointerUp={() => (isHolding.current = false)}
-        visible={false}
-        position-z={-1}
-        args={[30, 30]}
+    <>
+      <OrbitControls
+        ref={controlsRef}
+        panSpeed={2}
+        mouseButtons={{ LEFT: THREE.MOUSE.PAN }}
+        enableRotate={false}
+        enableZoom={true}
       />
-      {itemsData.length &&
-        archivesData.map((project, index) => (
-          <ShaderPlane
-            itemData={itemsData[index]}
-            index={index}
-            key={project.name + index}
-            texture={covers[index]}
-            project={archivesData[index]}
-          />
-        ))}
-    </group>
+      <Plane ref={filterRef} position-z={-1.2} args={[30, 30]}>
+        <meshBasicMaterial color='black' transparent={true} opacity={0} attach='material' />
+      </Plane>
+      <group>
+        <Plane
+          onPointerDown={() => (isHolding.current = true)}
+          onPointerUp={() => (isHolding.current = false)}
+          visible={false}
+          position-z={-1}
+          args={[30, 30]}
+        />
+        {itemsData.length &&
+          archivesData.map((project, index) => (
+            <ShaderPlane
+              itemData={itemsData[index]}
+              index={index}
+              key={project.name + index}
+              texture={covers[index]}
+              project={archivesData[index]}
+            />
+          ))}
+      </group>
+    </>
   )
 }
 
@@ -191,7 +264,6 @@ const Archives = () => {
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <Container>
         <Canvas dpr={[1, 1.5]} mode='concurrent' camera={{ position: [0, 0, 0.6], fov: 140 }}>
-          <OrbitControls panSpeed={2} mouseButtons={{ LEFT: THREE.MOUSE.PAN }} enableRotate={false} enableZoom={true} />
           <Suspense fallback={null}>
             <Scene />
           </Suspense>
