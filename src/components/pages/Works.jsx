@@ -14,7 +14,7 @@ import { mapRange } from "gsap/gsap-core"
 import gsap from "gsap"
 import { useHistory } from "react-router"
 import PageTemplate from "./PageTemplate"
-import DistortionMaterial from "../shared/3D/distortionMaterial"
+import DistortionMaterial from "../shared/three/DistortionMaterial"
 
 extend({ DistortionMaterial })
 

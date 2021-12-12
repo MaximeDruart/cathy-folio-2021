@@ -12,9 +12,9 @@ import { mfIsHoveringCanvas } from "../../store"
 
 import saolFont from "../../assets/fonts/SaolDisplay-Light.ttf"
 
-import Effects, { myLensDistortionPass } from "../shared/3D/Effects"
+import Effects, { myLensDistortionPass } from "../shared/three/Effects"
 
-import DistortionMaterial from "../shared/3D/distortionMaterial"
+import DistortionMaterial from "../shared/three/DistortionMaterial"
 
 extend({ DistortionMaterial })
 
