@@ -1,7 +1,7 @@
 import React, { createRef, Suspense, useEffect, useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import { Html, useProgress, useTexture } from "@react-three/drei"
-import { Canvas, useFrame } from "@react-three/fiber"
+import { Canvas, useFrame, extend } from "@react-three/fiber"
 import { motion } from "framer-motion"
 import { Vector3 } from "three"
 import lerp from "@14islands/lerp"
@@ -15,6 +15,8 @@ import gsap from "gsap"
 import { useHistory } from "react-router"
 import PageTemplate from "./PageTemplate"
 import DistortionMaterial from "../shared/3D/distortionMaterial"
+
+extend({ DistortionMaterial })
 
 const projectHeight = 70
 

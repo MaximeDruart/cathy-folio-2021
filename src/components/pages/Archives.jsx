@@ -1,17 +1,22 @@
 import React, { Suspense, useRef, useState, useEffect, useLayoutEffect, createRef } from "react"
-import { Canvas, useFrame, useThree } from "@react-three/fiber"
-import styled from "styled-components"
-import archivesData from "../../archivesData2"
-import PageTemplate from "./PageTemplate"
+import { Canvas, useFrame, useThree, extend } from "@react-three/fiber"
 import { OrbitControls, Plane, Text, useTexture } from "@react-three/drei"
-import { mfIsHoveringCanvas } from "../../store"
+import * as THREE from "three"
+import styled from "styled-components"
 import lerp from "@14islands/lerp"
 import gsap from "gsap"
 
+import archivesData from "../../archivesData2"
+import PageTemplate from "./PageTemplate"
+import { mfIsHoveringCanvas } from "../../store"
+
 import saolFont from "../../assets/fonts/SaolDisplay-Light.ttf"
 
-import * as THREE from "three"
 import Effects, { myLensDistortionPass } from "../shared/3D/Effects"
+
+import DistortionMaterial from "../shared/3D/distortionMaterial"
+
+extend({ DistortionMaterial })
 
 const vec3 = new THREE.Vector3()
 

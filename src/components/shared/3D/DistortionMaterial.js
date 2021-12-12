@@ -73,6 +73,4 @@ const DistortionMaterial = shaderMaterial(
     `
 )
 
-extend({ DistortionMaterial })
-
 export default DistortionMaterial
