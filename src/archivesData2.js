@@ -13,6 +13,8 @@ import abidaisy from "./assets/img/archives/abidaisy.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
+import illu1 from "./assets/img/archives/illu1.png"
+import illu2 from "./assets/img/archives/illu2.png"
 
 let archivesData = [
   {
@@ -109,6 +111,22 @@ let archivesData = [
     coverImg: nike,
     type: "Ui Design",
     description: "UI Design for Nike",
+    websiteLink: "",
+  },
+  {
+    name: "Princess Mononoke",
+    path: "Princess Mononoke",
+    coverImg: illu2,
+    type: "Illustration",
+    description: "remake from suzani",
+    websiteLink: "",
+  },
+  {
+    name: "Kaonashi human",
+    path: "Kaonashi human",
+    coverImg: illu1,
+    type: "Illustration",
+    description: "remake from suzani",
     websiteLink: "",
   },
 ]
