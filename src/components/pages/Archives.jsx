@@ -24,6 +24,7 @@ const filterRef = createRef()
 const controlsRef = createRef()
 
 let speed = 0
+let projectIsOpened = createRef()
 
 const Container = styled.div`
   height: 100vh;
@@ -79,7 +80,7 @@ function ShaderPlane(props) {
     gsap.to(hoverValue.current, {
       value: hovering ? 1 : 0,
       onUpdate: () => {
-        matRef.current.hoverValue = hoverValue.current.value
+        // matRef.current.hoverValue = hoverValue.current.value
         textMaterial.current.opacity = hoverValue.current.value
       },
     })
@@ -87,18 +88,39 @@ function ShaderPlane(props) {
 
   const clickHandler = () => {
     // props.history.push(`/works/${props.project.path}`)
+    if (projectIsOpened.current) {
+      controlsRef.current.enabled = true
+      projectIsOpened.current = false
 
-    gsap.to(meshRef.current.position, {
-      x: camera.position.x,
-      y: camera.position.y,
-      z: camera.position.z - 0.5,
-      duration: 0.6,
-      ease: "Power3.easeOut",
-    })
-    gsap
-      .timeline()
-      .set(filterRef.current.position, { z: camera.position.z - 0.6 })
-      .to(filterRef.current.material, { opacity: 0.7 })
+      gsap.to(meshRef.current.position, { x, y, z: 0, duration: 0.5, ease: "Power3.easeOut" })
+      gsap.timeline().to(filterRef.current.material, { opacity: 0 }).set(filterRef.current.position, { z: -1.2 })
+    } else {
+      controlsRef.current.enabled = false
+      projectIsOpened.current = true
+
+      gsap.to(meshRef.current.position, {
+        x: camera.position.x,
+        y: camera.position.y,
+        z: camera.position.z - 0.5,
+        duration: 0.5,
+        ease: "Power3.easeOut",
+      })
+      gsap
+        .timeline()
+        .set(filterRef.current.position, { z: camera.position.z - 0.6 })
+        .to(filterRef.current.material, { opacity: 0.7 })
+    }
+  }
+
+  const pointerMissHandler = () => {
+    console.log("missed")
+    if (projectIsOpened.current) {
+      controlsRef.current.enabled = true
+      projectIsOpened.current = false
+
+      gsap.to(meshRef.current.position, { x, y, z: 0, duration: 0.5, ease: "Power3.easeOut" })
+      gsap.timeline().to(filterRef.current.material, { opacity: 0 }).set(filterRef.current.position, { z: -1.2 })
+    }
   }
 
   return (
@@ -107,6 +129,7 @@ function ShaderPlane(props) {
       onClick={clickHandler}
       onPointerOver={() => setHovering(true)}
       onPointerOut={() => setHovering(false)}
+      // onPointerMissed={pointerMissHandler}
       ref={meshRef}
       position={[x, y, 0]}
     >
@@ -153,10 +176,10 @@ const Scene = () => {
     speed = lerp(speed, camera.position.distanceTo(lastPos.current), 0.2, delta)
     lastPos.current.copy(camera.position)
 
-    const focalValue = isHolding.current ? 0.3 : 0
+    const focalValue = isHolding.current && !projectIsOpened.current ? 0.3 : 0
     focalStrength.current = lerp(focalStrength.current, focalValue, 0.2, delta)
 
-    let distortionValue = isHolding.current ? 0.2 : 0
+    let distortionValue = isHolding.current && !projectIsOpened.current ? 0.2 : 0
     distortionValue += speed * 3
     distortionStrength.current = lerp(distortionStrength.current, distortionValue, 0.2, delta)
     myLensDistortionPass.distortion.set(distortionStrength.current, distortionStrength.current)
@@ -235,6 +258,7 @@ const Scene = () => {
         ref={controlsRef}
         panSpeed={2}
         mouseButtons={{ LEFT: THREE.MOUSE.PAN }}
+        touches={{ ONE: THREE.TOUCH.PAN }}
         enableRotate={false}
         enableZoom={true}
       />
