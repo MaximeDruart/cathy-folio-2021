@@ -15,6 +15,10 @@ import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
 import illu1 from "./assets/img/archives/illu1.png"
 import illu2 from "./assets/img/archives/illu2.png"
+import vans from "./assets/img/archives/vans.png"
+import aker from "./assets/img/archives/aker.png"
+import minecraft from "./assets/img/archives/minecraft.png"
+
 
 let archivesData = [
   {
@@ -127,6 +131,30 @@ let archivesData = [
     coverImg: illu1,
     type: "Illustration",
     description: "remake from suzani",
+    websiteLink: "",
+  },
+  {
+    name: "vans",
+    path: "vans",
+    coverImg: vans,
+    type: "Ui design",
+    description: "log in page design for vans",
+    websiteLink: "",
+  },
+  {
+    name: "Aker",
+    path: "Aker",
+    coverImg: aker,
+    type: "website",
+    description: "website for Aker shop",
+    websiteLink: "",
+  },
+  {
+    name: "Minecraft",
+    path: "Minecraft",
+    coverImg: minecraft,
+    type: "Ui design",
+    description: "website for a minecraft server",
     websiteLink: "",
   },
 ]
