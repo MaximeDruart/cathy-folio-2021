@@ -23,6 +23,10 @@ const vec3 = new THREE.Vector3()
 const filterRef = createRef()
 const controlsRef = createRef()
 
+const mapRef = createRef()
+const mapPosRef = createRef()
+const mapItemsRef = createRef()
+
 let speed = 0
 let projectIsOpened = createRef()
 
@@ -31,7 +35,49 @@ const Container = styled.div`
   width: 100vw;
   transition: background-color 0.6s;
   position: relative;
+
+  .map {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+    border: 1px solid ${({ theme }) => theme.colors.text.standard};
+
+    .item-container {
+      width: 0;
+      height: 0;
+      position: absolute;
+      transform: translateX(-50%) translateY(-50%);
+      top: 50%;
+      left: 50%;
+    }
+
+    .item {
+      position: absolute;
+      transform: translateX(-50%) translateY(-50%);
+      border: 1px solid grey;
+
+      &.is-active {
+        border: 1px solid ${({ theme }) => theme.colors.text.standard};
+      }
+    }
+
+    .position {
+      position: absolute;
+      transform: translateX(-50%) translateY(-50%);
+      border: 1px solid white;
+    }
+  }
 `
+
+function visibleBox(camera, z) {
+  var t = Math.tan(THREE.Math.degToRad(camera.fov) / 2)
+  var height = t * 2 * (camera.position.z - z)
+  var width = height * camera.aspect
+  return { width, height }
+}
 
 const isColliding = (items, testedItem) => {
   let colliding = false
@@ -44,6 +90,18 @@ const isColliding = (items, testedItem) => {
     ) {
       colliding = true
     }
+  }
+  return colliding
+}
+const isCollidingOne = (item, testedItem) => {
+  let colliding = false
+  if (
+    testedItem.x < item.x + item.width &&
+    testedItem.x + testedItem.width > item.x &&
+    testedItem.y < item.y + item.height &&
+    testedItem.height + testedItem.y > item.y
+  ) {
+    colliding = true
   }
   return colliding
 }
@@ -88,15 +146,34 @@ function ShaderPlane(props) {
 
   const clickHandler = () => {
     // props.history.push(`/works/${props.project.path}`)
-    if (projectIsOpened.current) {
-      controlsRef.current.enabled = true
-      projectIsOpened.current = false
+    if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
 
-      gsap.to(meshRef.current.position, { x, y, z: 0, duration: 0.5, ease: "Power3.easeOut" })
+    if (projectIsOpened.current.isOpened) {
+      controlsRef.current.enabled = true
+      // projectIsOpened.current = {
+      //   isOpened: false,
+      //   id: null,
+      // }
+
+      gsap.to(meshRef.current.position, {
+        x,
+        y,
+        z: 0,
+        duration: 0.5,
+        ease: "Power3.easeOut",
+        onComplete: () =>
+          (projectIsOpened.current = {
+            isOpened: false,
+            id: null,
+          }),
+      })
       gsap.timeline().to(filterRef.current.material, { opacity: 0 }).set(filterRef.current.position, { z: -1.2 })
     } else {
       controlsRef.current.enabled = false
-      projectIsOpened.current = true
+      projectIsOpened.current = {
+        isOpened: true,
+        id: props.project.id,
+      }
 
       gsap.to(meshRef.current.position, {
         x: camera.position.x,
@@ -109,17 +186,6 @@ function ShaderPlane(props) {
         .timeline()
         .set(filterRef.current.position, { z: camera.position.z - 0.6 })
         .to(filterRef.current.material, { opacity: 0.7 })
-    }
-  }
-
-  const pointerMissHandler = () => {
-    console.log("missed")
-    if (projectIsOpened.current) {
-      controlsRef.current.enabled = true
-      projectIsOpened.current = false
-
-      gsap.to(meshRef.current.position, { x, y, z: 0, duration: 0.5, ease: "Power3.easeOut" })
-      gsap.timeline().to(filterRef.current.material, { opacity: 0 }).set(filterRef.current.position, { z: -1.2 })
     }
   }
 
@@ -150,14 +216,14 @@ function ShaderPlane(props) {
         fontSize={0.14}
       >
         <meshBasicMaterial ref={textMaterial} transparent={true} color='white' attach='material' />
-        TRYING OUT RANDOM TEXT
+        {props.project.name.toUpperCase()}
       </Text>
     </mesh>
   )
 }
 
 const _v = new THREE.Vector3()
-const panMargin = 5
+const panMargin = 0
 
 const Scene = () => {
   const camera = useThree((state) => state.camera)
@@ -170,20 +236,46 @@ const Scene = () => {
   const distortionStrength = useRef(0)
   const focalStrength = useRef(0)
 
+  const camBox = useRef()
+  const canvasBox = useRef()
+
+  const mapItemRects = useRef([])
+  const mapPosRect = useRef()
+
   const panLimits = useRef({ min: new THREE.Vector3(-10, -10, -10), max: new THREE.Vector3(10, 10, 10) })
 
   useFrame(({ camera }, delta) => {
+    let hasChanged = lastPos.current.distanceTo(camera.position) > 0.005
     speed = lerp(speed, camera.position.distanceTo(lastPos.current), 0.2, delta)
     lastPos.current.copy(camera.position)
 
-    const focalValue = isHolding.current && !projectIsOpened.current ? 0.3 : 0
+    const focalValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.3 : 0
     focalStrength.current = lerp(focalStrength.current, focalValue, 0.2, delta)
 
-    let distortionValue = isHolding.current && !projectIsOpened.current ? 0.2 : 0
+    let distortionValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.2 : 0
     distortionValue += speed * 3
     distortionStrength.current = lerp(distortionStrength.current, distortionValue, 0.2, delta)
     myLensDistortionPass.distortion.set(distortionStrength.current, distortionStrength.current)
     myLensDistortionPass.focalLength.set(1 - focalStrength.current, 1 - focalStrength.current)
+
+    let top = (1 - (camera.position.y / canvasBox.current.height + 0.5)) * 100 + "%"
+    let left = (camera.position.x / canvasBox.current.width + 0.5) * 100 + "%"
+
+    mapPosRef.current.style.top = top
+    mapPosRef.current.style.left = left
+
+    if (hasChanged) {
+      mapPosRect.current = mapPosRef.current.getBoundingClientRect()
+      if (itemsData.length) {
+        mapItemsRef.current.forEach((mapItem, index) => {
+          if (isCollidingOne(mapPosRect.current, mapItemRects.current[index])) {
+            mapItem.classList.add("is-active")
+          } else {
+            mapItem.classList.remove("is-active")
+          }
+        })
+      }
+    }
   })
 
   useEffect(() => {
@@ -226,16 +318,41 @@ const Scene = () => {
         if (numberOfTests > 10) minRadius += 0.1
       }
 
-      minX = Math.min(minX, item.x)
-      maxX = Math.max(maxX, item.x)
-      minY = Math.min(minY, item.y)
-      maxY = Math.max(maxY, item.y)
+      minX = Math.min(minX, tempPos.x - item.width)
+      maxX = Math.max(maxX, tempPos.x + item.width)
+      minY = Math.min(minY, tempPos.y - item.height)
+      maxY = Math.max(maxY, tempPos.y + item.height)
 
       items.push({ ...item, ...tempPos })
     })
 
     panLimits.current.min.set(minX - panMargin, minY - panMargin, -10)
     panLimits.current.max.set(maxX + panMargin, maxY + panMargin, 10)
+
+    canvasBox.current = {
+      width: maxX - minX,
+      height: maxY - minY,
+    }
+
+    camBox.current = visibleBox(camera, 0)
+
+    mapPosRef.current.style.width = camBox.current.width * 10 + "px"
+    mapPosRef.current.style.height = camBox.current.height * 10 + "px"
+
+    mapRef.current.style.width = canvasBox.current.width * 10 + "px"
+    mapRef.current.style.height = canvasBox.current.height * 10 + "px"
+
+    mapItemsRef.current = mapRef.current.querySelectorAll(".item")
+
+    mapItemsRef.current.forEach((mapItem, index) => {
+      mapItem.style.left = items[index].x * 10 + "px"
+      mapItem.style.top = (1 - items[index].y) * 10 + "px"
+      mapItem.style.width = items[index].width * 10 + "px"
+      mapItem.style.height = items[index].height * 10 + "px"
+      mapItemRects.current.push(mapItem.getBoundingClientRect())
+    })
+
+    mapPosRect.current = mapPosRef.current.getBoundingClientRect()
 
     setItemsData(items)
   }, [covers])
@@ -252,6 +369,13 @@ const Scene = () => {
     return () => controlsRef.current.removeEventListener("change", handlePan)
   }, [])
 
+  useEffect(() => {
+    projectIsOpened.current = {
+      isOpened: false,
+      id: null,
+    }
+  }, [])
+
   return (
     <>
       <OrbitControls
@@ -261,6 +385,7 @@ const Scene = () => {
         touches={{ ONE: THREE.TOUCH.PAN }}
         enableRotate={false}
         enableZoom={true}
+        screenSpacePanning={true}
       />
       <Plane ref={filterRef} position-z={-1.2} args={[30, 30]}>
         <meshBasicMaterial color='black' transparent={true} opacity={0} attach='material' />
@@ -270,8 +395,8 @@ const Scene = () => {
           onPointerDown={() => (isHolding.current = true)}
           onPointerUp={() => (isHolding.current = false)}
           visible={false}
-          position-z={-1}
-          args={[30, 30]}
+          position-z={-0.05}
+          args={[50, 50]}
         />
         {itemsData.length &&
           archivesData.map((project, index) => (
@@ -292,7 +417,7 @@ const Archives = () => {
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <Container>
-        <Canvas dpr={[1, 1.5]} mode='concurrent' camera={{ position: [0, 0, 0.6], fov: 140 }}>
+        <Canvas dpr={[1, 1.5]} mode='concurrent' camera={{ position: [0, 0, 1.2], fov: 140, far: 10 }}>
           <Suspense fallback={null}>
             <Scene />
           </Suspense>
@@ -301,6 +426,14 @@ const Archives = () => {
           </EffectComposer> */}
           <Effects />
         </Canvas>
+        <div ref={mapRef} className='map'>
+          <div className='item-container'>
+            {archivesData.map((project, index) => (
+              <div className='item'></div>
+            ))}
+          </div>
+          <div ref={mapPosRef} className='position'></div>
+        </div>
       </Container>
     </PageTemplate>
   )
