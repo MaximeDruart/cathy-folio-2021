@@ -1,8 +1,8 @@
 import React, { Suspense, useRef, useState, useEffect, useLayoutEffect, createRef, useCallback } from "react"
 import { Canvas, useFrame, useThree, extend } from "@react-three/fiber"
-import { OrbitControls, Plane, Text, useTexture } from "@react-three/drei"
+import { OrbitControls, Plane, Text, useContextBridge, useTexture } from "@react-three/drei"
 import * as THREE from "three"
-import styled from "styled-components"
+import styled, { ThemeContext, useTheme } from "styled-components"
 import lerp from "@14islands/lerp"
 import gsap from "gsap"
 
@@ -123,6 +123,7 @@ function ShaderPlane(props) {
   const textMaterial = useRef()
 
   const camera = useThree((state) => state.camera)
+  const theme = useTheme()
 
   const { width, height, x, y } = props.itemData
 
@@ -238,7 +239,7 @@ function ShaderPlane(props) {
         position={[-width / 2, -(height / 2 + 0.1), 0.001]}
         fontSize={0.14}
       >
-        <meshBasicMaterial ref={textMaterial} transparent={true} color='white' attach='material' />
+        <meshBasicMaterial ref={textMaterial} transparent={true} color={theme.colors.text.standard} attach='material' />
         {props.project.name.toUpperCase()}
       </Text>
     </mesh>
@@ -456,14 +457,18 @@ const Scene = () => {
 }
 
 const Archives = () => {
+  const ContextBridge = useContextBridge(ThemeContext)
+
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <Container>
         <Canvas dpr={[1, 1.5]} mode='concurrent' camera={{ position: [0, 0, 1.2], fov: 140, far: 10 }}>
-          <Suspense fallback={null}>
-            <Scene />
-          </Suspense>
-          <Effects />
+          <ContextBridge>
+            <Suspense fallback={null}>
+              <Scene />
+            </Suspense>
+            <Effects />
+          </ContextBridge>
         </Canvas>
         <div ref={mapRef} className='map'>
           <div className='item-container'>
