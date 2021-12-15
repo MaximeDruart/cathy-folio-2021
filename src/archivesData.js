@@ -22,6 +22,10 @@ import akali from "./assets/img/archives/akali.jpg"
 import kill from "./assets/img/archives/kill.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
 import shibuCard from "./assets/img/archives/shibuCard.jpg"
+import bankCard from "./assets/img/archives/bankCard.jpg"
+import ekko from "./assets/img/archives/ekko.jpg"
+import flamalice from "./assets/img/archives/flamalice.jpg"
+import uplift from "./assets/img/archives/uplift.jpg"
 
 
 let archivesData = [
@@ -50,6 +54,30 @@ let archivesData = [
     websiteLink: "",
   },
   {
+    name: "Flamalice portfolio",
+    path: "Flamalice portfolio",
+    coverImg: flamalice,
+    type: "website",
+    description: "I made a portfolio for the illustrator Flamalice",
+    websiteLink: "",
+  },
+  {
+    name: "Uplift",
+    path: "Uplift",
+    coverImg: uplift,
+    type: "print",
+    description: "uplift branding logo",
+    websiteLink: "",
+  },
+  {
+    name: "Ekko giants",
+    path: "Ekko giants",
+    coverImg: ekko,
+    type: "UI Design",
+    description: "ekko ui design from league of legends",
+    websiteLink: "",
+  },
+  {
     name: "Shibuya card",
     path: "Shibuya card",
     coverImg: shibuCard,
@@ -63,6 +91,14 @@ let archivesData = [
     coverImg: etudePhone,
     type: "UI design",
     description: "etude house mobile checkout",
+    websiteLink: "",
+  },
+  {
+    name: "bank Card",
+    path: "bank Card",
+    coverImg: bankCard,
+    type: "Print",
+    description: "bank Card branding",
     websiteLink: "",
   },
   {
