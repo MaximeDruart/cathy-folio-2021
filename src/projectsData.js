@@ -67,18 +67,6 @@ let projectsData = [
       "blablabla"
   },
   {
-    name: "Sangen",
-    path: "sangen",
-    title: "Processing Sangen",
-    coverImg: sangenCover,
-    visual1: sangenVisual1,
-    component: Sangen,
-    date: "Dec. 2021",
-    role: "Designer, Developer",
-    techs: ["Processing", " Java"],
-    description:"blablabla"
-  },
-  {
     name: "Grissini",
     path: "grissini",
     title: "Design and developtment of the Grissini website",
@@ -104,6 +92,31 @@ let projectsData = [
     description:"blabla"
   },
   {
+    name: "Hologramme",
+    path: "hologramme",
+    title: "UI/UX Homepage for Hologramme",
+    visual1: hologrammeVisual1,
+    coverImg: hologrammeCover,
+    component: Hologramme,
+    date: "Jul. 2020",
+    role: "Front end dev, back end dev",
+    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    description:
+      "blablabla grossiste de chapeau"
+  },
+  {
+    name: "Sangen",
+    path: "sangen",
+    title: "Processing Sangen",
+    coverImg: sangenCover,
+    visual1: sangenVisual1,
+    component: Sangen,
+    date: "Dec. 2021",
+    role: "Designer, Developer",
+    techs: ["Processing", " Java"],
+    description:"blablabla"
+  },
+  {
     name: "Desktop",
     path: "desktop",
     title: "Desktop",
@@ -116,19 +129,6 @@ let projectsData = [
     description:
       "Wanna watch my content on a computer? Lets do it ! I developped this project to learn VueJS. Enjoy !!",
     websiteLink: "https://cathydolle.github.io/#/",
-  },
-  {
-    name: "Hologramme",
-    path: "hologramme",
-    title: "UI/UX Homepage for Hologramme",
-    visual1: hologrammeVisual1,
-    coverImg: hologrammeCover,
-    component: Hologramme,
-    date: "Jul. 2020",
-    role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
-    description:
-      "blablabla grossiste de chapeau"
   },
   // {
   //   name: "Flamalice",
