@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useState, useEffect, useLayoutEffect, createRef } from "react"
+import React, { Suspense, useRef, useState, useEffect, useLayoutEffect, createRef, useCallback } from "react"
 import { Canvas, useFrame, useThree, extend } from "@react-three/fiber"
 import { OrbitControls, Plane, Text, useTexture } from "@react-three/drei"
 import * as THREE from "three"
@@ -15,6 +15,7 @@ import saolFont from "../../assets/fonts/SaolDisplay-Light.ttf"
 import Effects, { myLensDistortionPass } from "../shared/three/Effects"
 
 import DistortionMaterial from "../shared/three/DistortionMaterial"
+import { motion } from "framer-motion"
 
 extend({ DistortionMaterial })
 
@@ -43,7 +44,7 @@ const Container = styled.div`
     transform: translateY(-50%);
     width: auto;
     height: auto;
-    border: 1px solid ${({ theme }) => theme.colors.text.disabled};
+    opacity: 0.7;
 
     .item-container {
       width: 0;
@@ -58,10 +59,11 @@ const Container = styled.div`
       position: absolute;
       transform: translateX(-50%) translateY(-50%);
       border: 1px solid ${({ theme }) => theme.colors.text.disabled};
+      transition: all ease-in-out 0.4s;
 
       &.is-active {
         border: 1px solid ${({ theme }) => theme.colors.primary1};
-       background: ${({ theme }) => theme.colors.primary1};
+        background: ${({ theme }) => theme.colors.primary1};
       }
     }
 
@@ -128,6 +130,57 @@ function ShaderPlane(props) {
   // only using an object because thats what gsap wants
   const hoverValue = useRef({ value: 0 })
 
+  const closeProject = useCallback(() => {
+    controlsRef.current.enabled = true
+
+    gsap.to(meshRef.current.position, {
+      x,
+      y,
+      z: 0,
+      duration: 0.5,
+      ease: "Power3.easeOut",
+      onComplete: () =>
+        (projectIsOpened.current = {
+          isOpened: false,
+          id: null,
+        }),
+    })
+    gsap.timeline().to(filterRef.current.material, { opacity: 0 }).set(filterRef.current.position, { z: -1.2 })
+    gsap.to(textMaterial.current, { opacity: 0 })
+  }, [])
+
+  const openProject = useCallback(() => {
+    controlsRef.current.enabled = false
+    projectIsOpened.current = {
+      isOpened: true,
+      id: props.project.id,
+    }
+
+    gsap.to(meshRef.current.position, {
+      x: camera.position.x,
+      y: camera.position.y,
+      z: camera.position.z - 0.5,
+      duration: 0.5,
+      ease: "Power3.easeOut",
+    })
+    gsap
+      .timeline()
+      .set(filterRef.current.position, { z: camera.position.z - 0.6 })
+      .to(filterRef.current.material, { opacity: 0.7 })
+
+    gsap.to(textMaterial.current, { opacity: 1 })
+  }, [])
+
+  const clickHandler = useCallback(() => {
+    if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
+
+    if (projectIsOpened.current.isOpened) {
+      closeProject()
+    } else {
+      openProject()
+    }
+  }, [closeProject, openProject])
+
   useFrame((state, delta) => {
     matRef.current.time += delta
     matRef.current.speed = speed * 15
@@ -136,59 +189,28 @@ function ShaderPlane(props) {
   useLayoutEffect(() => {
     mfIsHoveringCanvas.current = hovering
 
-    gsap.to(hoverValue.current, {
-      value: hovering ? 1 : 0,
-      onUpdate: () => {
-        // matRef.current.hoverValue = hoverValue.current.value
-        textMaterial.current.opacity = hoverValue.current.value
-      },
-    })
+    if (textMaterial.current) {
+      !projectIsOpened.current.isOpened &&
+        gsap.to(hoverValue.current, {
+          value: hovering ? 1 : 0,
+          onUpdate: () => {
+            // matRef.current.hoverValue = hoverValue.current.value
+            textMaterial.current.opacity = hoverValue.current.value
+          },
+        })
+    }
   }, [hovering])
 
-  const clickHandler = () => {
-    // props.history.push(`/works/${props.project.path}`)
-    if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
-
-    if (projectIsOpened.current.isOpened) {
-      controlsRef.current.enabled = true
-      // projectIsOpened.current = {
-      //   isOpened: false,
-      //   id: null,
-      // }
-
-      gsap.to(meshRef.current.position, {
-        x,
-        y,
-        z: 0,
-        duration: 0.5,
-        ease: "Power3.easeOut",
-        onComplete: () =>
-          (projectIsOpened.current = {
-            isOpened: false,
-            id: null,
-          }),
-      })
-      gsap.timeline().to(filterRef.current.material, { opacity: 0 }).set(filterRef.current.position, { z: -1.2 })
-    } else {
-      controlsRef.current.enabled = false
-      projectIsOpened.current = {
-        isOpened: true,
-        id: props.project.id,
-      }
-
-      gsap.to(meshRef.current.position, {
-        x: camera.position.x,
-        y: camera.position.y,
-        z: camera.position.z - 0.5,
-        duration: 0.5,
-        ease: "Power3.easeOut",
-      })
-      gsap
-        .timeline()
-        .set(filterRef.current.position, { z: camera.position.z - 0.6 })
-        .to(filterRef.current.material, { opacity: 0.7 })
+  useEffect(() => {
+    const closeProjectWithKey = (e) => {
+      e.key === "Escape" && closeProject()
     }
-  }
+    window.addEventListener("keydown", closeProjectWithKey)
+
+    return () => {
+      window.removeEventListener("keydown", closeProjectWithKey)
+    }
+  }, [])
 
   return (
     <mesh
@@ -276,6 +298,11 @@ const Scene = () => {
           }
         })
       }
+
+      camBox.current = visibleBox(camera, 0)
+
+      mapPosRef.current.style.width = camBox.current.width * 10 + "px"
+      mapPosRef.current.style.height = camBox.current.height * 10 + "px"
     }
   })
 
@@ -297,7 +324,8 @@ const Scene = () => {
         size = { width: 2 * ratio, height: 2 }
       } else size = { width: 2, height: 2 / ratio }
 
-      let item = { x: 0, y: 0, width: size.width, height: size.height }
+      // add space for the text in height
+      let item = { x: 0, y: 0, width: size.width, height: size.height + 0.35 }
 
       if (index === 0) {
         items.push(item)
@@ -345,19 +373,29 @@ const Scene = () => {
 
     mapItemsRef.current = mapRef.current.querySelectorAll(".item")
 
-    mapItemsRef.current.forEach((mapItem, index) => {
-      mapItem.style.left = items[index].x * 10 + "px"
-      mapItem.style.top = (1 - items[index].y) * 10 + "px"
-      mapItem.style.width = items[index].width * 10 + "px"
-      mapItem.style.height = items[index].height * 10 + "px"
-      mapItemRects.current.push(mapItem.getBoundingClientRect())
-    })
-
     mapPosRect.current = mapPosRef.current.getBoundingClientRect()
+    setTimeout(() => {
+      mapItemsRef.current.forEach((mapItem, index) => {
+        mapItem.style.left = items[index].x * 10 + "px"
+        mapItem.style.top = (1 - items[index].y) * 10 + "px"
+        mapItem.style.width = items[index].width * 10 + "px"
+        mapItem.style.height = items[index].height * 10 + "px"
+
+        const rect = mapItem.getBoundingClientRect()
+        mapItemRects.current.push(rect)
+
+        if (isCollidingOne(mapPosRect.current, rect)) {
+          mapItem.classList.add("is-active")
+        } else {
+          mapItem.classList.remove("is-active")
+        }
+      })
+    }, 10)
 
     setItemsData(items)
   }, [covers])
 
+  // ENFORCE PAN LIMITS
   useLayoutEffect(() => {
     const handlePan = () => {
       _v.copy(controlsRef.current.target)
@@ -370,6 +408,7 @@ const Scene = () => {
     return () => controlsRef.current.removeEventListener("change", handlePan)
   }, [])
 
+  // INIT
   useEffect(() => {
     projectIsOpened.current = {
       isOpened: false,
@@ -387,6 +426,8 @@ const Scene = () => {
         enableRotate={false}
         enableZoom={true}
         screenSpacePanning={true}
+        minDistance={1}
+        maxDistance={2}
       />
       <Plane ref={filterRef} position-z={-1.2} args={[30, 30]}>
         <meshBasicMaterial color='black' transparent={true} opacity={0} attach='material' />
@@ -422,18 +463,25 @@ const Archives = () => {
           <Suspense fallback={null}>
             <Scene />
           </Suspense>
-          {/* <EffectComposer>
-            <FishEyeEffect></FishEyeEffect>
-          </EffectComposer> */}
           <Effects />
         </Canvas>
         <div ref={mapRef} className='map'>
           <div className='item-container'>
-            {archivesData.map((project, index) => (
-              <div className='item'></div>
+            {archivesData.map((project, i) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { delay: 0.4 + i / 15, duration: 0.4 } }}
+                className='item'
+              ></motion.div>
             ))}
           </div>
-          <div ref={mapPosRef} className='position'></div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.6 + archivesData.length / 10 } }}
+            ref={mapPosRef}
+            className='position'
+          ></motion.div>
         </div>
       </Container>
     </PageTemplate>
