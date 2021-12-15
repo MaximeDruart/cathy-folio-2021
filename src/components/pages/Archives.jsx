@@ -38,12 +38,12 @@ const Container = styled.div`
 
   .map {
     position: absolute;
-    left: 0;
-    top: 50%;
+    left: 10vw;
+    bottom: 0;
     transform: translateY(-50%);
-    width: 200px;
-    height: 200px;
-    border: 1px solid ${({ theme }) => theme.colors.text.standard};
+    width: auto;
+    height: auto;
+    border: 1px solid ${({ theme }) => theme.colors.text.disabled};
 
     .item-container {
       width: 0;
@@ -57,17 +57,18 @@ const Container = styled.div`
     .item {
       position: absolute;
       transform: translateX(-50%) translateY(-50%);
-      border: 1px solid grey;
+      border: 1px solid ${({ theme }) => theme.colors.text.disabled};
 
       &.is-active {
-        border: 1px solid ${({ theme }) => theme.colors.text.standard};
+        border: 1px solid ${({ theme }) => theme.colors.primary1};
+       background: ${({ theme }) => theme.colors.primary1};
       }
     }
 
     .position {
       position: absolute;
       transform: translateX(-50%) translateY(-50%);
-      border: 1px solid white;
+      border: 1px solid ${({ theme }) => theme.colors.text.standard};
     }
   }
 `

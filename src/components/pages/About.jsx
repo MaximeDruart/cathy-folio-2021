@@ -17,6 +17,9 @@ import lofi from "../../assets/img/about/lofi.gif"
 import piano from "../../assets/img/about/piano.gif"
 import draw from "../../assets/img/about/draw.gif"
 import food from "../../assets/img/about/food.gif"
+import painting from "../../assets/img/about/painting.gif"
+import architecture from "../../assets/img/about/architecture.gif"
+import art from "../../assets/img/about/art.gif"
 
 import twitch from "../../assets/img/about/twitch.jpg"
 import resume from "../../assets/img/about/resume.pdf"
@@ -391,7 +394,40 @@ const About = () => {
                   <p className="text-regular">Especially japanese and korean food</p>
                 </div>
               </div>               
-            </div>                     
+            </div>  
+              {/* painting */}
+              <div className="passion">
+              <img src={painting} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">07</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Painting</h4>  
+                  <p className="text-regular">Especially japanese and korean food</p>
+                </div>
+              </div>               
+            </div>  
+              {/* architecture */}
+              <div className="passion">
+              <img src={architecture} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">08</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Architecture</h4>  
+                  <p className="text-regular">Especially japanese and korean food</p>
+                </div>
+              </div>               
+            </div>   
+                 {/* piano */}
+                 <div className="passion">
+              <img src={art} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">09</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">art</h4>  
+                  <p className="text-regular">Especially japanese and korean food</p>
+                </div>
+              </div>               
+            </div>              
           </div>
         </div>
         {/* twitch */}
