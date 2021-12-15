@@ -62,10 +62,9 @@ let projectsData = [
     component: Arcane,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    techs: ["Wordpress, Elementor"],
     description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
+      "blablabla"
   },
   {
     name: "Sangen",
@@ -77,16 +76,7 @@ let projectsData = [
     date: "Dec. 2021",
     role: "Designer, Developer",
     techs: ["Processing", " Java"],
-    description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
+    description:"blablabla"
   },
   {
     name: "Grissini",
@@ -97,10 +87,9 @@ let projectsData = [
     component: Grissini,
     date: "Jul. 2021",
     role: "Design, Front end dev",
-    techs: ["HTML/CSS/JS", "React", "Adobe XD", "Illustrator"],
-    description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
+    techs: ["HTML/CSS/JS"],
+    description:"lorem",
+    websiteLink: "https://grissiniproject.com/",
   },
   {
     name: "Shibuya",
@@ -111,10 +100,8 @@ let projectsData = [
     component: Shibuya,
     date: "Jul. 2020",
     role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
-    description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
+    techs: ["Illustrator, photoshop"],
+    description:"blabla"
   },
   {
     name: "Desktop",
@@ -141,8 +128,7 @@ let projectsData = [
     role: "Front end dev, back end dev",
     techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
     description:
-      "During a HETIC school project, we had to build an interactive data visualization experience in a team in 2 weeks. While looking for interesting data sets, I found a set corresponding to the whole set of Pitchfork magazine's music reviews and we used this as a basis to design a visualization and analysis of these data.  From there I conceptualized the project and worked with designers to develop the site.",
-    websiteLink: "https://pitchfork.herokuapp.com/",
+      "blablabla grossiste de chapeau"
   },
   // {
   //   name: "Flamalice",
@@ -178,13 +164,6 @@ let projectsData = [
     description:
       "I had to make a website using transition CSS at school, so I decided to make a Bubble Tea maker, enjoy :D",
     websiteLink: "https://cathydolle.github.io/bubbleTea/",
-    credits: {
-      Development: { name: "Maxime Druart" },
-      Designer: {
-        name: "Aurélie Do",
-        link: "https://www.behance.net/aureliedo",
-      },
-    },
   },
 ]
 
