@@ -6,7 +6,7 @@ import styled, { ThemeContext, useTheme } from "styled-components"
 import lerp from "@14islands/lerp"
 import gsap from "gsap"
 
-import archivesData from "../../archivesData2"
+import archivesData from "../../archivesData"
 import PageTemplate from "./PageTemplate"
 import { mfIsHoveringCanvas } from "../../store"
 
@@ -28,7 +28,7 @@ const mapRef = createRef()
 const mapPosRef = createRef()
 const mapItemsRef = createRef()
 
-let speed = 0
+let speed = createRef(0)
 let projectIsOpened = createRef()
 
 const Container = styled.div`
@@ -184,7 +184,7 @@ function ShaderPlane(props) {
 
   useFrame((state, delta) => {
     matRef.current.time += delta
-    matRef.current.speed = speed * 15
+    matRef.current.speed = speed.current * 15
   })
 
   useLayoutEffect(() => {
@@ -258,7 +258,7 @@ const Scene = () => {
   const lastPos = useRef(new THREE.Vector3(0, 0, 0))
   const isHolding = useRef(false)
   const distortionStrength = useRef(0)
-  const focalStrength = useRef(0)
+  const focalStrength = useRef(2)
 
   const camBox = useRef()
   const canvasBox = useRef()
@@ -270,14 +270,14 @@ const Scene = () => {
 
   useFrame(({ camera }, delta) => {
     let hasChanged = lastPos.current.distanceTo(camera.position) > 0.005
-    speed = lerp(speed, camera.position.distanceTo(lastPos.current), 0.2, delta)
+    speed.current = lerp(speed.current, camera.position.distanceTo(lastPos.current), 0.2, delta)
     lastPos.current.copy(camera.position)
 
     const focalValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.3 : 0
     focalStrength.current = lerp(focalStrength.current, focalValue, 0.2, delta)
 
     let distortionValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.2 : 0
-    distortionValue += speed * 3
+    distortionValue += speed.current * 3
     distortionStrength.current = lerp(distortionStrength.current, distortionValue, 0.2, delta)
     myLensDistortionPass.distortion.set(distortionStrength.current, distortionStrength.current)
     myLensDistortionPass.focalLength.set(1 - focalStrength.current, 1 - focalStrength.current)
@@ -325,8 +325,7 @@ const Scene = () => {
         size = { width: 2 * ratio, height: 2 }
       } else size = { width: 2, height: 2 / ratio }
 
-      // add space for the text in height
-      let item = { x: 0, y: 0, width: size.width, height: size.height + 0.35 }
+      let item = { x: 0, y: 0, width: size.width, height: size.height }
 
       if (index === 0) {
         items.push(item)
@@ -342,7 +341,12 @@ const Scene = () => {
 
       while (!positionIsValid) {
         tempPos = getNewPosition(item, minRadius)
-        positionIsValid = !isColliding(items, { ...item, ...tempPos })
+        // add space for the text in height
+        positionIsValid = !isColliding(items, {
+          ...tempPos,
+          width: item.width,
+          height: item.height + 0.35,
+        })
 
         numberOfTests++
         if (numberOfTests > 10) minRadius += 0.1
@@ -415,6 +419,8 @@ const Scene = () => {
       isOpened: false,
       id: null,
     }
+
+    speed.current = 1000
   }, [])
 
   return (
@@ -428,7 +434,7 @@ const Scene = () => {
         enableZoom={true}
         screenSpacePanning={true}
         minDistance={1}
-        maxDistance={2}
+        maxDistance={1.6}
       />
       <Plane ref={filterRef} position-z={-1.2} args={[30, 30]}>
         <meshBasicMaterial color='black' transparent={true} opacity={0} attach='material' />
