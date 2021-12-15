@@ -247,7 +247,7 @@ function ShaderPlane(props) {
 }
 
 const _v = new THREE.Vector3()
-const panMargin = 0
+const panMargin = -2
 
 const Scene = () => {
   const camera = useThree((state) => state.camera)
