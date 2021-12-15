@@ -118,8 +118,11 @@ const StyledAbout = styled.div`
       justify-content: center;
       flex-wrap:wrap;
       .passion{
-      /* width: 100%; */
+      width : 20vw;
       margin: 35px;
+      @media (max-width:1080px){
+        width: 30vw;
+      }
       .text-content{
         display: flex;
         .text-description{
@@ -129,13 +132,16 @@ const StyledAbout = styled.div`
         }
       }
       img{
-        width: 300px;
-        height: 180px;
+        width: 100%;
+        height: 12vw;
         object-fit: cover;
         opacity: 0.8;
         transition: opacity 0.5s;
         &:hover{
           opacity: 1;
+        }
+        @media (max-width:1080px){
+        height: 20vw;
         }
         @media (max-width:900px){
           opacity: 1;
@@ -402,7 +408,7 @@ const About = () => {
                 <h3 className="text-h3 number">07</h3>
                 <div className="text-description">
                   <h4 className="text-h4">Painting</h4>  
-                  <p className="text-regular">Especially japanese and korean food</p>
+                  <p className="text-regular">Create new things</p>
                 </div>
               </div>               
             </div>  
@@ -413,7 +419,7 @@ const About = () => {
                 <h3 className="text-h3 number">08</h3>
                 <div className="text-description">
                   <h4 className="text-h4">Architecture</h4>  
-                  <p className="text-regular">Especially japanese and korean food</p>
+                  <p className="text-regular">allow me to be pixel on element</p>
                 </div>
               </div>               
             </div>   
@@ -423,8 +429,8 @@ const About = () => {
               <div className="text-content">
                 <h3 className="text-h3 number">09</h3>
                 <div className="text-description">
-                  <h4 className="text-h4">art</h4>  
-                  <p className="text-regular">Especially japanese and korean food</p>
+                  <h4 className="text-h4">Art</h4>  
+                  <p className="text-regular">blossoms me</p>
                 </div>
               </div>               
             </div>              
