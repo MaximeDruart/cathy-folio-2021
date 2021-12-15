@@ -61,8 +61,8 @@ let projectsData = [
     visual1: arcaneVisual1,
     component: Arcane,
     date: "Jul. 2020",
-    role: "Front end dev, back end dev",
-    techs: ["Wordpress, Elementor"],
+    role: "Ui designer",
+    techs: ["AdobeXD Photoshop"],
     description:
       "blablabla"
   },
