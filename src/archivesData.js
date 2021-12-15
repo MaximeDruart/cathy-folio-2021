@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from "uuid"
 
 import cl from "./assets/img/archives/cl.jpg"
 import cl_print from "./assets/img/archives/cl_print.jpg"
-import katy_v4 from "./assets/img/archives/katy_v4.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
 import mandarin from "./assets/img/archives/mandarin.jpg"
@@ -139,13 +138,6 @@ let archivesData = [
     type: "Ui design",
     description: "log in page design for vans",
     websiteLink: "",
-  },
-  {
-    name: "Katy_v4 mini folio",
-    path: "Katy_v4 mini folio",
-    coverImg: katy_v4,
-    type: "website",
-    description: "old website for my v4 folio",
   },
   {
     name: "Shibuya Device Mockup",
