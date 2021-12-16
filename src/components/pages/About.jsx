@@ -331,10 +331,6 @@ const About = () => {
         <div className='home-section what-i-do'>
           <div className='headline'>My passions</div>
           <div className='separator'></div>
-          {/* <div className='title text-h2-5'>
-            <span className='saol'>Passions</span> help me to blablabla. I'm passionate about digital and creative things
-            <div className="demi-spacer"></div>
-          </div> */}
           <div className="passion_container">
             {/* video games */}
             <div className="passion">

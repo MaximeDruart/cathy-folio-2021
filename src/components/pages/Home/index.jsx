@@ -13,6 +13,21 @@ import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import moodboard from "../../../assets/img/myWork.png"
 
+
+//passions
+import game from "../../../assets/img/about/pokemon.gif"
+import animes from "../../../assets/img/about/animes.gif"
+import lofi from "../../../assets/img/about/lofi.gif"
+import piano from "../../../assets/img/about/piano.gif"
+import draw from "../../../assets/img/about/draw.gif"
+import food from "../../../assets/img/about/food.gif"
+import painting from "../../../assets/img/about/painting.gif"
+import architecture from "../../../assets/img/about/architecture.gif"
+import art from "../../../assets/img/about/art.gif"
+
+import twitch from "../../../assets/img/about/twitch.jpg"
+import resume from "../../../assets/img/about/resume.pdf"
+
 const StyledHome = styled.div`
   * {
     font-family: NeueMontrealRegular;
@@ -20,6 +35,9 @@ const StyledHome = styled.div`
   }
   img.about-visual {
     width: 100%;
+  }
+  img.twitch-img{
+      width: 100%;
   }
   .hero {
     width: 100%;
@@ -209,7 +227,67 @@ const StyledHome = styled.div`
       text-transform: uppercase;
       font-size: 14px;
     }
+    .passion_container{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-wrap:wrap;
+      .passion{
+      width : 20vw;
+      margin: 35px;
+      @media (max-width:1080px){
+        width: 30vw;
+      }
+      .text-content{
+        display: flex;
+        .text-description{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      img{
+        width: 100%;
+        height: 12vw;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: opacity 0.5s;
+        &:hover{
+          opacity: 1;
+        }
+        @media (max-width:1080px){
+        height: 20vw;
+        }
+        @media (max-width:900px){
+          opacity: 1;
+          width: 100%;
+          object-fit: cover;
+          height: 200px;
+        }
+      }
+      h3.number{
+        margin-top: 20px;
+        font-size: 60px;
+        font-family: "SaolDisplayLight"; 
+        /* font-family: "NeueMontrealLight"; */
+        color: ${({ theme }) => theme.colors.text.disabled};
+        margin-left: -4px;
+        margin-right: 20px;
+        margin-bottom: 14px;
 
+      }
+      .text-h4, .text-regular{
+        text-align: left;
+      }
+      .text-h4{
+        margin: 5px 0 2px 0;
+      }
+      @media (max-width:900px){
+        width: 100%;
+        margin: 35px 0;
+      }
+     }
+    }
     .separator {
       margin-top: 20px;
       margin-bottom: 50px;
@@ -306,29 +384,141 @@ const Home = () => {
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            Focused on creating meaningful experiences through <span className='saol'>design</span>, I’m able to develop
-            your ideas from concept to wireframe, passing through prototype and production.
+            I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the 1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at Project X Paris
           </div>
-          <Link to='/about'>
-            <button className='button'>About me</button>
-          </Link>
+          <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
         <div className='demi-spacer'></div>
         <img className='about-visual' src={moodboard} alt='visual' />
         <div className='demi-spacer'></div>
-
         <div className='home-section skills'>
           <div className='headline'>skills</div>
           <div className='separator text-top'></div>
           <InfiniteText />
           <div className='separator text-bot'></div>
         </div>
-
+        {/* projects */}
         <div className='home-section projects'>
           <div className='headline'>projects</div>
           <div className='separator'></div>
           <HomeProjects />
-        </div>
+        </div>    
+        {/* passions */}
+        <div className='home-section what-i-do'>
+          <div className='headline'>My passions</div>
+          <div className='separator'></div>
+          <div className="passion_container">
+            {/* video games */}
+            <div className="passion">
+              <img src={game} alt="passion" /> 
+              <div className="text-content">
+                <h3 className="text-h3 number">01</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Video games</h4>  
+                  <p className="text-regular">Improve my creativity</p>
+                </div>
+              </div>
+            </div>
+            {/* animes */}
+            <div className="passion">
+              <img src={animes} alt="passion" /> 
+              <div className="text-content">
+                <h3 className="text-h3 number">02</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Animes</h4>  
+                  <p className="text-regular">Give me inspiration</p>                </div>
+              </div>
+            </div>
+            {/* lofi */}
+            <div className="passion">
+              <img src={lofi} alt="passion" /> 
+              <div className="text-content">
+                <h3 className="text-h3 number">03</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Lofi music</h4>  
+                  <p className="text-regular">Help me to stay focus</p>  
+                </div>
+              </div>              
+            </div>            
+            {/* piano */}
+            <div className="passion">
+              <img src={piano} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">04</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Piano</h4>  
+                  <p className="text-regular">Relax me</p>                
+                </div>
+              </div>               
+            </div>
+            {/* piano */}
+            <div className="passion">
+              <img src={draw} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">05</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Drawing</h4>  
+                  <p className="text-regular">Improve my accuracy</p>
+                </div>
+              </div>               
+            </div>
+             {/* piano */}
+             <div className="passion">
+              <img src={food} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">06</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Food</h4>  
+                  <p className="text-regular">Especially japanese and korean food</p>
+                </div>
+              </div>               
+            </div>  
+              {/* painting */}
+              <div className="passion">
+              <img src={painting} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">07</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Painting</h4>  
+                  <p className="text-regular">Create new things</p>
+                </div>
+              </div>               
+            </div>  
+              {/* architecture */}
+              <div className="passion">
+              <img src={architecture} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">08</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Architecture</h4>  
+                  <p className="text-regular">allow me to be pixel on element</p>
+                </div>
+              </div>               
+            </div>   
+                 {/* piano */}
+                 <div className="passion">
+              <img src={art} alt="passion" />
+              <div className="text-content">
+                <h3 className="text-h3 number">09</h3>
+                <div className="text-description">
+                  <h4 className="text-h4">Art</h4>  
+                  <p className="text-regular">blossoms me</p>
+                </div>
+              </div>               
+            </div>              
+          </div>
+        </div>        
+        {/* twitch */}
+        <div className='home-section what-i-do'>
+          <div className='headline'>Streaming</div>
+          <div className='separator'></div>
+          <div className='title text-h2-5'>
+            I'm also <span className='saol'>Twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !
+          </div>
+          <a className="button" href="https://www.twitch.tv/katy_v4" target="_blank">Twitch.tv/Katy_v4</a>
+          <div className="demi-spacer"></div>
+          <img className="twitch-img" src={twitch} alt="twitch" />
+        </div>        
       </StyledHome>
     </PageTemplate>
   )

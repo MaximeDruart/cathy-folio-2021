@@ -79,7 +79,7 @@ const item = {
   hidden: { y: "100%" },
 }
 
-const pages = ["home", "works", "about", "archives"]
+const pages = ["home", "works", "archives"]
 
 const Menu = () => {
   const { pathname } = useLocation()
