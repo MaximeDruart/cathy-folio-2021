@@ -90,6 +90,13 @@ const Container = styled.div`
           margin-right: 10px;
           font-size: 14px;
           margin: 0 20px;
+          a{
+            transition: color 0.5s;
+          }
+          a:hover{
+            transition: color 0.5s;
+            color: ${({ theme }) => theme.colors.primary1};
+          }
         }
       }
     }
@@ -131,6 +138,9 @@ const Footer = () => {
             <li>
               <a href='https://www.linkedin.com/in/cathy-dolle/?originalSubdomain=fr' target="_blank">linkedin</a>
             </li>
+            <li>
+              <a href='https://twitter.com/cathydolle' target="_blank">twitter</a>
+            </li>            
             <li>
               <a href='https://www.instagram.com/cathydolle/' target="_blank">instagram</a>
             </li>
