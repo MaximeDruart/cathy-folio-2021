@@ -38,6 +38,7 @@ const Container = styled.div`
   position: relative;
 
   .map {
+    pointer-events: none;
     position: absolute;
     left: 10vw;
     bottom: 0;
