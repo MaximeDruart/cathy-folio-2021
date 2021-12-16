@@ -31,7 +31,7 @@ const TransitionPanel = styled(motion.div)`
   .transition-panel {
     width: 100%;
     height: 100%;
-    background: black;
+    background: ${({ theme }) => theme.colors.background};
     position: absolute;
     bottom: 0;
   }
@@ -81,7 +81,7 @@ const PageTemplate = ({ children, hasFooter = true, hasTransitionPanel = false, 
       </Container>
 
       {hasTransitionPanel && (
-        <TransitionPanel className='transition-panel-wrapper'>
+        <TransitionPanel>
           <motion.div
             initial={{ y: "100%" }}
             transition={{ duration: 0.5, ease: "easeOut" }}

@@ -76,9 +76,9 @@ const Container = styled.div`
 `
 
 function visibleBox(camera, z) {
-  var t = Math.tan(THREE.Math.degToRad(camera.fov) / 2)
-  var height = t * 2 * (camera.position.z - z)
-  var width = height * camera.aspect
+  const t = Math.tan(THREE.Math.degToRad(camera.fov) / 2)
+  const height = t * 2 * (camera.position.z - z)
+  const width = height * camera.aspect
   return { width, height }
 }
 
@@ -190,15 +190,19 @@ function ShaderPlane(props) {
   useLayoutEffect(() => {
     mfIsHoveringCanvas.current = hovering
 
-    if (textMaterial.current) {
-      !projectIsOpened.current.isOpened &&
-        gsap.to(hoverValue.current, {
-          value: hovering ? 1 : 0,
-          onUpdate: () => {
-            // matRef.current.hoverValue = hoverValue.current.value
-            textMaterial.current.opacity = hoverValue.current.value
-          },
-        })
+    let tween
+
+    if (textMaterial.current && hoverValue.current && !projectIsOpened.current.isOpened) {
+      tween = gsap.to(hoverValue.current, {
+        value: hovering ? 1 : 0,
+        onUpdate: () => {
+          if (hoverValue.current) textMaterial.current.opacity = hoverValue.current.value
+        },
+      })
+    }
+    return () => {
+      tween && tween.kill()
+      mfIsHoveringCanvas.current = false
     }
   }, [hovering])
 

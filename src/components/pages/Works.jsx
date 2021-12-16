@@ -174,13 +174,16 @@ function ShaderPlane(props) {
 
   useEffect(() => {
     mfIsHoveringCanvas.current = hovering
-
-    gsap.to(hoverValue.current, {
+    let tween = gsap.to(hoverValue.current, {
       value: hovering ? 1 : 0,
       onUpdate: () => {
-        matRef.current.hoverValue = hoverValue.current.value
+        if (hoverValue.current) matRef.current.hoverValue = hoverValue.current.value
       },
     })
+    return () => {
+      tween.kill()
+      mfIsHoveringCanvas.current = false
+    }
   }, [hovering])
 
   const clickHandler = () => {

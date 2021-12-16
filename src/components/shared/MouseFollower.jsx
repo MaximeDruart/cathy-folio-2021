@@ -136,6 +136,7 @@ const MouseFollower = () => {
           )
             isHovering = true
         }
+
         if (isHovering) {
           gsap.to($outerCircle.current, { borderColor: `${theme.colors.primary1}00` })
           gsap.to($hoverCircle.current, { scale: 1 })

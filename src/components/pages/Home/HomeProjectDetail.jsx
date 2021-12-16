@@ -2,7 +2,6 @@ import { motion, useSpring, useViewportScroll } from "framer-motion"
 import React, { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
-import lerp from "lerp"
 import { useMediaQuery } from "beautiful-react-hooks"
 
 const StyledHomeProjectDetail = styled.div`
@@ -42,7 +41,6 @@ const StyledHomeProjectDetail = styled.div`
     z-index: 10;
     pointer-events: none;
     .hover-images {
-      background: grey;
       transition: opacity ease-out 0.3s;
 
       img {
@@ -60,7 +58,6 @@ const HomeProjectDetail = ({ project, index }) => {
   const isDesktop = useMediaQuery("(min-width:769px)")
 
   const pos = useRef({ x: 0, y: 0 })
-  const lerpedPos = useRef({ x: 0, y: 0 })
   const hoverImage = useRef(null)
   const [hovering, setHovering] = useState(false)
 
@@ -69,15 +66,10 @@ const HomeProjectDetail = ({ project, index }) => {
   useEffect(() => {
     const mousemoveHandler = ({ clientX, clientY }) => {
       pos.current = { x: clientX, y: clientY }
-
-      lerpedPos.current.x = lerp(lerpedPos.current.x, pos.current.x, 0.1)
-      lerpedPos.current.y = lerp(lerpedPos.current.y, pos.current.y, 0.1)
-
-      hoverImage.current.style.transform = `translate3d(${lerpedPos.current.x}px, ${lerpedPos.current.y}px, 0)`
+      hoverImage.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0)`
     }
-    if (isDesktop) {
-      window.addEventListener("mousemove", mousemoveHandler)
-    }
+    isDesktop && window.addEventListener("mousemove", mousemoveHandler)
+
     return () => {
       window.removeEventListener("mousemove", mousemoveHandler)
     }
@@ -89,6 +81,8 @@ const HomeProjectDetail = ({ project, index }) => {
     } else {
       clearInterval(imageSwitchInterval.current)
     }
+
+    return () => clearInterval(imageSwitchInterval.current)
   }, [hovering])
 
   const { scrollY } = useViewportScroll() // measures how many pixels user has scrolled vertically

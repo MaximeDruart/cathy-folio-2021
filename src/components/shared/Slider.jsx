@@ -84,12 +84,13 @@ const Slider = (props) => {
       .set(overlayRef.current, { backgroundColor: theme.colors.primary1 })
   }
 
-  const goToProject = () => history.push(`/works/${projectsData[projectImageIndex].path}`)
+  // const goToProject = () => history.push(`/works/${projectsData[projectImageIndex].path}`)
+  const goToProject = () => history.push("/works")
 
   return (
     <StyledSlider {...props}>
-      <div onClick={goToProject} className="img-container mf-active">
-        <div ref={overlayRef} className="overlay"></div>
+      <div onClick={goToProject} className='img-container mf-active'>
+        <div ref={overlayRef} className='overlay'></div>
         <img
           onLoad={() => {
             if (!hasLoaded) {
@@ -99,11 +100,11 @@ const Slider = (props) => {
           }}
           ref={imageRef}
           src={projectImages[0]}
-          alt=""
+          alt=''
         />
       </div>
 
-      <div className="page text-small">
+      <div className='page text-small'>
         ({projectImageIndex + 1 < 10 ? "0" + (projectImageIndex + 1) : projectImageIndex + 1}/
         {projectImages.length + 1 < 10 ? "0" + (projectImages.length + 1) : projectImages.length + 1})
       </div>
