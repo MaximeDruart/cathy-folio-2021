@@ -34,13 +34,12 @@ const StyledHome = styled.div`
     color: ${({ theme }) => theme.colors.text.standard};
   }
   img.about-visual {
-    width: 100%;
-    @media (max-width: 780px) {
-      width: 230%;
-      margin-top: 50px;
-        //transform: scale(3);
-        //margin: 200px 0;
-      }
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    @media (max-width: 480px) {
+      height: 80vh;
+    }
   }
   img.twitch-img{
       width: 100%;
