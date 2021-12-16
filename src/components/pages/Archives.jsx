@@ -46,9 +46,8 @@ const Container = styled.div`
   .map {
     pointer-events: none;
     position: absolute;
-    margin-bottom: -6vh;
     left: 10vw;
-    //bottom: 0;
+    bottom: -3vh;
     transform: translateY(-50%);
     width: auto;
     height: auto;
