@@ -36,16 +36,27 @@ const Container = styled.div`
   width: 100vw;
   transition: background-color 0.6s;
   position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  @media (max-width: 900px){
+    justify-content: center;
+  }
 
   .map {
     pointer-events: none;
     position: absolute;
+    margin-bottom: -6vh;
     left: 10vw;
-    bottom: 0;
+    //bottom: 0;
     transform: translateY(-50%);
     width: auto;
     height: auto;
     opacity: 0.7;
+
+    @media (max-width: 900px){
+      left: auto;
+    }
 
     .item-container {
       width: 0;

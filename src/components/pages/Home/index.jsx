@@ -35,6 +35,12 @@ const StyledHome = styled.div`
   }
   img.about-visual {
     width: 100%;
+    @media (max-width: 780px) {
+      width: 230%;
+      margin-top: 50px;
+        //transform: scale(3);
+        //margin: 200px 0;
+      }
   }
   img.twitch-img{
       width: 100%;
@@ -250,7 +256,7 @@ const StyledHome = styled.div`
         width: 100%;
         height: 12vw;
         object-fit: cover;
-        opacity: 0.8;
+        opacity: 0.3;
         transition: opacity 0.5s;
         &:hover{
           opacity: 1;
@@ -328,7 +334,9 @@ const StyledHome = styled.div`
 
   .what-i-do {
     margin-top: 30vh;
-
+    @media (max-width: 700px){
+      margin-top: 20vh;
+    }
     .title {
       text-align: center;
       .saol {
@@ -388,7 +396,7 @@ const Home = () => {
           </div>
           <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
-        <div className='demi-spacer'></div>
+        <div className='spacer'></div>
         <img className='about-visual' src={moodboard} alt='visual' />
         <div className='demi-spacer'></div>
         <div className='home-section skills'>
