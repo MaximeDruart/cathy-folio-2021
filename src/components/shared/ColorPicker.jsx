@@ -17,7 +17,6 @@ const ColorListItem = styled(motion.li)`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-
   &:not(:first-child) {
     margin-left: 8px;
   }

@@ -35,7 +35,7 @@ const StyledHome = styled.div`
     font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
   }
-  .egBtlY{
+  .bRCflm{
     margin-left: 0;
   } 
   /* img.about-visual {
