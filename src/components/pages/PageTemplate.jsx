@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback, useLayoutEffect } from "react"
+import React, { useRef, useState, useCallback, useLayoutEffect, useEffect } from "react"
 import ResizeObserver from "resize-observer-polyfill"
 import { useViewportScroll, useTransform, useSpring, motion } from "framer-motion"
 import styled from "styled-components"
@@ -66,6 +66,11 @@ const PageTemplate = ({ children, hasFooter = true, hasTransitionPanel = false, 
   const transform = useTransform(scrollY, [0, pageHeight], [0, -pageHeight])
   const physics = { damping: 20, mass: 0.21, stiffness: 100 } // easing of smooth scroll
   const spring = useSpring(transform, physics) // apply easing to the negative scroll value
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    scrollY.set(0)
+  }, [])
 
   return (
     <>
