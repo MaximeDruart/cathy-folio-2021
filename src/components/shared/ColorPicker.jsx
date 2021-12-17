@@ -31,10 +31,16 @@ const ColorListItem = styled(motion.li)`
   .text {
     writing-mode: vertical-rl;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: transparent;
     transform: rotate(180deg);
     margin-bottom: 14px;
     font-size:12px;
+    transition: color 0.4s;
+  }
+  &:hover{
+    .text{
+      color: ${({ theme }) => theme.colors.text.standard};
+    }
   }
 `
 
