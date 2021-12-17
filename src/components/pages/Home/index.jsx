@@ -12,6 +12,8 @@ import InfiniteText from "../../shared/InfiniteText"
 import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import moodboard from "../../../assets/img/myWork.png"
+import FullImage from "../../shared/FullImage"
+
 
 
 //passions
@@ -33,14 +35,17 @@ const StyledHome = styled.div`
     font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
   }
-  img.about-visual {
+  .egBtlY{
+    margin-left: 0;
+  } 
+  /* img.about-visual {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     @media (max-width: 480px) {
       height: 80vh;
     }
-  }
+  } */
   img.twitch-img{
       width: 100%;
   }
@@ -396,7 +401,8 @@ const Home = () => {
           <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
         <div className='spacer'></div>
-        <img className='about-visual' src={moodboard} alt='visual' />
+        <FullImage  src={moodboard} alt='moodboard' />
+        {/* <img className='about-visual' src={moodboard} alt='visual' /> */}
         <div className='demi-spacer'></div>
         <div className='home-section skills'>
           <div className='headline'>skills</div>

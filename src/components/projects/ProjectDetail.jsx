@@ -5,6 +5,8 @@ import { marginPage } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
 import projectsData from "../../projectsData"
 import { Link, useHistory } from "react-router-dom"
+import FullImage from "../shared/FullImage"
+
 
 const StyledProjectDetail = styled.div`
   .hero-title {
@@ -346,7 +348,8 @@ const ProjectDetail = ({ project }) => {
           </div>
           <div className='spacer'></div>
           {/* visual */}
-          <img className='visual' src={project.visual1} alt='visual' />
+          <FullImage src={project.visual1} alt='visual' />
+          {/* <img className='visual' src={project.visual1} alt='visual' /> */}
           <div className='spacer'></div>
           {/* colors */}
           <ProjectComponent />

@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
   margin-left: -10vw;
 
