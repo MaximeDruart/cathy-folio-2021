@@ -5,10 +5,10 @@ import cl from "./assets/img/archives/cl.jpg"
 import cl_print from "./assets/img/archives/cl_print.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
-import mandarin from "./assets/img/archives/mandarin.jpg"
-import yu_lin from "./assets/img/archives/yu_lin.jpg"
+import oceane from "./assets/img/archives/oceane.jpg"
+import kiricoukou from "./assets/img/archives/kiricoukou.jpg"
 import bank from "./assets/img/archives/bank.jpg"
-import abidaisy from "./assets/img/archives/abidaisy.jpg"
+import palette from "./assets/img/archives/palette.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
@@ -17,12 +17,9 @@ import illu2 from "./assets/img/archives/illu2.jpg"
 import vans from "./assets/img/archives/vans.jpg"
 import aker from "./assets/img/archives/aker.jpg"
 import minecraft from "./assets/img/archives/minecraft.jpg"
-import akali from "./assets/img/archives/akali.jpg"
 import kill from "./assets/img/archives/kill.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
-import shibuCard from "./assets/img/archives/shibuCard.jpg"
 import bankCard from "./assets/img/archives/bankCard.jpg"
-import ekko from "./assets/img/archives/ekko.jpg"
 import flamalice from "./assets/img/archives/flamalice.jpg"
 import uplift from "./assets/img/archives/uplift.jpg"
 
@@ -63,20 +60,6 @@ let archivesData = [
     websiteLink: "",
   },
   {
-    name: "Ekko giants",
-    coverImg: ekko,
-    type: "UI Design",
-    description: "ekko ui design from league of legends",
-    websiteLink: "",
-  },
-  {
-    name: "Shibuya card",
-    coverImg: shibuCard,
-    type: "Print",
-    description: "A visit card with the shibuya logo I made",
-    websiteLink: "",
-  },
-  {
     name: "etude house",
     coverImg: etudePhone,
     type: "UI design",
@@ -96,12 +79,6 @@ let archivesData = [
     type: "Ui design",
     description: "Cl Presave page",
     websiteLink: "",
-  },
-  {
-    name: "Akali giants",
-    coverImg: akali,
-    type: "Ui design",
-    description: "Akali giants ui design",
   },
   {
     name: "Cl Print",
@@ -139,18 +116,17 @@ let archivesData = [
     websiteLink: "",
   },
   {
-    name: "Le mandarin",
-    coverImg: mandarin,
-    type: "website",
-    description: "A website for the restaurant : Le mandarin",
-    websiteLink: "https://mandarin-merveilleux.com/",
+    name: "oceane",
+    coverImg: oceane,
+    type: "print",
+    description: "oceane photobook",
+    websiteLink: "",
   },
   {
-    name: "Yu Lin Beauté",
-    coverImg: yu_lin,
-    type: "website",
-    description: "A website for Yu Lin Beauté",
-    websiteLink: "https://yulinbeaute.com/",
+    name: "kiricoukou",
+    coverImg: kiricoukou,
+    type: "print",
+    description: "Affiche pour mes 2 viewers",
   },
   {
     name: "Bank Login Page",
@@ -160,11 +136,11 @@ let archivesData = [
     websiteLink: "https://loginbank.netlify.app/",
   },
   {
-    name: "Abidaisy Portfolio",
-    coverImg: abidaisy,
-    type: "website",
-    description: "A portfolio for the artist Abidaisy",
-    websiteLink: "https://abidaisy.com/",
+    name: "Palette book",
+    coverImg: palette,
+    type: "book",
+    description: "One of my favourite book for inspiration",
+    websiteLink: "https://palette.com/",
   },
   {
     name: "Nike homepage",
