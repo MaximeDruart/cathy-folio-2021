@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import gsap from "gsap"
 
-const topWords = ["digital", "creative", "design", "UI/UX", "Product "]
+const topWords = ["digital", "creative", "design", "UI/UX", "Product"]
 const bottomWords = ["Art", "director", "design", "test", "test2"]
 
 const Container = styled.div`
@@ -16,6 +16,7 @@ const Container = styled.div`
     .string {
       display: inline-block;
       height: auto;
+      padding-left: 2vw;
     }
 
     span {
@@ -77,9 +78,23 @@ const InfiniteText = () => {
             </span>
           ))}
         </div>
+        <div className='string'>
+          {topWords.map((text, i) => (
+            <span key={i} className='text-h1'>
+              {text}
+            </span>
+          ))}
+        </div>
       </div>
       <div ref={bottomLineContainer} className='line bottom-line'>
         <div ref={bottomStringRef} className='string'>
+          {bottomWords.map((text, i) => (
+            <span key={i} className='text-h1'>
+              {text}
+            </span>
+          ))}
+        </div>
+        <div className='string'>
           {bottomWords.map((text, i) => (
             <span key={i} className='text-h1'>
               {text}
