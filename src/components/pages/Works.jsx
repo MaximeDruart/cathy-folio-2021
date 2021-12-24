@@ -44,9 +44,10 @@ const StyledWorks = styled(motion.div)`
     pointer-events: none;
 
     z-index: -10;
+    transition: opacity 0.2s ease-in-out;
 
     &.hidden {
-      display: none;
+      opacity: 0;
     }
 
     .wrapper {
@@ -195,6 +196,10 @@ function ShaderPlane(props) {
     }, 300)
   }
 
+  useEffect(() => {
+    props.index === 2 && console.log(props.isInView)
+  }, [props.isInView])
+
   return (
     <mesh
       {...props}
@@ -209,6 +214,7 @@ function ShaderPlane(props) {
         textureAspect={props.texture.image.naturalWidth / props.texture.image.naturalHeight}
         ref={matRef}
         tex={props.texture}
+        rgbShiftStrength={0.8}
       />
       <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.25]}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='wrapper'>
@@ -274,7 +280,7 @@ const Scene = ({ history }) => {
     <group ref={group}>
       {projectsData.map((project, index) => (
         <ShaderPlane
-          isInView={index > planeInView - 2 && index < planeInView + 2}
+          isInView={index > planeInView - 3 && index < planeInView + 3}
           index={index}
           key={project.name + index}
           texture={covers[index]}

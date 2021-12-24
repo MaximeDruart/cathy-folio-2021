@@ -26,7 +26,8 @@ const store = (set, get) => ({
     !get().isMenuOpen ? enableBodyScroll("[data-app-container]") : clearAllBodyScrollLocks()
     set((state) => ({ isMenuOpen: !state.isMenuOpen }))
   },
-  isDarkMode: !!JSON.parse(localStorage.getItem("dark-mode-enabled")),
+  isDarkMode:
+    localStorage.getItem("dark-mode-enabled") === null ? true : !!JSON.parse(localStorage.getItem("dark-mode-enabled")),
   toggleDarkMode: () => {
     localStorage.setItem("dark-mode-enabled", !get().isDarkMode)
     set((state) => ({ isDarkMode: !state.isDarkMode }))
