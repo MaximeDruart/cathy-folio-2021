@@ -100,7 +100,7 @@ const StyledHome = styled.div`
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
-          line-height: 1.3;
+          line-height: 1.26;
           margin-left: 1rem;
         }
       }
@@ -122,7 +122,7 @@ const StyledHome = styled.div`
       @media (max-width: 950px) {
         .line {
           font-size: 50px;
-          line-height: 1;
+          line-height: 1.1;
           &.second_line {
             padding-left: 100px;
           }
@@ -135,6 +135,10 @@ const StyledHome = styled.div`
                 top: -50px;
               }
             }
+          }
+          .important_word{
+            line-height: 1.3;
+            margin-left: 0.8rem;
           }
         }
       }
@@ -163,6 +167,7 @@ const StyledHome = styled.div`
             margin-left: 5px;
             font-size: 50px;
             margin-top: -2px;
+            line-height: 1.4;
           }
         }
       }
@@ -186,6 +191,7 @@ const StyledHome = styled.div`
           .important_word {
             margin-top: -1.5px;
             font-size: 38px;
+            line-height: 1.3;
           }
         }
       }
