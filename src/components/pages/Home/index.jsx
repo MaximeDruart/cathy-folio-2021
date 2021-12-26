@@ -13,6 +13,7 @@ import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import moodboard from "../../../assets/img/myWork.png"
 import FullImage from "../../shared/FullImage"
+import { marginPage } from "../../../styles/globalCustom"
 
 
 
@@ -35,17 +36,6 @@ const StyledHome = styled.div`
     font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
   }
-  .bRCflm{
-    margin-left: 0;
-  } 
-  /* img.about-visual {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    @media (max-width: 480px) {
-      height: 80vh;
-    }
-  } */
   img.twitch-img{
       width: 100%;
   }
@@ -56,7 +46,6 @@ const StyledHome = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-
     .text {
       position: relative;
       display: flex;
@@ -336,6 +325,10 @@ const StyledHome = styled.div`
     }
   }
 
+  .full-img-container{
+    ${marginPage};
+  }
+
   .what-i-do {
     margin-top: 30vh;
     @media (max-width: 700px){
@@ -401,8 +394,9 @@ const Home = () => {
           <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
         <div className='spacer'></div>
-        <FullImage  src={moodboard} alt='moodboard' />
-        {/* <img className='about-visual' src={moodboard} alt='visual' /> */}
+        <div className="full-img-container">
+          <FullImage className="full-img" src={moodboard} alt='moodboard' />
+        </div>
         <div className='demi-spacer'></div>
         <div className='home-section skills'>
           <div className='headline'>skills</div>
