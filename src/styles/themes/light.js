@@ -7,8 +7,8 @@ darkTheme.colors = {
   primary1: "#A1A3CC",
   text: {
     standard: "rgb(20, 20, 20)",
-    disabled: "#E0E0E0",
-    disabled2: "##050505",
+    disabled: "#B5B5B5",
+    disabled2: "#050505",
   },
 }
 

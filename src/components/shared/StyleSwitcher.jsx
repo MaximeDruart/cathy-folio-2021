@@ -20,11 +20,17 @@ const StyledStyleSwitcher = styled.div`
   pointer-events: none;
   color: ${({ theme }) => theme.colors.text.standard};
   font-family: "NeueMontrealRegular";
-  font-size: 14px;
-
+  font-size: 12px;
   .theme-toggle {
     pointer-events: auto;
     margin-top: 20px;
+    border: solid 1px ${({ theme }) => theme.colors.text.disabled};
+    border-radius: 30px;
+    padding: 5px 14px;
+    transition: background-color 0.4s;
+    &:hover{
+      background-color: ${({ theme }) => theme.colors.text.disabled};
+    }
   }
   .project{
     pointer-events: auto;
