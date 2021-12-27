@@ -9,6 +9,8 @@ import randomx4 from "../../assets/img/works/sangen/randomx4.png"
 import randomx6 from "../../assets/img/works/sangen/randomx6.png"
 
 import sangenPreview from "../../assets/img/works/sangen/sangenPreview.jpg"
+import FullImage from "../shared/FullImage"
+
 
 // Print
 import kill from "../../assets/img/works/sangen/kill.png"
@@ -29,6 +31,11 @@ const StyledSangen = styled.div`
 h2{
   margin: 50px 0;
 }
+.duo_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 img{
   width: 100%;
   margin-bottom: 50px;
@@ -36,10 +43,16 @@ img{
     height: 100vh;
   }
   &.step{
-    width: 75%;
+    width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    @media (max-width: 900px){
+      width: 100%;
+    }
+  }
+  &.duo{
+    width: 46%;
     @media (max-width: 900px){
       width: 100%;
     }
@@ -92,7 +105,7 @@ const Sangen = () => {
       <div className='separator'></div>
       <img className="step" src={randomx6} alt="step" />
       <div className="big-spacer"></div>
-      <img className="full-img" src={sangenPreview} alt="pxp" />
+      <FullImage src={sangenPreview} alt='pxp-desktop' />
       <div className="spacer"></div>
       <h2 className='text-h2'>Print</h2>
       <div className="demis-spacer"></div>
@@ -100,15 +113,19 @@ const Sangen = () => {
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>Dark Print</div>
       <div className='separator'></div>
-      <img className="step" src={kill} alt="print" />
-      <img className="step" src={vol} alt="print" />
-      <img className="step" src={low} alt="print" />
-      <img className="step" src={key} alt="print" />
+      <div className="duo_container">
+        <img className="duo" src={kill} alt="print" />
+        <img className="duo" src={vol} alt="print" />
+        <img className="duo" src={low} alt="print" />
+        <img className="duo" src={key} alt="print" />
+      </div>
       <div className="spacer"></div>
       <div className='headline text-regular'>Light Print</div>
       <div className='separator'></div>
-      <img className="step" src={cube} alt="print" />
-      <img className="step" src={wave} alt="print" />
+      <div className="duo_container">
+        <img className="duo" src={cube} alt="print" />
+        <img className="duo" src={wave} alt="print" />
+      </div>
       <div className="spacer"></div>
 
     </StyledSangen>

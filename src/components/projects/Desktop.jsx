@@ -6,6 +6,8 @@ import step1 from "../../assets/img/works/desktop/step1.png"
 import step2 from "../../assets/img/works/desktop/step2.svg"
 import step3 from "../../assets/img/works/desktop/step3.svg"
 import preview from "../../assets/img/works/desktop/preview.jpg"
+import FullImage from "../shared/FullImage"
+
 
 const StyledDesktop = styled.div`
 h2{
@@ -74,7 +76,7 @@ const Desktop = () => {
       </div>
       {/* end chart */}
       <div className="spacer"></div>
-      <img className="full-img" src={preview} alt="pxp" />
+      <FullImage src={preview} alt='pxp-desktop' />
       <div className="spacer"></div>
       <h2 className='text-h2'>Concept</h2>
       <div className="demi-spacer"></div>
