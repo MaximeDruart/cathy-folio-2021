@@ -58,7 +58,6 @@ const StyledHome = styled.div`
         text-transform: uppercase;
         width: auto;
         white-space: nowrap;
-        margin-bottom: 0.2vw;
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
@@ -101,7 +100,7 @@ const StyledHome = styled.div`
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
           line-height: 1.26;
-          margin-left: 1rem;
+          margin-left: 0.5rem;
         }
       }
       @media (max-width: 1200px) {
@@ -529,9 +528,12 @@ const Home = () => {
             I'm also <span className='saol'>Twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !
           </div>
           <a className="button" href="https://www.twitch.tv/katy_v4" target="_blank">Twitch.tv/Katy_v4</a>
-          <div className="demi-spacer"></div>
-          <img className="twitch-img" src={twitch} alt="twitch" />
-        </div>        
+        </div>   
+        <div className="demi-spacer"></div>
+        <div className="full-img-container">
+        <FullImage className="full-img" src={twitch} alt='moodboard' />
+        </div>    
+        <div className="spacer"></div>
       </StyledHome>
     </PageTemplate>
   )

@@ -117,7 +117,7 @@ const Footer = () => {
 
         <div className='footer-body'>
           <motion.a href='mailto:cathy.dolle@live.fr' className='text-h1'>
-            get in
+            Drop me an 
             <motion.div
               className='text-h1 important-word'
               variants={item}
@@ -125,8 +125,8 @@ const Footer = () => {
               transition={{ type: "tween", duration: 0.6, ease: "circOut" }}
             >
               <span className='word'>
-                <span>touch</span>
-                <span className='post'>touch</span>
+                <span>email</span>
+                <span className='post'>email</span>
               </span>
             </motion.div>
           </motion.a>
