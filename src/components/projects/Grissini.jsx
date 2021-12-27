@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import moodboard from "../../assets/img/works/grissini/mooboard.jpg"
+import moodboard from "../../assets/img/works/grissini/moodboard.jpg"
 import homepage from "../../assets/img/works/grissini/homepage.jpg"
 import contact from "../../assets/img/works/grissini/contact.jpg"
-import shop from "../../assets/img/works/grissini/shop.jpg"
-import shipping from "../../assets/img/works/grissini/shipping.jpg"
+import about from "../../assets/img/works/grissini/about.jpg"
 import homeMobile from "../../assets/img/works/grissini/home_mobile.jpg"
 import menuMobile from "../../assets/img/works/grissini/menu_mobile.jpg"
 import shopMobile from "../../assets/img/works/grissini/shop_mobile.jpg"
 import contactMobile from "../../assets/img/works/grissini/contact_mobile.jpg"
+import FullImage from "../shared/FullImage"
 
 
 const StyledGrissini = styled.div`
@@ -74,7 +74,7 @@ const Grissini = () => {
       {/* end chart */}
       {/* start case */}
       <div className="spacer"></div>
-      <img className="full-img" src={moodboard} alt="pxp" />
+      <FullImage src={moodboard} alt='preview' />
       <div className="spacer"></div>
       {/* desktop ui */}
       <h2 className='text-h2'>Desktop UI</h2>
@@ -89,9 +89,9 @@ const Grissini = () => {
       <div className='separator'></div>
       <img src={contact} alt="pxp" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>shipping page</div>
+      <div className='headline text-regular'>about page</div>
       <div className='separator'></div>
-      <img src={shipping} alt="pxp" />
+      <img src={about} alt="pxp" />
       <div className="spacer"></div>
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>

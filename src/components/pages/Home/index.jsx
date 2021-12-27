@@ -398,7 +398,7 @@ const Home = () => {
           </div>
           <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
-        <div className='spacer'></div>
+        <div className='demi-spacer'></div>
         <div className="full-img-container">
           <FullImage className="full-img" src={moodboard} alt='moodboard' />
         </div>
