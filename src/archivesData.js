@@ -6,16 +6,15 @@ import cl_print from "./assets/img/archives/cl_print.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
 import oceane from "./assets/img/archives/oceane.jpg"
-import kiricoukou from "./assets/img/archives/kiricoukou.jpg"
 import bank from "./assets/img/archives/bank.jpg"
 import palette from "./assets/img/archives/palette.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
+import parallele from "./assets/img/archives/parallele.jpg"
 import illu1 from "./assets/img/archives/illu1.jpg"
 import illu2 from "./assets/img/archives/illu2.jpg"
 import vans from "./assets/img/archives/vans.jpg"
-import aker from "./assets/img/archives/aker.jpg"
 import minecraft from "./assets/img/archives/minecraft.jpg"
 import kill from "./assets/img/archives/kill.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
@@ -44,6 +43,12 @@ let archivesData = [
     type: "Print",
     description: "Geometry print used processing",
     websiteLink: "",
+  },
+  {
+    name: "Parallele magazine",
+    coverImg: parallele,
+    type: "Print",
+    description: "Cover for magazine parallele",
   },
   {
     name: "Flamalice portfolio",
@@ -123,12 +128,6 @@ let archivesData = [
     websiteLink: "",
   },
   {
-    name: "kiricoukou",
-    coverImg: kiricoukou,
-    type: "print",
-    description: "Affiche pour mes 2 viewers",
-  },
-  {
     name: "Bank Login Page",
     coverImg: bank,
     type: "Ui design",
@@ -154,14 +153,6 @@ let archivesData = [
     coverImg: illu2,
     type: "Illustration",
     description: "remake from suzani",
-    websiteLink: "",
-  },
-
-  {
-    name: "Aker",
-    coverImg: aker,
-    type: "website",
-    description: "website for Aker shop",
     websiteLink: "",
   },
   {
