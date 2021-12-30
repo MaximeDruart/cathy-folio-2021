@@ -57,7 +57,7 @@ const Grissini = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+          <p className="text-description">Je suis partie sur un design minimaliste et épurée, rappelant en même temps la musique classique tout en restant élégant. La typographie Saol Display répondait parfaitement à cette attente. Pour la couleur principale nous sommes partis sur du doré, une couleur à la fois luxieuse et harmonieuse.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
@@ -78,7 +78,7 @@ const Grissini = () => {
       <div className="spacer"></div>
       {/* desktop ui */}
       <h2 className='text-h2'>Desktop UI</h2>
-      <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+      <p className="text-description">Maquettes desktop pour le site internet de Grissini Project; quelques previews, design simple et épuré, avec pour background une vidéo de Grissini en faible opacité pour faire ressortir le contenu.</p>
       {/* homepage */}
       <div className="spacer"></div>
       <div className='headline text-regular'>homepage</div>
@@ -95,7 +95,7 @@ const Grissini = () => {
       <div className="spacer"></div>
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
-      <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+      <p className="text-description">Maquettes responsives gardant la simplicité et facilité de navigation sur le site.</p>
       <div className="demi-spacer"></div> 
       <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>

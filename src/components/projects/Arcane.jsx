@@ -20,10 +20,10 @@ img{
   .typography{
     span.text-typo{
       &.one{
-        font-family: "Montserrat";
+        font-family: "NeueMontrealRegular";
       }
       &.two{
-        font-family: "Gotham";
+        font-family: "BebasNeueRegular";
       }
     }
   }
@@ -33,7 +33,16 @@ img{
         background-color: white;
       }
       &.two{
-        background-color: black;
+        background-color: #3c39bd;
+        color: white;
+      }
+      &.three{
+        background-color: #d45394;
+        color: white;
+      }
+      &.four{
+        background-color:#45744c;
+        color: white;
       }
     }
   }
@@ -48,18 +57,20 @@ const Arcane = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+          <p className="text-description">Je suis partie sur la typographie de "KDA" de League of legends pour les titres,et du Neue Montreal pour le corps de texte. Des couleurs simples et chaleureuses rappelant la série.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Montserrat<br/>Aa 123</span>
-          <span className="text-typo two">Gotham<br/>Aa 123</span>
+          <span className="text-typo one">Neue Montreal<br/>Aa 123</span>
+          <span className="text-typo two">Bebas Neue Regular<br/>Aa 123</span>
 
         </div>
         <div className="colors">
           <h4 className="text-h4">Colors</h4>
           <div className="color one">#FFFFFF</div>
-          <div className="color two">#000000</div>
+          <div className="color two">#3d3bca</div>
+          <div className="color three">#9b4670</div>
+          <div className="color four">#37683e</div>
         </div>
       </div>
       {/* end chart */}

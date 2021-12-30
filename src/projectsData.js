@@ -9,9 +9,6 @@ import PXP from "./components/projects/PXP"
 import pxpCover from "./assets/img/works/pxp.jpg"
 import pxpVisual1 from "./assets/img/works/pxp/visual1.jpg"
 
-import Flamalice from "./components/projects/Flamalice"
-import flamaliceCover from "./assets/img/works/flamalice.jpg"
-
 import Arcane from "./components/projects/Arcane"
 import arcaneCover from "./assets/img/works/arcane.jpg"
 import arcaneVisual1 from "./assets/img/works/arcane/visual1.jpg"
@@ -60,11 +57,11 @@ let projectsData = [
     coverImg: arcaneCover,
     visual1: arcaneVisual1,
     component: Arcane,
-    date: "Jul. 2020",
+    date: "November. 2021",
     role: "Ui designer",
     techs: ["AdobeXD Photoshop"],
     description:
-      "blablabla"
+      "Étant une grande joueuse de League of Legends, je suis tombée sous le charme de la série Arcane de Riot Games. Cela m'a donné envie d'ajouter ma touche créative en combinant mes passions, j'ai donc crée des pages pour chaque personnage principal de la série. Je vous laisse admirer le résultat !"
   },
   {
     name: "Grissini",
@@ -73,10 +70,10 @@ let projectsData = [
     coverImg: grissiniCover,
     visual1: grissiniVisual1,
     component: Grissini,
-    date: "Jul. 2021",
+    date: "Février. 2021",
     role: "Design, Front end dev",
     techs: ["HTML/CSS/JS"],
-    description:"lorem",
+    description:"Grissini Project, c'est 4 musiciens spécialisés dans la musique de jeux vidéos, d'animés et de films. Grissini a décidé de me contacter pour designer et développer leur site internet. Portant de grands intérêts pour les jeux vidéos et le piano, Grissini Project était le client idéal pour mettre en oeuvre mes compétances !",
     websiteLink: "https://grissiniproject.com/",
   },
   {
@@ -86,10 +83,10 @@ let projectsData = [
     title: "Logo creation for Shibuya",
     visual1: shibuyaVisual1,
     component: Shibuya,
-    date: "Jul. 2020",
-    role: "Front end dev, back end dev",
+    date: "December. 2021",
+    role: "Designer",
     techs: ["Illustrator, photoshop"],
-    description:"blabla"
+    description:"Shibuya est reconnu pour son crossing (sa traversée), qui est emprunté par plus de 100,000 personnes chaque jour. Les rues sont très carrées strictes, et le quartier très chic, minimaliste et moderne. J'avais pour objectif de refaire leur logo."
   },
   {
     name: "Hologramme",

@@ -51,8 +51,7 @@ const PXP = () => {
         <div className='art-direction'>
           <h4 className='text-h4'>Art direction</h4>
           <p className='text-description'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi
-            voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.
+            Nous sommes partis sur des couleurs monochromes pour harmoniser et faire ressortir les collections de Project X Paris. Les couleurs des collections étant très colorées, ressortent bien face à du noir et blanc. Pour la typographie, des fonts linéales et sans serif font de Project X Paris une marque minimaliste et haut de gamme.
           </p>
         </div>
         <div className='typography'>
@@ -82,8 +81,7 @@ const PXP = () => {
       {/* desktop ui */}
       <h2 className='text-h2'>Desktop UI</h2>
       <p className='text-description'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi
-        voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.
+        Maquettes desktop du site Project X Paris : des pages simples et harmonieuses et faciles d'accès aux collections.
       </p>
       {/* homepage */}
       <div className='spacer'></div>
@@ -98,8 +96,7 @@ const PXP = () => {
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
       <p className='text-description'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi
-        voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.
+        Site responsive accompagné de son menu du bas pour accéder facilement aux pages principales.
       </p>
       <div className='demi-spacer'></div>
       <div className='headline text-regular'>responsive selection</div>

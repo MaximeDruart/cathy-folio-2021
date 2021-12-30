@@ -13,18 +13,6 @@ import prints from "../../assets/img/works/shibuya/print.png"
 
 
 const StyledShibuya = styled.div`
-/* img.full-img{
-  width: 100vw;
-  margin-left: -10vw;
-  height: 80vh;
-  object-fit: cover;
-  @media (max-width: 769px) {
-        margin-left: -40px;
-      }
-      @media (max-width: 480px) {
-        margin-left: -28px;
-      }
-} */
 img{
   width: 100%;
   &.logo-duo{
