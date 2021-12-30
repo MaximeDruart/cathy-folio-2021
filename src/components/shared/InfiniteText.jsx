@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import gsap from "gsap"
 
 const topWords = ["digital", "creative", "design", "UI/UX", "Product"]
-const bottomWords = ["Art", "director", "design", "test", "test2"]
+const bottomWords = ["photoshop", "figma", "illustrator", "adobexd", "indesign"]
 
 const Container = styled.div`
   .line {

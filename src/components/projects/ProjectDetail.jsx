@@ -45,8 +45,12 @@ const StyledProjectDetail = styled.div`
     flex-wrap: wrap;
     img {
       width: 20%;
-      margin: 0 20px;
-      @media (max-width: 900px) {
+      margin: 20px;
+      @media (max-width: 1000px) {
+        width: 30%;
+        margin: 30px;
+      }
+      @media (max-width: 600px) {
         width: 40%;
         margin: 20px;
       }
