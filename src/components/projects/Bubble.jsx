@@ -63,7 +63,7 @@ const Bubble = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+          <p className="text-description">Je suis partie sur un design 'flat' et minimaliste pour représenter les bubble tea et l'univers autour de ceux-ci. Il y en a pour tous les goûts !</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>

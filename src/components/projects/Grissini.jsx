@@ -39,6 +39,7 @@ img{
       }
       &.two{
         background-color: black;
+        color: white;
       }
       &.three{
         background-color: #FDC463;

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="clip-grid4">
+      <rect width="500" height="500"/>
+    </clipPath>
+  </defs>
+  <g id="grid4" clip-path="url(#clip-grid4)">
+    <line id="Ligne_724" data-name="Ligne 724" y2="400" transform="translate(450 119.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <path id="Tracé_493" data-name="Tracé 493" d="M-1647,5844.749l150.165,145.753,49.782-14.878-149.606-147.742Z" transform="translate(1797 -5660.5)" fill="#cb3cff" opacity="0.5"/>
+    <line id="Ligne_726" data-name="Ligne 726" y2="400" transform="translate(150 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_727" data-name="Ligne 727" y2="400" transform="translate(350 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_728" data-name="Ligne 728" y2="400" transform="translate(450 249.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_729" data-name="Ligne 729" y2="400" transform="translate(450 314.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_730" data-name="Ligne 730" y2="400" transform="translate(450 184.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_731" data-name="Ligne 731" y2="400" transform="translate(450 379.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_732" data-name="Ligne 732" y2="400" transform="translate(450 151.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_733" data-name="Ligne 733" y2="400" transform="translate(450 134.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_734" data-name="Ligne 734" y2="400" transform="translate(450 167.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_735" data-name="Ligne 735" y2="400" transform="translate(450 330.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_736" data-name="Ligne 736" y2="400" transform="translate(450 217.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_737" data-name="Ligne 737" y2="400" transform="translate(450 282.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_738" data-name="Ligne 738" y2="400" transform="translate(450 346.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_739" data-name="Ligne 739" y2="400" transform="translate(450 362.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_740" data-name="Ligne 740" y2="400" transform="translate(250 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_741" data-name="Ligne 741" y2="400" transform="translate(300 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_742" data-name="Ligne 742" y2="400" transform="translate(200 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <path id="Tracé_494" data-name="Tracé 494" d="M-1647,5975l.094,64.5h49.856Z" transform="translate(1797 -5660.249)" fill="#1c34e8" opacity="0.5"/>
+    <path id="Tracé_495" data-name="Tracé 495" d="M-1597.05,6039.748l-.094-64.749H-1647Z" transform="translate(1947.05 -5855.248)" fill="#1c34e8" opacity="0.5"/>
+    <path id="Tracé_496" data-name="Tracé 496" d="M-1647,6039.748l.094-64.749h49.856Z" transform="translate(1947.05 -5660.248)" fill="#1c34e8" opacity="0.5"/>
+    <path id="Tracé_497" data-name="Tracé 497" d="M-1597.05,5975l-.094,64.749H-1647Z" transform="translate(1797 -5855.5)" fill="#1c34e8" opacity="0.5"/>
+    <circle id="Ellipse_133" data-name="Ellipse 133" cx="4.5" cy="4.5" r="4.5" transform="translate(246 245.5)" fill="red"/>
+    <circle id="Ellipse_134" data-name="Ellipse 134" cx="3.5" cy="3.5" r="3.5" transform="translate(346 311.5)" fill="aqua"/>
+    <circle id="Ellipse_135" data-name="Ellipse 135" cx="3.5" cy="3.5" r="3.5" transform="translate(297 327.5)" fill="aqua"/>
+    <circle id="Ellipse_136" data-name="Ellipse 136" cx="3.5" cy="3.5" r="3.5" transform="translate(147 181.5)" fill="aqua"/>
+    <circle id="Ellipse_137" data-name="Ellipse 137" cx="3.5" cy="3.5" r="3.5" transform="translate(197 164.5)" fill="aqua"/>
+  </g>
+</svg>

@@ -14,6 +14,24 @@ const StyledProjectDetail = styled.div`
       opacity: 1 !important;
     }
   }
+  .img_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+    img.duo{
+      width: 46%;
+      @media (max-width: 900px){
+        width: 100%;
+      }
+    }
+    img.trio{
+      width: 30%;
+      margin: 40px 0;
+      @media (max-width: 900px){
+        width: 46%;
+      }
+    }
+  }
   img.step {
     width: 50%;
     display: block;
@@ -226,7 +244,7 @@ const StyledProjectDetail = styled.div`
           display: flex;
           justify-content: center;
           align-items: center;
-          color: ${({ theme }) => theme.colors.text.disabled};
+          text-transform: uppercase;
           font-family: NeueMontrealRegular;
           font-size: 16px;
           width: 70%;

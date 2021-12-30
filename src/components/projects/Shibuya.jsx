@@ -7,6 +7,13 @@ import pub from "../../assets/img/works/shibuya/pub.png"
 import city from "../../assets/img/works/shibuya/city.png"
 import office from "../../assets/img/works/shibuya/office.png"
 import prints from "../../assets/img/works/shibuya/print.png"
+import grid1 from "../../assets/img/works/shibuya/grid1.svg"
+import grid2 from "../../assets/img/works/shibuya/grid2.svg"
+import grid3 from "../../assets/img/works/shibuya/grid3.svg"
+import grid4 from "../../assets/img/works/shibuya/grid4.svg"
+import grid5 from "../../assets/img/works/shibuya/grid5.svg"
+import grid6 from "../../assets/img/works/shibuya/grid6.svg"
+import FullImage from "../shared/FullImage"
 
 
 
@@ -21,6 +28,9 @@ img{
     text-align:center;
     margin:auto;
     display:flex;
+    @media (max-width: 900px){
+        width: 50%;
+      }
   }
 }
 .chart{
@@ -41,6 +51,7 @@ img{
       }
       &.two{
         background-color: black;
+        color: white;
       }
     }
   }
@@ -55,9 +66,7 @@ return (
   <div className="chart">
     <div className="art-direction">
       <h4 className="text-h4">Art direction</h4>
-      <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero
-        excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam
-        mollitia cupiditate quam.</p>
+      <p className="text-description">Pour le logo, j’ai choisis d’étudier la lettre S et faire une référence à la traversée, j’ai opté pour une base géométrique, moderne classe et simple, accompagné d’une baseline. </p>
     </div>
     <div className="typography">
       <h4 className="text-h4">Typography</h4>
@@ -69,13 +78,21 @@ return (
       <div className="color two">#000000</div>
     </div>
   </div>
-  <div className="big-spacer"></div>
+  <div className="spacer"></div>
   {/* end chart */}
-  <h2 className='text-h2'>Some preview of Shibuya</h2>
+  <FullImage src={moodboard} alt='preview' />
+  <div className="big-spacer"></div>
+  {/* step */}
+  <h2 className='text-h2'>Grid application</h2>
   <div className="demi-spacer"></div>
-  <div className='headline text-regular'>Night picture</div>
-  <div className='separator'></div>
-  <img src={moodboard} alt="moodboard"></img>
+  <div className="img_container">
+    <img className="trio" src={grid1} alt="grid" />
+    <img className="trio" src={grid2} alt="grid" />
+    <img className="trio" src={grid3} alt="grid" />
+    <img className="trio" src={grid4} alt="grid" />
+    <img className="trio" src={grid5} alt="grid" />
+    <img className="trio" src={grid6} alt="grid" />
+  </div>
   <div className="big-spacer"></div>
   {/* logo */}
   <h2 className='text-h2'>Logo result</h2>

@@ -31,11 +31,6 @@ const StyledSangen = styled.div`
 h2{
   margin: 50px 0;
 }
-.duo_container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 img{
   width: 100%;
   margin-bottom: 50px;
@@ -47,12 +42,6 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    @media (max-width: 900px){
-      width: 100%;
-    }
-  }
-  &.duo{
-    width: 46%;
     @media (max-width: 900px){
       width: 100%;
     }
@@ -113,7 +102,7 @@ const Sangen = () => {
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>Dark Print</div>
       <div className='separator'></div>
-      <div className="duo_container">
+      <div className="img_container">
         <img className="duo" src={kill} alt="print" />
         <img className="duo" src={vol} alt="print" />
         <img className="duo" src={low} alt="print" />
@@ -122,7 +111,7 @@ const Sangen = () => {
       <div className="spacer"></div>
       <div className='headline text-regular'>Light Print</div>
       <div className='separator'></div>
-      <div className="duo_container">
+      <div className="img_container">
         <img className="duo" src={cube} alt="print" />
         <img className="duo" src={wave} alt="print" />
       </div>

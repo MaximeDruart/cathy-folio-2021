@@ -57,7 +57,7 @@ let projectsData = [
     coverImg: arcaneCover,
     visual1: arcaneVisual1,
     component: Arcane,
-    date: "November. 2021",
+    date: "November 2021",
     role: "Ui designer",
     techs: ["AdobeXD Photoshop"],
     description:
@@ -70,7 +70,7 @@ let projectsData = [
     coverImg: grissiniCover,
     visual1: grissiniVisual1,
     component: Grissini,
-    date: "Février. 2021",
+    date: "Février 2021",
     role: "Design, Front end dev",
     techs: ["HTML/CSS/JS"],
     description:"Grissini Project, c'est 4 musiciens spécialisés dans la musique de jeux vidéos, d'animés et de films. Grissini a décidé de me contacter pour designer et développer leur site internet. Portant de grands intérêts pour les jeux vidéos et le piano, Grissini Project était le client idéal pour mettre en oeuvre mes compétances !",
@@ -83,7 +83,7 @@ let projectsData = [
     title: "Logo creation for Shibuya",
     visual1: shibuyaVisual1,
     component: Shibuya,
-    date: "December. 2021",
+    date: "December 2021",
     role: "Designer",
     techs: ["Illustrator, photoshop"],
     description:"Shibuya est reconnu pour son crossing (sa traversée), qui est emprunté par plus de 100,000 personnes chaque jour. Les rues sont très carrées strictes, et le quartier très chic, minimaliste et moderne. J'avais pour objectif de refaire leur logo."
@@ -95,11 +95,11 @@ let projectsData = [
     visual1: hologrammeVisual1,
     coverImg: hologrammeCover,
     component: Hologramme,
-    date: "Jul. 2020",
-    role: "Front end dev, back end dev",
-    techs: ["HTML/CSS/JS", "React", "WebGL / THREE.js", "Node", "MongoDB"],
+    date: "December. 2020",
+    role: "UI UX Designer",
+    techs: ["Adobe XD,", " Photoshop"],
     description:
-      "blablabla grossiste de chapeau"
+      "Hologramme est un distributeur de chapeau haut de gamme. J'ai eu pour mission de refaire le design de leur site internet B2C"
   },
   {
     name: "Sangen",
@@ -111,7 +111,7 @@ let projectsData = [
     date: "Dec. 2021",
     role: "Designer, Developer",
     techs: ["Processing", " Java"],
-    description:"blablabla"
+    description:"J'avais pour mission de créer un programme sur Processing. J'ai décidé de créer un générateur de pattern aléatoire au niveau des formes mais également des couleurs."
   },
   {
     name: "Desktop",

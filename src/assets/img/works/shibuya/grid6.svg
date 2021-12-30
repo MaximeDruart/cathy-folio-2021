@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="clip-grid6">
+      <rect width="500" height="500"/>
+    </clipPath>
+  </defs>
+  <g id="grid6" clip-path="url(#clip-grid6)">
+    <line id="Ligne_725" data-name="Ligne 725" y2="400" transform="translate(450 119.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <path id="Tracé_504" data-name="Tracé 504" d="M-1647,5844.749l150.165,145.753,49.782-14.878-149.606-147.742Z" transform="translate(1797 -5660.5)" fill="#1c34e8"/>
+    <line id="Ligne_756" data-name="Ligne 756" y2="400" transform="translate(150 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_757" data-name="Ligne 757" y2="400" transform="translate(350 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_758" data-name="Ligne 758" y2="400" transform="translate(450 249.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_759" data-name="Ligne 759" y2="400" transform="translate(450 314.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_760" data-name="Ligne 760" y2="400" transform="translate(450 184.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_761" data-name="Ligne 761" y2="400" transform="translate(450 379.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_762" data-name="Ligne 762" y2="400" transform="translate(450 151.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_763" data-name="Ligne 763" y2="400" transform="translate(450 134.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_764" data-name="Ligne 764" y2="400" transform="translate(450 167.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_765" data-name="Ligne 765" y2="400" transform="translate(450 330.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_766" data-name="Ligne 766" y2="400" transform="translate(450 217.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_767" data-name="Ligne 767" y2="400" transform="translate(450 282.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_768" data-name="Ligne 768" y2="400" transform="translate(450 346.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_769" data-name="Ligne 769" y2="400" transform="translate(450 362.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_770" data-name="Ligne 770" y2="400" transform="translate(450 411.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_771" data-name="Ligne 771" y2="400" transform="translate(450 429.5) rotate(90)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_772" data-name="Ligne 772" y2="400" transform="translate(250 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_773" data-name="Ligne 773" y2="400" transform="translate(300 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <line id="Ligne_774" data-name="Ligne 774" y2="400" transform="translate(200 50)" fill="none" stroke="#6e6e6e" stroke-width="0.5"/>
+    <path id="Tracé_505" data-name="Tracé 505" d="M-1647,5975l.094,64.5h49.856Z" transform="translate(1797 -5660.249)" fill="#1c34e8"/>
+    <path id="Tracé_506" data-name="Tracé 506" d="M-1597.05,6039.748l-.094-64.749H-1647Z" transform="translate(1947.05 -5855.248)" fill="#1c34e8"/>
+    <path id="Tracé_507" data-name="Tracé 507" d="M32.375,0l-.061,100.027H0Z" transform="translate(249.973 152.126) rotate(-90)" fill="#1c34e8"/>
+    <path id="Tracé_508" data-name="Tracé 508" d="M-1647,6039.748l.094-64.749h49.856Z" transform="translate(1947.05 -5660.248)" fill="#1c34e8"/>
+    <path id="Tracé_509" data-name="Tracé 509" d="M-1597.05,5975l-.094,64.749H-1647Z" transform="translate(1797 -5855.5)" fill="#1c34e8"/>
+    <path id="Tracé_510" data-name="Tracé 510" d="M7.776-10.008c-2.52-.624-4.368-.936-4.368-3.216,0-1.416,1.3-2.352,3.72-2.352,2.712,0,4.008,1.2,4.32,3.5h2.16c-.288-3.552-2.832-5.424-6.48-5.424-3.792,0-5.88,1.8-5.88,4.512,0,3.336,3.072,4.224,5.64,4.824C10.728-7.272,12-6.84,12-4.488c0,1.536-1.056,2.9-4.032,2.9-3.6,0-5.04-1.824-5.28-4.176H.528c.24,3.936,3.384,6.1,7.44,6.1,4.344,0,6.192-2.328,6.192-4.824C14.16-8.4,11.64-9.048,7.776-10.008ZM33.744-17.16V0H35.9V-7.944h9.168V0h2.16V-17.16h-2.16v7.3H35.9v-7.3Zm33.864,0V0h2.16V-17.16Zm35.064,4.32c0-2.664-2.112-4.32-5.616-4.32H90.144V0h7.392c3.552,0,5.808-1.824,5.808-4.992a3.967,3.967,0,0,0-3.336-4.248v-.048A3.493,3.493,0,0,0,102.672-12.84ZM92.3-9.984V-15.24h5.328c1.968,0,2.88,1.08,2.88,2.64s-.672,2.616-3.12,2.616Zm0,1.92h5.928a2.83,2.83,0,0,1,2.952,3.072c0,1.608-.672,3.072-3.432,3.072H92.3Zm43.272,2.352V-17.16h-2.16V-5.712c0,2.784-1.44,4.128-4.416,4.128s-4.416-1.344-4.416-4.128V-17.16h-2.16V-5.712c0,3.5,1.992,6.048,6.576,6.048S135.576-2.208,135.576-5.712ZM154.248-17.16l6.24,10.128V0h2.16V-7.032l6.264-10.128h-2.328l-4.992,8.4h-.048l-4.968-8.4ZM196.008-4.3,197.52,0h2.232L193.44-17.16h-2.4L184.7,0h2.232l1.512-4.3Zm-6.84-1.92,3.048-8.952h.048l3.048,8.952Z" transform="translate(150 429.5)" fill="#1c34e8"/>
+  </g>
+</svg>
