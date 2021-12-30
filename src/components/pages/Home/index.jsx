@@ -25,7 +25,7 @@ import piano from "../../../assets/img/about/piano.gif"
 import draw from "../../../assets/img/about/draw.gif"
 import food from "../../../assets/img/about/food.gif"
 import painting from "../../../assets/img/about/painting.gif"
-import architecture from "../../../assets/img/about/architecture.gif"
+import manual from "../../../assets/img/about/manual.gif"
 import art from "../../../assets/img/about/art.gif"
 
 import twitch from "../../../assets/img/about/twitch.jpg"
@@ -496,14 +496,14 @@ const Home = () => {
                 </div>
               </div>               
             </div>  
-              {/* architecture */}
+              {/* manual */}
               <div className="passion">
-              <img src={architecture} alt="passion" />
+              <img src={manual} alt="passion" />
               <div className="text-content">
                 <h3 className="text-h3 number">08</h3>
                 <div className="text-description">
-                  <h4 className="text-h4">Architecture</h4>  
-                  <p className="text-regular">allow me to be pixel on element</p>
+                  <h4 className="text-h4">Manual crafting</h4>  
+                  <p className="text-regular">Bring my ideas to life</p>
                 </div>
               </div>               
             </div>   
