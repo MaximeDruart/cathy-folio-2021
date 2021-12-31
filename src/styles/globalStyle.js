@@ -3,6 +3,7 @@ import NeueMontrealRegular from "../assets/fonts/NeueMontreal-Regular.otf"
 import SaolDisplayLight from "../assets/fonts/SaolDisplay-Light.ttf"
 import SaolDisplaySemiboldItalic from "../assets/fonts/SaolDisplay-SemiboldItalic.ttf"
 import BebasNeueRegular from "../assets/fonts/BebasNeueRegular.otf"
+import Helvetica from "../assets/fonts/Helvetica.ttf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
@@ -209,6 +210,10 @@ export default createGlobalStyle`
     @font-face {
       font-family: "BebasNeueRegular";
       src: url(${BebasNeueRegular});
+    }
+    @font-face {
+      font-family: "Helvetica";
+      src: url(${Helvetica});
     }
 
 

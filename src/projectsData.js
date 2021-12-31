@@ -17,6 +17,10 @@ import Hologramme from "./components/projects/Hologramme"
 import hologrammeCover from "./assets/img/works/hologramme.jpg"
 import hologrammeVisual1 from "./assets/img/works/hologramme/visual1.jpg"
 
+import Circl from "./components/projects/Circl"
+import circlCover from "./assets/img/works/circl.jpg"
+import circlVisual1 from "./assets/img/works/circl/visual1.jpg"
+
 import Shibuya from "./components/projects/Shibuya"
 import shibuyaCover from "./assets/img/works/shibuya.jpg"
 import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
@@ -87,6 +91,19 @@ let projectsData = [
     role: "Designer",
     techs: ["Illustrator, photoshop"],
     description:"Shibuya est reconnu pour son crossing (sa traversée), qui est emprunté par plus de 100,000 personnes chaque jour. Les rues sont très carrées strictes, et le quartier très chic, minimaliste et moderne. J'avais pour objectif de refaire leur logo."
+  },
+  {
+    name: "Circl.GG",
+    path: "Circl",
+    title: "UI & Graphic design for Circl.GG",
+    coverImg: circlCover,
+    visual1: circlVisual1,
+    component: Circl,
+    date: "December 2021",
+    role: "UI Design",
+    techs: ["Adobe XD, ","Illustrator"],
+    description:"Circl.GG est une application pour la recherche de joueur sur les jeux Riot Games comme League of Legends, il y a également un système de club et de tournois. J'ai du m'occuper de la charte graphique et de l'UI UX design de l'application.",
+    websiteLink: "",
   },
   {
     name: "Hologramme",
