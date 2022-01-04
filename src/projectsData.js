@@ -41,14 +41,14 @@ let projectsData = [
   {
     name: "Project X",
     path: "project-x-paris",
-    title: "Refonte complète du site Project X Paris",
+    title: "Complete redesign of the Project X Paris website",
     coverImg: pxpCover,
     component: PXP,
     date: "Jul. 2021",
     role: "UI/UX Designer & web integrator",
     techs: ["Wordpress, Elementor"],
     description:
-      "Spécialiste en vêtements streetwear née en 2015, Project X Paris propose un concept avant gardiste où se rencontrent hip hop, sport, streetwear, lifestyle et art. Ma mission dans ce projet était de faire une fonte de leur site officiel pour faciliter les achats aux clients, et avoir une interface plus ergonomique ainsi qu'une charte graphique qui correspond à la marque.",
+      "Streetwear specialist born in 2015, Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers, and to have a more ergonomic interface as well as a graphic charter which corresponds to the brand.",
     visual1: pxpVisual1,
     websiteLink: "https://www.projectxparis.com/",
     color1: "#000000",
@@ -61,11 +61,11 @@ let projectsData = [
     coverImg: arcaneCover,
     visual1: arcaneVisual1,
     component: Arcane,
-    date: "November 2021",
+    date: "Nov. 2021",
     role: "Ui designer",
     techs: ["AdobeXD Photoshop"],
     description:
-      "Étant une grande joueuse de League of Legends, je suis tombée sous le charme de la série Arcane de Riot Games. Cela m'a donné envie d'ajouter ma touche créative en combinant mes passions, j'ai donc crée des pages pour chaque personnage principal de la série. Je vous laisse admirer le résultat !"
+      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!"
   },
   {
     name: "Grissini",
@@ -74,10 +74,10 @@ let projectsData = [
     coverImg: grissiniCover,
     visual1: grissiniVisual1,
     component: Grissini,
-    date: "Février 2021",
+    date: "Feb. 2021",
     role: "Design, Front end dev",
     techs: ["HTML/CSS/JS"],
-    description:"Grissini Project, c'est 4 musiciens spécialisés dans la musique de jeux vidéos, d'animés et de films. Grissini a décidé de me contacter pour designer et développer leur site internet. Portant de grands intérêts pour les jeux vidéos et le piano, Grissini Project était le client idéal pour mettre en oeuvre mes compétances !",
+    description:"Grissini Project is 4 musicians specialized in music for video games, anime and movies. Grissini decided to contact me to design and develop their website. With a strong interest in video games and piano, Grissini Project was the perfect client to use my skills!",
     websiteLink: "https://grissiniproject.com/",
   },
   {
@@ -87,10 +87,10 @@ let projectsData = [
     coverImg: circlCover,
     visual1: circlVisual1,
     component: Circl,
-    date: "December 2021",
+    date: "Dec. 2021",
     role: "UI Design",
     techs: ["Adobe XD, ","Illustrator"],
-    description:"Circl.GG est une application pour la recherche de joueur sur les jeux Riot Games comme League of Legends, il y a également un système de club et de tournois. J'ai du m'occuper de la charte graphique et de l'UI UX design de l'application.",
+    description:"Circl.GG is an application for player search on Riot Games like League of Legends, there is also a club and tournament system. I had to take care of the graphic charter and the UI UX design of the application.",
     websiteLink: "",
   },
   {
@@ -100,10 +100,10 @@ let projectsData = [
     title: "Logo creation for Shibuya",
     visual1: shibuyaVisual1,
     component: Shibuya,
-    date: "December 2021",
+    date: "Dec. 2021",
     role: "Designer",
     techs: ["Illustrator, photoshop"],
-    description:"Shibuya est reconnu pour son crossing (sa traversée), qui est emprunté par plus de 100,000 personnes chaque jour. Les rues sont très carrées strictes, et le quartier très chic, minimaliste et moderne. J'avais pour objectif de refaire leur logo."
+    description:"Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo."
   },
   {
     name: "Hologramme",
@@ -112,11 +112,11 @@ let projectsData = [
     visual1: hologrammeVisual1,
     coverImg: hologrammeCover,
     component: Hologramme,
-    date: "December. 2020",
+    date: "Dec. 2020",
     role: "UI UX Designer",
     techs: ["Adobe XD,", " Photoshop"],
     description:
-      "Hologramme est un distributeur de chapeau haut de gamme. J'ai eu pour mission de refaire le design de leur site internet B2C"
+      "Hologramme is a high end hat distributor. I was asked to redesign their B2C website"
   },
   {
     name: "Sangen",

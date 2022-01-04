@@ -9,7 +9,7 @@ const StyledMenu = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 90;
+  z-index: 500;
   top: 0;
   left: 0;
   background: ${({ theme }) => theme.colors.background};

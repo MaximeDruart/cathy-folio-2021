@@ -35,6 +35,7 @@ const StyledPXP = styled.div`
         }
         &.two {
           background-color: black;
+          color: white;
         }
       }
     }
