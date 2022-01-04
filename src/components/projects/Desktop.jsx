@@ -61,7 +61,7 @@ const Desktop = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Pour ce projet j'ai voulu partir dans un univers "flat design" minimaliste et moderne à la fois en me rapprochant du style d'Apple pour l'interface. Des thèmes dark et light sont disponibles, il y en a pour tous les goûts !</p>
+          <p className="text-description">For this project I wanted to go in a "flat design" universe, minimalist and modern at the same time, getting closer to the Apple style for the interface. Dark and light themes are available, there is something for everyone !</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>

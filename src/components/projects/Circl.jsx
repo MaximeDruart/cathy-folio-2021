@@ -99,7 +99,7 @@ const Grissini = () => {
       <div className="big-spacer"></div>
       {/* desktop ui */}
       <h2 className='text-h2'>Desktop UI</h2>
-      <p className="text-description">Maquettes desktop pour le site internet de Grissini Project; quelques previews, design simple et épuré, avec pour background une vidéo de Grissini en faible opacité pour faire ressortir le contenu.</p>
+      <p className="text-description">Desktop mockups for the Grissini Project website; a few previews, simple and clean design, with a background of a video of Grissini in low opacity to highlight the content.</p>
       {/* login */}
       <div className="spacer"></div>
       <div className='headline text-regular'>login page</div>

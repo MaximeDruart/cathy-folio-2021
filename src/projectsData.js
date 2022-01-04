@@ -128,7 +128,7 @@ let projectsData = [
     date: "Dec. 2021",
     role: "Designer, Developer",
     techs: ["Processing", " Java"],
-    description:"J'avais pour mission de créer un programme sur Processing. J'ai décidé de créer un générateur de pattern aléatoire au niveau des formes mais également des couleurs."
+    description:"My mission was to create a program on Processing. I decided to create a random pattern generator for shapes but also for colors."
   },
   {
     name: "Desktop",

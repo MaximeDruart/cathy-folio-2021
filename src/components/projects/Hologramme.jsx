@@ -56,7 +56,7 @@ const Hologramme = () => {
       <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Je suis partie sur un design épuré et une typography moderne représentant bien Hologramme. J'ai décidé de choisir une palette de couleur saisonnière, du brun pour l'hiver et l'automne et du bleu pour le printemps et l'été.</p>
+          <p className="text-description">I went with a clean design and modern typography that represents Hologram well. I decided to go with a seasonal color palette, brown for winter and fall and blue for spring and summer.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>

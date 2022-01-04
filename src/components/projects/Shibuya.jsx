@@ -66,7 +66,7 @@ return (
   <div className="chart">
     <div className="art-direction">
       <h4 className="text-h4">Art direction</h4>
-      <p className="text-description">Pour le logo, j’ai choisis d’étudier la lettre S et faire une référence à la traversée, j’ai opté pour une base géométrique, moderne classe et simple, accompagné d’une baseline. </p>
+      <p className="text-description">For the logo, I chose to study the letter S and make a reference to the crossing, I opted for a geometric base, modern class and simple, accompanied by a baseline.</p>
     </div>
     <div className="typography">
       <h4 className="text-h4">Typography</h4>
@@ -118,12 +118,12 @@ return (
   <img src={city} alt="logo"></img>
   <div className="big-spacer"></div>
   {/* city */}
-  <div className='headline text-regular'>Advertisements in the neighborhood</div>
+  <div className='headline text-regular'>Office stuff</div>
   <div className='separator'></div>
   <img src={office} alt="logo"></img>
   <div className="big-spacer"></div>
   {/* city */}
-  <div className='headline text-regular'>Advertisements in the neighborhood</div>
+  <div className='headline text-regular'>Print stuff</div>
   <div className='separator'></div>
   <img src={prints} alt="logo"></img>
   <div className="big-spacer"></div>

@@ -57,7 +57,7 @@ const Arcane = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Je suis partie sur la typographie de "KDA" de League of legends pour les titres,et du Neue Montreal pour le corps de texte. Des couleurs simples et chaleureuses rappelant la série.</p>
+          <p className="text-description">I used the "KDA" typography from League of legends for the titles, and Neue Montreal for the body text. Simple and warm colors reminding the series.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>

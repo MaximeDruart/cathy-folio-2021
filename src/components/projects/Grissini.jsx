@@ -58,7 +58,7 @@ const Grissini = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Je suis partie sur un design minimaliste et épurée, rappelant en même temps la musique classique tout en restant élégant. La typographie Saol Display répondait parfaitement à cette attente. Pour la couleur principale nous sommes partis sur du doré, une couleur à la fois luxieuse et harmonieuse.</p>
+          <p className="text-description">I decided on a minimalist and pure design, reminding at the same time the classical music while remaining elegant. The Saol Display typography was the perfect answer. For the main color we decided on gold, a luxurious and harmonious color.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
@@ -79,7 +79,7 @@ const Grissini = () => {
       <div className="spacer"></div>
       {/* desktop ui */}
       <h2 className='text-h2'>Desktop UI</h2>
-      <p className="text-description">Maquettes desktop pour le site internet de Grissini Project; quelques previews, design simple et épuré, avec pour background une vidéo de Grissini en faible opacité pour faire ressortir le contenu.</p>
+      <p className="text-description">Desktop mockups for the Grissini Project website; a few previews, simple and clean design, with a background of a video of Grissini in low opacity to highlight the content.</p>
       {/* homepage */}
       <div className="spacer"></div>
       <div className='headline text-regular'>homepage</div>
@@ -96,7 +96,7 @@ const Grissini = () => {
       <div className="spacer"></div>
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
-      <p className="text-description">Maquettes responsives gardant la simplicité et facilité de navigation sur le site.</p>
+      <p className="text-description">Responsive mock-ups keeping the site simple and easy to navigate.</p>
       <div className="demi-spacer"></div> 
       <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>
