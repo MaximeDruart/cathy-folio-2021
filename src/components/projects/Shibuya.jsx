@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import moodboard from "../../assets/img/works/shibuya/moodboard.png"
-import blackLatin from "../../assets/img/works/shibuya/black_latin.svg"
-import blackKanji from "../../assets/img/works/shibuya/black_kanji.svg"
 import pub from "../../assets/img/works/shibuya/pub.png"
 import city from "../../assets/img/works/shibuya/city.png"
 import office from "../../assets/img/works/shibuya/office.png"
@@ -14,6 +12,9 @@ import grid4 from "../../assets/img/works/shibuya/grid4.svg"
 import grid5 from "../../assets/img/works/shibuya/grid5.svg"
 import grid6 from "../../assets/img/works/shibuya/grid6.svg"
 import FullImage from "../shared/FullImage"
+import ShibuyaLatin from "../../assets/icons/shibuya_latin.svg?component"
+import ShibuyaKanji from "../../assets/icons/shibuya_kanji.svg?component"
+
 
 
 
@@ -22,15 +23,23 @@ import FullImage from "../shared/FullImage"
 const StyledShibuya = styled.div`
 img{
   width: 100%;
-  &.logo-duo{
-    width: 20%;
-    margin-top: 30px;
-    text-align:center;
-    margin:auto;
-    display:flex;
-    @media (max-width: 900px){
-        width: 50%;
-      }
+}
+svg{
+  font-size:11px;
+  font-family:NeueMontreal-Regular, Neue Montreal;
+  letter-spacing:0.713em;
+}
+.logo-duo{
+  display: flex;
+  justify-content: center;
+  svg:nth-child(1){
+    fill: ${({ theme }) => theme.colors.text.standard};
+  }
+  svg:nth-child(2){
+    fill: ${({ theme }) => theme.colors.primary1};
+  }
+  svg{
+    margin: 0 60px;
   }
 }
 .chart{
@@ -99,11 +108,17 @@ return (
   <div className="demi-spacer"></div>
   <div className='headline text-regular'>Latin Logo</div>
   <div className='separator'></div>
-  <img className="logo-duo" src={blackLatin} alt="logo"></img>
+  <div className="logo-duo">
+    <ShibuyaLatin />
+    <ShibuyaLatin />
+  </div>
   <div className="spacer"></div>
   <div className='headline text-regular'>Kanji Logo</div>
   <div className='separator'></div>
-  <img className="logo-duo" src={blackKanji} alt="logo"></img>
+  <div className="logo-duo">
+    <ShibuyaKanji />
+    <ShibuyaKanji />
+  </div>
   <div className="big-spacer"></div>
   <h2 className='text-h2'>Mockup</h2>
   <div className="demi-spacer"></div>

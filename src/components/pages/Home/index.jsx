@@ -3,8 +3,6 @@ import styled from "styled-components"
 
 import Slider from "../../shared/Slider"
 import ArrowDownSVG from "../../../assets/icons/arrow_down.svg?component"
-import ArrowSVG from "../../../assets/icons/arrow.svg?component"
-
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import PageTemplate from "../PageTemplate"
 import { Link } from "react-router-dom"
