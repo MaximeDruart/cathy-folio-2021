@@ -38,7 +38,7 @@ img{
     height: 100vh;
   }
   &.step{
-    width: 60%;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
