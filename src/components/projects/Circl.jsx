@@ -2,14 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import FullImage from "../shared/FullImage"
 import preview from "../../assets/img/works/circl/preview.jpg"
-import grid1 from "../../assets/img/works/circl/grid1.svg"
-import grid2 from "../../assets/img/works/circl/grid2.svg"
-import grid3 from "../../assets/img/works/circl/grid3.svg"
 import mockup from "../../assets/img/works/circl/mockup.png"
 import login from "../../assets/img/works/circl/login.png"
 import lobby from "../../assets/img/works/circl/lobby.png"
 import club from "../../assets/img/works/circl/club.png"
 import bracket from "../../assets/img/works/circl/bracket.png"
+import Circl1 from "../../assets/icons/circl1.svg?component"
+import Circl2 from "../../assets/icons/circl2.svg?component"
+import Circl3 from "../../assets/icons/circl3.svg?component"
+
 
 
 
@@ -17,6 +18,15 @@ import bracket from "../../assets/img/works/circl/bracket.png"
 
 
 const StyledGrissini = styled.div`
+svg:nth-child(1){
+  .a,.b,.e{fill:${({ theme }) => theme.colors.text.standard};}.b{stroke:#707070;}.c,.i{fill:none;}.d,.g{fill:#3a69e2;}.f{clip-path:url(#a);}.h{clip-path:url(#b);}.i{stroke:#6e6e6e;opacity:0.5;}.j,.k,.l{stroke:none;}.k{fill:#3a69e2;}.l{fill:${({ theme }) => theme.colors.text.standard};}
+  }
+svg:nth-child(2){
+  .a,.b,.f{fill:${({ theme }) => theme.colors.text.standard};}.b{stroke:#707070;}.c,.j{fill:none;}.d{opacity:0.3;}.e,.h{fill:#3a69e2;}.g{clip-path:url(#a);}.i{clip-path:url(#b);}.j{stroke:#6e6e6e;opacity:0.496;}.k,.l,.m{stroke:none;}.l{fill:#3a69e2;}.m{fill:${({ theme }) => theme.colors.text.standard};}
+}
+svg:nth-child(3){
+  .a,.b,.e{fill:${({ theme }) => theme.colors.text.standard};}.b{stroke:#707070;}.c{fill:none;}.d,.g{fill:#3a69e2;}.f{clip-path:url(#a);}.h{clip-path:url(#b);}.i,.j,.k{stroke:none;}.j{fill:#3a69e2;}.k{fill:${({ theme }) => theme.colors.text.standard};}
+}
 img{
   width: 100%;
   margin-bottom: 50px;
@@ -88,9 +98,9 @@ const Grissini = () => {
       <div className='headline text-regular'>logo maker</div>
       <div className='separator'></div>
       <div className="img_container">
-        <img className="trio" src={grid1} alt="grid" />
-        <img className="trio" src={grid2} alt="grid" />
-        <img className="trio" src={grid3} alt="grid" />
+        <Circl1></Circl1>
+        <Circl2></Circl2>
+        <Circl3></Circl3>
       </div>
       <div className="spacer"></div>
       <div className='headline text-regular'>Mockup</div>

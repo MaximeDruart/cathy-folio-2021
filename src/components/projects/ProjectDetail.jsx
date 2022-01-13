@@ -24,11 +24,11 @@ const StyledProjectDetail = styled.div`
         width: 100%;
       }
     }
-    img.trio{
+    img.trio, svg{
       width: 30%;
       margin: 40px 0;
       @media (max-width: 900px){
-        width: 46%;
+        width: 100%;
       }
     }
   }
