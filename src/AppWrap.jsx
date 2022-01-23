@@ -5,15 +5,16 @@ import { ThemeProvider } from "styled-components"
 import useStore from "./store"
 
 import GlobalStyle from "./styles/globalStyle"
-import darkTheme from "./styles/themes/dark"
-import lightTheme from "./styles/themes/light"
+import darkThemes from "./styles/themes/dark"
+import lightThemes from "./styles/themes/light"
 
 import App from "./App"
 
 const AppWrap = () => {
   const isDarkMode = useStore((state) => state.isDarkMode)
+  const activeColorIndex = useStore((state) => state.activeColorIndex)
   return (
-    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={isDarkMode ? darkThemes[activeColorIndex] : lightThemes[activeColorIndex]}>
       <GlobalStyle />
       <Router>
         <App></App>

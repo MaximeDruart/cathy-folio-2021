@@ -33,8 +33,8 @@ const store = (set, get) => ({
     set((state) => ({ isDarkMode: !state.isDarkMode }))
   },
 
-  activeColor: colors[0],
-  setActiveColor: (index) => set({ activeColor: colors[index] }),
+  activeColorIndex: 0,
+  setActiveColorIndex: (index) => set({ activeColorIndex: index }),
 })
 
 // allows the use of the redux devtools extension with zustand
