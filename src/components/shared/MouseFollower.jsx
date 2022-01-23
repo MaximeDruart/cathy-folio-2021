@@ -51,6 +51,8 @@ const StyledMouseFollower = styled.div`
 
 const easeInOutQuad = (x) => (x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2)
 
+let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
+
 const MouseFollower = () => {
   let $mouseFollower = useRef(null)
   let $outerCircleWrapper = useRef(null)
@@ -74,11 +76,11 @@ const MouseFollower = () => {
   const theme = useTheme()
 
   useEffect(() => {
-    let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
     let isClicking = false
     let clickProgression = 0
     let isHovering = false
     let hoverProgression = 0
+
     const updatePos = () => {
       followerOuter.current.x = lerp(followerOuter.current.x, mousePos.x, 0.2)
       followerOuter.current.y = lerp(followerOuter.current.y, mousePos.y, 0.2)
@@ -138,7 +140,7 @@ const MouseFollower = () => {
         }
 
         if (isHovering) {
-          gsap.to($outerCircle.current, { borderColor: `${theme.colors.primary1}00` })
+          gsap.to($outerCircle.current, { borderColor: "transparent" })
           gsap.to($hoverCircle.current, { scale: 1 })
         } else {
           gsap.to($outerCircle.current, { borderColor: theme.colors.primary1 })
@@ -165,12 +167,14 @@ const MouseFollower = () => {
       },
       { once: true }
     )
+
     return () => {
       window.removeEventListener("mousemove", mousemoveHandler)
-      window.removeEventListener("click", clickHandler)
+      window.removeEventListener("mousedown", mousedownHandler)
+      window.removeEventListener("mouseup", mouseupHandler)
       cancelAnimationFrame(raf)
     }
-  }, [$innerCircle])
+  }, [$innerCircle, theme])
 
   return (
     <StyledMouseFollower ref={$mouseFollower}>

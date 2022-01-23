@@ -1,19 +1,6 @@
-const lightTheme = {}
+import { lightColors } from "./colors"
 
-const lightColors = [
-  {
-    name: "amethyst",
-    color: "red",
-  },
-  {
-    name: "sakura",
-    color: "blue",
-  },
-  {
-    name: "emerald",
-    color: "green",
-  },
-]
+const lightTheme = {}
 
 lightTheme.colors = {
   background: "rgb(238, 236, 230)",

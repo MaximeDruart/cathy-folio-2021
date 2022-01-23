@@ -1,19 +1,6 @@
-const darkTheme = {}
+import { darkColors } from "./colors"
 
-const darkColors = [
-  {
-    name: "amethyst",
-    color: "#7176eb",
-  },
-  {
-    name: "sakura",
-    color: "pink",
-  },
-  {
-    name: "emerald",
-    color: "blue",
-  },
-]
+const darkTheme = {}
 
 darkTheme.colors = {
   background: "#000000",

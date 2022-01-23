@@ -39,4 +39,18 @@ const useMouseMove = () => {
   return { coords, target }
 }
 
-export { useEventListener, useMouseMove }
+const useClickOutside = (ref, callback) => {
+  const handleClick = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      callback()
+    }
+  }
+  useEffect(() => {
+    document.addEventListener("click", handleClick)
+    return () => {
+      document.removeEventListener("click", handleClick)
+    }
+  })
+}
+
+export { useEventListener, useMouseMove, useClickOutside }

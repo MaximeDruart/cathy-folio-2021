@@ -5,21 +5,6 @@ import { createRef } from "react"
 
 const mfIsHoveringCanvas = createRef(false)
 
-export const colors = [
-  {
-    name: "amethyst",
-    color: "#7176eb",
-  },
-  {
-    name: "sakura",
-    color: "pink",
-  },
-  {
-    name: "emerald",
-    color: "blue",
-  },
-]
-
 const store = (set, get) => ({
   isMenuOpen: false,
   toggleMenu: () => {

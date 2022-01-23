@@ -1,13 +1,18 @@
 import { AnimatePresence, motion } from "framer-motion"
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import styled from "styled-components"
-import useStore, { colors } from "../../store"
+import { useClickOutside } from "../../assets/utils/hooks"
+import useStore from "../../store"
+import { darkColors, lightColors } from "../../styles/themes/colors"
 
 import darkThemes from "../../styles/themes/dark"
 import lightThemes from "../../styles/themes/light"
 
 const Container = styled.div`
+  display: flex;
+  justify-content: flex-end;
   pointer-events: auto;
+  width: 20px;
 
   ul {
     display: flex;
@@ -47,18 +52,62 @@ const ColorListItem = styled(motion.li)`
 `
 
 const ColorPicker = () => {
+  const container = useRef()
+
   const activeColorIndex = useStore((state) => state.activeColorIndex)
   const setActiveColorIndex = useStore((state) => state.setActiveColorIndex)
   const isDarkMode = useStore((state) => state.isDarkMode)
 
+  const [colors, setColors] = useState(isDarkMode ? darkColors : lightColors)
+  const [activeTheme, setActiveTheme] = useState(
+    isDarkMode ? darkThemes[activeColorIndex] : lightThemes[activeColorIndex]
+  )
+
+  useClickOutside(container, () => setIsOpen(false))
+
   const [isOpen, setIsOpen] = useState(false)
 
-  const activeTheme = isDarkMode ? darkThemes[activeColorIndex] : lightThemes[activeColorIndex]
+  const getIndexForColorName = (colorName) =>
+    isDarkMode
+      ? darkThemes.findIndex((theme) => theme.name === colorName)
+      : lightThemes.findIndex((theme) => theme.name === colorName)
+
+  useEffect(() => {
+    setColors(isDarkMode ? darkColors : lightColors)
+    setActiveTheme(isDarkMode ? darkThemes[activeColorIndex] : lightThemes[activeColorIndex])
+  }, [isDarkMode, activeColorIndex])
+
   return (
-    <Container>
+    <Container ref={container}>
       <ul>
         <AnimatePresence>
-          <ColorListItem onClick={() => setIsOpen((open) => !open)} activeColorIndex={activeTheme.colors.primary1}>
+          {isOpen &&
+            colors
+              .filter((color) => color.name !== activeTheme.name)
+              .map((color, index) => (
+                <ColorListItem
+                  key={color.name}
+                  onClick={() => {
+                    setActiveColorIndex(getIndexForColorName(color.name))
+                    setIsOpen((open) => !open)
+                  }}
+                  activeColorIndex={color.color}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <div className='text'>{color.name}</div>
+                  <button className='point'></button>
+                </ColorListItem>
+              ))}
+
+          <ColorListItem
+            onClick={() => {
+              isOpen && setActiveColorIndex(getIndexForColorName(activeTheme.name))
+              setIsOpen((open) => !open)
+            }}
+            activeColorIndex={activeTheme.colors.primary1}
+          >
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -70,25 +119,6 @@ const ColorPicker = () => {
             </motion.div>
             <div className='point'></div>
           </ColorListItem>
-          {isOpen &&
-            colors
-              .filter((color) => color.name !== activeTheme.name)
-              .map((color, index) => (
-                <ColorListItem
-                  key={color.name}
-                  onClick={() => {
-                    setActiveColorIndex(index)
-                    setIsOpen((open) => !open)
-                  }}
-                  activeColorIndex={color.color}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  // exit={{ opacity: 0 }}
-                >
-                  <div className='text'>{color.name}</div>
-                  <button className='point'></button>
-                </ColorListItem>
-              ))}
         </AnimatePresence>
       </ul>
     </Container>
