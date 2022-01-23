@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
   margin-left: -10vw;
 
@@ -15,7 +15,7 @@ const Container = styled.div`
     margin-left: -28px;
   }
   img {
-    width: 110%;
+    width: 100%;
     height: 110%;
     object-fit: cover;
   }

@@ -7,6 +7,7 @@ const DistortionMaterial = shaderMaterial(
     time: 0,
     tex: undefined,
     speed: 0,
+    rgbShiftStrength: 1,
     hoverValue: 0,
     textureAspect: undefined,
     frameAspect: undefined,
@@ -35,6 +36,7 @@ const DistortionMaterial = shaderMaterial(
   `
       uniform float time;
       uniform float speed;
+      uniform float rgbShiftStrength;
       uniform float hoverValue;
       uniform sampler2D tex;
       varying vec2 vUv;
@@ -64,8 +66,8 @@ const DistortionMaterial = shaderMaterial(
         vec2 vTexCoordinate = textureScale * (vUv - 0.5) + 0.5;
   
         float r = texture2D(tex, vTexCoordinate).r;
-        float g = texture2D(tex, vTexCoordinate - vec2(speed * 0.012)).g;
-        float b = texture2D(tex, vTexCoordinate + vec2(speed * 0.012)).b;
+        float g = texture2D(tex, vTexCoordinate - vec2(speed * rgbShiftStrength * 0.012)).g;
+        float b = texture2D(tex, vTexCoordinate + vec2(speed * rgbShiftStrength * 0.012)).b;
   
         vec3 color = mix(vec3(r, g, b), vec3(0.), 0.1 - hoverValue * 0.1);
         gl_FragColor = vec4(color, 1.);

@@ -3,8 +3,6 @@ import styled from "styled-components"
 
 import Slider from "../../shared/Slider"
 import ArrowDownSVG from "../../../assets/icons/arrow_down.svg?component"
-import ArrowSVG from "../../../assets/icons/arrow.svg?component"
-
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import PageTemplate from "../PageTemplate"
 import { Link } from "react-router-dom"
@@ -12,6 +10,9 @@ import InfiniteText from "../../shared/InfiniteText"
 import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import moodboard from "../../../assets/img/myWork.png"
+import FullImage from "../../shared/FullImage"
+import { marginPage } from "../../../styles/globalCustom"
+
 
 
 //passions
@@ -22,7 +23,7 @@ import piano from "../../../assets/img/about/piano.gif"
 import draw from "../../../assets/img/about/draw.gif"
 import food from "../../../assets/img/about/food.gif"
 import painting from "../../../assets/img/about/painting.gif"
-import architecture from "../../../assets/img/about/architecture.gif"
+import manual from "../../../assets/img/about/manual.gif"
 import art from "../../../assets/img/about/art.gif"
 
 import twitch from "../../../assets/img/about/twitch.jpg"
@@ -32,14 +33,6 @@ const StyledHome = styled.div`
   * {
     font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
-  }
-  img.about-visual {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    @media (max-width: 480px) {
-      height: 80vh;
-    }
   }
   img.twitch-img{
       width: 100%;
@@ -51,7 +44,6 @@ const StyledHome = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-
     .text {
       position: relative;
       display: flex;
@@ -64,7 +56,6 @@ const StyledHome = styled.div`
         text-transform: uppercase;
         width: auto;
         white-space: nowrap;
-        margin-bottom: 0.2vw;
         font-family: NeueMontrealRegular;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
@@ -106,8 +97,8 @@ const StyledHome = styled.div`
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
-          line-height: 1.3;
-          margin-left: 1rem;
+          line-height: 1.26;
+          margin-left: 0.5rem;
         }
       }
       @media (max-width: 1200px) {
@@ -128,7 +119,7 @@ const StyledHome = styled.div`
       @media (max-width: 950px) {
         .line {
           font-size: 50px;
-          line-height: 1;
+          line-height: 1.1;
           &.second_line {
             padding-left: 100px;
           }
@@ -141,6 +132,10 @@ const StyledHome = styled.div`
                 top: -50px;
               }
             }
+          }
+          .important_word{
+            line-height: 1.3;
+            margin-left: 0.8rem;
           }
         }
       }
@@ -169,6 +164,7 @@ const StyledHome = styled.div`
             margin-left: 5px;
             font-size: 50px;
             margin-top: -2px;
+            line-height: 1.4;
           }
         }
       }
@@ -192,6 +188,7 @@ const StyledHome = styled.div`
           .important_word {
             margin-top: -1.5px;
             font-size: 38px;
+            line-height: 1.3;
           }
         }
       }
@@ -331,6 +328,10 @@ const StyledHome = styled.div`
     }
   }
 
+  .full-img-container{
+    ${marginPage};
+  }
+
   .what-i-do {
     margin-top: 30vh;
     @media (max-width: 700px){
@@ -391,12 +392,14 @@ const Home = () => {
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the 1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at Project X Paris
+            I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the 1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at <span className='saol'>Project X Paris</span> 
           </div>
           <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
-        <div className='spacer'></div>
-        <img className='about-visual' src={moodboard} alt='visual' />
+        <div className='demi-spacer'></div>
+        <div className="full-img-container">
+          <FullImage className="full-img" src={moodboard} alt='moodboard' />
+        </div>
         <div className='demi-spacer'></div>
         <div className='home-section skills'>
           <div className='headline'>skills</div>
@@ -491,14 +494,14 @@ const Home = () => {
                 </div>
               </div>               
             </div>  
-              {/* architecture */}
+              {/* manual */}
               <div className="passion">
-              <img src={architecture} alt="passion" />
+              <img src={manual} alt="passion" />
               <div className="text-content">
                 <h3 className="text-h3 number">08</h3>
                 <div className="text-description">
-                  <h4 className="text-h4">Architecture</h4>  
-                  <p className="text-regular">allow me to be pixel on element</p>
+                  <h4 className="text-h4">Manual crafting</h4>  
+                  <p className="text-regular">Bring my ideas to life</p>
                 </div>
               </div>               
             </div>   
@@ -523,9 +526,12 @@ const Home = () => {
             I'm also <span className='saol'>Twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !
           </div>
           <a className="button" href="https://www.twitch.tv/katy_v4" target="_blank">Twitch.tv/Katy_v4</a>
-          <div className="demi-spacer"></div>
-          <img className="twitch-img" src={twitch} alt="twitch" />
-        </div>        
+        </div>   
+        <div className="demi-spacer"></div>
+        <div className="full-img-container">
+        <FullImage className="full-img" src={twitch} alt='moodboard' />
+        </div>    
+        <div className="spacer"></div>
       </StyledHome>
     </PageTemplate>
   )

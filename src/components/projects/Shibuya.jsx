@@ -1,38 +1,45 @@
 import React from "react"
 import styled from "styled-components"
 import moodboard from "../../assets/img/works/shibuya/moodboard.png"
-import blackLatin from "../../assets/img/works/shibuya/black_latin.svg"
-import blackKanji from "../../assets/img/works/shibuya/black_kanji.svg"
 import pub from "../../assets/img/works/shibuya/pub.png"
 import city from "../../assets/img/works/shibuya/city.png"
 import office from "../../assets/img/works/shibuya/office.png"
 import prints from "../../assets/img/works/shibuya/print.png"
+import grid1 from "../../assets/img/works/shibuya/grid1.svg"
+import grid2 from "../../assets/img/works/shibuya/grid2.svg"
+import grid3 from "../../assets/img/works/shibuya/grid3.svg"
+import grid4 from "../../assets/img/works/shibuya/grid4.svg"
+import grid5 from "../../assets/img/works/shibuya/grid5.svg"
+import grid6 from "../../assets/img/works/shibuya/grid6.svg"
+import FullImage from "../shared/FullImage"
+import ShibuyaLatin from "../../assets/icons/shibuya_latin.svg?component"
+import ShibuyaKanji from "../../assets/icons/shibuya_kanji.svg?component"
+
 
 
 
 
 
 const StyledShibuya = styled.div`
-/* img.full-img{
-  width: 100vw;
-  margin-left: -10vw;
-  height: 80vh;
-  object-fit: cover;
-  @media (max-width: 769px) {
-        margin-left: -40px;
-      }
-      @media (max-width: 480px) {
-        margin-left: -28px;
-      }
-} */
 img{
   width: 100%;
-  &.logo-duo{
-    width: 20%;
-    margin-top: 30px;
-    text-align:center;
-    margin:auto;
-    display:flex;
+}
+svg{
+  font-size:11px;
+  font-family:NeueMontreal-Regular, Neue Montreal;
+  letter-spacing:0.713em;
+}
+.logo-duo{
+  display: flex;
+  justify-content: center;
+  svg:nth-child(1){
+    fill: ${({ theme }) => theme.colors.text.standard};
+  }
+  svg:nth-child(2){
+    fill: ${({ theme }) => theme.colors.primary1};
+  }
+  svg{
+    margin: 0 60px;
   }
 }
 .chart{
@@ -53,6 +60,7 @@ img{
       }
       &.two{
         background-color: black;
+        color: white;
       }
     }
   }
@@ -67,9 +75,7 @@ return (
   <div className="chart">
     <div className="art-direction">
       <h4 className="text-h4">Art direction</h4>
-      <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero
-        excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam
-        mollitia cupiditate quam.</p>
+      <p className="text-description">For the logo, I chose to study the letter S and make a reference to the crossing, I opted for a geometric base, modern class and simple, accompanied by a baseline.</p>
     </div>
     <div className="typography">
       <h4 className="text-h4">Typography</h4>
@@ -81,24 +87,38 @@ return (
       <div className="color two">#000000</div>
     </div>
   </div>
-  <div className="big-spacer"></div>
+  <div className="spacer"></div>
   {/* end chart */}
-  <h2 className='text-h2'>Some preview of Shibuya</h2>
+  <FullImage src={moodboard} alt='preview' />
+  <div className="big-spacer"></div>
+  {/* step */}
+  <h2 className='text-h2'>Grid application</h2>
   <div className="demi-spacer"></div>
-  <div className='headline text-regular'>Night picture</div>
-  <div className='separator'></div>
-  <img src={moodboard} alt="moodboard"></img>
+  <div className="img_container">
+    <img className="trio" src={grid1} alt="grid" />
+    <img className="trio" src={grid2} alt="grid" />
+    <img className="trio" src={grid3} alt="grid" />
+    <img className="trio" src={grid4} alt="grid" />
+    <img className="trio" src={grid5} alt="grid" />
+    <img className="trio" src={grid6} alt="grid" />
+  </div>
   <div className="big-spacer"></div>
   {/* logo */}
   <h2 className='text-h2'>Logo result</h2>
   <div className="demi-spacer"></div>
   <div className='headline text-regular'>Latin Logo</div>
   <div className='separator'></div>
-  <img className="logo-duo" src={blackLatin} alt="logo"></img>
+  <div className="logo-duo">
+    <ShibuyaLatin />
+    <ShibuyaLatin />
+  </div>
   <div className="spacer"></div>
   <div className='headline text-regular'>Kanji Logo</div>
   <div className='separator'></div>
-  <img className="logo-duo" src={blackKanji} alt="logo"></img>
+  <div className="logo-duo">
+    <ShibuyaKanji />
+    <ShibuyaKanji />
+  </div>
   <div className="big-spacer"></div>
   <h2 className='text-h2'>Mockup</h2>
   <div className="demi-spacer"></div>
@@ -113,12 +133,12 @@ return (
   <img src={city} alt="logo"></img>
   <div className="big-spacer"></div>
   {/* city */}
-  <div className='headline text-regular'>Advertisements in the neighborhood</div>
+  <div className='headline text-regular'>Office stuff</div>
   <div className='separator'></div>
   <img src={office} alt="logo"></img>
   <div className="big-spacer"></div>
   {/* city */}
-  <div className='headline text-regular'>Advertisements in the neighborhood</div>
+  <div className='headline text-regular'>Print stuff</div>
   <div className='separator'></div>
   <img src={prints} alt="logo"></img>
   <div className="big-spacer"></div>

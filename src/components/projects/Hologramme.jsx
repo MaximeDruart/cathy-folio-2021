@@ -56,7 +56,7 @@ const Hologramme = () => {
       <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+          <p className="text-description">I went with a clean design and modern typography that represents Hologram well. I decided to go with a seasonal color palette, brown for winter and fall and blue for spring and summer.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
@@ -85,7 +85,7 @@ const Hologramme = () => {
       <img src={moodboard2} alt="moodboard1" />
       <div className="big-spacer"></div>
       {/* homepage */}
-      <h2 className="text-h2">UI Design</h2>
+      <h2 className="text-h2">UI Design some preview</h2>
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>homepage fall/winter</div>
       <div className='separator'></div>

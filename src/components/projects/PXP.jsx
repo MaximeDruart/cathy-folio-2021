@@ -35,6 +35,7 @@ const StyledPXP = styled.div`
         }
         &.two {
           background-color: black;
+          color: white;
         }
       }
     }
@@ -51,8 +52,7 @@ const PXP = () => {
         <div className='art-direction'>
           <h4 className='text-h4'>Art direction</h4>
           <p className='text-description'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi
-            voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.
+          We started with monochrome colors to harmonize and highlight the collections of Project X Paris. The colors of the collections being very colorful, stand out well against black and white. For the typography, linear and sans serif fonts make Project X Paris a minimalist and high-end brand.
           </p>
         </div>
         <div className='typography'>
@@ -82,8 +82,7 @@ const PXP = () => {
       {/* desktop ui */}
       <h2 className='text-h2'>Desktop UI</h2>
       <p className='text-description'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi
-        voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.
+      Desktop mock-ups of the Project X Paris website: simple and harmonious pages and easy access to the collections.
       </p>
       {/* homepage */}
       <div className='spacer'></div>
@@ -98,8 +97,7 @@ const PXP = () => {
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
       <p className='text-description'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi
-        voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.
+      Responsive site with its bottom menu for easy access to the main pages.
       </p>
       <div className='demi-spacer'></div>
       <div className='headline text-regular'>responsive selection</div>

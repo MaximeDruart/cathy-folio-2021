@@ -26,14 +26,15 @@ const store = (set, get) => ({
     !get().isMenuOpen ? enableBodyScroll("[data-app-container]") : clearAllBodyScrollLocks()
     set((state) => ({ isMenuOpen: !state.isMenuOpen }))
   },
-  isDarkMode: !!JSON.parse(localStorage.getItem("dark-mode-enabled")),
+  isDarkMode:
+    localStorage.getItem("dark-mode-enabled") === null ? true : !!JSON.parse(localStorage.getItem("dark-mode-enabled")),
   toggleDarkMode: () => {
     localStorage.setItem("dark-mode-enabled", !get().isDarkMode)
     set((state) => ({ isDarkMode: !state.isDarkMode }))
   },
 
-  activeColor: colors[0],
-  setActiveColor: (index) => set({ activeColor: colors[index] }),
+  activeColorIndex: 0,
+  setActiveColorIndex: (index) => set({ activeColorIndex: index }),
 })
 
 // allows the use of the redux devtools extension with zustand

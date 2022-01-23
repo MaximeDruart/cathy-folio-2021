@@ -6,6 +6,8 @@ import step1 from "../../assets/img/works/desktop/step1.png"
 import step2 from "../../assets/img/works/desktop/step2.svg"
 import step3 from "../../assets/img/works/desktop/step3.svg"
 import preview from "../../assets/img/works/desktop/preview.jpg"
+import FullImage from "../shared/FullImage"
+
 
 const StyledDesktop = styled.div`
 h2{
@@ -59,7 +61,7 @@ const Desktop = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+          <p className="text-description">For this project I wanted to go in a "flat design" universe, minimalist and modern at the same time, getting closer to the Apple style for the interface. Dark and light themes are available, there is something for everyone !</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
@@ -74,7 +76,7 @@ const Desktop = () => {
       </div>
       {/* end chart */}
       <div className="spacer"></div>
-      <img className="full-img" src={preview} alt="pxp" />
+      <FullImage src={preview} alt='pxp-desktop' />
       <div className="spacer"></div>
       <h2 className='text-h2'>Concept</h2>
       <div className="demi-spacer"></div>

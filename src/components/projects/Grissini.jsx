@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
-import moodboard from "../../assets/img/works/grissini/mooboard.jpg"
+import moodboard from "../../assets/img/works/grissini/moodboard.jpg"
 import homepage from "../../assets/img/works/grissini/homepage.jpg"
 import contact from "../../assets/img/works/grissini/contact.jpg"
-import shop from "../../assets/img/works/grissini/shop.jpg"
-import shipping from "../../assets/img/works/grissini/shipping.jpg"
+import about from "../../assets/img/works/grissini/about.jpg"
 import homeMobile from "../../assets/img/works/grissini/home_mobile.jpg"
 import menuMobile from "../../assets/img/works/grissini/menu_mobile.jpg"
 import shopMobile from "../../assets/img/works/grissini/shop_mobile.jpg"
 import contactMobile from "../../assets/img/works/grissini/contact_mobile.jpg"
+import FullImage from "../shared/FullImage"
 
 
 const StyledGrissini = styled.div`
@@ -39,6 +39,7 @@ img{
       }
       &.two{
         background-color: black;
+        color: white;
       }
       &.three{
         background-color: #FDC463;
@@ -57,7 +58,7 @@ const Grissini = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+          <p className="text-description">I decided on a minimalist and pure design, reminding at the same time the classical music while remaining elegant. The Saol Display typography was the perfect answer. For the main color we decided on gold, a luxurious and harmonious color.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
@@ -74,11 +75,11 @@ const Grissini = () => {
       {/* end chart */}
       {/* start case */}
       <div className="spacer"></div>
-      <img className="full-img" src={moodboard} alt="pxp" />
+      <FullImage src={moodboard} alt='preview' />
       <div className="spacer"></div>
       {/* desktop ui */}
       <h2 className='text-h2'>Desktop UI</h2>
-      <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+      <p className="text-description">Desktop mockups for the Grissini Project website; a few previews, simple and clean design, with a background of a video of Grissini in low opacity to highlight the content.</p>
       {/* homepage */}
       <div className="spacer"></div>
       <div className='headline text-regular'>homepage</div>
@@ -89,13 +90,13 @@ const Grissini = () => {
       <div className='separator'></div>
       <img src={contact} alt="pxp" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>shipping page</div>
+      <div className='headline text-regular'>about page</div>
       <div className='separator'></div>
-      <img src={shipping} alt="pxp" />
+      <img src={about} alt="pxp" />
       <div className="spacer"></div>
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
-      <p className="text-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni, sed libero excepturi cumque esse nisi voluptate laborum eum maxime dignissimos est porro et, doloribus rem laboriosam mollitia cupiditate quam.</p>
+      <p className="text-description">Responsive mock-ups keeping the site simple and easy to navigate.</p>
       <div className="demi-spacer"></div> 
       <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>

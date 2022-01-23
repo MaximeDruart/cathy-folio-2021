@@ -37,14 +37,23 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-
       .text-h1 {
         display: flex;
         align-items: baseline;
         flex-flow: row nowrap;
-
         text-transform: uppercase;
-
+        @media (max-width: 1200px){
+         font-size:80px;
+        }
+        @media (max-width: 980px){
+         font-size:60px;
+        } 
+        @media (max-width: 750px){
+         font-size:50px;
+        } 
+        @media (max-width: 650px){
+         font-size:30px;
+        } 
         .important-word {
           font-family: "SaolDisplaySemiboldItalic";
           color: ${({ theme }) => theme.colors.primary1};
@@ -98,6 +107,12 @@ const Container = styled.div`
             color: ${({ theme }) => theme.colors.primary1};
           }
         }
+        @media (max-width: 750px){
+         li{
+           margin: 0 10px;
+           font-size: 12px;
+         }
+        } 
       }
     }
   }
@@ -117,7 +132,7 @@ const Footer = () => {
 
         <div className='footer-body'>
           <motion.a href='mailto:cathy.dolle@live.fr' className='text-h1'>
-            get in
+            Drop me an 
             <motion.div
               className='text-h1 important-word'
               variants={item}
@@ -125,8 +140,8 @@ const Footer = () => {
               transition={{ type: "tween", duration: 0.6, ease: "circOut" }}
             >
               <span className='word'>
-                <span>touch</span>
-                <span className='post'>touch</span>
+                <span>email</span>
+                <span className='post'>email</span>
               </span>
             </motion.div>
           </motion.a>

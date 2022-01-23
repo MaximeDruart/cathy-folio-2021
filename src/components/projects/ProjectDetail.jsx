@@ -5,11 +5,31 @@ import { marginPage } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
 import projectsData from "../../projectsData"
 import { Link, useHistory } from "react-router-dom"
+import FullImage from "../shared/FullImage"
+
 
 const StyledProjectDetail = styled.div`
   .hero-title {
     h1 {
       opacity: 1 !important;
+    }
+  }
+  .img_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+    img.duo{
+      width: 46%;
+      @media (max-width: 900px){
+        width: 100%;
+      }
+    }
+    img.trio, svg{
+      width: 30%;
+      margin: 40px 0;
+      @media (max-width: 900px){
+        width: 100%;
+      }
     }
   }
   img.step {
@@ -43,8 +63,12 @@ const StyledProjectDetail = styled.div`
     flex-wrap: wrap;
     img {
       width: 20%;
-      margin: 0 20px;
-      @media (max-width: 900px) {
+      margin: 20px;
+      @media (max-width: 1000px) {
+        width: 30%;
+        margin: 30px;
+      }
+      @media (max-width: 600px) {
         width: 40%;
         margin: 20px;
       }
@@ -220,7 +244,7 @@ const StyledProjectDetail = styled.div`
           display: flex;
           justify-content: center;
           align-items: center;
-          color: ${({ theme }) => theme.colors.text.disabled};
+          text-transform: uppercase;
           font-family: NeueMontrealRegular;
           font-size: 16px;
           width: 70%;
@@ -346,7 +370,8 @@ const ProjectDetail = ({ project }) => {
           </div>
           <div className='spacer'></div>
           {/* visual */}
-          <img className='visual' src={project.visual1} alt='visual' />
+          <FullImage src={project.visual1} alt='visual' />
+          {/* <img className='visual' src={project.visual1} alt='visual' /> */}
           <div className='spacer'></div>
           {/* colors */}
           <ProjectComponent />
