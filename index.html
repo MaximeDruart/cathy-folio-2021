@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg" href="src/assets/img/logo.svg" />
     <title>Cathy Dolle</title>
-    <meta property="og:title" content="Cathy DOLLE Portfolio">
+    <meta property="og:title" content="Cathy DOLLE Portfolio" />
     <meta property="og:type" content="portfolio" />
-    <meta property="og:image" content="src/assets/img/thumbnail.jpg">
+    <meta property="og:image" content="src/assets/img/thumbnail.jpg" />
     <!-- <meta property="og:url" content=""> -->
     <!-- <meta name="twitter:card" content="summary_large_image"> -->
     <style>
+      @font-face {
+        font-family: "NeueMontrealLight";
+        src: url("src/assets/fonts/NeueMontreal-Light.otf");
+      }
+      @font-face {
+        font-family: "NeueMontrealRegular";
+        src: url("src/assets/fonts/NeueMontreal-Regular.otf");
+      }
+      @font-face {
+        font-family: "SaolDisplayLight";
+        src: url("src/assets/fonts/SaolDisplay-Light.ttf");
+      }
+      @font-face {
+        font-family: "SaolDisplaySemiboldItalic";
+        src: url("src/assets/fonts/SaolDisplay-SemiboldItalic.ttf");
+      }
+
       html,
       body {
         background: black;
@@ -20,6 +37,7 @@
 
       .pace {
         display: none;
+        position: fixed;
         opacity: 0;
       }
 
@@ -57,30 +75,30 @@
       }
 
       .loader .content .line {
-        width: 100%;
         margin-top: 0px;
         height: 2px;
         background: white;
+        width: 0px;
         align-self: flex-start;
+        transition: width ease-in-out 0.2s;
       }
 
-      .text-h2 {
+      .text-h2-load {
         font-family: "NeueMontrealRegular";
         font-size: 60px;
         color: white;
         letter-spacing: 0;
         margin-bottom: 1rem;
-        line-height: 64px;
       }
 
       @media (max-width: 769px) {
-        .text-h2 {
+        .text-h2-load {
           font-size: 40px;
         }
       }
 
       @media (max-width: 480px) {
-        .text-h2 {
+        .text-h2-load {
           font-size: 20px;
         }
       }
@@ -90,8 +108,8 @@
     <div class="loader">
       <div class="content">
         <div class="text">
-          <div class="text-h2 saol">CATHY DOLLE</div>
-          <div class="text-h2 percentage">00%</div>
+          <div class="text-h2-load saol">CATHY DOLLE</div>
+          <div class="text-h2-load percentage">00%</div>
         </div>
         <div class="line"></div>
       </div>

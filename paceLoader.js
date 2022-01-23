@@ -23,11 +23,29 @@ Pace.on("update", (progress) => {
     if (!dismountHasRun) {
       dismountHasRun = true
 
-      gsap.to(".loader .content", {
+      gsap.to(".loader", {
         opacity: 0,
-        duration: 0.3,
+        duration: 0.6,
         onComplete: () => gsap.set($loader, { display: "none" }),
       })
     }
   }
 })
+
+// Pace.on("update", (progress) => {
+//   $percentage.innerHTML = progress.toFixed(0) + "%"
+//   $line.style.width = progress.toFixed(0) + "%"
+
+//   if (progress.toFixed(0) > 99) {
+//     if (!dismountHasRun) {
+//       dismountHasRun = true
+
+//       gsap.to(".loader .content", {
+//         opacity: 0,
+//         duration: 0.3,
+//         delay: 0.4,
+//         onComplete: () => gsap.set($loader, { display: "none" }),
+//       })
+//     }
+//   }
+// })
