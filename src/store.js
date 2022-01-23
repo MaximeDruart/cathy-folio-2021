@@ -23,7 +23,7 @@ export const colors = [
 const store = (set, get) => ({
   isMenuOpen: false,
   toggleMenu: () => {
-    !get().isMenuOpen ? enableBodyScroll("[data-app-container]") : clearAllBodyScrollLocks()
+    !get().isMenuOpen ? enableBodyScroll(document.querySelector("[data-app-container]")) : clearAllBodyScrollLocks()
     set((state) => ({ isMenuOpen: !state.isMenuOpen }))
   },
   isDarkMode:
