@@ -4,27 +4,43 @@ const darkColors = [
     color: "#7176eb",
   },
   {
-    name: "sakura",
-    color: "pink",
+    name: "Ruby",
+    color: "#FF4D4D",
   },
   {
     name: "emerald",
-    color: "blue",
+    color: "#66F070",
+  },
+  {
+    name: "saphir",
+    color: "#3971EF",
+  },
+  {
+    name: "quartz",
+    color: "#F582D2",
   },
 ]
 
 const lightColors = [
   {
-    name: "light1",
-    color: "#ff0000",
+    name: "lavender",
+    color: "#969AF7",
   },
   {
-    name: "light2",
-    color: "blue",
+    name: "salmon",
+    color: "#F85858",
   },
   {
-    name: "light3",
-    color: "green",
+    name: "avocado",
+    color: "#7BF0A4",
+  },
+  {
+    name: "blueberry",
+    color: "#7B9FF0",
+  },
+  {
+    name: "candy",
+    color: "#EFA8EF",
   },
 ]
 

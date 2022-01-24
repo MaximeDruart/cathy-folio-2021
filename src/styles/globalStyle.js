@@ -237,6 +237,7 @@ export default createGlobalStyle`
     body {
       background: ${({ theme }) => theme.colors.background};
       overflow-x : hidden;
+      transition: color 0.3s;
     }
 
 
