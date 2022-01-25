@@ -36,11 +36,11 @@ const lightColors = [
   },
   {
     name: "lemon",
-    color: "#FFE9B7",
+    color: "#FFCE29",
   },
   {
     name: "avocado",
-    color: "#7BF0A4",
+    color: "#74CC33",
   },
   {
     name: "blueberry",

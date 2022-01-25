@@ -29,6 +29,9 @@ const StyledMenu = styled(motion.div)`
     .wrapper {
       overflow: hidden;
       margin: 25px 0;
+      @media (max-width: 900px) {
+        margin: 18px 0;
+         }
       li {
         line-height: 0.9;
         text-transform: uppercase;
