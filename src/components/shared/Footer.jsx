@@ -81,6 +81,11 @@ const Container = styled.div`
     }
     .small-line {
       margin-top: -20px;
+      @media (max-width: 750px){
+        .left{
+          display: none;
+        }
+      } 
       * {
         font-family: NeueMontrealRegular;
         color: ${({ theme }) => theme.colors.text.standard};
@@ -93,7 +98,7 @@ const Container = styled.div`
 
       .socials {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         li {
           text-transform: uppercase;
           margin-right: 10px;
@@ -108,9 +113,10 @@ const Container = styled.div`
           }
         }
         @media (max-width: 750px){
+          justify-content:center; 
          li{
-           margin: 0 10px;
-           font-size: 12px;
+           margin: 5px 6px;
+           font-size: 11px;
          }
         } 
       }

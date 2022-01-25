@@ -39,20 +39,24 @@ const StyledHome = styled.div`
       width: 100%;
   }
   .hero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-bottom: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    @media (max-width: 700px) {
+      justify-content: left;
+      ${marginPage};
+    }
     .text {
       position: relative;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
       @media (max-width: 780px) {
-        margin-top: -20vh;
+        margin-top: -25vh;
       }
       .line {
         text-transform: uppercase;
@@ -173,17 +177,43 @@ const StyledHome = styled.div`
 
       @media (max-width: 500px) {
         .line {
-          font-size: 36px;
-          line-height: 1.1;
+          font-size: 39px;
+          line-height: 1.15;
           &.third_line {
             .slider-container {
               display: flex;
               justify-content: flex-end;
               width: 100%;
-              top: 16vh;
+              top: 15vh;
               right: 0;
               &::after {
-                top: -80px;
+                top: -70px;
+                right: 0;
+              }
+            }
+          }
+          .important_word {
+            margin-top: -1.5px;
+            font-size: 38px;
+            line-height: 1.3;
+          }
+        }
+      }
+
+      @media (max-width: 400px) {
+        .line {
+          font-size: 35px;
+          line-height: 1.15;
+          &.third_line {
+            .slider-container {
+              display: flex;
+              justify-content: flex-end;
+              width: 100%;
+              top: 120px;
+              right: 0;
+              &::after {
+                top: -60px;
+                right: 0;
               }
             }
           }
@@ -221,8 +251,8 @@ const StyledHome = styled.div`
   }
 
   .home-section {
-    margin: 0 auto;
-    width: 80vw;
+    ${marginPage};
+    width: 100vw;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
