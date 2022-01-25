@@ -32,6 +32,8 @@ import resume from "../../../assets/img/about/resume.pdf"
 const StyledHome = styled.div`
   * {
     color: ${({ theme }) => theme.colors.text.standard};
+    font-family: NeueMontrealRegular;
+
   }
   img.twitch-img{
       width: 100%;
@@ -518,7 +520,7 @@ const Home = () => {
           <div className='headline'>Streaming</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            I'm also <span className='saol'>Twitch partner</span> and steam my project, and passion on my Twitch channel Katy_v4, come say hi !
+            I'm also <span className='saol'>Twitch partner</span> and stream my project on my Twitch channel :D
           </div>
           <a className="button" href="https://www.twitch.tv/katy_v4" target="_blank">Twitch.tv/Katy_v4</a>
         </div>   
