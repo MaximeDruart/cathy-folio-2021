@@ -396,23 +396,18 @@ const Home = () => {
           </div>
           <a className="button" href={resume} download="cathy_resume.pdf">Download my resume</a>
         </div>
-        <div className='demi-spacer'></div>
-        <div className="full-img-container">
-          <FullImage className="full-img" src={moodboard} alt='moodboard' />
-        </div>
-        <div className='demi-spacer'></div>
         <div className='home-section skills'>
           <div className='headline'>skills</div>
           <div className='separator text-top'></div>
           <InfiniteText />
           <div className='separator text-bot'></div>
         </div>
-        {/* projects */}
-        <div className='home-section projects'>
+          {/* projects */}
+               <div className='home-section projects'>
           <div className='headline'>projects</div>
           <div className='separator'></div>
           <HomeProjects />
-        </div>    
+        </div>  
         {/* passions */}
         <div className='home-section what-i-do'>
           <div className='headline'>My passions</div>

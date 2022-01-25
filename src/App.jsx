@@ -10,7 +10,7 @@ import MouseFollower from "./components/shared/MouseFollower"
 import Home from "./components/pages/Home"
 import About from "./components/pages/About"
 import Works from "./components/pages/Works"
-import Archives from "./components/pages/Archives"
+import Random from "./components/pages/Random"
 import ProjectDetail from "./components/projects/ProjectDetail"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
 import { AnimatePresence } from "framer-motion"
@@ -46,7 +46,7 @@ const App = () => {
                 {projectRoutes}
                 <Route path='/works' exact component={Works} />
                 <Route path='/about' exact component={About} />
-                <Route path='/archives' exact component={Archives} />
+                <Route path='/random' exact component={Random} />
                 <Route path='/' component={Home} />
               </Switch>
             </AnimatePresence>
