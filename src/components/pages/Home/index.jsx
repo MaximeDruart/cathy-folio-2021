@@ -31,7 +31,6 @@ import resume from "../../../assets/img/about/resume.pdf"
 
 const StyledHome = styled.div`
   * {
-    font-family: NeueMontrealRegular;
     color: ${({ theme }) => theme.colors.text.standard};
   }
   img.twitch-img{

@@ -4,6 +4,7 @@ import SaolDisplayLight from "../assets/fonts/SaolDisplay-Light.ttf"
 import SaolDisplaySemiboldItalic from "../assets/fonts/SaolDisplay-SemiboldItalic.ttf"
 import BebasNeueRegular from "../assets/fonts/BebasNeueRegular.otf"
 import Helvetica from "../assets/fonts/Helvetica.ttf"
+import Qene from "../assets/fonts/Qene-G.otf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
@@ -214,6 +215,10 @@ export default createGlobalStyle`
     @font-face {
       font-family: "Helvetica";
       src: url(${Helvetica});
+    }
+    @font-face {
+      font-family: "Qene";
+      src: url(${Qene});
     }
 
 
