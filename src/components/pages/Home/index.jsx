@@ -184,7 +184,7 @@ const StyledHome = styled.div`
               display: flex;
               justify-content: flex-end;
               width: 100%;
-              top: 15vh;
+              top: 128px;
               right: 0;
               &::after {
                 top: -70px;
@@ -200,16 +200,16 @@ const StyledHome = styled.div`
         }
       }
 
-      @media (max-width: 400px) {
+      @media (max-width: 380px) {
         .line {
-          font-size: 35px;
+          font-size: 37px;
           line-height: 1.15;
           &.third_line {
             .slider-container {
               display: flex;
               justify-content: flex-end;
               width: 100%;
-              top: 120px;
+              top: 112px;
               right: 0;
               &::after {
                 top: -60px;

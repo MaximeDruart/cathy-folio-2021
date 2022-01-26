@@ -21,7 +21,7 @@ const StyledHeader = styled.div`
     width: 50px;
     height: 50px;
     pointer-events: auto;
-    margin-left: -10px;
+    margin-left: -6px;
     svg {
       width: 100%;
       height: 100%;
