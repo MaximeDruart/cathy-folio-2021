@@ -17,6 +17,10 @@ import Hologramme from "./components/projects/Hologramme"
 import hologrammeCover from "./assets/img/works/hologramme.jpg"
 import hologrammeVisual1 from "./assets/img/works/hologramme/visual1.jpg"
 
+import Elijah from "./components/projects/Elijah"
+import elijahCover from "./assets/img/works/elijah.jpg"
+import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
+
 import Circl from "./components/projects/Circl"
 import circlCover from "./assets/img/works/circl.jpg"
 import circlVisual1 from "./assets/img/works/circl/visual1.jpg"
@@ -53,6 +57,19 @@ let projectsData = [
     websiteLink: "https://www.projectxparis.com/",
     color1: "#000000",
     color2: "#FFFFFF",
+  },
+  {
+    name: "Elijah",
+    path: "elijah",
+    title: "Design and developtment of Elijah's portfolio",
+    coverImg: elijahCover,
+    visual1: elijahVisual1,
+    component: Elijah,
+    date: "Jan. 2022",
+    role: "Design, Dev",
+    techs: ["HTML/CSS/JS"],
+    description:"Elijah is a photograph based in Paris!",
+    websiteLink: "https://elijahbeta.netlify.app/index.html",
   },
   {
     name: "Arcane",

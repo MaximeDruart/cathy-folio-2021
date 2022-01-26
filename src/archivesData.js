@@ -7,7 +7,7 @@ import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
 import oceane from "./assets/img/archives/oceane.jpg"
 import bank from "./assets/img/archives/bank.jpg"
-import palette from "./assets/img/archives/palette.jpg"
+import red from "./assets/img/archives/red.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
@@ -15,14 +15,19 @@ import parallele from "./assets/img/archives/parallele.jpg"
 import illu1 from "./assets/img/archives/illu1.jpg"
 import illu2 from "./assets/img/archives/illu2.jpg"
 import vans from "./assets/img/archives/vans.jpg"
-import minecraft from "./assets/img/archives/minecraft.jpg"
 import kill from "./assets/img/archives/kill.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
-import bankCard from "./assets/img/archives/bankCard.jpg"
 import flamalice from "./assets/img/archives/flamalice.jpg"
-import uplift from "./assets/img/archives/uplift.jpg"
+import elijah from "./assets/img/archives/elijah.jpg"
 
 let archivesData = [
+  {
+    name: "elijah",
+    coverImg: elijah,
+    type: "print",
+    description: "elijah branding logo",
+    websiteLink: "",
+  },
   {
     name: "DesignR",
     coverImg: designr,
@@ -58,24 +63,10 @@ let archivesData = [
     websiteLink: "",
   },
   {
-    name: "Uplift",
-    coverImg: uplift,
-    type: "print",
-    description: "uplift branding logo",
-    websiteLink: "",
-  },
-  {
     name: "etude house",
     coverImg: etudePhone,
     type: "UI design",
     description: "etude house mobile checkout",
-    websiteLink: "",
-  },
-  {
-    name: "bank Card",
-    coverImg: bankCard,
-    type: "Print",
-    description: "bank Card branding",
     websiteLink: "",
   },
   {
@@ -135,11 +126,11 @@ let archivesData = [
     websiteLink: "https://loginbank.netlify.app/",
   },
   {
-    name: "Palette book",
-    coverImg: palette,
+    name: "red book",
+    coverImg: red,
     type: "book",
     description: "One of my favourite book for inspiration",
-    websiteLink: "https://palette.com/",
+    websiteLink: "https://red.com/",
   },
   {
     name: "Nike homepage",
@@ -153,13 +144,6 @@ let archivesData = [
     coverImg: illu2,
     type: "Illustration",
     description: "remake from suzani",
-    websiteLink: "",
-  },
-  {
-    name: "Minecraft",
-    coverImg: minecraft,
-    type: "Ui design",
-    description: "website for a minecraft server",
     websiteLink: "",
   },
 ]

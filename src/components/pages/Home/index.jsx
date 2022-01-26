@@ -184,10 +184,10 @@ const StyledHome = styled.div`
               display: flex;
               justify-content: flex-end;
               width: 100%;
-              top: 128px;
+              top: 115px;
               right: 0;
               &::after {
-                top: -70px;
+                top: -60px;
                 right: 0;
               }
             }
