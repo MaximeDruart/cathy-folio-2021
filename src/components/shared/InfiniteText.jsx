@@ -56,10 +56,10 @@ const InfiniteText = () => {
 
   useLayoutEffect(() => {
     const topStringWidth = topStringRef.current.getBoundingClientRect().width
-    gsap.to(topLineContainer.current, { x: topStringWidth, ease: "linear", duration: 15, repeat: -1 })
+    gsap.to(topLineContainer.current, { x: topStringWidth, ease: "linear", duration: 22, repeat: -1 })
 
     const bottomStringWidth = bottomStringRef.current.getBoundingClientRect().width
-    gsap.to(bottomLineContainer.current, { x: -bottomStringWidth, ease: "linear", duration: 15, repeat: -1 })
+    gsap.to(bottomLineContainer.current, { x: -bottomStringWidth, ease: "linear", duration: 22, repeat: -1 })
   }, [])
   return (
     <Container>
