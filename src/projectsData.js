@@ -68,7 +68,7 @@ let projectsData = [
     date: "Jan. 2022",
     role: "Design, Dev",
     techs: ["HTML/CSS/JS"],
-    description:"Elijah is a photograph based in Paris!",
+    description: "Elijah is a photograph based in Paris!",
     websiteLink: "https://elijahbeta.netlify.app/index.html",
   },
   {
@@ -82,7 +82,7 @@ let projectsData = [
     role: "Ui designer",
     techs: ["AdobeXD Photoshop"],
     description:
-      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!"
+      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
   },
   {
     name: "Grissini",
@@ -94,7 +94,8 @@ let projectsData = [
     date: "Feb. 2021",
     role: "Design, Front end dev",
     techs: ["HTML/CSS/JS"],
-    description:"Grissini Project is 4 musicians specialized in music for video games, anime and movies. Grissini decided to contact me to design and develop their website. With a strong interest in video games and piano, Grissini Project was the perfect client to use my skills!",
+    description:
+      "Grissini Project is 4 musicians specialized in music for video games, anime and movies. Grissini decided to contact me to design and develop their website. With a strong interest in video games and piano, Grissini Project was the perfect client to use my skills!",
     websiteLink: "https://grissiniproject.com/",
   },
   {
@@ -106,8 +107,9 @@ let projectsData = [
     component: Circl,
     date: "Dec. 2021",
     role: "UI Design",
-    techs: ["Adobe XD, ","Illustrator"],
-    description:"Circl.GG is an application for player search on Riot Games like League of Legends, there is also a club and tournament system. I had to take care of the graphic charter and the UI UX design of the application.",
+    techs: ["Adobe XD, ", "Illustrator"],
+    description:
+      "Circl.GG is an application for player search on Riot Games like League of Legends, there is also a club and tournament system. I had to take care of the graphic charter and the UI UX design of the application.",
     websiteLink: "",
   },
   {
@@ -120,7 +122,8 @@ let projectsData = [
     date: "Dec. 2021",
     role: "Designer",
     techs: ["Illustrator, photoshop"],
-    description:"Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo."
+    description:
+      "Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo.",
   },
   {
     name: "Hologramme",
@@ -132,8 +135,7 @@ let projectsData = [
     date: "Dec. 2020",
     role: "UI UX Designer",
     techs: ["Adobe XD,", " Photoshop"],
-    description:
-      "Hologramme is a high end hat distributor. I was asked to redesign their B2C website"
+    description: "Hologramme is a high end hat distributor. I was asked to redesign their B2C website",
   },
   {
     name: "Sangen",
@@ -145,7 +147,8 @@ let projectsData = [
     date: "Dec. 2021",
     role: "Designer, Developer",
     techs: ["Processing", " Java"],
-    description:"My mission was to create a program on Processing. I decided to create a random pattern generator for shapes but also for colors."
+    description:
+      "My mission was to create a program on Processing. I decided to create a random pattern generator for shapes but also for colors.",
   },
   {
     name: "Desktop",

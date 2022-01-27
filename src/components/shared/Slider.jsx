@@ -1,5 +1,5 @@
 import gsap from "gsap/all"
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, useCallback } from "react"
 import { useHistory } from "react-router"
 import styled, { useTheme } from "styled-components"
 import projectsData from "../../projectsData"
@@ -19,7 +19,7 @@ const StyledSlider = styled.div`
     .overlay {
       width: 100%;
       height: 100%;
-      background: black;
+      background: ${({ theme }) => theme.colors.primary1};
       position: absolute;
     }
     @media (max-width: 769px) {
@@ -77,12 +77,9 @@ const Slider = (props) => {
     return () => clearInterval(interval)
   }, [hasLoaded])
 
-  const fadeInLoad = () => {
-    gsap
-      .timeline()
-      .to(overlayRef.current, { x: "-100%", duration: 0.4, ease: "Power3.easeInOut" })
-      .set(overlayRef.current, { backgroundColor: theme.colors.primary1 })
-  }
+  const fadeInLoad = useCallback(() => {
+    gsap.timeline().to(overlayRef.current, { x: "-100%", duration: 0.4, ease: "Power3.easeInOut" })
+  }, [theme])
 
   // const goToProject = () => history.push(`/works/${projectsData[projectImageIndex].path}`)
   const goToProject = () => history.push("/works")

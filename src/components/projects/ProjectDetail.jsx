@@ -7,27 +7,27 @@ import projectsData from "../../projectsData"
 import { Link, useHistory } from "react-router-dom"
 import FullImage from "../shared/FullImage"
 
-
 const StyledProjectDetail = styled.div`
   .hero-title {
     h1 {
       opacity: 1 !important;
     }
   }
-  .img_container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-    img.duo{
+  .img_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img.duo {
       width: 46%;
-      @media (max-width: 900px){
+      @media (max-width: 900px) {
         width: 100%;
       }
     }
-    img.trio, svg{
+    img.trio,
+    svg {
       width: 30%;
       margin: 40px 0;
-      @media (max-width: 900px){
+      @media (max-width: 900px) {
         width: 100%;
       }
     }
@@ -354,9 +354,11 @@ const ProjectDetail = ({ project }) => {
           <div className='infos'>
             <div className='infos-intro'>
               <p className='text-description'>{project.description}</p>
-              <a className='text-link website-link' href={project.websiteLink} target='_blank'>
-                Visit the website
-              </a>
+              {project.websiteLink && (
+                <a className='text-link website-link' href={project.websiteLink} target='_blank'>
+                  Visit the website
+                </a>
+              )}
             </div>
             {/* infos */}
             <div className='infos-column'>

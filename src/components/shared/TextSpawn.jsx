@@ -7,6 +7,7 @@ const Container = styled(motion.div)`
     display: inline-flex;
     position: relative;
     overflow: hidden;
+    align-items: baseline;
     white-space: nowrap;
     .overlay {
       position: absolute;

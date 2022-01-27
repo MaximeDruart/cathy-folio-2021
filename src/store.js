@@ -17,9 +17,13 @@ const store = (set, get) => ({
     localStorage.setItem("dark-mode-enabled", !get().isDarkMode)
     set((state) => ({ isDarkMode: !state.isDarkMode }))
   },
+  activeColorIndex: localStorage.getItem("color-index") === null ? 0 : JSON.parse(localStorage.getItem("color-index")),
 
-  activeColorIndex: 0,
-  setActiveColorIndex: (index) => set({ activeColorIndex: index }),
+  // activeColorIndex: 0,
+  setActiveColorIndex: (index) => {
+    localStorage.setItem("color-index", index)
+    set({ activeColorIndex: index })
+  },
 })
 
 // allows the use of the redux devtools extension with zustand

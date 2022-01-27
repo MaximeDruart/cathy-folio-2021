@@ -9,7 +9,7 @@ const StyledMenu = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 500;
+  z-index: 90;
   top: 0;
   left: 0;
   background: ${({ theme }) => theme.colors.background};
@@ -31,7 +31,7 @@ const StyledMenu = styled(motion.div)`
       margin: 25px 0;
       @media (max-width: 900px) {
         margin: 18px 0;
-         }
+      }
       li {
         line-height: 0.9;
         text-transform: uppercase;
