@@ -70,9 +70,12 @@ const StyledProjectDetail = styled.div`
       }
       @media (max-width: 600px) {
         width: 40%;
-        margin: 20px;
+        margin: 20px 0;
       }
     }
+    @media (max-width: 600px) {
+        justify-content: space-around;
+      }
   }
   img.full-img {
     width: 100vw;
