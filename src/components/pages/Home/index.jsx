@@ -30,7 +30,6 @@ import resume from "../../../assets/img/about/resume.pdf"
 const StyledHome = styled.div`
   * {
     color: ${({ theme }) => theme.colors.text.standard};
-    font-family: NeueMontrealRegular;
   }
   img.twitch-img {
     width: 100%;
@@ -257,6 +256,7 @@ const StyledHome = styled.div`
     .headline {
       text-transform: uppercase;
       font-size: 14px;
+      font-family : NeueMontrealRegular;
     }
     .passion_container {
       display: flex;

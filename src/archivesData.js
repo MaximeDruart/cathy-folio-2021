@@ -2,7 +2,6 @@
 import { v4 as uuidv4 } from "uuid"
 
 import cl from "./assets/img/archives/cl.jpg"
-import cl_print from "./assets/img/archives/cl_print.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
 import oceane from "./assets/img/archives/oceane.jpg"
@@ -19,13 +18,21 @@ import kill from "./assets/img/archives/kill.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
 import flamalice from "./assets/img/archives/flamalice.jpg"
 import elijah from "./assets/img/archives/elijah.jpg"
+import weekend from "./assets/img/archives/weekend.jpg"
 
 let archivesData = [
+  {
+    name: "weekend",
+    coverImg: weekend,
+    type: "print",
+    description: "Bibi - The weekend view",
+    websiteLink: "",
+  },
   {
     name: "elijah",
     coverImg: elijah,
     type: "print",
-    description: "elijah branding logo",
+    description: "elijah portfolio",
     websiteLink: "",
   },
   {
@@ -74,13 +81,6 @@ let archivesData = [
     coverImg: cl,
     type: "Ui design",
     description: "Cl Presave page",
-    websiteLink: "",
-  },
-  {
-    name: "Cl Print",
-    coverImg: cl_print,
-    type: "Print",
-    description: "Cl Print for her new album",
     websiteLink: "",
   },
   {

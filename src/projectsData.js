@@ -59,19 +59,6 @@ let projectsData = [
     color2: "#FFFFFF",
   },
   {
-    name: "Elijah",
-    path: "elijah",
-    title: "Design and developtment of Elijah's portfolio",
-    coverImg: elijahCover,
-    visual1: elijahVisual1,
-    component: Elijah,
-    date: "Jan. 2022",
-    role: "Design, Dev",
-    techs: ["HTML/CSS/JS"],
-    description: "Elijah is a photograph based in Paris!",
-    websiteLink: "https://elijahbeta.netlify.app/index.html",
-  },
-  {
     name: "Arcane",
     path: "arcane",
     title: "UI design for Arcane",
@@ -83,6 +70,19 @@ let projectsData = [
     techs: ["AdobeXD Photoshop"],
     description:
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+  },
+  {
+    name: "Elijah",
+    path: "elijah",
+    title: "Design and development of Elijah's portfolio",
+    coverImg: elijahCover,
+    visual1: elijahVisual1,
+    component: Elijah,
+    date: "Jan. 2022",
+    role: "Design, Dev",
+    techs: ["HTML/CSS/JS"],
+    description: "Elijah is a photograph based in Paris!",
+    websiteLink: "https://elijahbeta.netlify.app/index.html",
   },
   {
     name: "Grissini",
@@ -134,7 +134,8 @@ let projectsData = [
     date: "Dec. 2020",
     role: "UI UX Designer",
     techs: ["Adobe XD,", " Photoshop"],
-    description: "Hologramme is a high end hat distributor. I was asked to redesign their B2C website",
+    description:
+      "Hologramme is a high end hat distributor. I was asked to redesign their B2C website",
   },
   {
     name: "Sangen",
@@ -200,6 +201,10 @@ let projectsData = [
   },
 ]
 
-projectsData = projectsData.map((project, index) => ({ ...project, id: uuidv4(), index }))
+projectsData = projectsData.map((project, index) => ({
+  ...project,
+  id: uuidv4(),
+  index,
+}))
 
 export default projectsData
