@@ -6,10 +6,12 @@ import projectsData from "../../../projectsData"
 import HomeProjectDetail from "./HomeProjectDetail"
 
 const Container = styled.div`
+*{
+  font-family: NeueMontrealRegular;
+}
   width: 100%;
   .project {
     width: 100%;
-
     .content {
       display: flex;
       margin-bottom: 40px;

@@ -23,7 +23,7 @@ export default css`
     }
   }
   .text-h2 {
-    font-family: "Gallery";
+    font-family: "SaolDisplayLight";
     /* font-family: NeueMontrealRegular; */
     font-size: 60px;
     color: ${({ theme }) => theme.colors.text.standard};
@@ -50,7 +50,7 @@ export default css`
     line-height: 1.1;
     color: ${({ theme }) => theme.colors.text.standard};
     span.important_word {
-      font-family: "Gallery";
+      font-family: "SaolDisplayLight";
       color: ${({ theme }) => theme.colors.primary1};
       font-size: 60px;
     }

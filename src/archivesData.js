@@ -22,13 +22,6 @@ import weekend from "./assets/img/archives/weekend.jpg"
 
 let archivesData = [
   {
-    name: "weekend",
-    coverImg: weekend,
-    type: "print",
-    description: "Bibi - The weekend view",
-    websiteLink: "",
-  },
-  {
     name: "elijah",
     coverImg: elijah,
     type: "print",
@@ -47,6 +40,13 @@ let archivesData = [
     coverImg: etude,
     type: "Ui Design",
     description: "UI Design for Étude House",
+    websiteLink: "",
+  },
+  {
+    name: "weekend",
+    coverImg: weekend,
+    type: "print",
+    description: "Bibi - The weekend view",
     websiteLink: "",
   },
   {
