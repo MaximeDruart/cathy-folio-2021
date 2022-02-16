@@ -2,6 +2,10 @@
 import { v4 as uuidv4 } from "uuid"
 
 import cl from "./assets/img/archives/cl.jpg"
+import explosion from "./assets/img/archives/explosion.jpg"
+import blackWhite from "./assets/img/archives/blackWhite.jpg"
+import lila from "./assets/img/archives/lila.jpg"
+import gradient from "./assets/img/archives/gradient.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
 import oceane from "./assets/img/archives/oceane.jpg"
@@ -36,6 +40,18 @@ let archivesData = [
     websiteLink: "https://designr.cathydolle.com/",
   },
   {
+    name: "explosion",
+    coverImg: explosion,
+    type: "processing",
+    description: "An API for designR (work only on desktop)",
+  },
+  {
+    name: "lila",
+    coverImg: lila,
+    type: "processing",
+    description: "An API for designR (work only on desktop)",
+  },
+  {
     name: "Etude house",
     coverImg: etude,
     type: "Ui Design",
@@ -50,6 +66,12 @@ let archivesData = [
     websiteLink: "",
   },
   {
+    name: "gradient",
+    coverImg: gradient,
+    type: "processing",
+    description: "An API for designR (work only on desktop)",
+  },
+  {
     name: "Kill geometry print",
     coverImg: kill,
     type: "Print",
@@ -60,6 +82,12 @@ let archivesData = [
     name: "Parallele magazine",
     coverImg: parallele,
     type: "Print",
+    description: "Cover for magazine parallele",
+  },
+  {
+    name: "Black White",
+    coverImg: blackWhite,
+    type: "Processing",
     description: "Cover for magazine parallele",
   },
   {
