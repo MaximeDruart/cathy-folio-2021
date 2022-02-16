@@ -41,6 +41,10 @@ import Desktop from "./components/projects/Desktop"
 import desktopCover from "./assets/img/works/desktop.jpg"
 import desktopVisual1 from "./assets/img/works/desktop/desktopVisual1.jpg"
 
+import Feels from "./components/projects/Feels"
+import feelsCover from "./assets/img/works/feels.jpg"
+import feelsVisual1 from "./assets/img/works/feels/feelsVisual1.jpg"
+
 let projectsData = [
   {
     name: "Project X",
@@ -57,6 +61,19 @@ let projectsData = [
     websiteLink: "https://www.projectxparis.com/",
     color1: "#000000",
     color2: "#FFFFFF",
+  },
+  {
+    name: "Feels",
+    path: "feels",
+    title: "Create with your feeling",
+    coverImg: feelsCover,
+    component: Feels,
+    date: "Feb. 2022",
+    role: "DA & developer",
+    techs: ["Processing, Illustrator, Adobe XD"],
+    description:
+      "Une installation générative qui prend en considération la singularité de chaque individu. Chaque tableau est rendu unique par l expérience propre du visiteur.",
+    visual1: feelsVisual1,
   },
   {
     name: "Arcane",

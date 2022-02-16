@@ -23,13 +23,23 @@ const StyledProjectDetail = styled.div`
         width: 100%;
       }
     }
-    img.trio,
+    img.trio{
+      width: 160px
+    }
+
     svg {
       width: 30%;
       margin: 40px 0;
       @media (max-width: 900px) {
         width: 100%;
       }
+    }
+  }
+  .mini{
+    justify-content: center;
+    img{
+      width: 170px;
+      margin: 0 50px;
     }
   }
   img.step {
@@ -108,15 +118,19 @@ const StyledProjectDetail = styled.div`
     height: 100vh;
     width: 100vw;
 
-    .text-h1.title {
+    .big-title {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      font-size: 200px;
       text-transform: uppercase;
       color: white;
-      font-family: SaolDisplayLight;
+      font-family: DisplayNew;
       white-space: nowrap;
+      @media (max-width: 900px) {
+          font-size: 80px;
+      }
     }
   }
   /* Separator with text */
@@ -302,8 +316,12 @@ const StyledProjectDetail = styled.div`
       transform: translate(-50%, -50%);
       text-transform: uppercase;
       color: white;
-      font-family: SaolDisplayLight;
+      font-size: 200px;
+      font-family: DisplayNew;
       white-space: nowrap;
+      @media (max-width: 900px) {
+        font-size: 80px;
+      }
     }
   }
 `
@@ -339,7 +357,7 @@ const ProjectDetail = ({ project }) => {
     <PageTemplate hasFooter={false} initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
         <div className='hero-title'>
-          <h1 className='text-h1 title'>{project.name}</h1>
+          <h1 className='big-title'>{project.name}</h1>
         </div>
         <div className='hero'>
           <motion.img
