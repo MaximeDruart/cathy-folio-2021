@@ -99,6 +99,7 @@ const StyledHome = styled.div`
           text-transform: uppercase;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
+          margin-left: 10px;
         }
       }
       @media (max-width: 1200px) {
@@ -171,6 +172,9 @@ const StyledHome = styled.div`
                 top: -50px;
                 right: 0;
               }
+            }
+            .important_word{
+              margin-left: 5px;
             }
           }
         }
