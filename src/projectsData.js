@@ -56,7 +56,7 @@ let projectsData = [
     role: "DA & developer",
     techs: ["Processing, Illustrator, Adobe XD"],
     description:
-      "Une installation générative qui prend en considération la singularité de chaque individu. Chaque tableau est rendu unique par l expérience propre du visiteur.",
+      "A generative installation that takes into consideration the singularity of each individual. Each painting is made unique by the visitor's own experience.",
     visual1: feelsVisual1,
   },
   {

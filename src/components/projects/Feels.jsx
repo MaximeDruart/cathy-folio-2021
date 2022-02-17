@@ -99,7 +99,7 @@ const Sangen = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">I used the "KDA" typography from League of legends for the titles, and Neue Montreal for the body text. Simple and warm colors reminding the series.</p>
+          <p className="text-description">I wanted to create something elegant and modern at the same time. The Gallery Modern typography met those expectations. As for the colors, I had fun with R, G, B to give a rhythmic touch to the creation and modulate according to the mood of the users.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
