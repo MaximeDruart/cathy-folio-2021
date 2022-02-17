@@ -37,11 +37,11 @@ export default css`
     }
 
     @media (max-width: 769px) {
-      font-size: 40px;
+      font-size: 44px;
     }
 
     @media (max-width: 480px) {
-      font-size: 40px;
+      font-size: 44px;
     }
   }
   .text-h2-5 {
@@ -75,6 +75,9 @@ export default css`
     font-size: 20px;
     font-family: 6px;
     line-height: 1.2;
+    @media (max-width: 769px) {
+      font-size: 24px;
+    }
   }
   .text-h5 {
     font-family: "DisplayNew";

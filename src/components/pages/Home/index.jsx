@@ -165,10 +165,10 @@ const StyledHome = styled.div`
               display: flex;
               justify-content: flex-end;
               width: 100%;
-              top: 115px;
+              top: 100px;
               right: 0;
               &::after {
-                top: -65px;
+                top: -50px;
                 right: 0;
               }
             }

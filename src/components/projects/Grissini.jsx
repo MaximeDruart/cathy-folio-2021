@@ -93,7 +93,7 @@ const Grissini = () => {
       <div className='headline text-regular'>about page</div>
       <div className='separator'></div>
       <img src={about} alt="pxp" />
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
       <p className="text-description">Responsive mock-ups keeping the site simple and easy to navigate.</p>
@@ -106,7 +106,7 @@ const Grissini = () => {
         <img src={shopMobile} alt="responsive"></img>
         <img src={contactMobile} alt="responsive"></img>
       </div>
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
     </StyledGrissini>
   )
 }

@@ -93,7 +93,7 @@ const PXP = () => {
       <div className='headline text-regular'>product page</div>
       <div className='separator'></div>
       <img src={productPage} alt='pxp' />
-      <div className='spacer'></div>
+      <div className='big-spacer'></div>
       {/* responsive ui */}
       <h2 className='text-h2'>Responsive UI</h2>
       <p className='text-description'>
@@ -108,7 +108,7 @@ const PXP = () => {
         <img src={productMobile} alt='responsive'></img>
         <img src={blogMobile} alt='responsive'></img>
       </div>
-      <div className='spacer'></div>
+      <div className='big-spacer'></div>
     </StyledPXP>
   )
 }
