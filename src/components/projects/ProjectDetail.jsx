@@ -13,6 +13,11 @@ const StyledProjectDetail = styled.div`
       opacity: 1 !important;
     }
   }
+  video{
+    width:100%;
+    height: 85vh;
+    object-fit: cover;
+  }
   .img_container {
     display: flex;
     flex-wrap: wrap;

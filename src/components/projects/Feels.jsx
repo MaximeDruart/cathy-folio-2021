@@ -20,6 +20,7 @@ import g2 from "../../assets/img/works/feels/g2.png"
 
 import r1 from "../../assets/img/works/feels/r1.png"
 import r2 from "../../assets/img/works/feels/r2.png"
+import video1 from "../../assets/img/works/feels/video.mp4"
 
 import feelsPreview from "../../assets/img/works/feels/feelsPreview.png"
 
@@ -117,9 +118,8 @@ const Sangen = () => {
       </div>
       {/* end chart */}
 
-      <div className="spacer">
+      <div className="spacer"></div>
 
-      </div>
       <h2 className='text-h2'>Moodboard</h2>
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>Dark Moodboard</div>
@@ -161,20 +161,15 @@ const Sangen = () => {
 
       <div className="spacer"></div>
 
-      <div className='headline text-regular'>Green Palette</div>
-      <div className='separator'></div>
-      <div className="img_container">
-        <img className="duo" src={g1} alt="img" />
-        <img className="duo" src={g2} alt="img" />
-      </div>
-      <div className="spacer"></div>
-
       <div className='headline text-regular'>Flyers</div>
       <div className='separator'></div>
       <div className="img_container">
         <img className="duo" src={concept} alt="img" />
         <img className="duo" src={moods} alt="img" />
       </div>
+      <div className="spacer"></div>
+
+      <video controls src={video1}></video>
       <div className="big-spacer"></div>
 
 
