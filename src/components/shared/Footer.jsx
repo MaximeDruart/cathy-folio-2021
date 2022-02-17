@@ -55,7 +55,8 @@ const Container = styled.div`
           font-size: 30px;
         }
         .important-word {
-          font-family: "SaolDisplaySemiboldItalic";
+          font-family: "DisplayNew";
+          font-size: 110%;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
           overflow: hidden;

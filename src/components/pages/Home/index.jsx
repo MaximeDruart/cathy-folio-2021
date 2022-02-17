@@ -105,7 +105,7 @@ const StyledHome = styled.div`
       }
       @media (max-width: 1200px) {
         .line {
-          font-size: 70px;
+          font-size: 80px;
           line-height: 1;
           &.second_line {
             padding-left: 150px;
@@ -113,15 +113,14 @@ const StyledHome = styled.div`
           &.third_line {
             padding-left: 80px;
             .slider-container {
-              right: 50px;
+              right: 20px;
             }
           }
         }
       }
       @media (max-width: 950px) {
         .line {
-          font-size: 50px;
-          line-height: 1.1;
+          font-size: 70px;
           &.second_line {
             padding-left: 100px;
           }
@@ -136,15 +135,14 @@ const StyledHome = styled.div`
             }
           }
           .important_word {
-            line-height: 1.3;
             margin-left: 0.8rem;
           }
         }
       }
       @media (max-width: 769px) {
         .line {
-          font-size: 50px;
-          line-height: 1.1;
+          font-size: 60px;
+          line-height: 1;
           &.second_line {
             padding-left: 0px;
           }
@@ -157,24 +155,17 @@ const StyledHome = styled.div`
               top: 90px;
               right: 0;
               &::after {
-                top: -20px;
+                top: -14px;
                 left: 0;
               }
             }
-          }
-          .important_word {
-            margin-left: 5px;
-            font-size: 50px;
-            margin-top: -2px;
-            line-height: 1.4;
           }
         }
       }
 
       @media (max-width: 500px) {
         .line {
-          font-size: 39px;
-          line-height: 1.15;
+          font-size: 42px;
           &.third_line {
             .slider-container {
               display: flex;
@@ -188,18 +179,12 @@ const StyledHome = styled.div`
               }
             }
           }
-          .important_word {
-            margin-top: -1.5px;
-            font-size: 38px;
-            line-height: 1.3;
-          }
         }
       }
 
       @media (max-width: 380px) {
         .line {
-          font-size: 37px;
-          line-height: 1.15;
+          font-size: 40px;
           &.third_line {
             .slider-container {
               display: flex;

@@ -8,7 +8,6 @@ import lila from "./assets/img/archives/lila.jpg"
 import feelsBlue from "./assets/img/archives/feelsBlue.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
-import bank from "./assets/img/archives/bank.jpg"
 import red from "./assets/img/archives/red.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
@@ -137,13 +136,6 @@ let archivesData = [
     type: "Illustrator",
     description: "I had to create a mandala for school, I choosed Chihiro theme",
     websiteLink: "",
-  },
-  {
-    name: "Bank Login Page",
-    coverImg: bank,
-    type: "Ui design",
-    description: "Ui & web developtment of a Log in page for a Bank",
-    websiteLink: "https://loginbank.netlify.app/",
   },
   {
     name: "red book",

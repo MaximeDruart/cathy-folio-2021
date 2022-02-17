@@ -60,7 +60,7 @@ const StyledAbout = styled.div`
         line-height: 1;
         .important_word {
           line-height: 1.3;
-          font-family: "SaolDisplaySemiboldItalic";
+          font-family: "DisplayNew";
           text-transform: capitalize;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
@@ -217,7 +217,7 @@ const StyledAbout = styled.div`
     .title {
       text-align: center;
       .saol {
-        font-family: SaolDisplaySemiboldItalic;
+        font-family: DisplayNew;
         color: ${({ theme }) => theme.colors.primary1};
       }
     }
