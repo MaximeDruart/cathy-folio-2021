@@ -2,18 +2,17 @@
 import { v4 as uuidv4 } from "uuid"
 
 import cl from "./assets/img/archives/cl.jpg"
-import explosion from "./assets/img/archives/explosion.jpg"
-import blackWhite from "./assets/img/archives/blackWhite.jpg"
+import feelsRed from "./assets/img/archives/feelsRed.jpg"
+import feels from "./assets/img/archives/feels.jpg"
 import lila from "./assets/img/archives/lila.jpg"
-import gradient from "./assets/img/archives/gradient.jpg"
+import feelsBlue from "./assets/img/archives/feelsBlue.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
-import oceane from "./assets/img/archives/oceane.jpg"
 import bank from "./assets/img/archives/bank.jpg"
 import red from "./assets/img/archives/red.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
-import nike from "./assets/img/archives/nike.jpg"
+import distortion from "./assets/img/archives/distortion.jpg"
 import parallele from "./assets/img/archives/parallele.jpg"
 import illu1 from "./assets/img/archives/illu1.jpg"
 import illu2 from "./assets/img/archives/illu2.jpg"
@@ -40,8 +39,8 @@ let archivesData = [
     websiteLink: "https://designr.cathydolle.com/",
   },
   {
-    name: "explosion",
-    coverImg: explosion,
+    name: "Feels Red",
+    coverImg: feelsRed,
     type: "processing",
     description: "An API for designR (work only on desktop)",
   },
@@ -66,8 +65,8 @@ let archivesData = [
     websiteLink: "",
   },
   {
-    name: "gradient",
-    coverImg: gradient,
+    name: "Feels Blue",
+    coverImg: feelsBlue,
     type: "processing",
     description: "An API for designR (work only on desktop)",
   },
@@ -85,8 +84,8 @@ let archivesData = [
     description: "Cover for magazine parallele",
   },
   {
-    name: "Black White",
-    coverImg: blackWhite,
+    name: "Feels Cover",
+    coverImg: feels,
     type: "Processing",
     description: "Cover for magazine parallele",
   },
@@ -140,13 +139,6 @@ let archivesData = [
     websiteLink: "",
   },
   {
-    name: "oceane",
-    coverImg: oceane,
-    type: "print",
-    description: "oceane photobook",
-    websiteLink: "",
-  },
-  {
     name: "Bank Login Page",
     coverImg: bank,
     type: "Ui design",
@@ -161,11 +153,8 @@ let archivesData = [
     websiteLink: "https://red.com/",
   },
   {
-    name: "Nike homepage",
-    coverImg: nike,
-    type: "Ui Design",
-    description: "UI Design for Nike",
-    websiteLink: "",
+    name: "Distorsion homepage",
+    coverImg: distortion
   },
   {
     name: "Princess Mononoke",

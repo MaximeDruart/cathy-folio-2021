@@ -35,7 +35,7 @@ const StyledMenu = styled(motion.div)`
       li {
         line-height: 0.9;
         text-transform: uppercase;
-        font-family: SaolDisplayLight;
+        font-family: DisplayNew;
         a {
           display: inline-block;
           position: relative;
@@ -54,7 +54,8 @@ const StyledMenu = styled(motion.div)`
       }
     }
     .active {
-      font-family: SaolDisplaySemiboldItalic;
+      font-family: DisplayNew;
+      color :  ${({ theme }) => theme.colors.primary1};
     }
   }
 `

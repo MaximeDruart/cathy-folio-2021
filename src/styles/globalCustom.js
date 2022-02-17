@@ -23,7 +23,7 @@ export default css`
     }
   }
   .text-h2 {
-    font-family: "SaolDisplayLight";
+    font-family: "DisplayNew";
     /* font-family: NeueMontrealRegular; */
     font-size: 60px;
     color: ${({ theme }) => theme.colors.text.standard};
@@ -31,7 +31,7 @@ export default css`
     margin-bottom: 1rem;
     line-height: 1.2;
     span.important_word {
-      font-family: "SaolDisplaySemiboldItalic";
+      font-family: "DisplayNew";
       color: ${({ theme }) => theme.colors.primary1};
       font-size: 60px;
     }
@@ -50,7 +50,7 @@ export default css`
     line-height: 1.1;
     color: ${({ theme }) => theme.colors.text.standard};
     span.important_word {
-      font-family: "SaolDisplayLight";
+      font-family: "DisplayNew";
       color: ${({ theme }) => theme.colors.primary1};
       font-size: 60px;
     }
@@ -77,7 +77,7 @@ export default css`
     line-height: 1.2;
   }
   .text-h5 {
-    font-family: "SaolDisplayLight";
+    font-family: "DisplayNew";
     font-size: 24px;
     line-height: 1.4;
     color: ${({ theme }) => theme.colors.text.standard};

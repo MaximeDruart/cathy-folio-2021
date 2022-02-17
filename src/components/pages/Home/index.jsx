@@ -58,11 +58,11 @@ const StyledHome = styled.div`
         text-transform: uppercase;
         width: auto;
         white-space: nowrap;
-        font-family: NeueMontrealRegular;
+        font-family: DisplayNew;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 90px;
-        line-height: 1;
+        font-size: 115px;
+        line-height: 0.9;
 
         &.first_line {
           text-align: start;
@@ -95,11 +95,11 @@ const StyledHome = styled.div`
         }
 
         .important_word {
-          font-family: "SaolDisplaySemiboldItalic";
-          text-transform: capitalize;
+          font-family: "DisplayNew";
+          text-transform: uppercase;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
-          line-height: 1.26;
+          //line-height: 1.26;
           margin-left: 0.5rem;
         }
       }
@@ -299,7 +299,7 @@ const StyledHome = styled.div`
         h3.number {
           margin-top: 20px;
           font-size: 60px;
-          font-family: "SaolDisplayLight";
+          font-family: "DisplayNew";
           /* font-family: "NeueMontrealLight"; */
           color: ${({ theme }) => theme.colors.text.disabled};
           margin-left: -4px;
@@ -369,7 +369,7 @@ const StyledHome = styled.div`
     .title {
       text-align: center;
       .saol {
-        font-family: SaolDisplaySemiboldItalic;
+        font-family: DisplayNew;
         color: ${({ theme }) => theme.colors.primary1};
       }
     }

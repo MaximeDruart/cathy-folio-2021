@@ -19,7 +19,7 @@ const Container = styled.div`
       .title {
         margin-left: 40px;
 
-        font-family: SaolDisplayLight;
+        font-family: DisplayNew;
         text-transform: uppercase;
       }
 

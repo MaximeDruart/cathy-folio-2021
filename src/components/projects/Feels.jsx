@@ -122,11 +122,11 @@ const Sangen = () => {
       </div>
       <h2 className='text-h2'>Moodboard</h2>
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Génère une palette émotionnelle</div>
+      <div className='headline text-regular'>Dark Moodboard</div>
       <div className='separator'></div>
       <img src={moodboard} alt="moodboard" />
       <div className="spacer"></div>
-      <div className='headline text-regular'>Génère une palette émotionnelle</div>
+      <div className='headline text-regular'>Light Moodboard</div>
       <div className='separator'></div>
       <img src={moodboard2} alt="moodboard" />
 
@@ -143,7 +143,7 @@ const Sangen = () => {
       </div>
 
       <div className="spacer"></div>
-      <div className='headline text-regular'>Blue Creation</div>
+      <div className='headline text-regular'>Blue Palette</div>
       <div className='separator'></div>
       <div className="img_container">
         <img className="duo" src={b1} alt="img" />
@@ -152,7 +152,7 @@ const Sangen = () => {
 
       <div className="spacer"></div>
 
-      <div className='headline text-regular'>Concept</div>
+      <div className='headline text-regular'>Red Palette</div>
       <div className='separator'></div>
       <div className="img_container">
         <img className="duo" src={r1} alt="img" />
@@ -161,7 +161,7 @@ const Sangen = () => {
 
       <div className="spacer"></div>
 
-      <div className='headline text-regular'>Green palette</div>
+      <div className='headline text-regular'>Green Palette</div>
       <div className='separator'></div>
       <div className="img_container">
         <img className="duo" src={g1} alt="img" />
