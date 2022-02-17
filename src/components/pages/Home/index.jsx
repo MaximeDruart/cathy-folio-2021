@@ -99,14 +99,11 @@ const StyledHome = styled.div`
           text-transform: uppercase;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
-          //line-height: 1.26;
-          margin-left: 0.5rem;
         }
       }
       @media (max-width: 1200px) {
         .line {
           font-size: 80px;
-          line-height: 1;
           &.second_line {
             padding-left: 150px;
           }
@@ -133,9 +130,6 @@ const StyledHome = styled.div`
                 top: -50px;
               }
             }
-          }
-          .important_word {
-            margin-left: 0.8rem;
           }
         }
       }
@@ -165,7 +159,7 @@ const StyledHome = styled.div`
 
       @media (max-width: 500px) {
         .line {
-          font-size: 42px;
+          font-size: 44px;
           &.third_line {
             .slider-container {
               display: flex;
@@ -174,7 +168,7 @@ const StyledHome = styled.div`
               top: 115px;
               right: 0;
               &::after {
-                top: -60px;
+                top: -65px;
                 right: 0;
               }
             }
@@ -197,11 +191,6 @@ const StyledHome = styled.div`
                 right: 0;
               }
             }
-          }
-          .important_word {
-            margin-top: -1.5px;
-            font-size: 38px;
-            line-height: 1.3;
           }
         }
       }
