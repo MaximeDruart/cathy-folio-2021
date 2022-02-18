@@ -47,19 +47,6 @@ import feelsVisual1 from "./assets/img/works/feels/feelsVisual1.jpg"
 
 let projectsData = [
   {
-    name: "Feels",
-    path: "feels",
-    title: "Create with your feeling",
-    coverImg: feelsCover,
-    component: Feels,
-    date: "Feb. 2022",
-    role: "DA & developer",
-    techs: ["Processing, Illustrator, Adobe XD"],
-    description:
-      "A generative installation that takes into consideration the singularity of each individual. Each painting is made unique by the visitor's own experience.",
-    visual1: feelsVisual1,
-  },
-  {
     name: "Project X",
     path: "project-x-paris",
     title: "Complete redesign of the Project X Paris website",
@@ -100,6 +87,19 @@ let projectsData = [
     techs: ["HTML/CSS/JS"],
     description: "Elijah is a photograph based in Paris!",
     websiteLink: "https://elijahbeta.netlify.app/index.html",
+  },
+  {
+    name: "Feels",
+    path: "feels",
+    title: "Create with your feeling",
+    coverImg: feelsCover,
+    component: Feels,
+    date: "Feb. 2022",
+    role: "DA & developer",
+    techs: ["Processing, Illustrator, Adobe XD"],
+    description:
+      "A generative installation that takes into consideration the singularity of each individual. Each painting is made unique by the visitor's own experience.",
+    visual1: feelsVisual1,
   },
   {
     name: "Grissini",
