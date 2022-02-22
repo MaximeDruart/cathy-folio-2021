@@ -13,10 +13,9 @@ import cardVerso from "../../assets/img/works/branding/cardVerso.jpg"
 
 import FullImage from "../shared/FullImage"
 
-
-// Print
-import rPrint from "../../assets/img/works/feels/rPrint.png"
-import bPrint from "../../assets/img/works/feels/bPrint.png"
+import Cathy1 from "../../assets/icons/cathy1.svg?component"
+import Cathy2 from "../../assets/icons/cathy2.svg?component"
+import Cathy3 from "../../assets/icons/cathy3.svg?component"
 
 
 
@@ -26,6 +25,23 @@ import bPrint from "../../assets/img/works/feels/bPrint.png"
 
 
 const StyledSangen = styled.div`
+
+svg:nth-child(1){
+    .a,.b{fill:none;}.a{stroke:${({ theme }) => theme.colors.text.disabled2};}.b{stroke:${({ theme }) => theme.colors.text.standard};stroke-width:0.8px;}
+  }
+svg:nth-child(2){
+  .a{
+    fill:${({ theme }) => theme.colors.text.standard};}
+  .b{
+    fill:none;
+    stroke:${({ theme }) => theme.colors.text.disabled2};
+  }
+}
+svg:nth-child(3){
+  .a{fill:${({ theme }) => theme.colors.text.standard};}
+  .b{fill:none;stroke:none};
+}
+
 h2{
   margin: 50px 0;
 }
@@ -99,6 +115,17 @@ const Sangen = () => {
       {/* end chart */}
 
       <div className="spacer"></div>
+      {/* logo */}
+      <h2 className='text-h2'>Logo</h2>
+      <div className="demi-spacer"></div>
+      <div className='headline text-regular'>logo maker</div>
+      <div className='separator'></div>
+      <div className="img_container">
+        <Cathy1></Cathy1>
+        <Cathy2></Cathy2>
+        <Cathy3></Cathy3>
+      </div>
+      <div className="spacer"></div>
 
       <FullImage src={resume} alt='resume' />
       <div className="demi-spacer"></div>
@@ -121,9 +148,9 @@ const Sangen = () => {
 
       <FullImage src={envelop} alt='envelop' />
       <div className="spacer"></div>
-      <h2 className='text-h2'>Print</h2>
+      <h2 className='text-h2'>Thanks for watching</h2>
       <div className="demis-spacer"></div>
-      <p className="text-description">I also generate some pattern with processing to create a print collection</p>
+      <p className="text-description">Do not hesitate to contact me for any project :3</p>
       <div className="big-spacer"></div>
 
     </StyledSangen>

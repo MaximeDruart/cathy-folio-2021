@@ -51,6 +51,19 @@ import brandingVisual1 from "./assets/img/works/branding/visual1.jpg"
 
 let projectsData = [
   {
+    name: "branding",
+    path: "branding",
+    title: "Self branding",
+    coverImg: brandingCover,
+    visual1: brandingVisual1,
+    component: Branding,
+    date: "Feb. 2022",
+    role: "Art direction",
+    techs: ["AdobeXD Photoshop"],
+    description:
+      "For several months I had a desire to create a graphic charter and a universe around my personality. I finally succeeded! I let you discover me : Cathy Dolle",
+  },
+  {
     name: "Project X",
     path: "project-x-paris",
     title: "Complete redesign of the Project X Paris website",
@@ -65,19 +78,6 @@ let projectsData = [
     websiteLink: "https://www.projectxparis.com/",
     color1: "#000000",
     color2: "#FFFFFF",
-  },
-  {
-    name: "branding",
-    path: "branding",
-    title: "Self branding",
-    coverImg: brandingCover,
-    visual1: brandingVisual1,
-    component: Branding,
-    date: "Feb. 2022",
-    role: "Art direction",
-    techs: ["AdobeXD Photoshop"],
-    description:
-      "For several months I had a desire to create a graphic charter and a universe around my personality. I finally succeeded! I let you discover me : Cathy Dolle",
   },
   {
     name: "Arcane",

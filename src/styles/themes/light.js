@@ -10,7 +10,7 @@ lightTheme.colors = {
   text: {
     standard: "rgb(20, 20, 20)",
     disabled: "#B5B5B5",
-    disabled2: "#050505",
+    disabled2: "#BCBCBC",
   },
 }
 

@@ -33,7 +33,7 @@ img{
 }
 .responsive{
     img{
-      border: solid 0.5px ${({ theme }) => theme.colors.text.disabled2};;
+      border: solid 0.5px ${({ theme }) => theme.colors.text.disabled2};
     }
   }
 .chart{
