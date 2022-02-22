@@ -171,6 +171,11 @@ const Sangen = () => {
       <div className='headline text-regular'>Guide</div>
       <div className='separator'></div>
       <img src={guide} alt="img" />
+
+      <div className="demi-spacer"></div>
+
+      <FullImage src={feelsPreview} alt='card' />
+
       <div className="spacer"></div>
 
       <h2 className='text-h2'>Workshop, result</h2>
