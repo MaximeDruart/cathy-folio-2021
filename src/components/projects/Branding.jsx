@@ -10,6 +10,7 @@ import businessCard from "../../assets/img/works/branding/businessCard.jpg"
 // CARD
 import cardRecto from "../../assets/img/works/branding/cardRecto.jpg"
 import cardVerso from "../../assets/img/works/branding/cardVerso.jpg"
+import stickers from "../../assets/img/works/branding/stickers.png"
 
 import FullImage from "../shared/FullImage"
 
@@ -27,19 +28,13 @@ import Cathy3 from "../../assets/icons/cathy3.svg?component"
 const StyledSangen = styled.div`
 
 svg:nth-child(1){
-    .a,.b{fill:none;}.a{stroke:${({ theme }) => theme.colors.text.disabled2};}.b{stroke:${({ theme }) => theme.colors.text.standard};stroke-width:0.8px;}
+  .a,.b,.c{fill:none;}.b{stroke:${({ theme }) => theme.colors.text.disabled2};}.c{stroke:${({ theme }) => theme.colors.text.standard};stroke-width:0.8px;}
   }
 svg:nth-child(2){
-  .a{
-    fill:${({ theme }) => theme.colors.text.standard};}
-  .b{
-    fill:none;
-    stroke:${({ theme }) => theme.colors.text.disabled2};
-  }
+  .a,.b{fill:none;}.b{stroke:${({ theme }) => theme.colors.text.disabled2};}.c{fill:${({ theme }) => theme.colors.text.standard};}
 }
 svg:nth-child(3){
-  .a{fill:${({ theme }) => theme.colors.text.standard};}
-  .b{fill:none;stroke:none};
+  .a{fill:none;}.b{fill:${({ theme }) => theme.colors.text.standard};}
 }
 
 h2{
@@ -143,6 +138,13 @@ const Sangen = () => {
         <img className="duo" src={cardRecto} alt="calm" />
         <img className="duo" src={cardVerso} alt="casual" />
       </div>
+
+      <div className="spacer"></div>
+      <div className='headline text-regular'>personal Stickers</div>
+      <div className='separator'></div>
+      <img src={stickers} alt="stickers" />
+
+
 
       <div className="big-spacer"></div>
 

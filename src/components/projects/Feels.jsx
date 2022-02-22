@@ -4,7 +4,7 @@ import styled from "styled-components"
 import concept from "../../assets/img/works/feels/concept.png"
 import moods from "../../assets/img/works/feels/moods.png"
 import moodboard from "../../assets/img/works/feels/moodboard.png"
-import moodboard2 from "../../assets/img/works/feels/moodboard2.png"
+import guide from "../../assets/img/works/feels/guide.jpg"
 
 // FEEL
 import calm from "../../assets/img/works/feels/calm.svg"
@@ -23,6 +23,7 @@ import r2 from "../../assets/img/works/feels/r2.png"
 import video1 from "../../assets/img/works/feels/video.mp4"
 
 import feelsPreview from "../../assets/img/works/feels/feelsPreview.png"
+import thumbnail from  "../../assets/img/works/feels/thumbnail.jpg"
 
 import FullImage from "../shared/FullImage"
 
@@ -125,10 +126,6 @@ const Sangen = () => {
       <div className='headline text-regular'>Dark Moodboard</div>
       <div className='separator'></div>
       <img src={moodboard} alt="moodboard" />
-      <div className="spacer"></div>
-      <div className='headline text-regular'>Light Moodboard</div>
-      <div className='separator'></div>
-      <img src={moodboard2} alt="moodboard" />
 
       <div className="big-spacer"></div>
       
@@ -167,14 +164,23 @@ const Sangen = () => {
         <img className="duo" src={concept} alt="img" />
         <img className="duo" src={moods} alt="img" />
       </div>
+
+      <div className="spacer">
+
+      </div>
+      <div className='headline text-regular'>Guide</div>
+      <div className='separator'></div>
+      <img src={guide} alt="img" />
       <div className="spacer"></div>
 
-      <video controls src={video1}></video>
-      <div className="big-spacer"></div>
-
-
+      <h2 className='text-h2'>Workshop, result</h2>
+      <div className="demi-spacer"></div>
+      <video poster={thumbnail} controls src={video1}></video>
+      <div className="spacer"></div>
+      {/* 
       <FullImage src={feelsPreview} alt='pxp-desktop' />
-      <div className="spacer"></div>
+      <div className="spacer"></div> */}
+
       <h2 className='text-h2'>Print</h2>
       <div className="demis-spacer"></div>
       <p className="text-description">I also generate some pattern with processing to create a print collection</p>
