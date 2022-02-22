@@ -23,6 +23,10 @@ const darkColors = [
     name: "quartz",
     color: "#F582D2",
   },
+  {
+    name: "desert",
+    color: "#A55420",
+  },
 ]
 
 const lightColors = [
@@ -49,6 +53,10 @@ const lightColors = [
   {
     name: "candy",
     color: "#EFA8EF",
+  },
+  {
+    name: "desert",
+    color: "#A55420",
   },
 ]
 

@@ -18,6 +18,12 @@ const StyledProjectDetail = styled.div`
     height: 85vh;
     object-fit: cover;
   }
+  img.little{
+      width:80%
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
   .img_container {
     display: flex;
     flex-wrap: wrap;
