@@ -73,7 +73,7 @@ const Grissini = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Je suis partie sur un design minimaliste et épurée, rappelant en même temps la musique classique tout en restant élégant. La typographie Saol Display répondait parfaitement à cette attente. Pour la couleur principale nous sommes partis sur du doré, une couleur à la fois luxieuse et harmonieuse.</p>
+          <p className="text-description">I went for an electric blue, and modern and readable fonts that fit well in the world of video games</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>

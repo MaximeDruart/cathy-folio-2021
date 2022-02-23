@@ -131,7 +131,7 @@ const Sangen = () => {
       
       <h2 className='text-h2'>How do you feel today ?</h2>
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Génère une palette émotionnelle</div>
+      <div className='headline text-regular'>GENERATES AN EMOTIONAL PALETTE</div>
       <div className='separator'></div>
       <div className="img_container mini">
         <img src={calm} alt="calm" />
