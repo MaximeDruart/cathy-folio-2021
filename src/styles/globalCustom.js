@@ -38,6 +38,7 @@ export default css`
 
     @media (max-width: 769px) {
       font-size: 44px;
+      line-height: 1.1;
     }
 
     @media (max-width: 480px) {
@@ -84,12 +85,18 @@ export default css`
     font-size: 24px;
     line-height: 1.4;
     color: ${({ theme }) => theme.colors.text.standard};
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
   }
   .text-h6 {
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.standard};
     font-size: 14px;
     line-height: 1.4;
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.standard};
@@ -129,9 +136,12 @@ export default css`
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.standard};
     margin: 20px 0px;
-    font-size: 19px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 1.3;
     opacity: 1;
+    @media (max-width: 600px) {
+      margin: 10px 0px;
+    }
   }
 
   .text-link{

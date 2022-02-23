@@ -40,6 +40,9 @@ const StyledMenu = styled(motion.div)`
           display: inline-block;
           position: relative;
           transition: transform ease-in-out 0.3s;
+          @media (max-width: 900px) {
+            font-size: 60px;
+          }
 
           &:hover {
             transform: translateY(-100%);

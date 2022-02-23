@@ -46,6 +46,9 @@ img.duo{
 img{
   width: 100%;
   margin-bottom: 50px;
+  @media (max-width: 600px){
+    margin-bottom: 20px;
+  }
 
   &.full-img{
     height: 100vh;

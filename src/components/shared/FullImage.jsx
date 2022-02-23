@@ -10,9 +10,11 @@ const Container = styled.div`
 
   @media (max-width: 769px) {
     margin-left: -40px;
+    height: 60vh;
   }
   @media (max-width: 480px) {
     margin-left: -28px;
+    height: 40vh;
   }
   img {
     width: 100%;
