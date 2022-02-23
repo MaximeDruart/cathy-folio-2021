@@ -11,6 +11,7 @@ import mandala from "./assets/img/archives/mandala.jpg"
 import red from "./assets/img/archives/red.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
+import nike from "./assets/img/archives/nike.jpg"
 import distortion from "./assets/img/archives/distortion.jpg"
 import parallele from "./assets/img/archives/parallele.jpg"
 import illu1 from "./assets/img/archives/illu1.jpg"
@@ -22,6 +23,10 @@ import flamalice from "./assets/img/archives/flamalice.jpg"
 import elijah from "./assets/img/archives/elijah.jpg"
 import weekend from "./assets/img/archives/weekend.jpg"
 
+import flowerCard from "./assets/img/archives/flowerCard.jpg"
+import folioBook from "./assets/img/archives/folioBook.jpg"
+import logoWater from "./assets/img/archives/logoWater.jpg"
+
 let archivesData = [
   {
     name: "elijah",
@@ -31,17 +36,23 @@ let archivesData = [
     websiteLink: "",
   },
   {
-    name: "DesignR",
-    coverImg: designr,
-    type: "website",
-    description: "An API for designR (work only on desktop)",
-    websiteLink: "https://designr.cathydolle.com/",
+    name: "Portfolio book",
+    coverImg: folioBook,
+    type: "mockup",
+    description: "My folio inside a book",
   },
+  // {
+  //   name: "DesignR",
+  //   coverImg: designr,
+  //   type: "website",
+  //   description: "An API for designR (work only on desktop)",
+  //   websiteLink: "https://designr.cathydolle.com/",
+  // },
   {
-    name: "Feels Red",
-    coverImg: feelsRed,
-    type: "processing",
-    description: "An API for designR (work only on desktop)",
+    name: "Business Card",
+    coverImg: flowerCard,
+    type: "mockup",
+    description: "my card inside flowers",
   },
   {
     name: "lila",
@@ -68,6 +79,20 @@ let archivesData = [
     coverImg: feelsBlue,
     type: "processing",
     description: "An API for designR (work only on desktop)",
+  },
+  {
+    name: "Envelop logo",
+    coverImg: logoWater,
+    type: "Mockup",
+    description: "Envelop with my logo",
+    websiteLink: "",
+  },
+  {
+    name: "Nike homepage",
+    coverImg: nike,
+    type: "website",
+    description: "Homepage for Nike",
+    websiteLink: "",
   },
   {
     name: "Kill geometry print",
@@ -101,6 +126,12 @@ let archivesData = [
     type: "UI design",
     description: "etude house mobile checkout",
     websiteLink: "",
+  },
+  {
+    name: "Feels Red",
+    coverImg: feelsRed,
+    type: "processing",
+    description: "An API for designR (work only on desktop)",
   },
   {
     name: "Cl presave",
@@ -145,7 +176,7 @@ let archivesData = [
     websiteLink: "https://red.com/",
   },
   {
-    name: "Distorsion homepage",
+    name: "Distorsion Processing",
     coverImg: distortion
   },
   {
