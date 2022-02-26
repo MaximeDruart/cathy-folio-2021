@@ -51,19 +51,6 @@ import brandingVisual1 from "./assets/img/works/branding/visual1.jpg"
 
 let projectsData = [
   {
-    name: "branding",
-    path: "branding",
-    title: "Self branding",
-    coverImg: brandingCover,
-    visual1: brandingVisual1,
-    component: Branding,
-    date: "Feb. 2022",
-    role: "Art direction",
-    techs: ["AdobeXD, Photoshop, Illustrator"],
-    description:
-      "For several months I had a desire to create a graphic charter and a universe around my personality. I finally succeeded! I let you discover me : Cathy Dolle",
-  },
-  {
     name: "Project X",
     path: "project-x-paris",
     title: "Complete redesign of the Project X Paris website",
@@ -91,6 +78,19 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop"],
     description:
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+  },
+  {
+    name: "branding",
+    path: "branding",
+    title: "Self branding",
+    coverImg: brandingCover,
+    visual1: brandingVisual1,
+    component: Branding,
+    date: "Feb. 2022",
+    role: "Art direction",
+    techs: ["AdobeXD, Photoshop, Illustrator"],
+    description:
+      "For several months I had a desire to create a graphic charter and a universe around my personality. I finally succeeded! I let you discover me : Cathy Dolle",
   },
   {
     name: "Elijah",
