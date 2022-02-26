@@ -10,9 +10,6 @@ import FullImage from "../shared/FullImage"
 
 
 const StyledDesktop = styled.div`
-h2{
-  margin: 50px 0;
-}
 img{
   width: 100%;
   margin-bottom: 50px;

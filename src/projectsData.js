@@ -49,7 +49,24 @@ import Branding from "./components/projects/Branding"
 import brandingCover from "./assets/img/works/branding.jpg"
 import brandingVisual1 from "./assets/img/works/branding/visual1.jpg"
 
+import Chanel from "./components/projects/Chanel"
+import chanelCover from "./assets/img/works/chanel.jpg"
+import chanelVisual1 from "./assets/img/works/chanel/visual1.jpg"
+
 let projectsData = [
+  {
+    name: "Chanel",
+    path: "chanel",
+    title: "Experimental website for Eau tendre de Chanel",
+    coverImg: chanelCover,
+    component: Chanel,
+    date: "Feb. 2022",
+    role: "Designer",
+    techs: ["Adobe XD, Photoshop, Illustrator"],
+    description:
+      "L'Eau tendre de Chanel is the sweetest fragrance to bring out your femininity. Being one of my favorite perfumes, I decided to create an immersive site around it to highlight its qualities, its freshness, its sweetness as well as its accompanying range. L'eau tendre is a captivating perfume made of jasmine and rose essence. It is the feminine fragrance par excellence!",
+    visual1: chanelVisual1,
+  },
   {
     name: "Project X",
     path: "project-x-paris",
@@ -63,8 +80,6 @@ let projectsData = [
       "Streetwear specialist born in 2015, Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers, and to have a more ergonomic interface as well as a graphic charter which corresponds to the brand.",
     visual1: pxpVisual1,
     websiteLink: "https://www.projectxparis.com/",
-    color1: "#000000",
-    color2: "#FFFFFF",
   },
   {
     name: "Arcane",
@@ -80,7 +95,7 @@ let projectsData = [
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
   },
   {
-    name: "branding",
+    name: "chanel",
     path: "branding",
     title: "Self branding",
     coverImg: brandingCover,

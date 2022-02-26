@@ -37,9 +37,6 @@ svg:nth-child(3){
   .a{fill:none;}.b{fill:${({ theme }) => theme.colors.text.standard};}
 }
 
-h2{
-  margin: 50px 0;
-}
 img.duo{
     width:40% !important;
 }

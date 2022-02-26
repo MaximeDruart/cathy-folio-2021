@@ -28,8 +28,7 @@ export default css`
     font-size: 60px;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    //margin-bottom: 10px;
     span.important_word {
       font-family: "DisplayNew";
       color: ${({ theme }) => theme.colors.primary1};
@@ -38,7 +37,6 @@ export default css`
 
     @media (max-width: 769px) {
       font-size: 44px;
-      line-height: 1.1;
     }
 
     @media (max-width: 480px) {
@@ -141,6 +139,9 @@ export default css`
     opacity: 1;
     @media (max-width: 600px) {
       margin: 10px 0px;
+    }
+    a{
+      color: ${({ theme }) => theme.colors.text.standard};
     }
   }
 

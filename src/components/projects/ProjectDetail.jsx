@@ -116,12 +116,6 @@ const StyledProjectDetail = styled.div`
       margin-left: -28px;
     }
   }
-  h2.text-h2 {
-    margin-bottom: 20px;
-    @media (max-width: 600px) {
-      margin-bottom: 0px;
-    }
-  }
   h3.text-h3 {
     margin-bottom: 40px;
   }
@@ -267,12 +261,6 @@ const StyledProjectDetail = styled.div`
       }
       .art-direction {
         width: 100%;
-        h4 {
-          margin-bottom: 20px;
-          @media (max-width: 480px) {
-            margin-bottom: 0px;
-          }
-        }
       }
       .typography,
       .colors {

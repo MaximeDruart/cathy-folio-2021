@@ -39,10 +39,7 @@ import bPrint from "../../assets/img/works/feels/bPrint.png"
 
 
 
-const StyledSangen = styled.div`
-h2{
-  margin: 50px 0;
-}
+const StyledFeels = styled.div`
 img{
   width: 100%;
   margin-bottom: 50px;
@@ -93,9 +90,9 @@ img{
 }
 `
 
-const Sangen = () => {
+const Feels = () => {
   return (
-    <StyledSangen>
+    <StyledFeels>
           <h2 className='text-h2'>Graphic Chart</h2>
           {/* chart */}
           <div className="chart">
@@ -198,8 +195,8 @@ const Sangen = () => {
       </div>
       <div className="big-spacer"></div>
 
-    </StyledSangen>
+    </StyledFeels>
   )
 }
 
-export default Sangen
+export default Feels

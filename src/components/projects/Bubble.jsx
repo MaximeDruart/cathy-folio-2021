@@ -17,9 +17,6 @@ import step4 from "../../assets/img/works/bubble/step4.svg"
 import step5 from "../../assets/img/works/bubble/step5.svg"
 
 const StyledBubble = styled.div`
-h2{
-  margin: 50px 0;
-}
 img{
   width: 100%;
   margin-bottom: 50px;

@@ -28,9 +28,6 @@ import wave from "../../assets/img/works/sangen/wave.png"
 
 
 const StyledSangen = styled.div`
-h2{
-  margin: 50px 0;
-}
 img{
   width: 100%;
   margin-bottom: 50px;
