@@ -114,6 +114,7 @@ const Chanel = () => {
           muted
           autoPlay={"autoplay"}
           loop 
+          playsinline
           src={homepage}>  
       </video>
 
@@ -125,6 +126,7 @@ const Chanel = () => {
           muted
           autoPlay={"autoplay"}
           loop 
+          playsinline
           src={video1}>  
       </video>
 

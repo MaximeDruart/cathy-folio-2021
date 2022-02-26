@@ -95,7 +95,7 @@ let projectsData = [
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
   },
   {
-    name: "chanel",
+    name: "Branding",
     path: "branding",
     title: "Self branding",
     coverImg: brandingCover,
@@ -185,19 +185,6 @@ let projectsData = [
     techs: ["Adobe XD, Photoshop"],
     description:
       "Hologramme is a high end hat distributor. I was asked to redesign their B2C website",
-  },
-  {
-    name: "Sangen",
-    path: "sangen",
-    title: "Processing Sangen",
-    coverImg: sangenCover,
-    visual1: sangenVisual1,
-    component: Sangen,
-    date: "Dec. 2021",
-    role: "Designer, Developer",
-    techs: ["Processing, Java"],
-    description:
-      "My mission was to create a program on Processing. I decided to create a random pattern generator for shapes but also for colors.",
   },
   {
     name: "Desktop",

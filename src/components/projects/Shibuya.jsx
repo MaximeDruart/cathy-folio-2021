@@ -24,6 +24,12 @@ const StyledShibuya = styled.div`
 img{
   width: 100%;
 }
+img.trio{
+  width: 30% !important;
+  @media (max-width: 600px){
+      width: 50% !important;
+    }
+}
 svg{
   font-size:11px;
   font-family:NeueMontreal-Regular, Neue Montreal;

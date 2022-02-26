@@ -1,7 +1,7 @@
 const darkColors = [
   {
     name: "saphir",
-    color: "#3971EF",
+    color: "#6796FF",
   },
   {
     name: "Ruby",
