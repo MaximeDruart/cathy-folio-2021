@@ -9,7 +9,6 @@ import feelsBlue from "./assets/img/archives/feelsBlue.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
 import red from "./assets/img/archives/red.jpg"
-import designr from "./assets/img/archives/designr.jpg"
 import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
 import distortion from "./assets/img/archives/distortion.jpg"
@@ -18,6 +17,8 @@ import illu1 from "./assets/img/archives/illu1.jpg"
 import illu2 from "./assets/img/archives/illu2.jpg"
 import vans from "./assets/img/archives/vans.jpg"
 import kill from "./assets/img/archives/kill.jpg"
+import low from "./assets/img/archives/low.jpg"
+import vol from "./assets/img/archives/vol.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
 import flamalice from "./assets/img/archives/flamalice.jpg"
 import elijah from "./assets/img/archives/elijah.jpg"
@@ -61,6 +62,13 @@ let archivesData = [
     description: "An API for designR (work only on desktop)",
   },
   {
+    name: "vol",
+    coverImg: vol,
+    type: "print",
+    description: "vol pattern print",
+    websiteLink: "",
+  },
+  {
     name: "Etude house",
     coverImg: etude,
     type: "Ui Design",
@@ -92,6 +100,13 @@ let archivesData = [
     coverImg: nike,
     type: "website",
     description: "Homepage for Nike",
+    websiteLink: "",
+  },
+  {
+    name: "low",
+    coverImg: low,
+    type: "print",
+    description: "low pattern print",
     websiteLink: "",
   },
   {

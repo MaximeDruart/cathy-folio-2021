@@ -110,25 +110,23 @@ const Chanel = () => {
 
       <div className='headline text-regular'>Homepage</div>
       <div className='separator'></div>
-      <video   
-          muted
-          autoPlay={"autoplay"}
-          loop 
-          playsinline
-          src={homepage}>  
-      </video>
+      <div dangerouslySetInnerHTML={{ __html: `
+         <video loop muted autoplay playsinline>
+          <source src="${homepage}" type="video/mp4">
+         </video>`
+        }}
+      />
 
       <div className="spacer"></div>
 
       <div className='headline text-regular'>Product page</div>
       <div className='separator'></div>
-      <video   
-          muted
-          autoPlay={"autoplay"}
-          loop 
-          playsinline
-          src={video1}>  
-      </video>
+      <div dangerouslySetInnerHTML={{ __html: `
+         <video loop muted autoplay playsinline>
+         <source src="${video1}" type="video/mp4">
+        </video>`
+        }}
+      />
 
       <div className="spacer"></div>
 
