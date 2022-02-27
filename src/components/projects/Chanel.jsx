@@ -13,6 +13,7 @@ import getDressed from "../../assets/img/works/chanel/getDressed.jpg"
 import girlTalk from "../../assets/img/works/chanel/girlTalk.jpg"
 
 import product from "../../assets/img/works/chanel/product.jpg"
+import preview from "../../assets/img/works/chanel/preview.jpeg"
 
 import FullImage from "../shared/FullImage"
 
@@ -23,7 +24,6 @@ import FullImage from "../shared/FullImage"
 const StyledChanel = styled.div`
 img{
   width: 100%;
-  margin-bottom: 50px;
 
   &.full-img{
     height: 100vh;
@@ -99,8 +99,17 @@ const Chanel = () => {
       <img src={moodboard} alt="moodboard" />
 
       <div className="big-spacer"></div>
+
+      <FullImage src={preview} alt='card' />
+
+      <div className="spacer"></div>
       
-      <h2 className='text-h2'>Immersive place</h2>
+      <h2 className='text-h2'>An immersive place</h2>
+      <p className="text-description">I wanted a feminine universe, soft, modern and pleasant, the integration of 3D and texture allow a soft and tender visual which allows to add depth. The objective was to create a room, with the possibility of focusing 3 areas, each of which presents the product and highlight its full range. </p>
+
+      <div className="spacer"></div>
+
+      <h2 className='text-h2'>The rooms</h2>
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>3 spaces</div>
       <div className='separator'></div>
@@ -146,7 +155,7 @@ const Chanel = () => {
       <div className='separator'></div>
       <img src={getDressed} alt="getDressed" />
 
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
 
       <FullImage src={product} alt='card' />
 

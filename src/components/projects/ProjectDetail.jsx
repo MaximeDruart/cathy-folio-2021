@@ -13,6 +13,14 @@ const StyledProjectDetail = styled.div`
       opacity: 1 !important;
     }
   }
+  /* img{
+    @media (max-width: 480px) {
+      margin-left: -28px;
+      width: 100vw;
+      height: auto;
+      object-fit: cover;
+    }
+  } */
   video{
     width:100%;
     height: auto;
@@ -151,6 +159,10 @@ const StyledProjectDetail = styled.div`
   .headline {
     text-transform: uppercase;
     text-align: center;
+    opacity: 1;
+    @media (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 
   .separator {
@@ -168,7 +180,7 @@ const StyledProjectDetail = styled.div`
 
     @media (max-width: 480px) {
       margin-top: 10px;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
   }
   .details {
