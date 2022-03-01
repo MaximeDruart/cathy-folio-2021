@@ -79,7 +79,7 @@ const StyledHome = styled.div`
             right: 160px;
             &::after {
               position: absolute;
-              content: "UI/UX Designer, front end developer & content creator based in paris";
+              content: "UI/UX Designer & front end developer based in paris. Last update: 01/03/2022";
               width: 250px;
               top: -60px;
               left: -20px;
