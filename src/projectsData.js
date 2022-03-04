@@ -148,19 +148,6 @@ let projectsData = [
     websiteLink: "https://grissiniproject.com/",
   },
   {
-    name: "Circl.GG",
-    path: "Circl",
-    title: "UI & Graphic design for Circl.GG",
-    coverImg: circlCover,
-    visual1: circlVisual1,
-    component: Circl,
-    date: "Dec. 2021",
-    role: "Designer",
-    techs: ["Adobe XD, Illustrator"],
-    description:
-      "Circl.GG is an application for player search on Riot Games like League of Legends, there is also a club and tournament system. I had to take care of the graphic charter and the UI UX design of the application.",
-  },
-  {
     name: "Shibuya",
     path: "shibuya",
     coverImg: shibuyaCover,

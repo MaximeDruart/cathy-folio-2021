@@ -23,6 +23,7 @@ import etudePhone from "./assets/img/archives/etude_phone.jpg"
 import flamalice from "./assets/img/archives/flamalice.jpg"
 import elijah from "./assets/img/archives/elijah.jpg"
 import weekend from "./assets/img/archives/weekend.jpg"
+import Blob from "./assets/img/archives/blob.jpg"
 
 import flowerCard from "./assets/img/archives/flowerCard.jpg"
 import folioBook from "./assets/img/archives/folioBook.jpg"
@@ -74,6 +75,12 @@ let archivesData = [
     type: "Ui Design",
     description: "UI Design for Étude House",
     websiteLink: "",
+  },
+  {
+    name: "Blob",
+    coverImg: Blob,
+    type: "3D",
+    description: "Blob three JS",
   },
   {
     name: "weekend",
