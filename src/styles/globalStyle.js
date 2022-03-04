@@ -4,6 +4,7 @@ import SaolDisplayLight from "../assets/fonts/SaolDisplay-Light.ttf"
 import SaolDisplaySemiboldItalic from "../assets/fonts/SaolDisplay-SemiboldItalic.ttf"
 import BebasNeueRegular from "../assets/fonts/BebasNeueRegular.otf"
 import Helvetica from "../assets/fonts/Helvetica.ttf"
+import Ginger from "../assets/fonts/Ginger.ttf"
 import Qene from "../assets/fonts/Qene-G.otf"
 import DisplayNew from "../assets/fonts/display-new.otf"
 
@@ -224,6 +225,11 @@ export default createGlobalStyle`
     @font-face {
       font-family: "DisplayNew";
       src: url(${DisplayNew});
+    }
+
+    @font-face {
+      font-family: "Ginger";
+      src: url(${Ginger});
     }
 
 
