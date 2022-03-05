@@ -55,7 +55,7 @@ const StyledWorks = styled(motion.div)`
       align-items: center;
       flex-flow: column nowrap;
       .name {
-        font-family: DisplayNew;
+        font-family: Ginger;
         text-transform: uppercase;
         white-space: nowrap;
         color: white;

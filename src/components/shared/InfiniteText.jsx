@@ -30,7 +30,7 @@ const Container = styled.div`
   }
   .top-line {
     span {
-      font-family: "DisplayNew";
+      font-family: "Ginger";
     }
   }
 

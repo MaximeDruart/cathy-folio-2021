@@ -148,7 +148,7 @@ const StyledProjectDetail = styled.div`
       font-size: 200px;
       text-transform: uppercase;
       color: white;
-      font-family: DisplayNew;
+      font-family: Ginger;
       white-space: nowrap;
       @media (max-width: 900px) {
           font-size: 80px;
@@ -346,7 +346,7 @@ const StyledProjectDetail = styled.div`
       text-transform: uppercase;
       color: white;
       font-size: 200px;
-      font-family: DisplayNew;
+      font-family: Ginger;
       white-space: nowrap;
       @media (max-width: 900px) {
         font-size: 80px;

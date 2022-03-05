@@ -14,7 +14,7 @@ const StyledHomeProjectDetail = styled.div`
     .title {
       margin-left: 40px;
 
-      font-family: DisplayNew;
+      font-family: Ginger;
       text-transform: uppercase;
     }
     @media (max-width: 769px) {

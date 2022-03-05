@@ -58,7 +58,7 @@ const StyledHome = styled.div`
         text-transform: uppercase;
         width: auto;
         white-space: nowrap;
-        font-family: DisplayNew;
+        font-family: Ginger;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
         font-size: 115px;
@@ -95,7 +95,7 @@ const StyledHome = styled.div`
         }
 
         .important_word {
-          font-family: "DisplayNew";
+          font-family: "Ginger";
           text-transform: uppercase;
           color: ${({ theme }) => theme.colors.primary1};
           position: relative;
@@ -277,7 +277,7 @@ const StyledHome = styled.div`
         h3.number {
           margin-top: 20px;
           font-size: 60px;
-          font-family: "DisplayNew";
+          font-family: "Ginger";
           /* font-family: "NeueMontrealLight"; */
           color: ${({ theme }) => theme.colors.text.disabled};
           margin-left: -4px;
@@ -347,7 +347,7 @@ const StyledHome = styled.div`
     .title {
       text-align: center;
       .saol {
-        font-family: DisplayNew;
+        font-family: Ginger;
         color: ${({ theme }) => theme.colors.primary1};
       }
     }

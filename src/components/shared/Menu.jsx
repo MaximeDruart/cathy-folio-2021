@@ -33,9 +33,9 @@ const StyledMenu = styled(motion.div)`
         margin: 18px 0;
       }
       li {
-        line-height: 0.9;
+        line-height: 1;
         text-transform: uppercase;
-        font-family: DisplayNew;
+        font-family: Ginger;
         a {
           display: inline-block;
           position: relative;
@@ -57,7 +57,7 @@ const StyledMenu = styled(motion.div)`
       }
     }
     .active {
-      font-family: DisplayNew;
+      font-family: Ginger;
       color :  ${({ theme }) => theme.colors.primary1};
     }
   }
