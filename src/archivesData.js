@@ -24,6 +24,7 @@ import flamalice from "./assets/img/archives/flamalice.jpg"
 import elijah from "./assets/img/archives/elijah.jpg"
 import weekend from "./assets/img/archives/weekend.jpg"
 import Blob from "./assets/img/archives/blob.jpg"
+import room from "./assets/img/archives/room.jpg"
 
 import flowerCard from "./assets/img/archives/flowerCard.jpg"
 import folioBook from "./assets/img/archives/folioBook.jpg"
@@ -50,6 +51,12 @@ let archivesData = [
   //   description: "An API for designR (work only on desktop)",
   //   websiteLink: "https://designr.cathydolle.com/",
   // },
+  {
+    name: "1st Isometric room",
+    coverImg: room,
+    type: "3D",
+    description: "My first creation on blender",
+  },
   {
     name: "Business Card",
     coverImg: flowerCard,

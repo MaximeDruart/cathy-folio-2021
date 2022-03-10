@@ -4,7 +4,7 @@ import styled from "styled-components"
 //Chanel
 import moodboard from "../../assets/img/works/chanel/moodboard.png"
 import room from "../../assets/img/works/chanel/room.png"
-import video1 from "../../assets/img/works/chanel/product.mp4"
+import video1 from "../../assets/img/works/chanel/perfume.mp4"
 
 // pages
 import homepage from "../../assets/img/works/chanel/homepage.mp4"
