@@ -7,6 +7,8 @@ import Helvetica from "../assets/fonts/Helvetica.ttf"
 import Ginger from "../assets/fonts/Ginger.ttf"
 import Qene from "../assets/fonts/Qene-G.otf"
 import DisplayNew from "../assets/fonts/display-new.otf"
+import Poppins from "../assets/fonts/Poppins.ttf"
+import Heading from "../assets/fonts/Heading.ttf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
@@ -230,6 +232,14 @@ export default createGlobalStyle`
     @font-face {
       font-family: "Ginger";
       src: url(${Ginger});
+    }
+    @font-face {
+      font-family: "Poppins";
+      src: url(${Poppins});
+    }
+    @font-face {
+      font-family: "Heading";
+      src: url(${Heading});
     }
 
 

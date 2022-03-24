@@ -53,6 +53,10 @@ import Chanel from "./components/projects/Chanel"
 import chanelCover from "./assets/img/works/chanel.jpg"
 import chanelVisual1 from "./assets/img/works/chanel/visual1.jpg"
 
+import Paco from "./components/projects/Paco"
+import pacoCover from "./assets/img/works/paco.jpg"
+import pacoVisual1 from "./assets/img/works/paco/visual1.jpg"
+
 let projectsData = [
   {
     name: "Chanel",
@@ -80,6 +84,19 @@ let projectsData = [
       "Streetwear specialist born in 2015, Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers, and to have a more ergonomic interface as well as a graphic charter which corresponds to the brand.",
     visual1: pxpVisual1,
     websiteLink: "https://www.projectxparis.com/",
+  },
+  {
+    name: "Paco",
+    path: "paco",
+    title: "Paco digging culture",
+    coverImg: pacoCover,
+    component: Paco,
+    date: "March. 2022",
+    role: "Designer, Project Manager",
+    techs: ["Figma, After effect, Protopie"],
+    description:
+      "The goal was to find an original post format and concept for the Paco app. Paco is for the diggers. It's the place where we share our artistic references and discover the gems of the people who inspire us: artists, friends, creatives, critics, etc.",
+    visual1: pacoVisual1,
   },
   {
     name: "Arcane",
