@@ -279,14 +279,11 @@ const StyledHome = styled.div`
               opacity: 0;
             }
           }
-          @media (max-width: 1080px) {
-            height: 20vw;
-          }
           @media (max-width: 900px) {
             opacity: 1;
             width: 100%;
             object-fit: cover;
-            height: 200px;
+            //height: 200px;
           }
         }
         h3.number {
