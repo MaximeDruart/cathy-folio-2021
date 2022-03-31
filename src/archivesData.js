@@ -17,6 +17,7 @@ import illu1 from "./assets/img/archives/illu1.jpg"
 import illu2 from "./assets/img/archives/illu2.jpg"
 import vans from "./assets/img/archives/vans.jpg"
 import kill from "./assets/img/archives/kill.jpg"
+import picto from "./assets/img/archives/picto.jpg"
 import low from "./assets/img/archives/low.jpg"
 import vol from "./assets/img/archives/vol.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
@@ -25,6 +26,7 @@ import elijah from "./assets/img/archives/elijah.jpg"
 import weekend from "./assets/img/archives/weekend.jpg"
 import Blob from "./assets/img/archives/blob.jpg"
 import room from "./assets/img/archives/room.jpg"
+import selfKit from "./assets/img/archives/selfKit.jpg"
 
 import flowerCard from "./assets/img/archives/flowerCard.jpg"
 import folioBook from "./assets/img/archives/folioBook.jpg"
@@ -77,6 +79,12 @@ let archivesData = [
     websiteLink: "",
   },
   {
+    name: "Self Kit",
+    coverImg: selfKit,
+    type: "Design",
+    description: "My personal branding kit",
+  },
+  {
     name: "Etude house",
     coverImg: etude,
     type: "Ui Design",
@@ -88,6 +96,12 @@ let archivesData = [
     coverImg: Blob,
     type: "3D",
     description: "Blob three JS",
+  },
+  {
+    name: "picto",
+    coverImg: picto,
+    type: "logo",
+    description: "Pictogramme for shibuya",
   },
   {
     name: "weekend",
