@@ -399,7 +399,7 @@ const Home = () => {
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the
+          I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, who mainly work within web design and brand design. I am currently a student in the
             1st year of a Master's degree in digital creation at ESD Paris, and in intership at {" "}
             <span className='saol'>AKQA</span> as UI/UX Designer
           </div>
