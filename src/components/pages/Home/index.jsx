@@ -401,7 +401,7 @@ const Home = () => {
           <div className='title text-h2-5'>
             I'm Cathy, a french <span className='saol'>designer</span> based in Paris. I am currently a student in the
             1st year of a Master's degree in digital creation at ESD Paris, and working as a UI/UX designer at{" "}
-            <span className='saol'>Project X Paris</span>
+            <span className='saol'>AKQA</span>
           </div>
           <a className='button' href={resume} download='cathy_resume.pdf'>
             Download my resume
