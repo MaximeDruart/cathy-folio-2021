@@ -9,20 +9,28 @@ import { Link } from "react-router-dom"
 import InfiniteText from "../../shared/InfiniteText"
 import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
-import moodboard from "../../../assets/img/myWork.png"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
 
 //passions
 import game from "../../../assets/img/about/pokemon.gif"
+import gamesHover from "../../../assets/img/about/games.png"
 import animes from "../../../assets/img/about/animes.gif"
+import animesHover from "../../../assets/img/about/animes.png"
 import lofi from "../../../assets/img/about/lofi.gif"
+import musicHover from "../../../assets/img/about/music.png"
 import piano from "../../../assets/img/about/piano.gif"
+import pianoHover from "../../../assets/img/about/piano.png"
 import draw from "../../../assets/img/about/draw.gif"
+import drawHover from "../../../assets/img/about/draw.png"
 import food from "../../../assets/img/about/food.gif"
+import foodHover from "../../../assets/img/about/food.png"
 import painting from "../../../assets/img/about/painting.gif"
+import paintHover from "../../../assets/img/about/paint.png"
 import manual from "../../../assets/img/about/manual.gif"
-import art from "../../../assets/img/about/art.gif"
+import craftHover from "../../../assets/img/about/craft.png"
+import art from "../../../assets/img/about/3D.gif"
+import threeDHover from "../../../assets/img/about/3D.png"
 
 import twitch from "../../../assets/img/about/twitch.jpg"
 import resume from "../../../assets/img/about/resume.pdf"
@@ -79,7 +87,7 @@ const StyledHome = styled.div`
             right: 160px;
             &::after {
               position: absolute;
-              content: "UI/UX Designer & front end developer based in paris. Last update: 01/03/2022";
+              content: "Graphic Designer & front end developer based in paris.";
               width: 250px;
               top: -60px;
               left: -20px;
@@ -242,6 +250,7 @@ const StyledHome = styled.div`
       justify-content: center;
       flex-wrap: wrap;
       .passion {
+        position: relative;
         width: 20vw;
         margin: 35px;
         @media (max-width: 1080px) {
@@ -257,12 +266,18 @@ const StyledHome = styled.div`
         }
         img {
           width: 100%;
-          height: 12vw;
+          height: auto;
           object-fit: cover;
-          opacity: 0.3;
+          opacity: 1;
           transition: opacity 0.5s;
-          &:hover {
+          &.hover{
+            position: absolute;
+            top: 0;
+            left: 0;
             opacity: 1;
+            &:hover{
+              opacity: 0;
+            }
           }
           @media (max-width: 1080px) {
             height: 20vw;
@@ -399,7 +414,7 @@ const Home = () => {
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-          I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, who mainly work within <span className='saol'>web design</span> and  <span className='saol'>brand design</span>. Currently in intership at {" "}
+          I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design and brand identity. Currently in intership at {" "}
             <span className='saol'>AKQA</span> as UI/UX Designer
           </div>
           <a className='button' href={resume} download='cathy_resume.pdf'>
@@ -426,6 +441,7 @@ const Home = () => {
             {/* video games */}
             <div className='passion'>
               <img src={game} alt='passion' />
+              <img className="hover" src={gamesHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>01</h3>
                 <div className='text-description'>
@@ -437,6 +453,7 @@ const Home = () => {
             {/* animes */}
             <div className='passion'>
               <img src={animes} alt='passion' />
+              <img className="hover" src={animesHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>02</h3>
                 <div className='text-description'>
@@ -448,10 +465,11 @@ const Home = () => {
             {/* lofi */}
             <div className='passion'>
               <img src={lofi} alt='passion' />
+              <img className="hover" src={musicHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>03</h3>
                 <div className='text-description'>
-                  <h4 className='text-h4'>Lofi music</h4>
+                  <h4 className='text-h4'>Chilly Music</h4>
                   <p className='text-regular'>Helps me stay focused</p>
                 </div>
               </div>
@@ -459,6 +477,7 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={piano} alt='passion' />
+              <img className="hover" src={pianoHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>04</h3>
                 <div className='text-description'>
@@ -470,6 +489,7 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={draw} alt='passion' />
+              <img className="hover" src={drawHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>05</h3>
                 <div className='text-description'>
@@ -481,6 +501,7 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={food} alt='passion' />
+              <img className="hover" src={foodHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>06</h3>
                 <div className='text-description'>
@@ -492,6 +513,7 @@ const Home = () => {
             {/* painting */}
             <div className='passion'>
               <img src={painting} alt='passion' />
+              <img className="hover" src={paintHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>07</h3>
                 <div className='text-description'>
@@ -503,6 +525,7 @@ const Home = () => {
             {/* manual */}
             <div className='passion'>
               <img src={manual} alt='passion' />
+              <img className="hover" src={craftHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>08</h3>
                 <div className='text-description'>
@@ -514,10 +537,11 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={art} alt='passion' />
+              <img className="hover" src={threeDHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>09</h3>
                 <div className='text-description'>
-                  <h4 className='text-h4'>Art</h4>
+                  <h4 className='text-h4'>3D</h4>
                   <p className='text-regular'>blossoms me</p>
                 </div>
               </div>

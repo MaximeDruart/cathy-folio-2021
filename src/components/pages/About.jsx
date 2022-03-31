@@ -19,7 +19,7 @@ import draw from "../../assets/img/about/draw.gif"
 import food from "../../assets/img/about/food.gif"
 import painting from "../../assets/img/about/painting.gif"
 import architecture from "../../assets/img/about/architecture.gif"
-import art from "../../assets/img/about/art.gif"
+import art from "../../assets/img/about/3D.gif"
 
 import twitch from "../../assets/img/about/twitch.jpg"
 import resume from "../../assets/img/about/resume.pdf"
