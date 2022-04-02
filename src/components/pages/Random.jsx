@@ -1,6 +1,6 @@
 import React, { Suspense, useRef, useState, useEffect, useLayoutEffect, createRef, useCallback } from "react"
 import { Canvas, useFrame, useThree, extend } from "@react-three/fiber"
-import { OrbitControls, Plane, Text, useContextBridge, useTexture } from "@react-three/drei"
+import { OrbitControls, Plane, Text, useContextBridge, useTexture, Html } from "@react-three/drei"
 import * as THREE from "three"
 import styled, { ThemeContext, useTheme } from "styled-components"
 import lerp from "@14islands/lerp"
@@ -16,6 +16,7 @@ import Effects, { myLensDistortionPass } from "../shared/three/Effects"
 
 import DistortionMaterial from "../shared/three/DistortionMaterial"
 import { motion } from "framer-motion"
+import { useMediaQuery } from "beautiful-react-hooks"
 
 extend({ DistortionMaterial })
 
@@ -39,7 +40,7 @@ const Container = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  @media (max-width: 900px){
+  @media (max-width: 900px) {
     justify-content: center;
   }
 
@@ -53,7 +54,7 @@ const Container = styled.div`
     height: auto;
     opacity: 0.7;
 
-    @media (max-width: 900px){
+    @media (max-width: 900px) {
       left: auto;
     }
 
@@ -82,6 +83,84 @@ const Container = styled.div`
       position: absolute;
       transform: translateX(-50%) translateY(-50%);
       border: 1px solid ${({ theme }) => theme.colors.text.standard};
+    }
+  }
+
+  .archive-item {
+    * {
+      font-family: NeueMontrealRegular;
+      color: ${({ theme }) => theme.colors.text.standard};
+    }
+    opacity: 0;
+
+    &.hidden {
+      pointer-events: none;
+    }
+
+    .wrapper {
+      width: 500px;
+      padding-left: 40px;
+      display: flex;
+      flex-flow: column nowrap;
+
+      &.desktop {
+        margin-top: -30px;
+      }
+
+      @media (max-width: 1225px) {
+        width: 380px;
+      }
+
+      @media (max-width: 950px) {
+        padding-left: 0;
+        padding-top: 20px;
+        width: 400px;
+      }
+
+      @media (max-width: 480px) {
+        padding-left: 0;
+        padding-top: 20px;
+        width: 80vw;
+      }
+
+      .title {
+        font-family: "Ginger";
+        text-transform: uppercase;
+
+        font-size: 60px;
+
+        @media (max-width: 769px) {
+          font-size: 44px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 40px;
+        }
+      }
+      .body {
+        margin-top: 10px;
+      }
+
+      .text-link.website-link {
+        position: relative;
+
+        &.mobile {
+          display: inline-block;
+          margin-top: 20px;
+        }
+
+        &::after {
+          position: absolute;
+          content: "→";
+          transform: translateX(10px);
+          transition: transform 0.4s;
+        }
+        &:hover {
+          &::after {
+            transform: translateX(15px);
+          }
+        }
+      }
     }
   }
 `
@@ -129,71 +208,119 @@ const getNewPosition = (item, minRadius) => {
 }
 
 function ShaderPlane(props) {
-  const meshRef = useRef()
-  const matRef = useRef()
-  const textMaterial = useRef()
+  const { width, height, x, y } = props.itemData
 
   const camera = useThree((state) => state.camera)
   const theme = useTheme()
 
-  const { width, height, x, y } = props.itemData
+  const meshRef = useRef()
+  const matRef = useRef()
+  const textMaterial = useRef()
+  const domTextRef = useRef()
+  const domLinkRef = useRef()
+  const clickOutPlaneRef = useRef()
 
   const [hovering, setHovering] = useState(false)
   // only using an object because thats what gsap wants
   const hoverValue = useRef({ value: 0 })
 
+  const [selfIsOpened, setSelfIsOpened] = useState(false)
+
+  const isSmallDesktop = useMediaQuery("(min-width: 960px) and (max-width: 1240px)")
+  const isTablet = useMediaQuery("(min-width: 480px) and (max-width: 960px)")
+  const isMobile = useMediaQuery("(max-width: 479px)")
+  const zoomOffset = {
+    x: isMobile ? 0 : isTablet ? 0 : isSmallDesktop ? 0.8 : 0.7,
+    y: isMobile || isTablet ? -1 : 0,
+    z: isMobile ? 0.99 : isTablet ? 0.8 : isSmallDesktop ? 0.7 : 0.5,
+  }
+
   const closeProject = useCallback(() => {
     controlsRef.current.enabled = true
 
-    gsap.to(meshRef.current.position, {
-      x,
-      y,
-      z: 0,
-      duration: 0.5,
-      ease: "Power3.easeOut",
-      onComplete: () =>
-        (projectIsOpened.current = {
-          isOpened: false,
-          id: null,
-        }),
-    })
-    gsap.timeline().to(filterRef.current.material, { opacity: 0 }).set(filterRef.current.position, { z: -1.2 })
-    gsap.to(textMaterial.current, { opacity: 0 })
+    gsap
+      .timeline()
+      .addLabel("sync1")
+      .to(domTextRef.current, { opacity: 0, duration: 0.25 }, "sync1")
+      .to(domLinkRef.current, { opacity: 0, duration: 0.25 }, "sync1")
+      .to(
+        meshRef.current.position,
+        {
+          x,
+          y,
+          z: 0,
+          duration: 0.5,
+          ease: "Power3.easeOut",
+          onComplete: () =>
+            (projectIsOpened.current = {
+              isOpened: false,
+              id: null,
+            }),
+        },
+        "-=0.15"
+      )
+      .to(filterRef.current.material, { opacity: 0, duration: 0.3 }, "-=0.5")
+      .set(filterRef.current.position, { z: -1.2 })
+      .to(mapRef.current, { opacity: 1 }, "sync")
+
+    // gsap.to(textMaterial.current, { opacity: 0 })
   }, [])
 
   const openProject = useCallback(() => {
     controlsRef.current.enabled = false
-    projectIsOpened.current = {
-      isOpened: true,
-      id: props.project.id,
-    }
+    // projectIsOpened.current = {
+    //   isOpened: true,
+    //   id: props.project.id,
+    // }
 
-    gsap.to(meshRef.current.position, {
-      x: camera.position.x,
-      y: camera.position.y,
-      z: camera.position.z - 0.5,
-      duration: 0.5,
-      ease: "Power3.easeOut",
-    })
     gsap
-      .timeline()
-      .set(filterRef.current.position, { z: camera.position.z - 0.6 })
-      .to(filterRef.current.material, { opacity: 0.7 })
+      .timeline({
+        onComplete: () => {
+          projectIsOpened.current = {
+            isOpened: true,
+            id: props.project.id,
+          }
+        },
+      })
+      .to(meshRef.current.position, {
+        x: camera.position.x - zoomOffset.x,
+        y: camera.position.y - zoomOffset.y,
+        z: camera.position.z - zoomOffset.z,
+        duration: 0.5,
+        ease: "Power3.easeOut",
+      })
+      .addLabel("sync", "-=0.3")
+      .set(filterRef.current.position, { z: camera.position.z - 1 }, "sync")
+      .to(filterRef.current.material, { opacity: 0.85, duration: 0.3 }, "sync")
+      .to(mapRef.current, { opacity: 0.15 }, "sync")
+      .addLabel("sync2", "-=0.2")
+      .to(domTextRef.current, { opacity: 1, duration: 0.25 }, "sync2")
+      .to(domLinkRef.current, { opacity: 1, duration: 0.25 }, "sync2")
+      .to(textMaterial.current, { opacity: 0 }, "sync")
 
-    gsap.to(textMaterial.current, { opacity: 1 })
+    gsap.to(textMaterial.current, { opacity: 0 })
   }, [])
 
   const clickHandler = useCallback(() => {
     if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
 
-    if (projectIsOpened.current.isOpened) {
-      closeProject()
-    } else {
+    if (!projectIsOpened.current.isOpened) {
+      setSelfIsOpened(true)
       openProject()
+      setHovering(false)
     }
   }, [closeProject, openProject])
 
-  useFrame((state, delta) => {
+  const handleClickOut = useCallback(() => {
+    if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
+
+    if (projectIsOpened.current.isOpened) {
+      setSelfIsOpened(false)
+      closeProject()
+    }
+  }, [closeProject, openProject])
+
+  useFrame((_, delta) => {
     matRef.current.time += delta
     matRef.current.speed = speed.current * 15
   })
@@ -219,22 +346,21 @@ function ShaderPlane(props) {
 
   useEffect(() => {
     const closeProjectWithKey = (e) => {
-      e.key === "Escape" && closeProject()
+      e.key === "Escape" && handleClickOut()
     }
     window.addEventListener("keydown", closeProjectWithKey)
 
     return () => {
       window.removeEventListener("keydown", closeProjectWithKey)
     }
-  }, [])
+  }, [handleClickOut])
 
   return (
     <mesh
       {...props}
       onClick={clickHandler}
-      onPointerOver={() => setHovering(true)}
-      onPointerOut={() => setHovering(false)}
-      // onPointerMissed={pointerMissHandler}
+      onPointerOver={() => !selfIsOpened && setHovering(true)}
+      onPointerOut={() => !selfIsOpened && setHovering(false)}
       ref={meshRef}
       position={[x, y, 0]}
     >
@@ -245,6 +371,15 @@ function ShaderPlane(props) {
         ref={matRef}
         tex={props.texture}
       />
+      <Plane
+        scale={selfIsOpened ? 30 : 1}
+        ref={clickOutPlaneRef}
+        onClick={handleClickOut}
+        position-z={-0.001}
+        args={[1, 1]}
+      >
+        <meshNormalMaterial transparent={true} opacity={0} attach='material' />
+      </Plane>
       <Text
         font={saolFont}
         anchorY='top'
@@ -257,6 +392,40 @@ function ShaderPlane(props) {
         <meshBasicMaterial ref={textMaterial} transparent={true} color={theme.colors.text.standard} attach='material' />
         {props.project.name.toUpperCase()}
       </Text>
+      <Html
+        ref={domTextRef}
+        position={isMobile || isTablet ? [-width / 2, -height / 2, 0] : [width / 2, height / 2, 0]}
+        className={`archive-item ${selfIsOpened ? "" : "hidden"}`}
+      >
+        <motion.div className='wrapper'>
+          <div className='title'>{props.project.name}</div>
+          <div className='body'>
+            <div className='desc'>
+              {"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." ||
+                props.project.description}
+            </div>
+            {(isMobile || isTablet) && props.project.websiteLink && (
+              <a className='text-link website-link mobile' href={props.project.websiteLink} target='_blank'>
+                Visit the website
+              </a>
+            )}
+          </div>
+        </motion.div>
+      </Html>
+
+      <Html
+        ref={domLinkRef}
+        position={isMobile || isTablet ? [-width / 2, -height / 2, 0] : [width / 2, -height / 2, 0]}
+        className={`archive-item ${selfIsOpened ? "" : "hidden"}`}
+      >
+        {props.project.websiteLink && !(isMobile || isTablet) && (
+          <motion.div className='wrapper desktop'>
+            <a className='text-link website-link' href={props.project.websiteLink} target='_blank'>
+              Visit the website
+            </a>
+          </motion.div>
+        )}
+      </Html>
     </mesh>
   )
 }
@@ -274,6 +443,8 @@ const Scene = () => {
   const isHolding = useRef(false)
   const distortionStrength = useRef(0)
   const focalStrength = useRef(2)
+
+  const theme = useTheme()
 
   const camBox = useRef()
   const canvasBox = useRef()
@@ -452,14 +623,14 @@ const Scene = () => {
         maxDistance={1.6}
       />
       <Plane ref={filterRef} position-z={-1.2} args={[30, 30]}>
-        <meshBasicMaterial color='black' transparent={true} opacity={0} attach='material' />
+        <meshBasicMaterial color={theme.colors.background} transparent={true} opacity={0} attach='material' />
       </Plane>
       <group>
         <Plane
           onPointerDown={() => (isHolding.current = true)}
           onPointerUp={() => (isHolding.current = false)}
           visible={false}
-          position-z={-0.05}
+          position-z={-0.2}
           args={[50, 50]}
         />
         {itemsData.length &&

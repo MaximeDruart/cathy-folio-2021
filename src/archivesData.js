@@ -38,7 +38,7 @@ let archivesData = [
     coverImg: elijah,
     type: "print",
     description: "elijah portfolio",
-    websiteLink: "",
+    websiteLink: "#",
   },
   {
     name: "Portfolio book",
@@ -220,7 +220,7 @@ let archivesData = [
   },
   {
     name: "Distorsion Processing",
-    coverImg: distortion
+    coverImg: distortion,
   },
   {
     name: "Princess Mononoke",
