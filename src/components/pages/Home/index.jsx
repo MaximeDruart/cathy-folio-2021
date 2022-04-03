@@ -14,23 +14,23 @@ import { marginPage } from "../../../styles/globalCustom"
 
 //passions
 import game from "../../../assets/img/about/pokemon.gif"
-import gamesHover from "../../../assets/img/about/games.png"
+import gamesHover from "../../../assets/img/about/games.jpg"
 import animes from "../../../assets/img/about/animes.gif"
-import animesHover from "../../../assets/img/about/animes.png"
+import animesHover from "../../../assets/img/about/animes.jpg"
 import lofi from "../../../assets/img/about/lofi.gif"
-import musicHover from "../../../assets/img/about/music.png"
+import musicHover from "../../../assets/img/about/music.jpg"
 import piano from "../../../assets/img/about/piano.gif"
-import pianoHover from "../../../assets/img/about/piano.png"
+import pianoHover from "../../../assets/img/about/piano.jpg"
 import draw from "../../../assets/img/about/draw.gif"
-import drawHover from "../../../assets/img/about/draw.png"
+import drawHover from "../../../assets/img/about/draw.jpg"
 import food from "../../../assets/img/about/food.gif"
-import foodHover from "../../../assets/img/about/food.png"
+import foodHover from "../../../assets/img/about/food.jpg"
 import painting from "../../../assets/img/about/painting.gif"
-import paintHover from "../../../assets/img/about/paint.png"
+import paintHover from "../../../assets/img/about/paint.jpg"
 import manual from "../../../assets/img/about/manual.gif"
-import craftHover from "../../../assets/img/about/craft.png"
+import craftHover from "../../../assets/img/about/craft.jpg"
 import art from "../../../assets/img/about/3D.gif"
-import threeDHover from "../../../assets/img/about/3D.png"
+import threeDHover from "../../../assets/img/about/3D.jpg"
 
 import twitch from "../../../assets/img/about/twitch.jpg"
 import resume from "../../../assets/img/about/resume.pdf"
@@ -181,7 +181,7 @@ const StyledHome = styled.div`
                 right: 0;
               }
             }
-            .important_word{
+            .important_word {
               margin-left: 5px;
             }
           }
@@ -242,7 +242,7 @@ const StyledHome = styled.div`
     .headline {
       text-transform: uppercase;
       font-size: 14px;
-      font-family : NeueMontrealRegular;
+      font-family: NeueMontrealRegular;
     }
     .passion_container {
       display: flex;
@@ -270,12 +270,12 @@ const StyledHome = styled.div`
           object-fit: cover;
           opacity: 1;
           transition: opacity 0.5s;
-          &.hover{
+          &.hover {
             position: absolute;
             top: 0;
             left: 0;
             opacity: 1;
-            &:hover{
+            &:hover {
               opacity: 0;
             }
           }
@@ -411,8 +411,8 @@ const Home = () => {
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-          I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design and brand identity. Currently in intership at {" "}
-            <span className='saol'>AKQA</span> as UI/UX Designer
+            I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design
+            and brand identity. Currently in intership at <span className='saol'>AKQA</span> as UI/UX Designer
           </div>
           <a className='button' href={resume} download='cathy_resume.pdf'>
             Download my resume
@@ -438,7 +438,7 @@ const Home = () => {
             {/* video games */}
             <div className='passion'>
               <img src={game} alt='passion' />
-              <img className="hover" src={gamesHover} alt='passion' />
+              <img className='hover' src={gamesHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>01</h3>
                 <div className='text-description'>
@@ -450,7 +450,7 @@ const Home = () => {
             {/* animes */}
             <div className='passion'>
               <img src={animes} alt='passion' />
-              <img className="hover" src={animesHover} alt='passion' />
+              <img className='hover' src={animesHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>02</h3>
                 <div className='text-description'>
@@ -462,7 +462,7 @@ const Home = () => {
             {/* lofi */}
             <div className='passion'>
               <img src={lofi} alt='passion' />
-              <img className="hover" src={musicHover} alt='passion' />
+              <img className='hover' src={musicHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>03</h3>
                 <div className='text-description'>
@@ -474,7 +474,7 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={piano} alt='passion' />
-              <img className="hover" src={pianoHover} alt='passion' />
+              <img className='hover' src={pianoHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>04</h3>
                 <div className='text-description'>
@@ -486,7 +486,7 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={draw} alt='passion' />
-              <img className="hover" src={drawHover} alt='passion' />
+              <img className='hover' src={drawHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>05</h3>
                 <div className='text-description'>
@@ -498,7 +498,7 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={food} alt='passion' />
-              <img className="hover" src={foodHover} alt='passion' />
+              <img className='hover' src={foodHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>06</h3>
                 <div className='text-description'>
@@ -510,7 +510,7 @@ const Home = () => {
             {/* painting */}
             <div className='passion'>
               <img src={painting} alt='passion' />
-              <img className="hover" src={paintHover} alt='passion' />
+              <img className='hover' src={paintHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>07</h3>
                 <div className='text-description'>
@@ -522,7 +522,7 @@ const Home = () => {
             {/* manual */}
             <div className='passion'>
               <img src={manual} alt='passion' />
-              <img className="hover" src={craftHover} alt='passion' />
+              <img className='hover' src={craftHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>08</h3>
                 <div className='text-description'>
@@ -534,7 +534,7 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={art} alt='passion' />
-              <img className="hover" src={threeDHover} alt='passion' />
+              <img className='hover' src={threeDHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>09</h3>
                 <div className='text-description'>

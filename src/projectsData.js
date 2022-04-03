@@ -2,59 +2,73 @@
 import { v4 as uuidv4 } from "uuid"
 
 import Grissini from "./components/projects/Grissini"
-import grissiniCover from "./assets/img/works/grissini.jpg"
+import grissiniCover from "./assets/img/works/covers/grissini.jpg"
+import grissiniCoverSmall from "./assets/img/works/covers-small/grissini-min.jpg"
 import grissiniVisual1 from "./assets/img/works/grissini/visual1.jpg"
 
 import PXP from "./components/projects/PXP"
-import pxpCover from "./assets/img/works/pxp.jpg"
+import pxpCover from "./assets/img/works/covers/pxp.jpg"
+import pxpCoverSmall from "./assets/img/works/covers-small/pxp-min.jpg"
 import pxpVisual1 from "./assets/img/works/pxp/visual1.jpg"
 
 import Arcane from "./components/projects/Arcane"
-import arcaneCover from "./assets/img/works/arcane.jpg"
+import arcaneCover from "./assets/img/works/covers/arcane.jpg"
+import arcaneCoverSmall from "./assets/img/works/covers-small/arcane-min.jpg"
 import arcaneVisual1 from "./assets/img/works/arcane/visual1.jpg"
 
 import Hologramme from "./components/projects/Hologramme"
-import hologrammeCover from "./assets/img/works/hologramme.jpg"
+import hologrammeCover from "./assets/img/works/covers/hologramme.jpg"
+import hologrammeCoverSmall from "./assets/img/works/covers-small/hologramme-min.jpg"
 import hologrammeVisual1 from "./assets/img/works/hologramme/visual1.jpg"
 
 import Elijah from "./components/projects/Elijah"
-import elijahCover from "./assets/img/works/elijah.jpg"
+import elijahCover from "./assets/img/works/covers/elijah.jpg"
+import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
-import Circl from "./components/projects/Circl"
-import circlCover from "./assets/img/works/circl.jpg"
-import circlVisual1 from "./assets/img/works/circl/visual1.jpg"
+// import Circl from "./components/projects/Circl"
+// import circlCover from "./assets/img/works/covers/circl.jpg"
+// import circlCoverSmall from "./assets/img/works/covers-small/circl-min.jpg"
+// import circlVisual1 from "./assets/img/works/circl/visual1.jpg"
 
 import Shibuya from "./components/projects/Shibuya"
-import shibuyaCover from "./assets/img/works/shibuya.jpg"
+import shibuyaCover from "./assets/img/works/covers/shibuya.jpg"
+import shibuyaCoverSmall from "./assets/img/works/covers-small/shibuya-min.jpg"
 import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
 
 import Bubble from "./components/projects/Bubble"
-import bubbleCover from "./assets/img/works/bubble.jpg"
+import bubbleCover from "./assets/img/works/covers/bubble.jpg"
+import bubbleCoverSmall from "./assets/img/works/covers-small/bubble-min.jpg"
 import bubbleVisual1 from "./assets/img/works/bubble/bubbleVisual1.png"
 
-import Sangen from "./components/projects/Sangen"
-import sangenCover from "./assets/img/works/sangen.jpeg"
-import sangenVisual1 from "./assets/img/works/sangen/sangenVisual1.jpg"
+// import Sangen from "./components/projects/Sangen"
+// import sangenCover from "./assets/img/works/covers/sangen.jpeg"
+// import sangenCoverSmall from "./assets/img/works/covers-small/sangen-min.jpeg"
+// import sangenVisual1 from "./assets/img/works/sangen/sangenVisual1.jpg"
 
 import Desktop from "./components/projects/Desktop"
-import desktopCover from "./assets/img/works/desktop.jpg"
+import desktopCover from "./assets/img/works/covers/desktop.jpg"
+import desktopCoverSmall from "./assets/img/works/covers-small/desktop-min.jpg"
 import desktopVisual1 from "./assets/img/works/desktop/desktopVisual1.jpg"
 
 import Feels from "./components/projects/Feels"
-import feelsCover from "./assets/img/works/feels.jpg"
+import feelsCover from "./assets/img/works/covers/feels.jpg"
+import feelsCoverSmall from "./assets/img/works/covers-small/feels-min.jpg"
 import feelsVisual1 from "./assets/img/works/feels/feelsVisual1.jpg"
 
 import Branding from "./components/projects/Branding"
-import brandingCover from "./assets/img/works/branding.jpg"
+import brandingCover from "./assets/img/works/covers/branding.jpg"
+import brandingCoverSmall from "./assets/img/works/covers-small/branding-min.jpg"
 import brandingVisual1 from "./assets/img/works/branding/visual1.jpg"
 
 import Chanel from "./components/projects/Chanel"
-import chanelCover from "./assets/img/works/chanel.jpg"
+import chanelCover from "./assets/img/works/covers/chanel.jpg"
+import chanelCoverSmall from "./assets/img/works/covers-small/chanel-min.jpg"
 import chanelVisual1 from "./assets/img/works/chanel/visual1.jpg"
 
 import Paco from "./components/projects/Paco"
-import pacoCover from "./assets/img/works/paco.jpg"
+import pacoCover from "./assets/img/works/covers/paco.jpg"
+import pacoCoverSmall from "./assets/img/works/covers-small/paco-min.jpg"
 import pacoVisual1 from "./assets/img/works/paco/visual1.jpg"
 
 let projectsData = [
@@ -63,6 +77,7 @@ let projectsData = [
     path: "chanel",
     title: "Experimental website for Eau tendre de Chanel",
     coverImg: chanelCover,
+    coverImgSmall: chanelCoverSmall,
     component: Chanel,
     date: "Feb. 2022",
     role: "Designer",
@@ -76,6 +91,7 @@ let projectsData = [
     path: "project-x-paris",
     title: "Complete redesign of the Project X Paris website",
     coverImg: pxpCover,
+    coverImgSmall: pxpCoverSmall,
     component: PXP,
     date: "Jul. 2021",
     role: "Designer, Web integrator",
@@ -90,6 +106,7 @@ let projectsData = [
     path: "grissini",
     title: "Design and developtment of the Grissini website",
     coverImg: grissiniCover,
+    coverImgSmall: grissiniCoverSmall,
     visual1: grissiniVisual1,
     component: Grissini,
     date: "Feb. 2021",
@@ -104,6 +121,7 @@ let projectsData = [
     path: "arcane",
     title: "UI design for Arcane",
     coverImg: arcaneCover,
+    coverImgSmall: arcaneCoverSmall,
     visual1: arcaneVisual1,
     component: Arcane,
     date: "Nov. 2021",
@@ -117,6 +135,7 @@ let projectsData = [
     path: "branding",
     title: "Self branding",
     coverImg: brandingCover,
+    coverImgSmall: brandingCoverSmall,
     visual1: brandingVisual1,
     component: Branding,
     date: "Feb. 2022",
@@ -130,6 +149,7 @@ let projectsData = [
     path: "paco",
     title: "Paco digging culture",
     coverImg: pacoCover,
+    coverImgSmall: pacoCoverSmall,
     component: Paco,
     date: "March. 2022",
     role: "Designer, Project Manager",
@@ -143,6 +163,7 @@ let projectsData = [
     path: "elijah",
     title: "Design and development of Elijah's portfolio",
     coverImg: elijahCover,
+    coverImgSmall: elijahCoverSmall,
     visual1: elijahVisual1,
     component: Elijah,
     date: "Jan. 2022",
@@ -156,6 +177,7 @@ let projectsData = [
     path: "feels",
     title: "Create with your feeling",
     coverImg: feelsCover,
+    coverImgSmall: feelsCoverSmall,
     component: Feels,
     date: "Feb. 2022",
     role: "Designer, developer",
@@ -168,6 +190,7 @@ let projectsData = [
     name: "Shibuya",
     path: "shibuya",
     coverImg: shibuyaCover,
+    coverImgSmall: shibuyaCoverSmall,
     title: "Logo creation for Shibuya",
     visual1: shibuyaVisual1,
     component: Shibuya,
@@ -183,18 +206,19 @@ let projectsData = [
     title: "UI/UX Homepage for Hologramme",
     visual1: hologrammeVisual1,
     coverImg: hologrammeCover,
+    coverImgSmall: hologrammeCoverSmall,
     component: Hologramme,
     date: "Dec. 2020",
     role: "Designer",
     techs: ["Adobe XD, Photoshop"],
-    description:
-      "Hologramme is a high end hat distributor. I was asked to redesign their B2C website",
+    description: "Hologramme is a high end hat distributor. I was asked to redesign their B2C website",
   },
   {
     name: "Desktop",
     path: "desktop",
     title: "Desktop",
     coverImg: desktopCover,
+    coverImgSmall: desktopCoverSmall,
     visual1: desktopVisual1,
     component: Desktop,
     date: "Jul. 2020",
@@ -209,6 +233,7 @@ let projectsData = [
     path: "bubble-tea",
     title: "Bubble Tea maker",
     coverImg: bubbleCover,
+    coverImgSmall: bubbleCoverSmall,
     visual1: bubbleVisual1,
     component: Bubble,
     date: "Jul. 2020",

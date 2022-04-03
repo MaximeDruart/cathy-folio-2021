@@ -38,7 +38,7 @@ const StyledSlider = styled.div`
   }
 `
 
-const projectImages = projectsData.map((project) => project.coverImg)
+const projectImages = projectsData.map((project) => project.coverImgSmall)
 
 const Slider = (props) => {
   const imageRef = useRef()

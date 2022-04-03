@@ -196,10 +196,6 @@ function ShaderPlane(props) {
     }, 300)
   }
 
-  useEffect(() => {
-    props.index === 2 && console.log(props.isInView)
-  }, [props.isInView])
-
   return (
     <mesh
       {...props}
@@ -234,7 +230,7 @@ function ShaderPlane(props) {
 let scrollValue = 0
 
 const Scene = ({ history }) => {
-  const covers = useTexture(projectsData.map((p) => p.coverImg))
+  const covers = useTexture(projectsData.map((p) => p.coverImgSmall))
 
   const group = useRef()
   const vec3 = useRef(new Vector3())

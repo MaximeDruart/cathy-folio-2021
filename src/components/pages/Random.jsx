@@ -139,7 +139,7 @@ const Container = styled.div`
       }
       .body {
         margin-top: 10px;
-        .desc{
+        .desc {
           line-height: 1.3;
         }
       }
@@ -403,9 +403,7 @@ function ShaderPlane(props) {
         <motion.div className='wrapper'>
           <div className='title'>{props.project.name}</div>
           <div className='body'>
-            <div className='desc'>
-              {props.project.description}
-            </div>
+            <div className='desc'>{props.project.description}</div>
             {(isMobile || isTablet) && props.project.websiteLink && (
               <a className='text-link website-link mobile' href={props.project.websiteLink} target='_blank'>
                 Visit the website
