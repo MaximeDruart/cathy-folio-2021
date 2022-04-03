@@ -238,14 +238,30 @@ function ShaderPlane(props) {
     z: isMobile ? 0.99 : isTablet ? 0.8 : isSmallDesktop ? 0.7 : 0.5,
   }
 
+  const openTl = useRef(null)
+  const closeTl = useRef(null)
+
   const closeProject = useCallback(() => {
     controlsRef.current.enabled = true
 
-    gsap
-      .timeline()
+    if (openTl.current) {
+      openTl.current.progress(1)
+    }
+
+    closeTl.current = gsap
+      .timeline({
+        onComplete: () => {
+          setSelfIsOpened(false)
+          projectIsOpened.current = {
+            isOpened: false,
+            id: null,
+          }
+        },
+      })
       .addLabel("sync1")
       .to(domTextRef.current, { opacity: 0, duration: 0.25 }, "sync1")
       .to(domLinkRef.current, { opacity: 0, duration: 0.25 }, "sync1")
+      .set(clickOutPlaneRef.current.scale, { x: 0.01, y: 0.01, z: 0.01 }, "sync1")
       .to(
         meshRef.current.position,
         {
@@ -254,30 +270,26 @@ function ShaderPlane(props) {
           z: 0,
           duration: 0.5,
           ease: "Power3.easeOut",
-          onComplete: () =>
-            (projectIsOpened.current = {
-              isOpened: false,
-              id: null,
-            }),
         },
         "-=0.15"
       )
       .to(filterRef.current.material, { opacity: 0, duration: 0.3 }, "-=0.5")
       .set(filterRef.current.position, { z: -1.2 })
       .to(mapRef.current, { opacity: 1 }, "sync")
-
-    // gsap.to(textMaterial.current, { opacity: 0 })
+      .to(domTextRef.current, { opacity: 0, duration: 0.25 }, "sync1")
+      .to(domLinkRef.current, { opacity: 0, duration: 0.25 }, "sync1")
   }, [])
 
   const openProject = useCallback(() => {
+    console.log("open")
     controlsRef.current.enabled = false
-    // projectIsOpened.current = {
-    //   isOpened: true,
-    //   id: props.project.id,
-    // }
 
-    gsap
+    openTl.current = gsap
       .timeline({
+        onStart: () => {
+          setSelfIsOpened(true)
+          setHovering(false)
+        },
         onComplete: () => {
           projectIsOpened.current = {
             isOpened: true,
@@ -294,6 +306,7 @@ function ShaderPlane(props) {
       })
       .addLabel("sync", "-=0.3")
       .set(filterRef.current.position, { z: camera.position.z - 1 }, "sync")
+      .set(clickOutPlaneRef.current.scale, { x: 50, y: 50, z: 50 }, "sync")
       .to(filterRef.current.material, { opacity: 0.85, duration: 0.3 }, "sync")
       .to(mapRef.current, { opacity: 0.15 }, "sync")
       .addLabel("sync2", "-=0.2")
@@ -304,21 +317,24 @@ function ShaderPlane(props) {
     gsap.to(textMaterial.current, { opacity: 0 })
   }, [])
 
-  const clickHandler = useCallback(() => {
-    if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
+  const clickHandler = useCallback(
+    (e) => {
+      e.stopPropagation()
+      if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
 
-    if (!projectIsOpened.current.isOpened) {
-      setSelfIsOpened(true)
-      openProject()
-      setHovering(false)
-    }
-  }, [closeProject, openProject])
+      if (projectIsOpened.current.isOpened && !selfIsOpened) {
+        closeProject()
+      } else {
+        openProject()
+      }
+    },
+    [closeProject, openProject]
+  )
 
   const handleClickOut = useCallback(() => {
     if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
 
-    if (projectIsOpened.current.isOpened) {
-      setSelfIsOpened(false)
+    if (projectIsOpened.current.isOpened && !selfIsOpened) {
       closeProject()
     }
   }, [closeProject, openProject])
@@ -375,8 +391,9 @@ function ShaderPlane(props) {
         tex={props.texture}
       />
       <Plane
-        scale={selfIsOpened ? 30 : 1}
         ref={clickOutPlaneRef}
+        onPointerOver={() => selfIsOpened && setHovering(true)}
+        onPointerOut={() => selfIsOpened && setHovering(false)}
         onClick={handleClickOut}
         position-z={-0.001}
         args={[1, 1]}
