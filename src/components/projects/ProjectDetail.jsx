@@ -9,68 +9,26 @@ import FullImage from "../shared/FullImage"
 
 const StyledProjectDetail = styled.div`
   .hero-title {
-    h1 {
-      opacity: 1 !important;
-    }
-  }
-  /* img{
-    @media (max-width: 480px) {
-      margin-left: -28px;
-      width: 100vw;
-      height: auto;
-      object-fit: cover;
-    }
-  } */
-  video{
-    width:100%;
-    height: auto;
-    object-fit: cover;
-  }
-  img.little{
-      width:80%
-      @media (max-width: 900px) {
-        width: 100%;
-      }
-    }
-  .img_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    img.duo {
-      width: 46%;
-      @media (max-width: 900px) {
-        width: 100% !important;
-      }
-    }
-    img.trio{
-      width: 160px
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
 
-    svg {
-      width: 30%;
-      margin: 40px 0;
+    .big-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 200px;
+      text-transform: uppercase;
+      color: white;
+      font-family: Ginger;
+      white-space: nowrap;
       @media (max-width: 900px) {
-        width: 100%;
+        font-size: 80px;
       }
-      @media (max-width: 600px) {
-        margin: 0px 0;
-    }
-    }
-  }
-  .mini{
-    justify-content: center;
-    img{
-      width: 170px;
-      margin: 0 50px;
-    }
-  }
-  img.step {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 900px) {
-      width: 100%;
     }
   }
   .hero {
@@ -90,6 +48,58 @@ const StyledProjectDetail = styled.div`
       height: 60vh;
     }
   }
+  video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  img.little {
+    width: 80% @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
+  .img_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img.duo {
+      width: 46%;
+      @media (max-width: 900px) {
+        width: 100% !important;
+      }
+    }
+    img.trio {
+      width: 160px;
+    }
+
+    svg {
+      width: 30%;
+      margin: 40px 0;
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+      @media (max-width: 600px) {
+        margin: 0px 0;
+      }
+    }
+  }
+  .mini {
+    justify-content: center;
+    img {
+      width: 170px;
+      margin: 0 50px;
+    }
+  }
+  img.step {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
+
   /* responsive */
   .responsive {
     width: 100%;
@@ -109,8 +119,8 @@ const StyledProjectDetail = styled.div`
       }
     }
     @media (max-width: 600px) {
-        justify-content: space-around;
-      }
+      justify-content: space-around;
+    }
   }
   img.full-img {
     width: 100vw;
@@ -133,28 +143,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
     }
   }
-  .hero-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
 
-    .big-title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 200px;
-      text-transform: uppercase;
-      color: white;
-      font-family: Ginger;
-      white-space: nowrap;
-      @media (max-width: 900px) {
-          font-size: 80px;
-      }
-    }
-  }
   /* Separator with text */
   .headline {
     text-transform: uppercase;
@@ -383,16 +372,24 @@ const ProjectDetail = ({ project }) => {
   }, [scrollY, page])
 
   return (
-    <PageTemplate hasFooter={false} initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
+    <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
         <div className='hero-title'>
-          <h1 className='big-title'>{project.name}</h1>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: imageHasLoaded ? 1 : 0 }}
+            transition={{ duration: 0.4 }}
+            className='big-title'
+          >
+            {project.name}
+          </motion.h1>
         </div>
         <div className='hero'>
           <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
             animate={{ opacity: imageHasLoaded ? 1 : 0 }}
+            transition={{ duration: 0.4 }}
             src={project.coverImg}
           />
         </div>
