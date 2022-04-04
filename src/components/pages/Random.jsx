@@ -281,7 +281,6 @@ function ShaderPlane(props) {
   }, [])
 
   const openProject = useCallback(() => {
-    console.log("open")
     controlsRef.current.enabled = false
 
     openTl.current = gsap
