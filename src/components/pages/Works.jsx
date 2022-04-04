@@ -39,6 +39,7 @@ const StyledWorks = styled(motion.div)`
   width: 100vw;
   transition: background-color 0.6s;
   position: relative;
+  overflow: hidden;
 
   .canvas-html {
     pointer-events: none;
