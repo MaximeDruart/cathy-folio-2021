@@ -27,6 +27,7 @@ import weekend from "./assets/img/archives/weekend.jpg"
 import Blob from "./assets/img/archives/blob.jpg"
 import room from "./assets/img/archives/room.jpg"
 import selfKit from "./assets/img/archives/selfKit.jpg"
+import acnh from "./assets/img/archives/acnh.jpg"
 
 import flowerCard from "./assets/img/archives/flowerCard.jpg"
 import folioBook from "./assets/img/archives/folioBook.jpg"
@@ -76,6 +77,13 @@ let archivesData = [
     type: "print",
     description: "I create this poster, and generate the pattern using my code made from scratch on Processing",
     websiteLink: "",
+  },
+  {
+    name: "My ACNH Island",
+    coverImg: acnh,
+    type: "print",
+    description: "Being a big fan of animal crossing, I always liked to create my own little universe. I find the ACNH version very complete, which has allowed me to expand and develop my creativity. My island named 'Eldia' (a little reference to SNK ;) ) has been filmed in a video with more than 1 million views on Youtube. For those who are curious, don't hesitate to watch it! This one is from 1 month ago after the release of the game. All these helped me a lot in terms of creativity and inspiration, I highly recommend the game for those who don't have it :D",
+    websiteLink: "https://www.youtube.com/watch?v=QbiMWZTUefU&t=31s",
   },
   {
     name: "Self Kit",
