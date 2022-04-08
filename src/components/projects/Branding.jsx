@@ -93,7 +93,9 @@ const Sangen = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">I wanted to create a natural universe and something elegant while remaining minimalist and pure. And of course to keep the homogeneity with my website. </p>
+          <p className="text-description">Creating your own brand is by far the most difficult thing to do.
+          difficult thing to do. You tend to criticize and procrastinate
+          procrastinate constantly. I finally got a rendering that I was happy with.</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>

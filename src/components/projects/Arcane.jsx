@@ -30,15 +30,15 @@ img{
         background-color: white;
       }
       &.two{
-        background-color: #3c39bd;
+        background-color: #6664d2;
         color: white;
       }
       &.three{
-        background-color: #d45394;
+        background-color: #98afef;
         color: white;
       }
       &.four{
-        background-color:#45744c;
+        background-color:#d178c7;
         color: white;
       }
     }
@@ -65,9 +65,9 @@ const Arcane = () => {
         <div className="colors">
           <h4 className="text-h4">Colors</h4>
           <div className="color one">#FFFFFF</div>
-          <div className="color two">#3d3bca</div>
-          <div className="color three">#9b4670</div>
-          <div className="color four">#37683e</div>
+          <div className="color two">#6664d2</div>
+          <div className="color three">#98afef</div>
+          <div className="color four">#d178c7</div>
         </div>
       </div>
       {/* end chart */}
