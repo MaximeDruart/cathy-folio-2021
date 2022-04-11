@@ -287,14 +287,16 @@ const StyledHome = styled.div`
           }
         }
         h3.number {
-          margin-top: 20px;
+          margin-top: 21px;
           font-size: 60px;
           font-family: "Ginger";
           /* font-family: "NeueMontrealLight"; */
           color: ${({ theme }) => theme.colors.text.disabled};
           margin-left: -4px;
           margin-right: 20px;
-          margin-bottom: 14px;
+          @media (max-width: 600px) {
+            margin-top: 17px;
+          }
         }
         .text-h4,
         .text-regular {
