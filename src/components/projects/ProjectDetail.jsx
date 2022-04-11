@@ -53,8 +53,18 @@ const StyledProjectDetail = styled.div`
     height: auto;
     object-fit: cover;
   }
+  img.quart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    @media (max-width: 900px) {
+      width: 80%;
+    }
+  }
   img.little {
-    width: 80% @media (max-width: 900px) {
+    width: 80% 
+    @media (max-width: 900px) {
       width: 100%;
     }
   }

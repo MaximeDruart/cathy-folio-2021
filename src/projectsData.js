@@ -16,6 +16,11 @@ import arcaneCover from "./assets/img/works/covers/arcane.jpg"
 import arcaneCoverSmall from "./assets/img/works/covers-small/arcane-min.jpg"
 import arcaneVisual1 from "./assets/img/works/arcane/visual1.jpg"
 
+import sens from "./components/projects/Sens"
+import sensCover from "./assets/img/works/covers/5sens.jpg"
+import sensCoverSmall from "./assets/img/works/covers-small/5sens-min.jpg"
+import sensVisual1 from "./assets/img/works/sens/visual1.jpg"
+
 import Hologramme from "./components/projects/Hologramme"
 import hologrammeCover from "./assets/img/works/covers/hologramme.jpg"
 import hologrammeCoverSmall from "./assets/img/works/covers-small/hologramme-min.jpg"
@@ -128,6 +133,20 @@ let projectsData = [
     description:
       "L'Eau tendre de Chanel is the sweetest fragrance to bring out your femininity. Being one of my favorite perfumes, I decided to create an immersive site around it to highlight its qualities, its freshness, its sweetness as well as its accompanying range. L'eau tendre is a captivating perfume made of jasmine and rose essence. It is the feminine fragrance par excellence!",
     visual1: chanelVisual1,
+  },
+  {
+    name: "5 Sens",
+    path: "sens",
+    title: "Poster for an experimental place",
+    coverImg: sensCover,
+    coverImgSmall: sensCoverSmall,
+    visual1: sensVisual1,
+    component: sens,
+    date: "Feb. 2022",
+    role: "DA, Designer",
+    techs: ["Illustrator, Photoshop"],
+    description:
+      "Creation of an art center: musical cultures and experiments, in an exceptional architectural building. A plural and unlimited place (concert hall, immersive exhibitions, performances, projections, workshops etc...). The center and the programming tend to translate the energy of the musical and visual movement. The motorcycle: Music in all its forms with the main preoccupation of 'living the experience'",
   },
   {
     name: "Grissini",

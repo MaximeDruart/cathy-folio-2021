@@ -3,11 +3,12 @@ import { v4 as uuidv4 } from "uuid"
 
 import cl from "./assets/img/archives/cl.jpg"
 import feelsRed from "./assets/img/archives/feelsRed.jpg"
-import feels from "./assets/img/archives/feels.jpg"
 import lila from "./assets/img/archives/lila.jpg"
+import gardenPoster from "./assets/img/archives/gardenPoster.jpg"
 import feelsBlue from "./assets/img/archives/feelsBlue.jpg"
 import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
 import mandala from "./assets/img/archives/mandala.jpg"
+import aurae1 from "./assets/img/archives/aurae1.jpg"
 import red from "./assets/img/archives/red.jpg"
 import etude from "./assets/img/archives/etude.jpg"
 import nike from "./assets/img/archives/nike.jpg"
@@ -22,6 +23,8 @@ import low from "./assets/img/archives/low.jpg"
 import vol from "./assets/img/archives/vol.jpg"
 import etudePhone from "./assets/img/archives/etude_phone.jpg"
 import flamalice from "./assets/img/archives/flamalice.jpg"
+import gardenKit from "./assets/img/archives/gardenKit.jpg"
+import ticketsGarden from "./assets/img/archives/ticketsGarden.jpg"
 import elijah from "./assets/img/archives/elijah.jpg"
 import weekend from "./assets/img/archives/weekend.jpg"
 import Blob from "./assets/img/archives/blob.jpg"
@@ -30,7 +33,6 @@ import selfKit from "./assets/img/archives/selfKit.jpg"
 import acnh from "./assets/img/archives/acnh.jpg"
 
 import flowerCard from "./assets/img/archives/flowerCard.jpg"
-import folioBook from "./assets/img/archives/folioBook.jpg"
 import logoWater from "./assets/img/archives/logoWater.jpg"
 
 let archivesData = [
@@ -38,21 +40,8 @@ let archivesData = [
     name: "elijah",
     coverImg: elijah,
     type: "print",
-    description: "Homepage preview from Elijah portfolio",
+    description: "Elijah is a french photographer based in Paris. I designed and developed his portfolio trying to create an identity to feat with his content. There is a preview of the Homepage. Case study avalaible on the link below.",
   },
-  {
-    name: "Portfolio book",
-    coverImg: folioBook,
-    type: "mockup",
-    description: "A little preview of my folio-book, coming soon...",
-  },
-  // {
-  //   name: "DesignR",
-  //   coverImg: designr,
-  //   type: "website",
-  //   description: "An API for designR (work only on desktop)",
-  //   websiteLink: "https://designr.cathydolle.com/",
-  // },
   {
     name: "1st Isometric room",
     coverImg: room,
@@ -60,10 +49,24 @@ let archivesData = [
     description: "This is my first 3D creation using Blender. Thanks to PolygonRunaway for his amazing course.",
   },
   {
+    name: "Garden Kit",
+    coverImg: gardenKit,
+    type: "print",
+    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Garden kit with poster & tickets. Picture by Yomagick",
+    websiteLink: "",
+  },
+  {
     name: "Business Card",
     coverImg: flowerCard,
     type: "mockup",
     description: "A preview of my business card :)",
+  },
+  {
+    name: "Aurae poster",
+    coverImg: aurae1,
+    type: "print",
+    description: "Summer edition : Aurae Exposition for 5SENS, an experimental fictive place. Picture by Yomagick.",
+    websiteLink: "",
   },
   {
     name: "lila",
@@ -79,10 +82,24 @@ let archivesData = [
     websiteLink: "",
   },
   {
+    name: "Garden poster",
+    coverImg: gardenPoster,
+    type: "print",
+    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Picture by Yomagick",
+    websiteLink: "",
+  },
+  {
+    name: "Garden Tickets",
+    coverImg: ticketsGarden,
+    type: "print",
+    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Entry tickets. Picture by Yomagick",
+    websiteLink: "",
+  },
+  {
     name: "My ACNH Island",
     coverImg: acnh,
     type: "print",
-    description: "Being a big fan of animal crossing, I always liked to create my own little universe. I find the ACNH version very complete, which has allowed me to expand and develop my creativity. My island named 'Eldia' (a little reference to SNK ;) ) has been filmed in a video with more than 1 million views on Youtube. For those who are curious, don't hesitate to watch it! This one is from 1 month ago after the release of the game. All these helped me a lot in terms of creativity and inspiration, I highly recommend the game for those who don't have it :D",
+    description: "Being a big fan of animal crossing, I always liked to create my own little universe. I find the ACNH version very complete, which has allowed me to expand and develop my creativity. My island named 'Eldia' (a little reference to SNK ;) ) has been recorded in a video, and viewed over than 1 million times on Youtube !! For those who are curious, don't hesitate to watch it :D. All these helped me a lot for my creativity and inspiration, I highly recommend the game for those who don't have it ^-^",
     websiteLink: "https://www.youtube.com/watch?v=QbiMWZTUefU&t=31s",
   },
   {
@@ -151,12 +168,6 @@ let archivesData = [
     coverImg: parallele,
     type: "Print",
     description: "Realization of a cover for the magazine 'parallele', art in the culture of science.",
-  },
-  {
-    name: "Feels Cover",
-    coverImg: feels,
-    type: "Processing",
-    description: "Creative cover for my project 'Feels'"
   },
   {
     name: "Flamalice portfolio",
