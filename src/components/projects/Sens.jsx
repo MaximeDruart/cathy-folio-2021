@@ -74,7 +74,7 @@ const Sens = () => {
       <div className='headline text-regular'>Garden's Moodboard</div>
       <div className='separator'></div>
       <img src={gardenMoodboard} alt="garden" />
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
       <div className='headline text-regular'>Poster</div>
       <div className='separator'></div>
       <img src={gardenPosters} alt="garden" />
@@ -91,7 +91,7 @@ const Sens = () => {
       <div className='headline text-regular'>Aurae's Moodboard</div>
       <div className='separator'></div>
       <img src={summerMoodboard} alt="garden" />
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
       <div className='headline text-regular'>Poster</div>
       <div className='separator'></div>
       <img src={summerPosters} alt="garden" />
