@@ -151,7 +151,7 @@ let projectsData = [
   {
     name: "Grissini",
     path: "grissini",
-    title: "Design and developtment of the Grissini website",
+    title: "Design and development of the Grissini website",
     coverImg: grissiniCover,
     coverImgSmall: grissiniCoverSmall,
     visual1: grissiniVisual1,

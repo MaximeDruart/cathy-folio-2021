@@ -414,7 +414,7 @@ const Home = () => {
           <div className='separator'></div>
           <div className='title text-h2-5'>
             I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design
-            and brand identity. Currently in intership at <span className='saol'>AKQA</span> as UI/UX Designer
+            and brand identity. Currently in internship at <span className='saol'>AKQA</span> as UI/UX Designer
           </div>
           <a className='button' href={resume} download='cathy_resume.pdf'>
             Download my resume
