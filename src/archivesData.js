@@ -1,39 +1,51 @@
 /* eslint-disable no-dupe-keys */
 import { v4 as uuidv4 } from "uuid"
 
-import cl from "./assets/img/archives/cl.jpg"
+// This is collection
+import green from "./assets/img/archives/green.jpg"
+import black from "./assets/img/archives/black.jpg"
+import blue from "./assets/img/archives/blue.jpg"
+import pink from "./assets/img/archives/pink.jpg"
+
+// posters colo
 import feelsRed from "./assets/img/archives/feelsRed.jpg"
-import lila from "./assets/img/archives/lila.jpg"
-import gardenPoster from "./assets/img/archives/gardenPoster.jpg"
 import feelsBlue from "./assets/img/archives/feelsBlue.jpg"
-import shibuya_device from "./assets/img/archives/shibuya_device.jpg"
-import mandala from "./assets/img/archives/mandala.jpg"
-import aurae1 from "./assets/img/archives/aurae1.jpg"
-import red from "./assets/img/archives/red.jpg"
-import etude from "./assets/img/archives/etude.jpg"
-import nike from "./assets/img/archives/nike.jpg"
+import killPoster from "./assets/img/archives/killPoster.jpg"
+import volPoster from "./assets/img/archives/volPoster.jpg"
+// posters expo
+import gardenPoster from "./assets/img/archives/gardenPoster.jpg"
+import auraePoster from "./assets/img/archives/auraePoster.jpg"
+import gardenTickets from "./assets/img/archives/gardenTickets.jpg"
+import auraeTickets from "./assets/img/archives/auraeTickets.jpg"
+import auraeKit from "./assets/img/archives/auraeKit.jpg"
+
+// processing
+import lila from "./assets/img/archives/lila.jpg"
 import distortion from "./assets/img/archives/distortion.jpg"
-import parallele from "./assets/img/archives/parallele.jpg"
-import illu1 from "./assets/img/archives/illu1.jpg"
-import illu2 from "./assets/img/archives/illu2.jpg"
-import vans from "./assets/img/archives/vans.jpg"
-import kill from "./assets/img/archives/kill.jpg"
-import picto from "./assets/img/archives/picto.jpg"
-import low from "./assets/img/archives/low.jpg"
-import vol from "./assets/img/archives/vol.jpg"
-import etudePhone from "./assets/img/archives/etude_phone.jpg"
-import flamalice from "./assets/img/archives/flamalice.jpg"
-import gardenKit from "./assets/img/archives/gardenKit.jpg"
-import ticketsGarden from "./assets/img/archives/ticketsGarden.jpg"
-import elijah from "./assets/img/archives/elijah.jpg"
-import weekend from "./assets/img/archives/weekend.jpg"
 import Blob from "./assets/img/archives/blob.jpg"
-import room from "./assets/img/archives/room.jpg"
-import selfKit from "./assets/img/archives/selfKit.jpg"
+
+// ghibli/game
+import mandala from "./assets/img/archives/mandala.jpg"
+import kaonashi from "./assets/img/archives/kaonashi.jpg"
+import mononoke from "./assets/img/archives/mononoke.jpg"
 import acnh from "./assets/img/archives/acnh.jpg"
 
-import flowerCard from "./assets/img/archives/flowerCard.jpg"
-import logoWater from "./assets/img/archives/logoWater.jpg"
+// UI
+import elijah from "./assets/img/archives/elijah.jpg"
+import designr from "./assets/img/archives/designr.jpg"
+
+// Edito
+import parallele from "./assets/img/archives/parallele.jpg"
+
+// 3D
+import isometricRoom from "./assets/img/archives/isometricRoom.jpg"
+
+// myself
+import selfBranding from "./assets/img/archives/selfBranding.jpg"
+import selfCard from "./assets/img/archives/selfCard.jpg"
+
+// music
+import bibi from "./assets/img/archives/bibi.jpg"
 
 let archivesData = [
   {
@@ -41,32 +53,60 @@ let archivesData = [
     coverImg: elijah,
     type: "print",
     description: "Elijah is a french photographer based in Paris. I designed and developed his portfolio trying to create an identity to feat with his content. There is a preview of the Homepage. Case study avalaible on the link below.",
+    websiteLink: "https://www.cathydolle.com/works/elijah",
   },
   {
-    name: "1st Isometric room",
-    coverImg: room,
+    name: "This is black",
+    coverImg: black,
+    type: "UI",
+    description: "This is black is an UI composition inspired by MarcZeni. I used Zhong Lin's Picture for this design, an amazing photographer.",
+  },
+  {
+    name: "Isometric 3D room",
+    coverImg: isometricRoom,
     type: "3D",
     description: "This is my first 3D creation using Blender. Thanks to PolygonRunaway for his amazing course.",
   },
   {
-    name: "Garden Kit",
-    coverImg: gardenKit,
+    name: "DesignR",
+    coverImg: designr,
+    type: "ui",
+    description: "DesignR is one of a tool that any designer or developer can use. Browse collection, find the Mixx you like and use it for your design or website. Easily and instantly download every element of each Mixx, including: images, typography and colors Simple and Efficent that’s DesignR. This is a fictive project we designed and developed with my group at school.",
+    websiteLink: "https://designr.cathydolle.com/",
+  },
+  {
+    name: "Aurae Kit",
+    coverImg: auraeKit,
     type: "print",
-    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Garden kit with poster & tickets. Picture by Yomagick",
-    websiteLink: "",
+    description: "Summer edition : Aurae Exposition for 5SENS, an experimental fictive place. Picture by Yomagick. If you want to see the project you can check my case study.",
+    websiteLink: "https://www.cathydolle.com/works/sens",
+  },
+  {
+    name: "Bibi The weekend",
+    coverImg: bibi,
+    type: "music",
+    description: "Bibi is one of my favourite singer, and I decided to made some art with her. I also wanted to share you her album that is amazing.",
+    websiteLink: "https://www.youtube.com/watch?v=EDUDc2JXQ9A&t=1422s",
   },
   {
     name: "Business Card",
-    coverImg: flowerCard,
+    coverImg: selfCard,
     type: "mockup",
-    description: "A preview of my business card :)",
+    description: "A preview of my business card, if you want to see my self branding you can visit my case study.",
+    websiteLink: "https://www.cathydolle.com/works/branding",
+  },
+  {
+    name: "This is blue",
+    coverImg: blue,
+    type: "UI",
+    description: "This is blue is an UI composition inspired by MarcZeni. I used Zhong Lin's Picture for this design, an amazing photographer.",
   },
   {
     name: "Aurae poster",
-    coverImg: aurae1,
+    coverImg: auraePoster,
     type: "print",
-    description: "Summer edition : Aurae Exposition for 5SENS, an experimental fictive place. Picture by Yomagick.",
-    websiteLink: "",
+    description: "Summer edition : Aurae Exposition for 5SENS, an experimental fictive place. Picture by Yomagick. If you want to see the project you can check my case study.",
+    websiteLink: "https://www.cathydolle.com/works/sens",
   },
   {
     name: "lila",
@@ -75,25 +115,24 @@ let archivesData = [
     description: "I generate this form using Processing",
   },
   {
-    name: "vol",
-    coverImg: vol,
+    name: "volPoster",
+    coverImg: volPoster,
     type: "print",
     description: "I create this poster, and generate the pattern using my code made from scratch on Processing",
-    websiteLink: "",
   },
   {
     name: "Garden poster",
     coverImg: gardenPoster,
     type: "print",
-    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Picture by Yomagick",
-    websiteLink: "",
+    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Picture by Yomagick. If you want to see the project you can check my case study.",
+    websiteLink: "https://www.cathydolle.com/works/sens",
   },
   {
     name: "Garden Tickets",
-    coverImg: ticketsGarden,
+    coverImg: gardenTickets,
     type: "print",
-    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Entry tickets. Picture by Yomagick",
-    websiteLink: "",
+    description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Entry tickets.Picture by Yomagick. If you want to see the project you can check my case study.",
+    websiteLink: "https://www.cathydolle.com/works/sens",
   },
   {
     name: "My ACNH Island",
@@ -103,17 +142,30 @@ let archivesData = [
     websiteLink: "https://www.youtube.com/watch?v=QbiMWZTUefU&t=31s",
   },
   {
-    name: "Self Kit",
-    coverImg: selfKit,
-    type: "Design",
-    description: "My personal branding kit :D",
+    name: "This is green",
+    coverImg: green,
+    type: "UI",
+    description: "This is green is an UI composition inspired by MarcZeni. I used Zhong Lin's Picture for this design, an amazing photographer.",
   },
   {
-    name: "Etude house",
-    coverImg: etude,
-    type: "Ui Design",
-    description: "UI Design for the brand Etude House",
-    websiteLink: "",
+    name: "Self Kit",
+    coverImg: selfBranding,
+    type: "Design",
+    description: "My personal branding kit :D. If you want to see my self branding you can visit my case study.",
+    websiteLink: "https://www.cathydolle.com/works/branding",
+  },
+  {
+    name: "Aurae Tickets",
+    coverImg: auraeTickets,
+    type: "print",
+    description: "Summer edition : Aurae Exposition for 5SENS, an experimental fictive place. Entry tickets. Picture by Yomagick. If you want to see the project you can check my case study.",
+    websiteLink: "https://www.cathydolle.com/works/sens",
+  },
+  {
+    name: "This is pink",
+    coverImg: pink,
+    type: "UI",
+    description: "This is pink is an UI composition inspired by MarcZeni. I used Zhong Lin's Picture for this design, an amazing photographer.",
   },
   {
     name: "Blob",
@@ -122,46 +174,17 @@ let archivesData = [
     description: "This is a blob made with Three JS",
   },
   {
-    name: "picto",
-    coverImg: picto,
-    type: "logo",
-    description: "I created pictograms of barrier gestures for the Shibuya district in Tokyo, going with the logo I made for it.",
-  },
-  {
-    name: "weekend",
-    coverImg: weekend,
-    type: "print",
-    description: "Photo of Bibi from her music video 'The weekend'"
-  },
-  {
     name: "Feels Blue",
     coverImg: feelsBlue,
     type: "processing",
-    description: "Post and pattern create and generate with a code on Processing, Blue palette.",
+    description: "Post and pattern create and generate with a code on Processing, Blue palette. If you want to see more you can check my Feel's case study.",
+    websiteLink: "https://www.cathydolle.com/works/feels",
   },
   {
-    name: "Envelop logo",
-    coverImg: logoWater,
-    type: "Mockup",
-    description: "Preview of my personal envelope where you will find my CV and information",
-  },
-  {
-    name: "Nike homepage",
-    coverImg: nike,
-    type: "website",
-    description: "UI Design of the homepage for the Nike website",
-  },
-  {
-    name: "low",
-    coverImg: low,
-    type: "print",
-    description: "Creation of a poster, the 'Low' pattern was generated with my code on Processing",
-  },
-  {
-    name: "Kill geometry print",
-    coverImg: kill,
+    name: "kill Poster geometry print",
+    coverImg: killPoster,
     type: "Print",
-    description: "Creation of a poster, the 'Kill' pattern was generated with my code on Processing",
+    description: "Creation of a poster, the 'killPoster' pattern was generated with my code on Processing",
   },
   {
     name: "Parallele magazine",
@@ -169,48 +192,25 @@ let archivesData = [
     type: "Print",
     description: "Realization of a cover for the magazine 'parallele', art in the culture of science.",
   },
-  {
-    name: "Flamalice portfolio",
-    coverImg: flamalice,
-    type: "website",
-    description: "Portfolio I designed and developed for the artist Flamalice",
-    websiteLink: "https://flamalice.com/",
-  },
-  {
-    name: "etude house",
-    coverImg: etudePhone,
-    type: "UI design",
-    description: "responsive UI design for Etude house brand, page checkout",
-  },
+  // {
+  //   name: "Flamalice portfolio",
+  //   coverImg: flamalice,
+  //   type: "website",
+  //   description: "Portfolio I designed and developed for the artist Flamalice",
+  //   websiteLink: "https://flamalice.com/",
+  // },
   {
     name: "Feels Red",
     coverImg: feelsRed,
     type: "processing",
-    description: "Post and pattern create and generate with a code on Processing, red palette.",
-  },
-  {
-    name: "Cl presave",
-    coverImg: cl,
-    type: "Ui design",
-    description: "Preview of the pre-save page for the release of the CL album",
+    description: "Post and pattern create and generate with a code on Processing, red palette. If you want to see more you can check my Feel's case study.",
+    websiteLink: "https://www.cathydolle.com/works/feels",
   },
   {
     name: "Kaonashi human",
-    coverImg: illu1,
+    coverImg: kaonashi,
     type: "Illustration",
     description: "Drawing made on a graphic tablet on the illustrator software, inspired by Suzani",
-  },
-  {
-    name: "vans",
-    coverImg: vans,
-    type: "Ui design",
-    description: "UI Design of a log in page for the brand Vans",
-  },
-  {
-    name: "Shibuya Device Mockup",
-    coverImg: shibuya_device,
-    type: "Print",
-    description: "Mockup on ipad of the logo I made for the shibuya district",
   },
   {
     name: "Mandala",
@@ -219,19 +219,13 @@ let archivesData = [
     description: "Mandala made on Illustrator for a homework, using the main elements of the movie 'Spirited Away'.",
   },
   {
-    name: "red pic",
-    coverImg: red,
-    type: "book",
-    description: "Preview picture from Elijah's Portfolio",
-  },
-  {
     name: "Distorsion Processing",
     coverImg: distortion,
     description: "Creating a distortion canva on Processing",
   },
   {
     name: "Princess Mononoke",
-    coverImg: illu2,
+    coverImg: mononoke,
     type: "Illustration",
     description: "Drawing made on a graphic tablet on the illustrator software, inspired by Suzani",
   },
