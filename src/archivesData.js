@@ -75,6 +75,13 @@ let archivesData = [
     websiteLink: "https://designr.cathydolle.com/",
   },
   {
+    name: "My ACNH Island",
+    coverImg: acnh,
+    type: "print",
+    description: "Being a big fan of animal crossing, I always liked to create my own little universe. I find the ACNH version very complete, which has allowed me to expand and develop my creativity. My island named 'Eldia' (a little reference to SNK ;) ) has been recorded in a video, and viewed over than 1 million times on Youtube !! For those who are curious, don't hesitate to watch it :D. All these helped me a lot for my creativity and inspiration, I highly recommend the game for those who don't have it ^-^",
+    websiteLink: "https://www.youtube.com/watch?v=QbiMWZTUefU&t=31s",
+  },
+  {
     name: "Aurae Kit",
     coverImg: auraeKit,
     type: "print",
@@ -96,12 +103,6 @@ let archivesData = [
     websiteLink: "https://www.cathydolle.com/works/branding",
   },
   {
-    name: "This is blue",
-    coverImg: blue,
-    type: "UI",
-    description: "This is blue is an UI composition inspired by MarcZeni. I used Zhong Lin's Picture for this design, an amazing photographer.",
-  },
-  {
     name: "Aurae poster",
     coverImg: auraePoster,
     type: "print",
@@ -113,6 +114,12 @@ let archivesData = [
     coverImg: lila,
     type: "processing",
     description: "I generate this form using Processing",
+  },
+  {
+    name: "This is blue",
+    coverImg: blue,
+    type: "UI",
+    description: "This is blue is an UI composition inspired by MarcZeni. I used Zhong Lin's Picture for this design, an amazing photographer.",
   },
   {
     name: "volPoster",
@@ -133,13 +140,6 @@ let archivesData = [
     type: "print",
     description: "Spring edition : Garden Exposition for 5SENS, an experimental fictive place. Entry tickets.Picture by Yomagick. If you want to see the project you can check my case study.",
     websiteLink: "https://www.cathydolle.com/works/sens",
-  },
-  {
-    name: "My ACNH Island",
-    coverImg: acnh,
-    type: "print",
-    description: "Being a big fan of animal crossing, I always liked to create my own little universe. I find the ACNH version very complete, which has allowed me to expand and develop my creativity. My island named 'Eldia' (a little reference to SNK ;) ) has been recorded in a video, and viewed over than 1 million times on Youtube !! For those who are curious, don't hesitate to watch it :D. All these helped me a lot for my creativity and inspiration, I highly recommend the game for those who don't have it ^-^",
-    websiteLink: "https://www.youtube.com/watch?v=QbiMWZTUefU&t=31s",
   },
   {
     name: "This is green",
