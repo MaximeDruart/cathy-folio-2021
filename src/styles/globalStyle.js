@@ -9,6 +9,7 @@ import Qene from "../assets/fonts/Qene-G.otf"
 import DisplayNew from "../assets/fonts/display-new.otf"
 import Poppins from "../assets/fonts/Poppins.ttf"
 import Heading from "../assets/fonts/Heading.ttf"
+import Nunito from "../assets/fonts/NunitoSans-Regular.ttf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
@@ -199,6 +200,10 @@ export default createGlobalStyle`
     @font-face {
       font-family: "NeueMontrealLight";
       src: url(${NeueMontrealLight});
+    }
+    @font-face {
+      font-family: "Nunito";
+      src: url(${Nunito});
     }
     @font-face {
       font-family: "NeueMontrealRegular";

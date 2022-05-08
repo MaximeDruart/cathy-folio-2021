@@ -76,7 +76,26 @@ import pacoCover from "./assets/img/works/covers/paco.jpg"
 import pacoCoverSmall from "./assets/img/works/covers-small/paco-min.jpg"
 import pacoVisual1 from "./assets/img/works/paco/visual1.jpg"
 
+import Zhonglin from "./components/projects/Zhonglin"
+import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
+import ZhonglinCoverSmall from "./assets/img/works/covers-small/zhonglin-min.jpg"
+import zhonglinVisual1 from "./assets/img/works/zhonglin/visual1.jpg"
+
 let projectsData = [
+  {
+    name: "Zhonglin",
+    path: "zhonglin",
+    title: "UI design for Zhong Lin",
+    coverImg: ZhonglinCover,
+    coverImgSmall: ZhonglinCoverSmall,
+    visual1: zhonglinVisual1,
+    component: Zhonglin,
+    date: "Apr. 2022",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop, Protopie"],
+    description:
+      "Zhong Lin is a self-taught photographer who started her career by experimenting with film. With a seductive color palette and an eccentricity to her work, Lin's distinctive style has caught the attention of Vogue China and Harper's Bazaar China. I decided to create a modern portfolio for this artist.",
+  },
   {
     name: "Arcane",
     path: "arcane",
