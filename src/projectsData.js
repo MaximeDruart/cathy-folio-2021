@@ -260,7 +260,7 @@ let projectsData = [
     visual1: desktopVisual1,
     component: Desktop,
     date: "Jul. 2020",
-    role: "Designer, Devoper",
+    role: "Designer, Developer",
     techs: ["VueJS"],
     description:
       "Wanna watch my content on a computer? Lets do it ! I developped this project to learn VueJS. Enjoy !!",
