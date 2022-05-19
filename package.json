@@ -12,6 +12,8 @@
     "@react-three/drei": "^7.12.5",
     "@react-three/fiber": "^7.0.7",
     "@react-three/postprocessing": "^2.0.5",
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^0.9.53",
     "@waaark/luge": "^0.5.2-beta",
     "beautiful-react-hooks": "^1.0.2",
     "body-scroll-lock": "^4.0.0-beta.0",

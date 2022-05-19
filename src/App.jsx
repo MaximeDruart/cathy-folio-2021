@@ -8,7 +8,7 @@ import Menu from "./components/shared/Menu"
 import MouseFollower from "./components/shared/MouseFollower"
 
 import Home from "./components/pages/Home"
-import About from "./components/pages/About"
+import Room from "./components/pages/Room"
 import Works from "./components/pages/Works"
 import Random from "./components/pages/Random"
 import ProjectDetail from "./components/projects/ProjectDetail"
@@ -45,7 +45,7 @@ const App = () => {
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
                 <Route path='/works' exact component={Works} />
-                <Route path='/about' exact component={About} />
+                <Route path='/room' exact component={Room} />
                 <Route path='/random' exact component={Random} />
                 <Route path='/' component={Home} />
               </Switch>
