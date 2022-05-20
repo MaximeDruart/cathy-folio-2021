@@ -29,7 +29,8 @@ const StyledRoom = styled.div`
         display: block;
         padding: 50px;
         border-radius: 20px;
-        background-color:  ${({ theme }) => theme.colors.background};
+        background-color:  ${({ theme }) => theme.colors.opacity};
+        backdrop-filter: blur(20px);
         h1{
           margin-bottom: 10px;
           font-family: 'Ginger';
@@ -113,7 +114,10 @@ const Room = () => {
               <p className="text-regular">Hello ! Sorry, you have to wait a few moment, the room is charging...<br/>
                  This is a preview version but there is a lot of things you can do! <br/>
                  Do not hesitate to hover and click everywhere! <br/>
-                 Its a little bit laggy and not optimize yet but Im working on it ^_^</p>
+                 Its a little bit laggy and not optimize yet but Im working on it ^_^<br/><br/>
+                 -- Better to check it on desktop --
+                 </p>
+                 
               <button className="button" onClick={() => setShowPanel(false)}>I can be patient</button>
               <Link className="button" to="/works">Leave</Link>
             </div>
