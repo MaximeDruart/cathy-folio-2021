@@ -33,7 +33,7 @@ const StyledRoom = styled.div`
 const Room = () => {
   const audioRef = useRef()
   function onMouseDown(e) {
-    if (e.target.id === 'ab52aac5-cd68-4cf6-a508-f7401d5046b8') {
+    if (e.target.id === 'd60837be-c26c-46f8-ba4b-23bb629d6cf2') {
       audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause()
     }
   }
