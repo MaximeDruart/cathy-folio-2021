@@ -11,6 +11,7 @@ import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
+import room from "../../../assets/img/about/room.png"
 
 //passions
 import game from "../../../assets/img/about/pokemon.gif"
@@ -358,6 +359,9 @@ const StyledHome = styled.div`
     @media (max-width: 700px) {
       margin-top: 20vh;
     }
+    img{
+      width: 100%;
+    }
     .title {
       text-align: center;
       .saol {
@@ -409,6 +413,19 @@ const Home = () => {
             <ArrowDownSVG />
           </motion.div>
         </div>
+        {/* START */}
+        {/* ROOM */}
+        <div className='home-section  what-i-do'>
+            <div className='headline'>New Update 20/05/2022</div>
+            <div className='separator'></div>
+            <div className='title text-h2-5'>
+              I recently create my <span className='saol'>3D Room</span>, so if you want to know more <span className='saol'>about me</span> do not hesitate to check it! Only if you are patient, because this is in progress! v.1.1
+            </div>
+            <Link className='button' to="/room">Visit Room</Link>
+            <div className="demi-spacer"></div>
+            <img src={room} alt='room' />
+        </div>        
+        {/* what I do */}
         <div className='home-section what-i-do'>
           <div className='headline'>what i do</div>
           <div className='separator'></div>
