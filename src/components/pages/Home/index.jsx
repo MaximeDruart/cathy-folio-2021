@@ -12,6 +12,7 @@ import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
 import room from "../../../assets/img/about/room.png"
+import roomVideo from "../../../assets/img/about/roomVideo.mp4"
 
 //passions
 import game from "../../../assets/img/about/pokemon.gif"
@@ -359,7 +360,7 @@ const StyledHome = styled.div`
     @media (max-width: 700px) {
       margin-top: 20vh;
     }
-    img{
+    img, video{
       width: 100%;
     }
     .title {
@@ -423,7 +424,14 @@ const Home = () => {
             </div>
             <Link className='button' to="/room">Visit Room</Link>
             <div className="demi-spacer"></div>
-            <img src={room} alt='room' />
+            <div dangerouslySetInnerHTML={{ __html: `
+            <video loop muted autoplay playsinline>
+              <source src="${roomVideo}" type="video/mp4">
+            </video>`
+        }}
+      />
+
+            {/* <img src={room} alt='room' /> */}
         </div>        
         {/* what I do */}
         <div className='home-section what-i-do'>
