@@ -37,7 +37,7 @@ const StyledRoom = styled.div`
           font-size: 48px;
         }
         button{
-          margin: 20px 20px 0 0;
+          margin: 20px 20px 20px 0;
         }
         &.hidden{
             display: none;
@@ -80,22 +80,22 @@ const Room = () => {
   const [showPlayer, setShowPlayer] = useState(false)
   const [showPanel, setShowPanel] = useState(true)
   function onMouseDown(e) {
-    if (e.target.id === 'd60837be-c26c-46f8-ba4b-23bb629d6cf2') {
+    if (e.target.id === '99122d0b-1628-47fb-b1bf-ac08d3e1361a') {
       audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause()
     }
-    if (e.target.id === 'beff5cc8-a3f5-4f4d-a21f-b4742dadd6ae') {
+    if (e.target.id === 'ae25d1e6-16be-405f-9d2a-97b658105bc5') {
       setShowDesk(true)
       setShow(true)
       setShowBb(false)
       setShowPlayer(false)
     }
-    if (e.target.id === '4b91fffa-c3f9-49b4-a397-5ddf0cf1d4ed') {
+    if (e.target.id === '19b2abd1-eb9e-474b-a758-e6ae4f774942') {
       setShowBb(true)
       setShow(true)
       setShowDesk(false)
       setShowPlayer(false)
     }
-    if (e.target.id === 'ab52aac5-cd68-4cf6-a508-f7401d5046b8') {
+    if (e.target.id === '24833410-3060-419e-bc66-1eb019c26d23') {
       setShowPlayer(true)
       setShow(true)
       setShowDesk(false)
@@ -139,7 +139,7 @@ const Room = () => {
             
           </div>
           <Suspense fallback={<div>Loading...</div>}>
-            <Spline scene="https://prod.spline.design/dLpk8CXXUm0h15sf/scene.splinecode"
+            <Spline scene="https://prod.spline.design/cMztZ6ErT34LPBdg/scene.splinecode"
             onMouseDown={onMouseDown}
             />
           </Suspense>
