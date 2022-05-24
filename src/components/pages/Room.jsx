@@ -35,32 +35,13 @@ const StyledRoom = styled.div`
     .content{
       position: absolute;
       display: flex;
-      justify-content: center;
-      .panel, .painting, .book{
+      .painting, .book, .panel{
+        margin: 0;
         display: block;
         padding: 50px;
         border-radius: 20px;
         background-color:  ${({ theme }) => theme.colors.opacity};
         backdrop-filter: blur(20px);
-        h1{
-          margin-bottom: 10px;
-          font-family: 'Ginger';
-          font-size: 48px;
-        }
-        button{
-          margin: 20px 20px 0px 0;
-        }
-        &.hidden{
-            display: none;
-        }
-        @media (max-width: 600px) {
-          max-width: 90vw;
-          .button{
-            padding: 14px 30px;
-          }
-        }
-      }
-      .painting, .book{
         max-width: 50vw;
         max-height: 80vh;
         display: flex;
@@ -69,6 +50,14 @@ const StyledRoom = styled.div`
         overflow: scroll;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
+        h1{
+          margin-bottom: 10px;
+          font-family: 'Ginger';
+          font-size: 48px;
+        }
+        button{
+          margin: 20px 20px 0px 0;
+        }
         img, .item{
           margin: 20px 0;
           width: 48%;
@@ -105,9 +94,25 @@ const StyledRoom = styled.div`
         }
         @media (max-width: 600px) {
           max-width: 90vw;
+          max-height:80vh;
+          padding: 48px 38px;
           img, .item{
             width:100%;
           }
+        }
+      }
+      .panel{
+        max-width: 30vw;
+        justify-content: flex-start;
+        .button{
+          /* padding: 14px 20px; */
+          margin: 10px 10px 0 0;
+        }
+        @media (max-width: 1200px) {
+          max-width: 50vw;
+        }
+        @media (max-width: 600px) {
+          max-width: 80vw;
         }
       }
       
@@ -155,27 +160,44 @@ const Room = () => {
     }
     if (e.target.id === 'acd6a1de-6145-4a42-93ac-2af60cd35032') {
       setShowPainting(true)
+      setShowDesk(false)
+      setShow(false)
+      setShowBb(false)
+      setShowPlayer(false)
+      setShowBook(false)
+      console.log('ntm')
     }
     if (e.target.id === 'afe24749-537e-4c55-8475-f59e88671c0f') {
       setShowBook(true)
+      setShowDesk(false)
+      setShow(false)
+      setShowBb(false)
+      setShowPlayer(false)
+      setShowPainting(false)
     }
     if (e.target.id === 'ae25d1e6-16be-405f-9d2a-97b658105bc5') {
       setShowDesk(true)
       setShow(true)
       setShowBb(false)
       setShowPlayer(false)
+      setShowPainting(false)
+      setShowBook(false)
     }
     if (e.target.id === '19b2abd1-eb9e-474b-a758-e6ae4f774942') {
       setShowBb(true)
       setShow(true)
       setShowDesk(false)
       setShowPlayer(false)
+      setShowPainting(false)
+      setShowBook(false)
     }
     if (e.target.id === '24833410-3060-419e-bc66-1eb019c26d23') {
       setShowPlayer(true)
       setShow(true)
       setShowDesk(false)
       setShowBb(false)
+      setShowPainting(false)
+      setShowBook(false)
     }
   }
 
@@ -245,7 +267,7 @@ const Room = () => {
             </div>            
 
 
-            {/* desktop */}
+            {/* iframe */}
             <div className={`${show ? "window" : "hidden"}`}>
               <div className="bar">
                 <button onClick={() => setShow(false)}>close</button>
