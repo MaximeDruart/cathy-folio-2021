@@ -26,11 +26,11 @@ const StyledRoom = styled.div`
     display: none;
   }
   .hero {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center !important;
     position: relative;
     .content{
       position: absolute;
@@ -42,7 +42,7 @@ const StyledRoom = styled.div`
         border-radius: 20px;
         background-color:  ${({ theme }) => theme.colors.opacity};
         backdrop-filter: blur(20px);
-        max-width: 50vw;
+        width: 50vw;
         max-height: 80vh;
         display: flex;
         justify-content: space-between;
@@ -90,11 +90,10 @@ const StyledRoom = styled.div`
             display: none;
         }
         @media (max-width: 1200px) {
-          max-width: 80vw;
+          width: 80vw;
         }
         @media (max-width: 600px) {
-          max-width: 90vw;
-          max-height:80vh;
+          width: 90vw; 
           padding: 48px 38px;
           img, .item{
             width:100%;
