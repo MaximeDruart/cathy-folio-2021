@@ -14,6 +14,16 @@ import book2 from "../../assets/img/about/books/book2.jpg";
 import ikigai from "../../assets/img/about/books/ikigai.jpeg";
 import nike from "../../assets/img/about/books/nike.jpeg";
 
+//Games
+import pokemonGame from "../../assets/img/about/games/pokemon.jpg";
+import jinx from "../../assets/img/about/games/jinx.jpg";
+import stardew from "../../assets/img/about/games/stardew.jpg";
+import ac from "../../assets/img/about/games/ac.jpg";
+import valo from "../../assets/img/about/games/valo.jpg";
+import fortnite from "../../assets/img/about/games/fortnite.jpg";
+import wow from "../../assets/img/about/games/wow.jpg";
+import dofus from "../../assets/img/about/games/dofus.jpg";
+
 const Spline = React.lazy(() => import ('@splinetool/react-spline'));
 
 const StyledRoom = styled.div`
@@ -30,7 +40,7 @@ const StyledRoom = styled.div`
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center !important;
+    justify-content: center;
     position: relative;
     .content{
       position: absolute;
@@ -151,11 +161,21 @@ const Room = () => {
   const [showBb, setShowBb] = useState(false)
   const [showPlayer, setShowPlayer] = useState(false)
   const [showPanel, setShowPanel] = useState(true)
+  const [showGames, setShowGames] = useState(false)
   const [showBook, setShowBook] = useState(false)
   const [showPainting, setShowPainting] = useState(false)
   function onMouseDown(e) {
     if (e.target.id === '99122d0b-1628-47fb-b1bf-ac08d3e1361a') {
       audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause()
+    }
+    if (e.target.id === 'aa2ffbd6-9214-4bc0-9ffc-7b79015ffd39') {
+      setShowGames(true)
+      setShowPainting(false)
+      setShowDesk(false)
+      setShow(false)
+      setShowBb(false)
+      setShowPlayer(false)
+      setShowBook(false)
     }
     if (e.target.id === 'acd6a1de-6145-4a42-93ac-2af60cd35032') {
       setShowPainting(true)
@@ -164,7 +184,6 @@ const Room = () => {
       setShowBb(false)
       setShowPlayer(false)
       setShowBook(false)
-      console.log('ntm')
     }
     if (e.target.id === 'afe24749-537e-4c55-8475-f59e88671c0f') {
       setShowBook(true)
@@ -231,6 +250,47 @@ const Room = () => {
               <img src={paint1} alt="painting" />
               <img src={paint1} alt="painting" />
             </div>
+
+            {/* {Games} */}
+            <div className={`${showGames ? "book" : "hidden"}`}>
+              <div className="nav">
+                <h1>Favourite games</h1>
+                <button onClick={() => setShowGames(false)}>Close</button>
+              </div>
+              <p className="text-regular">I'm a big fan of books, especially when they talk about my passion for design, typography, or illustration. Here is a small selection of my favorite books that inspire me every day. (List not yet complete...)</p>
+              <div className="item">
+                <img className="visual" src={jinx} alt="books" />
+                <h2>League of Legends</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={valo} alt="books" />
+                <h2>Valorant</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={fortnite} alt="books" />
+                <h2>Fortnite</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={dofus} alt="books" />
+                <h2>Dofus</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={stardew} alt="books" />
+                <h2>Stardew Valley</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={wow} alt="books" />
+                <h2>World of Warcraft</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={pokemonGame} alt="books" />
+                <h2>Pokemon, a lot of version</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={ac} alt="books" />
+                <h2>Animal Crossing, all of them ofc</h2>
+              </div>
+            </div>            
 
             {/* {Book} */}
             <div className={`${showBook ? "book" : "hidden"}`}>
