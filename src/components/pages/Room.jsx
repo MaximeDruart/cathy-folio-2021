@@ -257,7 +257,7 @@ const Room = () => {
                 <h1>Favourite games</h1>
                 <button onClick={() => setShowGames(false)}>Close</button>
               </div>
-              <p className="text-regular">I'm a big fan of books, especially when they talk about my passion for design, typography, or illustration. Here is a small selection of my favorite books that inspire me every day. (List not yet complete...)</p>
+              <p className="text-regular">I'm a big fan of video games since I was a little girl, I started on consoles (gameboy and nintendo DS) then I fell in love with PC games, mainly League of Legends and MMORPG. Games inspire me a lot in the creative field, they are full of references and incredible graphics.</p>
               <div className="item">
                 <img className="visual" src={jinx} alt="books" />
                 <h2>League of Legends</h2>
