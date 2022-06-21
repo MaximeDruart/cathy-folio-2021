@@ -47,6 +47,10 @@ import selfCard from "./assets/img/archives/selfCard.jpg"
 // music
 import bibi from "./assets/img/archives/bibi.jpg"
 
+// 2022
+import zero from "./assets/img/archives/zero.jpg"
+import room2 from "./assets/img/archives/room2.jpg"
+
 let archivesData = [
   {
     name: "elijah",
@@ -73,6 +77,18 @@ let archivesData = [
     type: "ui",
     description: "DesignR is one of a tool that any designer or developer can use. Browse collection, find the Mixx you like and use it for your design or website. Easily and instantly download every element of each Mixx, including: images, typography and colors Simple and Efficent that’s DesignR. This is a fictive project we designed and developed with my group at school.",
     websiteLink: "https://designr.cathydolle.com/",
+  },
+  {
+    name: "My room in 3D",
+    coverImg: room2,
+    type: "3D",
+    description: "I created my room on spline, and put a lot of my passions on it, it was a very nice experience! Love the soft",
+  },
+  {
+    name: "Zero10",
+    coverImg: room2,
+    type: "Print",
+    description: "Preview of a magazine page about Fashion digital clothes NFT.",
   },
   {
     name: "My ACNH Island",
