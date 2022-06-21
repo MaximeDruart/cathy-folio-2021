@@ -24,8 +24,8 @@ const darkColors = [
     color: "#F582D2",
   },
   {
-    name: "desert",
-    color: "#A55420",
+    name: "mono",
+    color: "#FFFFFF",
   },
 ]
 
@@ -55,8 +55,8 @@ const lightColors = [
     color: "#EFA8EF",
   },
   {
-    name: "desert",
-    color: "#A55420",
+    name: "mono",
+    color: "#000000",
   },
 ]
 
