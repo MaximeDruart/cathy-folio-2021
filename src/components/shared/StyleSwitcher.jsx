@@ -68,7 +68,7 @@ const StyleSwitcher = () => {
   const isDarkMode = useStore((state) => state.isDarkMode)
   return (
     <StyledStyleSwitcher>
-      <Link to='/works'>
+      <Link to='/random'>
         <div className="project">
           <div className="round"></div>
           <div className="round"></div>
