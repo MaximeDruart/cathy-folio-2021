@@ -40,10 +40,6 @@ img{
     span.text-typo{
       &.one{
         font-family: "Helvetica";
-        font-weight:600;
-      }
-      &.two{
-        font-family: "Helvetica";
         font-weight:100;
       }
     }
@@ -56,10 +52,6 @@ img{
       &.two{
         background-color: black;
         color: white;
-      }
-      &.three{
-        background-color: #302a21;
-        color: white !important;
       }
     }
   }
@@ -78,14 +70,12 @@ const Lv = () => {
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Helvetica Medium<br/>Aa 123</span>
-          <span className="text-typo two">Helvetica Regular<br/>Aa 123</span>
+          <span className="text-typo one">Helvetica<br/>Aa 123</span>
         </div>
         <div className="colors">
           <h4 className="text-h4">Colors</h4>
           <div className="color one">#FFFFFF</div>
           <div className="color two">#000000</div>
-          <div className="color three">#302a21</div>
         </div>
       </div>
       {/* end chart */}
@@ -94,10 +84,10 @@ const Lv = () => {
       <FullImage src={preview} alt='preview' />
       <div className="spacer"></div>
       {/* responsive ui */}
-      <h2 className='text-h2'>Responsive UI</h2>
+      <h2 className='text-h2'>The App</h2>
       <p className="text-description">Design of the application connected to the Louis Vuitton trunk to change its appearance</p>
       <div className="demi-spacer"></div> 
-      <div className='headline text-regular'>responsive selection</div>
+      <div className='headline text-regular'>screen selection</div>
       <div className='separator'></div>
       <div className="responsive">
         <img src={connect} alt="responsive"></img>

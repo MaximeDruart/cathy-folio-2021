@@ -102,20 +102,6 @@ let projectsData = [
       "Zhong Lin is a self-taught photographer who started her career by experimenting with film. With a seductive color palette and an eccentricity to her work, Lin's distinctive style has caught the attention of Vogue China and Harper's Bazaar China. I decided to create a modern portfolio for this artist.",
   },
   {
-    name: "Louis Vuitton",
-    path: "Lv",
-    title: "The futur Trunk",
-    coverImg: lvCover,
-    coverImgSmall: lvCoverSmall,
-    visual1: lvVisual1,
-    component: Lv,
-    date: "July 2022",
-    role: "Designer",
-    techs: ["Photoshop, Figma, Blender"],
-    description:
-      "Imagination and creation of a trunk of the future for Louis Vuitton. The one we imagined consists in burying the memories of the people using it, with a recovery of data during travels, textures that can be used as skin on the trunk, and much more...",
-  },
-  {
     name: "Arcane",
     path: "arcane",
     title: "UI design for Arcane",
@@ -128,6 +114,20 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop"],
     description:
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+  },
+  {
+    name: "Louis Vuitton",
+    path: "Lv",
+    title: "The futur Trunk",
+    coverImg: lvCover,
+    coverImgSmall: lvCoverSmall,
+    visual1: lvVisual1,
+    component: Lv,
+    date: "July 2022",
+    role: "Designer",
+    techs: ["Photoshop, Figma, Blender"],
+    description:
+      "Imagination and creation of a trunk of the future for Louis Vuitton. The one we imagined consists in burying the memories of the people using it, with a recovery of data during travels, textures that can be used as skin on the trunk, and much more...",
   },
   {
     name: "Branding",

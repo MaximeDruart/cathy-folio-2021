@@ -134,8 +134,8 @@ export default css`
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.standard};
     margin: 20px 0px;
-    font-size: 18px;
-    line-height: 1.3;
+    font-size: 16px;
+    line-height: 1.7;
     opacity: 1;
     @media (max-width: 600px) {
       margin: 10px 0px;
@@ -170,13 +170,13 @@ export default css`
   .spacer {
     height: 20vh;
     @media screen and (max-width: 768px) {
-      height: 10vh;
+      height: 15vh;
     }
   }
   .demi-spacer {
     height: 10vh;
     @media screen and (max-width: 768px) {
-      height: 5vh;
+      height: 10vh;
     }
   }
   .big-spacer {
