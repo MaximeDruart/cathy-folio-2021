@@ -50,6 +50,7 @@ import bibi from "./assets/img/archives/bibi.jpg"
 // 2022
 import zero from "./assets/img/archives/zero.jpg"
 import room2 from "./assets/img/archives/room2.jpg"
+import voxel from "./assets/img/archives/voxel.jpg"
 
 let archivesData = [
   {
@@ -70,6 +71,12 @@ let archivesData = [
     coverImg: isometricRoom,
     type: "3D",
     description: "This is my first 3D creation using Blender. Thanks to PolygonRunaway for his amazing course.",
+  },
+  {
+    name: "Magica Voxel",
+    coverImg: voxel,
+    type: "3D",
+    description: "I had to create a level for the game Monument Valley, so I decided to create a Japanese map inspired from Le Voyage de Chihiro. I used Magica Voxel for that.",
   },
   {
     name: "DesignR",

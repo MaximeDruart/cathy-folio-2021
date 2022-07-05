@@ -71,8 +71,8 @@ const StyledHome = styled.div`
         font-family: Ginger;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 115px;
-        line-height: 0.9;
+        font-size: 126px;
+        /* line-height: 0.9; */
 
         &.first_line {
           text-align: start;
