@@ -133,10 +133,10 @@ const Zhonglin = () => {
     <div className='headline text-regular'>menu</div>
     <div className='separator'></div>
     <div dangerouslySetInnerHTML={{ __html: `
-    <video loop muted autoplay playsinline>
-        <source src="${menu}" type="video/mp4">
-    </video>`
-    }}
+      <video loop muted autoplay playsinline>
+          <source src="${menu}" type="video/mp4">
+      </video>`
+      }}
     />
 
     <div className="spacer"></div>
@@ -144,20 +144,21 @@ const Zhonglin = () => {
     <div className='headline text-regular'>home</div>
     <div className='separator'></div>
     <div dangerouslySetInnerHTML={{ __html: `
-    <video loop muted autoplay playsinline>
-        <source src="${home}" type="video/mp4">
-    </video>`
-    }}
+      <video loop muted autoplay playsinline>
+          <source src="${home}" type="video/mp4">
+      </video>`
+      }}
     />
+
     <div className="spacer"></div>
 
     <div className='headline text-regular'>galerie</div>
     <div className='separator'></div>
     <div dangerouslySetInnerHTML={{ __html: `
-    <video loop muted autoplay playsinline>
-        <source src="${galerie}" type="video/mp4">
-    </video>`
-    }}
+      <video loop muted autoplay playsinline>
+          <source src="${galerie}" type="video/mp4">
+      </video>`
+      }}
     />
 
     <div className="spacer"></div>

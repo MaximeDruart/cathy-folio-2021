@@ -420,7 +420,7 @@ const Home = () => {
             <div className='headline'>New Update 20/05/2022</div>
             <div className='separator'></div>
             <div className='title text-h2-5'>
-              I recently create my <span className='saol'>3D Room</span>, so if you want to know more <span className='saol'>about me</span> do not hesitate to check it! Only if you are patient, because this is in progress! v.1.1
+              I recently create my <span className='saol'>3D Room</span>, so if you want to know more <span className='saol'>about me</span> do not hesitate to check it! This version is on progress! v.1.1
             </div>
             <Link className='button' to="/room">Visit Room</Link>
             <div className="demi-spacer"></div>
@@ -428,8 +428,8 @@ const Home = () => {
             <video loop muted autoplay playsinline>
               <source src="${roomVideo}" type="video/mp4">
             </video>`
-        }}
-      />
+            }}
+            />
 
             {/* <img src={room} alt='room' /> */}
         </div>        

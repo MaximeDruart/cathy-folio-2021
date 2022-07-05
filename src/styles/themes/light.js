@@ -4,7 +4,8 @@ const lightTheme = {}
 
 lightTheme.colors = {
   //background: "rgb(238, 236, 230)",
-  background : "#EFEEEA",
+   background : "#EFEEEA",
+  //background: "#F2EFE4",
   opacity: "#EFEEEA8F",
   placeholder: "#2E2E2E",
   // primary1: "#866353",
