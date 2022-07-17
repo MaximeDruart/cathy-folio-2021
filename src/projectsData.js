@@ -86,6 +86,11 @@ import lvCover from "./assets/img/works/covers/lv.jpg"
 import lvCoverSmall from "./assets/img/works/covers-small/lv-min.jpg"
 import lvVisual1 from "./assets/img/works/lv/visual1.jpg"
 
+import Esd from "./components/projects/Esd"
+import esdCover from "./assets/img/works/covers/esd.jpg"
+import esdCoverSmall from "./assets/img/works/covers-small/esd-min.jpg"
+import esdVisual1 from "./assets/img/works/esd/visual1.jpg"
+
 let projectsData = [
   {
     name: "Zhonglin",
@@ -227,7 +232,7 @@ let projectsData = [
     role: "Designer, Dev",
     techs: ["Adobe XD, HTML, CSS, JS"],
     description: "Elijah is a photograph based in Paris!",
-    websiteLink: "https://elijahbeta.netlify.app/index.html",
+    websiteLink: "https://www.elijahbenhammou.com/",
   },
   {
     name: "Feels",
@@ -299,6 +304,21 @@ let projectsData = [
     description:
       "I had to make a website using transition CSS at school, so I decided to make a Bubble Tea maker, enjoy :D",
     websiteLink: "https://cathydolle.github.io/bubbleTea/",
+  },
+  {
+    name: "ESD 2022",
+    path: "Esd",
+    title: "Rapport d'alternance",
+    coverImg: esdCover,
+    coverImgSmall: esdCoverSmall,
+    visual1: esdVisual1,
+    component: Esd,
+    date: "Oct. 2021",
+    role: "Designer, Developer",
+    techs: ["Figma, Elementor"],
+    description:
+      "J'ai commencé mon aventure chez Project Paris en tant qu'UI/UX designer le 8 octobre 2021. Ma principale mission était de faire une refonte de leur site officiel afin de faciliter les achats aux clients, et d'avoir une interface plus ergonomique.",
+    websiteLink: "https://www.projectxparis.com/fr",
   },
 ]
 
