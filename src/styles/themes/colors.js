@@ -32,27 +32,27 @@ const darkColors = [
 const lightColors = [
   {
     name: "blueberry",
-    color: "#7B9FF0",
+    color: "#ABC7E0",
   },
   {
-    name: "salmon",
-    color: "#F85858",
+    name: "peach",
+    color: "#D9B7AD",
   },
     {
     name: "lavender",
-    color: "#969AF7",
+    color: "#C4BCD3",
   },
   {
     name: "lemon",
-    color: "#FFCE29",
+    color: "#EBD7A1",
   },
   {
     name: "avocado",
-    color: "#74CC33",
+    color: "#C5C7A1",
   },
   {
     name: "candy",
-    color: "#EFA8EF",
+    color: "#E6CCE5",
   },
   {
     name: "mono",
