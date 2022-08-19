@@ -9,12 +9,12 @@ import hover from "../../assets/sound/hover.mp3";
 import paint1 from "../../assets/img/about/painting/paint1.jpeg";
 
 //Book
-import book7 from "../../assets/img/about/books/book7.jpg";
-import book6 from "../../assets/img/about/books/book6.jpg";
-import book5 from "../../assets/img/about/books/book5.jpg";
+import book1 from "../../assets/img/about/books/book1.jpg";
 import book2 from "../../assets/img/about/books/book2.jpg";
-import ikigai from "../../assets/img/about/books/ikigai.jpeg";
-import nike from "../../assets/img/about/books/nike.jpeg";
+import book3 from "../../assets/img/about/books/book3.jpg";
+import book4 from "../../assets/img/about/books/book4.jpg";
+import book5 from "../../assets/img/about/books/book5.jpg";
+import book6 from "../../assets/img/about/books/book6.jpg";
 
 //Games
 import pokemonGame from "../../assets/img/about/games/pokemon.jpg";
@@ -23,7 +23,7 @@ import stardew from "../../assets/img/about/games/stardew.jpg";
 import ac from "../../assets/img/about/games/ac.jpg";
 import valo from "../../assets/img/about/games/valo.jpg";
 import fortnite from "../../assets/img/about/games/fortnite.jpg";
-import wow from "../../assets/img/about/games/wow.jpg";
+import genshin from "../../assets/img/about/games/genshin.jpg";
 import dofus from "../../assets/img/about/games/dofus.jpg";
 
 const Spline = React.lazy(() => import ('@splinetool/react-spline'));
@@ -169,7 +169,7 @@ const Room = () => {
   const [showBook, setShowBook] = useState(false)
   const [showPainting, setShowPainting] = useState(false)
   function onMouseHover(e){
-    if (e.target.id === 'eeb26936-c08a-43bf-9f52-9cd918cd96ea' || 'cc93e724-036f-4c2e-b74f-44f145124cfc' || "05ec86ae-3f94-4206-b8c1-1714a877bfc6" || "6bc7cef0-4dc1-4198-889f-c98c1f446e1b") {
+    if (e.target.id === 'eeb26936-c08a-43bf-9f52-9cd918cd96ea' || 'cc93e724-036f-4c2e-b74f-44f145124cfc' || "05ec86ae-3f94-4206-b8c1-1714a877bfc6" || "5ed885fd-37f3-4c63-bacc-6b831fb5fa70") {
       clickRef.current.play()
     }
   }
@@ -186,14 +186,14 @@ const Room = () => {
       setShowPlayer(false)
       setShowBook(false)
     }
-    // if (e.target.id === 'acd6a1de-6145-4a42-93ac-2af60cd35032') {
-    //   setShowPainting(true)
-    //   setShowDesk(false)
-    //   setShow(false)
-    //   setShowBb(false)
-    //   setShowPlayer(false)
-    //   setShowBook(false)
-    // }
+    if (e.target.id === '5ed885fd-37f3-4c63-bacc-6b831fb5fa70') {
+      setShowPainting(true)
+      setShowDesk(false)
+      setShow(false)
+      setShowBb(false)
+      setShowPlayer(false)
+      setShowBook(false)
+    }
     if (e.target.id === '05ec86ae-3f94-4206-b8c1-1714a877bfc6') {
       setShowBook(true)
       setShowDesk(false)
@@ -245,21 +245,17 @@ const Room = () => {
                  -- Better to check it on desktop --
                  </p>
                  
-              <button className="button" onClick={() => setShowPanel(false) & audioRef.current.play()}>Enter</button>
+              <button className="button" onClick={() => setShowPanel(false) }>Enter</button>
               <Link className="button" to="/works">Leave</Link>
             </div>
 
             {/* {painting} */}
             <div className={`${showPainting ? "painting" : "hidden"}`}>
               <div className="nav">
-                <h1>Drawing</h1>
+                <h1>Pixel Art</h1>
                 <button onClick={() => setShowPainting(false)}>Close</button>
               </div>
               <p className="text-regular">Content in progress...</p>
-              <img src={paint1} alt="painting" />
-              <img src={paint1} alt="painting" />
-              <img src={paint1} alt="painting" />
-              <img src={paint1} alt="painting" />
             </div>
 
             {/* {Games} */}
@@ -286,16 +282,16 @@ const Room = () => {
                 <h2>Dofus</h2>
               </div>
               <div className="item">
+                <img className="visual" src={pokemonGame} alt="books" />
+                <h2>Pokemon, a lot of version</h2>
+              </div>
+              <div className="item">
                 <img className="visual" src={stardew} alt="books" />
                 <h2>Stardew Valley</h2>
               </div>
               <div className="item">
-                <img className="visual" src={wow} alt="books" />
-                <h2>World of Warcraft</h2>
-              </div>
-              <div className="item">
-                <img className="visual" src={pokemonGame} alt="books" />
-                <h2>Pokemon, a lot of version</h2>
+                <img className="visual" src={genshin} alt="books" />
+                <h2>Genshin Impact</h2>
               </div>
               <div className="item">
                 <img className="visual" src={ac} alt="books" />
@@ -311,28 +307,28 @@ const Room = () => {
               </div>
               <p className="text-regular">I'm a big fan of books, especially when they talk about my passion for design, typography, or illustration. Here is a small selection of my favorite books that inspire me every day. (List not yet complete...)</p>
               <div className="item">
-                <img className="visual" src={book7} alt="books" />
+                <img className="visual" src={book1} alt="books" />
+                <h2>Palette 6 : Transparent</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={book2} alt="books" />
+                <h2>Palette 5 : Pastel</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={book3} alt="books" />
+                <h2>Palette 2 : Multicolour</h2>
+              </div>
+              <div className="item">
+                <img className="visual" src={book4} alt="books" />
                 <h2>Palette 7 : Monotone</h2>
               </div>
               <div className="item">
                 <img className="visual" src={book5} alt="books" />
-                <h2>Palette 5 : Pastel</h2>
-              </div>
-              <div className="item">
-                <img className="visual" src={book2} alt="books" />
                 <h2>Palette 2 : Multicolour</h2>
               </div>
               <div className="item">
                 <img className="visual" src={book6} alt="books" />
-                <h2>Palette 6 : Transparent</h2>
-              </div>
-              <div className="item">
-                <img className="visual" src={nike} alt="books" />
-                <h2>Virgil Abloh Something's Off Book</h2>
-              </div>
-              <div className="item">
-                <img className="visual" src={ikigai} alt="books" />
-                <h2>Ikigai Book</h2>
+                <h2>Palette 4 : Neon</h2>
               </div>
             </div>            
 
