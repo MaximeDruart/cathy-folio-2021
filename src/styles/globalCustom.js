@@ -99,7 +99,7 @@ export default css`
   .text-regular {
     color: ${({ theme }) => theme.colors.text.standard};
     // letter-spacing: 0.2rem;
-    line-height: 1.28;
+    line-height: 1.4;
     font-size: 14px;
     opacity: 0.8;
     font-family: "NeueMontrealRegular";

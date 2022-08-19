@@ -7,6 +7,7 @@ lightTheme.colors = {
    background : "#ECE9E7",
   //background: "#F2EFE4",
   opacity: "#EFEEEA8F",
+  panel : "#FFFFFF8F",
   placeholder: "#2E2E2E",
   // primary1: "#866353",
   primary1: "#A1A3CC",

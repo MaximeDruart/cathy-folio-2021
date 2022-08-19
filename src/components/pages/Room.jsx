@@ -2,6 +2,8 @@ import React, { Suspense, useRef, useState } from 'react';
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import pokemon from "../../assets/sound/pokemon.mp3";
+import click from "../../assets/sound/click.mp3";
+import hover from "../../assets/sound/hover.mp3";
 
 // Painting
 import paint1 from "../../assets/img/about/painting/paint1.jpeg";
@@ -30,7 +32,7 @@ const StyledRoom = styled.div`
   transition: background-color 0.6s;
   * {
     font-family: NeueMontrealRegular;
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: black !important;
   }
   audio{
     display: none;
@@ -50,8 +52,8 @@ const StyledRoom = styled.div`
         display: block;
         padding: 50px;
         border-radius: 20px;
-        background-color:  ${({ theme }) => theme.colors.opacity};
-        backdrop-filter: blur(20px);
+        background-color:  ${({ theme }) => theme.colors.panel};
+        backdrop-filter: blur(10px);
         width: 50vw;
         max-height: 80vh;
         display: flex;
@@ -156,6 +158,8 @@ const StyledRoom = styled.div`
 
 const Room = () => {
   const audioRef = useRef()
+  const clickRef = useRef()
+  const hoverRef = useRef()
   const [show, setShow] = useState(false)
   const [showDesk, setShowDesk] = useState(false)
   const [showBb, setShowBb] = useState(false)
@@ -164,11 +168,16 @@ const Room = () => {
   const [showGames, setShowGames] = useState(false)
   const [showBook, setShowBook] = useState(false)
   const [showPainting, setShowPainting] = useState(false)
+  function onMouseHover(e){
+    if (e.target.id === 'eeb26936-c08a-43bf-9f52-9cd918cd96ea' || 'cc93e724-036f-4c2e-b74f-44f145124cfc' || "05ec86ae-3f94-4206-b8c1-1714a877bfc6" || "6bc7cef0-4dc1-4198-889f-c98c1f446e1b") {
+      clickRef.current.play()
+    }
+  }
   function onMouseDown(e) {
-    if (e.target.id === '99122d0b-1628-47fb-b1bf-ac08d3e1361a') {
+    if (e.target.id === 'eeb26936-c08a-43bf-9f52-9cd918cd96ea') {
       audioRef.current.paused ? audioRef.current.play() : audioRef.current.pause()
     }
-    if (e.target.id === 'aa2ffbd6-9214-4bc0-9ffc-7b79015ffd39') {
+    if (e.target.id === 'cc93e724-036f-4c2e-b74f-44f145124cfc') {
       setShowGames(true)
       setShowPainting(false)
       setShowDesk(false)
@@ -177,15 +186,15 @@ const Room = () => {
       setShowPlayer(false)
       setShowBook(false)
     }
-    if (e.target.id === 'acd6a1de-6145-4a42-93ac-2af60cd35032') {
-      setShowPainting(true)
-      setShowDesk(false)
-      setShow(false)
-      setShowBb(false)
-      setShowPlayer(false)
-      setShowBook(false)
-    }
-    if (e.target.id === 'afe24749-537e-4c55-8475-f59e88671c0f') {
+    // if (e.target.id === 'acd6a1de-6145-4a42-93ac-2af60cd35032') {
+    //   setShowPainting(true)
+    //   setShowDesk(false)
+    //   setShow(false)
+    //   setShowBb(false)
+    //   setShowPlayer(false)
+    //   setShowBook(false)
+    // }
+    if (e.target.id === '05ec86ae-3f94-4206-b8c1-1714a877bfc6') {
       setShowBook(true)
       setShowDesk(false)
       setShow(false)
@@ -193,7 +202,7 @@ const Room = () => {
       setShowPlayer(false)
       setShowPainting(false)
     }
-    if (e.target.id === 'ae25d1e6-16be-405f-9d2a-97b658105bc5') {
+    if (e.target.id === '4f4b8402-e981-4a2d-bfb5-58ef19ccc0cf') {
       setShowDesk(true)
       setShow(true)
       setShowBb(false)
@@ -201,40 +210,42 @@ const Room = () => {
       setShowPainting(false)
       setShowBook(false)
     }
-    if (e.target.id === '19b2abd1-eb9e-474b-a758-e6ae4f774942') {
-      setShowBb(true)
-      setShow(true)
-      setShowDesk(false)
-      setShowPlayer(false)
-      setShowPainting(false)
-      setShowBook(false)
-    }
-    if (e.target.id === '24833410-3060-419e-bc66-1eb019c26d23') {
-      setShowPlayer(true)
-      setShow(true)
-      setShowDesk(false)
-      setShowBb(false)
-      setShowPainting(false)
-      setShowBook(false)
-    }
+    // if (e.target.id === '19b2abd1-eb9e-474b-a758-e6ae4f774942') {
+    //   setShowBb(true)
+    //   setShow(true)
+    //   setShowDesk(false)
+    //   setShowPlayer(false)
+    //   setShowPainting(false)
+    //   setShowBook(false)
+    // }
+    // if (e.target.id === '24833410-3060-419e-bc66-1eb019c26d23') {
+    //   setShowPlayer(true)
+    //   setShow(true)
+    //   setShowDesk(false)
+    //   setShowBb(false)
+    //   setShowPainting(false)
+    //   setShowBook(false)
+    // }
   }
 
   return (
       <StyledRoom>
         <audio src={pokemon} loop ref={audioRef}></audio>
+        <audio src={hover} ref={hoverRef}></audio>
+        <audio src={click} ref={clickRef}></audio>
         <div className='hero'>
           <div className="content">
             {/* msg */}
             <div className={`${showPanel ? "panel" : "hidden"}`}>
               <h1>Room v.1.1</h1>
-              <p className="text-regular">Hello ! Sorry, you have to wait a few moment, the room is charging...<br/>
-                 This is a preview version but there is a lot of things you can do! <br/>
-                 Do not hesitate to hover and click everywhere! <br/>
-                 Its a little bit laggy and not optimize yet but Im working on it ^_^<br/><br/>
+              <p className="text-regular">Hello ! Welcome to my little room!<br/>
+                 This is a BETA version but there is a lot of things you can do!
+                 Do not hesitate to hover and click everywhere!
+                 <br/><br/>
                  -- Better to check it on desktop --
                  </p>
                  
-              <button className="button" onClick={() => setShowPanel(false)}>I can be patient</button>
+              <button className="button" onClick={() => setShowPanel(false) & audioRef.current.play()}>Enter</button>
               <Link className="button" to="/works">Leave</Link>
             </div>
 
@@ -344,8 +355,9 @@ const Room = () => {
             
           </div>
           <Suspense fallback={<div>Loading...</div>}>
-            <Spline scene="https://prod.spline.design/cMztZ6ErT34LPBdg/scene.splinecode"
+            <Spline scene="https://prod.spline.design/OHFsT0CfLnIW6BEM/scene.splinecode"
             onMouseDown={onMouseDown}
+            onMouseHover={onMouseHover}
             />
           </Suspense>
 

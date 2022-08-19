@@ -12,7 +12,7 @@ import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
 import room from "../../../assets/img/about/room.png"
-import roomVideo from "../../../assets/img/about/roomVideo.mp4"
+import roomVideo from "../../../assets/img/room.mp4"
 
 //passions
 import game from "../../../assets/img/about/pokemon.gif"
@@ -416,8 +416,8 @@ const Home = () => {
         </div>
         {/* START */}
         {/* ROOM */}
-        {/* <div className='home-section  what-i-do'>
-            <div className='headline'>New Update 20/05/2022</div>
+        <div className='home-section  what-i-do'>
+            <div className='headline'>New Update 19/08/2022</div>
             <div className='separator'></div>
             <div className='title text-h2-5'>
               I recently create my <span className='saol'>3D Room</span>, so if you want to know more <span className='saol'>about me</span> do not hesitate to check it! This version is on progress! v.1.1
@@ -429,10 +429,10 @@ const Home = () => {
               <source src="${roomVideo}" type="video/mp4">
             </video>`
             }}
-            /> */}
+            />
 
             {/* <img src={room} alt='room' /> */}
-        {/* </div>         */}
+        </div>        
 
 
         {/* what I do */}
