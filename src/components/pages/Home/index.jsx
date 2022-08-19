@@ -34,7 +34,7 @@ import craftHover from "../../../assets/img/about/craft.jpg"
 import art from "../../../assets/img/about/3D.gif"
 import threeDHover from "../../../assets/img/about/3D.jpg"
 
-import twitch from "../../../assets/img/about/twitch.jpg"
+import twitch from "../../../assets/img/about/garden.png"
 import resume from "../../../assets/img/about/resume.pdf"
 
 const StyledHome = styled.div`
@@ -276,7 +276,7 @@ const StyledHome = styled.div`
             position: absolute;
             top: 0;
             left: 0;
-            opacity: 1;
+            opacity: 0;
             &:hover {
               opacity: 0;
             }
@@ -416,7 +416,7 @@ const Home = () => {
         </div>
         {/* START */}
         {/* ROOM */}
-        <div className='home-section  what-i-do'>
+        {/* <div className='home-section  what-i-do'>
             <div className='headline'>New Update 20/05/2022</div>
             <div className='separator'></div>
             <div className='title text-h2-5'>
@@ -429,10 +429,12 @@ const Home = () => {
               <source src="${roomVideo}" type="video/mp4">
             </video>`
             }}
-            />
+            /> */}
 
             {/* <img src={room} alt='room' /> */}
-        </div>        
+        {/* </div>         */}
+
+
         {/* what I do */}
         <div className='home-section what-i-do'>
           <div className='headline'>what i do</div>

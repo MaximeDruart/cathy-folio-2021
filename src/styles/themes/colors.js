@@ -22,11 +22,7 @@ const darkColors = [
   {
     name: "quartz",
     color: "#F582D2",
-  },
-  {
-    name: "mono",
-    color: "#FFFFFF",
-  },
+  }
 ]
 
 const lightColors = [
@@ -36,7 +32,7 @@ const lightColors = [
   },
   {
     name: "peach",
-    color: "#D9B7AD",
+    color: "#E0B5A8",
   },
     {
     name: "lavender",
@@ -51,13 +47,9 @@ const lightColors = [
     color: "#C5C7A1",
   },
   {
-    name: "candy",
-    color: "#E6CCE5",
-  },
-  {
-    name: "mono",
-    color: "#000000",
-  },
+    name: "Spring",
+    color: "#DEBCDD",
+  }
 ]
 
 export { lightColors, darkColors }
