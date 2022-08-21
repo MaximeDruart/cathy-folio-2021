@@ -10,6 +10,7 @@ import DisplayNew from "../assets/fonts/display-new.otf"
 import Poppins from "../assets/fonts/Poppins.ttf"
 import Heading from "../assets/fonts/Heading.ttf"
 import Nunito from "../assets/fonts/NunitoSans-Regular.ttf"
+import Gotham from "../assets/fonts/Gotham-Book.otf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
@@ -237,6 +238,10 @@ export default createGlobalStyle`
     @font-face {
       font-family: "Ginger";
       src: url(${Ginger});
+    }
+    @font-face {
+      font-family: "Gotham";
+      src: url(${Gotham});
     }
     @font-face {
       font-family: "Poppins";

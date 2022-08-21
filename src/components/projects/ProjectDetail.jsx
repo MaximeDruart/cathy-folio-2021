@@ -116,7 +116,8 @@ const StyledProjectDetail = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    img {
+
+    img, .video {
       width: 20%;
       margin: 20px;
       @media (max-width: 1000px) {

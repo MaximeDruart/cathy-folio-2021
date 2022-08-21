@@ -91,7 +91,26 @@ import esdCover from "./assets/img/works/covers/esd.jpg"
 import esdCoverSmall from "./assets/img/works/covers-small/esd-min.jpg"
 import esdVisual1 from "./assets/img/works/esd/visual1.jpg"
 
+import Hublot from "./components/projects/Hublot"
+import hublotCover from "./assets/img/works/covers/hublot.jpg"
+import hublotCoverSmall from "./assets/img/works/covers-small/hublot-min.jpg"
+import hublotVisual1 from "./assets/img/works/hublot/visual1.jpg"
+
 let projectsData = [
+  {
+    name: "Hublot",
+    path: "hublot",
+    title: "Hublot x Murakami",
+    coverImg: hublotCover,
+    coverImgSmall: hublotCoverSmall,
+    visual1: hublotVisual1,
+    component: Hublot,
+    date: "Aug. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, Photoshop, React"],
+    description:
+      "Zhong Lin is a self-taught photographer who started her career by experimenting with film. With a seductive color palette and an eccentricity to her work, Lin's distinctive style has caught the attention of Vogue China and Harper's Bazaar China. I decided to create a modern portfolio for this artist.",
+  },
   {
     name: "Zhonglin",
     path: "zhonglin",
