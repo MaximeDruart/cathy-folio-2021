@@ -109,7 +109,7 @@ let projectsData = [
     role: "Designer, Dev",
     techs: ["Figma, Photoshop, React"],
     description:
-      "Zhong Lin is a self-taught photographer who started her career by experimenting with film. With a seductive color palette and an eccentricity to her work, Lin's distinctive style has caught the attention of Vogue China and Harper's Bazaar China. I decided to create a modern portfolio for this artist.",
+      "Hublot did a collaboration with Takashi Murakami, one of my favorite artists. My goal was to redesign the product page of this watch which I think is just beautiful. I also challenged myself to develop this page, it will be online soon, the link will be available soon!",
   },
   {
     name: "Zhonglin",

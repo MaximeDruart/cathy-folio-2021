@@ -82,7 +82,7 @@ const Hublot = () => {
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">For this project, I selected 3 neutral colors, perfectly integrating with the universe. For the typography, a sans serif font, modern, readable and accessible to read, accompanied by a typography dedicated to the titles.</p>
+          <p className="text-description">For this project, I went for a very sober and minimalist style. The products are colored, it allows to highlight them while remaining elegant</p>
         </div>
         <div className="typography">
           <h4 className="text-h4">Typography</h4>
