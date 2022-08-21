@@ -11,7 +11,6 @@ import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
-import room from "../../../assets/img/about/room.png"
 import roomVideo from "../../../assets/img/room.mp4"
 
 //passions

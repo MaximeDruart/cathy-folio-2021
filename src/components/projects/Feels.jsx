@@ -15,9 +15,6 @@ import happy from "../../assets/img/works/feels/happy.svg"
 import b1 from "../../assets/img/works/feels/b1.png"
 import b2 from "../../assets/img/works/feels/b2.png"
 
-import g1 from "../../assets/img/works/feels/g1.png"
-import g2 from "../../assets/img/works/feels/g2.png"
-
 import r1 from "../../assets/img/works/feels/r1.png"
 import r2 from "../../assets/img/works/feels/r2.png"
 import video1 from "../../assets/img/works/feels/video.mp4"
@@ -124,6 +121,11 @@ const Feels = () => {
       <div className='separator'></div>
       <img src={moodboard} alt="moodboard" />
 
+      <div className="spacer"></div>
+
+      <h2 className='text-h2'>The experience</h2>
+      <div className="demi-spacer"></div>
+      <video poster={thumbnail} controls src={video1}></video>
       <div className="big-spacer"></div>
       
       <h2 className='text-h2'>How do you feel today ?</h2>
@@ -142,15 +144,6 @@ const Feels = () => {
       <div className="img_container">
         <img className="duo" src={b1} alt="img" />
         <img className="duo" src={b2} alt="img" />
-      </div>
-
-      <div className="spacer"></div>
-
-      <div className='headline text-regular'>Red Palette</div>
-      <div className='separator'></div>
-      <div className="img_container">
-        <img className="duo" src={r1} alt="img" />
-        <img className="duo" src={r2} alt="img" />
       </div>
 
       <div className="spacer"></div>
@@ -175,15 +168,11 @@ const Feels = () => {
 
       <div className="spacer"></div>
 
-      <h2 className='text-h2'>Workshop, result</h2>
-      <div className="demi-spacer"></div>
-      <video poster={thumbnail} controls src={video1}></video>
-      <div className="spacer"></div>
       {/* 
       <FullImage src={feelsPreview} alt='pxp-desktop' />
       <div className="spacer"></div> */}
 
-      <h2 className='text-h2'>Print</h2>
+      <h2 className='text-h2'>Print Bonus</h2>
       <div className="demis-spacer"></div>
       <p className="text-description">I also generate some pattern with processing to create a print collection</p>
       <div className="demi-spacer"></div>

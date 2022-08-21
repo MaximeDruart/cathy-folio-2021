@@ -121,6 +121,7 @@ const StyledWorks = styled(motion.div)`
     color: ${({ theme }) => theme.colors.text.standard};
     z-index: 1000;
     text-transform: uppercase;
+    font-size: 12px;
   }
 
   .scroll-progress {
