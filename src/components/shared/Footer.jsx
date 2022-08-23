@@ -15,7 +15,7 @@ const Container = styled.div`
       text-transform: uppercase;
       color: ${({ theme }) => theme.colors.text.standard};
       font-family: NeueMontrealRegular;
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .separator {
@@ -81,6 +81,7 @@ const Container = styled.div`
       }
     }
     .small-line {
+      font-size: 12px;
       margin-top: -20px;
       @media (max-width: 750px) {
         .left {
@@ -103,7 +104,6 @@ const Container = styled.div`
         li {
           text-transform: uppercase;
           margin-right: 10px;
-          font-size: 14px;
           margin: 0 20px;
           a {
             transition: color 0.5s;

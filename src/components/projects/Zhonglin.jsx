@@ -21,8 +21,12 @@ import FullImage from "../shared/FullImage"
 
 
 const StyledZhonglin = styled.div`
-img{
+img, video{
   width: 100%;
+  margin-bottom: 50px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 
   &.full-img{
     height: 100vh;
@@ -70,8 +74,7 @@ img{
 const Zhonglin = () => {
   return (
     <StyledZhonglin>
-          <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+          {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -89,38 +92,38 @@ const Zhonglin = () => {
           <div className="color two">#E6E4E4</div>
           <div className="color three">#FFFFFF</div>
         </div>
-      </div>
+      </div> */}
       {/* end chart */}
 
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
 
-      <h2 className='text-h2'>Design System</h2>
+      {/* <h2 className='text-h2'>Design System</h2>
       <div className="demi-spacer"></div>
       <img src={designSystem} alt="designSystem" />
 
-      <div className="big-spacer"></div>
+      <div className="big-spacer"></div> */}
 
-      <FullImage src={preview} alt='card' />
-
-      <div className="spacer"></div>
-
-      <h2 className='text-h2'>Maquettes</h2>
-      <div className="demi-spacer"></div>
+      {/* <h2 className='text-h2'>Maquettes</h2> */}
+      {/* <div className="demi-spacer"></div> */}
       <div className='headline text-regular'>Grids</div>
       <div className='separator'></div>
       <img src={grids} alt="grid" />
 
-      <div className="spacer"></div>
+      {/* <div className="spacer"></div>
 
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>6 pages</div>
       <div className='separator'></div>
-      <img src={maquettes} alt="maquettes" />
+      <img src={maquettes} alt="maquettes" /> */}
 
     <div className="spacer"></div>
 
-    <div className='headline text-regular'>Loader</div>
-    <div className='separator'></div>
+    <FullImage src={preview} alt='card' />
+
+    <div className="big-spacer"></div>
+
+    {/* <div className='headline text-regular'>Loader</div>
+    <div className='separator'></div> */}
     <div dangerouslySetInnerHTML={{ __html: `
     <video loop muted autoplay playsinline>
         <source src="${loader}" type="video/mp4">
@@ -128,10 +131,6 @@ const Zhonglin = () => {
     }}
     />
 
-    <div className="spacer"></div>
-
-    <div className='headline text-regular'>menu</div>
-    <div className='separator'></div>
     <div dangerouslySetInnerHTML={{ __html: `
       <video loop muted autoplay playsinline>
           <source src="${menu}" type="video/mp4">
@@ -139,10 +138,6 @@ const Zhonglin = () => {
       }}
     />
 
-    <div className="spacer"></div>
-
-    <div className='headline text-regular'>home</div>
-    <div className='separator'></div>
     <div dangerouslySetInnerHTML={{ __html: `
       <video loop muted autoplay playsinline>
           <source src="${home}" type="video/mp4">
@@ -150,10 +145,6 @@ const Zhonglin = () => {
       }}
     />
 
-    <div className="spacer"></div>
-
-    <div className='headline text-regular'>galerie</div>
-    <div className='separator'></div>
     <div dangerouslySetInnerHTML={{ __html: `
       <video loop muted autoplay playsinline>
           <source src="${galerie}" type="video/mp4">

@@ -44,10 +44,10 @@ const App = () => {
             <AnimatePresence exitBeforeEnter initial={true}>
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
-                <Route path='/works' exact component={Works} />
+                <Route path='/about' exact component={Home} />
                 <Route path='/room' exact component={Room} />
                 <Route path='/random' exact component={Random} />
-                <Route path='/' component={Home} />
+                <Route path='/' component={Works} />
               </Switch>
             </AnimatePresence>
           )}

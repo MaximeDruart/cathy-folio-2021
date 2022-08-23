@@ -160,9 +160,7 @@ const StyledProjectDetail = styled.div`
     text-transform: uppercase;
     text-align: center;
     opacity: 1;
-    @media (max-width: 480px) {
-      font-size: 12px;
-    }
+    font-size: 12px;
   }
 
   .separator {

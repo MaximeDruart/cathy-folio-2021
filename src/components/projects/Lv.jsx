@@ -62,7 +62,6 @@ const Lv = () => {
   return (
     <StyledLv>
        <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>

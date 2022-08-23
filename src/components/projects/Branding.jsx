@@ -88,8 +88,7 @@ img{
 const Sangen = () => {
   return (
     <StyledSangen>
-          <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+          {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -108,13 +107,12 @@ const Sangen = () => {
           <div className="color one">#FFFFFF</div>
           <div className="color two">#b9b3fc</div>
         </div>
-      </div>
+      </div> */}
       {/* end chart */}
 
-      <div className="spacer"></div>
-      {/* logo */}
-      <h2 className='text-h2'>Logo</h2>
       <div className="demi-spacer"></div>
+      {/* logo */}
+
       <div className='headline text-regular'>logo maker</div>
       <div className='separator'></div>
       <div className="img_container">
@@ -123,14 +121,13 @@ const Sangen = () => {
         <Cathy3></Cathy3>
       </div>
       <div className="spacer"></div>
-
       <FullImage src={resume} alt='resume' />
-      <div className="demi-spacer"></div>
+      <div className="spacer"></div>
       <div className='headline text-regular'>resume</div>
       <div className='separator'></div>
       <img className="little" src={resumeVerso} alt="resume" />
 
-      <div className="big-spacer"></div>
+      <div className="spacer"></div>
       
       <FullImage src={businessCard} alt='card' />
       <div className="demi-spacer"></div>
@@ -142,8 +139,6 @@ const Sangen = () => {
       </div>
 
       <div className="spacer"></div>
-      <div className='headline text-regular'>personal Stickers</div>
-      <div className='separator'></div>
       <img src={stickers} alt="stickers" />
 
 

@@ -72,12 +72,14 @@ const StyledWorks = styled(motion.div)`
           font-family: NeueMontrealRegular;
           text-transform: uppercase;
           white-space: nowrap;
+          font-size: 12px;
+          letter-spacing: 0.4px;
         }
 
         .circle {
-          margin-left: 20px;
-          width: 30px;
-          height: 30px;
+          margin-left: 10px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
           background: white;
           display: flex;
@@ -116,12 +118,12 @@ const StyledWorks = styled(motion.div)`
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 60px;
+    bottom: 64px;
     font-family: "NeueMontrealRegular";
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: ${({ theme }) => theme.colors.text.disabled};
     z-index: 1000;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .scroll-progress {
@@ -131,7 +133,7 @@ const StyledWorks = styled(motion.div)`
     bottom: 40px;
     width: 35vw;
     height: 2px;
-    background: grey;
+    background:  ${({ theme }) => theme.colors.text.disabled2};
 
     .scroll-bar {
       background: ${({ theme }) => theme.colors.text.standard};
@@ -150,7 +152,7 @@ function ShaderPlane(props) {
 
   const [hovering, setHovering] = useState(false)
   // only using an object because thats what gsap wants
-  const hoverValue = useRef({ value: 0 })
+  const hoverValue = useRef({ value: 1 })
 
   const isTablet = useMediaQuery("(min-width: 480px) and (max-width: 769px)")
   const isMobile = useMediaQuery("(max-width: 479px)")
@@ -178,7 +180,7 @@ function ShaderPlane(props) {
   useEffect(() => {
     mfIsHoveringCanvas.current = hovering
     let tween = gsap.to(hoverValue.current, {
-      value: hovering ? 1 : 0,
+      value: hovering ? 0 : 1,
       onUpdate: () => {
         if (hoverValue.current) matRef.current.hoverValue = hoverValue.current.value
       },
@@ -302,7 +304,7 @@ const Works = () => {
   const { progress } = useProgress()
 
   useLayoutEffect(() => {
-    let width = mapRange(0, 100, 0, 35, progress) + "vw"
+    let width = mapRange(0, 120, 0, 35, progress) + "vw"
     gsap.to(scrollProgressContainer.current, { width, duration: 1 })
   }, [progress])
 
@@ -351,7 +353,7 @@ const Works = () => {
           animate={{ opacity: hasScrolled ? 0 : 1 }}
           className='scroll-inv'
         >
-          scroll
+          scroll down
         </motion.div>
         <motion.div
           ref={scrollProgressContainer}

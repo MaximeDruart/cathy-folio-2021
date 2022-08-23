@@ -89,15 +89,15 @@ const StyledHome = styled.div`
             &::after {
               position: absolute;
               content: "Graphic Designer & front end developer based in paris.";
-              width: 250px;
+              width: 220px;
               top: -60px;
               left: -20px;
               font-family: NeueMontrealRegular;
-              font-size: 12px;
+              font-size: 11px;
               text-transform: uppercase;
               white-space: initial;
               color: ${({ theme }) => theme.colors.text.standard};
-              line-height: 1.4;
+              line-height: 1.8;
               letter-spacing: 0.01em;
             }
           }
@@ -242,7 +242,7 @@ const StyledHome = styled.div`
 
     .headline {
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 12px;
       font-family: NeueMontrealRegular;
     }
     .passion_container {

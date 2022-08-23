@@ -12,17 +12,13 @@ const darkColors = [
     color: "#7176eb",
   },
   {
-    name: "gold",
-    color: "#FFCC00",
-  },
-  {
     name: "emerald",
     color: "#66F070",
   },
   {
     name: "quartz",
     color: "#F582D2",
-  }
+  },
 ]
 
 const lightColors = [
@@ -37,10 +33,6 @@ const lightColors = [
     {
     name: "lavender",
     color: "#C4BCD3",
-  },
-  {
-    name: "lemon",
-    color: "#EBD7A1",
   },
   {
     name: "avocado",

@@ -76,29 +76,6 @@ svg{
 const Shibuya = () => {
 return (
 <StyledShibuya>
-  <h2 className='text-h2'>Graphic Chart</h2>
-  {/* chart */}
-  <div className="chart">
-    <div className="art-direction">
-      <h4 className="text-h4">Art direction</h4>
-      <p className="text-description">For the logo, I chose to study the letter S and make a reference to the crossing, I opted for a geometric base, modern class and simple, accompanied by a baseline.</p>
-    </div>
-    <div className="typography">
-      <h4 className="text-h4">Typography</h4>
-      <span className="text-typo one">Neue Montreal<br />Aa 123</span>
-    </div>
-    <div className="colors">
-      <h4 className="text-h4">Colors</h4>
-      <div className="color one">#FFFFFF</div>
-      <div className="color two">#000000</div>
-    </div>
-  </div>
-  <div className="spacer"></div>
-  {/* end chart */}
-  <FullImage src={moodboard} alt='preview' />
-  <div className="big-spacer"></div>
-  {/* step */}
-  <h2 className='text-h2'>Grid application</h2>
   <div className="demi-spacer"></div>
   <div className="img_container">
     <img className="trio" src={grid1} alt="grid" />
@@ -108,9 +85,7 @@ return (
     <img className="trio" src={grid5} alt="grid" />
     <img className="trio" src={grid6} alt="grid" />
   </div>
-  <div className="big-spacer"></div>
-  {/* logo */}
-  <h2 className='text-h2'>Logo result</h2>
+  <div className="spacer"></div>
   <div className="demi-spacer"></div>
   <div className='headline text-regular'>Latin Logo</div>
   <div className='separator'></div>
@@ -125,9 +100,9 @@ return (
     <ShibuyaKanji />
     <ShibuyaKanji />
   </div>
-  <div className="big-spacer"></div>
-  <h2 className='text-h2'>Mockup</h2>
-  <div className="demi-spacer"></div>
+  <div className="spacer"></div>
+  <FullImage src={moodboard} alt='preview' />
+  <div className="spacer"></div>
   {/* pub */}
   <div className='headline text-regular'>Advertising frames</div>
   <div className='separator'></div>
@@ -147,6 +122,9 @@ return (
   <div className='headline text-regular'>Print stuff</div>
   <div className='separator'></div>
   <img src={prints} alt="logo"></img>
+  <div className="spacer"></div>
+  <h2 className='text-h2'>Thanks for scrolling</h2>
+  <p className="text-description">Project made with fun at ESD Paris</p>
   <div className="big-spacer"></div>
 </StyledShibuya>
 )

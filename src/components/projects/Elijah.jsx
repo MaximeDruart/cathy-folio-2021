@@ -19,6 +19,9 @@ const StyledElijah = styled.div`
 img{
   width: 100%;
   margin-bottom: 50px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 }
 .chart{
   .typography{
@@ -52,8 +55,7 @@ img{
 const Arcane = () => {
   return (
     <StyledElijah>
-      <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+      {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -71,31 +73,17 @@ const Arcane = () => {
           <div className="color two">#f03939</div>
           <div className="color three">#000000</div>
         </div>
-      </div>
+      </div> */}
       {/* end chart */}
       {/* start case */}
+      <div className="demi-spacer"></div>
+      <img src={homepage} alt="elijah" />
+      <img src={clients} alt="elijah" />
+      <img src={brand} alt="elijah" />
       <div className="spacer"></div>
       <FullImage src={moodboard} alt='preview' />
       <div className="spacer"></div>
-     {/* desktop ui */}
-     <h2 className='text-h2'>Desktop UI</h2>
-      {/* homepage */}
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>homepage</div>
-      <div className='separator'></div>
-      <img src={homepage} alt="elijah" />
-      <div className="spacer"></div>
-      <div className='headline text-regular'>clients page navigation</div>
-      <div className='separator'></div>
-      <img src={clients} alt="elijah" />
-      <div className="spacer"></div>
-      <div className='headline text-regular'>brand shoot</div>
-      <div className='separator'></div>
-      <img src={brand} alt="elijah" />
-      <div className="spacer"></div>
       {/* responsive ui */}
-      <h2 className='text-h2'>Responsive UI</h2>
-      <div className="demi-spacer"></div> 
       <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>
       <div className="responsive">
@@ -105,6 +93,9 @@ const Arcane = () => {
         <img src={friendsMobile} alt="responsive" />
       </div>
       <div className="spacer"></div>
+      <h2 className='text-h2'>Thanks for scrolling</h2>
+      <p className="text-description">Project made with love for Elijah</p>
+      <div className="big-spacer"></div>
     </StyledElijah>
   )
 }

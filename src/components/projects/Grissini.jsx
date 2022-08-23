@@ -15,6 +15,9 @@ const StyledGrissini = styled.div`
 img{
   width: 100%;
   margin-bottom: 50px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 }
 .responsive{
     img{
@@ -53,8 +56,7 @@ img{
 const Grissini = () => {
   return (
     <StyledGrissini>
-       <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+       {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -71,33 +73,18 @@ const Grissini = () => {
           <div className="color two">#000000</div>
           <div className="color three">#FDC463</div>
         </div>
-      </div>
+      </div> */}
       {/* end chart */}
       {/* start case */}
+      <div className="demi-spacer"></div>
+      {/* desktop ui */}
+      <img src={homepage} alt="pxp" />
+      <img src={contact} alt="pxp" />
+      <img src={about} alt="pxp" />
       <div className="spacer"></div>
       <FullImage src={moodboard} alt='preview' />
       <div className="spacer"></div>
-      {/* desktop ui */}
-      <h2 className='text-h2'>Desktop UI</h2>
-      <p className="text-description">Desktop mockups for the Grissini Project website; a few previews, simple and clean design, with a background of a video of Grissini in low opacity to highlight the content.</p>
-      {/* homepage */}
-      <div className="spacer"></div>
-      <div className='headline text-regular'>homepage</div>
-      <div className='separator'></div>
-      <img src={homepage} alt="pxp" />
-      <div className="spacer"></div>
-      <div className='headline text-regular'>contact page</div>
-      <div className='separator'></div>
-      <img src={contact} alt="pxp" />
-      <div className="spacer"></div>
-      <div className='headline text-regular'>about page</div>
-      <div className='separator'></div>
-      <img src={about} alt="pxp" />
-      <div className="big-spacer"></div>
       {/* responsive ui */}
-      <h2 className='text-h2'>Responsive UI</h2>
-      <p className="text-description">Responsive mock-ups keeping the site simple and easy to navigate.</p>
-      <div className="demi-spacer"></div> 
       <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>
       <div className="responsive">
@@ -106,6 +93,9 @@ const Grissini = () => {
         <img src={shopMobile} alt="responsive"></img>
         <img src={contactMobile} alt="responsive"></img>
       </div>
+      <div className="big-spacer"></div>
+      <h2 className='text-h2'>Thanks for scrolling</h2>
+      <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>
     </StyledGrissini>
   )

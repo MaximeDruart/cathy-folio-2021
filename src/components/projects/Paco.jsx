@@ -23,8 +23,12 @@ import FullImage from "../shared/FullImage"
 
 
 const StyledPaco = styled.div`
-img{
+img, video{
   width: 100%;
+  margin-bottom: 50px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 
   &.full-img{
     height: 100vh;
@@ -72,8 +76,7 @@ img{
 const Paco = () => {
   return (
     <StyledPaco>
-          <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+          {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -91,27 +94,9 @@ const Paco = () => {
           <div className="color two">#D6FF7E</div>
           <div className="color three">#FED7E0</div>
         </div>
-      </div>
+      </div> */}
       {/* end chart */}
 
-      <div className="spacer"></div>
-
-      <h2 className='text-h2'>Design System</h2>
-      <div className="demi-spacer"></div>
-      <img src={designSystem} alt="designSystem" />
-
-      <div className="big-spacer"></div>
-
-      <FullImage src={preview} alt='card' />
-
-      <div className="spacer"></div>
-      
-      <h2 className='text-h2'>Cards and decks</h2>
-      <p className="text-description">The format we have chosen is: the card. The objective is to create cultural cards in the form of a post and to collect them.
-With the possibility to save them in "decks", in order to share them with other users. A system of "nuggets" has also been integrated, we have removed the numbers : likes, and followers, something that is under a lot of pressure right now.</p>
-      <div className="spacer"></div>
-
-      <h2 className='text-h2'>Prototypes</h2>
       <div className="demi-spacer"></div>
       <div className='headline text-regular'>Explore Paco</div>
       <div className='separator'></div>
@@ -122,10 +107,6 @@ With the possibility to save them in "decks", in order to share them with other 
         }}
       />
 
-      <div className="spacer"></div>
-
-      <div className='headline text-regular'>Create a gems</div>
-      <div className='separator'></div>
       <div dangerouslySetInnerHTML={{ __html: `
          <video loop muted autoplay playsinline>
           <source src="${create}" type="video/mp4">
@@ -133,10 +114,6 @@ With the possibility to save them in "decks", in order to share them with other 
         }}
       />
 
-    <div className="spacer"></div>
-
-    <div className='headline text-regular'>Search a card</div>
-    <div className='separator'></div>
     <div dangerouslySetInnerHTML={{ __html: `
     <video loop muted autoplay playsinline>
         <source src="${search}" type="video/mp4">
@@ -144,6 +121,8 @@ With the possibility to save them in "decks", in order to share them with other 
     }}
     />
 
+    <div className="spacer"></div>
+    <FullImage src={preview} alt='card' />
     <div className="spacer"></div>
 
 

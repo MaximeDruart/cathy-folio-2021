@@ -28,8 +28,12 @@ import FullImage from "../shared/FullImage"
 
 
 const StyledHublot = styled.div`
-img{
+img, video.full{
   width: 100%;
+  margin-bottom: 50px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 
   &.full-img{
     height: 100vh;
@@ -77,8 +81,7 @@ img{
 const Hublot = () => {
   return (
     <StyledHublot>
-          <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+          {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -96,34 +99,35 @@ const Hublot = () => {
           <div className="color two">#E6E4E4</div>
           <div className="color three">#FFFFFF</div>
         </div>
-      </div>
+      </div> */}
+
       {/* end chart */}
 
-      <div className="spacer"></div>
-
-      <FullImage src={preview} alt='card' />
-
-      <div className="spacer"></div>
-
-      <h2 className='text-h2'>Maquettes</h2>
       <div className="demi-spacer"></div>
+
+      {/* <FullImage src={preview} alt='card' />
+
+      <div className="spacer"></div> */}
+
+      {/* <h2 className='text-h2'>Maquettes</h2> */}
+      {/* <div className="demi-spacer"></div> */}
       <div className='headline text-regular'>homepage</div>
       <div className='separator'></div>
       <div dangerouslySetInnerHTML={{ __html: `
-      <video loop muted autoplay playsinline>
+      <video class="full" loop muted autoplay playsinline>
           <source src="${home}" type="video/mp4">
       </video>`
       }}
       />
       <img src={product} alt="maquettes" />
       <div dangerouslySetInnerHTML={{ __html: `
-      <video loop muted autoplay playsinline>
+      <video class="full" loop muted autoplay playsinline>
           <source src="${details}" type="video/mp4">
       </video>`
       }}
       />
 
-      <div className="big-spacer"></div>
+      <div className="spacer"></div>
 
       <FullImage src={duo} alt='prototype' />
       <div className="spacer"></div>
@@ -135,7 +139,7 @@ const Hublot = () => {
       {/* <img src={color} alt="maquettes" /> */}
       <img src={unico} alt="maquettes" />
       <div dangerouslySetInnerHTML={{ __html: `
-      <video loop muted autoplay playsinline>
+      <video class="full" loop muted autoplay playsinline>
           <source src="${concept}" type="video/mp4">
       </video>`
       }}

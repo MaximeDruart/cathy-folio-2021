@@ -22,8 +22,12 @@ import FullImage from "../shared/FullImage"
 
 
 const StyledChanel = styled.div`
-img{
+img, video{
   width: 100%;
+  margin-bottom: 50px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 
   &.full-img{
     height: 100vh;
@@ -70,8 +74,7 @@ img{
 const Chanel = () => {
   return (
     <StyledChanel>
-          <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+          {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -89,36 +92,24 @@ const Chanel = () => {
           <div className="color two">#EAB8B2</div>
           <div className="color three">#EDEDED</div>
         </div>
-      </div>
+      </div> */}
       {/* end chart */}
 
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
 
       <h2 className='text-h2'>Moodboard</h2>
       <div className="demi-spacer"></div>
       <img src={moodboard} alt="moodboard" />
 
-      <div className="big-spacer"></div>
+      <div className="spacer"></div>
 
       <FullImage src={preview} alt='card' />
 
-      <div className="spacer"></div>
-      
-      <h2 className='text-h2'>An immersive place</h2>
-      <p className="text-description">I wanted a feminine universe, soft, modern and pleasant, the integration of 3D and texture allow a soft and tender visual which allows to add depth. The objective was to create a room, with the possibility of focusing 3 areas, each of which presents the product and highlight its full range. </p>
-
-      <div className="spacer"></div>
-
-      <h2 className='text-h2'>The rooms</h2>
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>3 spaces</div>
-      <div className='separator'></div>
+      <div className="big-spacer"></div>
       <img src={room} alt="room" />
 
       <div className="spacer"></div>
 
-      <div className='headline text-regular'>Homepage</div>
-      <div className='separator'></div>
       <div dangerouslySetInnerHTML={{ __html: `
          <video loop muted autoplay playsinline>
           <source src="${homepage}" type="video/mp4">
@@ -126,10 +117,6 @@ const Chanel = () => {
         }}
       />
 
-      <div className="spacer"></div>
-
-      <div className='headline text-regular'>Product page</div>
-      <div className='separator'></div>
       <div dangerouslySetInnerHTML={{ __html: `
          <video loop muted autoplay playsinline>
          <source src="${video1}" type="video/mp4">
@@ -137,32 +124,20 @@ const Chanel = () => {
         }}
       />
 
-      <div className="spacer"></div>
-
-      <div className='headline text-regular'>Girl talk</div>
-      <div className='separator'></div>
       <img src={girlTalk} alt="girlTalk" />
 
-      <div className="spacer"></div>
-
-    <div className='headline text-regular'>Get dressed</div>
-      <div className='separator'></div>
       <img src={girlKit} alt="girlKit" />
 
-      <div className="spacer"></div>
-
-      <div className='headline text-regular'>Get dressed</div>
-      <div className='separator'></div>
       <img src={getDressed} alt="getDressed" />
 
-      <div className="big-spacer"></div>
+      <div className="spacer"></div>
 
       <FullImage src={product} alt='card' />
 
       <div className="spacer"></div>
 
-      <h2 className='text-h2'>Credits</h2>
-      <p className="text-description">Thanks to <a href='https://www.instagram.com/markdearman 'target="_blank">Markdearman</a> for the hand animation, and to <a href='https://www.behance.net/cristina_laporta'target="_blank">Cristina</a> for the 3D decoration :D</p>
+      <h2 className='text-h2'>Thanks for scrolling</h2>
+      <p className="text-description">Thanks to <a href='https://www.instagram.com/markdearman 'target="_blank">Markdearman</a> for the hand animation, and to <a href='https://www.behance.net/cristina_laporta'target="_blank">Cristina</a> for the 3D decoration</p>
       <div className="big-spacer"></div>
 
     </StyledChanel>

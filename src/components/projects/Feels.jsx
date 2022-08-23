@@ -90,33 +90,9 @@ img{
 const Feels = () => {
   return (
     <StyledFeels>
-          <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">I wanted to create something elegant and modern at the same time. The Gallery Modern typography met those expectations. As for the colors, I had fun with R, G, B to give a rhythmic touch to the creation and modulate according to the mood of the users.</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Neue Montreal<br/>Aa 123</span>
-          <span className="text-typo two">Gallery Modern<br/>Aa 123</span>
 
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#FFFFFF</div>
-          <div className="color two">#ff3cd5</div>
-          <div className="color three">#872bff</div>
-          <div className="color four">#374bff</div>
-        </div>
-      </div>
-      {/* end chart */}
-
-      <div className="spacer"></div>
-
-      <h2 className='text-h2'>Moodboard</h2>
       <div className="demi-spacer"></div>
+
       <div className='headline text-regular'>Dark Moodboard</div>
       <div className='separator'></div>
       <img src={moodboard} alt="moodboard" />
@@ -154,12 +130,6 @@ const Feels = () => {
         <img className="duo" src={concept} alt="img" />
         <img className="duo" src={moods} alt="img" />
       </div>
-
-      <div className="spacer">
-
-      </div>
-      <div className='headline text-regular'>Guide</div>
-      <div className='separator'></div>
       <img src={guide} alt="img" />
 
       <div className="demi-spacer"></div>
@@ -168,20 +138,15 @@ const Feels = () => {
 
       <div className="spacer"></div>
 
-      {/* 
-      <FullImage src={feelsPreview} alt='pxp-desktop' />
-      <div className="spacer"></div> */}
-
-      <h2 className='text-h2'>Print Bonus</h2>
-      <div className="demis-spacer"></div>
-      <p className="text-description">I also generate some pattern with processing to create a print collection</p>
-      <div className="demi-spacer"></div>
       <div className='headline text-regular'>Dark Print</div>
       <div className='separator'></div>
       <div className="img_container">
         <img className="duo" src={bPrint} alt="print" />
         <img className="duo" src={rPrint} alt="print" />
       </div>
+      <div className="spacer"></div>
+      <h2 className='text-h2'>Thanks for scrolling</h2>
+      <p className="text-description">Project made with fun with an amazing team</p>
       <div className="big-spacer"></div>
 
     </StyledFeels>

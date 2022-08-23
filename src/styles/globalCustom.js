@@ -26,6 +26,7 @@ export default css`
     font-family: "Ginger";
     /* font-family: NeueMontrealRegular; */
     font-size: 60px;
+    line-height: 1.2;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
     //margin-bottom: 10px;
@@ -46,7 +47,7 @@ export default css`
   .text-h2-5 {
     font-family: "NeueMontrealRegular";
     font-size: 40px;
-    line-height: 1.1;
+    line-height: 1.3;
     color: ${({ theme }) => theme.colors.text.standard};
     span.important_word {
       font-family: "Ginger";
@@ -152,12 +153,12 @@ export default css`
 
   .button{
     border: solid 1px ${({ theme }) => theme.colors.text.disabled};
-    padding: 15px 50px;
+    padding: 18px 50px;
     border-radius: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
     font-family: NeueMontrealRegular;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 40px;
     transition: background-color 0.5s;
     &:hover{

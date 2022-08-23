@@ -14,6 +14,9 @@ const StyledSens = styled.div`
 img{
   width: 100%;
   margin-bottom: 50px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 }
 .chart{
   .typography{
@@ -45,8 +48,7 @@ img{
 const Sens = () => {
   return (
     <StyledSens>
-      <h2 className='text-h2'>Graphic Chart</h2>
-          {/* chart */}
+      {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -64,13 +66,10 @@ const Sens = () => {
           <div className="color two">#D3EBFF</div>
           <div className="color three">#ffe2f1</div>
         </div>
-      </div>
+      </div> */}
       {/* end chart */}
-      <div className="spacer"></div>
-      <FullImage src={springKit} alt='card' />
-      <div className="spacer"></div>
-      <h2 className='text-h2'>Spring experience</h2>
       <div className="demi-spacer"></div>
+      {/* <FullImage src={springKit} alt='card' /> */}
       <div className='headline text-regular'>Garden's Moodboard</div>
       <div className='separator'></div>
       <img src={gardenMoodboard} alt="garden" />
@@ -86,8 +85,6 @@ const Sens = () => {
       {/* summer */}
       <FullImage src={summerKit} alt='card' />
       <div className="spacer"></div>
-      <h2 className='text-h2'>Summer experience</h2>
-      <div className="demi-spacer"></div>
       <div className='headline text-regular'>Aurae's Moodboard</div>
       <div className='separator'></div>
       <img src={summerMoodboard} alt="garden" />
@@ -99,6 +96,9 @@ const Sens = () => {
       <div className='headline text-regular'>Entry tickets</div>
       <div className='separator'></div>
       <img className="quart" src={summerTickets} alt="garden" />
+      <div className="spacer"></div>
+      <h2 className='text-h2'>Thanks for scrolling</h2>
+      <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>
     </StyledSens>
   )
