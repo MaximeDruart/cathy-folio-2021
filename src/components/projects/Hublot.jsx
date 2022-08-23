@@ -144,11 +144,7 @@ const Hublot = () => {
       </video>`
       }}
       />
-    <div className="spacer"></div>
 
-    <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Collab</div>
-      <div className='separator'></div>
     <img src={takashi} alt="maquettes" />
     <img src={slider} alt="maquettes" />
     <div className="spacer"/>

@@ -30,6 +30,7 @@ const StyledHeader = styled.div`
     font-family: 'Neue Montreal';
     pointer-events: auto;
     transition: background-color 0.3s; 
+    // background-color: #FFFFFF40;
     backdrop-filter: blur(6px);
     border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
     a{
