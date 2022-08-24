@@ -165,7 +165,7 @@ const StyledProjectDetail = styled.div`
   }
 
   .separator {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 50px;
     width: 100%;
     height: 1px;

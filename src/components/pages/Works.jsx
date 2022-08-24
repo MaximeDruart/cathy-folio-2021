@@ -120,9 +120,10 @@ const StyledWorks = styled(motion.div)`
     transform: translateX(-50%);
     bottom: 64px;
     font-family: "NeueMontrealRegular";
-    color: ${({ theme }) => theme.colors.text.disabled};
+    color: ${({ theme }) => theme.colors.text.text};
     z-index: 1000;
     text-transform: uppercase;
+    letter-spacing: 0.2px;
     font-size: 11px;
   }
 
@@ -353,7 +354,7 @@ const Works = () => {
           animate={{ opacity: hasScrolled ? 0 : 1 }}
           className='scroll-inv'
         >
-          scroll down
+          (scroll down)
         </motion.div>
         <motion.div
           ref={scrollProgressContainer}

@@ -90,7 +90,7 @@ export default css`
   }
   .text-h6 {
     font-family: "NeueMontrealRegular";
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: ${({ theme }) => theme.colors.text.text};
     font-size: 14px;
     line-height: 1.4;
     @media (max-width: 480px) {
@@ -98,7 +98,7 @@ export default css`
     }
   }
   .text-regular {
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: ${({ theme }) => theme.colors.text.text};
     // letter-spacing: 0.2rem;
     line-height: 1.4;
     font-size: 14px;
@@ -133,7 +133,7 @@ export default css`
 
   .text-description{
     font-family: "NeueMontrealRegular";
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
     font-size: 16px;
     line-height: 1.7;
@@ -153,12 +153,12 @@ export default css`
 
   .button{
     border: solid 1px ${({ theme }) => theme.colors.text.disabled2};
-    padding: 18px 50px;
+    padding: 16px 40px;
     border-radius: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
     font-family: NeueMontrealRegular;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 40px;
     transition: background-color 0.5s;
     &:hover{

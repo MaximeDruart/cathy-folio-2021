@@ -24,7 +24,7 @@ const StyledHeader = styled.div`
     justify-content: center;
     border-radius: 40px;
     align-items: center;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 0.2px;
     text-transform: uppercase;
     font-family: NeueMontrealRegular;
@@ -34,8 +34,9 @@ const StyledHeader = styled.div`
     backdrop-filter: blur(6px);
     border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
     a{
-      color: ${({ theme }) => theme.colors.text.disabled};
+      color: ${({ theme }) => theme.colors.text.text};
       text-decoration: none;
+      letter-spacing : 0.3px;
       transition: color 0.3s;
       padding: 14px 24px 14px 36px;
     }

@@ -55,6 +55,10 @@ const StyledStyleSwitcher = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    button{
+      font-size: 10px;
+      padding: 8px 14px;
+    }
   }
   @media (max-width: 600px){
     bottom: 28px;

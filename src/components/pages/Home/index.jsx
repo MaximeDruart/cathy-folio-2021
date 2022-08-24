@@ -265,6 +265,9 @@ const StyledHome = styled.div`
             display: flex;
             flex-direction: column;
             justify-content: center;
+            p{
+              font-size: 12px;
+            }
           }
         }
         img {
@@ -315,7 +318,7 @@ const StyledHome = styled.div`
       }
     }
     .separator {
-      margin-top: 20px;
+      margin-top: 14px;
       margin-bottom: 50px;
       width: 100%;
       height: 1px;

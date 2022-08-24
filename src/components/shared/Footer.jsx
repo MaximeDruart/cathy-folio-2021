@@ -19,8 +19,8 @@ const Container = styled.div`
     }
 
     .separator {
-      margin-top: 20px;
-      margin-bottom: 50px;
+      margin-top: 14px;
+      margin-bottom: 40px;
       width: 100%;
       height: 1px;
       background-color: ${({ theme }) => theme.colors.text.disabled2};
@@ -29,7 +29,10 @@ const Container = styled.div`
 
   .contact {
     margin-top: 20vh;
-    padding-bottom: 10vh;
+    padding-bottom: 6vh;
+    @media (max-width: 750px) {
+      padding-bottom: 10vh;
+    }
     .footer-body {
       width: 100%;
       height: 60vh;
@@ -113,6 +116,7 @@ const Container = styled.div`
           }
         }
         @media (max-width: 750px) {
+          width: 100%;
           justify-content: center;
           li {
             margin: 5px 6px;
