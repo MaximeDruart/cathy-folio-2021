@@ -20,12 +20,15 @@ const StyledMenu = styled(motion.div)`
 
   ul.links {
     position: absolute;
-    top: 50%;
+    top: 54%;
     transform: translateY(-50%);
     width: 100%;
     display: flex;
     align-items: center;
     flex-flow: column;
+    @media (max-width: 900px) {
+      top: 50%;
+    }
     .wrapper {
       overflow: hidden;
       margin: 25px 0;
@@ -33,15 +36,17 @@ const StyledMenu = styled(motion.div)`
         margin: 18px 0;
       }
       li {
-        line-height: 1;
         text-transform: uppercase;
         font-family: Ginger;
         a {
+          font-size: 90px;
+          line-height: 1;
           display: inline-block;
           position: relative;
           transition: transform ease-in-out 0.3s;
           @media (max-width: 900px) {
             font-size: 60px;
+            line-height: 1.1;
           }
 
           &:hover {

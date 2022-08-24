@@ -43,11 +43,11 @@ const StyledHeader = styled.div`
       left: -4px;
       position: absolute;
       margin-left: 24px;
-      width: 8px;
-      height: 8px;
+      width: 6px;
+      height: 6px;
       border-radius: 100%;
-      background-color:  ${({ theme }) => theme.colors.primary1};  
-      // background-color: #86FB73;
+      //background-color:  ${({ theme }) => theme.colors.primary1};  
+      background-color: #85E38C;
     }
     &:hover{
       background-color: ${({ theme }) => theme.colors.text.disabled2};
