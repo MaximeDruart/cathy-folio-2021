@@ -52,11 +52,13 @@ const Container = styled.div`
     transform: translateY(-50%);
     width: auto;
     height: auto;
-    opacity: 0.7;
+    opacity: 0.8;
 
     @media (max-width: 900px) {
       left: auto;
+      scale: 0.6;
     }
+    
 
     .item-container {
       width: 0;
@@ -70,17 +72,20 @@ const Container = styled.div`
     .item {
       position: absolute;
       transform: translateX(-50%) translateY(-50%);
-      border: 1px solid ${({ theme }) => theme.colors.text.disabled};
+      border: 1px solid ${({ theme }) => theme.colors.text.disabled2};
       transition: all ease-in-out 0.4s;
+      border-radius: 1px;
 
       &.is-active {
         border: 1px solid ${({ theme }) => theme.colors.primary1};
         background: ${({ theme }) => theme.colors.primary1};
+        border-radius: 1px;
       }
     }
 
     .position {
       position: absolute;
+      border-radius: 4px;
       transform: translateX(-50%) translateY(-50%);
       border: 1px solid ${({ theme }) => theme.colors.text.standard};
     }
@@ -126,6 +131,7 @@ const Container = styled.div`
       .title {
         font-family: "Ginger";
         text-transform: uppercase;
+        margin: 30px 0 10px 0;
 
         font-size: 60px;
 
@@ -140,12 +146,16 @@ const Container = styled.div`
       .body {
         margin-top: 10px;
         .desc {
-          line-height: 1.3;
+          font-size: 14px;
+          line-height: 1.5;
+          color: ${({ theme }) => theme.colors.text.text};
+          margin-bottom: 20px;
         }
       }
 
       .text-link.website-link {
         position: relative;
+        font-size: 14px;
 
         &.mobile {
           display: inline-block;
