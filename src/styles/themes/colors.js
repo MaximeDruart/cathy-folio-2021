@@ -4,10 +4,6 @@ const darkColors = [
     color: "#6796FF",
   },
   {
-    name: "Ruby",
-    color: "#FF4D4D",
-  },
-  {
     name: "amethyst",
     color: "#7176eb",
   },
@@ -19,6 +15,10 @@ const darkColors = [
     name: "quartz",
     color: "#F582D2",
   },
+  {
+    name: "crystal",
+    color: "#F8F8F8",
+  },
 ]
 
 const lightColors = [
@@ -27,10 +27,6 @@ const lightColors = [
     color: "#ABC7E0",
   },
   {
-    name: "peach",
-    color: "#E0B5A8",
-  },
-    {
     name: "lavender",
     color: "#C4BCD3",
   },
@@ -41,7 +37,11 @@ const lightColors = [
   {
     name: "Spring",
     color: "#DEBCDD",
-  }
+  },
+  {
+    name: "carbone",
+    color: "#2F2F2F",
+  },
 ]
 
 export { lightColors, darkColors }

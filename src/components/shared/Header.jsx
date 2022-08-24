@@ -58,8 +58,8 @@ const StyledHeader = styled.div`
     }
   }
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     pointer-events: auto;
     margin-left: -6px;
     svg {
@@ -69,15 +69,15 @@ const StyledHeader = styled.div`
     }
   }
   .menu-toggle {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     pointer-events: auto;
     color: ${({ theme }) => theme.colors.text.standard};
 
     .top,
     .bottom {
       width: 100%;
-      height: 2px;
+      height: 1.5px;
       background: ${({ theme }) => theme.colors.text.standard};
     }
     .bottom {

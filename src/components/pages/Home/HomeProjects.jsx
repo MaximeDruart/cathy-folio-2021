@@ -15,10 +15,11 @@ const Container = styled.div`
     .content {
       display: flex;
       margin-bottom: 40px;
-
+      .index{
+        font-size: 12px
+      }
       .title {
-        margin-left: 40px;
-
+        margin-left: 30px;
         font-family: Ginger;
         text-transform: uppercase;
       }

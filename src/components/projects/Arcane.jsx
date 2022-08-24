@@ -14,7 +14,7 @@ import FullImage from "../shared/FullImage"
 const StyledArcane = styled.div`
 img{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (max-width: 769px) {
     margin-bottom: 20px;
   }

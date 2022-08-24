@@ -57,7 +57,10 @@ const StyledStyleSwitcher = styled.div`
     align-items: center;
     button{
       font-size: 10px;
-      padding: 8px 14px;
+      padding: 8px;
+    }
+    button.theme-toggle{
+        padding: 8px 14px;
     }
   }
   @media (max-width: 600px){
