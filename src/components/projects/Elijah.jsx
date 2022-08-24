@@ -18,7 +18,7 @@ import FullImage from "../shared/FullImage"
 const StyledElijah = styled.div`
 img{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (max-width: 769px) {
     margin-bottom: 20px;
   }
@@ -55,43 +55,29 @@ img{
 const Arcane = () => {
   return (
     <StyledElijah>
-      {/* <h2 className='text-h2'>Graphic Chart</h2>
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">I wanted to create something elegant and minimalist for Elijah.</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Qene-G<br/>Aa I II X</span>
-          <span className="text-typo two">Neue Montreal Regular<br/>Aa 123</span>
-
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#FFFFFF</div>
-          <div className="color two">#f03939</div>
-          <div className="color three">#000000</div>
-        </div>
-      </div> */}
-      {/* end chart */}
       {/* start case */}
       <div className="demi-spacer"></div>
-      <img src={homepage} alt="elijah" />
-      <img src={clients} alt="elijah" />
-      <img src={brand} alt="elijah" />
+      <div className="content">
+        <img src={homepage} alt="elijah" />
+        <img src={clients} alt="elijah" />
+        <img src={brand} alt="elijah" />
+      </div>
+      
       <div className="spacer"></div>
       <FullImage src={moodboard} alt='preview' />
       <div className="spacer"></div>
-      {/* responsive ui */}
-      <div className='headline text-regular'>responsive selection</div>
-      <div className='separator'></div>
-      <div className="responsive">
-        <img src={homepageMobile} alt="responsive" />
-        <img src={menuMobile} alt="responsive" />
-        <img src={clientsMobile} alt="responsive" />
-        <img src={friendsMobile} alt="responsive" />
+
+      <div className="content">
+        <div className='headline text-regular'>responsive selection</div>
+        <div className='separator'></div>
+        <div className="responsive">
+          <img src={homepageMobile} alt="responsive" />
+          <img src={menuMobile} alt="responsive" />
+          <img src={clientsMobile} alt="responsive" />
+          <img src={friendsMobile} alt="responsive" />
+        </div>
       </div>
+     
       <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with love for Elijah</p>

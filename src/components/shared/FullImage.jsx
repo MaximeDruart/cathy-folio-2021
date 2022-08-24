@@ -1,6 +1,8 @@
 import React, { useLayoutEffect, useRef, useState } from "react"
 import { useViewportScroll, useTransform, useSpring, motion } from "framer-motion"
 import styled from "styled-components"
+import { marginPage } from "../../styles/globalCustom"
+
 
 const Container = styled.div`
   width: 100vw;
@@ -9,11 +11,11 @@ const Container = styled.div`
   margin-left: -10vw;
 
   @media (max-width: 769px) {
-    margin-left: -40px;
+    margin-left: -10vw;
     height: 60vh;
   }
   @media (max-width: 480px) {
-    margin-left: -28px;
+    margin-left: -10vw;
     height: 40vh;
   }
   img {

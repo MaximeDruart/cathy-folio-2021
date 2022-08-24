@@ -24,7 +24,7 @@ import FullImage from "../shared/FullImage"
 const StyledChanel = styled.div`
 img, video{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (max-width: 769px) {
     margin-bottom: 20px;
   }
@@ -96,36 +96,43 @@ const Chanel = () => {
       {/* end chart */}
 
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Moodboard</div>
-      <div className='separator'></div>
-      <img src={moodboard} alt="moodboard" />
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Room preview</div>
-      <div className='separator'></div>
-      <img src={room} alt="room" />
+      
+      <div className="content">
+        <div className='headline text-regular'>Moodboard</div>
+        <div className='separator'></div>
+        <img src={moodboard} alt="moodboard" />
+        <div className="demi-spacer"></div>
+        <div className='headline text-regular'>Room preview</div>
+        <div className='separator'></div>
+        <img src={room} alt="room" />
+      </div>
+      
       <div className="spacer"></div>
 
       <FullImage src={preview} alt='card' />
 
       <div className="big-spacer"></div>
 
-      <div dangerouslySetInnerHTML={{ __html: `
-         <video loop muted autoplay playsinline>
-          <source src="${homepage}" type="video/mp4">
-         </video>`
-        }}
-      />
+      <div className="content">
+        <div dangerouslySetInnerHTML={{ __html: `
+          <video loop muted autoplay playsinline>
+            <source src="${homepage}" type="video/mp4">
+          </video>`
+          }}
+        />
 
-      <div dangerouslySetInnerHTML={{ __html: `
-         <video loop muted autoplay playsinline>
-         <source src="${video1}" type="video/mp4">
-        </video>`
-        }}
-      />
+        <div dangerouslySetInnerHTML={{ __html: `
+          <video loop muted autoplay playsinline>
+          <source src="${video1}" type="video/mp4">
+          </video>`
+          }}
+        />
 
-      <img src={girlTalk} alt="girlTalk" />
-      <img src={girlKit} alt="girlKit" />
-      <img src={getDressed} alt="getDressed" />
+        <img src={girlTalk} alt="girlTalk" />
+        <img src={girlKit} alt="girlKit" />
+        <img src={getDressed} alt="getDressed" />
+      </div>
+      
       <div className="spacer"></div>
 
       <FullImage src={product} alt='card' />

@@ -23,7 +23,7 @@ import FullImage from "../shared/FullImage"
 const StyledZhonglin = styled.div`
 img, video{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (max-width: 769px) {
     margin-bottom: 20px;
   }
@@ -75,51 +75,54 @@ const Zhonglin = () => {
   return (
     <StyledZhonglin>
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Grids</div>
-      <div className='separator'></div>
-      <img src={grids} alt="grid" />
 
-    <div className="spacer"></div>
+      <div className="content">
+        <div className='headline text-regular'>Grids</div>
+        <div className='separator'></div>
+        <img src={grids} alt="grid" />
+      </div>
 
-    <FullImage src={preview} alt='card' />
+      <div className="spacer"></div>
 
-    <div className="big-spacer"></div>
+      <FullImage src={preview} alt='card' />
 
-    {/* <div className='headline text-regular'>Loader</div>
-    <div className='separator'></div> */}
-    <div dangerouslySetInnerHTML={{ __html: `
-    <video loop muted autoplay playsinline>
-        <source src="${loader}" type="video/mp4">
-    </video>`
-    }}
-    />
+      <div className="big-spacer"></div>
 
-    <div dangerouslySetInnerHTML={{ __html: `
-      <video loop muted autoplay playsinline>
-          <source src="${menu}" type="video/mp4">
-      </video>`
-      }}
-    />
+      <div className="content">
+        <div dangerouslySetInnerHTML={{ __html: `
+        <video loop muted autoplay playsinline>
+            <source src="${loader}" type="video/mp4">
+        </video>`
+        }}
+        />
 
-    <div dangerouslySetInnerHTML={{ __html: `
-      <video loop muted autoplay playsinline>
-          <source src="${home}" type="video/mp4">
-      </video>`
-      }}
-    />
+        <div dangerouslySetInnerHTML={{ __html: `
+          <video loop muted autoplay playsinline>
+              <source src="${menu}" type="video/mp4">
+          </video>`
+          }}
+        />
 
-    <div dangerouslySetInnerHTML={{ __html: `
-      <video loop muted autoplay playsinline>
-          <source src="${galerie}" type="video/mp4">
-      </video>`
-      }}
-    />
+        <div dangerouslySetInnerHTML={{ __html: `
+          <video loop muted autoplay playsinline>
+              <source src="${home}" type="video/mp4">
+          </video>`
+          }}
+        />
+
+        <div dangerouslySetInnerHTML={{ __html: `
+          <video loop muted autoplay playsinline>
+              <source src="${galerie}" type="video/mp4">
+          </video>`
+          }}
+        />
+      </div>
 
     <div className="spacer"></div>
 
     <FullImage src={prototypes} alt='prototype' />
 
-      <div className="spacer"></div>
+    <div className="spacer"></div>
 
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made as ESD Paris.</p>

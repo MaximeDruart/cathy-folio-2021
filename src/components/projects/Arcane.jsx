@@ -56,12 +56,15 @@ const Arcane = () => {
   return (
     <StyledArcane>
       <div className="demi-spacer"></div>
-      <img src={jinx} alt="arcane" />
-      <img src={jinx2} alt="arcane" />
-      <img src={silco} alt="arcane" />
-      <img src={silco2} alt="arcane" />
-      <img src={sisters} alt="arcane" />
-      <img src={vi} alt="arcane" />
+
+      <div className="content">
+        <img src={jinx} alt="arcane" />
+        <img src={jinx2} alt="arcane" />
+        <img src={silco} alt="arcane" />
+        <img src={silco2} alt="arcane" />
+        <img src={sisters} alt="arcane" />
+        <img src={vi} alt="arcane" />
+      </div>
       <div className="spacer"></div>
       <FullImage src={arcane} alt='prototype' />
       <div className="big-spacer"></div>

@@ -77,50 +77,58 @@ const Shibuya = () => {
 return (
 <StyledShibuya>
   <div className="demi-spacer"></div>
-  <div className="img_container">
-    <img className="trio" src={grid1} alt="grid" />
-    <img className="trio" src={grid2} alt="grid" />
-    <img className="trio" src={grid3} alt="grid" />
-    <img className="trio" src={grid4} alt="grid" />
-    <img className="trio" src={grid5} alt="grid" />
-    <img className="trio" src={grid6} alt="grid" />
+
+  <div className="content">
+    <div className="img_container">
+      <img className="trio" src={grid1} alt="grid" />
+      <img className="trio" src={grid2} alt="grid" />
+      <img className="trio" src={grid3} alt="grid" />
+      <img className="trio" src={grid4} alt="grid" />
+      <img className="trio" src={grid5} alt="grid" />
+      <img className="trio" src={grid6} alt="grid" />
+    </div>
+    <div className="spacer"></div>
+    <div className='headline text-regular'>Latin Logo</div>
+    <div className='separator'></div>
+    <div className="logo-duo">
+      <ShibuyaLatin />
+      <ShibuyaLatin />
+    </div>
+    <div className="spacer"></div>
+    <div className='headline text-regular'>Kanji Logo</div>
+    <div className='separator'></div>
+    <div className="logo-duo">
+      <ShibuyaKanji />
+      <ShibuyaKanji />
+    </div>
   </div>
-  <div className="spacer"></div>
-  <div className='headline text-regular'>Latin Logo</div>
-  <div className='separator'></div>
-  <div className="logo-duo">
-    <ShibuyaLatin />
-    <ShibuyaLatin />
-  </div>
-  <div className="spacer"></div>
-  <div className='headline text-regular'>Kanji Logo</div>
-  <div className='separator'></div>
-  <div className="logo-duo">
-    <ShibuyaKanji />
-    <ShibuyaKanji />
-  </div>
+
   <div className="spacer"></div>
   <FullImage src={moodboard} alt='preview' />
   <div className="spacer"></div>
-  {/* pub */}
-  <div className='headline text-regular'>Advertising frames</div>
-  <div className='separator'></div>
-  <img src={pub} alt="logo"></img>
-  <div className="big-spacer"></div>
-  {/* city */}
-  <div className='headline text-regular'>Advertisements in the neighborhood</div>
-  <div className='separator'></div>
-  <img src={city} alt="logo"></img>
-  <div className="big-spacer"></div>
-  {/* city */}
-  <div className='headline text-regular'>Office stuff</div>
-  <div className='separator'></div>
-  <img src={office} alt="logo"></img>
-  <div className="big-spacer"></div>
-  {/* city */}
-  <div className='headline text-regular'>Print stuff</div>
-  <div className='separator'></div>
-  <img src={prints} alt="logo"></img>
+
+  <div className="content">
+    {/* pub */}
+    <div className='headline text-regular'>Advertising frames</div>
+      <div className='separator'></div>
+      <img src={pub} alt="logo"></img>
+      <div className="big-spacer"></div>
+      {/* city */}
+      <div className='headline text-regular'>Advertisements in the neighborhood</div>
+      <div className='separator'></div>
+      <img src={city} alt="logo"></img>
+      <div className="big-spacer"></div>
+      {/* city */}
+      <div className='headline text-regular'>Office stuff</div>
+      <div className='separator'></div>
+      <img src={office} alt="logo"></img>
+      <div className="big-spacer"></div>
+      {/* city */}
+      <div className='headline text-regular'>Print stuff</div>
+      <div className='separator'></div>
+      <img src={prints} alt="logo"></img>
+  </div>
+ 
   <div className="big-spacer"></div>
   <h2 className='text-h2'>Thanks for scrolling</h2>
   <p className="text-description">Project made with fun at ESD Paris</p>

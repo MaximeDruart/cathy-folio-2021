@@ -61,7 +61,7 @@ export default css`
 
     @media (max-width: 480px) {
       font-size: 24px;
-      line-height: 1.2;
+      line-height: 1.4;
     }
   }
   .text-h3 {
@@ -171,7 +171,7 @@ export default css`
   .spacer {
     height: 20vh;
     @media screen and (max-width: 768px) {
-      height: 15vh;
+      height: 10vh;
     }
   }
   .demi-spacer {
@@ -212,12 +212,12 @@ export const marginPage = css`
   padding: 0 10vw;
 
   @media (max-width: 769px) {
-    padding: 0 40px;
+    padding: 0 10vw;
   }
 
-  @media (max-width: 480px) {
-    padding: 0 28px;
-  }
+  // @media (max-width: 480px) {
+  //   padding: 0 28px;
+  // }
 `
 
 

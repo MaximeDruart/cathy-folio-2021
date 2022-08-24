@@ -27,6 +27,9 @@ import Cathy3 from "../../assets/icons/cathy3.svg?component"
 
 const StyledSangen = styled.div`
 
+svg{
+  height: 300px;
+}
 svg:nth-child(1){
   .a,.b,.c{fill:none;}.b{stroke:${({ theme }) => theme.colors.text.disabled2};}.c{stroke:${({ theme }) => theme.colors.text.standard};stroke-width:0.8px;}
   }
@@ -42,7 +45,7 @@ img.duo{
 }
 img{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (max-width: 600px){
     margin-bottom: 20px;
   }
@@ -88,68 +91,51 @@ img{
 const Sangen = () => {
   return (
     <StyledSangen>
-          {/* <h2 className='text-h2'>Graphic Chart</h2>
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">Creating your own brand is by far the most difficult thing to do.
-          difficult thing to do. You tend to criticize and procrastinate
-          procrastinate constantly. I finally got a rendering that I was happy with.</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Neue Montreal<br/>Aa 123</span>
-          <span className="text-typo two">Gallery Modern<br/>Aa 123</span>
-
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#FFFFFF</div>
-          <div className="color two">#b9b3fc</div>
-        </div>
-      </div> */}
-      {/* end chart */}
-
       <div className="demi-spacer"></div>
-      {/* logo */}
-
-      <div className='headline text-regular'>logo maker</div>
-      <div className='separator'></div>
-      <div className="img_container">
-        <Cathy1></Cathy1>
-        <Cathy2></Cathy2>
-        <Cathy3></Cathy3>
+      
+      <div className="content">
+        <div className='headline text-regular'>logo maker</div>
+        <div className='separator'></div>
+        <div className="img_container">
+          <Cathy1></Cathy1>
+          <Cathy2></Cathy2>
+          <Cathy3></Cathy3>
+        </div>
       </div>
+     
       <div className="spacer"></div>
       <FullImage src={resume} alt='resume' />
       <div className="spacer"></div>
-      <div className='headline text-regular'>resume</div>
-      <div className='separator'></div>
-      <img className="little" src={resumeVerso} alt="resume" />
 
-      <div className="spacer"></div>
-      
-      <FullImage src={businessCard} alt='card' />
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Business Card</div>
-      <div className='separator'></div>
-      <div className="img_container">
-        <img className="duo" src={cardRecto} alt="calm" />
-        <img className="duo" src={cardVerso} alt="casual" />
+      <div className="content">
+        <div className='headline text-regular'>resume</div>
+        <div className='separator'></div>
+        <img className="little" src={resumeVerso} alt="resume" />
       </div>
+      
 
       <div className="spacer"></div>
-      <img src={stickers} alt="stickers" />
+      <FullImage src={businessCard} alt='card' />
+      <div className="spacer"></div>
 
+      <div className="content">
+        <div className='headline text-regular'>Business Card</div>
+        <div className='separator'></div>
+        <div className="img_container">
+          <img className="duo" src={cardRecto} alt="calm" />
+          <img className="duo" src={cardVerso} alt="casual" />
+        </div>
+      </div>
+    
 
-
+      <div className="spacer"></div>
+      <FullImage src={envelop} alt='envelop' />
       <div className="big-spacer"></div>
 
-      <FullImage src={envelop} alt='envelop' />
-      <div className="spacer"></div>
       <h2 className='text-h2'>Thanks for watching</h2>
       <div className="demis-spacer"></div>
       <p className="text-description">Do not hesitate to contact me for any project :3</p>
+
       <div className="big-spacer"></div>
 
     </StyledSangen>

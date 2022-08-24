@@ -13,7 +13,7 @@ import summerTickets from "../../assets/img/works/sens/summerTickets.png"
 const StyledSens = styled.div`
 img{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (max-width: 769px) {
     margin-bottom: 20px;
   }
@@ -49,33 +49,40 @@ const Sens = () => {
   return (
     <StyledSens>
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Garden's Moodboard</div>
-      <div className='separator'></div>
-      <img src={gardenMoodboard} alt="garden" />
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Poster</div>
-      <div className='separator'></div>
-      <img src={gardenPosters} alt="garden" />
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Entry tickets</div>
-      <div className='separator'></div>
-      <img className="quart" src={gardenTickets} alt="garden" />
 
+      <div className="content">
+        <div className='headline text-regular'>Garden's Moodboard</div>
+        <div className='separator'></div>
+        <img src={gardenMoodboard} alt="garden" />
+        <div className="demi-spacer"></div>
+        <div className='headline text-regular'>Poster</div>
+        <div className='separator'></div>
+        <img src={gardenPosters} alt="garden" />
+        <div className="demi-spacer"></div>
+        <div className='headline text-regular'>Entry tickets</div>
+        <div className='separator'></div>
+        <img className="quart" src={gardenTickets} alt="garden" />
+      </div>
+      
       <div className="spacer"></div>
       {/* summer */}
       <FullImage src={summerKit} alt='card' />
       <div className="spacer"></div>
-      <div className='headline text-regular'>Aurae's Moodboard</div>
-      <div className='separator'></div>
-      <img src={summerMoodboard} alt="garden" />
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Poster</div>
-      <div className='separator'></div>
-      <img src={summerPosters} alt="garden" />
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>Entry tickets</div>
-      <div className='separator'></div>
-      <img className="quart" src={summerTickets} alt="garden" />
+
+      <div className="content">
+        <div className='headline text-regular'>Aurae's Moodboard</div>
+        <div className='separator'></div>
+        <img src={summerMoodboard} alt="garden" />
+        <div className="demi-spacer"></div>
+        <div className='headline text-regular'>Poster</div>
+        <div className='separator'></div>
+        <img src={summerPosters} alt="garden" />
+        <div className="demi-spacer"></div>
+        <div className='headline text-regular'>Entry tickets</div>
+        <div className='separator'></div>
+        <img className="quart" src={summerTickets} alt="garden" />
+      </div>
+     
 
       <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for scrolling</h2>

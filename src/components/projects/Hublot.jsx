@@ -30,7 +30,7 @@ import FullImage from "../shared/FullImage"
 const StyledHublot = styled.div`
 img, video.full{
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   @media (max-width: 769px) {
     margin-bottom: 20px;
   }
@@ -82,47 +82,53 @@ const Hublot = () => {
   return (
     <StyledHublot>
       <div className="demi-spacer"></div>
-      <div className='headline text-regular'>homepage</div>
-      <div className='separator'></div>
-      <div dangerouslySetInnerHTML={{ __html: `
-      <video class="full" loop muted autoplay playsinline>
-          <source src="${home}" type="video/mp4">
-      </video>`
-      }}
-      />
-      <img src={product} alt="maquettes" />
-      <div dangerouslySetInnerHTML={{ __html: `
-      <video class="full" loop muted autoplay playsinline>
-          <source src="${details}" type="video/mp4">
-      </video>`
-      }}
-      />
+      <div className="content">
+        <div className='headline text-regular'>homepage</div>
+        <div className='separator'></div>
+        <div dangerouslySetInnerHTML={{ __html: `
+        <video class="full" loop muted autoplay playsinline>
+            <source src="${home}" type="video/mp4">
+        </video>`
+        }}
+        />
+        <img src={product} alt="maquettes" />
+        <div dangerouslySetInnerHTML={{ __html: `
+        <video class="full" loop muted autoplay playsinline>
+            <source src="${details}" type="video/mp4">
+        </video>`
+        }}
+        />
+      </div>
+     
 
       <div className="spacer"></div>
 
       <FullImage src={duo} alt='prototype' />
+      
       <div className="spacer"></div>
 
-      <div className='headline text-regular'>Product Details</div>
-      <div className='separator'></div>
+      <div className="content">
+        <div className='headline text-regular'>Product Details</div>
+        <div className='separator'></div>
+        <img src={unico} alt="maquettes" />
+        <div dangerouslySetInnerHTML={{ __html: `
+        <video class="full" loop muted autoplay playsinline>
+            <source src="${concept}" type="video/mp4">
+        </video>`
+        }}
+        />
+        <img src={takashi} alt="maquettes" />
+        <img src={slider} alt="maquettes" />
+      </div>  
 
-      {/* <img src={color} alt="maquettes" /> */}
-      <img src={unico} alt="maquettes" />
-      <div dangerouslySetInnerHTML={{ __html: `
-      <video class="full" loop muted autoplay playsinline>
-          <source src="${concept}" type="video/mp4">
-      </video>`
-      }}
-      />
-
-    <img src={takashi} alt="maquettes" />
-    <img src={slider} alt="maquettes" />
     <div className="spacer"/>
 
     <FullImage src={responsive} alt='prototype' />
     
     <div className="spacer"></div>
-    <div className='headline text-regular'>responsive selection</div>
+
+    <div className="content">
+      <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>
       <div className="responsive">
         <div className="video" dangerouslySetInnerHTML={{ __html: `
@@ -138,8 +144,9 @@ const Hublot = () => {
         </video>`
         }}
         />
-        <img src={productsMobile} alt="responsive"></img>
+      <img src={productsMobile} alt="responsive"></img>
       </div>
+    </div>
       <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with love</p>

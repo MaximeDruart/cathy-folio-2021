@@ -48,6 +48,12 @@ const StyledProjectDetail = styled.div`
       height: 60vh;
     }
   }
+  .content {
+    padding: 0 10vw;
+    @media (max-width: 750px) {
+      padding: 0;
+    }
+  }
   video {
     width: 100%;
     height: auto;

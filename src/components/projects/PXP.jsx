@@ -16,7 +16,7 @@ const StyledPXP = styled.div`
   }
   img {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     @media (max-width: 600px){
       margin-bottom: 20px;
     }
@@ -50,19 +50,27 @@ const PXP = () => {
   return (
     <StyledPXP>
       <div className='demi-spacer'></div>
-      <img src={homepage} alt='pxp' />
-      <img src={productPage} alt='pxp' />
-      <div className='big-spacer'></div>
+
+      <div className="content">
+        <img src={homepage} alt='pxp' />
+        <img src={productPage} alt='pxp' />
+      </div>
+      
+      <div className='spacer'></div>
       <FullImage src={pxpDesktop} alt='pxp-desktop' />
       <div className="big-spacer"></div>
-      <div className='headline text-regular'>responsive selection</div>
-      <div className='separator'></div>
-      <div className='responsive'>
-        <img src={homeMobile} alt='responsive'></img>
-        <img src={menuMobile} alt='responsive'></img>
-        <img src={productMobile} alt='responsive'></img>
-        <img src={blogMobile} alt='responsive'></img>
+
+      <div className="content">
+        <div className='headline text-regular'>responsive selection</div>
+        <div className='separator'></div>
+        <div className='responsive'>
+          <img src={homeMobile} alt='responsive'></img>
+          <img src={menuMobile} alt='responsive'></img>
+          <img src={productMobile} alt='responsive'></img>
+          <img src={blogMobile} alt='responsive'></img>
+        </div>
       </div>
+   
       <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for watching</h2>
       <div className="demis-spacer"></div>
