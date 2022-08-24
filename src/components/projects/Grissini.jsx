@@ -19,11 +19,6 @@ img{
     margin-bottom: 20px;
   }
 }
-.responsive{
-    img{
-      border: solid 0.5px ${({ theme }) => theme.colors.text.disabled2};;
-    }
-  }
 .chart{
   .typography{
     span.text-typo{

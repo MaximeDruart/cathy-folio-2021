@@ -21,11 +21,6 @@ import sensCover from "./assets/img/works/covers/5sens.jpg"
 import sensCoverSmall from "./assets/img/works/covers-small/5sens-min.jpg"
 import sensVisual1 from "./assets/img/works/sens/visual1.jpg"
 
-import Hologramme from "./components/projects/Hologramme"
-import hologrammeCover from "./assets/img/works/covers/hologramme.jpg"
-import hologrammeCoverSmall from "./assets/img/works/covers-small/hologramme-min.jpg"
-import hologrammeVisual1 from "./assets/img/works/hologramme/visual1.jpg"
-
 import Elijah from "./components/projects/Elijah"
 import elijahCover from "./assets/img/works/covers/elijah.jpg"
 import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
@@ -281,19 +276,6 @@ let projectsData = [
     description:
       "Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo.",
   },
-  // {
-  //   name: "Hologramme",
-  //   path: "hologramme",
-  //   title: "UI/UX Homepage for Hologramme",
-  //   visual1: hologrammeVisual1,
-  //   coverImg: hologrammeCover,
-  //   coverImgSmall: hologrammeCoverSmall,
-  //   component: Hologramme,
-  //   date: "Dec. 2020",
-  //   role: "Designer",
-  //   techs: ["Adobe XD, Photoshop"],
-  //   description: "Hologramme is a high end hat distributor. I was asked to redesign their B2C website",
-  // },
   // {
   //   name: "Desktop",
   //   path: "desktop",

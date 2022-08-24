@@ -119,6 +119,7 @@ const StyledProjectDetail = styled.div`
 
     img, .video {
       width: 20%;
+      height: 100%;
       margin: 20px;
       @media (max-width: 1000px) {
         width: 30%;
@@ -167,9 +168,8 @@ const StyledProjectDetail = styled.div`
     margin-top: 20px;
     margin-bottom: 50px;
     width: 100%;
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.text.standard};
-    opacity: 0.2;
+    height: 1px;
+    background-color: ${({ theme }) => theme.colors.text.disabled2};
 
     @media (max-width: 769px) {
       margin-top: 14px;

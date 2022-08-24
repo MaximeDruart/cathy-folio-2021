@@ -22,9 +22,8 @@ const Container = styled.div`
       margin-top: 20px;
       margin-bottom: 50px;
       width: 100%;
-      height: 2px;
-      background-color: ${({ theme }) => theme.colors.text.standard};
-      opacity: 0.2;
+      height: 1px;
+      background-color: ${({ theme }) => theme.colors.text.disabled2};
     }
   }
 

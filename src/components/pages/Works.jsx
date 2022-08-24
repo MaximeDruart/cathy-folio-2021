@@ -214,7 +214,7 @@ function ShaderPlane(props) {
         textureAspect={props.texture.image.naturalWidth / props.texture.image.naturalHeight}
         ref={matRef}
         tex={props.texture}
-        rgbShiftStrength={0.8}
+        rgbShiftStrength={0.4}
       />
       <Html center className={`canvas-html ${props.isInView ? "" : "hidden"}`} position={[0, 0, 0.25]}>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='wrapper'>

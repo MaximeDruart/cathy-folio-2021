@@ -48,28 +48,7 @@ img{
 const Sens = () => {
   return (
     <StyledSens>
-      {/* <h2 className='text-h2'>Graphic Chart</h2>
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">I went for a clean and elegant design while staying on something dynamic and experimental.</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Ginger<br/>Aa 123</span>
-          <span className="text-typo two">Neue Montreal<br/>Aa 123</span>
-
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#EBEBEB</div>
-          <div className="color two">#D3EBFF</div>
-          <div className="color three">#ffe2f1</div>
-        </div>
-      </div> */}
-      {/* end chart */}
       <div className="demi-spacer"></div>
-      {/* <FullImage src={springKit} alt='card' /> */}
       <div className='headline text-regular'>Garden's Moodboard</div>
       <div className='separator'></div>
       <img src={gardenMoodboard} alt="garden" />
@@ -81,6 +60,7 @@ const Sens = () => {
       <div className='headline text-regular'>Entry tickets</div>
       <div className='separator'></div>
       <img className="quart" src={gardenTickets} alt="garden" />
+
       <div className="spacer"></div>
       {/* summer */}
       <FullImage src={summerKit} alt='card' />
@@ -96,7 +76,8 @@ const Sens = () => {
       <div className='headline text-regular'>Entry tickets</div>
       <div className='separator'></div>
       <img className="quart" src={summerTickets} alt="garden" />
-      <div className="spacer"></div>
+
+      <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>

@@ -152,7 +152,7 @@ export default css`
   }
 
   .button{
-    border: solid 1px ${({ theme }) => theme.colors.text.disabled};
+    border: solid 1px ${({ theme }) => theme.colors.text.disabled2};
     padding: 18px 50px;
     border-radius: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
@@ -181,9 +181,9 @@ export default css`
     }
   }
   .big-spacer {
-    height: 40vh;
+    height: 30vh;
     @media screen and (max-width: 768px) {
-      height: 25vh;
+      height: 20vh;
     }
   }
   .margin-small {

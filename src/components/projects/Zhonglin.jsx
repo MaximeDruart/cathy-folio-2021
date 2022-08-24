@@ -74,47 +74,10 @@ img, video{
 const Zhonglin = () => {
   return (
     <StyledZhonglin>
-          {/* <h2 className='text-h2'>Graphic Chart</h2>
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">For this project, I selected 3 neutral colors, perfectly integrating with the universe. For the typography, a sans serif font, modern, readable and accessible to read, accompanied by a typography dedicated to the titles.</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Ginger<br/>Aa Bb Cc</span>
-          <span className="text-typo two">Nunito Sans<br/>Aa 123</span>
-
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#141414</div>
-          <div className="color two">#E6E4E4</div>
-          <div className="color three">#FFFFFF</div>
-        </div>
-      </div> */}
-      {/* end chart */}
-
       <div className="demi-spacer"></div>
-
-      {/* <h2 className='text-h2'>Design System</h2>
-      <div className="demi-spacer"></div>
-      <img src={designSystem} alt="designSystem" />
-
-      <div className="big-spacer"></div> */}
-
-      {/* <h2 className='text-h2'>Maquettes</h2> */}
-      {/* <div className="demi-spacer"></div> */}
       <div className='headline text-regular'>Grids</div>
       <div className='separator'></div>
       <img src={grids} alt="grid" />
-
-      {/* <div className="spacer"></div>
-
-      <div className="demi-spacer"></div>
-      <div className='headline text-regular'>6 pages</div>
-      <div className='separator'></div>
-      <img src={maquettes} alt="maquettes" /> */}
 
     <div className="spacer"></div>
 

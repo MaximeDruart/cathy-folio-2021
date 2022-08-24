@@ -27,7 +27,7 @@ const StyledHeader = styled.div`
     font-size: 10px;
     letter-spacing: 0.2px;
     text-transform: uppercase;
-    font-family: 'Neue Montreal';
+    font-family: NeueMontrealRegular;
     pointer-events: auto;
     transition: background-color 0.3s; 
     // background-color: #FFFFFF40;

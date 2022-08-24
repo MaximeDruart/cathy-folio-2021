@@ -92,7 +92,7 @@ const Arcane = () => {
         <img src={clientsMobile} alt="responsive" />
         <img src={friendsMobile} alt="responsive" />
       </div>
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with love for Elijah</p>
       <div className="big-spacer"></div>

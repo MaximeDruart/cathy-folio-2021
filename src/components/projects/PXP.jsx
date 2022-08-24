@@ -49,40 +49,12 @@ const StyledPXP = styled.div`
 const PXP = () => {
   return (
     <StyledPXP>
-      {/* <h2 className='text-h2'>Graphic Chart</h2>
-      <div className='chart'>
-        <div className='art-direction'>
-          <h4 className='text-h4'>Art direction</h4>
-          <p className='text-description'>
-          We started with monochrome colors to harmonize and highlight the collections of Project X Paris. The colors of the collections being very colorful, stand out well against black and white. For the typography, linear and sans serif fonts make Project X Paris a minimalist and high-end brand.
-          </p>
-        </div>
-        <div className='typography'>
-          <h4 className='text-h4'>Typography</h4>
-          <span className='text-typo one'>
-            Montserrat
-            <br />
-            Aa 123
-          </span>
-          <span className='text-typo two'>
-            Gotham
-            <br />
-            Aa 123
-          </span>
-        </div>
-        <div className='colors'>
-          <h4 className='text-h4'>Colors</h4>
-          <div className='color one'>#FFFFFF</div>
-          <div className='color two'>#000000</div>
-        </div>
-      </div> */}
-      {/* start case */}
-      <div className='spacer'></div>
+      <div className='demi-spacer'></div>
       <img src={homepage} alt='pxp' />
       <img src={productPage} alt='pxp' />
-      <div className='spacer'></div>
+      <div className='big-spacer'></div>
       <FullImage src={pxpDesktop} alt='pxp-desktop' />
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
       <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>
       <div className='responsive'>
@@ -91,7 +63,7 @@ const PXP = () => {
         <img src={productMobile} alt='responsive'></img>
         <img src={blogMobile} alt='responsive'></img>
       </div>
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for watching</h2>
       <div className="demis-spacer"></div>
       <p className="text-description">Project made with love at Project X Paris</p>

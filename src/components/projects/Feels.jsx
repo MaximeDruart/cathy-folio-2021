@@ -90,22 +90,19 @@ img{
 const Feels = () => {
   return (
     <StyledFeels>
-
       <div className="demi-spacer"></div>
-
       <div className='headline text-regular'>Dark Moodboard</div>
       <div className='separator'></div>
       <img src={moodboard} alt="moodboard" />
-
+      
       <div className="spacer"></div>
 
-      <h2 className='text-h2'>The experience</h2>
-      <div className="demi-spacer"></div>
+      <div className='headline text-regular'>The experience</div>
+      <div className='separator'></div>
       <video poster={thumbnail} controls src={video1}></video>
-      <div className="big-spacer"></div>
-      
-      <h2 className='text-h2'>How do you feel today ?</h2>
-      <div className="demi-spacer"></div>
+
+
+      <div className="spacer"></div>
       <div className='headline text-regular'>GENERATES AN EMOTIONAL PALETTE</div>
       <div className='separator'></div>
       <div className="img_container mini">
@@ -122,7 +119,7 @@ const Feels = () => {
         <img className="duo" src={b2} alt="img" />
       </div>
 
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
 
       <div className='headline text-regular'>Flyers</div>
       <div className='separator'></div>
@@ -144,7 +141,7 @@ const Feels = () => {
         <img className="duo" src={bPrint} alt="print" />
         <img className="duo" src={rPrint} alt="print" />
       </div>
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with fun with an amazing team</p>
       <div className="big-spacer"></div>

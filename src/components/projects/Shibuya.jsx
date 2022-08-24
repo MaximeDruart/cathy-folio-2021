@@ -86,7 +86,6 @@ return (
     <img className="trio" src={grid6} alt="grid" />
   </div>
   <div className="spacer"></div>
-  <div className="demi-spacer"></div>
   <div className='headline text-regular'>Latin Logo</div>
   <div className='separator'></div>
   <div className="logo-duo">
@@ -122,7 +121,7 @@ return (
   <div className='headline text-regular'>Print stuff</div>
   <div className='separator'></div>
   <img src={prints} alt="logo"></img>
-  <div className="spacer"></div>
+  <div className="big-spacer"></div>
   <h2 className='text-h2'>Thanks for scrolling</h2>
   <p className="text-description">Project made with fun at ESD Paris</p>
   <div className="big-spacer"></div>

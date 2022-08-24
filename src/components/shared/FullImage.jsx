@@ -20,6 +20,7 @@ const Container = styled.div`
     width: 100%;
     height: 110%;
     object-fit: cover;
+    margin-bottom: 0 !important;
   }
 `
 

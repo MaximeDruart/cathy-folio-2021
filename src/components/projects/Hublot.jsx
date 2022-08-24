@@ -81,36 +81,7 @@ img, video.full{
 const Hublot = () => {
   return (
     <StyledHublot>
-          {/* <h2 className='text-h2'>Graphic Chart</h2>
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">For this project, I went for a very sober and minimalist style. The products are colored, it allows to highlight them while remaining elegant</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Ginger<br/>Aa Bb Cc</span>
-          <span className="text-typo two">Nunito Sans<br/>Aa 123</span>
-
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#141414</div>
-          <div className="color two">#E6E4E4</div>
-          <div className="color three">#FFFFFF</div>
-        </div>
-      </div> */}
-
-      {/* end chart */}
-
       <div className="demi-spacer"></div>
-
-      {/* <FullImage src={preview} alt='card' />
-
-      <div className="spacer"></div> */}
-
-      {/* <h2 className='text-h2'>Maquettes</h2> */}
-      {/* <div className="demi-spacer"></div> */}
       <div className='headline text-regular'>homepage</div>
       <div className='separator'></div>
       <div dangerouslySetInnerHTML={{ __html: `
@@ -132,7 +103,6 @@ const Hublot = () => {
       <FullImage src={duo} alt='prototype' />
       <div className="spacer"></div>
 
-      <div className="demi-spacer"></div>
       <div className='headline text-regular'>Product Details</div>
       <div className='separator'></div>
 

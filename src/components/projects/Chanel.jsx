@@ -74,7 +74,7 @@ img, video{
 const Chanel = () => {
   return (
     <StyledChanel>
-          {/* <h2 className='text-h2'>Graphic Chart</h2>
+      {/* <h2 className='text-h2'>Graphic Chart</h2>
           <div className="chart">
         <div className="art-direction">
           <h4 className="text-h4">Art direction</h4>
@@ -96,19 +96,18 @@ const Chanel = () => {
       {/* end chart */}
 
       <div className="demi-spacer"></div>
-
-      <h2 className='text-h2'>Moodboard</h2>
-      <div className="demi-spacer"></div>
+      <div className='headline text-regular'>Moodboard</div>
+      <div className='separator'></div>
       <img src={moodboard} alt="moodboard" />
-
+      <div className="demi-spacer"></div>
+      <div className='headline text-regular'>Room preview</div>
+      <div className='separator'></div>
+      <img src={room} alt="room" />
       <div className="spacer"></div>
 
       <FullImage src={preview} alt='card' />
 
       <div className="big-spacer"></div>
-      <img src={room} alt="room" />
-
-      <div className="spacer"></div>
 
       <div dangerouslySetInnerHTML={{ __html: `
          <video loop muted autoplay playsinline>
@@ -125,16 +124,13 @@ const Chanel = () => {
       />
 
       <img src={girlTalk} alt="girlTalk" />
-
       <img src={girlKit} alt="girlKit" />
-
       <img src={getDressed} alt="getDressed" />
-
       <div className="spacer"></div>
 
       <FullImage src={product} alt='card' />
 
-      <div className="spacer"></div>
+      <div className="big-spacer"></div>
 
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Thanks to <a href='https://www.instagram.com/markdearman 'target="_blank">Markdearman</a> for the hand animation, and to <a href='https://www.behance.net/cristina_laporta'target="_blank">Cristina</a> for the 3D decoration</p>
