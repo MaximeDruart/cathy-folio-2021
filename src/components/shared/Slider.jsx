@@ -24,8 +24,8 @@ const StyledSlider = styled.div`
       position: absolute;
     }
     @media (max-width: 769px) {
-      width: 160px;
-      height: 200px;
+      width: 180px;
+      height: 230px;
     }
   }
 

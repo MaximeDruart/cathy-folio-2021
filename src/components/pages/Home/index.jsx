@@ -71,7 +71,7 @@ const StyledHome = styled.div`
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
         font-size: 116px;
-        /* line-height: 0.9; */
+        line-height: 1; 
 
         &.first_line {
           text-align: start;
@@ -169,7 +169,8 @@ const StyledHome = styled.div`
 
       @media (max-width: 500px) {
         .line {
-          font-size: 44px;
+          font-size: 46px;
+          line-height: 1.3;
           &.third_line {
             .slider-container {
               display: flex;
@@ -178,8 +179,9 @@ const StyledHome = styled.div`
               top: 100px;
               right: 0;
               &::after {
-                top: -50px;
+                top: -30px;
                 right: 0;
+                line-height: 1.8;
               }
             }
             .important_word {
