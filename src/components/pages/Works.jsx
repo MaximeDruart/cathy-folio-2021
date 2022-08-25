@@ -60,6 +60,7 @@ const StyledWorks = styled(motion.div)`
         text-transform: uppercase;
         white-space: nowrap;
         color: white;
+        font-weight: 100;
       }
 
       .cta {

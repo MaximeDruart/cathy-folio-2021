@@ -116,7 +116,7 @@ export default css`
   }
 
   .text-button {
-    font-family: GilroyMedium;
+    font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

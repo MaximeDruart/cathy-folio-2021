@@ -6,6 +6,8 @@ import PageTemplate from "../pages/PageTemplate"
 import projectsData from "../../projectsData"
 import { Link, useHistory } from "react-router-dom"
 import FullImage from "../shared/FullImage"
+import ArrowDownSVG from "../../assets/icons/arrow_down.svg?component"
+
 
 const StyledProjectDetail = styled.div`
   .hero-title {
@@ -15,29 +17,42 @@ const StyledProjectDetail = styled.div`
     height: 100vh;
     width: 100vw;
     z-index: 1000;
+    background: #00000080;
 
     .big-title {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 200px;
+      font-size: 180px;
       text-transform: uppercase;
       color: white;
       font-family: Ginger;
       white-space: nowrap;
       @media (max-width: 900px) {
         font-size: 80px;
+        bottom: 12%;
+        top: auto;
       }
     }
   }
   .hero {
+    position: relative;
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+
+    .discover{
+      position: absolute;
+      color: white;
+      bottom: 8%;
+      font-size: 10px;
+      text-transform: uppercase;
+      text-align: center;
+    }
 
     img {
       width: 100%;
@@ -45,7 +60,7 @@ const StyledProjectDetail = styled.div`
       object-fit: cover;
     }
     @media (max-width: 600px) {
-      height: 60vh;
+      height: 100vh;
     }
   }
   .content {
@@ -336,12 +351,25 @@ const StyledProjectDetail = styled.div`
     width: 100vw;
     height: 100vh;
     position: relative;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
 
+    }
+    .block{
+      width: 100%;
+      height: 100%;
+    }
+    .voile{
+      top: 0;
+      left: 0;
+      position:absolute;
+      width: 100%;
+      height:100%;
+      background: #00000080;
+    }
     .text-h1 {
       position: absolute;
       top: 50%;
@@ -407,6 +435,7 @@ const ProjectDetail = ({ project }) => {
             transition={{ duration: 0.4 }}
             src={project.coverImg}
           />
+          <span className="text-small discover">(scroll)</span>
         </div>
         <div className='spacer'></div>
         <div className='details'>
@@ -443,6 +472,8 @@ const ProjectDetail = ({ project }) => {
         {pathToNextProject && (
           <Link className='next-project' to={pathToNextProject}>
             <img src={projectsData[project.index + 1].coverImg} />
+            <div className="voile"></div>
+            <div className="block"></div>
             <div className='text-h1'>{projectsData[project.index + 1].name}</div>
           </Link>
         )}
