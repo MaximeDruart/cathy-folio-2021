@@ -75,20 +75,18 @@ const Zhonglin = () => {
   return (
     <StyledZhonglin>
       <div className="demi-spacer"></div>
-
       <div className="content">
         <div className='headline text-regular'>Grids</div>
         <div className='separator'></div>
         <img src={grids} alt="grid" />
       </div>
 
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
 
-      <FullImage src={preview} alt='card' />
-
-      <div className="big-spacer"></div>
 
       <div className="content">
+        <div className='headline text-regular'>Views</div>
+        <div className='separator'></div>
         <div dangerouslySetInnerHTML={{ __html: `
         <video loop muted autoplay playsinline>
             <source src="${loader}" type="video/mp4">
@@ -120,7 +118,7 @@ const Zhonglin = () => {
 
     <div className="spacer"></div>
 
-    <FullImage src={prototypes} alt='prototype' />
+    <FullImage src={preview} alt='prototype' />
 
     <div className="spacer"></div>
 

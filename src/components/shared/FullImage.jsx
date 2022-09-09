@@ -11,11 +11,11 @@ const Container = styled.div`
   margin-left: -10vw;
 
   @media (max-width: 769px) {
-    margin-left: -10vw;
+    margin-left: -5vw;
     height: 60vh;
   }
   @media (max-width: 480px) {
-    margin-left: -10vw;
+    margin-left: -5vw;
     height: 40vh;
   }
   img {

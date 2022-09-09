@@ -23,15 +23,15 @@ export default css`
     }
   }
   .text-h2 {
-    font-family: "Ginger";
+    font-family: "NeueMontrealRegular";
     /* font-family: NeueMontrealRegular; */
-    font-size: 60px;
+    font-size: 54px;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
     //margin-bottom: 10px;
     span.important_word {
-      font-family: "Ginger";
+      font-family: "NeueMontrealRegular";
       color: ${({ theme }) => theme.colors.primary1};
       font-size: 60px;
     }
@@ -50,7 +50,7 @@ export default css`
     line-height: 1.3;
     color: ${({ theme }) => theme.colors.text.standard};
     span.important_word {
-      font-family: "Ginger";
+      font-family: "NeueMontrealRegular";
       color: ${({ theme }) => theme.colors.primary1};
       font-size: 60px;
     }
@@ -80,8 +80,8 @@ export default css`
     }
   }
   .text-h5 {
-    font-family: "Ginger";
-    font-size: 24px;
+    font-family: "NeueMontrealRegular";
+    font-size: 18px;
     line-height: 1.4;
     color: ${({ theme }) => theme.colors.text.standard};
     @media (max-width: 480px) {
@@ -136,7 +136,7 @@ export default css`
     color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.6;
     opacity: 1;
     @media (max-width: 600px) {
       margin: 10px 0px;
@@ -212,11 +212,11 @@ export const marginPage = css`
   padding: 0 10vw;
 
   @media (max-width: 769px) {
-    padding: 0 10vw;
+    padding: 0 20px;
   }
 
   // @media (max-width: 480px) {
-  //   padding: 0 28px;
+  //   padding: 0 20px;
   // }
 `
 
@@ -225,10 +225,10 @@ export const horizontalPadding = css`
   padding: 0 5vw;
 
   @media (max-width: 769px) {
-    padding: 0 40px;
+    padding: 0 20px;
   }
 
   @media (max-width: 480px) {
-    padding: 0 28px;
+    padding: 0 20px;
   }
 `

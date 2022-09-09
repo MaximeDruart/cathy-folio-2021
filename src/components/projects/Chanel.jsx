@@ -107,13 +107,11 @@ const Chanel = () => {
         <img src={room} alt="room" />
       </div>
       
-      <div className="spacer"></div>
-
-      <FullImage src={preview} alt='card' />
-
-      <div className="big-spacer"></div>
+      <div className="demi-spacer"></div>
 
       <div className="content">
+      <div className='headline text-regular'>views</div>
+        <div className='separator'></div>
         <div dangerouslySetInnerHTML={{ __html: `
           <video loop muted autoplay playsinline>
             <source src="${homepage}" type="video/mp4">

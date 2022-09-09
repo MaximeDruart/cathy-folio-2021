@@ -10,32 +10,6 @@ import ArrowDownSVG from "../../assets/icons/arrow_down.svg?component"
 
 
 const StyledProjectDetail = styled.div`
-  .hero-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 1000;
-    background: #00000080;
-
-    .big-title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 180px;
-      text-transform: uppercase;
-      color: white;
-      font-family: Ginger;
-      white-space: nowrap;
-      @media (max-width: 900px) {
-        font-size: 80px;
-        bottom: 12%;
-        top: auto;
-      }
-    }
-  }
   .hero {
     position: relative;
     width: 100vw;
@@ -44,14 +18,64 @@ const StyledProjectDetail = styled.div`
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-
-    .discover{
+    .voile{
       position: absolute;
-      color: white;
-      bottom: 8%;
-      font-size: 10px;
-      text-transform: uppercase;
-      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      opacity: 0.4;
+      @media (max-width: 800px) {
+        opacity: 0.6;
+      }
+    }
+    .project-description{
+      position: absolute;
+      width: 24vw;
+      right : 10vw;
+      height: 100vh;
+      padding: 10vh 0;
+      .infos{
+        .infos-intro{
+          .text-description{
+            width: 100%;
+            margin: 20px 0;
+          }
+        }
+        .infos-column{
+          margin-top: 50px;
+          .text-h5{
+            margin: 18px 0 0 0;
+          }
+        }
+      }
+      .discover{
+        position: absolute;
+        bottom: 8vh;
+        color: white;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        @media (max-width: 800px) {
+          width: 80vw;
+          bottom: 4vh;
+        }
+      }
+      @media (max-width: 800px) {
+        width: 100vw;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 12vh 10vw;
+        .text-h2{
+          width: 80%;
+        }
+        .infos-column, .infos-intro{
+          display: none;
+        }
+      }
     }
 
     img {
@@ -78,7 +102,7 @@ const StyledProjectDetail = styled.div`
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 50%;
     @media (max-width: 900px) {
       width: 80%;
     }
@@ -92,9 +116,9 @@ const StyledProjectDetail = styled.div`
   .img_container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     img.duo {
-      width: 46%;
+      width: 48%;
       @media (max-width: 900px) {
         width: 100% !important;
       }
@@ -137,22 +161,21 @@ const StyledProjectDetail = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     img, .video {
-      width: 20%;
+      width: 24%;
       height: 100%;
-      margin: 20px;
       @media (max-width: 1000px) {
-        width: 30%;
-        margin: 30px;
+        width: 48%;
       }
       @media (max-width: 600px) {
-        width: 40%;
-        margin: 20px 0;
+        width: 48%;
+        margin: 20px 0 0 0;
       }
     }
     @media (max-width: 600px) {
-      justify-content: space-around;
+      justify-content: space-between;
     }
   }
   img.full-img {
@@ -362,14 +385,6 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
     }
-    .voile{
-      top: 0;
-      left: 0;
-      position:absolute;
-      width: 100%;
-      height:100%;
-      background: #00000080;
-    }
     .text-h1 {
       position: absolute;
       top: 50%;
@@ -417,56 +432,50 @@ const ProjectDetail = ({ project }) => {
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
-        <div className='hero-title'>
+        {/* <div className='hero-title'>
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: imageHasLoaded ? 1 : 0 }}
             transition={{ duration: 0.4 }}
             className='big-title'
-          >
-            {project.name}
-          </motion.h1>
-        </div>
+          ></motion.h1>
+        </div> */}
         <div className='hero'>
           <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
             animate={{ opacity: imageHasLoaded ? 1 : 0 }}
             transition={{ duration: 0.4 }}
-            src={project.coverImg}
+            src={project.visual1}
           />
-          <span className="text-small discover">(scroll)</span>
+          <div className="voile"></div>
+          <div className="project-description">
+            <h2 className='text-h2 title'>{project.title}</h2>
+              {/* intro */}
+            <div className='infos'>
+              <div className='infos-intro'>
+                <p className='text-description'>{project.description}</p>
+                {project.websiteLink && (
+                  <a className='text-link website-link' href={project.websiteLink} target='_blank'>
+                    Visit the website
+                  </a>
+                )}
+              </div>
+              {/* infos */}
+              <div className='infos-column'>
+                <h3 className='text-h5'>Date</h3>
+                <div className='text-h6'>{project.date}</div>
+                <h3 className='text-h5'>Roles</h3>
+                <div className='text-h6'>{project.role}</div>
+                <h3 className='text-h5'>Techs</h3>
+                <div className='text-h6'>{project.techs}</div>
+              </div>
+            </div>
+            <span className="text-small discover">(scroll down)</span>
+          </div>
         </div>
         <div className='spacer'></div>
         <div className='details'>
-          {/* project shared data */}
-          <h2 className='text-h2 title'>{project.title}</h2>
-          {/* intro */}
-          <div className='infos'>
-            <div className='infos-intro'>
-              <p className='text-description'>{project.description}</p>
-              {project.websiteLink && (
-                <a className='text-link website-link' href={project.websiteLink} target='_blank'>
-                  Visit the website
-                </a>
-              )}
-            </div>
-            {/* infos */}
-            <div className='infos-column'>
-              <h3 className='text-h5'>Date</h3>
-              <div className='text-h6'>{project.date}</div>
-              <h3 className='text-h5'>Roles</h3>
-              <div className='text-h6'>{project.role}</div>
-              <h3 className='text-h5'>Techs</h3>
-              <div className='text-h6'>{project.techs}</div>
-            </div>
-          </div>
-          <div className='spacer'></div>
-          {/* visual */}
-          <FullImage src={project.visual1} alt='visual' />
-          {/* <img className='visual' src={project.visual1} alt='visual' /> */}
-          <div className='spacer'></div>
-          {/* colors */}
           <ProjectComponent />
         </div>
         {pathToNextProject && (

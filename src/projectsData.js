@@ -26,35 +26,17 @@ import elijahCover from "./assets/img/works/covers/elijah.jpg"
 import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
-// import Circl from "./components/projects/Circl"
-// import circlCover from "./assets/img/works/covers/circl.jpg"
-// import circlCoverSmall from "./assets/img/works/covers-small/circl-min.jpg"
-// import circlVisual1 from "./assets/img/works/circl/visual1.jpg"
 
 import Shibuya from "./components/projects/Shibuya"
 import shibuyaCover from "./assets/img/works/covers/shibuya.jpg"
 import shibuyaCoverSmall from "./assets/img/works/covers-small/shibuya-min.jpg"
 import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
 
-import Bubble from "./components/projects/Bubble"
-import bubbleCover from "./assets/img/works/covers/bubble.jpg"
-import bubbleCoverSmall from "./assets/img/works/covers-small/bubble-min.jpg"
-import bubbleVisual1 from "./assets/img/works/bubble/bubbleVisual1.png"
-
-// import Sangen from "./components/projects/Sangen"
-// import sangenCover from "./assets/img/works/covers/sangen.jpeg"
-// import sangenCoverSmall from "./assets/img/works/covers-small/sangen-min.jpeg"
-// import sangenVisual1 from "./assets/img/works/sangen/sangenVisual1.jpg"
-
-import Desktop from "./components/projects/Desktop"
-import desktopCover from "./assets/img/works/covers/desktop.jpg"
-import desktopCoverSmall from "./assets/img/works/covers-small/desktop-min.jpg"
-import desktopVisual1 from "./assets/img/works/desktop/desktopVisual1.jpg"
 
 import Feels from "./components/projects/Feels"
 import feelsCover from "./assets/img/works/covers/feels.jpg"
 import feelsCoverSmall from "./assets/img/works/covers-small/feels-min.jpg"
-import feelsVisual1 from "./assets/img/works/feels/feelsVisual1.jpg"
+import feelsVisual1 from "./assets/img/works/feels/visual1.jpg"
 
 import Branding from "./components/projects/Branding"
 import brandingCover from "./assets/img/works/covers/branding.jpg"
@@ -76,10 +58,10 @@ import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
 import ZhonglinCoverSmall from "./assets/img/works/covers-small/zhonglin-min.jpg"
 import zhonglinVisual1 from "./assets/img/works/zhonglin/visual1.jpg"
 
-import Lv from "./components/projects/Lv"
-import lvCover from "./assets/img/works/covers/lv.jpg"
-import lvCoverSmall from "./assets/img/works/covers-small/lv-min.jpg"
-import lvVisual1 from "./assets/img/works/lv/visual1.jpg"
+import Bohinc from "./components/projects/Bohinc"
+import bohincCover from "./assets/img/works/covers/bohinc.jpg"
+import bohincCoverSmall from "./assets/img/works/covers-small/bohinc-min.jpg"
+import bohincVisual1 from "./assets/img/works/bohinc/visual1.jpg"
 
 import Esd from "./components/projects/Esd"
 import esdCover from "./assets/img/works/covers/esd.jpg"
@@ -93,6 +75,20 @@ import hublotVisual1 from "./assets/img/works/hublot/visual1.jpg"
 
 let projectsData = [
   {
+    name: "Bohinc",
+    path: "bohinc",
+    title: "Minimalist Furniture",
+    coverImg: bohincCover,
+    coverImgSmall: bohincCoverSmall,
+    visual1: bohincVisual1,
+    component: Bohinc,
+    date: "Sept. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop"],
+    description:
+      "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
+  },
+  {
     name: "Hublot",
     path: "hublot",
     title: "Hublot x Murakami",
@@ -104,12 +100,13 @@ let projectsData = [
     role: "Designer, Dev",
     techs: ["Figma, Photoshop, React"],
     description:
-      "Hublot did a collaboration with Takashi Murakami, one of my favorite artists. My goal was to redesign the product page of this watch which I think is just beautiful. I also challenged myself to develop this page, it will be online soon, the link will be available soon!",
+      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
+    websiteLink: "https://hublotxtakashi.netlify.app/",
   },
   {
     name: "Zhonglin",
     path: "zhonglin",
-    title: "UI design for Zhong Lin",
+    title: "A creative photographer",
     coverImg: ZhonglinCover,
     coverImgSmall: ZhonglinCoverSmall,
     visual1: zhonglinVisual1,
@@ -118,12 +115,12 @@ let projectsData = [
     role: "Designer",
     techs: ["AdobeXD, Photoshop, Protopie"],
     description:
-      "Zhong Lin is a self-taught photographer who started her career by experimenting with film. With a seductive color palette and an eccentricity to her work, Lin's distinctive style has caught the attention of Vogue China and Harper's Bazaar China. I decided to create a modern portfolio for this artist.",
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },
   {
     name: "Arcane",
     path: "arcane",
-    title: "UI design for Arcane",
+    title: "We lie when we are afraid",
     coverImg: arcaneCover,
     coverImgSmall: arcaneCoverSmall,
     visual1: arcaneVisual1,
@@ -137,7 +134,7 @@ let projectsData = [
   {
     name: "Chanel",
     path: "chanel",
-    title: "Experimental website for Eau tendre de Chanel",
+    title: "An Experimental Story",
     coverImg: chanelCover,
     coverImgSmall: chanelCoverSmall,
     component: Chanel,
@@ -145,13 +142,13 @@ let projectsData = [
     role: "Designer",
     techs: ["Adobe XD, Photoshop, Illustrator"],
     description:
-      "L'Eau tendre de Chanel is the sweetest fragrance to bring out your femininity. Being one of my favorite perfumes, I decided to create an immersive site around it to highlight its qualities, its freshness, its sweetness as well as its accompanying range. L'eau tendre is a captivating perfume made of jasmine and rose essence. It is the feminine fragrance par excellence!",
+      "L'eau tendre is a captivating perfume made of jasmine and rose essence. I designed an immersive website to highlight its qualities, its freshness, its sweetness as well as its accompanying range. ",
     visual1: chanelVisual1,
   },
   {
     name: "Grissini",
     path: "grissini",
-    title: "Design and development of the Grissini website",
+    title: "Classical Musicians",
     coverImg: grissiniCover,
     coverImgSmall: grissiniCoverSmall,
     visual1: grissiniVisual1,
@@ -160,27 +157,13 @@ let projectsData = [
     role: "Designer, Developer",
     techs: ["HTML/CSS/JS"],
     description:
-      "Grissini Project is 4 musicians specialized in music for video games, anime and movies. Grissini decided to contact me to design and develop their website. With a strong interest in video games and piano, Grissini Project was the perfect client to use my skills!",
+      "Grissini Project is 4 musicians specialized in music for video games, anime and movies. With a strong interest in video games and piano, they contacted me to design and develop their website.",
     websiteLink: "https://grissiniproject.com/",
   },
-  // {
-  //   name: "Louis Vuitton",
-  //   path: "Lv",
-  //   title: "The futur Trunk",
-  //   coverImg: lvCover,
-  //   coverImgSmall: lvCoverSmall,
-  //   visual1: lvVisual1,
-  //   component: Lv,
-  //   date: "July 2022",
-  //   role: "Designer",
-  //   techs: ["Photoshop, Figma, Blender"],
-  //   description:
-  //     "Imagination and creation of a trunk of the future for Louis Vuitton. The one we imagined consists in burying the memories of the people using it, with a recovery of data during travels, textures that can be used as skin on the trunk, and much more...",
-  // },
-    {
+  {
     name: "Elijah",
     path: "elijah",
-    title: "Design and development of Elijah's portfolio",
+    title: "Elijah's portfolio",
     coverImg: elijahCover,
     coverImgSmall: elijahCoverSmall,
     visual1: elijahVisual1,
@@ -188,7 +171,7 @@ let projectsData = [
     date: "Jan. 2022",
     role: "Designer, Dev",
     techs: ["Adobe XD, HTML, CSS, JS"],
-    description: "Elijah is a photograph based in Paris!",
+    description: "Elijah is a photograph based in Paris! I designed and developed his website.",
     websiteLink: "https://www.elijahbenhammou.com/",
   },
   {
@@ -208,7 +191,7 @@ let projectsData = [
   {
     name: "Project X",
     path: "project-x-paris",
-    title: "Complete redesign of the Project X Paris website",
+    title: "French Streetwear",
     coverImg: pxpCover,
     coverImgSmall: pxpCoverSmall,
     component: PXP,
@@ -216,14 +199,14 @@ let projectsData = [
     role: "Designer, Web integrator",
     techs: ["Adobe XD, Wordpress, Elementor"],
     description:
-      "Streetwear specialist born in 2015, Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers, and to have a more ergonomic interface as well as a graphic charter which corresponds to the brand.",
+      "Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers.",
     visual1: pxpVisual1,
     websiteLink: "https://www.projectxparis.com/",
   },
   {
     name: "5 Sens",
     path: "sens",
-    title: "Poster for an experimental place",
+    title: "An experimental place",
     coverImg: sensCover,
     coverImgSmall: sensCoverSmall,
     visual1: sensVisual1,
@@ -232,7 +215,7 @@ let projectsData = [
     role: "DA, Designer",
     techs: ["Illustrator, Photoshop"],
     description:
-      "Creation of an art center: musical cultures and experiments, in an exceptional architectural building. A plural and unlimited place (concert hall, immersive exhibitions, performances, projections, workshops etc...). The center and the programming tend to translate the energy of the musical and visual movement. The motorcycle: Music in all its forms with the main preoccupation of 'living the experience'",
+      "Creation of poster for an art center: musical cultures and experiments, in an exceptional architectural building.",
   },
   // {
   //   name: "Paco",
@@ -276,36 +259,6 @@ let projectsData = [
     description:
       "Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo.",
   },
-  // {
-  //   name: "Desktop",
-  //   path: "desktop",
-  //   title: "Desktop",
-  //   coverImg: desktopCover,
-  //   coverImgSmall: desktopCoverSmall,
-  //   visual1: desktopVisual1,
-  //   component: Desktop,
-  //   date: "Jul. 2020",
-  //   role: "Designer, Developer",
-  //   techs: ["VueJS"],
-  //   description:
-  //     "Wanna watch my content on a computer? Lets do it ! I developped this project to learn VueJS. Enjoy !!",
-  //   websiteLink: "https://cathydolle.github.io/#/",
-  // },
-  // {
-  //   name: "Bubble Tea",
-  //   path: "bubble-tea",
-  //   title: "Bubble Tea maker",
-  //   coverImg: bubbleCover,
-  //   coverImgSmall: bubbleCoverSmall,
-  //   visual1: bubbleVisual1,
-  //   component: Bubble,
-  //   date: "Jul. 2020",
-  //   role: "Designer, Developer",
-  //   techs: ["HTML, CSS, JS"],
-  //   description:
-  //     "I had to make a website using transition CSS at school, so I decided to make a Bubble Tea maker, enjoy :D",
-  //   websiteLink: "https://cathydolle.github.io/bubbleTea/",
-  // },
   {
     name: "ESD 2022",
     path: "Esd",

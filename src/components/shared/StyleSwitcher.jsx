@@ -85,9 +85,9 @@ const StyleSwitcher = () => {
       </Link>
       <div className="style">
         <ColorPicker />
-        <button onClick={toggleDarkMode} className='theme-toggle'>
+        {/* <button onClick={toggleDarkMode} className='theme-toggle'>
           {isDarkMode ? "LIGHT" : "DARK"}
-        </button>
+        </button> */}
       </div>
     </StyledStyleSwitcher>
   )

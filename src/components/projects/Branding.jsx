@@ -2,8 +2,9 @@ import React from "react"
 import styled from "styled-components"
 // Concept
 import preview from "../../assets/img/works/branding/preview.png"
-import resume from "../../assets/img/works/branding/resume.jpg"
+import kit from "../../assets/img/works/branding/kit.jpg"
 import resumeVerso from "../../assets/img/works/branding/resumeVerso.jpg"
+import resumeRecto from "../../assets/img/works/branding/resumeRecto.jpg"
 import envelop from "../../assets/img/works/branding/envelop.jpg"
 import businessCard from "../../assets/img/works/branding/businessCard.jpg"
 
@@ -40,9 +41,6 @@ svg:nth-child(3){
   .a{fill:none;}.b{fill:${({ theme }) => theme.colors.text.standard};}
 }
 
-img.duo{
-    width:40% !important;
-}
 img{
   width: 100%;
   margin-bottom: 40px;
@@ -103,24 +101,22 @@ const Sangen = () => {
         </div>
       </div>
      
-      <div className="spacer"></div>
-      <FullImage src={resume} alt='resume' />
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
 
       <div className="content">
         <div className='headline text-regular'>resume</div>
         <div className='separator'></div>
+        <img className="little" src={resumeRecto} alt="resume" />
         <img className="little" src={resumeVerso} alt="resume" />
       </div>
       
 
-      <div className="spacer"></div>
-      <FullImage src={businessCard} alt='card' />
-      <div className="spacer"></div>
+      <div className="demi-spacer"></div>
 
       <div className="content">
         <div className='headline text-regular'>Business Card</div>
         <div className='separator'></div>
+        <img className="little" src={businessCard} alt="resume" />
         <div className="img_container">
           <img className="duo" src={cardRecto} alt="calm" />
           <img className="duo" src={cardVerso} alt="casual" />

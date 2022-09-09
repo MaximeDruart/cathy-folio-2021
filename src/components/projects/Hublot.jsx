@@ -99,14 +99,7 @@ const Hublot = () => {
         }}
         />
       </div>
-     
-
-      <div className="spacer"></div>
-
-      <FullImage src={duo} alt='prototype' />
-      
-      <div className="spacer"></div>
-
+      <div className="demi-spacer"></div>
       <div className="content">
         <div className='headline text-regular'>Product Details</div>
         <div className='separator'></div>

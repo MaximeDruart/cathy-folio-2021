@@ -35,6 +35,7 @@ let projectIsOpened = createRef()
 const Container = styled.div`
   height: 100vh;
   width: 100vw;
+  background: #ECE9E7;
   transition: background-color 0.6s;
   position: relative;
   display: flex;
@@ -72,13 +73,13 @@ const Container = styled.div`
     .item {
       position: absolute;
       transform: translateX(-50%) translateY(-50%);
-      border: 1px solid ${({ theme }) => theme.colors.text.disabled2};
+      border: 1px solid #BCBCBC80;
       transition: all ease-in-out 0.4s;
       border-radius: 1px;
 
       &.is-active {
-        border: 1px solid ${({ theme }) => theme.colors.primary1};
-        background: ${({ theme }) => theme.colors.primary1};
+        border: 1px solid #A1A3CC;
+        background: #A1A3CC;
         border-radius: 1px;
       }
     }
@@ -87,14 +88,14 @@ const Container = styled.div`
       position: absolute;
       border-radius: 4px;
       transform: translateX(-50%) translateY(-50%);
-      border: 1px solid ${({ theme }) => theme.colors.text.standard};
+      border: 1px solid #B5B5B5;
     }
   }
 
   .archive-item {
     * {
       font-family: NeueMontrealRegular;
-      color: ${({ theme }) => theme.colors.text.standard};
+      color: #F8F8F8;
     }
     opacity: 0;
 
@@ -148,7 +149,7 @@ const Container = styled.div`
         .desc {
           font-size: 14px;
           line-height: 1.5;
-          color: ${({ theme }) => theme.colors.text.text};
+          color: #5F5F5F;
           margin-bottom: 20px;
         }
       }

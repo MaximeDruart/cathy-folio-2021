@@ -1,47 +1,71 @@
 const darkColors = [
   {
-    name: "saphir",
-    color: "#6796FF",
-  },
-  {
     name: "amethyst",
-    color: "#7176eb",
+    color: "#9793BF",
   },
   {
-    name: "emerald",
-    color: "#66F070",
+    name: "saphir",
+    color: "#005A86",
+  },
+  {
+    name: "kaki",
+    color: "#3D4D3D",
   },
   {
     name: "quartz",
-    color: "#F582D2",
+    color: "#FFD9D9",
   },
   {
-    name: "crystal",
-    color: "#F8F8F8",
+    name: "gold",
+    color: "#DBBE8F",
   },
 ]
 
 const lightColors = [
   {
-    name: "blueberry",
-    color: "#ABC7E0",
+    name: "amethyst",
+    color: "#9793BF",
   },
   {
-    name: "lavender",
-    color: "#C4BCD3",
+    name: "saphir",
+    color: "#005A86",
   },
   {
-    name: "avocado",
-    color: "#C5C7A1",
+    name: "kaki",
+    color: "#3D4D3D",
   },
   {
-    name: "Spring",
-    color: "#DEBCDD",
+    name: "quartz",
+    color: "#FFD9D9",
   },
   {
-    name: "carbone",
-    color: "#2F2F2F",
+    name: "gold",
+    color: "#DBBE8F",
   },
 ]
+
+
+// const lightColors = [
+//   {
+//     name: "blueberry",
+//     color: "#ABC7E0",
+//   },
+//   {
+//     name: "lavender",
+//     color: "#C4BCD3",
+//   },
+//   {
+//     name: "avocado",
+//     color: "#C5C7A1",
+//   },
+//   {
+//     name: "Spring",
+//     color: "#DEBCDD",
+//   },
+//   {
+//     name: "carbone",
+//     color: "#2F2F2F",
+//   },
+// ]
 
 export { lightColors, darkColors }

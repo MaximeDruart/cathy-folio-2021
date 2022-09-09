@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import moodboard from "../../assets/img/works/shibuya/moodboard.png"
-import pub from "../../assets/img/works/shibuya/pub.png"
-import city from "../../assets/img/works/shibuya/city.png"
-import office from "../../assets/img/works/shibuya/office.png"
-import prints from "../../assets/img/works/shibuya/print.png"
+import city from "../../assets/img/works/shibuya/1.jpg"
+import pub from "../../assets/img/works/shibuya/2.jpg"
+import metro from "../../assets/img/works/shibuya/metro.jpg"
+import street from "../../assets/img/works/shibuya/street.jpg"
+import ipad from "../../assets/img/works/shibuya/ipad.jpg"
 import grid1 from "../../assets/img/works/shibuya/grid1.svg"
 import grid2 from "../../assets/img/works/shibuya/grid2.svg"
 import grid3 from "../../assets/img/works/shibuya/grid3.svg"
@@ -23,6 +23,10 @@ import ShibuyaKanji from "../../assets/icons/shibuya_kanji.svg?component"
 const StyledShibuya = styled.div`
 img{
   width: 100%;
+  margin-bottom: 40px;
+  @media (max-width: 769px) {
+    margin-bottom: 20px;
+  }
 }
 img.trio{
   width: 30% !important;
@@ -104,29 +108,17 @@ return (
   </div>
 
   <div className="spacer"></div>
-  <FullImage src={moodboard} alt='preview' />
-  <div className="spacer"></div>
 
   <div className="content">
     {/* pub */}
-    <div className='headline text-regular'>Advertising frames</div>
+    <div className='headline text-regular'>Views</div>
       <div className='separator'></div>
+      <img src={metro} alt="logo"></img>
       <img src={pub} alt="logo"></img>
-      <div className="big-spacer"></div>
-      {/* city */}
-      <div className='headline text-regular'>Advertisements in the neighborhood</div>
-      <div className='separator'></div>
       <img src={city} alt="logo"></img>
-      <div className="big-spacer"></div>
-      {/* city */}
-      <div className='headline text-regular'>Office stuff</div>
-      <div className='separator'></div>
-      <img src={office} alt="logo"></img>
-      <div className="big-spacer"></div>
-      {/* city */}
-      <div className='headline text-regular'>Print stuff</div>
-      <div className='separator'></div>
-      <img src={prints} alt="logo"></img>
+      <img src={street} alt="logo"></img>
+      <img src={ipad} alt="logo"></img>
+
   </div>
  
   <div className="big-spacer"></div>
