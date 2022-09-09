@@ -70,7 +70,7 @@ const Bohinc = () => {
       <div className="content">
         <div dangerouslySetInnerHTML={{ __html: `
         <video class="full" loop muted autoplay playsinline>
-            <source src="${collision}" type="video/mp4">
+            <source src="${collision}" type="video/webm">
         </video>`
         }}
         />
@@ -86,7 +86,7 @@ const Bohinc = () => {
 
         <div dangerouslySetInnerHTML={{ __html: `
         <video class="full" loop muted autoplay playsinline>
-            <source src="${orbit}" type="video/mp4">
+            <source src="${orbit}" type="video/webm">
         </video>`
         }}
         />
