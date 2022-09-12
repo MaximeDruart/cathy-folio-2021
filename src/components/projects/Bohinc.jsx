@@ -13,8 +13,8 @@ import planeCover from "../../assets/img/works/bohinc/planeCover.png"
 import plane1 from "../../assets/img/works/bohinc/plane1.png"
 import plane2 from "../../assets/img/works/bohinc/plane2.png"
 
-import collision from "../../assets/img/works/bohinc/collision.webm"
-import orbit from "../../assets/img/works/bohinc/orbit.webm"
+import collision from "../../assets/img/works/bohinc/collision.mp4"
+import orbit from "../../assets/img/works/bohinc/orbit.mp4"
 
 
 import FullImage from "../shared/FullImage"
