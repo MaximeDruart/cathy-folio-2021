@@ -14,24 +14,15 @@ import { marginPage } from "../../../styles/globalCustom"
 import roomVideo from "../../../assets/img/room.mp4"
 
 //passions
-import game from "../../../assets/img/about/pokemon.gif"
-import gamesHover from "../../../assets/img/about/games.jpg"
-import animes from "../../../assets/img/about/animes.gif"
-import animesHover from "../../../assets/img/about/animes.jpg"
-import lofi from "../../../assets/img/about/lofi.gif"
-import musicHover from "../../../assets/img/about/music.jpg"
-import piano from "../../../assets/img/about/piano.gif"
-import pianoHover from "../../../assets/img/about/piano.jpg"
-import draw from "../../../assets/img/about/draw.gif"
-import drawHover from "../../../assets/img/about/draw.jpg"
-import food from "../../../assets/img/about/food.gif"
-import foodHover from "../../../assets/img/about/food.jpg"
-import painting from "../../../assets/img/about/painting.gif"
-import paintHover from "../../../assets/img/about/paint.jpg"
-import manual from "../../../assets/img/about/manual.gif"
-import craftHover from "../../../assets/img/about/craft.jpg"
-import art from "../../../assets/img/about/3D.gif"
-import threeDHover from "../../../assets/img/about/3D.jpg"
+import game from "../../../assets/img/about/game.png"
+import animes from "../../../assets/img/about/anime.png"
+import lofi from "../../../assets/img/about/music.png"
+import piano from "../../../assets/img/about/piano.png"
+import draw from "../../../assets/img/about/draw.png"
+import food from "../../../assets/img/about/food.png"
+import painting from "../../../assets/img/about/paint.png"
+import manual from "../../../assets/img/about/craft.png"
+import art from "../../../assets/img/about/3D.png"
 
 import twitch from "../../../assets/img/about/garden.png"
 import resume from "../../../assets/img/about/resume.pdf"
@@ -70,8 +61,8 @@ const StyledHome = styled.div`
         font-family: Ginger;
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 116px;
-        line-height: 1; 
+        font-size: 114px;
+        line-height: 1.05; 
 
         &.first_line {
           text-align: start;
@@ -90,10 +81,10 @@ const StyledHome = styled.div`
               position: absolute;
               content: "Graphic Designer & front end developer based in paris.";
               width: 220px;
-              top: -60px;
+              top: -64px;
               left: -20px;
               font-family: NeueMontrealRegular;
-              font-size: 11px;
+              font-size: 10px;
               text-transform: uppercase;
               white-space: initial;
               color: ${({ theme }) => theme.colors.text.standard};
@@ -213,24 +204,24 @@ const StyledHome = styled.div`
 
     .discover {
       position: absolute;
-      bottom: 40px;
+      bottom: 32px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
       flex-direction: column;
       * {
-        color: ${({ theme }) => theme.colors.text.standard};
+        color: ${({ theme }) => theme.colors.text.text};
       }
       span {
         font-family: NeueMontrealRegular;
-        font-size: 0.65rem;
+        font-size: 10px;
         text-transform: uppercase;
       }
       svg {
         margin-bottom: 2px;
-        height: 25px;
-        stroke: ${({ theme }) => theme.colors.text.standard};
+        height: 20px;
+        stroke: ${({ theme }) => theme.colors.text.text};
       }
     }
   }
@@ -276,15 +267,6 @@ const StyledHome = styled.div`
           object-fit: cover;
           opacity: 1;
           transition: opacity 0.5s;
-          &.hover {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            &:hover {
-              opacity: 0;
-            }
-          }
           @media (max-width: 900px) {
             opacity: 1;
             width: 100%;
@@ -398,7 +380,7 @@ const Home = () => {
         <div className='hero'>
           <div className='text'>
             <div className='line first_line'>
-              <TextSpawn>discover</TextSpawn>
+              <TextSpawn>let's discover</TextSpawn>
             </div>
             <div className='line second_line important_word'>
               <TextSpawn direction={"LEFT"}>the workspace</TextSpawn>
@@ -452,7 +434,6 @@ const Home = () => {
             {/* video games */}
             <div className='passion'>
               <img src={game} alt='passion' />
-              <img className='hover' src={gamesHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>01</h3>
                 <div className='text-description'>
@@ -464,7 +445,6 @@ const Home = () => {
             {/* animes */}
             <div className='passion'>
               <img src={animes} alt='passion' />
-              <img className='hover' src={animesHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>02</h3>
                 <div className='text-description'>
@@ -476,7 +456,6 @@ const Home = () => {
             {/* lofi */}
             <div className='passion'>
               <img src={lofi} alt='passion' />
-              <img className='hover' src={musicHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>03</h3>
                 <div className='text-description'>
@@ -488,7 +467,6 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={piano} alt='passion' />
-              <img className='hover' src={pianoHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>04</h3>
                 <div className='text-description'>
@@ -500,7 +478,6 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={draw} alt='passion' />
-              <img className='hover' src={drawHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>05</h3>
                 <div className='text-description'>
@@ -512,7 +489,6 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={food} alt='passion' />
-              <img className='hover' src={foodHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>06</h3>
                 <div className='text-description'>
@@ -524,7 +500,6 @@ const Home = () => {
             {/* painting */}
             <div className='passion'>
               <img src={painting} alt='passion' />
-              <img className='hover' src={paintHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>07</h3>
                 <div className='text-description'>
@@ -536,7 +511,6 @@ const Home = () => {
             {/* manual */}
             <div className='passion'>
               <img src={manual} alt='passion' />
-              <img className='hover' src={craftHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>08</h3>
                 <div className='text-description'>
@@ -548,7 +522,6 @@ const Home = () => {
             {/* piano */}
             <div className='passion'>
               <img src={art} alt='passion' />
-              <img className='hover' src={threeDHover} alt='passion' />
               <div className='text-content'>
                 <h3 className='text-h3 number'>09</h3>
                 <div className='text-description'>

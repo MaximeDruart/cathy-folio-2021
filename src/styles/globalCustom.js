@@ -81,11 +81,11 @@ export default css`
   }
   .text-h5 {
     font-family: "NeueMontrealRegular";
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
     color: ${({ theme }) => theme.colors.text.standard};
     @media (max-width: 480px) {
-      font-size: 26px;
+      font-size: 16px;
     }
   }
   .text-h6 {
@@ -94,7 +94,7 @@ export default css`
     font-size: 14px;
     line-height: 1.4;
     @media (max-width: 480px) {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .text-regular {
@@ -135,7 +135,7 @@ export default css`
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
     opacity: 1;
     @media (max-width: 600px) {

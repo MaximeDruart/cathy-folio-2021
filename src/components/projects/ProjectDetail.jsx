@@ -44,7 +44,7 @@ const StyledProjectDetail = styled.div`
         .infos-column{
           margin-top: 50px;
           .text-h5{
-            margin: 18px 0 0 0;
+            margin: 16px 0 2px 0;
           }
         }
       }
@@ -55,6 +55,7 @@ const StyledProjectDetail = styled.div`
         font-size: 10px;
         text-transform: uppercase;
         text-align: center;
+        color: ${({ theme }) => theme.colors.text.text};
         @media (max-width: 800px) {
           width: 80vw;
           bottom: 4vh;
@@ -95,12 +96,17 @@ const StyledProjectDetail = styled.div`
       .text-h2 {
         font-size: 32px;
       }
+      .infos-intro{
+        .text-description{
+          margin: 10px 0 24px 0;
+        }
+      }
       .infos-column{
-        margin-top: 40px;
+        margin-top: 48px;
       }
       .text-h5{
-        font-size: 20px;
-        margin: 14px 0 0 0;
+        font-size: 18px;
+        margin: 14px 0 2px 0;
       }
     }
   }
@@ -513,7 +519,6 @@ const ProjectDetail = ({ project }) => {
                 <div className='text-h6'>{project.techs}</div>
               </div>
             </div>
-            <span className="text-small discover">(scroll down)</span>
         </div>
         <div className='details'>
           <ProjectComponent />

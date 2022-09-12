@@ -35,7 +35,7 @@ const StyledSlider = styled.div`
     margin-top: 4px;
     text-align: right;
     font-size: 11px;
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: ${({ theme }) => theme.colors.text.text};
   }
 `
 
