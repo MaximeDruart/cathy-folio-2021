@@ -87,6 +87,23 @@ const StyledProjectDetail = styled.div`
       height: 100vh;
     }
   }
+  .project-description-mobile{
+    display: none;
+    @media (max-width: 600px) {
+      display: block;
+      padding: 0 5vw;
+      .text-h2 {
+        font-size: 32px;
+      }
+      .infos-column{
+        margin-top: 40px;
+      }
+      .text-h5{
+        font-size: 20px;
+        margin: 14px 0 0 0;
+      }
+    }
+  }
   .content {
     padding: 0 10vw;
     @media (max-width: 750px) {
@@ -475,6 +492,29 @@ const ProjectDetail = ({ project }) => {
           </div>
         </div>
         <div className='spacer'></div>
+        <div className="project-description-mobile">
+              {/* intro */}
+            <div className='infos'>
+              <div className='infos-intro'>
+                <p className='text-description'>{project.description}</p>
+                {project.websiteLink && (
+                  <a className='text-link website-link' href={project.websiteLink} target='_blank'>
+                    Visit the website
+                  </a>
+                )}
+              </div>
+              {/* infos */}
+              <div className='infos-column'>
+                <h3 className='text-h5'>Date</h3>
+                <div className='text-h6'>{project.date}</div>
+                <h3 className='text-h5'>Roles</h3>
+                <div className='text-h6'>{project.role}</div>
+                <h3 className='text-h5'>Techs</h3>
+                <div className='text-h6'>{project.techs}</div>
+              </div>
+            </div>
+            <span className="text-small discover">(scroll down)</span>
+        </div>
         <div className='details'>
           <ProjectComponent />
         </div>
