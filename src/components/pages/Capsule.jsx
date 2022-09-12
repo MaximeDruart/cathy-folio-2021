@@ -116,8 +116,8 @@ const StyledRoom = styled.div`
         max-width: 30vw;
         justify-content: flex-start;
         .button{
-          /* padding: 14px 20px; */
-          margin: 10px 10px 0 0;
+          padding: 12px 28px;
+          margin: 8px 10px 0 0;
         }
         @media (max-width: 1200px) {
           max-width: 50vw;
@@ -135,8 +135,10 @@ const StyledRoom = styled.div`
           width:100%;
           height: 30px;
           background: white;
+          border-radius: 10px 10px 0 0;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
+          padding-right: 14px;
           button{
             color: black;
           }
@@ -237,16 +239,12 @@ const Room = () => {
           <div className="content">
             {/* msg */}
             <div className={`${showPanel ? "panel" : "hidden"}`}>
-              <h1>Room v.1.1</h1>
-              <p className="text-regular">Hello ! Welcome to my little room!<br/>
-                 This is a BETA version but there is a lot of things you can do!
-                 Do not hesitate to hover and click everywhere!
-                 <br/><br/>
-                 -- Better to check it on desktop --
+              <h1>Capsule 1.1</h1>
+              <p className="text-regular">Hello ! Welcome to my little universe.<br/>
+                 Do not hesitate to hover and click everywhere to see what happend ... You can try with the headphones :)
                  </p>
                  
               <button className="button" onClick={() => setShowPanel(false) }>Enter</button>
-              <Link className="button" to="/works">Leave</Link>
             </div>
 
             {/* {painting} */}
@@ -340,12 +338,6 @@ const Room = () => {
               </div>
               <iframe className={`${showDesk ? "show" : "hidden"}`}
                   src="https://cathydolle.github.io/#/desk">
-              </iframe>
-              <iframe className={`${showBb ? "show" : "hidden"}`}
-                  src="https://cathydolle.github.io/bubbleTea/">
-              </iframe>
-              <iframe className={`${showPlayer ? "show" : "hidden"}`}
-                  src="https://cathydolle.github.io/VideoPlayer/">
               </iframe>
             </div>
             

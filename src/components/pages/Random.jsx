@@ -149,7 +149,7 @@ const Container = styled.div`
         .desc {
           font-size: 14px;
           line-height: 1.5;
-          color: #5F5F5F;
+          color: ${({ theme }) => theme.colors.text.text};
           margin-bottom: 20px;
         }
       }

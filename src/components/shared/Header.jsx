@@ -47,8 +47,8 @@ const StyledHeader = styled.div`
       width: 6px;
       height: 6px;
       border-radius: 100%;
-      //background-color:  ${({ theme }) => theme.colors.primary1};  
-      background-color: #85E38C;
+      background-color:  ${({ theme }) => theme.colors.primary1};  
+      // background-color: #85E38C;
     }
     &:hover{
       background-color: ${({ theme }) => theme.colors.text.disabled2};

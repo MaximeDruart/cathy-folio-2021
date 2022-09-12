@@ -259,21 +259,6 @@ let projectsData = [
     description:
       "Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo.",
   },
-  {
-    name: "ESD 2022",
-    path: "Esd",
-    title: "Rapport d'alternance",
-    coverImg: esdCover,
-    coverImgSmall: esdCoverSmall,
-    visual1: esdVisual1,
-    component: Esd,
-    date: "Oct. 2021",
-    role: "Designer, Developer",
-    techs: ["Figma, Elementor"],
-    description:
-      "J'ai commencé mon aventure chez Project Paris en tant qu'UI/UX designer le 8 octobre 2021. Ma principale mission était de faire une refonte de leur site officiel afin de faciliter les achats aux clients, et d'avoir une interface plus ergonomique.",
-    websiteLink: "https://www.projectxparis.com/fr",
-  },
 ]
 
 projectsData = projectsData.map((project, index) => ({

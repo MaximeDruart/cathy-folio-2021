@@ -398,7 +398,7 @@ const Home = () => {
         <div className='hero'>
           <div className='text'>
             <div className='line first_line'>
-              <TextSpawn>Welcome to</TextSpawn>
+              <TextSpawn>discover</TextSpawn>
             </div>
             <div className='line second_line important_word'>
               <TextSpawn direction={"LEFT"}>the workspace</TextSpawn>
@@ -417,25 +417,7 @@ const Home = () => {
             <ArrowDownSVG />
           </motion.div>
         </div>
-        {/* START */}
-        {/* ROOM */}
-        <div className='home-section  what-i-do'>
-            <div className='headline'>New Update 19/08/2022</div>
-            <div className='separator'></div>
-            <div className='title text-h2-5'>
-              I recently create my <span className='saol'>3D Room</span>, so if you want to know more <span className='saol'>about me</span> do not hesitate to check it! This version is on progress! v.1.1
-            </div>
-            <Link className='button' to="/room">Visit Room</Link>
-            <div className="demi-spacer"></div>
-            <div dangerouslySetInnerHTML={{ __html: `
-            <video loop muted autoplay playsinline>
-              <source src="${roomVideo}" type="video/mp4">
-            </video>`
-            }}
-            />
-
-            {/* <img src={room} alt='room' /> */}
-        </div>        
+        {/* START */}      
 
 
         {/* what I do */}
@@ -582,7 +564,7 @@ const Home = () => {
           <div className='headline'>Streaming</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
-            I'm also a <span className='saol'>Twitch partner</span> and I stream my work on my Twitch channel :D
+            I'm also a <span className='saol'>Twitch partner</span> and I stream my work on my Twitch channel
           </div>
           <a className='button' href='https://www.twitch.tv/katy_v4' target='_blank'>
             Twitch.tv/Katy_v4
