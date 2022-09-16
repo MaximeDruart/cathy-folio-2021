@@ -44,13 +44,13 @@ import isometricRoom from "./assets/img/archives/isometricRoom.jpg"
 import selfBranding from "./assets/img/archives/selfBranding.jpg"
 import selfCard from "./assets/img/archives/selfCard.jpg"
 
-// music
-import bibi from "./assets/img/archives/bibi.jpg"
 
 // 2022
-import zero from "./assets/img/archives/zero.jpg"
 import room2 from "./assets/img/archives/room2.jpg"
 import voxel from "./assets/img/archives/voxel.jpg"
+import planetaria from "./assets/img/archives/planetaria.jpg"
+import peaches from "./assets/img/archives/peaches.jpg"
+import apollo from "./assets/img/archives/apollo.jpg"
 
 let archivesData = [
   {
@@ -59,6 +59,27 @@ let archivesData = [
     type: "print",
     description: "Elijah is a french photographer based in Paris. I designed and developed his portfolio trying to create an identity to feat with his content. There is a preview of the Homepage. Case study avalaible on the link below.",
     websiteLink: "https://www.cathydolle.com/works/elijah",
+  },
+  {
+    name: "apollo",
+    coverImg: apollo,
+    type: "UI Design",
+    description: "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
+    websiteLink: "https://www.cathydolle.com/works/bohinc",
+  },
+  {
+    name: "planetaria",
+    coverImg: planetaria,
+    type: "UI Design",
+    description: "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
+    websiteLink: "https://www.cathydolle.com/works/bohinc",
+  },
+  {
+    name: "peaches",
+    coverImg: peaches,
+    type: "UI Design",
+    description: "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
+    websiteLink: "https://www.cathydolle.com/works/bohinc",
   },
   {
     name: "This is black",
@@ -110,13 +131,6 @@ let archivesData = [
     type: "print",
     description: "Summer edition : Aurae Exposition for 5SENS, an experimental fictive place. Picture by Yomagick. If you want to see the project you can check my case study.",
     websiteLink: "https://www.cathydolle.com/works/sens",
-  },
-  {
-    name: "Bibi The weekend",
-    coverImg: bibi,
-    type: "music",
-    description: "Bibi is one of my favourite singer, and I decided to made some art with her. I also wanted to share you her album that is amazing.",
-    websiteLink: "https://www.youtube.com/watch?v=EDUDc2JXQ9A&t=1422s",
   },
   {
     name: "Business Card",

@@ -38,16 +38,16 @@ const StyledStyleSwitcher = styled.div`
     flex-wrap: wrap;
     width: 33px;
     .round{
-      margin: 3px 2px;
-      width: 12px;
-      height: 12px;
+      margin: 2px 2px;
+      width: 10px;
+      height: 10px;
       border-radius: 100%;
       background-color: ${({ theme }) => theme.colors.text.disabled2};
       transition: background-color 0.5s;
     }
     &:hover{
       .round{
-        background-color: ${({ theme }) => theme.colors.text.standard};
+        background-color: ${({ theme }) => theme.colors.primary1};
       }
     }
   }

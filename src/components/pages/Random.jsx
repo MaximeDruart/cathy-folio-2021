@@ -78,8 +78,8 @@ const Container = styled.div`
       border-radius: 1px;
 
       &.is-active {
-        border: 1px solid #A1A3CC;
-        background: #A1A3CC;
+        border: 1px solid  ${({ theme }) => theme.colors.primary1};
+        background:  ${({ theme }) => theme.colors.primary1};  ;
         border-radius: 1px;
       }
     }

@@ -29,8 +29,8 @@ const ColorListItem = styled(motion.li)`
     margin-left: 8px;
   }
   .point {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 10px;
     background: ${({ activeColorIndex }) => activeColorIndex};
   }
