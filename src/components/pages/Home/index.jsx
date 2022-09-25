@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react"
+import React, { useCallback, useState } from "react"
 import styled from "styled-components"
 
 import Slider from "../../shared/Slider"
@@ -373,9 +373,20 @@ const StyledHome = styled.div`
 
 const Home = () => {
   const { scrollY } = useViewportScroll()
-
   const discoverOpacity = useTransform(scrollY, (s) => 1 - s / 300)
+  const [volume, setVolume] = useState(0);
+
+  const toggleVolume = useCallback(() =>{
+    const isMuted = volume === 0
+    setVolume(isMuted ? 0.1 : 0)
+  },
+   [volume]
+  )
+
+
+
   return (
+  
     <PageTemplate initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
       <StyledHome>
         <div className='hero'>
@@ -402,7 +413,6 @@ const Home = () => {
         </div>
         {/* START */}      
 
-
         {/* what I do */}
         <div className='home-section what-i-do'>
           <div className='headline'>what i do</div>
@@ -421,15 +431,16 @@ const Home = () => {
           <InfiniteText />
           <div className='separator text-bot'></div>
           <div className="demi-spacer"></div>
-          <ReactPlayer url={showreel} 
-          width='100%'
-          height='100%'
-          controls
-          playing
-          muted={true}
-          loop
-           />
-           <div className="demi-spacer"></div>
+          <div onClick={toggleVolume}>
+            <ReactPlayer url={showreel} 
+            width='100%'
+            height='100%'
+            playing
+            volume={volume}
+            loop
+            />
+          </div>
+          <div className="demi-spacer"></div>
         </div>
         {/* projects */}
         <div className='home-section projects'>

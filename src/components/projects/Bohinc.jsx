@@ -73,7 +73,6 @@ const Bohinc = () => {
           width='100%'
           height='100%'
           playing
-          controls
           muted={true}
           loop
         />
@@ -91,7 +90,6 @@ const Bohinc = () => {
           width='100%'
           height='100%'
           playing
-          controls
           muted={true}
           loop
         />

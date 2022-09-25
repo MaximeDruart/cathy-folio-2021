@@ -118,7 +118,6 @@ const Chanel = () => {
           </video>`
           }}
         />
-
         <div dangerouslySetInnerHTML={{ __html: `
           <video loop muted autoplay playsinline>
           <source src="${video1}" type="video/mp4">
