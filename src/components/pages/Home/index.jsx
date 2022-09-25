@@ -425,6 +425,8 @@ const Home = () => {
           width='100%'
           height='100%'
           controls
+          playing
+          muted={true}
           loop
            />
            <div className="demi-spacer"></div>

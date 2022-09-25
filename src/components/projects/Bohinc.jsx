@@ -73,6 +73,7 @@ const Bohinc = () => {
           width='100%'
           height='100%'
           playing
+          controls
           muted={true}
           loop
         />
@@ -86,11 +87,12 @@ const Bohinc = () => {
         <img src={pdp3} alt="bohinc" />
         <div className="spacer"></div>
 
-        <ReactPlayer url={collision} 
+        <ReactPlayer url={orbit} 
           width='100%'
           height='100%'
           playing
-          muted={orbit}
+          controls
+          muted={true}
           loop
         />
         <img src={planeCover} alt="bohinc" />
