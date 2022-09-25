@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import lights from "../../assets/img/works/bohinc/lights.jpg"
+import ReactPlayer from 'react-player'
 
 import peachHome from "../../assets/img/works/bohinc/peachHome.png"
 import peach2 from "../../assets/img/works/bohinc/peach2.png"
@@ -68,11 +69,12 @@ const Bohinc = () => {
     <StyledBohinc>
       <div className="demi-spacer"></div>
       <div className="content">
-        <div dangerouslySetInnerHTML={{ __html: `
-        <video class="full" loop muted autoplay playsinline>
-            <source src="${collision}" type="video/webm">
-        </video>`
-        }}
+        <ReactPlayer url={collision} 
+          width='100%'
+          height='100%'
+          playing
+          muted={true}
+          loop
         />
         <img src={peachHome} alt="bohinc" />
         <img src={peach1} alt="bohinc" />
@@ -84,11 +86,12 @@ const Bohinc = () => {
         <img src={pdp3} alt="bohinc" />
         <div className="spacer"></div>
 
-        <div dangerouslySetInnerHTML={{ __html: `
-        <video class="full" loop muted autoplay playsinline>
-            <source src="${orbit}" type="video/webm">
-        </video>`
-        }}
+        <ReactPlayer url={collision} 
+          width='100%'
+          height='100%'
+          playing
+          muted={orbit}
+          loop
         />
         <img src={planeCover} alt="bohinc" />
         <img src={plane1} alt="bohinc" />

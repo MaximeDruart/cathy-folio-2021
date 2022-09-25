@@ -11,7 +11,8 @@ import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
-import roomVideo from "../../../assets/img/room.mp4"
+import showreel from "../../../assets/img/showreel.mp4"
+import ReactPlayer from 'react-player'
 
 //passions
 import game from "../../../assets/img/about/game.png"
@@ -419,6 +420,14 @@ const Home = () => {
           <div className='separator text-top'></div>
           <InfiniteText />
           <div className='separator text-bot'></div>
+          <div className="demi-spacer"></div>
+          <ReactPlayer url={showreel} 
+          width='100%'
+          height='100%'
+          controls
+          loop
+           />
+           <div className="demi-spacer"></div>
         </div>
         {/* projects */}
         <div className='home-section projects'>
