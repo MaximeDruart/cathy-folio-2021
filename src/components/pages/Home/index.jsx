@@ -414,7 +414,7 @@ const Home = () => {
         {/* START */}      
 
         {/* what I do */}
-        <div data-aos="fade-up" data-aos-duration="3000" className='home-section what-i-do'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='home-section what-i-do'>
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>
@@ -432,7 +432,9 @@ const Home = () => {
           <div className='separator text-bot'></div>
           <div className="demi-spacer"></div>
           <div onClick={toggleVolume}>
-            <ReactPlayer url={showreel} 
+            <ReactPlayer 
+            data-aos="fade-up" data-aos-duration="1000"
+            url={showreel} 
             width='100%'
             height='100%'
             playing
@@ -452,7 +454,7 @@ const Home = () => {
         <div className='home-section what-i-do'>
           <div className='headline'>My passions</div>
           <div className='separator'></div>
-          <div className='passion_container'>
+          <div data-aos="fade-up" data-aos-duration="1000" className='passion_container'>
             {/* video games */}
             <div className='passion'>
               <img src={game} alt='passion' />

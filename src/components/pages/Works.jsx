@@ -134,7 +134,7 @@ const StyledWorks = styled(motion.div)`
     transform: translateX(-50%);
     bottom: 40px;
     width: 35vw;
-    height: 2px;
+    height: 1px;
     background:  ${({ theme }) => theme.colors.text.disabled2};
 
     .scroll-bar {
