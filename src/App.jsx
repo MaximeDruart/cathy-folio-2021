@@ -15,6 +15,10 @@ import ProjectDetail from "./components/projects/ProjectDetail"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
 import { AnimatePresence } from "framer-motion"
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const App = () => {
   const containerRef = useRef(null)
 

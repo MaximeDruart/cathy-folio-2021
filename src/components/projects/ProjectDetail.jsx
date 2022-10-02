@@ -473,7 +473,7 @@ const ProjectDetail = ({ project }) => {
             src={project.visual1}
           />
           <div className="voile"></div>
-          <div className="project-description">
+          <div data-aos="fade-left" data-aos-duration="800" className="project-description">
             <h2 className='text-h2 title'>{project.title}</h2>
               {/* intro */}
             <div className='infos'>

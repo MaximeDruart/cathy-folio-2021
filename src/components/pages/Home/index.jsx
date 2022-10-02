@@ -414,7 +414,7 @@ const Home = () => {
         {/* START */}      
 
         {/* what I do */}
-        <div className='home-section what-i-do'>
+        <div data-aos="fade-up" data-aos-duration="3000" className='home-section what-i-do'>
           <div className='headline'>what i do</div>
           <div className='separator'></div>
           <div className='title text-h2-5'>

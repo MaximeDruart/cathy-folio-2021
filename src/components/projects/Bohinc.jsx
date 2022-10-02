@@ -27,6 +27,7 @@ import mobile4 from "../../assets/img/works/bohinc/mobile4.png"
 
 
 
+
 const StyledBohinc = styled.div`
 img, video{
   width: 100%;
@@ -64,37 +65,45 @@ img, video{
 }
 `
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const Bohinc = () => {
   return (
     <StyledBohinc>
       <div className="demi-spacer"></div>
       <div className="content">
-        <ReactPlayer url={collision} 
+        <ReactPlayer 
+          data-aos="fade-up" data-aos-duration="1000"
+          url={collision} 
           width='100%'
           height='100%'
           playing
           muted={true}
           loop
         />
-        <img src={peachHome} alt="bohinc" />
-        <img src={peach1} alt="bohinc" />
-        <img src={peach2} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={peachHome} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={peach1} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={peach2} alt="bohinc" />
         <div className="spacer"></div>
      
-        <img src={pdp1} alt="bohinc" />
-        <img src={pdp2} alt="bohinc" />
-        <img src={pdp3} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={pdp1} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={pdp2} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={pdp3} alt="bohinc" />
         <div className="spacer"></div>
 
-        <ReactPlayer url={orbit} 
+        <ReactPlayer 
+          data-aos="fade-up" data-aos-duration="1000" 
+          url={orbit} 
           width='100%'
           height='100%'
           playing
           muted={true}
           loop
         />
-        <img src={planeCover} alt="bohinc" />
-        <img src={plane1} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={planeCover} alt="bohinc" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={plane1} alt="bohinc" />
       </div>
 
       <div className="spacer"></div>
@@ -104,7 +113,7 @@ const Bohinc = () => {
       <div className="content">
         <div className='headline text-regular'>responsive selection</div>
         <div className='separator'></div>
-        <div className="responsive">
+        <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
           <img src={mobile1} alt="responsive"></img>
           <img src={mobile2} alt="responsive"></img>
           <img src={mobile3} alt="responsive"></img>

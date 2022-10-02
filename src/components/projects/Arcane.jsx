@@ -54,21 +54,25 @@ img{
 }
 `
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const Arcane = () => {
   return (
     <StyledArcane>
       <div className="demi-spacer"></div>
 
       <div className="content">
-        <img src={p1} alt="arcane" />
-        <img src={jinx} alt="arcane" />
-        <img src={jinx2} alt="arcane" />
-        <img src={p2} alt="arcane" />
-        <img src={silco} alt="arcane" />
-        <img src={silco2} alt="arcane" />
-        <img src={p3} alt="arcane" />
-        <img src={sisters} alt="arcane" />
-        <img src={vi} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={p1} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={jinx} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={jinx2} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={p2} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={silco} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={silco2} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={p3} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={sisters} alt="arcane" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={vi} alt="arcane" />
       </div>
       <div className="spacer"></div>
       <FullImage src={arcane} alt='prototype' />

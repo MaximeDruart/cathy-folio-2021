@@ -41,7 +41,7 @@ const StyledMouseFollower = styled.div`
 
       &.hover-circle {
         border: none;
-        transform: scale(0.01);
+        transform: scale(0.1);
         background: ${({ theme }) => theme.colors.primary1};
         opacity: 0.3;
       }
