@@ -1,3 +1,4 @@
+import AOS from "aos";
 import React from "react"
 import styled from "styled-components"
 import lights from "../../assets/img/works/bohinc/lights.jpg"
@@ -9,10 +10,8 @@ import peach1 from "../../assets/img/works/bohinc/peach1.png"
 import pdp1 from "../../assets/img/works/bohinc/pdp1.png"
 import pdp2 from "../../assets/img/works/bohinc/pdp2.png"
 import pdp3 from "../../assets/img/works/bohinc/pdp3.png"
-import menu from "../../assets/img/works/bohinc/menu.png"
 import planeCover from "../../assets/img/works/bohinc/planeCover.png"
 import plane1 from "../../assets/img/works/bohinc/plane1.png"
-import plane2 from "../../assets/img/works/bohinc/plane2.png"
 
 import collision from "../../assets/img/works/bohinc/collision.mp4"
 import orbit from "../../assets/img/works/bohinc/orbit.mp4"
@@ -65,11 +64,10 @@ img, video{
 }
 `
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
-
 const Bohinc = () => {
+  AOS.init({
+    duration : 2000
+  })
   return (
     <StyledBohinc>
       <div className="demi-spacer"></div>

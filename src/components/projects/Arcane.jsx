@@ -1,3 +1,4 @@
+import AOS from "aos";
 import React from "react"
 import styled from "styled-components"
 import jinx from "../../assets/img/works/arcane/jinx.jpg"
@@ -54,11 +55,10 @@ img{
 }
 `
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
-
 const Arcane = () => {
+  AOS.init({
+    duration : 2000
+  })
   return (
     <StyledArcane>
       <div className="demi-spacer"></div>

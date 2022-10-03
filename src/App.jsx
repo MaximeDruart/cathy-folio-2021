@@ -1,4 +1,7 @@
-import React, { useEffect, useLayoutEffect, useMemo, useRef } from "react"
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import React, { useMemo, useRef } from "react"
 import { Switch, Route } from "react-router"
 import { useMediaQuery } from "beautiful-react-hooks"
 
@@ -15,13 +18,13 @@ import ProjectDetail from "./components/projects/ProjectDetail"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
 import { AnimatePresence } from "framer-motion"
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
+
 
 const App = () => {
+  AOS.init({
+    duration : 2000
+  })
   const containerRef = useRef(null)
-
   let projectRoutes = useMemo(
     () =>
       projectData.map((project, index) => (
