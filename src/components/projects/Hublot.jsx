@@ -1,9 +1,10 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 
 //video
 import home from "../../assets/img/works/hublot/home.mp4"
-import preview from "../../assets/img/works/hublot/preview.jpg"
 import responsive from "../../assets/img/works/hublot/responsive.jpg"
 import product from "../../assets/img/works/hublot/product.png"
 import unico from "../../assets/img/works/hublot/unico.png"
@@ -11,7 +12,6 @@ import takashi from "../../assets/img/works/hublot/takashi.png"
 import slider from "../../assets/img/works/hublot/slider.png"
 import details from "../../assets/img/works/hublot/details.mp4"
 import concept from "../../assets/img/works/hublot/concept.mp4"
-import duo from "../../assets/img/works/hublot/duo.jpg"
 
 // responsive
 
@@ -23,9 +23,6 @@ import detailsMobile from "../../assets/img/works/hublot/details-phone.mp4"
 
 import FullImage from "../shared/FullImage"
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-AOS.init();
 
 
 
@@ -83,21 +80,25 @@ img, video.full{
 `
 
 const Hublot = () => {
+  AOS.init({
+    duration : 2000
+  })
+  
   return (
     <StyledHublot>
       <div className="demi-spacer"></div>
       <div className="content">
         <div className='headline text-regular'>homepage</div>
         <div className='separator'></div>
-        <div dangerouslySetInnerHTML={{ __html: `
-        <video data-aos="fade-up" data-aos-duration="1000" class="full" loop muted autoplay playsinline>
+        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
+        <video class="full" loop muted autoplay playsinline>
             <source src="${home}" type="video/mp4">
         </video>`
         }}
         />
         <img data-aos="fade-up" data-aos-duration="1000" src={product} alt="maquettes" />
-        <div dangerouslySetInnerHTML={{ __html: `
-        <video data-aos="fade-up" data-aos-duration="1000" class="full" loop muted autoplay playsinline>
+        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
+        <video class="full" loop muted autoplay playsinline>
             <source src="${details}" type="video/mp4">
         </video>`
         }}
@@ -108,8 +109,8 @@ const Hublot = () => {
         <div className='headline text-regular'>Product Details</div>
         <div className='separator'></div>
         <img data-aos="fade-up" data-aos-duration="1000" src={unico} alt="maquettes" />
-        <div dangerouslySetInnerHTML={{ __html: `
-        <video data-aos="fade-up" data-aos-duration="1000" class="full" loop muted autoplay playsinline>
+        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
+        <video class="full" loop muted autoplay playsinline>
             <source src="${concept}" type="video/mp4">
         </video>`
         }}
@@ -127,21 +128,21 @@ const Hublot = () => {
     <div className="content">
       <div className='headline text-regular'>responsive selection</div>
       <div className='separator'></div>
-      <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
-        <div className="video" dangerouslySetInnerHTML={{ __html: `
+      <div className="responsive">
+        <div data-aos="fade-up" data-aos-duration="1000" className="video" dangerouslySetInnerHTML={{ __html: `
         <video loop muted autoplay playsinline>
             <source src="${homeMobile}" type="video/mp4">
         </video>`
         }}
         />
-        <img src={productMobile} alt="responsive"></img>
-        <div className="video" dangerouslySetInnerHTML={{ __html: `
+        <img data-aos="fade-up" data-aos-duration="1000" src={productMobile} alt="responsive"></img>
+        <div data-aos="fade-up" data-aos-duration="1000" className="video" dangerouslySetInnerHTML={{ __html: `
         <video loop muted autoplay playsinline>
             <source src="${detailsMobile}" type="video/mp4">
         </video>`
         }}
         />
-      <img src={productsMobile} alt="responsive"></img>
+      <img data-aos="fade-up" data-aos-duration="1000" src={productsMobile} alt="responsive"></img>
       </div>
     </div>
       <div className="big-spacer"></div>

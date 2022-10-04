@@ -1,9 +1,10 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 import gardenMoodboard from "../../assets/img/works/sens/gardenMoodboard.png"
 import gardenPosters from "../../assets/img/works/sens/gardenPosters.png"
 import gardenTickets from "../../assets/img/works/sens/gardenTickets.png"
-import springKit from "../../assets/img/works/sens/springKit.jpg"
 import summerKit from "../../assets/img/works/sens/summerKit.jpg"
 import FullImage from "../shared/FullImage"
 import summerMoodboard from "../../assets/img/works/sens/summerMoodboard.png"
@@ -46,6 +47,9 @@ img{
 `
 
 const Sens = () => {
+  AOS.init({
+    duration : 2000
+  })
   return (
     <StyledSens>
       <div className="demi-spacer"></div>
@@ -53,15 +57,15 @@ const Sens = () => {
       <div className="content">
         <div className='headline text-regular'>Garden's Moodboard</div>
         <div className='separator'></div>
-        <img src={gardenMoodboard} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={gardenMoodboard} alt="garden" />
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Poster</div>
         <div className='separator'></div>
-        <img src={gardenPosters} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={gardenPosters} alt="garden" />
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Entry tickets</div>
         <div className='separator'></div>
-        <img className="quart" src={gardenTickets} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={gardenTickets} alt="garden" />
       </div>
       
       <div className="spacer"></div>
@@ -72,15 +76,15 @@ const Sens = () => {
       <div className="content">
         <div className='headline text-regular'>Aurae's Moodboard</div>
         <div className='separator'></div>
-        <img src={summerMoodboard} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={summerMoodboard} alt="garden" />
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Poster</div>
         <div className='separator'></div>
-        <img src={summerPosters} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={summerPosters} alt="garden" />
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Entry tickets</div>
         <div className='separator'></div>
-        <img className="quart" src={summerTickets} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={summerTickets} alt="garden" />
       </div>
      
 

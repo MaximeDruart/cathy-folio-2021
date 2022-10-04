@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 // Concept
@@ -15,8 +17,6 @@ import happy from "../../assets/img/works/feels/happy.svg"
 import b1 from "../../assets/img/works/feels/b1.png"
 import b2 from "../../assets/img/works/feels/b2.png"
 
-import r1 from "../../assets/img/works/feels/r1.png"
-import r2 from "../../assets/img/works/feels/r2.png"
 import video1 from "../../assets/img/works/feels/video.mp4"
 
 import feelsPreview from "../../assets/img/works/feels/feelsPreview.png"
@@ -91,6 +91,10 @@ img{
 `
 
 const Feels = () => {
+  AOS.init({
+    duration : 2000
+  })
+  
   return (
     <StyledFeels>
       <div className="demi-spacer"></div>
@@ -98,34 +102,34 @@ const Feels = () => {
       <div className="content">
         <div className='headline text-regular'>Dark Moodboard</div>
         <div className='separator'></div>
-        <img src={moodboard} alt="moodboard" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={moodboard} alt="moodboard" />
         <div className="spacer"></div>
         <div className='headline text-regular'>The experience</div>
         <div className='separator'></div>
-        <video poster={thumbnail} controls src={video1}></video>
+        <video data-aos="fade-up" data-aos-duration="1000" poster={thumbnail} controls src={video1}></video>
         <div className="spacer"></div>
         <div className='headline text-regular'>GENERATES AN EMOTIONAL PALETTE</div>
         <div className='separator'></div>
         <div className="img_container mini">
-          <img src={calm} alt="calm" />
-          <img src={casual} alt="casual" />
-          <img src={happy} alt="happy" />
+          <img data-aos="fade-up" data-aos-duration="1000" src={calm} alt="calm" />
+          <img data-aos="fade-up" data-aos-duration="1000" src={casual} alt="casual" />
+          <img data-aos="fade-up" data-aos-duration="1000" src={happy} alt="happy" />
         </div>
         <div className="spacer"></div>
         <div className='headline text-regular'>Blue Palette</div>
         <div className='separator'></div>
         <div className="img_container">
-          <img className="duo" src={b1} alt="img" />
-          <img className="duo" src={b2} alt="img" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={b1} alt="img" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={b2} alt="img" />
         </div>
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Flyers</div>
         <div className='separator'></div>
         <div className="img_container">
-          <img className="duo" src={concept} alt="img" />
-          <img className="duo" src={moods} alt="img" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={concept} alt="img" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={moods} alt="img" />
         </div>
-        <img src={guide} alt="img" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={guide} alt="img" />
       </div>
  
 
@@ -137,8 +141,8 @@ const Feels = () => {
       <div className='headline text-regular'>Dark Print</div>
         <div className='separator'></div>
         <div className="img_container">
-          <img className="duo" src={bPrint} alt="print" />
-          <img className="duo" src={rPrint} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={bPrint} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={rPrint} alt="print" />
         </div>
       </div>
    

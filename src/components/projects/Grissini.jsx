@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 import moodboard from "../../assets/img/works/grissini/moodboard.jpg"
@@ -9,6 +11,7 @@ import menuMobile from "../../assets/img/works/grissini/menu_mobile.jpg"
 import shopMobile from "../../assets/img/works/grissini/shop_mobile.jpg"
 import contactMobile from "../../assets/img/works/grissini/contact_mobile.jpg"
 import FullImage from "../shared/FullImage"
+
 
 
 const StyledGrissini = styled.div`
@@ -49,13 +52,16 @@ img{
 `
 
 const Grissini = () => {
+  AOS.init({
+    duration : 2000
+  })
   return (
     <StyledGrissini>
       <div className="demi-spacer"></div>
       <div className="content">
-        <img src={homepage} alt="pxp" />
-        <img src={contact} alt="pxp" />
-        <img src={about} alt="pxp" />
+        <img  data-aos="fade-up" data-aos-duration="1000" src={homepage} alt="pxp" />
+        <img  data-aos="fade-up" data-aos-duration="1000" src={contact} alt="pxp" />
+        <img  data-aos="fade-up" data-aos-duration="1000" src={about} alt="pxp" />
       </div>
 
       <div className="spacer"></div>
@@ -65,11 +71,11 @@ const Grissini = () => {
       <div className="content">
         <div className='headline text-regular'>responsive selection</div>
         <div className='separator'></div>
-        <div className="responsive">
-          <img src={homeMobile} alt="responsive"></img>
-          <img src={menuMobile} alt="responsive"></img>
-          <img src={shopMobile} alt="responsive"></img>
-          <img src={contactMobile} alt="responsive"></img>
+        <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
+          <img  src={homeMobile} alt="responsive"></img>
+          <img  src={menuMobile} alt="responsive"></img>
+          <img  src={shopMobile} alt="responsive"></img>
+          <img  src={contactMobile} alt="responsive"></img>
         </div>
       </div>
 

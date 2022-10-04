@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 import pxpDesktop from "../../assets/img/works/pxp/pxp_desktop.jpg"
@@ -47,13 +49,16 @@ const StyledPXP = styled.div`
 `
 
 const PXP = () => {
+  AOS.init({
+    duration : 2000
+  })
   return (
     <StyledPXP>
       <div className='demi-spacer'></div>
 
       <div className="content">
-        <img src={homepage} alt='pxp' />
-        <img src={productPage} alt='pxp' />
+        <img data-aos="fade-up" data-aos-duration="1000" src={homepage} alt='pxp' />
+        <img data-aos="fade-up" data-aos-duration="1000" src={productPage} alt='pxp' />
       </div>
       
       <div className='spacer'></div>
@@ -63,7 +68,7 @@ const PXP = () => {
       <div className="content">
         <div className='headline text-regular'>responsive selection</div>
         <div className='separator'></div>
-        <div className='responsive'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='responsive'>
           <img src={homeMobile} alt='responsive'></img>
           <img src={menuMobile} alt='responsive'></img>
           <img src={productMobile} alt='responsive'></img>

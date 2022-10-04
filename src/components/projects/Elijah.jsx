@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 
@@ -13,6 +15,7 @@ import clientsMobile from "../../assets/img/works/elijah/clientsMobile.jpg"
 
 
 import FullImage from "../shared/FullImage"
+
 
 
 const StyledElijah = styled.div`
@@ -53,14 +56,18 @@ img{
 `
 
 const Arcane = () => {
+  AOS.init({
+    duration : 2000
+  })
+  
   return (
     <StyledElijah>
       {/* start case */}
       <div className="demi-spacer"></div>
       <div className="content">
-        <img src={homepage} alt="elijah" />
-        <img src={clients} alt="elijah" />
-        <img src={brand} alt="elijah" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={homepage} alt="elijah" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={clients} alt="elijah" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={brand} alt="elijah" />
       </div>
       
       <div className="spacer"></div>
@@ -70,7 +77,7 @@ const Arcane = () => {
       <div className="content">
         <div className='headline text-regular'>responsive selection</div>
         <div className='separator'></div>
-        <div className="responsive">
+        <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
           <img src={homepageMobile} alt="responsive" />
           <img src={menuMobile} alt="responsive" />
           <img src={clientsMobile} alt="responsive" />

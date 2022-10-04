@@ -11,7 +11,6 @@ import sisters from "../../assets/img/works/arcane/sisters.jpg"
 import p1 from "../../assets/img/works/arcane/p1.jpg"
 import p2 from "../../assets/img/works/arcane/p2.jpg"
 import p3 from "../../assets/img/works/arcane/p3.jpg"
-
 import FullImage from "../shared/FullImage"
 
 const StyledArcane = styled.div`
@@ -58,7 +57,7 @@ img{
 const Arcane = () => {
   AOS.init({
     duration : 2000
-  })
+  })  
   return (
     <StyledArcane>
       <div className="demi-spacer"></div>

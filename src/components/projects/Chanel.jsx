@@ -13,11 +13,11 @@ import getDressed from "../../assets/img/works/chanel/getDressed.jpg"
 import girlTalk from "../../assets/img/works/chanel/girlTalk.jpg"
 
 import product from "../../assets/img/works/chanel/product.jpg"
-import preview from "../../assets/img/works/chanel/preview.jpeg"
-
 import FullImage from "../shared/FullImage"
 
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
@@ -72,39 +72,22 @@ img, video{
 `
 
 const Chanel = () => {
+  AOS.init({
+    duration : 2000
+  })  
   return (
     <StyledChanel>
-      {/* <h2 className='text-h2'>Graphic Chart</h2>
-          <div className="chart">
-        <div className="art-direction">
-          <h4 className="text-h4">Art direction</h4>
-          <p className="text-description">For this project, I chose sweet, tender and soft colors visually, integrating perfectly with the packaging and the freshness of the perfume. For the typography, a modern and readable sans serif typeface, accompanied by a luxurious and charming typography.</p>
-        </div>
-        <div className="typography">
-          <h4 className="text-h4">Typography</h4>
-          <span className="text-typo one">Neue Montreal<br/>Aa 123</span>
-          <span className="text-typo two">Gallery Modern<br/>Aa 123</span>
-
-        </div>
-        <div className="colors">
-          <h4 className="text-h4">Colors</h4>
-          <div className="color one">#C0B9D2</div>
-          <div className="color two">#EAB8B2</div>
-          <div className="color three">#EDEDED</div>
-        </div>
-      </div> */}
-      {/* end chart */}
 
       <div className="demi-spacer"></div>
       
       <div className="content">
         <div className='headline text-regular'>Moodboard</div>
         <div className='separator'></div>
-        <img src={moodboard} alt="moodboard" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={moodboard} alt="moodboard" />
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Room preview</div>
         <div className='separator'></div>
-        <img src={room} alt="room" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={room} alt="room" />
       </div>
       
       <div className="demi-spacer"></div>
@@ -112,22 +95,22 @@ const Chanel = () => {
       <div className="content">
       <div className='headline text-regular'>views</div>
         <div className='separator'></div>
-        <div dangerouslySetInnerHTML={{ __html: `
+        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
           <video loop muted autoplay playsinline>
             <source src="${homepage}" type="video/mp4">
           </video>`
           }}
         />
-        <div dangerouslySetInnerHTML={{ __html: `
+        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
           <video loop muted autoplay playsinline>
           <source src="${video1}" type="video/mp4">
           </video>`
           }}
         />
 
-        <img src={girlTalk} alt="girlTalk" />
-        <img src={girlKit} alt="girlKit" />
-        <img src={getDressed} alt="getDressed" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={girlTalk} alt="girlTalk" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={girlKit} alt="girlKit" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={getDressed} alt="getDressed" />
       </div>
       
       <div className="spacer"></div>

@@ -1,8 +1,8 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 // Concept
-import preview from "../../assets/img/works/branding/preview.png"
-import kit from "../../assets/img/works/branding/kit.jpg"
 import resumeVerso from "../../assets/img/works/branding/resumeVerso.jpg"
 import resumeRecto from "../../assets/img/works/branding/resumeRecto.jpg"
 import envelop from "../../assets/img/works/branding/envelop.jpg"
@@ -11,7 +11,6 @@ import businessCard from "../../assets/img/works/branding/businessCard.jpg"
 // CARD
 import cardRecto from "../../assets/img/works/branding/cardRecto.jpg"
 import cardVerso from "../../assets/img/works/branding/cardVerso.jpg"
-import stickers from "../../assets/img/works/branding/stickers.png"
 
 import FullImage from "../shared/FullImage"
 
@@ -26,7 +25,7 @@ import Cathy3 from "../../assets/icons/cathy3.svg?component"
 
 
 
-const StyledSangen = styled.div`
+const StyledBranding = styled.div`
 
 svg{
   height: 300px;
@@ -86,15 +85,18 @@ img{
 }
 `
 
-const Sangen = () => {
+const Branding = () => {
+  AOS.init({
+    duration : 2000
+  })
   return (
-    <StyledSangen>
+    <StyledBranding>
       <div className="demi-spacer"></div>
       
       <div className="content">
         <div className='headline text-regular'>logo maker</div>
         <div className='separator'></div>
-        <div className="img_container">
+        <div data-aos="fade-up" data-aos-duration="1000" className="img_container">
           <Cathy1></Cathy1>
           <Cathy2></Cathy2>
           <Cathy3></Cathy3>
@@ -106,8 +108,8 @@ const Sangen = () => {
       <div className="content">
         <div className='headline text-regular'>resume</div>
         <div className='separator'></div>
-        <img className="little" src={resumeRecto} alt="resume" />
-        <img className="little" src={resumeVerso} alt="resume" />
+        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={resumeRecto} alt="resume" />
+        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={resumeVerso} alt="resume" />
       </div>
       
 
@@ -116,10 +118,10 @@ const Sangen = () => {
       <div className="content">
         <div className='headline text-regular'>Business Card</div>
         <div className='separator'></div>
-        <img className="little" src={businessCard} alt="resume" />
+        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={businessCard} alt="resume" />
         <div className="img_container">
-          <img className="duo" src={cardRecto} alt="calm" />
-          <img className="duo" src={cardVerso} alt="casual" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={cardRecto} alt="calm" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={cardVerso} alt="casual" />
         </div>
       </div>
     
@@ -134,8 +136,8 @@ const Sangen = () => {
 
       <div className="big-spacer"></div>
 
-    </StyledSangen>
+    </StyledBranding>
   )
 }
 
-export default Sangen
+export default Branding

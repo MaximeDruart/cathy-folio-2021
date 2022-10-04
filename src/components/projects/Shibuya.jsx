@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
 import city from "../../assets/img/works/shibuya/1.jpg"
@@ -11,7 +13,6 @@ import grid3 from "../../assets/img/works/shibuya/grid3.svg"
 import grid4 from "../../assets/img/works/shibuya/grid4.svg"
 import grid5 from "../../assets/img/works/shibuya/grid5.svg"
 import grid6 from "../../assets/img/works/shibuya/grid6.svg"
-import FullImage from "../shared/FullImage"
 import ShibuyaLatin from "../../assets/icons/shibuya_latin.svg?component"
 import ShibuyaKanji from "../../assets/icons/shibuya_kanji.svg?component"
 
@@ -78,30 +79,33 @@ svg{
 `
 
 const Shibuya = () => {
+  AOS.init({
+    duration : 2000
+  })
 return (
 <StyledShibuya>
   <div className="demi-spacer"></div>
 
   <div className="content">
     <div className="img_container">
-      <img className="trio" src={grid1} alt="grid" />
-      <img className="trio" src={grid2} alt="grid" />
-      <img className="trio" src={grid3} alt="grid" />
-      <img className="trio" src={grid4} alt="grid" />
-      <img className="trio" src={grid5} alt="grid" />
-      <img className="trio" src={grid6} alt="grid" />
+      <img data-aos="fade-up" data-aos-duration="1000" className="trio" src={grid1} alt="grid" />
+      <img data-aos="fade-up" data-aos-duration="1000" className="trio" src={grid2} alt="grid" />
+      <img data-aos="fade-up" data-aos-duration="1000" className="trio" src={grid3} alt="grid" />
+      <img data-aos="fade-up" data-aos-duration="1000" className="trio" src={grid4} alt="grid" />
+      <img data-aos="fade-up" data-aos-duration="1000" className="trio" src={grid5} alt="grid" />
+      <img data-aos="fade-up" data-aos-duration="1000" className="trio" src={grid6} alt="grid" />
     </div>
     <div className="spacer"></div>
     <div className='headline text-regular'>Latin Logo</div>
     <div className='separator'></div>
-    <div className="logo-duo">
+    <div data-aos="fade-up" data-aos-duration="1000" className="logo-duo">
       <ShibuyaLatin />
       <ShibuyaLatin />
     </div>
     <div className="spacer"></div>
     <div className='headline text-regular'>Kanji Logo</div>
     <div className='separator'></div>
-    <div className="logo-duo">
+    <div data-aos="fade-up" data-aos-duration="1000" className="logo-duo">
       <ShibuyaKanji />
       <ShibuyaKanji />
     </div>
@@ -113,11 +117,11 @@ return (
     {/* pub */}
     <div className='headline text-regular'>Views</div>
       <div className='separator'></div>
-      <img src={metro} alt="logo"></img>
-      <img src={pub} alt="logo"></img>
-      <img src={city} alt="logo"></img>
-      <img src={street} alt="logo"></img>
-      <img src={ipad} alt="logo"></img>
+      <img data-aos="fade-up" data-aos-duration="1000" src={metro} alt="logo"></img>
+      <img data-aos="fade-up" data-aos-duration="1000" src={pub} alt="logo"></img>
+      <img data-aos="fade-up" data-aos-duration="1000" src={city} alt="logo"></img>
+      <img data-aos="fade-up" data-aos-duration="1000" src={street} alt="logo"></img>
+      <img data-aos="fade-up" data-aos-duration="1000" src={ipad} alt="logo"></img>
 
   </div>
  

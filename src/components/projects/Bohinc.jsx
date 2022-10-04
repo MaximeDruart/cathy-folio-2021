@@ -26,7 +26,6 @@ import mobile4 from "../../assets/img/works/bohinc/mobile4.png"
 
 
 
-
 const StyledBohinc = styled.div`
 img, video{
   width: 100%;
