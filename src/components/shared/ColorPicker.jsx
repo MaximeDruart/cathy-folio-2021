@@ -41,7 +41,7 @@ const ColorListItem = styled(motion.li)`
     color: transparent;
     transform: rotate(180deg);
     margin-bottom: 14px;
-    font-size: 12px;
+    font-size: 0px;
     transition: color 0.4s;
   }
   &:hover {

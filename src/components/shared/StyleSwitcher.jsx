@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import useStore from "../../store"
+// import useStore from "../../store"
 import { horizontalPadding } from "../../styles/globalCustom"
 import ColorPicker from "./ColorPicker"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 
 const StyledStyleSwitcher = styled.div`
@@ -11,11 +11,10 @@ const StyledStyleSwitcher = styled.div`
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
-  align-items: baseline;
   justify-content: space-between;
-  bottom: 60px;
+  bottom: 40px;
   z-index: 100;
-  align-items: flex-end;
+  align-items: center;
   ${horizontalPadding};
   pointer-events: none;
   color: ${({ theme }) => theme.colors.text.standard};
@@ -67,12 +66,34 @@ const StyledStyleSwitcher = styled.div`
     bottom: 28px;
     font-size: 12px;
   }
+  nav{
+    pointer-events: auto;
+    margin-right: 12px;
+    display: flex;
+    background: rgba(120, 120, 120, 0.3);
+    padding: 4px 4px;
+    border-radius: 90px;
+    backdrop-filter: blur(10px);
+    a{
+        margin: 0 0px;
+        padding: 10px 24px;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 90px;
+        color: white;
+        &.active{
+          background-color: rgba(120, 120, 120, 0.5);
+        }
+        &:first-child {
+           margin-right: 4px;
+      }
+  }
+}
 
 `
 
 const StyleSwitcher = () => {
-  const toggleDarkMode = useStore((state) => state.toggleDarkMode)
-  const isDarkMode = useStore((state) => state.isDarkMode)
+  // const toggleDarkMode = useStore((state) => state.toggleDarkMode)
+  // const isDarkMode = useStore((state) => state.isDarkMode)
   return (
     <StyledStyleSwitcher>
       <Link to='/random'>
@@ -83,6 +104,10 @@ const StyleSwitcher = () => {
           <div className="round"></div>
         </div>
       </Link>
+      <nav>
+        <NavLink exact to="/">Works</NavLink>
+        <NavLink  to="/random">Archives</NavLink>
+      </nav>
       <div className="style">
         <ColorPicker />
         {/* <button onClick={toggleDarkMode} className='theme-toggle'>

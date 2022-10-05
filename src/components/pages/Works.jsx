@@ -119,22 +119,23 @@ const StyledWorks = styled(motion.div)`
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 64px;
+    bottom: 112px;
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.text};
     z-index: 1000;
     text-transform: uppercase;
     letter-spacing: 0.2px;
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .scroll-progress {
     position: absolute;
+    top:0;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 40px;
-    width: 35vw;
-    height: 1px;
+    // bottom: 120px;
+    width: 100vw;
+    height: 1.5px;
     background:  ${({ theme }) => theme.colors.text.disabled2};
 
     .scroll-bar {
@@ -306,7 +307,7 @@ const Works = () => {
   const { progress } = useProgress()
 
   useLayoutEffect(() => {
-    let width = mapRange(0, 120, 0, 35, progress) + "vw"
+    let width = mapRange(0, 100, 0, 100, progress) + "vw"
     gsap.to(scrollProgressContainer.current, { width, duration: 1 })
   }, [progress])
 

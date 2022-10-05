@@ -107,10 +107,10 @@ const Header = () => {
       <Link to='/' className='logo'>
         <CathyLogoSVG />
       </Link>
-      <div className="statut">
+      {/* <div className="statut">
         <div className="circle"></div>
         <a href="mailto:cathy.dolle@live.fr">Avalaible for freelance</a>
-      </div>
+      </div> */}
       <button
         onClick={() => {
           toggleMenu()
