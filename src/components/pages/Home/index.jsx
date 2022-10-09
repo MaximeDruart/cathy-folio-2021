@@ -236,7 +236,7 @@ const StyledHome = styled.div`
 
     .headline {
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 10px;
       font-family: NeueMontrealRegular;
     }
     .passion_container {
@@ -369,6 +369,7 @@ const StyledHome = styled.div`
   .contact {
     margin-top: 20vh;
   }
+
 `
 
 const Home = () => {

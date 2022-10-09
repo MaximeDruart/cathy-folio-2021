@@ -63,17 +63,47 @@ import bohincCover from "./assets/img/works/covers/bohinc.jpg"
 import bohincCoverSmall from "./assets/img/works/covers-small/bohinc-min.jpg"
 import bohincVisual1 from "./assets/img/works/bohinc/visual1.jpg"
 
-import Esd from "./components/projects/Esd"
-import esdCover from "./assets/img/works/covers/esd.jpg"
-import esdCoverSmall from "./assets/img/works/covers-small/esd-min.jpg"
-import esdVisual1 from "./assets/img/works/esd/visual1.jpg"
-
 import Hublot from "./components/projects/Hublot"
 import hublotCover from "./assets/img/works/covers/hublot.jpg"
 import hublotCoverSmall from "./assets/img/works/covers-small/hublot-min.jpg"
 import hublotVisual1 from "./assets/img/works/hublot/visual1.jpg"
 
+import Cyberpunk from "./components/projects/Cyberpunk"
+import cyberpunkCover from "./assets/img/works/covers/cyberpunk.jpg"
+import cyberpunkCoverSmall from "./assets/img/works/covers-small/cyberpunk-min.jpg"
+import cyberpunkVisual1 from "./assets/img/works/cyberpunk/visual1.jpg"
+
 let projectsData = [
+  {
+    name: "Cyberpunk",
+    path: "cyberpunk",
+    title: "Cyberpunk design",
+    coverImg: cyberpunkCover,
+    coverImgSmall: cyberpunkCoverSmall,
+    visual1: cyberpunkVisual1,
+    component: Cyberpunk,
+    date: "Oct. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, React"],
+    description:
+      "Being an avid Cyberpunk2077 player, I fell in love with the Cyberpunk series. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+    websiteLink: "https://cyberpunkv4.netlify.app/",
+  },
+  {
+    name: "Hublot",
+    path: "hublot",
+    title: "Hublot x Murakami",
+    coverImg: hublotCover,
+    coverImgSmall: hublotCoverSmall,
+    visual1: hublotVisual1,
+    component: Hublot,
+    date: "Aug. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, Photoshop, React"],
+    description:
+      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
+    websiteLink: "https://hublotxtakashi.netlify.app/",
+  },
   {
     name: "Arcane",
     path: "arcane",
@@ -101,21 +131,6 @@ let projectsData = [
     techs: ["Figma, Photoshop"],
     description:
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
-  },
-  {
-    name: "Hublot",
-    path: "hublot",
-    title: "Hublot x Murakami",
-    coverImg: hublotCover,
-    coverImgSmall: hublotCoverSmall,
-    visual1: hublotVisual1,
-    component: Hublot,
-    date: "Aug. 2022",
-    role: "Designer, Dev",
-    techs: ["Figma, Photoshop, React"],
-    description:
-      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
-    websiteLink: "https://hublotxtakashi.netlify.app/",
   },
   {
     name: "Zhonglin",

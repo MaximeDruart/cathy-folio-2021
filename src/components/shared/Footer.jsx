@@ -15,7 +15,7 @@ const Container = styled.div`
       text-transform: uppercase;
       color: ${({ theme }) => theme.colors.text.standard};
       font-family: NeueMontrealRegular;
-      font-size: 12px;
+      font-size: 10px;
     }
 
     .separator {
@@ -29,9 +29,9 @@ const Container = styled.div`
 
   .contact {
     margin-top: 20vh;
-    padding-bottom: 6vh;
+    padding-bottom: 15vh;
     @media (max-width: 750px) {
-      padding-bottom: 10vh;
+      padding-bottom: 12vh;
     }
     .footer-body {
       width: 100%;
@@ -107,6 +107,7 @@ const Container = styled.div`
           text-transform: uppercase;
           margin-right: 10px;
           margin: 0 20px;
+          font-size: 10px;
           a {
             transition: color 0.5s;
           }
@@ -120,7 +121,7 @@ const Container = styled.div`
           justify-content: center;
           li {
             margin: 5px 6px;
-            font-size: 11px;
+            font-size: 10px;
           }
         }
       }

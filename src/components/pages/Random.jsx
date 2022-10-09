@@ -35,13 +35,14 @@ let projectIsOpened = createRef()
 const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background: #ECE9E7;
+  background: #0F0F0F;
+  // background: #ECE9E7;
   transition: background-color 0.6s;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  @media (max-width: 900px) {
+  @media (max-width: 900px);
     justify-content: center;
   }
 

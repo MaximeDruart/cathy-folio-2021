@@ -70,8 +70,8 @@ const StyledStyleSwitcher = styled.div`
     pointer-events: auto;
     margin-right: 12px;
     display: flex;
-    background: rgba(120, 120, 120, 0.3);
-    padding: 4px 4px;
+    background: rgba(120, 120, 120, 0.2);
+    padding: 3px 3px;
     border-radius: 90px;
     backdrop-filter: blur(10px);
     a{
@@ -96,7 +96,7 @@ const StyleSwitcher = () => {
   // const isDarkMode = useStore((state) => state.isDarkMode)
   return (
     <StyledStyleSwitcher>
-      <Link to='/random'>
+      <Link to='/dashboard'>
         <div className="project">
           <div className="round"></div>
           <div className="round"></div>
@@ -105,8 +105,9 @@ const StyleSwitcher = () => {
         </div>
       </Link>
       <nav>
-        <NavLink exact to="/">Works</NavLink>
+        <NavLink exact to='/'>Works</NavLink>
         <NavLink  to="/random">Archives</NavLink>
+        <NavLink  to="/capsule">Capsule</NavLink>
       </nav>
       <div className="style">
         <ColorPicker />

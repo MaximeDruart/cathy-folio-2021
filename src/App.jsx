@@ -11,6 +11,7 @@ import Menu from "./components/shared/Menu"
 import MouseFollower from "./components/shared/MouseFollower"
 
 import Home from "./components/pages/Home"
+import Dashboard from "./components/pages/Dashboard"
 import Capsule from "./components/pages/Capsule"
 import Works from "./components/pages/Works"
 import Random from "./components/pages/Random"
@@ -52,6 +53,7 @@ const App = () => {
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
                 <Route path='/about' exact component={Home} />
+                <Route path='/dashboard' exact component={Dashboard} />
                 <Route path='/capsule' exact component={Capsule} />
                 <Route path='/random' exact component={Random} />
                 <Route path='/' component={Works} />

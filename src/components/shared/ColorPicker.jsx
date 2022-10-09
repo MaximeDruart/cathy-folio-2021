@@ -17,7 +17,7 @@ const Container = styled.div`
   ul {
     display: flex;
     flex-flow: row nowrap;
-    align-items: baseline;
+    align-items: center;
   }
 `
 
@@ -41,7 +41,7 @@ const ColorListItem = styled(motion.li)`
     color: transparent;
     transform: rotate(180deg);
     margin-bottom: 14px;
-    font-size: 0px;
+    font-size: 12px;
     transition: color 0.4s;
   }
   &:hover {
@@ -96,7 +96,7 @@ const ColorPicker = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <div className='text'>{color.name}</div>
+                  {/* <div className='text'>{color.name}</div> */}
                   <button className='point'></button>
                 </ColorListItem>
               ))}
@@ -108,7 +108,7 @@ const ColorPicker = () => {
             }}
             activeColorIndex={activeTheme.colors.primary1}
           >
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -116,7 +116,7 @@ const ColorPicker = () => {
               className='text'
             >
               {activeTheme.name}
-            </motion.div>
+            </motion.div> */}
             <div className='point'></div>
           </ColorListItem>
         </AnimatePresence>

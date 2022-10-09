@@ -32,18 +32,19 @@ const StyledHeader = styled.div`
     transition: background-color 0.3s; 
     // background-color: #FFFFFF40;
     backdrop-filter: blur(6px);
+    // background: rgba(120, 120, 120, 0.3);
     border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
     a{
-      color: ${({ theme }) => theme.colors.text.text};
+      color: white;
       text-decoration: none;
       letter-spacing : 0.3px;
       transition: color 0.3s;
-      padding: 14px 24px 14px 36px;
+      padding: 14px 36px 14px 24px;
     }
     .circle{
-      left: -4px;
+      right: 0px;
       position: absolute;
-      margin-left: 24px;
+      margin-right: 20px;
       width: 6px;
       height: 6px;
       border-radius: 100%;
@@ -107,11 +108,11 @@ const Header = () => {
       <Link to='/' className='logo'>
         <CathyLogoSVG />
       </Link>
-      {/* <div className="statut">
+      <div className="statut">
+        <Link to='About'>About</Link>
         <div className="circle"></div>
-        <a href="mailto:cathy.dolle@live.fr">Avalaible for freelance</a>
-      </div> */}
-      <button
+      </div>
+      {/* <button
         onClick={() => {
           toggleMenu()
         }}
@@ -119,7 +120,7 @@ const Header = () => {
       >
         <div className='top'></div>
         <div className='bottom'></div>
-      </button>
+      </button> */}
     </StyledHeader>
   )
 }
