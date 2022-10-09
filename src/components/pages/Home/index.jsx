@@ -25,7 +25,7 @@ import painting from "../../../assets/img/about/paint.png"
 import manual from "../../../assets/img/about/craft.png"
 import art from "../../../assets/img/about/3D.png"
 
-import twitch from "../../../assets/img/about/garden.png"
+import twitch from "../../../assets/img/about/twitch.jpg"
 import resume from "../../../assets/img/about/resume.pdf"
 
 const StyledHome = styled.div`

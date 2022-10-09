@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import useStore from "../../store"
 import CathyLogoSVG from "../../assets/icons/cathy.svg?component"
+
+import mail from "../../assets/img/mail.svg"
 import { horizontalPadding } from "../../styles/globalCustom"
 
 const StyledHeader = styled.div`
@@ -15,8 +17,11 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   top: 48px;
   z-index: 100;
-
   pointer-events: none;
+
+  nav{
+    display: flex;
+  }
 
   .statut{
     position: relative;
@@ -34,6 +39,15 @@ const StyledHeader = styled.div`
     backdrop-filter: blur(6px);
     // background: rgba(120, 120, 120, 0.3);
     border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
+    &.mail{
+      margin-left: 16px;
+      img{
+        height: 12px;
+      }
+      a{
+        padding: 14px;
+      }
+    }
     a{
       color: white;
       text-decoration: none;
@@ -108,10 +122,16 @@ const Header = () => {
       <Link to='/' className='logo'>
         <CathyLogoSVG />
       </Link>
-      <div className="statut">
-        <Link to='About'>About</Link>
-        <div className="circle"></div>
-      </div>
+      <nav>
+        <div className="statut">
+          <Link to='About'>About</Link>
+          <div className="circle"></div>
+        </div>
+        <div className="statut mail">
+          <a href="mailto:cathy.dolle@live.fr"><img src={mail} alt="mail"></img></a>
+        </div>
+      </nav>
+      
       {/* <button
         onClick={() => {
           toggleMenu()
