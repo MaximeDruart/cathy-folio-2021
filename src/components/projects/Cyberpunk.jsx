@@ -11,6 +11,9 @@ import lucyMobile from "../../assets/img/works/cyberpunk/lucyMobile.png"
 import davidMobile from "../../assets/img/works/cyberpunk/davidMobile.png"
 import rebeccaMobile from "../../assets/img/works/cyberpunk/rebeccaMobile.png"
 import maineMobile from "../../assets/img/works/cyberpunk/maineMobile.png"
+import pic1 from "../../assets/img/works/cyberpunk/1.jpg"
+import pic2 from "../../assets/img/works/cyberpunk/2.jpg"
+import pic3 from "../../assets/img/works/cyberpunk/3.jpg"
 import FullImage from "../shared/FullImage"
 
 
@@ -33,10 +36,13 @@ const Cyberpunk = () => {
     <StyledCyberpunk>
       <div className="demi-spacer"></div>
       <div className="content">
+        <img  data-aos="fade-up" data-aos-duration="1000" src=  {pic3} alt="cyber" />
         <img  data-aos="fade-up" data-aos-duration="1000" src={lucy} alt="cyber" />
         <img  data-aos="fade-up" data-aos-duration="1000" src={david} alt="cyber" />
+        <img  data-aos="fade-up" data-aos-duration="1000" src=  {pic2} alt="cyber" />
         <img  data-aos="fade-up" data-aos-duration="1000" src={maine} alt="cyber" />
         <img  data-aos="fade-up" data-aos-duration="1000" src={rebecca} alt="cyber" />
+        <img  data-aos="fade-up" data-aos-duration="1000" src=  {pic1} alt="cyber" />
       </div>
 
       <div className="spacer"></div>
