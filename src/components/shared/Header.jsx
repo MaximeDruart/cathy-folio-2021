@@ -124,7 +124,7 @@ const Header = () => {
       </Link>
       <nav>
         <div className="statut">
-          <Link to='About'>About</Link>
+          <Link to='/about'>About</Link>
           <div className="circle"></div>
         </div>
         <div className="statut mail">
