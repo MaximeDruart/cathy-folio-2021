@@ -146,14 +146,13 @@ export default css`
     align-items: center;
     pointer-events: auto;
     border: solid 1px #96969640;
-    padding: 12px 24px;
     border-radius: 30px;
     font-family: NeueMontrealRegular;
     text-transform: uppercase;
-    font-size: 10px;
     transition: background-color 0.3s; 
     backdrop-filter: blur(6px);
     a{
+      padding: 12px 24px;
       color: ${({ theme }) => theme.colors.text.standard};
       font-size: 10px;
     }
@@ -165,7 +164,9 @@ export default css`
     }
     &.mail{
       margin-left: 16px;
-      padding: 14px;
+      a{
+        padding: 14px;
+      }
       img{
         height: 10px;
       }
