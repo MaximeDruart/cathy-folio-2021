@@ -25,7 +25,7 @@ export default css`
   .text-h2 {
     font-family: "NeueMontrealRegular";
     /* font-family: NeueMontrealRegular; */
-    font-size: 54px;
+    font-size: 46px;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
@@ -81,21 +81,15 @@ export default css`
   }
   .text-h5 {
     font-family: "NeueMontrealRegular";
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     color: ${({ theme }) => theme.colors.text.standard};
-    @media (max-width: 480px) {
-      font-size: 16px;
-    }
   }
   .text-h6 {
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.text};
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.4;
-    @media (max-width: 480px) {
-      font-size: 14px;
-    }
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.text};
@@ -109,20 +103,14 @@ export default css`
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 140.62%;
-    /* identical to box height, or 20px */
-    letter-spacing: 0.01em;
+    font-size: 10px;
   }
 
   .text-button {
     font-family: NeueMontrealRegular;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 140.62%;
-    /* identical to box height, or 20px */
-    letter-spacing: 0.06em;
+    font-size: 10px;
     text-transform: uppercase;
   }
 
@@ -135,7 +123,7 @@ export default css`
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.6;
     opacity: 1;
     @media (max-width: 600px) {
@@ -147,23 +135,43 @@ export default css`
   }
 
   .text-link{
+    font-size: 10px;
     color: ${({ theme }) => theme.colors.text.standard};
     font-family: NeueMontrealRegular;
   }
 
   .button{
-    border: solid 1px ${({ theme }) => theme.colors.text.disabled2};
-    padding: 16px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    border: solid 1px #96969640;
+    padding: 12px 24px;
     border-radius: 30px;
-    color: ${({ theme }) => theme.colors.text.standard};
     font-family: NeueMontrealRegular;
     text-transform: uppercase;
     font-size: 10px;
-    margin-top: 40px;
-    transition: background-color 0.5s;
+    transition: background-color 0.3s; 
+    backdrop-filter: blur(6px);
+    a{
+      color: ${({ theme }) => theme.colors.text.standard};
+      font-size: 10px;
+    }
     &:hover{
-      background-color:  ${({ theme }) => theme.colors.primary1};
-      color:  ${({ theme }) => theme.colors.text.standard};
+      background-color: ${({ theme }) => theme.colors.text.disabled2};
+      a{
+        color: ${({ theme }) => theme.colors.text.standard};
+      }
+    }
+    &.mail{
+      margin-left: 16px;
+      padding: 14px;
+      img{
+        height: 10px;
+      }
+    }
+    &.big{
+      padding: 16px 32px;
     }
   }
 

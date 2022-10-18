@@ -68,7 +68,12 @@ const StyledRoom = styled.div`
           font-size: 48px;
         }
         button{
+          backdrop-filter: blur(0px);
           margin: 20px 20px 0px 0;
+          border: solid 1px #00000040;
+          &:hover{
+            background-color: #FFFFFF60;
+          }
         }
         img, .item{
           margin: 20px 0;

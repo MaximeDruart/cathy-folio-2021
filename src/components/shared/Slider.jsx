@@ -34,7 +34,8 @@ const StyledSlider = styled.div`
     right: 0;
     margin-top: 4px;
     text-align: right;
-    font-size: 11px;
+    font-size: 10px;
+    letter-spacing: 0;
     color: ${({ theme }) => theme.colors.text.text};
   }
 `

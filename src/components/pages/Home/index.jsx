@@ -11,17 +11,6 @@ import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
 
-//passions
-import game from "../../../assets/img/about/game.png"
-import animes from "../../../assets/img/about/anime.png"
-import lofi from "../../../assets/img/about/music.png"
-import piano from "../../../assets/img/about/piano.png"
-import draw from "../../../assets/img/about/draw.png"
-import food from "../../../assets/img/about/food.png"
-import painting from "../../../assets/img/about/paint.png"
-import manual from "../../../assets/img/about/craft.png"
-import art from "../../../assets/img/about/3D.png"
-
 import twitch from "../../../assets/img/about/twitch.jpg"
 import resume from "../../../assets/img/about/resume.pdf"
 
@@ -29,8 +18,8 @@ const StyledHome = styled.div`
   * {
     color: ${({ theme }) => theme.colors.text.standard};
   }
-  img.twitch-img {
-    width: 100%;
+  .button{
+    margin-top: 30px;
   }
   .hero {
     width: 100vw;
@@ -236,67 +225,6 @@ const StyledHome = styled.div`
       font-size: 10px;
       font-family: NeueMontrealRegular;
     }
-    .passion_container {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      flex-wrap: wrap;
-      .passion {
-        position: relative;
-        width: 20vw;
-        margin: 35px;
-        @media (max-width: 1080px) {
-          width: 30vw;
-        }
-        .text-content {
-          display: flex;
-          .text-description {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            p{
-              font-size: 12px;
-            }
-          }
-        }
-        img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-          opacity: 1;
-          transition: opacity 0.5s;
-          @media (max-width: 900px) {
-            opacity: 1;
-            width: 100%;
-            object-fit: cover;
-            //height: 200px;
-          }
-        }
-        h3.number {
-          margin-top: 21px;
-          font-size: 60px;
-          font-family: "Ginger";
-          /* font-family: "NeueMontrealLight"; */
-          color: ${({ theme }) => theme.colors.text.disabled};
-          margin-left: -4px;
-          margin-right: 20px;
-          @media (max-width: 600px) {
-            margin-top: 17px;
-          }
-        }
-        .text-h4,
-        .text-regular {
-          text-align: left;
-        }
-        .text-h4 {
-          margin: 5px 0 2px 0;
-        }
-        @media (max-width: 900px) {
-          width: 100%;
-          margin: 35px 0;
-        }
-      }
-    }
     .separator {
       margin-top: 14px;
       margin-bottom: 50px;
@@ -411,7 +339,7 @@ const Home = () => {
             I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design
             and brand identity. Currently in internship at <span className='saol'>AKQA</span> as UI/UX Designer
           </div>
-          <a className='button' href={resume} download='cathy_resume.pdf'>
+          <a className='button big' href={resume} download='cathy_resume.pdf'>
             Download my resume
           </a>
         </div>
@@ -427,112 +355,6 @@ const Home = () => {
           <div className='headline'>projects</div>
           <div className='separator'></div>
           <HomeProjects />
-        </div>
-        {/* passions */}
-        <div className='home-section what-i-do'>
-          <div className='headline'>My passions</div>
-          <div className='separator'></div>
-          <div data-aos="fade-up" data-aos-duration="1000" className='passion_container'>
-            {/* video games */}
-            <div className='passion'>
-              <img src={game} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>01</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Video games</h4>
-                  <p className='text-regular'>Improves my creativity</p>
-                </div>
-              </div>
-            </div>
-            {/* animes */}
-            <div className='passion'>
-              <img src={animes} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>02</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Animes</h4>
-                  <p className='text-regular'>Gives me inspiration</p>
-                </div>
-              </div>
-            </div>
-            {/* lofi */}
-            <div className='passion'>
-              <img src={lofi} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>03</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Chilly Music</h4>
-                  <p className='text-regular'>Helps me stay focused</p>
-                </div>
-              </div>
-            </div>
-            {/* piano */}
-            <div className='passion'>
-              <img src={piano} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>04</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Piano</h4>
-                  <p className='text-regular'>Relaxes me</p>
-                </div>
-              </div>
-            </div>
-            {/* piano */}
-            <div className='passion'>
-              <img src={draw} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>05</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Drawing</h4>
-                  <p className='text-regular'>Improves my accuracy</p>
-                </div>
-              </div>
-            </div>
-            {/* piano */}
-            <div className='passion'>
-              <img src={food} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>06</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Food</h4>
-                  <p className='text-regular'>Especially japanese and korean food</p>
-                </div>
-              </div>
-            </div>
-            {/* painting */}
-            <div className='passion'>
-              <img src={painting} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>07</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Painting</h4>
-                  <p className='text-regular'>I create new things</p>
-                </div>
-              </div>
-            </div>
-            {/* manual */}
-            <div className='passion'>
-              <img src={manual} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>08</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>Hand crafting</h4>
-                  <p className='text-regular'>I bring my ideas to life</p>
-                </div>
-              </div>
-            </div>
-            {/* piano */}
-            <div className='passion'>
-              <img src={art} alt='passion' />
-              <div className='text-content'>
-                <h3 className='text-h3 number'>09</h3>
-                <div className='text-description'>
-                  <h4 className='text-h4'>3D</h4>
-                  <p className='text-regular'>blossoms me</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         {/* twitch */}
         <div className='home-section what-i-do'>

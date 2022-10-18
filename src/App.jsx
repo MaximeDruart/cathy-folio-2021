@@ -7,7 +7,6 @@ import { useMediaQuery } from "beautiful-react-hooks"
 
 import projectData from "./projectsData"
 import Header from "./components/shared/Header"
-import Menu from "./components/shared/Menu"
 import MouseFollower from "./components/shared/MouseFollower"
 
 import Home from "./components/pages/Home"
@@ -45,7 +44,6 @@ const App = () => {
       {isDesktop && <MouseFollower />}
       <Header />
       <StyleSwitcher />
-      <Menu />
       <div data-app-container ref={containerRef}>
         <Route
           render={({ location }) => (

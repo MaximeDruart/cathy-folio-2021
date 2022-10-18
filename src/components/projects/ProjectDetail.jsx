@@ -52,7 +52,6 @@ const StyledProjectDetail = styled.div`
         position: absolute;
         bottom: 8vh;
         color: white;
-        font-size: 10px;
         text-transform: uppercase;
         text-align: center;
         color: ${({ theme }) => theme.colors.text.text};
@@ -105,7 +104,6 @@ const StyledProjectDetail = styled.div`
         margin-top: 48px;
       }
       .text-h5{
-        font-size: 18px;
         margin: 14px 0 2px 0;
       }
     }
@@ -275,14 +273,7 @@ const StyledProjectDetail = styled.div`
         width: 50%;
         display: flex;
         flex-direction: column;
-        /* font-family: "NeueMontrealLight"; */
-        p {
-          width: 100%;
-        }
-        @media (max-width: 900px) {
-          width: 100%;
-        }
-        .text-link.website-link {
+        a.website-link {
           position: relative;
           margin-top: 30px;
           &::after {
@@ -296,6 +287,12 @@ const StyledProjectDetail = styled.div`
               transform: translateX(15px);
             }
           }
+        }
+        p {
+          width: 100%;
+        }
+        @media (max-width: 900px) {
+          width: 100%;
         }
       }
       .infos-column {
@@ -456,14 +453,6 @@ const ProjectDetail = ({ project }) => {
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
-        {/* <div className='hero-title'>
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: imageHasLoaded ? 1 : 0 }}
-            transition={{ duration: 0.4 }}
-            className='big-title'
-          ></motion.h1>
-        </div> */}
         <div className='hero'>
           <motion.img
             onLoad={() => setImageHasLoaded(true)}
@@ -480,7 +469,7 @@ const ProjectDetail = ({ project }) => {
               <div className='infos-intro'>
                 <p className='text-description'>{project.description}</p>
                 {project.websiteLink && (
-                  <a className='text-link website-link' href={project.websiteLink} target='_blank'>
+                  <a className='text-h5 website-link' href={project.websiteLink} target='_blank'>
                     Visit the website
                   </a>
                 )}
@@ -505,7 +494,7 @@ const ProjectDetail = ({ project }) => {
               <div className='infos-intro'>
                 <p className='text-description'>{project.description}</p>
                 {project.websiteLink && (
-                  <a className='text-link website-link' href={project.websiteLink} target='_blank'>
+                  <a className='text-h5 website-link' href={project.websiteLink} target='_blank'>
                     Visit the website
                   </a>
                 )}

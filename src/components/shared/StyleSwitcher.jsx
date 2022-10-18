@@ -52,6 +52,7 @@ const StyledStyleSwitcher = styled.div`
       position: absolute;
       content: 'Play showreel';
       font-size: 10px;
+      line-height: 1.4;
       margin-left: 28px;
       color: ${({ theme }) => theme.colors.text.standard};
       @media (max-width: 800px){
