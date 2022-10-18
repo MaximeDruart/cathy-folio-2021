@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { horizontalPadding } from "../../styles/globalCustom"
 import ColorPicker from "./ColorPicker"
 import { Link, NavLink } from "react-router-dom"
+import play from './../../assets/icons/play.svg'
 
 
 const StyledStyleSwitcher = styled.div`
@@ -31,22 +32,30 @@ const StyledStyleSwitcher = styled.div`
       background-color: ${({ theme }) => theme.colors.text.disabled2};
     }
   }
-  .project{
+  .reel{
+    position: relative;
     pointer-events: auto;
     display: flex;
     flex-wrap: wrap;
-    width: 33px;
-    .round{
-      margin: 2px 2px;
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      background-color: ${({ theme }) => theme.colors.text.disabled2};
-      transition: background-color 0.5s;
+    align-items: center;
+    padding: 14px;
+    border-radius: 90px;
+    border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
+    img{
+      width: 6px;
     }
     &:hover{
-      .round{
-        background-color: ${({ theme }) => theme.colors.primary1};
+      background-color: ${({ theme }) => theme.colors.text.disabled2};
+    }
+    &::after{
+      text-transform: uppercase;
+      position: absolute;
+      content: 'Play showreel';
+      font-size: 10px;
+      margin-left: 28px;
+      color: ${({ theme }) => theme.colors.text.standard};
+      @media (max-width: 800px){
+        display: none;
       }
     }
   }
@@ -92,16 +101,11 @@ const StyledStyleSwitcher = styled.div`
 `
 
 const StyleSwitcher = () => {
-  // const toggleDarkMode = useStore((state) => state.toggleDarkMode)
-  // const isDarkMode = useStore((state) => state.isDarkMode)
   return (
     <StyledStyleSwitcher>
-      <Link to='/dashboard'>
-        <div className="project">
-          <div className="round"></div>
-          <div className="round"></div>
-          <div className="round"></div>
-          <div className="round"></div>
+      <Link to='/reel'>
+        <div className="reel">
+          <img src={play} alt='reel'></img>
         </div>
       </Link>
       <nav>
@@ -111,9 +115,6 @@ const StyleSwitcher = () => {
       </nav>
       <div className="style">
         <ColorPicker />
-        {/* <button onClick={toggleDarkMode} className='theme-toggle'>
-          {isDarkMode ? "LIGHT" : "DARK"}
-        </button> */}
       </div>
     </StyledStyleSwitcher>
   )

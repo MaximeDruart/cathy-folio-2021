@@ -222,7 +222,7 @@ export const marginPage = css`
 
 
 export const horizontalPadding = css`
-  padding: 0 5vw;
+  padding: 0 4vw;
 
   @media (max-width: 769px) {
     padding: 0 20px;

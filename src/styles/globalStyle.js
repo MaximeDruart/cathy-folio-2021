@@ -2,15 +2,9 @@ import NeueMontrealLight from "../assets/fonts/NeueMontreal-Light.otf"
 import NeueMontrealRegular from "../assets/fonts/NeueMontreal-Regular.otf"
 import SaolDisplayLight from "../assets/fonts/SaolDisplay-Light.ttf"
 import SaolDisplaySemiboldItalic from "../assets/fonts/SaolDisplay-SemiboldItalic.ttf"
-import BebasNeueRegular from "../assets/fonts/BebasNeueRegular.otf"
 import Helvetica from "../assets/fonts/Helvetica.ttf"
 import Ginger from "../assets/fonts/Ginger.ttf"
-import Qene from "../assets/fonts/Qene-G.otf"
 import DisplayNew from "../assets/fonts/display-new.otf"
-import Poppins from "../assets/fonts/Poppins.ttf"
-import Heading from "../assets/fonts/Heading.ttf"
-import Nunito from "../assets/fonts/NunitoSans-Regular.ttf"
-import Gotham from "../assets/fonts/Gotham-Book.otf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
@@ -203,10 +197,6 @@ export default createGlobalStyle`
       src: url(${NeueMontrealLight});
     }
     @font-face {
-      font-family: "Nunito";
-      src: url(${Nunito});
-    }
-    @font-face {
       font-family: "NeueMontrealRegular";
       src: url(${NeueMontrealRegular});
     }
@@ -219,39 +209,17 @@ export default createGlobalStyle`
       src: url(${SaolDisplaySemiboldItalic});
     }
     @font-face {
-      font-family: "BebasNeueRegular";
-      src: url(${BebasNeueRegular});
-    }
-    @font-face {
       font-family: "Helvetica";
       src: url(${Helvetica});
-    }
-    @font-face {
-      font-family: "Qene";
-      src: url(${Qene});
     }
     @font-face {
       font-family: "DisplayNew";
       src: url(${DisplayNew});
     }
-
     @font-face {
       font-family: "Ginger";
       src: url(${Ginger});
     }
-    @font-face {
-      font-family: "Gotham";
-      src: url(${Gotham});
-    }
-    @font-face {
-      font-family: "Poppins";
-      src: url(${Poppins});
-    }
-    @font-face {
-      font-family: "Heading";
-      src: url(${Heading});
-    }
-
 
     /* GLOBAL STYLES */
 

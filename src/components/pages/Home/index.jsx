@@ -1,18 +1,15 @@
-import React, { useCallback, useState } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import Slider from "../../shared/Slider"
 import ArrowDownSVG from "../../../assets/icons/arrow_down.svg?component"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import PageTemplate from "../PageTemplate"
-import { Link } from "react-router-dom"
 import InfiniteText from "../../shared/InfiniteText"
 import HomeProjects from "./HomeProjects"
 import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
-import showreel from "../../../assets/img/showreel.mp4"
-import ReactPlayer from 'react-player'
 
 //passions
 import game from "../../../assets/img/about/game.png"
@@ -375,14 +372,6 @@ const StyledHome = styled.div`
 const Home = () => {
   const { scrollY } = useViewportScroll()
   const discoverOpacity = useTransform(scrollY, (s) => 1 - s / 300)
-  const [volume, setVolume] = useState(0);
-
-  const toggleVolume = useCallback(() =>{
-    const isMuted = volume === 0
-    setVolume(isMuted ? 0.1 : 0)
-  },
-   [volume]
-  )
 
 
 
@@ -431,18 +420,6 @@ const Home = () => {
           <div className='separator text-top'></div>
           <InfiniteText />
           <div className='separator text-bot'></div>
-          <div className="demi-spacer"></div>
-          <div onClick={toggleVolume}>
-            <ReactPlayer 
-            data-aos="fade-up" data-aos-duration="1000"
-            url={showreel} 
-            width='100%'
-            height='100%'
-            playing
-            volume={volume}
-            loop
-            />
-          </div>
           <div className="demi-spacer"></div>
         </div>
         {/* projects */}

@@ -39,7 +39,7 @@ const StyledHeader = styled.div`
     &.mail{
       margin-left: 16px;
       img{
-        height: 12px;
+        height: 10px;
       }
       a{
         padding: 12px;
