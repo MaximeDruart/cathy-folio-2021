@@ -76,7 +76,7 @@ const StyledStyleSwitcher = styled.div`
     backdrop-filter: blur(10px);
     a{
         margin: 0 0px;
-        padding: 10px 24px;
+        padding: 10px 20px;
         background-color: rgba(255, 255, 255, 0);
         border-radius: 90px;
         color: white;

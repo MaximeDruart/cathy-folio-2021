@@ -48,11 +48,6 @@ import chanelCover from "./assets/img/works/covers/chanel.jpg"
 import chanelCoverSmall from "./assets/img/works/covers-small/chanel-min.jpg"
 import chanelVisual1 from "./assets/img/works/chanel/visual1.jpg"
 
-import Paco from "./components/projects/Paco"
-import pacoCover from "./assets/img/works/covers/paco.jpg"
-import pacoCoverSmall from "./assets/img/works/covers-small/paco-min.jpg"
-import pacoVisual1 from "./assets/img/works/paco/visual1.jpg"
-
 import Zhonglin from "./components/projects/Zhonglin"
 import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
 import ZhonglinCoverSmall from "./assets/img/works/covers-small/zhonglin-min.jpg"

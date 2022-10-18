@@ -36,6 +36,7 @@ import designr from "./assets/img/archives/designr.jpg"
 
 // Edito
 import parallele from "./assets/img/archives/parallele.jpg"
+import zero from "./assets/img/archives/zero.jpg"
 
 // 3D
 import isometricRoom from "./assets/img/archives/isometricRoom.jpg"
@@ -114,7 +115,7 @@ let archivesData = [
   },
   {
     name: "Zero10",
-    coverImg: room2,
+    coverImg: zero,
     type: "Print",
     description: "Preview of a magazine page about Fashion digital clothes NFT.",
   },

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import useStore from "../../store"
 import CathyLogoSVG from "../../assets/icons/cathy.svg?component"
 
 import mail from "../../assets/img/mail.svg"
@@ -35,9 +34,7 @@ const StyledHeader = styled.div`
     font-family: NeueMontrealRegular;
     pointer-events: auto;
     transition: background-color 0.3s; 
-    // background-color: #FFFFFF40;
     backdrop-filter: blur(6px);
-    // background: rgba(120, 120, 120, 0.3);
     border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
     &.mail{
       margin-left: 16px;
@@ -45,7 +42,7 @@ const StyledHeader = styled.div`
         height: 12px;
       }
       a{
-        padding: 14px;
+        padding: 12px;
       }
     }
     a{
@@ -73,8 +70,8 @@ const StyledHeader = styled.div`
     }
   }
   .logo {
-    width: 46px;
-    height: 46px;
+    width: 36px;
+    height: 36px;
     pointer-events: auto;
     margin-left: -6px;
     svg {
@@ -115,8 +112,6 @@ const StyledHeader = styled.div`
 `
 
 const Header = () => {
-  const toggleMenu = useStore((state) => state.toggleMenu)
-  const isMenuOpen = useStore((state) => state.isMenuOpen)
   return (
     <StyledHeader>
       <Link to='/' className='logo'>
@@ -131,16 +126,6 @@ const Header = () => {
           <a href="mailto:cathy.dolle@live.fr"><img src={mail} alt="mail"></img></a>
         </div>
       </nav>
-      
-      {/* <button
-        onClick={() => {
-          toggleMenu()
-        }}
-        className={`menu-toggle ${isMenuOpen ? "menu-opened" : ""}`}
-      >
-        <div className='top'></div>
-        <div className='bottom'></div>
-      </button> */}
     </StyledHeader>
   )
 }
