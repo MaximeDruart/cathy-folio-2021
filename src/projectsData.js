@@ -70,21 +70,6 @@ import cyberpunkVisual1 from "./assets/img/works/cyberpunk/visual1.jpg"
 
 let projectsData = [
   {
-    name: "Cyberpunk",
-    path: "cyberpunk",
-    title: "Cyberpunk design",
-    coverImg: cyberpunkCover,
-    coverImgSmall: cyberpunkCoverSmall,
-    visual1: cyberpunkVisual1,
-    component: Cyberpunk,
-    date: "Oct. 2022",
-    role: "Designer, Dev",
-    techs: ["Figma, React"],
-    description:
-      "Being an avid Cyberpunk2077 player, I fell in love with the Cyberpunk series. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-    websiteLink: "https://cyberpunkv4.netlify.app/",
-  },
-  {
     name: "Hublot",
     path: "hublot",
     title: "Hublot x Murakami",
@@ -98,6 +83,35 @@ let projectsData = [
     description:
       "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
     websiteLink: "https://hublotxtakashi.netlify.app/",
+  },
+  {
+    name: "Zhonglin",
+    path: "zhonglin",
+    title: "A creative photographer",
+    coverImg: ZhonglinCover,
+    coverImgSmall: ZhonglinCoverSmall,
+    visual1: zhonglinVisual1,
+    component: Zhonglin,
+    date: "Apr. 2022",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop, Protopie"],
+    description:
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },
+  {
+    name: "Cyberpunk",
+    path: "cyberpunk",
+    title: "Cyberpunk design",
+    coverImg: cyberpunkCover,
+    coverImgSmall: cyberpunkCoverSmall,
+    visual1: cyberpunkVisual1,
+    component: Cyberpunk,
+    date: "Oct. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, React"],
+    description:
+      "Being an avid Cyberpunk2077 player, I fell in love with the Cyberpunk series. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+    websiteLink: "https://cyberpunkv4.netlify.app/",
   },
   {
     name: "Arcane",
@@ -126,20 +140,6 @@ let projectsData = [
     techs: ["Figma, Photoshop"],
     description:
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
-  },
-  {
-    name: "Zhonglin",
-    path: "zhonglin",
-    title: "A creative photographer",
-    coverImg: ZhonglinCover,
-    coverImgSmall: ZhonglinCoverSmall,
-    visual1: zhonglinVisual1,
-    component: Zhonglin,
-    date: "Apr. 2022",
-    role: "Designer",
-    techs: ["AdobeXD, Photoshop, Protopie"],
-    description:
-      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },
   {
     name: "Chanel",
