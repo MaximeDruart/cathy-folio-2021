@@ -54,10 +54,10 @@ const StyledProjectDetail = styled.div`
         color: white;
         text-transform: uppercase;
         text-align: center;
-        color: ${({ theme }) => theme.colors.text.text};
+        opacity: 0.6;
         @media (max-width: 800px) {
           width: 80vw;
-          bottom: 4vh;
+          bottom: 20vh;
         }
       }
       @media (max-width: 800px) {
@@ -68,7 +68,7 @@ const StyledProjectDetail = styled.div`
         text-align:center;
         justify-content: flex-end;
         align-items: center;
-        padding: 12vh 10vw;
+        padding: 24vh 10vw;
         .text-h2{
           width: 80%;
         }
