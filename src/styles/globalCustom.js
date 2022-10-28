@@ -151,6 +151,7 @@ export default css`
     text-transform: uppercase;
     transition: background-color 0.3s; 
     backdrop-filter: blur(6px);
+    font-size: 10px;
     a{
       padding: 12px 24px;
       color: ${({ theme }) => theme.colors.text.standard};

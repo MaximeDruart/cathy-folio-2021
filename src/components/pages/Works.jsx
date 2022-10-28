@@ -43,7 +43,6 @@ const StyledWorks = styled(motion.div)`
 
   .canvas-html {
     pointer-events: none;
-
     z-index: -10;
     transition: opacity 0.2s ease-in-out;
 

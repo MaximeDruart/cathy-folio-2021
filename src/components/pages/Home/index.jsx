@@ -363,7 +363,7 @@ const Home = () => {
           <div className='title text-h2-5'>
             I'm also a <span className='saol'>Twitch partner</span> and I stream my work on my Twitch channel
           </div>
-          <a className='button' href='https://www.twitch.tv/katy_v4' target='_blank'>
+          <a className='button big' href='https://www.twitch.tv/katy_v4' target='_blank'>
             Twitch.tv/Katy_v4
           </a>
         </div>
