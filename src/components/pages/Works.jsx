@@ -73,14 +73,14 @@ const StyledWorks = styled(motion.div)`
           font-family: NeueMontrealRegular;
           text-transform: uppercase;
           white-space: nowrap;
-          font-size: 12px;
+          font-size: 10px;
           letter-spacing: 0.4px;
         }
 
         .circle {
           margin-left: 10px;
-          width: 24px;
-          height: 24px;
+          width: 20px;
+          height: 20px;
           border-radius: 50%;
           background: white;
           display: flex;
@@ -137,7 +137,10 @@ const StyledWorks = styled(motion.div)`
     width: 100vw;
     height: 1.5px;
     background:  ${({ theme }) => theme.colors.text.disabled2};
-
+    @media (max-width: 700px) {
+      bottom: 0;
+      top: auto;
+    }
     .scroll-bar {
       background: ${({ theme }) => theme.colors.text.standard};
       height: 100%;

@@ -18,6 +18,11 @@ const Container = styled.div`
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      position: absolute;
+      bottom: 10%;
+    }
   }
 `
 
@@ -28,6 +33,9 @@ const ColorListItem = styled(motion.li)`
     border-radius: 10px;
     margin-left: 6px;
     background: ${({ activeColorIndex }) => activeColorIndex};
+    @media (max-width: 700px) {
+      margin: 6px 0;
+    }
   }
 `
 

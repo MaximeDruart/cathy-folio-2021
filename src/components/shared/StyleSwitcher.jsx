@@ -8,6 +8,7 @@ import play from './../../assets/icons/play.svg'
 
 
 const StyledStyleSwitcher = styled.div`
+  position: relative;
   position: fixed;
   width: 100vw;
   display: flex;

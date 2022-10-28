@@ -5,7 +5,7 @@ const darkColors = [
   },
   {
     name: "saphir",
-    color: "#005A86",
+    color: "#1A2694",
   },
   {
     name: "kaki",
@@ -25,7 +25,7 @@ const lightColors = [
   },
   {
     name: "saphir",
-    color: "#005A86",
+    color: "#1A2694",
   },
   {
     name: "kaki",
