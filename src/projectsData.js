@@ -68,21 +68,12 @@ import cyberpunkCover from "./assets/img/works/covers/cyberpunk.jpg"
 import cyberpunkCoverSmall from "./assets/img/works/covers-small/cyberpunk-min.jpg"
 import cyberpunkVisual1 from "./assets/img/works/cyberpunk/visual1.jpg"
 
+import Ando from "./components/projects/Ando"
+import andoCover from "./assets/img/works/covers/ando.jpg"
+import andoCoverSmall from "./assets/img/works/covers-small/ando-min.jpg"
+import andoVisual1 from "./assets/img/works/ando/visual1.jpg"
+
 let projectsData = [
-  {
-    name: "Arcane",
-    path: "arcane",
-    title: "We lie when we are afraid",
-    coverImg: arcaneCover,
-    coverImgSmall: arcaneCoverSmall,
-    visual1: arcaneVisual1,
-    component: Arcane,
-    date: "Nov. 2021",
-    role: "Designer",
-    techs: ["AdobeXD, Photoshop"],
-    description:
-      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-  },
   {
     name: "Hublot",
     path: "hublot",
@@ -97,6 +88,34 @@ let projectsData = [
     description:
       "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
     websiteLink: "https://hublotxtakashi.netlify.app/",
+  },
+  {
+    name: "Ando",
+    path: "ando",
+    title: "Some AI Experimentation",
+    coverImg: andoCover,
+    coverImgSmall: andoCoverSmall,
+    visual1: andoVisual1,
+    component: Ando,
+    date: "Nov. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop"],
+    description:
+      "Small chromed generations thanks to the Ando plugin on Figma from references and handmade abstract shapes.",
+  },
+  {
+    name: "Arcane",
+    path: "arcane",
+    title: "We lie when we are afraid",
+    coverImg: arcaneCover,
+    coverImgSmall: arcaneCoverSmall,
+    visual1: arcaneVisual1,
+    component: Arcane,
+    date: "Nov. 2021",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop"],
+    description:
+      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
   },
   {
     name: "Zhonglin",

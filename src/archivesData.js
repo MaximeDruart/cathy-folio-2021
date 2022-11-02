@@ -53,7 +53,19 @@ import planetaria from "./assets/img/archives/planetaria.jpg"
 import peaches from "./assets/img/archives/peaches.jpg"
 import apollo from "./assets/img/archives/apollo.jpg"
 
+// IA
+
+import i4 from "./assets/img/archives/i4.png"
+import i5 from "./assets/img/archives/i5.png"
+import i6 from "./assets/img/archives/i6.png"
+
 let archivesData = [
+  {
+    name: "Chrome 0.4",
+    coverImg: i4,
+    type: "IA",
+    description: "Generated with MidJourney",
+  },
   {
     name: "elijah",
     coverImg: elijah,
@@ -74,6 +86,12 @@ let archivesData = [
     type: "UI Design",
     description: "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
     websiteLink: "https://www.cathydolle.com/works/bohinc",
+  },
+  {
+    name: "Chrome 0.6",
+    coverImg: i6,
+    type: "IA",
+    description: "Generated with MidJourney",
   },
   {
     name: "peaches",
@@ -99,6 +117,12 @@ let archivesData = [
     coverImg: voxel,
     type: "3D",
     description: "I had to create a level for the game Monument Valley, so I decided to create a Japanese map inspired from Le Voyage de Chihiro. I used Magica Voxel for that.",
+  },
+  {
+    name: "Chrome 0.5",
+    coverImg: i5,
+    type: "IA",
+    description: "Generated with MidJourney",
   },
   {
     name: "DesignR",

@@ -1,12 +1,10 @@
-import { motion, useSpring, useTransform, useViewportScroll } from "framer-motion"
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { motion, useSpring, useViewportScroll } from "framer-motion"
+import React, { useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import { marginPage } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
 import projectsData from "../../projectsData"
 import { Link, useHistory } from "react-router-dom"
-import FullImage from "../shared/FullImage"
-import ArrowDownSVG from "../../assets/icons/arrow_down.svg?component"
 
 
 const StyledProjectDetail = styled.div`
@@ -146,6 +144,12 @@ const StyledProjectDetail = styled.div`
     }
     img.trio {
       width: 160px;
+    }
+    img.quart{
+      width: 30%;
+      @media (max-width: 900px) {
+        width: 100% !important;
+      }
     }
 
     svg {
