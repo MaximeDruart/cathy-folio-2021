@@ -23,7 +23,7 @@ const projectHeight = 70
 const scrollArea = createRef()
 
 const planeSizes = {
-  mobile: [0.7, 1],
+  mobile: [0.8, 1.2],
   tablet: [1.4, 0.9],
   desktop: [2.34, 1.36],
 }

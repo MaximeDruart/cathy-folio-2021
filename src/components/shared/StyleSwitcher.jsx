@@ -83,6 +83,9 @@ const StyledStyleSwitcher = styled.div`
     padding: 3px 3px;
     border-radius: 90px;
     backdrop-filter: blur(10px);
+    @media (max-width: 600px){
+      margin-right: 0px;
+    }
     a{
         margin: 0 0px;
         padding: 10px 20px;

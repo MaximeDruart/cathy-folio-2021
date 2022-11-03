@@ -12,6 +12,9 @@ const StyledReel = styled.div`
     height: 100vh;
     video{
       object-fit: cover;
+      @media (max-width: 800px) {
+        object-fit: contain;
+      }
     }
   }
 
