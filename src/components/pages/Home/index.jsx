@@ -371,7 +371,7 @@ const Home = () => {
         </div>
         <div className='demi-spacer'></div>
         <div className='full-img-container'>
-          <FullImage className='full-img' src={twitch} alt='moodboard' />
+          <FullImage src={twitch} alt='moodboard' />
         </div>
         <div className='spacer'></div>
       </StyledHome>

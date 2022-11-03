@@ -1,28 +1,27 @@
 import React, { useLayoutEffect, useRef, useState } from "react"
 import { useViewportScroll, useTransform, useSpring, motion } from "framer-motion"
 import styled from "styled-components"
-import { marginPage } from "../../styles/globalCustom"
 
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100vw !important;
+  height: 100vh !important;
   overflow: hidden;
+  margin-bottom: auto !important;
   margin-left: -10vw;
-
+  img {
+    width: 100vw;
+    height: 110vh;
+    object-fit: cover;
+  }
   @media (max-width: 769px) {
-    margin-left: -5vw;
+    width: 100vw;
     height: 60vh;
+    margin-left: -20px;
   }
   @media (max-width: 480px) {
-    margin-left: -5vw;
+    width: 100vw;
     height: 40vh;
-  }
-  img {
-    width: 100%;
-    height: 110%;
-    object-fit: cover;
-    margin-bottom: 0 !important;
   }
 `
 

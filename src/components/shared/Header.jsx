@@ -14,10 +14,12 @@ const StyledHeader = styled.div`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  top: 48px;
+  top: 32px;
   z-index: 100;
   pointer-events: none;
-
+  @media (max-width: 700px) {
+    top: 20px;
+  }
   nav{
     display: flex;
   }

@@ -1,3 +1,5 @@
+import FullImage from "../shared/FullImage"
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react"
@@ -15,7 +17,6 @@ import galerie from "../../assets/img/works/zhonglin/galerie.mp4"
 import z1 from "../../assets/img/works/zhonglin/z1.jpg"
 import z2 from "../../assets/img/works/zhonglin/z2.jpg"
 
-import FullImage from "../shared/FullImage"
 
 
 
@@ -28,10 +29,6 @@ img, video{
   @media (max-width: 769px) {
     margin-bottom: 20px;
   }
-
-  &.full-img{
-    height: 100vh;
-  }
   &.step{
     width: 70%;
     display: block;
@@ -39,34 +36,6 @@ img, video{
     margin-right: auto;
     @media (max-width: 900px){
       width: 100%;
-    }
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "Ginger";
-      }
-      &.two{
-        font-family: "Nunito";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: #141414;
-        color: white !important;
-      }
-      &.two{
-        background-color: #E6E4E4;
-      }
-      &.three{
-        background-color: #FFFFFF;
-        color: black;
-      }
-      }
     }
   }
 }

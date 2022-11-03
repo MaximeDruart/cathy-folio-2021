@@ -14,7 +14,7 @@ const StyledStyleSwitcher = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  bottom: 40px;
+  bottom: 32px;
   z-index: 100;
   align-items: center;
   ${horizontalPadding};
@@ -72,7 +72,7 @@ const StyledStyleSwitcher = styled.div`
     }
   }
   @media (max-width: 600px){
-    bottom: 28px;
+    bottom: 20px;
     font-size: 12px;
   }
   nav{

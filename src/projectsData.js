@@ -27,10 +27,10 @@ import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
 
-import Shibuya from "./components/projects/Shibuya"
-import shibuyaCover from "./assets/img/works/covers/shibuya.jpg"
-import shibuyaCoverSmall from "./assets/img/works/covers-small/shibuya-min.jpg"
-import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
+// import Shibuya from "./components/projects/Shibuya"
+// import shibuyaCover from "./assets/img/works/covers/shibuya.jpg"
+// import shibuyaCoverSmall from "./assets/img/works/covers-small/shibuya-min.jpg"
+// import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
 
 
 import Feels from "./components/projects/Feels"
@@ -274,20 +274,20 @@ let projectsData = [
       "A generative installation that takes into consideration the singularity of each individual. Each painting is made unique by the visitor's own experience.",
     visual1: feelsVisual1,
   },
-  {
-    name: "Shibuya",
-    path: "shibuya",
-    coverImg: shibuyaCover,
-    coverImgSmall: shibuyaCoverSmall,
-    title: "Logo creation for Shibuya",
-    visual1: shibuyaVisual1,
-    component: Shibuya,
-    date: "Dec. 2021",
-    role: "Designer",
-    techs: ["Illustrator, Photoshop"],
-    description:
-      "Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo.",
-  },
+  // {
+  //   name: "Shibuya",
+  //   path: "shibuya",
+  //   coverImg: shibuyaCover,
+  //   coverImgSmall: shibuyaCoverSmall,
+  //   title: "Logo creation for Shibuya",
+  //   visual1: shibuyaVisual1,
+  //   component: Shibuya,
+  //   date: "Dec. 2021",
+  //   role: "Designer",
+  //   techs: ["Illustrator, Photoshop"],
+  //   description:
+  //     "Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo.",
+  // },
 ]
 
 projectsData = projectsData.map((project, index) => ({

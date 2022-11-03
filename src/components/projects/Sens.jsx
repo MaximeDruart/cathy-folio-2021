@@ -65,7 +65,7 @@ const Sens = () => {
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Entry tickets</div>
         <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={gardenTickets} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={gardenTickets} alt="garden" />
       </div>
       
       <div className="spacer"></div>
@@ -84,7 +84,7 @@ const Sens = () => {
         <div className="demi-spacer"></div>
         <div className='headline text-regular'>Entry tickets</div>
         <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={summerTickets} alt="garden" />
+        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={summerTickets} alt="garden" />
       </div>
      
 

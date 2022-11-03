@@ -1,3 +1,4 @@
+import FullImage from "../shared/FullImage"
 import { motion, useSpring, useViewportScroll } from "framer-motion"
 import React, { useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
@@ -126,7 +127,10 @@ const StyledProjectDetail = styled.div`
     object-fit: cover;
   }
   img.little {
-    width: 80% 
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     @media (max-width: 900px) {
       width: 100%;
     }
@@ -202,18 +206,6 @@ const StyledProjectDetail = styled.div`
       justify-content: space-between;
     }
   }
-  img.full-img {
-    width: 100vw;
-    margin-left: -10vw;
-    height: 80vh;
-    object-fit: cover;
-    @media (max-width: 769px) {
-      margin-left: -40px;
-    }
-    @media (max-width: 480px) {
-      margin-left: -28px;
-    }
-  }
   h3.text-h3 {
     margin-bottom: 40px;
   }
@@ -252,145 +244,6 @@ const StyledProjectDetail = styled.div`
   .details {
     height: auto;
     ${marginPage};
-    img.visual {
-      width: 100vw;
-      height: auto;
-      margin-left: -10vw;
-      @media (max-width: 769px) {
-        margin-left: -40px;
-      }
-      @media (max-width: 480px) {
-        margin-left: -28px;
-      }
-    }
-    .text-h2.title {
-      width: 50%;
-      @media (max-width: 900px) {
-        width: 100%;
-      }
-    }
-    .infos {
-      width: 100%;
-      display: flex;
-      .infos-intro {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        a.website-link {
-          position: relative;
-          margin-top: 30px;
-          &::after {
-            position: absolute;
-            content: "→";
-            transform: translateX(10px);
-            transition: transform 0.4s;
-          }
-          &:hover {
-            &::after {
-              transform: translateX(15px);
-            }
-          }
-        }
-        p {
-          width: 100%;
-        }
-        @media (max-width: 900px) {
-          width: 100%;
-        }
-      }
-      .infos-column {
-        margin-top: 15px;
-        padding-left: 15%;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        .text-h6 {
-          margin-bottom: 30px;
-        }
-        @media (max-width: 900px) {
-          width: 100%;
-          margin-top: 80px;
-        }
-        @media (max-width: 600px) {
-          margin-top: 50px;
-        }
-      }
-      @media (max-width: 900px) {
-        flex-direction: column;
-        .infos-intro,
-        .infos-column {
-          width: 100%;
-          /* background: red; */
-          padding-left: 0;
-          margin-bottom: 20px;
-        }
-      }
-    }
-    /* chart */
-    .chart {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      h4.text-h4 {
-        margin-bottom: 0px;
-        margin-top: 50px;
-      }
-      .art-direction {
-        width: 100%;
-      }
-      .typography,
-      .colors {
-        width: 50%;
-        @media (max-width: 900px) {
-          width: 100%;
-        }
-        h4.text-h4 {
-          margin-bottom: 30px;
-          @media (max-width: 480px) {
-            margin-bottom: 20px;
-          }
-        }
-        .color {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-transform: uppercase;
-          font-family: NeueMontrealRegular;
-          font-size: 16px;
-          width: 70%;
-          height: 60px;
-          margin: 15px 0;
-          border-radius: 6px;
-          border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
-          @media (max-width: 900px) {
-            width: 100%;
-          }
-        }
-      }
-      .colors {
-        padding-left: 10%;
-        @media (max-width: 900px) {
-          padding-left: 0%;
-        }
-      }
-      .typography {
-        display: flex;
-        flex-direction: column;
-        span.text-typo {
-          font-size: 50px;
-          margin-bottom: 40px;
-          line-height: 1.3;
-          color: ${({ theme }) => theme.colors.text.standard};
-          @media (max-width: 900px) {
-            font-size: 40px;
-          }
-          @media (max-width: 480px) {
-            font-size: 38px;
-          }
-        }
-      }
-    }
   }
   .next-project {
     display: block;
@@ -415,8 +268,10 @@ const StyledProjectDetail = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       text-transform: uppercase;
+      text-align: center;
       color: white;
-      font-size: 200px;
+      font-size: 120px;
+      line-height: 1.2;
       font-family: Ginger;
       white-space: nowrap;
       @media (max-width: 900px) {
@@ -521,7 +376,7 @@ const ProjectDetail = ({ project }) => {
             <img src={projectsData[project.index + 1].coverImg} />
             <div className="voile"></div>
             <div className="block"></div>
-            <div className='text-h1'>{projectsData[project.index + 1].name}</div>
+            <div className='text-h1'>Next<br/>Project</div>
           </Link>
         )}
       </StyledProjectDetail>
