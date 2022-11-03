@@ -10,7 +10,10 @@ const Container = styled.div`
   font-family: NeueMontrealRegular;
 }
   .content{
-    margin: 16px 0;
+    margin-bottom: 30px;
+    @media (max-width: 769px) {
+      margin-bottom: 18px;
+    }
   }
   width: 100%;
   .project {
@@ -27,16 +30,12 @@ const Container = styled.div`
       }
 
       @media (max-width: 769px) {
-        margin-bottom: 26px;
-
         .title {
           margin-left: 26px;
         }
       }
 
       @media (max-width: 480px) {
-        margin-bottom: 18px;
-
         .title {
           margin-left: 18px;
         }

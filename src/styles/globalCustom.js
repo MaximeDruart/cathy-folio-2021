@@ -144,19 +144,25 @@ export default css`
 
   .separator {
     margin-top: 10px;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
     width: 100%;
     height: 1px;
     background-color: ${({ theme }) => theme.colors.text.disabled2};
 
     @media (max-width: 769px) {
-      margin-top: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
     }
-
-    @media (max-width: 480px) {
-      margin-top: 10px;
-      margin-bottom: 15px;
+    &.text-top{
+      margin-bottom: 48px;
+      @media (max-width: 769px) {
+        margin-bottom: 24px;
+      }
+    }
+    &.text-bot{
+      margin-top: 48px;
+      @media (max-width: 769px) {
+        margin-top: 24px;
+      }
     }
   }
 
