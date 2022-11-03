@@ -11,6 +11,13 @@ import { Link, useHistory } from "react-router-dom"
 const StyledProjectDetail = styled.div`
   background:  ${({ theme }) => theme.colors.background};  
   transition: background-color 0.6s;
+  img, video{
+    width: 100%;
+    margin-bottom: 40px;
+    @media (max-width: 769px) {
+      margin-bottom: 16px;
+    }
+  }
   .hero {
     position: relative;
     width: 100vw;
@@ -86,9 +93,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-    @media (max-width: 600px) {
-      height: 100vh;
+      margin-bottom: 0;
     }
   }
   img.border{
@@ -115,16 +120,15 @@ const StyledProjectDetail = styled.div`
       }
     }
   }
+  .details {
+    height: auto;
+    ${marginPage};
+  }
   .content {
-    padding: 0 10vw;
+    ${marginPage};
     @media (max-width: 750px) {
       padding: 0;
     }
-  }
-  video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
   }
   img.little {
     width: 60%;
@@ -154,7 +158,6 @@ const StyledProjectDetail = styled.div`
         width: 100% !important;
       }
     }
-
     svg {
       width: 30%;
       margin: 40px 0;
@@ -166,23 +169,7 @@ const StyledProjectDetail = styled.div`
       }
     }
   }
-  .mini {
-    justify-content: center;
-    img {
-      width: 170px;
-      margin: 0 50px;
-    }
-  }
-  img.step {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 900px) {
-      width: 100%;
-    }
-  }
-
+  
   /* responsive */
   .responsive {
     width: 100%;
@@ -190,60 +177,27 @@ const StyledProjectDetail = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-between;
-
     img, .video {
       width: 24%;
       height: 100%;
+      margin: 0;
       @media (max-width: 1000px) {
         width: 48%;
       }
       @media (max-width: 600px) {
         width: 48%;
-        margin: 20px 0 0 0;
       }
     }
     @media (max-width: 600px) {
       justify-content: space-between;
     }
   }
-  h3.text-h3 {
-    margin-bottom: 40px;
-  }
-  p {
-    width: 50%;
-    @media (max-width: 900px) {
-      width: 100%;
-    }
-  }
-
   /* Separator with text */
   .headline {
     text-transform: uppercase;
     text-align: center;
     opacity: 1;
     font-size: 10px;
-  }
-
-  .separator {
-    margin-top: 10px;
-    margin-bottom: 50px;
-    width: 100%;
-    height: 1px;
-    background-color: ${({ theme }) => theme.colors.text.disabled2};
-
-    @media (max-width: 769px) {
-      margin-top: 14px;
-      margin-bottom: 30px;
-    }
-
-    @media (max-width: 480px) {
-      margin-top: 10px;
-      margin-bottom: 15px;
-    }
-  }
-  .details {
-    height: auto;
-    ${marginPage};
   }
   .next-project {
     display: block;

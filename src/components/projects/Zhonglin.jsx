@@ -18,35 +18,12 @@ import z1 from "../../assets/img/works/zhonglin/z1.jpg"
 import z2 from "../../assets/img/works/zhonglin/z2.jpg"
 
 
-
-
-
-
-const StyledZhonglin = styled.div`
-img, video{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-  &.step{
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 900px){
-      width: 100%;
-    }
-  }
-}
-`
-
 const Zhonglin = () => {
   AOS.init({
     duration : 2000
   })
   return (
-    <StyledZhonglin>
+    <section>
       <div className="demi-spacer"></div>
       <div className="content">
         <div className='headline text-regular'>Grids</div>
@@ -101,7 +78,7 @@ const Zhonglin = () => {
       <p className="text-description">Project made as ESD Paris.</p>
       <div className="big-spacer"></div>
 
-    </StyledZhonglin>
+    </section>
   )
 }
 

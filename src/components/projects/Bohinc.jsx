@@ -25,50 +25,12 @@ import mobile3 from "../../assets/img/works/bohinc/mobile3.png"
 import mobile4 from "../../assets/img/works/bohinc/mobile4.png"
 
 
-
-const StyledBohinc = styled.div`
-img, video{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "SaolDisplayLight";
-      }
-      &.two{
-        font-family: "Lato";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: white;
-      }
-      &.two{
-        background-color: black;
-        color: white;
-      }
-      &.three{
-        background-color: #FDC463;
-        color: white !important;
-      }
-    }
-  }
-}
-`
-
 const Bohinc = () => {
   AOS.init({
     duration : 2000
   })
   return (
-    <StyledBohinc>
+    <section>
       <div className="demi-spacer"></div>
       <div className="content">
         <ReactPlayer 
@@ -122,7 +84,7 @@ const Bohinc = () => {
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>
-    </StyledBohinc>
+    </section>
   )
 }
 

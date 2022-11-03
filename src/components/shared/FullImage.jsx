@@ -13,6 +13,7 @@ const Container = styled.div`
     width: 100vw;
     height: 110vh;
     object-fit: cover;
+    margin-bottom: 0 !important;
   }
   @media (max-width: 769px) {
     width: 100vw;

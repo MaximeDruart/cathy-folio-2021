@@ -11,47 +11,13 @@ import summerMoodboard from "../../assets/img/works/sens/summerMoodboard.png"
 import summerPosters from "../../assets/img/works/sens/summerPosters.png"
 import summerTickets from "../../assets/img/works/sens/summerTickets.png"
 
-const StyledSens = styled.div`
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "Ginger";
-      }
-      &.two{
-        font-family: "NeueMontrealRegular";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: #EBEBEB;
-      }
-      &.two{
-        background-color: #D3EBFF;
-      }
-      &.three{
-        background-color: #ffe2f1;
-      }
-    }
-  }
-}
-`
 
 const Sens = () => {
   AOS.init({
     duration : 2000
   })
   return (
-    <StyledSens>
+    <section>
       <div className="demi-spacer"></div>
 
       <div className="content">
@@ -92,7 +58,7 @@ const Sens = () => {
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>
-    </StyledSens>
+    </section>
   )
 }
 

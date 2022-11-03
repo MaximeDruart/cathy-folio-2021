@@ -221,46 +221,10 @@ const StyledHome = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
     .headline {
       text-transform: uppercase;
       font-size: 10px;
       font-family: NeueMontrealRegular;
-    }
-    .separator {
-      margin-top: 14px;
-      margin-bottom: 50px;
-      width: 100%;
-      height: 1px;
-      background-color: ${({ theme }) => theme.colors.text.disabled2};
-      &.text-top {
-        margin-bottom: 40px;
-      }
-      &.text-bot {
-        margin-top: 40px;
-      }
-
-      @media (max-width: 769px) {
-        margin-top: 14px;
-        margin-bottom: 30px;
-        &.text-top {
-          margin-bottom: 20px;
-        }
-        &.text-bot {
-          margin-top: 20px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        margin-top: 10px;
-        margin-bottom: 25px;
-        &.text-top {
-          margin-bottom: 10px;
-        }
-        &.text-bot {
-          margin-top: 10px;
-        }
-      }
     }
   }
 

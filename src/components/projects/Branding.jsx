@@ -39,50 +39,6 @@ svg:nth-child(2){
 svg:nth-child(3){
   .a{fill:none;}.b{fill:${({ theme }) => theme.colors.text.standard};}
 }
-
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 600px){
-    margin-bottom: 20px;
-  }
-
-  &.full-img{
-    height: 100vh;
-  }
-  &.step{
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 900px){
-      width: 100%;
-    }
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "NeueMontrealRegular";
-      }
-      &.two{
-        font-family: "DisplayNew";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: #ffffff;
-      }
-      &.two{
-        background-color: #b9b3fc;
-        color: white !important;
-      }
-    }
-  }
-}
 `
 
 const Branding = () => {

@@ -17,23 +17,12 @@ import pic3 from "../../assets/img/works/cyberpunk/3.jpg"
 import FullImage from "../shared/FullImage"
 
 
-
-const StyledCyberpunk = styled.div`
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-}
-`
-
 const Cyberpunk = () => {
   AOS.init({
     duration : 2000
   })
   return (
-    <StyledCyberpunk>
+    <section>
       <div className="demi-spacer"></div>
       <div className="content">
         <img  data-aos="fade-up" data-aos-duration="1000" src=  {pic3} alt="cyber" />
@@ -64,7 +53,7 @@ const Cyberpunk = () => {
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>
-    </StyledCyberpunk>
+    </section>
   )
 }
 

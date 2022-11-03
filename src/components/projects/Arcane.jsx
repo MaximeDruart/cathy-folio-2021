@@ -13,53 +13,12 @@ import p2 from "../../assets/img/works/arcane/p2.jpg"
 import p3 from "../../assets/img/works/arcane/p3.jpg"
 import FullImage from "../shared/FullImage"
 
-const StyledArcane = styled.div`
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "NeueMontrealRegular";
-      }
-      &.two{
-        font-family: "BebasNeueRegular";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: white;
-      }
-      &.two{
-        background-color: #6664d2;
-        color: white;
-      }
-      &.three{
-        background-color: #98afef;
-        color: white;
-      }
-      &.four{
-        background-color:#d178c7;
-        color: white;
-      }
-    }
-  }
-}
-`
-
 const Arcane = () => {
   AOS.init({
     duration : 2000
   })  
   return (
-    <StyledArcane>
+    <section>
       <div className="demi-spacer"></div>
 
       <div className="content">
@@ -80,7 +39,7 @@ const Arcane = () => {
       <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>
 
-    </StyledArcane>
+    </section>
   )
 }
 

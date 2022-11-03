@@ -14,13 +14,6 @@ import i10 from "../../assets/img/works/ando/i10.png"
 // import FullImage from "../shared/FullImage"
 
 const StyledAndo = styled.div`
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-}
 `
 
 const Ando = () => {

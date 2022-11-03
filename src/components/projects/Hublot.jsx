@@ -24,68 +24,13 @@ import detailsMobile from "../../assets/img/works/hublot/details-phone.mp4"
 import FullImage from "../shared/FullImage"
 
 
-
-
-
-
-const StyledHublot = styled.div`
-img, video.full{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-
-  &.full-img{
-    height: 100vh;
-  }
-  &.step{
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 900px){
-      width: 100%;
-    }
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "DisplayNew";
-      }
-      &.two{
-        font-family: "Gotham";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: #141414;
-        color: white !important;
-      }
-      &.two{
-        background-color: #E6E4E4;
-      }
-      &.three{
-        background-color: #FFFFFF;
-        color: black;
-      }
-      }
-    }
-  }
-}
-`
-
 const Hublot = () => {
   AOS.init({
     duration : 2000
   })
   
   return (
-    <StyledHublot>
+    <section>
       <div className="demi-spacer"></div>
       <div className="content">
         <div className='headline text-regular'>homepage</div>
@@ -116,7 +61,7 @@ const Hublot = () => {
         }}
         />
         <img className="border" data-aos="fade-up" data-aos-duration="1000" src={takashi} alt="maquettes" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={slider} alt="maquettes" />
+        <img className="border"  data-aos="fade-up" data-aos-duration="1000" src={slider} alt="maquettes" />
       </div>  
 
     <div className="spacer"/>
@@ -150,7 +95,7 @@ const Hublot = () => {
       <p className="text-description">Project made with love</p>
       <div className="big-spacer"></div>
 
-    </StyledHublot>
+    </section>
   )
 }
 

@@ -9,7 +9,6 @@ const StyledHomeProjectDetail = styled.div`
 
   .content {
     display: flex;
-    margin-bottom: 40px;
     font-size: 12px;
     .index{
       color: ${({ theme }) => theme.colors.text.text};
@@ -45,7 +44,6 @@ const StyledHomeProjectDetail = styled.div`
     pointer-events: none;
     .hover-images {
       transition: opacity ease-out 0.4s;
-
       img {
         width: 30vw;
         height: auto;

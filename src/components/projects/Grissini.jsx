@@ -13,50 +13,12 @@ import contactMobile from "../../assets/img/works/grissini/contact_mobile.jpg"
 import FullImage from "../shared/FullImage"
 
 
-
-const StyledGrissini = styled.div`
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "SaolDisplayLight";
-      }
-      &.two{
-        font-family: "Lato";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: white;
-      }
-      &.two{
-        background-color: black;
-        color: white;
-      }
-      &.three{
-        background-color: #FDC463;
-        color: white !important;
-      }
-    }
-  }
-}
-`
-
 const Grissini = () => {
   AOS.init({
     duration : 2000
   })
   return (
-    <StyledGrissini>
+    <section>
       <div className="demi-spacer"></div>
       <div className="content">
         <img  data-aos="fade-up" data-aos-duration="1000" src={homepage} alt="pxp" />
@@ -83,7 +45,7 @@ const Grissini = () => {
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with fun and love</p>
       <div className="big-spacer"></div>
-    </StyledGrissini>
+    </section>
   )
 }
 

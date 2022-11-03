@@ -34,69 +34,13 @@ import bPrint from "../../assets/img/works/feels/bPrint.png"
 
 
 
-
-
-const StyledFeels = styled.div`
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-
-  &.full-img{
-    height: 100vh;
-  }
-  &.step{
-    width: 70%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @media (max-width: 900px){
-      width: 100%;
-    }
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "NeueMontrealRegular";
-      }
-      &.two{
-        font-family: "DisplayNew";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: #ffffff;
-      }
-      &.two{
-        background-color: #ff3cd5;
-        color: white !important;
-      }
-      &.three{
-        background-color: #872bff;
-        color: white !important;
-      }
-      &.four{
-        background-color: #374bff;
-        color: white !important;
-      }
-    }
-  }
-}
-`
-
 const Feels = () => {
   AOS.init({
     duration : 2000
   })
   
   return (
-    <StyledFeels>
+    <section>
       <div className="demi-spacer"></div>
 
       <div className="content">
@@ -151,7 +95,7 @@ const Feels = () => {
       <p className="text-description">Project made with fun with an amazing team</p>
       <div className="big-spacer"></div>
 
-    </StyledFeels>
+    </section>
   )
 }
 

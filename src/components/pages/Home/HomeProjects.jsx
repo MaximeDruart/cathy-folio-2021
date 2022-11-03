@@ -9,12 +9,14 @@ const Container = styled.div`
 *{
   font-family: NeueMontrealRegular;
 }
+  .content{
+    margin: 16px 0;
+  }
   width: 100%;
   .project {
     width: 100%;
     .content {
       display: flex;
-      margin-bottom: 40px;
       .index{
         font-size: 12px
       }

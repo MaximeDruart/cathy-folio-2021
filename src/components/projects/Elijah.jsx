@@ -13,47 +13,8 @@ import menuMobile from "../../assets/img/works/elijah/menuMobile.jpg"
 import friendsMobile from "../../assets/img/works/elijah/friendsMobile.jpg"
 import clientsMobile from "../../assets/img/works/elijah/clientsMobile.jpg"
 
-
 import FullImage from "../shared/FullImage"
 
-
-
-const StyledElijah = styled.div`
-img{
-  width: 100%;
-  margin-bottom: 40px;
-  @media (max-width: 769px) {
-    margin-bottom: 20px;
-  }
-}
-.chart{
-  .typography{
-    span.text-typo{
-      &.one{
-        font-family: "Qene";
-      }
-      &.two{
-        font-family: "NeueMontrealRegular";
-      }
-    }
-  }
-  .colors{
-    .color{
-      &.one{
-        background-color: white;
-      }
-      &.two{
-        background-color: #f03939;
-        color: white;
-      }
-      &.three{
-        background-color: black;
-        color: white;
-      }
-    }
-  }
-}
-`
 
 const Arcane = () => {
   AOS.init({
@@ -61,7 +22,7 @@ const Arcane = () => {
   })
   
   return (
-    <StyledElijah>
+    <section>
       {/* start case */}
       <div className="demi-spacer"></div>
       <div className="content">
@@ -89,7 +50,7 @@ const Arcane = () => {
       <h2 className='text-h2'>Thanks for scrolling</h2>
       <p className="text-description">Project made with love for Elijah</p>
       <div className="big-spacer"></div>
-    </StyledElijah>
+    </section>
   )
 }
 
