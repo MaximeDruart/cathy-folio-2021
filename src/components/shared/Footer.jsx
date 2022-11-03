@@ -118,7 +118,7 @@ const Container = styled.div`
         }
         @media (max-width: 750px) {
           width: 100%;
-          justify-content: center;
+          justify-content: space-between;
           li {
             margin: 5px 6px;
             font-size: 10px;

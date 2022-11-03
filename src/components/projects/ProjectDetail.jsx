@@ -15,7 +15,7 @@ const StyledProjectDetail = styled.div`
     width: 100%;
     margin-bottom: 40px;
     @media (max-width: 769px) {
-      margin-bottom: 16px;
+      margin-bottom: 16px !important;
     }
   }
   .hero {
