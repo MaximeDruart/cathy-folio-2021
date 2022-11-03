@@ -46,7 +46,7 @@ export default css`
   }
   .text-h2-5 {
     font-family: "NeueMontrealRegular";
-    font-size: 40px;
+    font-size: 32px;
     line-height: 1.3;
     color: ${({ theme }) => theme.colors.text.standard};
     span.important_word {
@@ -168,8 +168,12 @@ export default css`
       a{
         padding: 14px;
       }
-      img{
+      svg{
         height: 10px;
+        width: auto;
+        path, rect{
+          stroke: ${({ theme }) => theme.colors.text.standard};;
+        }
       }
     }
     &.big{

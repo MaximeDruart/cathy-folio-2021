@@ -6,10 +6,10 @@ import grissiniCover from "./assets/img/works/covers/grissini.jpg"
 import grissiniCoverSmall from "./assets/img/works/covers-small/grissini-min.jpg"
 import grissiniVisual1 from "./assets/img/works/grissini/visual1.jpg"
 
-import PXP from "./components/projects/PXP"
-import pxpCover from "./assets/img/works/covers/pxp.jpg"
-import pxpCoverSmall from "./assets/img/works/covers-small/pxp-min.jpg"
-import pxpVisual1 from "./assets/img/works/pxp/visual1.jpg"
+// import PXP from "./components/projects/PXP"
+// import pxpCover from "./assets/img/works/covers/pxp.jpg"
+// import pxpCoverSmall from "./assets/img/works/covers-small/pxp-min.jpg"
+// import pxpVisual1 from "./assets/img/works/pxp/visual1.jpg"
 
 import Arcane from "./components/projects/Arcane"
 import arcaneCover from "./assets/img/works/covers/arcane.jpg"
@@ -43,10 +43,10 @@ import brandingCover from "./assets/img/works/covers/branding.jpg"
 import brandingCoverSmall from "./assets/img/works/covers-small/branding-min.jpg"
 import brandingVisual1 from "./assets/img/works/branding/visual1.jpg"
 
-import Chanel from "./components/projects/Chanel"
-import chanelCover from "./assets/img/works/covers/chanel.jpg"
-import chanelCoverSmall from "./assets/img/works/covers-small/chanel-min.jpg"
-import chanelVisual1 from "./assets/img/works/chanel/visual1.jpg"
+// import Chanel from "./components/projects/Chanel"
+// import chanelCover from "./assets/img/works/covers/chanel.jpg"
+// import chanelCoverSmall from "./assets/img/works/covers-small/chanel-min.jpg"
+// import chanelVisual1 from "./assets/img/works/chanel/visual1.jpg"
 
 import Zhonglin from "./components/projects/Zhonglin"
 import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
@@ -74,6 +74,49 @@ import andoCoverSmall from "./assets/img/works/covers-small/ando-min.jpg"
 import andoVisual1 from "./assets/img/works/ando/visual1.jpg"
 
 let projectsData = [
+  {
+    name: "Zhong lin",
+    path: "zhonglin",
+    title: "A creative photographer",
+    coverImg: ZhonglinCover,
+    coverImgSmall: ZhonglinCoverSmall,
+    visual1: zhonglinVisual1,
+    component: Zhonglin,
+    date: "Apr. 2022",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop, Protopie"],
+    description:
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },
+  {
+    name: "Arcane",
+    path: "arcane",
+    title: "We lie when we are afraid",
+    coverImg: arcaneCover,
+    coverImgSmall: arcaneCoverSmall,
+    visual1: arcaneVisual1,
+    component: Arcane,
+    date: "Nov. 2021",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop"],
+    description:
+      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+  },
+  {
+    name: "Cyberpunk",
+    path: "cyberpunk",
+    title: "Cyberpunk design",
+    coverImg: cyberpunkCover,
+    coverImgSmall: cyberpunkCoverSmall,
+    visual1: cyberpunkVisual1,
+    component: Cyberpunk,
+    date: "Oct. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, React"],
+    description:
+      "Being an avid Cyberpunk2077 player, I fell in love with the Cyberpunk series. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+    websiteLink: "https://cyberpunkv4.netlify.app/",
+  },
   {
     name: "Hublot",
     path: "hublot",
@@ -104,49 +147,6 @@ let projectsData = [
       "Small chromed generations thanks to the Ando plugin on Figma from references and handmade abstract shapes.",
   },
   {
-    name: "Arcane",
-    path: "arcane",
-    title: "We lie when we are afraid",
-    coverImg: arcaneCover,
-    coverImgSmall: arcaneCoverSmall,
-    visual1: arcaneVisual1,
-    component: Arcane,
-    date: "Nov. 2021",
-    role: "Designer",
-    techs: ["AdobeXD, Photoshop"],
-    description:
-      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-  },
-  {
-    name: "Zhonglin",
-    path: "zhonglin",
-    title: "A creative photographer",
-    coverImg: ZhonglinCover,
-    coverImgSmall: ZhonglinCoverSmall,
-    visual1: zhonglinVisual1,
-    component: Zhonglin,
-    date: "Apr. 2022",
-    role: "Designer",
-    techs: ["AdobeXD, Photoshop, Protopie"],
-    description:
-      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
-  },
-  {
-    name: "Cyberpunk",
-    path: "cyberpunk",
-    title: "Cyberpunk design",
-    coverImg: cyberpunkCover,
-    coverImgSmall: cyberpunkCoverSmall,
-    visual1: cyberpunkVisual1,
-    component: Cyberpunk,
-    date: "Oct. 2022",
-    role: "Designer, Dev",
-    techs: ["Figma, React"],
-    description:
-      "Being an avid Cyberpunk2077 player, I fell in love with the Cyberpunk series. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-    websiteLink: "https://cyberpunkv4.netlify.app/",
-  },
-  {
     name: "Bohinc",
     path: "bohinc",
     title: "Minimalist Furniture",
@@ -160,20 +160,20 @@ let projectsData = [
     description:
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
-  {
-    name: "Chanel",
-    path: "chanel",
-    title: "An Experimental Story",
-    coverImg: chanelCover,
-    coverImgSmall: chanelCoverSmall,
-    component: Chanel,
-    date: "Feb. 2022",
-    role: "Designer",
-    techs: ["Adobe XD, Photoshop, Illustrator"],
-    description:
-      "L'eau tendre is a captivating perfume made of jasmine and rose essence. I designed an immersive website to highlight its qualities, its freshness, its sweetness as well as its accompanying range. ",
-    visual1: chanelVisual1,
-  },
+  // {
+  //   name: "Chanel",
+  //   path: "chanel",
+  //   title: "An Experimental Story",
+  //   coverImg: chanelCover,
+  //   coverImgSmall: chanelCoverSmall,
+  //   component: Chanel,
+  //   date: "Feb. 2022",
+  //   role: "Designer",
+  //   techs: ["Adobe XD, Photoshop, Illustrator"],
+  //   description:
+  //     "L'eau tendre is a captivating perfume made of jasmine and rose essence. I designed an immersive website to highlight its qualities, its freshness, its sweetness as well as its accompanying range. ",
+  //   visual1: chanelVisual1,
+  // },
   {
     name: "Grissini",
     path: "grissini",
@@ -217,21 +217,21 @@ let projectsData = [
     description:
       "For several months I had a desire to create a graphic charter and a universe around my personality. I finally succeeded! I let you discover me : Cathy Dolle",
   },
-  {
-    name: "Project X",
-    path: "project-x-paris",
-    title: "French Streetwear",
-    coverImg: pxpCover,
-    coverImgSmall: pxpCoverSmall,
-    component: PXP,
-    date: "Jul. 2021",
-    role: "Designer, Web integrator",
-    techs: ["Adobe XD, Wordpress, Elementor"],
-    description:
-      "Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers.",
-    visual1: pxpVisual1,
-    websiteLink: "https://www.projectxparis.com/",
-  },
+  // {
+  //   name: "Project X",
+  //   path: "project-x-paris",
+  //   title: "French Streetwear",
+  //   coverImg: pxpCover,
+  //   coverImgSmall: pxpCoverSmall,
+  //   component: PXP,
+  //   date: "Jul. 2021",
+  //   role: "Designer, Web integrator",
+  //   techs: ["Adobe XD, Wordpress, Elementor"],
+  //   description:
+  //     "Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers.",
+  //   visual1: pxpVisual1,
+  //   websiteLink: "https://www.projectxparis.com/",
+  // },
   {
     name: "5 Sens",
     path: "sens",

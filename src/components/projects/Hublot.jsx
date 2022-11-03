@@ -96,7 +96,7 @@ const Hublot = () => {
         </video>`
         }}
         />
-        <img data-aos="fade-up" data-aos-duration="1000" src={product} alt="maquettes" />
+        <img className="border" data-aos="fade-up" data-aos-duration="1000" src={product} alt="maquettes" />
         <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
         <video class="full" loop muted autoplay playsinline>
             <source src="${details}" type="video/mp4">
@@ -108,14 +108,14 @@ const Hublot = () => {
       <div className="content">
         <div className='headline text-regular'>Product Details</div>
         <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={unico} alt="maquettes" />
+        <img className="border" data-aos="fade-up" data-aos-duration="1000" src={unico} alt="maquettes" />
         <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
         <video class="full" loop muted autoplay playsinline>
             <source src="${concept}" type="video/mp4">
         </video>`
         }}
         />
-        <img data-aos="fade-up" data-aos-duration="1000" src={takashi} alt="maquettes" />
+        <img className="border" data-aos="fade-up" data-aos-duration="1000" src={takashi} alt="maquettes" />
         <img data-aos="fade-up" data-aos-duration="1000" src={slider} alt="maquettes" />
       </div>  
 
@@ -135,14 +135,14 @@ const Hublot = () => {
         </video>`
         }}
         />
-        <img data-aos="fade-up" data-aos-duration="1000" src={productMobile} alt="responsive"></img>
+        <img className="border" data-aos="fade-up" data-aos-duration="1000" src={productMobile} alt="responsive"></img>
         <div data-aos="fade-up" data-aos-duration="1000" className="video" dangerouslySetInnerHTML={{ __html: `
         <video loop muted autoplay playsinline>
             <source src="${detailsMobile}" type="video/mp4">
         </video>`
         }}
         />
-      <img data-aos="fade-up" data-aos-duration="1000" src={productsMobile} alt="responsive"></img>
+      <img className="border"  data-aos="fade-up" data-aos-duration="1000" src={productsMobile} alt="responsive"></img>
       </div>
     </div>
       <div className="big-spacer"></div>

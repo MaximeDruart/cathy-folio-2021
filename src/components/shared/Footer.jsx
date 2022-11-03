@@ -83,7 +83,7 @@ const Container = styled.div`
       }
     }
     .small-line {
-      font-size: 12px;
+      font-size: 10px;
       margin-top: -20px;
       @media (max-width: 750px) {
         .left {

@@ -5,15 +5,15 @@ const darkColors = [
   },
   {
     name: "saphir",
-    color: "#1A2694",
+    color: "#9793BF",
   },
   {
     name: "kaki",
-    color: "#3D4D3D",
+    color: "#9793BF",
   },
   {
     name: "gold",
-    color: "#DBBE8F",
+    color: "#9793BF",
   },
 
 ]
@@ -25,15 +25,15 @@ const lightColors = [
   },
   {
     name: "saphir",
-    color: "#1A2694",
+    color: "#9793BF",
   },
   {
     name: "kaki",
-    color: "#3D4D3D",
+    color: "#9793BF",
   },
   {
     name: "gold",
-    color: "#DBBE8F",
+    color: "#9793BF",
   },
 
 ]

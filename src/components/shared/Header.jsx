@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import CathyLogoSVG from "../../assets/icons/cathy.svg?component"
 
-import mail from "../../assets/img/mail.svg"
+import Mail from "../../assets/icons/mail.svg?component"
 import { horizontalPadding } from "../../styles/globalCustom"
 
 const StyledHeader = styled.div`
@@ -47,7 +47,7 @@ const Header = () => {
           <div className="circle"></div>
         </div>
         <div className="button mail">
-          <a href="mailto:cathy.dolle@live.fr"><img src={mail} alt="mail"></img></a>
+          <a href="mailto:cathy.dolle@live.fr"><Mail/></a>
         </div>
       </nav>
     </StyledHeader>

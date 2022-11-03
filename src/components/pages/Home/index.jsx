@@ -15,6 +15,8 @@ import twitch from "../../../assets/img/about/twitch.jpg"
 import resume from "../../../assets/img/about/resume.pdf"
 
 const StyledHome = styled.div`
+  background:  ${({ theme }) => theme.colors.background};  
+  transition: background-color 0.6s;
   * {
     color: ${({ theme }) => theme.colors.text.standard};
   }

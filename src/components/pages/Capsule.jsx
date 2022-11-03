@@ -29,6 +29,7 @@ import dofus from "../../assets/img/about/games/dofus.jpg";
 const Spline = React.lazy(() => import ('@splinetool/react-spline'));
 
 const StyledRoom = styled.div`
+  background:  ${({ theme }) => theme.colors.background};  
   transition: background-color 0.6s;
   * {
     font-family: NeueMontrealRegular;

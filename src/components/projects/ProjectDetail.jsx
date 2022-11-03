@@ -8,6 +8,8 @@ import { Link, useHistory } from "react-router-dom"
 
 
 const StyledProjectDetail = styled.div`
+  background:  ${({ theme }) => theme.colors.background};  
+  transition: background-color 0.6s;
   .hero {
     position: relative;
     width: 100vw;
@@ -32,6 +34,9 @@ const StyledProjectDetail = styled.div`
       right : 10vw;
       height: 100vh;
       padding: 10vh 0;
+      h2, a, h3{
+        color: white;
+      }
       .infos{
         .infos-intro{
           .text-description{
@@ -85,6 +90,9 @@ const StyledProjectDetail = styled.div`
       height: 100vh;
     }
   }
+  img.border{
+    border: solid 1px #ebebeb;
+  }
   .project-description-mobile{
     display: none;
     @media (max-width: 600px) {
@@ -117,15 +125,6 @@ const StyledProjectDetail = styled.div`
     height: auto;
     object-fit: cover;
   }
-  img.quart{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    @media (max-width: 900px) {
-      width: 80%;
-    }
-  }
   img.little {
     width: 80% 
     @media (max-width: 900px) {
@@ -146,7 +145,7 @@ const StyledProjectDetail = styled.div`
       width: 160px;
     }
     img.quart{
-      width: 30%;
+      width: 31%;
       @media (max-width: 900px) {
         width: 100% !important;
       }
@@ -230,7 +229,7 @@ const StyledProjectDetail = styled.div`
     text-transform: uppercase;
     text-align: center;
     opacity: 1;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .separator {

@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-// import useStore from "../../store"
+import useStore from "../../store"
 import { horizontalPadding } from "../../styles/globalCustom"
-import ColorPicker from "./ColorPicker"
+// import ColorPicker from "./ColorPicker"
 import { Link, NavLink } from "react-router-dom"
-import play from './../../assets/icons/play.svg'
+import Play from "../../assets/icons/play.svg?component"
 
 
 const StyledStyleSwitcher = styled.div`
@@ -24,14 +24,11 @@ const StyledStyleSwitcher = styled.div`
   font-size: 12px;
   .theme-toggle {
     pointer-events: auto;
-    margin-top: 20px;
-    border: solid 1px ${({ theme }) => theme.colors.text.disabled};
+    background-color: ${({ theme }) => theme.colors.text.standard};
     border-radius: 30px;
-    padding: 5px 14px;
+    width: 20px;
+    height: 20px;
     transition: background-color 0.4s;
-    &:hover{
-      background-color: ${({ theme }) => theme.colors.text.disabled2};
-    }
   }
   .reel{
     position: relative;
@@ -42,8 +39,12 @@ const StyledStyleSwitcher = styled.div`
     padding: 14px;
     border-radius: 90px;
     border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
-    img{
+    svg{
       width: 6px;
+      height: auto;
+      path{
+        fill: ${({ theme }) => theme.colors.text.standard};
+      }
     }
     &:hover{
       background-color: ${({ theme }) => theme.colors.text.disabled2};
@@ -68,9 +69,6 @@ const StyledStyleSwitcher = styled.div`
     button{
       font-size: 10px;
       padding: 8px;
-    }
-    button.theme-toggle{
-        padding: 8px 14px;
     }
   }
   @media (max-width: 600px){
@@ -103,11 +101,12 @@ const StyledStyleSwitcher = styled.div`
 `
 
 const StyleSwitcher = () => {
+  const toggleDarkMode = useStore((state) => state.toggleDarkMode)
   return (
     <StyledStyleSwitcher>
       <Link to='/reel'>
         <div className="reel">
-          <img src={play} alt='reel'></img>
+          <Play/>
         </div>
       </Link>
       <nav>
@@ -116,7 +115,11 @@ const StyleSwitcher = () => {
         <NavLink  to="/capsule">Capsule</NavLink>
       </nav>
       <div className="style">
-        <ColorPicker />
+        <div className="style">
+          <button onClick={toggleDarkMode} className='theme-toggle'>
+          </button>
+        </div>
+        {/* <ColorPicker /> */}
       </div>
     </StyledStyleSwitcher>
   )

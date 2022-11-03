@@ -35,8 +35,7 @@ let projectIsOpened = createRef()
 const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background: #0F0F0F;
-  // background: #ECE9E7;
+  background:  ${({ theme }) => theme.colors.background};  
   transition: background-color 0.6s;
   position: relative;
   display: flex;
@@ -49,8 +48,8 @@ const Container = styled.div`
   .map {
     pointer-events: none;
     position: absolute;
-    left: 10vw;
-    bottom: -3vh;
+    right: 6vw;
+    bottom: -8vh;
     transform: translateY(-50%);
     width: auto;
     height: auto;
@@ -59,6 +58,7 @@ const Container = styled.div`
     @media (max-width: 900px) {
       left: auto;
       scale: 0.6;
+      display: none;
     }
     
 
@@ -80,7 +80,7 @@ const Container = styled.div`
 
       &.is-active {
         border: 1px solid  ${({ theme }) => theme.colors.primary1};
-        background:  ${({ theme }) => theme.colors.primary1};  ;
+        background:  ${({ theme }) => theme.colors.primary1};  
         border-radius: 1px;
       }
     }
@@ -96,7 +96,7 @@ const Container = styled.div`
   .archive-item {
     * {
       font-family: NeueMontrealRegular;
-      color: #F8F8F8;
+      color:  ${({ theme }) => theme.colors.text.standard};  
     }
     opacity: 0;
 
@@ -597,8 +597,8 @@ const Scene = () => {
       mapItemsRef.current.forEach((mapItem, index) => {
         mapItem.style.left = items[index].x * 10 + "px"
         mapItem.style.top = (1 - items[index].y) * 10 + "px"
-        mapItem.style.width = items[index].width * 10 + "px"
-        mapItem.style.height = items[index].height * 10 + "px"
+        mapItem.style.width = items[index].width * 8 + "px"
+        mapItem.style.height = items[index].height * 8 + "px"
 
         const rect = mapItem.getBoundingClientRect()
         mapItemRects.current.push(rect)

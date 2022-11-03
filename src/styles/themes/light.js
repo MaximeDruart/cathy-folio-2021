@@ -3,16 +3,16 @@ import { lightColors } from "./colors"
 const lightTheme = {}
 
 lightTheme.colors = {
-  background: "#0F0F0F",
+  background: "#FFFFFF",
   opacity: "#0000008F",
   panel : "#FFFFFF8F",
   placeholder: "#2E2E2E",
   primary1: "#A696DD",
   text: {
-    standard: "#F8F8F8",
-    text: "#ffffff69",
-    disabled: "#404040",
-    disabled2: "#242424",
+    standard: "#323232",
+    text: "#666666",
+    disabled: "#9a9a9a",
+    disabled2: "#e7e7e7",
   },
 }
 

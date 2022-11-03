@@ -35,9 +35,10 @@ const planePositions = {
 }
 
 const StyledWorks = styled(motion.div)`
+  background:  ${({ theme }) => theme.colors.background};  
+  transition: background-color 0.6s;
   height: 100vh;
   width: 100vw;
-  transition: background-color 0.6s;
   position: relative;
   overflow: hidden;
 
