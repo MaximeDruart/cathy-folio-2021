@@ -52,14 +52,6 @@ const Feels = () => {
         <div className='separator'></div>
         <video data-aos="fade-up" data-aos-duration="1000" poster={thumbnail} controls src={video1}></video>
         <div className="spacer"></div>
-        <div className='headline text-regular'>GENERATES AN EMOTIONAL PALETTE</div>
-        <div className='separator'></div>
-        <div className="img_container mini">
-          <img data-aos="fade-up" data-aos-duration="1000" src={calm} alt="calm" />
-          <img data-aos="fade-up" data-aos-duration="1000" src={casual} alt="casual" />
-          <img data-aos="fade-up" data-aos-duration="1000" src={happy} alt="happy" />
-        </div>
-        <div className="spacer"></div>
         <div className='headline text-regular'>Blue Palette</div>
         <div className='separator'></div>
         <div className="img_container">
@@ -77,7 +69,7 @@ const Feels = () => {
       </div>
  
 
-      <div className="demi-spacer"></div>
+      <div className="spacer"></div>
       <FullImage src={feelsPreview} alt='card' />
       <div className="spacer"></div>
 

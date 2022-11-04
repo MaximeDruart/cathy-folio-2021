@@ -15,7 +15,6 @@ import Capsule from "./components/pages/Capsule"
 import Works from "./components/pages/Works"
 import Random from "./components/pages/Random"
 import ProjectDetail from "./components/projects/ProjectDetail"
-import StyleSwitcher from "./components/shared/StyleSwitcher"
 import { AnimatePresence } from "framer-motion"
 
 
@@ -43,7 +42,7 @@ const App = () => {
     <>
       {isDesktop && <MouseFollower />}
       <Header />
-      <StyleSwitcher />
+      {/* <StyleSwitcher /> */}
       <div data-app-container ref={containerRef}>
         <Route
           render={({ location }) => (

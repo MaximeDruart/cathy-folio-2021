@@ -50,6 +50,7 @@ const StyledProjectDetail = styled.div`
           .text-description{
             width: 100%;
             margin: 20px 0;
+            color: #ffffff69;
           }
         }
         .infos-column{
@@ -221,13 +222,17 @@ const StyledProjectDetail = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-transform: uppercase;
       text-align: center;
       color: white;
-      font-size: 120px;
+      font-size: 100px;
+      font-weight: 400;
       line-height: 1.2;
       font-family: Ginger;
       white-space: nowrap;
+      letter-spacing: 0;
+      h4{
+        color: white;
+      }
       @media (max-width: 900px) {
         font-size: 80px;
       }
@@ -330,7 +335,10 @@ const ProjectDetail = ({ project }) => {
             <img src={projectsData[project.index + 1].coverImg} />
             <div className="voile"></div>
             <div className="block"></div>
-            <div className='text-h1'>Next<br/>Project</div>
+            <div className='text-h1'>
+              {projectsData[project.index + 1].name}
+              <h4 className="text-h4">Next Project</h4>
+            </div>
           </Link>
         )}
       </StyledProjectDetail>

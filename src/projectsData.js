@@ -89,6 +89,20 @@ let projectsData = [
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },
   {
+    name: "Ando",
+    path: "ando",
+    title: "Some AI Experimentation",
+    coverImg: andoCover,
+    coverImgSmall: andoCoverSmall,
+    visual1: andoVisual1,
+    component: Ando,
+    date: "Nov. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop"],
+    description:
+      "Small chromed generations thanks to the Ando plugin on Figma from references and handmade abstract shapes.",
+  },
+  {
     name: "Arcane",
     path: "arcane",
     title: "We lie when we are afraid",
@@ -131,20 +145,6 @@ let projectsData = [
     description:
       "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
     websiteLink: "https://hublotxtakashi.netlify.app/",
-  },
-  {
-    name: "Ando",
-    path: "ando",
-    title: "Some AI Experimentation",
-    coverImg: andoCover,
-    coverImgSmall: andoCoverSmall,
-    visual1: andoVisual1,
-    component: Ando,
-    date: "Nov. 2022",
-    role: "Designer",
-    techs: ["Figma, Photoshop"],
-    description:
-      "Small chromed generations thanks to the Ando plugin on Figma from references and handmade abstract shapes.",
   },
   {
     name: "Bohinc",

@@ -18,6 +18,9 @@ import DistortionMaterial from "../shared/three/DistortionMaterial"
 import { motion } from "framer-motion"
 import { useMediaQuery } from "beautiful-react-hooks"
 
+import StyleSwitcher from "./../../components/shared/StyleSwitcher"
+
+
 extend({ DistortionMaterial })
 
 const vec3 = new THREE.Vector3()
@@ -516,8 +519,8 @@ const Scene = () => {
 
       camBox.current = visibleBox(camera, 0)
 
-      mapPosRef.current.style.width = camBox.current.width * 10 + "px"
-      mapPosRef.current.style.height = camBox.current.height * 10 + "px"
+      mapPosRef.current.style.width = camBox.current.width * 7 + "px"
+      mapPosRef.current.style.height = camBox.current.height * 7 + "px"
     }
   })
 
@@ -681,6 +684,7 @@ const Archives = () => {
 
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
+      <StyleSwitcher />
       <Container>
         <Canvas dpr={[1, 1.5]} mode='concurrent' camera={{ position: [0, 0, 1.2], fov: 140, far: 10 }}>
           <ContextBridge>
