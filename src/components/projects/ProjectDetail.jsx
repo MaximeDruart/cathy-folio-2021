@@ -95,6 +95,9 @@ const StyledProjectDetail = styled.div`
       height: 100%;
       object-fit: cover;
       margin-bottom: 0;
+      @media (max-width: 769px) {
+        margin-bottom: 0 !important;
+      }
     }
   }
   img.border{

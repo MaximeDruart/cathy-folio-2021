@@ -18,8 +18,6 @@ import DistortionMaterial from "../shared/three/DistortionMaterial"
 import { motion } from "framer-motion"
 import { useMediaQuery } from "beautiful-react-hooks"
 
-import StyleSwitcher from "./../../components/shared/StyleSwitcher"
-
 
 extend({ DistortionMaterial })
 
@@ -684,7 +682,6 @@ const Archives = () => {
 
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
-      <StyleSwitcher />
       <Container>
         <Canvas dpr={[1, 1.5]} mode='concurrent' camera={{ position: [0, 0, 1.2], fov: 140, far: 10 }}>
           <ContextBridge>

@@ -16,8 +16,6 @@ import { useHistory } from "react-router"
 import PageTemplate from "./PageTemplate"
 import DistortionMaterial from "../shared/three/DistortionMaterial"
 
-import StyleSwitcher from "./../../components/shared/StyleSwitcher"
-
 
 extend({ DistortionMaterial })
 
@@ -334,7 +332,6 @@ const Works = () => {
 
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
-      <StyleSwitcher />
       <StyledWorks>
         <Canvas
           dpr={[1, 1.5]}
