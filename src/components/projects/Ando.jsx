@@ -11,6 +11,12 @@ import i7 from "../../assets/img/works/ando/i7.png"
 import i8 from "../../assets/img/works/ando/i8.png"
 import i9 from "../../assets/img/works/ando/i9.png"
 import i10 from "../../assets/img/works/ando/i10.png"
+import i11 from "../../assets/img/works/ando/i11.png"
+import i12 from "../../assets/img/works/ando/i12.png"
+import i13 from "../../assets/img/works/ando/i13.png"
+import i14 from "../../assets/img/works/ando/i14.png"
+import i15 from "../../assets/img/works/ando/i15.png"
+
 // import FullImage from "../shared/FullImage"
 
 const StyledAndo = styled.div`
@@ -28,13 +34,18 @@ const Ando = () => {
           <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i1} alt="print" />
           <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i2} alt="print" />
           <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i3} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i5} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i7} alt="print" />
           <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i6} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i7} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i5} alt="print" />
           <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i8} alt="print" />
           <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i9} alt="print" />
           <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i10} alt="print" />
           <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i4} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i11} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i12} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i13} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i14} alt="print" />
+          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i15} alt="print" />
 
       </div>
       <div className="big-spacer"></div>

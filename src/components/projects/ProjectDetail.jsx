@@ -147,7 +147,7 @@ const StyledProjectDetail = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    img.duo {
+    img.duo, div.duo {
       width: 48%;
       @media (max-width: 900px) {
         width: 100% !important;
@@ -181,15 +181,24 @@ const StyledProjectDetail = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 40px;
+    @media (max-width: 769px) {
+      margin-bottom: 16px !important;
+    }
     img, .video {
       width: 24%;
       height: 100%;
       margin: 0;
+      video{
+        margin-bottom: 0;
+      }
       @media (max-width: 1000px) {
         width: 48%;
+        height: auto;
       }
       @media (max-width: 600px) {
         width: 48%;
+        height: auto;
       }
     }
     @media (max-width: 600px) {
@@ -198,6 +207,7 @@ const StyledProjectDetail = styled.div`
   }
   /* Separator with text */
   .headline {
+    width: 100%;
     text-transform: uppercase;
     text-align: center;
     opacity: 1;

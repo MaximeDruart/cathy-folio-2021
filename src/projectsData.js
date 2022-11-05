@@ -73,6 +73,12 @@ import andoCover from "./assets/img/works/covers/ando.jpg"
 import andoCoverSmall from "./assets/img/works/covers-small/ando-min.jpg"
 import andoVisual1 from "./assets/img/works/ando/visual1.jpg"
 
+import nyx from "./components/projects/Nyx"
+import nyxCover from "./assets/img/works/covers/nyx.jpg"
+import nyxCoverSmall from "./assets/img/works/covers-small/nyx-min.jpg"
+import nyxVisual1 from "./assets/img/works/nyx/visual1.jpg"
+
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -115,6 +121,20 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop"],
     description:
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+  },
+  {
+    name: "Nyx",
+    path: "nyx",
+    title: "Cosmetics Creativity",
+    coverImg: nyxCover,
+    coverImgSmall: nyxCoverSmall,
+    visual1: nyxVisual1,
+    component: nyx,
+    date: "oct. 2022",
+    role: "Designer, Developer",
+    techs: ["Vs Code, Figma, Spline"],
+    description:
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },
   {
     name: "Cyberpunk",
