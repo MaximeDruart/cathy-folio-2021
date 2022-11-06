@@ -64,8 +64,8 @@ const Branding = () => {
       <div className="content">
         <div className='headline text-regular'>resume</div>
         <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={resumeRecto} alt="resume" />
-        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={resumeVerso} alt="resume" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={resumeRecto} alt="resume" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={resumeVerso} alt="resume" />
       </div>
       
 
@@ -74,7 +74,7 @@ const Branding = () => {
       <div className="content">
         <div className='headline text-regular'>Business Card</div>
         <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" className="little" src={businessCard} alt="resume" />
+        <img data-aos="fade-up" data-aos-duration="1000" src={businessCard} alt="resume" />
         <div className="img_container">
           <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={cardRecto} alt="calm" />
           <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={cardVerso} alt="casual" />
