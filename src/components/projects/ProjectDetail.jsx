@@ -9,9 +9,10 @@ import { Link, useHistory } from "react-router-dom"
 
 
 const StyledProjectDetail = styled.div`
-  background:  ${({ theme }) => theme.colors.background};  
   transition: background-color 0.6s;
+  background:  ${({ theme }) => theme.colors.background};  
   img, video{
+    border-radius: 18px;
     width: 100%;
     margin-bottom: 40px;
     @media (max-width: 769px) {
@@ -29,7 +30,7 @@ const StyledProjectDetail = styled.div`
     .voile{
       position: absolute;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       background: black;
       opacity: 0.4;
       @media (max-width: 800px) {
@@ -91,6 +92,7 @@ const StyledProjectDetail = styled.div`
     }
 
     img {
+      border-radius: 0px;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -216,7 +218,7 @@ const StyledProjectDetail = styled.div`
   .next-project {
     display: block;
     width: 100vw;
-    height: 100vh;
+    height: 88vh;
     position: relative;
     cursor: pointer;
 
@@ -224,6 +226,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 32px 32px 0 0;
 
     }
     .block{

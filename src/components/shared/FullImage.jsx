@@ -10,6 +10,7 @@ const Container = styled.div`
   margin-bottom: auto !important;
   margin-left: -10vw;
   img {
+    border-radius: 0px !important ;
     width: 100vw;
     height: 110vh;
     object-fit: cover;
