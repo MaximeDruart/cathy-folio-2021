@@ -134,7 +134,7 @@ let projectsData = [
     role: "Designer, Developer",
     techs: ["Vs Code, Figma, Spline"],
     description:
-      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+      "Creation of an immersive experience connected to a Nyx product to show customers how to use their entire makeup palette. A QR code will be placed in each box to access the experience via a webapp.",
   },
   {
     name: "Cyberpunk",
