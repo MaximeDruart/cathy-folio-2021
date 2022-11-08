@@ -2,7 +2,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
-import pxpDesktop from "../../assets/img/works/pxp/pxp_desktop.jpg"
 import homepage from "../../assets/img/works/pxp/homepage.jpg"
 import productPage from "../../assets/img/works/pxp/product_page.jpg"
 // mobile
@@ -10,9 +9,12 @@ import homeMobile from "../../assets/img/works/pxp/homepage_mobile.png"
 import menuMobile from "../../assets/img/works/pxp/menu_mobile.png"
 import productMobile from "../../assets/img/works/pxp/product_mobile.png"
 import blogMobile from "../../assets/img/works/pxp/blog_mobile.png"
-import FullImage from "../shared/FullImage"
 
 const StyledPXP = styled.div`
+  padding: 20vh 20vw;
+  @media (max-width: 700px) {
+    padding: 10vh 5vw;
+  }
   video {
     width: 100%;
   }
@@ -23,27 +25,36 @@ const StyledPXP = styled.div`
       margin-bottom: 20px;
     }
   }
-  .chart {
-    .typography {
-      span.text-typo {
-        &.one {
-          font-family: "Montserrat";
-        }
-        &.two {
-          font-family: "Gotham";
-        }
+  /* responsive */
+  .responsive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @media (max-width: 769px) {
+      margin-bottom: 16px !important;
+    }
+    img, .video {
+      width: 24%;
+      height: 100%;
+      border-radius: 16px;
+      margin: 0;
+      video{
+        margin-bottom: 0;
+      }
+      @media (max-width: 1000px) {
+        width: 48%;
+        height: auto;
+      }
+      @media (max-width: 600px) {
+        width: 48%;
+        height: auto;
       }
     }
-    .colors {
-      .color {
-        &.one {
-          background-color: white;
-        }
-        &.two {
-          background-color: black;
-          color: white;
-        }
-      }
+    @media (max-width: 600px) {
+      justify-content: space-between;
     }
   }
 `
@@ -54,33 +65,18 @@ const PXP = () => {
   })
   return (
     <StyledPXP>
-      <div className='demi-spacer'></div>
 
       <div className="content">
         <img data-aos="fade-up" data-aos-duration="1000" src={homepage} alt='pxp' />
         <img data-aos="fade-up" data-aos-duration="1000" src={productPage} alt='pxp' />
       </div>
       
-      <div className='spacer'></div>
-      <FullImage src={pxpDesktop} alt='pxp-desktop' />
-      <div className="big-spacer"></div>
-
-      <div className="content">
-        <div className='headline text-regular'>responsive selection</div>
-        <div className='separator'></div>
-        <div data-aos="fade-up" data-aos-duration="1000" className='responsive'>
+      <div data-aos="fade-up" data-aos-duration="1000" className='responsive'>
           <img src={homeMobile} alt='responsive'></img>
           <img src={menuMobile} alt='responsive'></img>
           <img src={productMobile} alt='responsive'></img>
           <img src={blogMobile} alt='responsive'></img>
-        </div>
       </div>
-   
-      <div className="big-spacer"></div>
-      <h2 className='text-h2'>Thanks for watching</h2>
-      <div className="demis-spacer"></div>
-      <p className="text-description">Project made with love at Project X Paris</p>
-      <div className='big-spacer'></div>
     </StyledPXP>
   )
 }

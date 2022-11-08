@@ -61,6 +61,13 @@ import i6 from "./assets/img/archives/i6.png"
 
 let archivesData = [
   {
+    name: "apollo",
+    coverImg: apollo,
+    type: "UI Design",
+    description: "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
+    websiteLink: "https://www.cathydolle.com/works/bohinc",
+  },
+  {
     name: "Chrome 0.4",
     coverImg: i4,
     type: "IA",
@@ -72,13 +79,6 @@ let archivesData = [
     type: "print",
     description: "Elijah is a french photographer based in Paris. I designed and developed his portfolio trying to create an identity to feat with his content. There is a preview of the Homepage. Case study avalaible on the link below.",
     websiteLink: "https://www.cathydolle.com/works/elijah",
-  },
-  {
-    name: "apollo",
-    coverImg: apollo,
-    type: "UI Design",
-    description: "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
-    websiteLink: "https://www.cathydolle.com/works/bohinc",
   },
   {
     name: "planetaria",

@@ -6,11 +6,6 @@ import grissiniCover from "./assets/img/works/covers/grissini.jpg"
 import grissiniCoverSmall from "./assets/img/works/covers-small/grissini-min.jpg"
 import grissiniVisual1 from "./assets/img/works/grissini/visual1.jpg"
 
-// import PXP from "./components/projects/PXP"
-// import pxpCover from "./assets/img/works/covers/pxp.jpg"
-// import pxpCoverSmall from "./assets/img/works/covers-small/pxp-min.jpg"
-// import pxpVisual1 from "./assets/img/works/pxp/visual1.jpg"
-
 import Arcane from "./components/projects/Arcane"
 import arcaneCover from "./assets/img/works/covers/arcane.jpg"
 import arcaneCoverSmall from "./assets/img/works/covers-small/arcane-min.jpg"
@@ -237,21 +232,6 @@ let projectsData = [
     description:
       "For several months I had a desire to create a graphic charter and a universe around my personality. I finally succeeded! I let you discover me : Cathy Dolle",
   },
-  // {
-  //   name: "Project X",
-  //   path: "project-x-paris",
-  //   title: "French Streetwear",
-  //   coverImg: pxpCover,
-  //   coverImgSmall: pxpCoverSmall,
-  //   component: PXP,
-  //   date: "Jul. 2021",
-  //   role: "Designer, Web integrator",
-  //   techs: ["Adobe XD, Wordpress, Elementor"],
-  //   description:
-  //     "Project X Paris offers an avant-garde concept where hip hop, sports, streetwear, lifestyle and art meet. My mission in this project was to make a cast of their official website to facilitate the purchases to the customers.",
-  //   visual1: pxpVisual1,
-  //   websiteLink: "https://www.projectxparis.com/",
-  // },
   {
     name: "5 Sens",
     path: "sens",

@@ -12,9 +12,6 @@ import girlKit from "../../assets/img/works/chanel/girlKit.jpg"
 import getDressed from "../../assets/img/works/chanel/getDressed.jpg"
 import girlTalk from "../../assets/img/works/chanel/girlTalk.jpg"
 
-import product from "../../assets/img/works/chanel/product.jpg"
-import FullImage from "../shared/FullImage"
-
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -22,6 +19,10 @@ import "aos/dist/aos.css";
 
 
 const StyledChanel = styled.div`
+padding: 20vh 20vw;
+@media (max-width: 700px) {
+  padding: 10vh 5vw;
+}
 img, video{
   width: 100%;
   margin-bottom: 40px;
@@ -77,25 +78,10 @@ const Chanel = () => {
   })  
   return (
     <StyledChanel>
-
-      <div className="demi-spacer"></div>
       
-      <div className="content">
-        <div className='headline text-regular'>Moodboard</div>
-        <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={moodboard} alt="moodboard" />
-        <div className="demi-spacer"></div>
-        <div className='headline text-regular'>Room preview</div>
-        <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={room} alt="room" />
-      </div>
-      
-      <div className="demi-spacer"></div>
-
-      <div className="content">
-      <div className='headline text-regular'>views</div>
-        <div className='separator'></div>
-        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
+      <img data-aos="fade-up" data-aos-duration="1000" src={moodboard} alt="moodboard" />
+       <img data-aos="fade-up" data-aos-duration="1000" src={room} alt="room" />
+       <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
           <video loop muted autoplay playsinline>
             <source src="${homepage}" type="video/mp4">
           </video>`
@@ -111,17 +97,6 @@ const Chanel = () => {
         <img data-aos="fade-up" data-aos-duration="1000" src={girlTalk} alt="girlTalk" />
         <img data-aos="fade-up" data-aos-duration="1000" src={girlKit} alt="girlKit" />
         <img data-aos="fade-up" data-aos-duration="1000" src={getDressed} alt="getDressed" />
-      </div>
-      
-      <div className="spacer"></div>
-
-      <FullImage src={product} alt='card' />
-
-      <div className="big-spacer"></div>
-
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Thanks to <a href='https://www.instagram.com/markdearman 'target="_blank">Markdearman</a> for the hand animation, and to <a href='https://www.behance.net/cristina_laporta'target="_blank">Cristina</a> for the 3D decoration</p>
-      <div className="big-spacer"></div>
 
     </StyledChanel>
   )

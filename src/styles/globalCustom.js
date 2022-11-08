@@ -112,6 +112,12 @@ export default css`
     font-weight: normal;
     font-size: 10px;
     text-transform: uppercase;
+    &.tags{
+      padding: 10px 20px;
+      border: solid 1px ${({ theme }) => theme.colors.text.disabled};
+      border-radius: 32px;
+      font-size: 10px;
+    }
   }
 
   .text-spawn-anim {

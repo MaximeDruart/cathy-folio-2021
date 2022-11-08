@@ -18,7 +18,8 @@ import Random from "./components/pages/Random"
 import ProjectDetail from "./components/projects/ProjectDetail"
 import { AnimatePresence } from "framer-motion"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
-
+import PXP from './components/projects/PXP.jsx'
+import Chanel from './components/projects/Chanel.jsx'
 
 
 
@@ -52,6 +53,8 @@ const App = () => {
             <AnimatePresence exitBeforeEnter initial={true}>
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
+                <Route path='/pxp' component={PXP} />
+                <Route path='/chanel' component={Chanel} />
                 <Route path='/about' exact component={Home} />
                 <Route path='/reel' exact component={Reel} />
                 <Route path='/archives' exact component={Archives} />
