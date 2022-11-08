@@ -16,12 +16,20 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   top: 32px;
   z-index: 100;
-  pointer-events: none;
+  a{
+    color: ${({ theme }) => theme.colors.text.text};
+
+  }
   @media (max-width: 700px) {
     top: 20px;
   }
   nav{
     display: flex;
+    align-items: center;
+    .text-button{
+      margin-bottom: -1px;
+      color: ${({ theme }) => theme.colors.text.text};
+    }
   }
 
   .logo {
@@ -40,15 +48,10 @@ const StyledHeader = styled.div`
 const Header = () => {
   return (
     <StyledHeader>
-      <Link to='/' className='logo'>
-        <CathyLogoSVG />
-      </Link>
+      <Link to='/' className='text-button'>Cathy DOLLE</Link>
       <nav>
-        <div className="button">
-          <Link to='/about'>About</Link>
-          <div className="circle"></div>
-        </div>
-        <div className="button mail">
+        <Link className="text-button" to='/about'>ABOUT</Link>
+        <div className="mail">
           <a href="mailto:cathy.dolle@live.fr"><Mail/></a>
         </div>
       </nav>

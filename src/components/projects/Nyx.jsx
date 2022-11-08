@@ -3,11 +3,14 @@ import "aos/dist/aos.css";
 import React from "react"
 
 //video
-import full from "../../assets/img/works/nyx/full.avif"
+import full from "../../assets/img/works/nyx/full.jpg"
 import design from "../../assets/img/works/nyx/design.png"
 import girl from "../../assets/img/works/nyx/girl.mp4"
 import passion from "../../assets/img/works/nyx/passion.mp4"
 import nft from "../../assets/img/works/nyx/nft.mp4"
+import affiche from "../../assets/img/works/nyx/affiche.png"
+import makeup from "../../assets/img/works/nyx/makeup.jpg"
+
 
 // responsive
 import home from "../../assets/img/works/nyx/home.mp4"
@@ -39,6 +42,8 @@ const Nyx = () => {
         </video>`
         }}
         />
+        <img className="duo" data-aos="fade-up" data-aos-duration="1000" src={affiche} alt="img"/>
+        <img className="duo" data-aos="fade-up" data-aos-duration="1000" src={makeup} alt="img"/>
         <div className="responsive">
             <div data-aos="fade-up" data-aos-duration="1000" className="video"  dangerouslySetInnerHTML={{ __html: `
             <video loop muted autoplay playsinline>
@@ -52,8 +57,8 @@ const Nyx = () => {
             </video>`
             }}
             />
-            <img src={scan} alt="img"/>
-            <img src={trix1} alt="img"/>
+            <img  data-aos="fade-up" data-aos-duration="1000" src={scan} alt="img"/>
+            <img  data-aos="fade-up" data-aos-duration="1000" src={trix1} alt="img"/>
         </div>        
         <img data-aos="fade-up" data-aos-duration="1000" src={design} alt="maquettes" />
         <div className="duo" data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
@@ -75,14 +80,14 @@ const Nyx = () => {
             </video>`
             }}
             />
-            <img src={winx1} alt="img"/>            
+            <img src={winx1} data-aos="fade-up" data-aos-duration="1000" alt="img"/>            
             <div data-aos="fade-up" data-aos-duration="1000"className="video"     dangerouslySetInnerHTML={{ __html: `
             <video loop muted autoplay playsinline>
                 <source src="${exp}" type="video/mp4">
             </video>`
             }}
             />
-            <img src={trix2} alt="img"/>
+            <img src={trix2} data-aos="fade-up" data-aos-duration="1000" alt="img"/>
         </div>          
     </div>
     <div className="big-spacer"/>

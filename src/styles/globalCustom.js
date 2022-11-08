@@ -147,6 +147,7 @@ export default css`
     margin-bottom: 48px;
     width: 100%;
     height: 1px;
+    transition: background-color 0.6s;
     background-color: ${({ theme }) => theme.colors.text.disabled2};
 
     @media (max-width: 769px) {
@@ -162,6 +163,16 @@ export default css`
       margin-top: 48px;
       @media (max-width: 769px) {
         margin-top: 24px;
+      }
+    }
+  }
+  .mail{
+    margin-left: 26px;
+    svg{
+      height: 10px;
+      width: 20px;
+      path, rect{
+        stroke: ${({ theme }) => theme.colors.text.standard};
       }
     }
   }
@@ -187,19 +198,6 @@ export default css`
       background-color: ${({ theme }) => theme.colors.text.disabled2};
       a{
         color: ${({ theme }) => theme.colors.text.standard};
-      }
-    }
-    &.mail{
-      margin-left: 16px;
-      a{
-        padding: 14px;
-      }
-      svg{
-        height: 10px;
-        width: auto;
-        path, rect{
-          stroke: ${({ theme }) => theme.colors.text.standard};;
-        }
       }
     }
     &.big{

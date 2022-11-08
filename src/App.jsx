@@ -10,6 +10,7 @@ import Header from "./components/shared/Header"
 import MouseFollower from "./components/shared/MouseFollower"
 
 import Home from "./components/pages/Home"
+import Archives from "./components/pages/Archives"
 import Reel from "./components/pages/Reel"
 import Capsule from "./components/pages/Capsule"
 import Works from "./components/pages/Works"
@@ -53,6 +54,7 @@ const App = () => {
                 {projectRoutes}
                 <Route path='/about' exact component={Home} />
                 <Route path='/reel' exact component={Reel} />
+                <Route path='/archives' exact component={Archives} />
                 <Route path='/capsule' exact component={Capsule} />
                 <Route path='/random' exact component={Random} />
                 <Route path='/' component={Works} />

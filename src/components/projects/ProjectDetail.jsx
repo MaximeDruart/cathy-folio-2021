@@ -1,4 +1,3 @@
-import FullImage from "../shared/FullImage"
 import { motion, useSpring, useViewportScroll } from "framer-motion"
 import React, { useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
@@ -12,7 +11,7 @@ const StyledProjectDetail = styled.div`
   transition: background-color 0.6s;
   background:  ${({ theme }) => theme.colors.background};  
   img, video{
-    border-radius: 18px;
+    border-radius: 16px;
     width: 100%;
     margin-bottom: 40px;
     @media (max-width: 769px) {
@@ -190,6 +189,7 @@ const StyledProjectDetail = styled.div`
     img, .video {
       width: 24%;
       height: 100%;
+      border-radius: 16px;
       margin: 0;
       video{
         margin-bottom: 0;

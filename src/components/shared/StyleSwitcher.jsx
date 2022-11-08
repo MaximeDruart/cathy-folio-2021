@@ -114,8 +114,8 @@ const StyleSwitcher = () => {
       </Link>
       <nav>
         <NavLink exact to='/'>Works</NavLink>
-        <NavLink  to="/random">Archives</NavLink>
-        <NavLink  to="/capsule">Capsule</NavLink>
+        <NavLink  to="/random">Random</NavLink>
+        <NavLink  to="/archives">Archives</NavLink>
       </nav>
       <div className="style">
         <div className="style">
