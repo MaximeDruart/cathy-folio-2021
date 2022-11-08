@@ -65,12 +65,8 @@ const PXP = () => {
   })
   return (
     <StyledPXP>
-
-      <div className="content">
-        <img data-aos="fade-up" data-aos-duration="1000" src={homepage} alt='pxp' />
-        <img data-aos="fade-up" data-aos-duration="1000" src={productPage} alt='pxp' />
-      </div>
-      
+      <img data-aos="fade-up" data-aos-duration="1000" src={homepage} alt='pxp' />
+      <img data-aos="fade-up" data-aos-duration="1000" src={productPage} alt='pxp' />
       <div data-aos="fade-up" data-aos-duration="1000" className='responsive'>
           <img src={homeMobile} alt='responsive'></img>
           <img src={menuMobile} alt='responsive'></img>
