@@ -175,7 +175,8 @@ export default css`
   .mail{
     margin-left: 26px;
     svg{
-      height: 10px;
+      margin-top: 3px ;
+      height: 12px;
       width: 20px;
       path, rect{
         stroke: ${({ theme }) => theme.colors.text.standard};

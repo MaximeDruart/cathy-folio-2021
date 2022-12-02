@@ -18,6 +18,7 @@ const StyledHeader = styled.div`
   z-index: 100;
   a{
     color: ${({ theme }) => theme.colors.text.text};
+    font-size: 12px;
 
   }
   @media (max-width: 700px) {

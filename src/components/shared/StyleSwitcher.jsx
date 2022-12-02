@@ -88,7 +88,7 @@ const StyledStyleSwitcher = styled.div`
     }
     a{
         margin: 0 0px;
-        padding: 10px 20px;
+        padding: 12px 26px;
         background-color: rgba(255, 255, 255, 0);
         border-radius: 90px;
         color: white;
