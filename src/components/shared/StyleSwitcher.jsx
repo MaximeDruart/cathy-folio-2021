@@ -92,6 +92,9 @@ const StyledStyleSwitcher = styled.div`
         background-color: rgba(255, 255, 255, 0);
         border-radius: 90px;
         color: white;
+        @media (max-width: 800px) {
+          padding: 10px 20px;
+        }
         &.active{
           background-color: rgba(120, 120, 120, 0.5);
         }
