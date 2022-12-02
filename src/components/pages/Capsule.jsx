@@ -218,22 +218,6 @@ const Room = () => {
       setShowPainting(false)
       setShowBook(false)
     }
-    // if (e.target.id === '19b2abd1-eb9e-474b-a758-e6ae4f774942') {
-    //   setShowBb(true)
-    //   setShow(true)
-    //   setShowDesk(false)
-    //   setShowPlayer(false)
-    //   setShowPainting(false)
-    //   setShowBook(false)
-    // }
-    // if (e.target.id === '24833410-3060-419e-bc66-1eb019c26d23') {
-    //   setShowPlayer(true)
-    //   setShow(true)
-    //   setShowDesk(false)
-    //   setShowBb(false)
-    //   setShowPainting(false)
-    //   setShowBook(false)
-    // }
   }
 
   return (

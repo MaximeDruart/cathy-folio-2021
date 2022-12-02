@@ -11,11 +11,12 @@ const StyledProjectDetail = styled.div`
   transition: background-color 0.6s;
   background:  ${({ theme }) => theme.colors.background};  
   img, video{
-    border-radius: 16px;
+    border-radius: 4px;
     width: 100%;
     margin-bottom: 40px;
     @media (max-width: 769px) {
       margin-bottom: 16px !important;
+      border-radius: 8px;
     }
   }
   .hero {

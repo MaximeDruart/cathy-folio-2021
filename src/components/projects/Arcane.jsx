@@ -20,7 +20,6 @@ const Arcane = () => {
   return (
     <section>
       <div className="demi-spacer"></div>
-
       <div className="content">
         <img data-aos="fade-up" data-aos-duration="1000" src={p1} alt="arcane" />
         <img data-aos="fade-up" data-aos-duration="1000" src={jinx} alt="arcane" />

@@ -2,6 +2,9 @@ import React from 'react';
 import PageTemplate from "./PageTemplate"
 import styled from "styled-components"
 import ArchivesData from '../shared/ArchivesData';
+// import { gsap } from "gsap";
+import { useLayoutEffect } from 'react';
+import { TweenMax, Expo } from 'gsap/gsap-core';
 
 
 const StyledArchives = styled.div`
@@ -10,22 +13,28 @@ const StyledArchives = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 14vh 4vw;
-  p.wip{
-    margin-top: 8px;
+  h1{
     margin-bottom: 32px;
-    opacity: 0.4;
   }
 `
 
 function Archives(props) {
+    useLayoutEffect(() => {
+      TweenMax.staggerFrom(".archivesContainer > div", 1.5, {
+        opacity: 0,
+        ease: Expo.easeInOut,
+      }, 0.2);
+    }, []);
     return (
         <PageTemplate hasFooter={false} initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
             <StyledArchives>
                 <h1 className="text-h2">Archives (03)</h1>
-                <p className="text-button wip">Content & animation coming soon...</p>
-                <ArchivesData name="Capsule (perso)" tag="3D" date="02.10.2021" to="/capsule"/>
-                <ArchivesData name="Project X Paris" tag="Design / Dev" date="24.10.2020" to="/pxp"/>
-                <ArchivesData name="Chanel" tag="Experience / UI" date="08.12.2021" to="/chanel"/>
+                <div className="archivesContainer">
+                  {/* <ArchivesData name="Fuelband" tag="Generative Art" date="08.11.2022" to="/fuelband"/> */}
+                  <ArchivesData name="Capsule Room" tag="3D" date="02.10.2021" to="/capsule"/>
+                  <ArchivesData name="Project X Paris" tag="Design / Dev" date="24.10.2020" to="/pxp"/>
+                  <ArchivesData name="Chanel" tag="Experience / UI" date="03.12.2021" to="/chanel"/>
+                </div>
             </StyledArchives>
         </PageTemplate>
     );
