@@ -32,8 +32,8 @@ function Archives(props) {
                 <div className="archivesContainer">
                   {/* <ArchivesData name="Fuelband" tag="Generative Art" date="08.11.2022" to="/fuelband"/> */}
                   <ArchivesData name="Capsule Room" tag="3D" date="02.10.2021" to="/capsule"/>
-                  <ArchivesData name="Project X Paris" tag="Design / Dev" date="24.10.2020" to="/pxp"/>
                   <ArchivesData name="Chanel" tag="Experience / UI" date="03.12.2021" to="/chanel"/>
+                  <ArchivesData name="Project X Paris" tag="Design / Dev" date="24.10.2020" to="/pxp"/>
                 </div>
             </StyledArchives>
         </PageTemplate>

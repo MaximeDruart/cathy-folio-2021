@@ -9,12 +9,10 @@ const StyledTemplate = styled.div`
         padding: 10vh 5vw;
     } 
     img, video{
-    border-radius: 16px;
     width: 100%;
     margin-bottom: 40px;
     @media (max-width: 769px) {
         margin-bottom: 16px !important;
-        border-radius: 8px;
     }
 
     /* Responsive */

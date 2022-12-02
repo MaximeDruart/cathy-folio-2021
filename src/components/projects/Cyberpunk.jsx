@@ -1,7 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react"
-import styled from "styled-components"
 import moodboard from "../../assets/img/works/cyberpunk/moodboard.jpg"
 import lucy from "../../assets/img/works/cyberpunk/lucy.png"
 import david from "../../assets/img/works/cyberpunk/david.png"
