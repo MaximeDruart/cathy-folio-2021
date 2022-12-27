@@ -251,6 +251,39 @@ export default css`
   }
 
   /* SECTIONS */
+  /* responsive */
+  .responsive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @media (max-width: 769px) {
+      margin-bottom: 16px !important;
+    }
+    img, .video {
+      width: 24%;
+      height: 100%;
+      border-radius: 16px;
+      margin: 0;
+      video{
+        margin-bottom: 0;
+        border-radius: 16px;
+      }
+      @media (max-width: 1000px) {
+        width: 48%;
+        height: auto;
+      }
+      @media (max-width: 600px) {
+        width: 48%;
+        height: auto;
+      }
+    }
+    @media (max-width: 600px) {
+      justify-content: space-between;
+    }
+  }
 `
 
 export const marginPage = css`

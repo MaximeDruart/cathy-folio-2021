@@ -9,7 +9,6 @@ import girl from "../../assets/img/works/nyx/girl.mp4"
 import passion from "../../assets/img/works/nyx/passion.mp4"
 import nft from "../../assets/img/works/nyx/nft.mp4"
 import affiche from "../../assets/img/works/nyx/affiche.png"
-import makeup from "../../assets/img/works/nyx/makeup.jpg"
 
 
 // responsive
@@ -23,8 +22,7 @@ import trix1 from "../../assets/img/works/nyx/trix1.png"
 import trix2 from "../../assets/img/works/nyx/trix2.png"
 
 
-
-import FullImage from "../shared/FullImage"
+import Template from "./Template";
 
 
 const Nyx = () => {
@@ -33,18 +31,15 @@ const Nyx = () => {
   })
   
   return (
-    <section>
-      <div className="demi-spacer"></div>
-      <div className="content img_container">
-        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
+    <Template>
+      <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
         <video class="full" loop muted autoplay playsinline>
             <source src="${girl}" type="video/mp4">
         </video>`
         }}
         />
-        <img className="duo" data-aos="fade-up" data-aos-duration="1000" src={affiche} alt="img"/>
-        <img className="duo" data-aos="fade-up" data-aos-duration="1000" src={makeup} alt="img"/>
-        <div className="responsive">
+      <img className="duo" data-aos="fade-up" data-aos-duration="1000" src={affiche} alt="img"/>
+      <div className="responsive">
             <div data-aos="fade-up" data-aos-duration="1000" className="video"  dangerouslySetInnerHTML={{ __html: `
             <video loop muted autoplay playsinline>
                 <source src="${home}" type="video/mp4">
@@ -59,21 +54,21 @@ const Nyx = () => {
             />
             <img  data-aos="fade-up" data-aos-duration="1000" src={scan} alt="img"/>
             <img  data-aos="fade-up" data-aos-duration="1000" src={trix1} alt="img"/>
-        </div>        
-        <img data-aos="fade-up" data-aos-duration="1000" src={design} alt="maquettes" />
-        <div className="duo" data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
+      </div>        
+      <img data-aos="fade-up" data-aos-duration="1000" src={design} alt="maquettes" />
+      <div className="duo" data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
         <video class="full" loop muted autoplay playsinline>
             <source src="${passion}" type="video/mp4">
         </video>`
-        }}
-        />
-        <div className="duo" data-aos="fade-up" data-aos-duration="1000"dangerouslySetInnerHTML={{ __html: `
+      }}
+      />
+      <div className="duo" data-aos="fade-up" data-aos-duration="1000"dangerouslySetInnerHTML={{ __html: `
         <video class="full" loop muted autoplay playsinline>
             <source src="${nft}" type="video/mp4">
         </video>`
-        }}
-        />
-        <div className="responsive">
+      }}
+      />  
+    <div className="responsive">
             <div data-aos="fade-up" data-aos-duration="1000" className="video"  dangerouslySetInnerHTML={{ __html: `
             <video loop muted autoplay playsinline>
                 <source src="${bloom}" type="video/mp4">
@@ -81,25 +76,16 @@ const Nyx = () => {
             }}
             />
             <img src={winx1} data-aos="fade-up" data-aos-duration="1000" alt="img"/>            
-            <div data-aos="fade-up" data-aos-duration="1000"className="video"     dangerouslySetInnerHTML={{ __html: `
+            <div data-aos="fade-up" data-aos-duration="1000" className="video"     dangerouslySetInnerHTML={{ __html: `
             <video loop muted autoplay playsinline>
                 <source src="${exp}" type="video/mp4">
             </video>`
             }}
             />
             <img src={trix2} data-aos="fade-up" data-aos-duration="1000" alt="img"/>
-        </div>          
-    </div>
-    <div className="big-spacer"/>
+    </div>  
 
-    <FullImage src={full} alt='prototype' />
-    
-    <div className="spacer"></div>
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made with love</p>
-      <div className="big-spacer"></div>
-
-    </section>
+    </Template>
   )
 }
 

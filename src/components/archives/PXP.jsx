@@ -18,12 +18,12 @@ const PXP = () => {
     <Template>
       <img data-aos="fade-up" data-aos-duration="1000" src={homepage} alt='pxp' />
       <img data-aos="fade-up" data-aos-duration="1000" src={productPage} alt='pxp' />
-      {/* <div data-aos="fade-up" data-aos-duration="1000" className='responsive'>
+      <div data-aos="fade-up" data-aos-duration="1000" className='responsive'>
           <img src={homeMobile} alt='responsive'></img>
           <img src={menuMobile} alt='responsive'></img>
           <img src={productMobile} alt='responsive'></img>
           <img src={blogMobile} alt='responsive'></img>
-      </div> */}
+      </div>
     </Template>
   )
 }

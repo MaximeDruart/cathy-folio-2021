@@ -21,6 +21,9 @@ import StyleSwitcher from "./components/shared/StyleSwitcher"
 import PXP from './components/archives/PXP.jsx'
 import Chanel from './components/archives/Chanel.jsx'
 import Fuelband from './components/archives/Fuelband.jsx'
+import Nyx from './components/archives/Nyx.jsx'
+import Grissini from './components/archives/Grissini.jsx'
+
 
 
 
@@ -56,6 +59,8 @@ const App = () => {
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
                 <Route path='/Fuelband' component={Fuelband} />
+                <Route path='/Nyx' component={Nyx} />
+                <Route path='/Grissini' component={Grissini} />
                 <Route path='/pxp' component={PXP} />
                 <Route path='/chanel' component={Chanel} />
                 <Route path='/about' exact component={Home} />

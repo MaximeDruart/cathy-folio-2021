@@ -194,6 +194,7 @@ const StyledProjectDetail = styled.div`
       margin: 0;
       video{
         margin-bottom: 0;
+        border-radius: 16px;
       }
       @media (max-width: 1000px) {
         width: 48%;

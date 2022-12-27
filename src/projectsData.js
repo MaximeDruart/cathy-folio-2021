@@ -1,11 +1,6 @@
 /* eslint-disable no-dupe-keys */
 import { v4 as uuidv4 } from "uuid"
 
-import Grissini from "./components/projects/Grissini"
-import grissiniCover from "./assets/img/works/covers/grissini.jpg"
-import grissiniCoverSmall from "./assets/img/works/covers-small/grissini-min.jpg"
-import grissiniVisual1 from "./assets/img/works/grissini/visual1.jpg"
-
 import Arcane from "./components/projects/Arcane"
 import arcaneCover from "./assets/img/works/covers/arcane.jpg"
 import arcaneCoverSmall from "./assets/img/works/covers-small/arcane-min.jpg"
@@ -22,12 +17,6 @@ import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
 
-// import Shibuya from "./components/projects/Shibuya"
-// import shibuyaCover from "./assets/img/works/covers/shibuya.jpg"
-// import shibuyaCoverSmall from "./assets/img/works/covers-small/shibuya-min.jpg"
-// import shibuyaVisual1 from "./assets/img/works/shibuya/visual1.jpg"
-
-
 import Feels from "./components/projects/Feels"
 import feelsCover from "./assets/img/works/covers/feels.jpg"
 import feelsCoverSmall from "./assets/img/works/covers-small/feels-min.jpg"
@@ -37,11 +26,6 @@ import Branding from "./components/projects/Branding"
 import brandingCover from "./assets/img/works/covers/branding.jpg"
 import brandingCoverSmall from "./assets/img/works/covers-small/branding-min.jpg"
 import brandingVisual1 from "./assets/img/works/branding/visual1.jpg"
-
-// import Chanel from "./components/projects/Chanel"
-// import chanelCover from "./assets/img/works/covers/chanel.jpg"
-// import chanelCoverSmall from "./assets/img/works/covers-small/chanel-min.jpg"
-// import chanelVisual1 from "./assets/img/works/chanel/visual1.jpg"
 
 import Zhonglin from "./components/projects/Zhonglin"
 import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
@@ -68,11 +52,10 @@ import andoCover from "./assets/img/works/covers/ando.jpg"
 import andoCoverSmall from "./assets/img/works/covers-small/ando-min.jpg"
 import andoVisual1 from "./assets/img/works/ando/visual1.jpg"
 
-import nyx from "./components/projects/Nyx"
-import nyxCover from "./assets/img/works/covers/nyx.jpg"
-import nyxCoverSmall from "./assets/img/works/covers-small/nyx-min.jpg"
-import nyxVisual1 from "./assets/img/works/nyx/visual1.jpg"
-
+import Type from "./components/projects/Type"
+import typeCover from "./assets/img/works/covers/type.jpg"
+import typeCoverSmall from "./assets/img/works/covers-small/type-min.jpg"
+import typeVisual1 from "./assets/img/works/type/visual1.jpg"
 
 let projectsData = [
   {
@@ -88,6 +71,20 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop, Protopie"],
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },
+  {
+    name: "Type",
+    path: "Type",
+    title: "Type Department",
+    coverImg: typeCover,
+    coverImgSmall: typeCoverSmall,
+    visual1: typeVisual1,
+    component: Type,
+    date: "Dec. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop, Protopie"],
+    description:
+      "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
   },
   {
     name: "Ando",
@@ -116,20 +113,6 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop"],
     description:
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-  },
-  {
-    name: "Nyx",
-    path: "nyx",
-    title: "Cosmetics Creativity",
-    coverImg: nyxCover,
-    coverImgSmall: nyxCoverSmall,
-    visual1: nyxVisual1,
-    component: nyx,
-    date: "oct. 2022",
-    role: "Designer, Developer",
-    techs: ["Vs Code, Figma, Spline"],
-    description:
-      "Creation of an immersive experience connected to a Nyx product to show customers how to use their entire makeup palette. A QR code will be placed in each box to access the experience via a webapp.",
   },
   {
     name: "Cyberpunk",
@@ -174,35 +157,6 @@ let projectsData = [
     techs: ["Figma, Photoshop"],
     description:
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
-  },
-  // {
-  //   name: "Chanel",
-  //   path: "chanel",
-  //   title: "An Experimental Story",
-  //   coverImg: chanelCover,
-  //   coverImgSmall: chanelCoverSmall,
-  //   component: Chanel,
-  //   date: "Feb. 2022",
-  //   role: "Designer",
-  //   techs: ["Adobe XD, Photoshop, Illustrator"],
-  //   description:
-  //     "L'eau tendre is a captivating perfume made of jasmine and rose essence. I designed an immersive website to highlight its qualities, its freshness, its sweetness as well as its accompanying range. ",
-  //   visual1: chanelVisual1,
-  // },
-  {
-    name: "Grissini",
-    path: "grissini",
-    title: "Classical Musicians",
-    coverImg: grissiniCover,
-    coverImgSmall: grissiniCoverSmall,
-    visual1: grissiniVisual1,
-    component: Grissini,
-    date: "Feb. 2021",
-    role: "Designer, Developer",
-    techs: ["HTML/CSS/JS"],
-    description:
-      "Grissini Project is 4 musicians specialized in music for video games, anime and movies. With a strong interest in video games and piano, they contacted me to design and develop their website.",
-    websiteLink: "https://grissiniproject.com/",
   },
   {
     name: "Elijah",
