@@ -17,10 +17,10 @@ const StyledSolo = styled.div`
 
 function Solo(props) {
     return (
-        <StyledSolo>
+        <StyledSolo className="pictures">
             {props.medias.map((media, key) => {
                 if (media.type === "image") {
-                    return <img key={key} src={media.src} alt="img"/>
+                    return <img data-aos="fade-up" data-aos-duration="1000" key={key} src={media.src} alt="img"/>
                 }
                 if (media.type === "video") {
                     return <Video key={key} src={media.src} />

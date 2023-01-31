@@ -2,7 +2,6 @@ import React from 'react';
 import PageTemplate from "./PageTemplate"
 import styled from "styled-components"
 import ArchivesData from '../shared/ArchivesData';
-// import { gsap } from "gsap";
 import { useLayoutEffect } from 'react';
 import { TweenMax, Expo } from 'gsap/gsap-core';
 

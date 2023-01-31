@@ -23,7 +23,7 @@ function Responsive(props) {
         <StyledResponsive data-aos="fade-up" data-aos-duration="1000" className="archives">
             {props.medias.map((media, key) => {
                 if (media.type === "image") {
-                    return <img key={key} src={media.src} alt="img"/>
+                    return <img data-aos="fade-up" data-aos-duration="1000" key={key} src={media.src} alt="img"/>
                 }
                 if (media.type === "video") {
                     return <Video key={key} src={media.src} />
