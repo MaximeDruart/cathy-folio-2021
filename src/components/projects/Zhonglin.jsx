@@ -1,9 +1,10 @@
 import FullImage from "../shared/FullImage"
-
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React from "react"
-import styled from "styled-components"
+
+// Modules
+import Headline from "../shared/modules/Headline"
+import Solo from "../shared/modules/Solo"
+import Thanks from "../shared/modules/Thanks"
 
 //video
 import preview from "../../assets/img/works/zhonglin/preview.jpg"
@@ -19,65 +20,62 @@ import z2 from "../../assets/img/works/zhonglin/z2.jpg"
 
 
 const Zhonglin = () => {
-  AOS.init({
-    duration : 2000
-  })
   return (
     <section>
-      <div className="demi-spacer"></div>
-      <div className="content">
-        <div className='headline text-regular'>Grids</div>
-        <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={grids} alt="grid" />
+      <div className="details">
+        <Headline name="Grids"/>
+          <Solo
+            medias={
+              [
+                {
+                  type: "image",
+                  src: grids
+                }
+              ]
+            }
+          />
+          <Headline name="Views"/>
+          <Solo
+            medias={
+              [
+                {
+                  type: "image",
+                  src: z2
+                }
+              ]
+            }
+          />
+           <Solo
+            medias={[
+                {
+                  type: "video",
+                  src: loader
+                },
+                {
+                  type: "video",
+                  src: menu
+                },
+                {
+                  type: "video",
+                  src: home
+                },
+                {
+                  type: "video",
+                  src: galerie
+                },
+                {
+                  type: "image",
+                  src: z1
+                },
+              ]}
+          />
       </div>
+    
+      <FullImage src={preview} alt='prototype' />
 
-      <div className="demi-spacer"></div>
-
-
-      <div className="content">
-        <div className='headline text-regular'>Views</div>
-        <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={z2} alt="grid" />
-        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
-        <video loop muted autoplay playsinline>
-            <source src="${loader}" type="video/mp4">
-        </video>`
-        }}
-        />
-
-        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
-          <video loop muted autoplay playsinline>
-              <source src="${menu}" type="video/mp4">
-          </video>`
-          }}
-        />
-
-        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
-          <video loop muted autoplay playsinline>
-              <source src="${home}" type="video/mp4">
-          </video>`
-          }}
-        />
-
-        <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
-          <video loop muted autoplay playsinline>
-              <source src="${galerie}" type="video/mp4">
-          </video>`
-          }}
-        />
-        <img data-aos="fade-up" data-aos-duration="1000" src={z1} alt="grid" />
-      </div>
-
-    <div className="spacer"></div>
-
-    <FullImage src={preview} alt='prototype' />
-
-    <div className="spacer"></div>
-
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made as ESD Paris.</p>
-      <div className="big-spacer"></div>
-
+      <Thanks
+        text="Made with love at ESD Paris"
+      />
     </section>
   )
 }

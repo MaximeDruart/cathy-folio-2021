@@ -1,8 +1,11 @@
-import AOS from "aos";
 import React from "react"
-import styled from "styled-components"
+
+// modules
+import Solo from "../shared/modules/Solo"
+import Responsive from "../shared/modules/Responsive"
+import Thanks from "../shared/modules/Thanks"
+
 import lights from "../../assets/img/works/bohinc/lights.jpg"
-import ReactPlayer from 'react-player'
 
 import peachHome from "../../assets/img/works/bohinc/peachHome.png"
 import peach2 from "../../assets/img/works/bohinc/peach2.png"
@@ -26,64 +29,83 @@ import mobile4 from "../../assets/img/works/bohinc/mobile4.png"
 
 
 const Bohinc = () => {
-  AOS.init({
-    duration : 2000
-  })
   return (
     <section>
-      <div className="demi-spacer"></div>
-      <div className="content">
-        <ReactPlayer 
-          data-aos="fade-up" data-aos-duration="1000"
-          url={collision} 
-          width='100%'
-          height='100%'
-          playing
-          muted={true}
-          loop
+      <div className="details">
+        <Solo
+          medias={[
+            {
+              type: "video",
+              src: collision
+            },
+            {
+              type: "image",
+              src: peachHome
+            },
+            {
+              type: "image",
+              src: peach1
+            },
+            {
+              type: "image",
+              src: peach2
+            },
+            {
+              type: "image",
+              src: pdp1
+            },
+            {
+              type: "image",
+              src: pdp2
+            },
+            {
+              type: "image",
+              src: pdp3
+            },
+            {
+              type: "video",
+              src: orbit
+            },
+            {
+              type: "image",
+              src: planeCover
+            },
+            {
+              type: "image",
+              src: plane1
+            }
+          ]}
         />
-        <img data-aos="fade-up" data-aos-duration="1000" src={peachHome} alt="bohinc" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={peach1} alt="bohinc" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={peach2} alt="bohinc" />
-        <div className="spacer"></div>
-     
-        <img data-aos="fade-up" data-aos-duration="1000" src={pdp1} alt="bohinc" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={pdp2} alt="bohinc" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={pdp3} alt="bohinc" />
-        <div className="spacer"></div>
-
-        <ReactPlayer 
-          data-aos="fade-up" data-aos-duration="1000" 
-          url={orbit} 
-          width='100%'
-          height='100%'
-          playing
-          muted={true}
-          loop
-        />
-        <img data-aos="fade-up" data-aos-duration="1000" src={planeCover} alt="bohinc" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={plane1} alt="bohinc" />
       </div>
 
-      <div className="spacer"></div>
       <FullImage src={lights} alt='preview' />
-      <div className="spacer"></div>
-
-      <div className="content">
-        <div className='headline text-regular'>responsive selection</div>
-        <div className='separator'></div>
-        <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
-          <img src={mobile1} alt="responsive"></img>
-          <img src={mobile2} alt="responsive"></img>
-          <img src={mobile3} alt="responsive"></img>
-          <img src={mobile4} alt="responsive"></img>
-        </div>
+      
+      <div className="details">
+        <Responsive
+          medias={[
+            {
+              type: "image",
+              src: mobile1
+            },
+            {
+              type: "image",
+              src: mobile2
+            },
+            {
+              type: "image",
+              src: mobile3
+            },
+            {
+              type: "image",
+              src: mobile4
+            }
+          ]}
+        />
       </div>
 
-      <div className="big-spacer"></div>
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made with fun and love</p>
-      <div className="big-spacer"></div>
+      <Thanks
+        text="Project made with fun and love"
+      />
     </section>
   )
 }

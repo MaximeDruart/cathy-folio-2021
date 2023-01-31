@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
-import CathyLogoSVG from "../../assets/icons/cathy.svg?component"
 
 import Mail from "../../assets/icons/mail.svg?component"
 import { horizontalPadding } from "../../styles/globalCustom"
@@ -14,7 +13,7 @@ const StyledHeader = styled.div`
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  top: 32px;
+  top: 46px;
   z-index: 100;
   a{
     color: ${({ theme }) => theme.colors.text.text};

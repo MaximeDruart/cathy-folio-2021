@@ -6,6 +6,10 @@ const StyledArchivesData = styled.div`
     width: 100%;
     margin-bottom: -0.5px;
     .separator{
+        width: 100%;
+        height: 1px;
+        transition: background-color 0.6s;
+        background-color: ${({ theme }) => theme.colors.text.disabled2};
         margin: 0;
     }
     .content{

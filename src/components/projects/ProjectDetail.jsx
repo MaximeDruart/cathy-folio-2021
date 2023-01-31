@@ -1,7 +1,6 @@
 import { motion, useSpring, useViewportScroll } from "framer-motion"
 import React, { useLayoutEffect, useRef, useState } from "react"
 import styled from "styled-components"
-import { marginPage } from "../../styles/globalCustom"
 import PageTemplate from "../pages/PageTemplate"
 import projectsData from "../../projectsData"
 import { Link, useHistory } from "react-router-dom"
@@ -10,15 +9,6 @@ import { Link, useHistory } from "react-router-dom"
 const StyledProjectDetail = styled.div`
   transition: background-color 0.6s;
   background:  ${({ theme }) => theme.colors.background};  
-  img, video{
-    border-radius: 0px;
-    width: 100%;
-    margin-bottom: 40px;
-    @media (max-width: 769px) {
-      margin-bottom: 16px !important;
-      border-radius: 0px;
-    }
-  }
   .hero {
     position: relative;
     width: 100vw;
@@ -105,11 +95,14 @@ const StyledProjectDetail = styled.div`
   img.border{
     border: solid 1px #ebebeb;
   }
+  video{
+    width: 100%;
+  }
   .project-description-mobile{
     display: none;
     @media (max-width: 600px) {
       display: block;
-      padding: 0 5vw;
+      padding: 10vh 5vw 0 5vw;
       .text-h2 {
         font-size: 32px;
       }
@@ -127,13 +120,15 @@ const StyledProjectDetail = styled.div`
     }
   }
   .details {
-    height: auto;
-    ${marginPage};
-  }
-  .content {
-    ${marginPage};
-    @media (max-width: 750px) {
-      padding: 0;
+    padding: 15vh 20vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media (max-width: 1000px) {
+        padding: 10vh 5vw;
+    }
+    @media (max-width: 600px) {
+        padding: 10vh 16px;
     }
   }
   img.little {
@@ -145,78 +140,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
     }
   }
-  .img_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    img.duo, div.duo {
-      width: 48%;
-      @media (max-width: 900px) {
-        width: 100% !important;
-      }
-    }
-    img.trio {
-      width: 160px;
-    }
-    img.quart{
-      width: 31%;
-      @media (max-width: 900px) {
-        width: 100% !important;
-      }
-    }
-    svg {
-      width: 30%;
-      margin: 40px 0;
-      @media (max-width: 900px) {
-        width: 100%;
-      }
-      @media (max-width: 600px) {
-        margin: 0px 0;
-      }
-    }
-  }
-  
-  /* responsive */
-  .responsive {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    @media (max-width: 769px) {
-      margin-bottom: 16px !important;
-    }
-    img, .video {
-      width: 24%;
-      height: 100%;
-      border-radius: 16px;
-      margin: 0;
-      video{
-        margin-bottom: 0;
-        border-radius: 16px;
-      }
-      @media (max-width: 1000px) {
-        width: 48%;
-        height: auto;
-      }
-      @media (max-width: 600px) {
-        width: 48%;
-        height: auto;
-      }
-    }
-    @media (max-width: 600px) {
-      justify-content: space-between;
-    }
-  }
-  /* Separator with text */
-  .headline {
-    width: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    opacity: 1;
-    font-size: 10px;
-  }
+
   .next-project {
     display: block;
     width: 100vw;
@@ -322,7 +246,6 @@ const ProjectDetail = ({ project }) => {
             <span className="text-small discover">(scroll down)</span>
           </div>
         </div>
-        <div className='spacer'></div>
         <div className="project-description-mobile">
               {/* intro */}
             <div className='infos'>
@@ -345,9 +268,7 @@ const ProjectDetail = ({ project }) => {
               </div>
             </div>
         </div>
-        <div className='details'>
-          <ProjectComponent />
-        </div>
+        <ProjectComponent />
         {pathToNextProject && (
           <Link className='next-project' to={pathToNextProject}>
             <img src={projectsData[project.index + 1].coverImg} />

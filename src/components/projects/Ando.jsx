@@ -1,6 +1,11 @@
 import AOS from "aos";
 import React from "react"
-import styled from "styled-components"
+
+// modules
+import Thanks from "../shared/modules/Thanks";
+import Trio from "../shared/modules/Trio";
+import Duo from "../shared/modules/Duo";
+
 import i1 from "../../assets/img/works/ando/i1.png"
 import i2 from "../../assets/img/works/ando/i2.png"
 import i3 from "../../assets/img/works/ando/i3.png"
@@ -17,43 +22,101 @@ import i13 from "../../assets/img/works/ando/i13.png"
 import i14 from "../../assets/img/works/ando/i14.png"
 import i15 from "../../assets/img/works/ando/i15.png"
 
-// import FullImage from "../shared/FullImage"
-
-const StyledAndo = styled.div`
-`
-
 const Ando = () => {
-  AOS.init({
-    duration : 2000
-  })  
   return (
-    <StyledAndo>
-      <div className="demi-spacer"></div>
-
-      <div className="img_container">
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i1} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i2} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i3} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i7} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i6} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i5} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i8} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i9} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i10} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i4} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i11} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i12} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="quart" src={i13} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i14} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={i15} alt="print" />
-
+    <section>
+      <div className="details">
+        <Trio
+          medias={[
+            {
+              type: "image",
+              src: i1,
+            },
+            {
+              type: "image",
+              src: i2,
+            },
+            {
+              type: "image",
+              src: i3
+            }
+          ]}
+        />        
+        <Duo
+          medias={[
+            {
+              type: "image",
+              src: i7,
+            },
+            {
+              type: "image",
+              src: i8,
+            }
+          ]}
+        />  
+        <Trio
+          medias={[
+            {
+              type: "image",
+              src: i5,
+            },
+            {
+              type: "image",
+              src: i6,
+            },
+            {
+              type: "image",
+              src: i9
+            }
+          ]}
+        />   
+        <Duo
+          medias={[
+            {
+              type: "image",
+              src: i10,
+            },
+            {
+              type: "image",
+              src: i4,
+            }
+          ]}
+        /> 
+        <Trio
+          medias={[
+            {
+              type: "image",
+              src: i11,
+            },
+            {
+              type: "image",
+              src: i12,
+            },
+            {
+              type: "image",
+              src: i13
+            }
+          ]}
+        />   
+        <Duo
+          medias={[
+            {
+              type: "image",
+              src: i14,
+            },
+            {
+              type: "image",
+              src: i15,
+            }
+          ]}
+        /> 
       </div>
-      <div className="big-spacer"></div>
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made with fun and love</p>
-      <div className="big-spacer"></div>
 
-    </StyledAndo>
+      <Thanks
+        text="Project made with love, thanks to Ando and the powerfull of AI"
+      />
+
+    </section>
   )
 }
 

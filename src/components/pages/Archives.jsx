@@ -31,11 +31,11 @@ function Archives(props) {
                 <h1 className="text-h2">Archives (05)</h1>
                 <div className="archivesContainer">
                   {/* <ArchivesData name="Fuelband" tag="Generative Art" date="08.11.2022" to="/fuelband"/> */}
-                  <ArchivesData name="Nyx" tag="Design / Dev" date="30.11.2022" to="/Nyx"/>
                   <ArchivesData name="Capsule Room" tag="3D" date="02.10.2021" to="/capsule"/>
+                  <ArchivesData name="Grissini" tag="Design / Dev" date="20.04.2019" to="/Grissini"/>
+                  <ArchivesData name="Nyx" tag="Design / Dev" date="30.11.2022" to="/Nyx"/>
                   <ArchivesData name="Chanel" tag="Experience / UI" date="03.12.2021" to="/chanel"/>
                   <ArchivesData name="Project X Paris" tag="Design / Dev" date="24.10.2020" to="/pxp"/>
-                  <ArchivesData name="Grissini" tag="Design / Dev" date="20.04.2019" to="/Grissini"/>
                 </div>
             </StyledArchives>
         </PageTemplate>

@@ -1,17 +1,17 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React from "react"
-import styled from "styled-components"
+
+// modules
+import Solo from "../shared/modules/Solo"
+import Duo from "../shared/modules/Duo"
+import Headline from "../shared/modules/Headline"
+import Thanks from "../shared/modules/Thanks"
+
 // Concept
 import concept from "../../assets/img/works/feels/concept.png"
 import moods from "../../assets/img/works/feels/moods.png"
 import moodboard from "../../assets/img/works/feels/moodboard.png"
 import guide from "../../assets/img/works/feels/guide.jpg"
 
-// FEEL
-import calm from "../../assets/img/works/feels/calm.svg"
-import casual from "../../assets/img/works/feels/casual.svg"
-import happy from "../../assets/img/works/feels/happy.svg"
 
 // COLO
 import b1 from "../../assets/img/works/feels/b1.png"
@@ -35,57 +35,77 @@ import bPrint from "../../assets/img/works/feels/bPrint.png"
 
 
 const Feels = () => {
-  AOS.init({
-    duration : 2000
-  })
-  
   return (
     <section>
-      <div className="demi-spacer"></div>
-
-      <div className="content">
-        <div className='headline text-regular'>Dark Moodboard</div>
-        <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={moodboard} alt="moodboard" />
-        <div className="spacer"></div>
-        <div className='headline text-regular'>The experience</div>
-        <div className='separator'></div>
+      <div className="details">
+        <Headline name="Dark Moodboard"/>
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: moodboard
+            }
+          ]}
+        />
         <video data-aos="fade-up" data-aos-duration="1000" poster={thumbnail} controls src={video1}></video>
-        <div className="spacer"></div>
-        <div className='headline text-regular'>Blue Palette</div>
-        <div className='separator'></div>
-        <div className="img_container">
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={b1} alt="img" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={b2} alt="img" />
-        </div>
-        <div className="demi-spacer"></div>
-        <div className='headline text-regular'>Flyers</div>
-        <div className='separator'></div>
-        <div className="img_container">
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={concept} alt="img" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={moods} alt="img" />
-        </div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={guide} alt="img" />
-      </div>
- 
 
-      <div className="spacer"></div>
+        <Headline name="Blue Palette"/>
+        <Duo
+          medias={[
+            {
+              type: "image",
+              src: b1
+            },
+            {
+              type: "image",
+              src: b2
+            }
+          ]}
+        />
+
+        <Headline name="Flyers"/>
+        <Duo
+          medias={[
+            {
+              type: "image",
+              src: concept
+            },
+            {
+              type: "image",
+              src: moods
+            }
+          ]}
+        />
+
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: guide
+            }
+          ]}
+        />
+      </div>
+
       <FullImage src={feelsPreview} alt='card' />
-      <div className="spacer"></div>
 
-      <div className="content">
-      <div className='headline text-regular'>Dark Print</div>
-        <div className='separator'></div>
-        <div className="img_container">
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={bPrint} alt="print" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={rPrint} alt="print" />
-        </div>
+      <div className="details">
+        <Headline name="Dark Prints"/>
+        <Duo
+          medias={[
+            {
+              type: "image",
+              src: bPrint
+            },
+            {
+              type: "image",
+              src: rPrint
+            }
+          ]}
+        />
       </div>
-   
-      <div className="big-spacer"></div>
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made with fun with an amazing team</p>
-      <div className="big-spacer"></div>
+      
+      <Thanks text="Project made with fun with the dream team"/>
 
     </section>
   )

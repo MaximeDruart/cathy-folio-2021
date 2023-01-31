@@ -1,5 +1,9 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
+// modules
+import Solo from "../shared/modules/Solo"
+import Thanks from "../shared/modules/Thanks"
+import Responsive from "../shared/modules/Responsive"
+import Headline from "../shared/modules/Headline"
+
 import React from "react"
 import moodboard from "../../assets/img/works/cyberpunk/moodboard.jpg"
 import lucy from "../../assets/img/works/cyberpunk/lucy.png"
@@ -17,41 +21,73 @@ import FullImage from "../shared/FullImage"
 
 
 const Cyberpunk = () => {
-  AOS.init({
-    duration : 2000
-  })
   return (
     <section>
-      <div className="demi-spacer"></div>
-      <div className="content">
-        <img  data-aos="fade-up" data-aos-duration="1000" src=  {pic3} alt="cyber" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src={lucy} alt="cyber" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src={david} alt="cyber" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src=  {pic2} alt="cyber" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src={maine} alt="cyber" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src={rebecca} alt="cyber" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src=  {pic1} alt="cyber" />
+      <div className="details">
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: pic3,
+            },
+            {
+              type: "image",
+              src: lucy,
+            },
+            {
+              type: "image",
+              src: david
+            },
+            {
+              type: "image",
+              src: pic2
+            },
+            {
+              type: "image",
+              src: maine
+            },
+            {
+              type: "image",
+              src: rebecca
+            },
+            {
+              type: "image",
+              src: pic1
+            }
+          ]}
+        />
       </div>
 
-      <div className="spacer"></div>
-      <FullImage src={moodboard} alt='preview' />
-      <div className="spacer"></div>
+      <FullImage src={moodboard} alt='prototype' />
 
-      <div className="content">
-        <div className='headline text-regular'>responsive selection</div>
-        <div className='separator'></div>
-        <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
-          <img  src={davidMobile} alt="responsive"></img>
-          <img  src={lucyMobile} alt="responsive"></img>
-          <img  src={rebeccaMobile} alt="responsive"></img>
-          <img  src={maineMobile} alt="responsive"></img>
-        </div>
+      <div className="details">
+        <Headline name="Responsive selection"/>
+        <Responsive
+          medias={[
+            {
+              type: "image",
+              src: davidMobile,
+            },
+            {
+              type: "image",
+              src: lucyMobile,
+            },
+            {
+              type: "image",
+              src: rebeccaMobile
+            },
+            {
+              type: "image",
+              src: maineMobile
+            }
+          ]}        
+        />
       </div>
 
-      <div className="big-spacer"></div>
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made with fun and love</p>
-      <div className="big-spacer"></div>
+      <Thanks
+        text="Project made with fun and love"
+      />    
+
     </section>
   )
 }

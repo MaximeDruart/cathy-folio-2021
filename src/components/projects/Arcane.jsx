@@ -1,6 +1,10 @@
 import AOS from "aos";
 import React from "react"
-import styled from "styled-components"
+
+// modules
+import Solo from "../shared/modules/Solo"
+import Thanks from "../shared/modules/Thanks"
+
 import jinx from "../../assets/img/works/arcane/jinx.jpg"
 import jinx2 from "../../assets/img/works/arcane/jinx2.jpg"
 import arcane from "../../assets/img/works/arcane/arcane.jpg"
@@ -19,24 +23,54 @@ const Arcane = () => {
   })  
   return (
     <section>
-      <div className="demi-spacer"></div>
-      <div className="content">
-        <img data-aos="fade-up" data-aos-duration="1000" src={p1} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={jinx} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={jinx2} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={p2} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={silco} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={silco2} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={p3} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={sisters} alt="arcane" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={vi} alt="arcane" />
+      <div className="details">
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: p1
+            },
+            {
+              type: "image",
+              src: jinx
+            },
+            {
+              type: "image",
+              src: jinx2
+            },
+            {
+              type: "image",
+              src: p2
+            },
+            {
+              type: "image",
+              src: silco
+            },
+            {
+              type: "image",
+              src: silco2
+            },
+            {
+              type: "image",
+              src: p3
+            },
+            {
+              type: "image",
+              src: sisters
+            },
+            {
+              type: "image",
+              src: vi
+            },
+          ]}
+        />
       </div>
-      <div className="spacer"></div>
+
       <FullImage src={arcane} alt='prototype' />
-      <div className="big-spacer"></div>
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made with fun and love</p>
-      <div className="big-spacer"></div>
+
+      <Thanks
+        text="Project made with fun and love"
+      />
 
     </section>
   )

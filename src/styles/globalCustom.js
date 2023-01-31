@@ -146,34 +146,8 @@ export default css`
     font-family: NeueMontrealRegular;
   }
 
-  // assets
-
-  .separator {
-    margin-top: 10px;
-    margin-bottom: 48px;
-    width: 100%;
-    height: 1px;
-    transition: background-color 0.6s;
-    background-color: ${({ theme }) => theme.colors.text.disabled2};
-
-    @media (max-width: 769px) {
-      margin-bottom: 24px;
-    }
-    &.text-top{
-      margin-bottom: 48px;
-      @media (max-width: 769px) {
-        margin-bottom: 24px;
-      }
-    }
-    &.text-bot{
-      margin-top: 48px;
-      @media (max-width: 769px) {
-        margin-top: 24px;
-      }
-    }
-  }
   .mail{
-    margin-left: 26px;
+    margin-left: 32px;
     svg{
       margin-top: 3px ;
       height: 12px;
@@ -247,41 +221,6 @@ export default css`
     }
     @media screen and (min-width: 1600px) {
       margin: 2vw;
-    }
-  }
-
-  /* SECTIONS */
-  /* responsive */
-  .responsive {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    @media (max-width: 769px) {
-      margin-bottom: 16px !important;
-    }
-    img, .video {
-      width: 24%;
-      height: 100%;
-      border-radius: 16px;
-      margin: 0;
-      video{
-        margin-bottom: 0;
-        border-radius: 16px;
-      }
-      @media (max-width: 1000px) {
-        width: 48%;
-        height: auto;
-      }
-      @media (max-width: 600px) {
-        width: 48%;
-        height: auto;
-      }
-    }
-    @media (max-width: 600px) {
-      justify-content: space-between;
     }
   }
 `

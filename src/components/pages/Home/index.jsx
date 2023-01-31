@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import Headline from "../../shared/modules/Headline"
 import Slider from "../../shared/Slider"
 import ArrowDownSVG from "../../../assets/icons/arrow_down.svg?component"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
@@ -228,10 +229,6 @@ const StyledHome = styled.div`
     }
   }
 
-  .full-img-container {
-    ${marginPage};
-  }
-
   .what-i-do {
     margin-top: 30vh;
     @media (max-width: 700px) {
@@ -299,8 +296,7 @@ const Home = () => {
 
         {/* what I do */}
         <div data-aos="fade-up" data-aos-duration="1000" className='home-section what-i-do'>
-          <div className='headline'>what i do</div>
-          <div className='separator'></div>
+          <Headline name="what I do"/>
           <div className='title text-h2-5'>
             I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design
             and brand identity. Currently in internship at <span className='saol'>AKQA</span> as UI/UX Designer
@@ -310,7 +306,7 @@ const Home = () => {
           </a>
         </div>
         <div className='home-section skills'>
-          <div className='headline'>skills</div>
+          <Headline name="skills"/>
           <div className='separator text-top'></div>
           <InfiniteText />
           <div className='separator text-bot'></div>
@@ -318,13 +314,13 @@ const Home = () => {
         </div>
         {/* projects */}
         <div className='home-section projects'>
-          <div className='headline'>projects</div>
+          <Headline name="projects"/>
           <div className='separator'></div>
           <HomeProjects />
         </div>
         {/* twitch */}
         <div className='home-section what-i-do'>
-          <div className='headline'>Streaming</div>
+          <Headline name="streaming"/>
           <div className='separator'></div>
           <div className='title text-h2-5'>
             I'm also a <span className='saol'>Twitch partner</span> and I stream my work on my Twitch channel
@@ -334,9 +330,7 @@ const Home = () => {
           </a>
         </div>
         <div className='demi-spacer'></div>
-        <div className='full-img-container'>
-          <FullImage src={twitch} alt='moodboard' />
-        </div>
+        <FullImage src={twitch} alt='moodboard' />
         <div className='spacer'></div>
       </StyledHome>
     </PageTemplate>

@@ -4,22 +4,20 @@ import styled from "styled-components"
 
 
 const Container = styled.div`
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  margin-bottom: auto !important;
-  margin-left: -10vw;
+  margin-bottom: auto;
   img {
-    border-radius: 0px !important ;
+    border-radius: 0px ;
     width: 100vw;
     height: 110vh;
     object-fit: cover;
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
   @media (max-width: 769px) {
     width: 100vw;
     height: 60vh;
-    margin-left: -20px;
   }
   @media (max-width: 480px) {
     width: 100vw;

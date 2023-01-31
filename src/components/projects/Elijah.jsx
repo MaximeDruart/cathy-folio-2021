@@ -1,7 +1,9 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React from "react"
-import styled from "styled-components"
+
+// modules
+import Solo from "../shared/modules/Solo"
+import Responsive from "../shared/modules/Responsive"
+import Thanks from "../shared/modules/Thanks"
 
 import moodboard from "../../assets/img/works/elijah/desktopVisual1.jpg"
 import homepage from "../../assets/img/works/elijah/homepage.jpg"
@@ -17,39 +19,56 @@ import FullImage from "../shared/FullImage"
 
 
 const Arcane = () => {
-  AOS.init({
-    duration : 2000
-  })
-  
+
   return (
     <section>
-      {/* start case */}
-      <div className="demi-spacer"></div>
-      <div className="content">
-        <img data-aos="fade-up" data-aos-duration="1000" src={homepage} alt="elijah" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={clients} alt="elijah" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={brand} alt="elijah" />
+      <div className="details">
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: homepage
+            },
+            {
+              type: "image",
+              src: clients
+            },
+            {
+              type: "image",
+              src: brand
+            }
+          ]}
+        />
       </div>
       
-      <div className="spacer"></div>
       <FullImage src={moodboard} alt='preview' />
-      <div className="spacer"></div>
 
-      <div className="content">
-        <div className='headline text-regular'>responsive selection</div>
-        <div className='separator'></div>
-        <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
-          <img src={homepageMobile} alt="responsive" />
-          <img src={menuMobile} alt="responsive" />
-          <img src={clientsMobile} alt="responsive" />
-          <img src={friendsMobile} alt="responsive" />
-        </div>
+      <div className="details">
+        <Responsive
+          medias={[
+            {
+              type: "image",
+              src: homepageMobile
+            },
+            {
+              type: "image",
+              src: menuMobile
+            },
+            {
+              type: "image",
+              src: clientsMobile
+            },
+            {
+              type: "image",
+              src: friendsMobile
+            }
+          ]}
+        />
       </div>
      
-      <div className="big-spacer"></div>
-      <h2 className='text-h2'>Thanks for scrolling</h2>
-      <p className="text-description">Project made with love for Elijah</p>
-      <div className="big-spacer"></div>
+      <Thanks
+        text="Content made with love for Elijah <3"
+      />
     </section>
   )
 }

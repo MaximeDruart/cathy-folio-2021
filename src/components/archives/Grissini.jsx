@@ -1,6 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react"
+import Responsive from "../shared/modules/Responsive";
 import Template from "./Template";
 import homepage from "../../assets/img/works/grissini/homepage.jpg"
 import contact from "../../assets/img/works/grissini/contact.jpg"
@@ -10,6 +11,8 @@ import menuMobile from "../../assets/img/works/grissini/menu_mobile.jpg"
 import shopMobile from "../../assets/img/works/grissini/shop_mobile.jpg"
 import contactMobile from "../../assets/img/works/grissini/contact_mobile.jpg"
 
+import Solo from "../shared/modules/Solo";
+
 
 const Grissini = () => {
   AOS.init({
@@ -17,22 +20,42 @@ const Grissini = () => {
   })
   return (
     <Template>
-      <div className="content">
-        <img  data-aos="fade-up" data-aos-duration="1000" src={homepage} alt="pxp" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src={contact} alt="pxp" />
-        <img  data-aos="fade-up" data-aos-duration="1000" src={about} alt="pxp" />
-      </div>
-
-      <div className="content">
-        <div className='headline text-regular'>responsive selection</div>
-        <div className='separator'></div>
-        <div data-aos="fade-up" data-aos-duration="1000" className="responsive">
-          <img  src={homeMobile} alt="responsive"></img>
-          <img  src={menuMobile} alt="responsive"></img>
-          <img  src={shopMobile} alt="responsive"></img>
-          <img  src={contactMobile} alt="responsive"></img>
-        </div>
-      </div>
+      <Solo
+          medias={[
+            {
+              type: "image",
+              src: homepage
+            },
+            {
+              type: "image",
+              src: contact
+            },
+            {
+              type: "image",
+              src: about
+            }
+          ]}
+      />
+      <Responsive
+          medias={[
+            {
+              type: "image",
+              src: homeMobile
+            },
+            {
+              type: "image",
+              src: menuMobile
+            },
+            {
+              type: "image",
+              src: shopMobile
+            },
+            {
+              type: "image",
+              src: contactMobile
+            }
+          ]}
+      />
     </Template>
   )
 }

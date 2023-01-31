@@ -1,7 +1,12 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React from "react"
 import styled from "styled-components"
+
+// modules
+import Solo from "../shared/modules/Solo"
+import Duo from "../shared/modules/Duo"
+import Headline from "../shared/modules/Headline"
+import Thanks from "../shared/modules/Thanks"
+
 // Concept
 import resumeVerso from "../../assets/img/works/branding/resumeVerso.jpg"
 import resumeRecto from "../../assets/img/works/branding/resumeRecto.jpg"
@@ -14,9 +19,9 @@ import cardVerso from "../../assets/img/works/branding/cardVerso.jpg"
 
 import FullImage from "../shared/FullImage"
 
-import Cathy1 from "../../assets/icons/cathy1.svg?component"
-import Cathy2 from "../../assets/icons/cathy2.svg?component"
-import Cathy3 from "../../assets/icons/cathy3.svg?component"
+// import Cathy1 from "../../assets/icons/cathy1.svg?component"
+// import Cathy2 from "../../assets/icons/cathy2.svg?component"
+// import Cathy3 from "../../assets/icons/cathy3.svg?component"
 
 
 
@@ -42,14 +47,45 @@ svg:nth-child(3){
 `
 
 const Branding = () => {
-  AOS.init({
-    duration : 2000
-  })
   return (
     <StyledBranding>
-      <div className="demi-spacer"></div>
-      
-      <div className="content">
+      <div className="details">
+        <Headline name="Resume"/>
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: resumeRecto
+            },
+            {
+              type: "image",
+              src: resumeVerso
+            }
+          ]}
+        />
+        <Headline name="Business Card"/>
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: businessCard
+            }
+          ]}
+        />
+        <Duo
+          medias={[
+            {
+              type: "image",
+              src: cardRecto
+            },
+            {
+              type: "image",
+              src: cardVerso
+            }
+          ]}
+        />
+      </div>
+      {/* <div className="content">
         <div className='headline text-regular'>logo maker</div>
         <div className='separator'></div>
         <div data-aos="fade-up" data-aos-duration="1000" className="img_container">
@@ -57,41 +93,12 @@ const Branding = () => {
           <Cathy2></Cathy2>
           <Cathy3></Cathy3>
         </div>
-      </div>
+      </div> */}
      
-      <div className="demi-spacer"></div>
-
-      <div className="content">
-        <div className='headline text-regular'>resume</div>
-        <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={resumeRecto} alt="resume" />
-        <img data-aos="fade-up" data-aos-duration="1000" src={resumeVerso} alt="resume" />
-      </div>
-      
-
-      <div className="demi-spacer"></div>
-
-      <div className="content">
-        <div className='headline text-regular'>Business Card</div>
-        <div className='separator'></div>
-        <img data-aos="fade-up" data-aos-duration="1000" src={businessCard} alt="resume" />
-        <div className="img_container">
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={cardRecto} alt="calm" />
-          <img data-aos="fade-up" data-aos-duration="1000" className="duo" src={cardVerso} alt="casual" />
-        </div>
-      </div>
-    
-
-      <div className="spacer"></div>
       <FullImage src={envelop} alt='envelop' />
-      <div className="big-spacer"></div>
 
-      <h2 className='text-h2'>Thanks for watching</h2>
-      <div className="demis-spacer"></div>
-      <p className="text-description">Do not hesitate to contact me for any project :3</p>
-
-      <div className="big-spacer"></div>
-
+      <Thanks text="Personal branding made with passion and love"/>
+  
     </StyledBranding>
   )
 }

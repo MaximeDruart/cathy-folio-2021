@@ -1,9 +1,11 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import React from "react"
+import Responsive from "../shared/modules/Responsive";
+import Duo from "../shared/modules/Duo";
+import Solo from "../shared/modules/Solo";
 
 //video
-import full from "../../assets/img/works/nyx/full.jpg"
 import design from "../../assets/img/works/nyx/design.png"
 import girl from "../../assets/img/works/nyx/girl.mp4"
 import passion from "../../assets/img/works/nyx/passion.mp4"
@@ -32,59 +34,78 @@ const Nyx = () => {
   
   return (
     <Template>
-      <div data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
-        <video class="full" loop muted autoplay playsinline>
-            <source src="${girl}" type="video/mp4">
-        </video>`
-        }}
-        />
-      <img className="duo" data-aos="fade-up" data-aos-duration="1000" src={affiche} alt="img"/>
-      <div className="responsive">
-            <div data-aos="fade-up" data-aos-duration="1000" className="video"  dangerouslySetInnerHTML={{ __html: `
-            <video loop muted autoplay playsinline>
-                <source src="${home}" type="video/mp4">
-            </video>`
-            }}
-            />
-            <div data-aos="fade-up" data-aos-duration="1000"className="video"     dangerouslySetInnerHTML={{ __html: `
-            <video loop muted autoplay playsinline>
-                <source src="${intro}" type="video/mp4">
-            </video>`
-            }}
-            />
-            <img  data-aos="fade-up" data-aos-duration="1000" src={scan} alt="img"/>
-            <img  data-aos="fade-up" data-aos-duration="1000" src={trix1} alt="img"/>
-      </div>        
-      <img data-aos="fade-up" data-aos-duration="1000" src={design} alt="maquettes" />
-      <div className="duo" data-aos="fade-up" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: `
-        <video class="full" loop muted autoplay playsinline>
-            <source src="${passion}" type="video/mp4">
-        </video>`
-      }}
+      <Duo
+          medias={[
+            {
+              type: "video",
+              src: girl
+            },
+            {
+              type: "image",
+              src: affiche
+            }
+          ]}
       />
-      <div className="duo" data-aos="fade-up" data-aos-duration="1000"dangerouslySetInnerHTML={{ __html: `
-        <video class="full" loop muted autoplay playsinline>
-            <source src="${nft}" type="video/mp4">
-        </video>`
-      }}
-      />  
-    <div className="responsive">
-            <div data-aos="fade-up" data-aos-duration="1000" className="video"  dangerouslySetInnerHTML={{ __html: `
-            <video loop muted autoplay playsinline>
-                <source src="${bloom}" type="video/mp4">
-            </video>`
-            }}
-            />
-            <img src={winx1} data-aos="fade-up" data-aos-duration="1000" alt="img"/>            
-            <div data-aos="fade-up" data-aos-duration="1000" className="video"     dangerouslySetInnerHTML={{ __html: `
-            <video loop muted autoplay playsinline>
-                <source src="${exp}" type="video/mp4">
-            </video>`
-            }}
-            />
-            <img src={trix2} data-aos="fade-up" data-aos-duration="1000" alt="img"/>
-    </div>  
-
+      <Responsive
+          medias={[
+            {
+              type: "video",
+              src: home
+            },
+            {
+              type: "video",
+              src: intro
+            },
+            {
+              type: "image",
+              src: scan
+            },
+            {
+              type: "image",
+              src: trix1
+            }
+          ]}
+      />
+       <Solo
+          medias={[
+            {
+              type: "image",
+              src: design
+            }
+          ]}
+      />
+      <Duo
+          medias={[
+            {
+              type: "video",
+              src: passion
+            },
+            {
+              type: "image",
+              src: nft
+            }
+          ]}
+      />
+      <Responsive
+          medias={[
+            {
+              type: "video",
+              src: bloom
+            },
+            {
+              type: "video",
+              src: winx1
+            },
+            {
+              type: "image",
+              src: exp
+            },
+            {
+              type: "image",
+              src: trix2
+            }
+          ]}
+      />
     </Template>
   )
 }

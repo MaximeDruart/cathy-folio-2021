@@ -6,9 +6,9 @@ import projectsData from "../../../projectsData"
 import HomeProjectDetail from "./HomeProjectDetail"
 
 const Container = styled.div`
-*{
-  font-family: NeueMontrealRegular;
-}
+  *{
+    font-family: NeueMontrealRegular;
+  }
   .content{
     margin-bottom: 30px;
     @media (max-width: 769px) {
