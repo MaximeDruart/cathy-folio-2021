@@ -6,12 +6,12 @@ const StyledSolo = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
     img, .video{
         width: 100%;
-    }
-    @media (max-width: 769px) {
-        gap: 16px;
+        margin-bottom: 32px;
+        @media (max-width: 769px) {
+            margin-bottom: 16px;
+        }
     }
 `
 

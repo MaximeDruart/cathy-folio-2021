@@ -9,17 +9,20 @@ const StyledTemplate = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 32px;
     video{
         width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 32px;
+        @media (max-width: 769px) {
+        margin-bottom: 16px;
+    }
     }
     @media (max-width: 1000px) {
         padding: 10vh 5vw;
-        gap: 32px;
     }
     @media (max-width: 600px) {
         padding: 10vh 16px;
-        gap: 16px;
     }
 `
 

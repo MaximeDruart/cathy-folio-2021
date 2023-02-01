@@ -8,9 +8,12 @@ const StyledDuo = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 16px;
-    margin: var(--gap) 0;
+    margin-bottom: 16px;
+    @media (max-width: 769px) {
+        margin-bottom: 8px;
+    }
     img, .video{
+        margin-bottom: 16px;
         width: calc(50% - var(--gap) / 2);
         @media (max-width: 600px) {
         width: 100%;

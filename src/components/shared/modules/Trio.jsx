@@ -8,9 +8,13 @@ const StyledTrio = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 16px;
+    margin-bottom: 16px;
+    @media (max-width: 769px) {
+        margin-bottom: 8px;
+    }
     img, .video{
         width: calc((100% / 3) - 12px);
+        margin-bottom: 16px;
         @media (max-width: 600px) {
         width: 100%;
         }
