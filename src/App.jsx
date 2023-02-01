@@ -20,7 +20,7 @@ import { AnimatePresence } from "framer-motion"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
 import PXP from './components/archives/PXP.jsx'
 import Chanel from './components/archives/Chanel.jsx'
-import Fuelband from './components/archives/Fuelband.jsx'
+import Feels from './components/archives/Feels.jsx'
 import Nyx from './components/archives/Nyx.jsx'
 import Grissini from './components/archives/Grissini.jsx'
 
@@ -58,7 +58,7 @@ const App = () => {
             <AnimatePresence exitBeforeEnter initial={true}>
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
-                <Route path='/Fuelband' component={Fuelband} />
+                <Route path='/Feels' component={Feels} />
                 <Route path='/Nyx' component={Nyx} />
                 <Route path='/Grissini' component={Grissini} />
                 <Route path='/pxp' component={PXP} />

@@ -7,8 +7,12 @@ const StyledTemplate = styled.div`
     background:  ${({ theme }) => theme.colors.background}; 
     padding: 20vh 20vw;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 64px;
+    gap: 32px;
+    video{
+        width: 100%;
+    }
     @media (max-width: 1000px) {
         padding: 10vh 5vw;
         gap: 32px;

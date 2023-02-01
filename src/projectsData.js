@@ -17,10 +17,10 @@ import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
 
-import Feels from "./components/projects/Feels"
-import feelsCover from "./assets/img/works/covers/feels.jpg"
-import feelsCoverSmall from "./assets/img/works/covers-small/feels-min.jpg"
-import feelsVisual1 from "./assets/img/works/feels/visual1.jpg"
+// import Feels from "./components/projects/Feels"
+// import feelsCover from "./assets/img/works/covers/feels.jpg"
+// import feelsCoverSmall from "./assets/img/works/covers-small/feels-min.jpg"
+// import feelsVisual1 from "./assets/img/works/feels/visual1.jpg"
 
 import Branding from "./components/projects/Branding"
 import brandingCover from "./assets/img/works/covers/branding.jpg"
@@ -87,6 +87,35 @@ let projectsData = [
       "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
   },
   {
+    name: "Hublot",
+    path: "hublot",
+    title: "Hublot x Murakami",
+    coverImg: hublotCover,
+    coverImgSmall: hublotCoverSmall,
+    visual1: hublotVisual1,
+    component: Hublot,
+    date: "Aug. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, Photoshop, React"],
+    description:
+      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
+    websiteLink: "https://hublotxtakashi.netlify.app/",
+  },
+  {
+    name: "Bohinc",
+    path: "bohinc",
+    title: "Minimalist Furniture",
+    coverImg: bohincCover,
+    coverImgSmall: bohincCoverSmall,
+    visual1: bohincVisual1,
+    component: Bohinc,
+    date: "Sept. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop"],
+    description:
+      "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
+  },
+  {
     name: "Ando",
     path: "ando",
     title: "Some AI Experimentation",
@@ -128,35 +157,6 @@ let projectsData = [
     description:
       "Being an avid Cyberpunk2077 player, I fell in love with the Cyberpunk series. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
     websiteLink: "https://cyberpunkv4.netlify.app/",
-  },
-  {
-    name: "Hublot",
-    path: "hublot",
-    title: "Hublot x Murakami",
-    coverImg: hublotCover,
-    coverImgSmall: hublotCoverSmall,
-    visual1: hublotVisual1,
-    component: Hublot,
-    date: "Aug. 2022",
-    role: "Designer, Dev",
-    techs: ["Figma, Photoshop, React"],
-    description:
-      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
-    websiteLink: "https://hublotxtakashi.netlify.app/",
-  },
-  {
-    name: "Bohinc",
-    path: "bohinc",
-    title: "Minimalist Furniture",
-    coverImg: bohincCover,
-    coverImgSmall: bohincCoverSmall,
-    visual1: bohincVisual1,
-    component: Bohinc,
-    date: "Sept. 2022",
-    role: "Designer",
-    techs: ["Figma, Photoshop"],
-    description:
-      "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
   {
     name: "Elijah",
@@ -214,20 +214,20 @@ let projectsData = [
   //     "The goal was to find an original post format and concept for the Paco app. Paco is for the diggers. It's the place where we share our artistic references and discover the gems of the people who inspire us: artists, friends, creatives, critics, etc.",
   //   visual1: pacoVisual1,
   // },
-  {
-    name: "Feels",
-    path: "feels",
-    title: "Create with your feeling",
-    coverImg: feelsCover,
-    coverImgSmall: feelsCoverSmall,
-    component: Feels,
-    date: "Feb. 2022",
-    role: "Designer, developer",
-    techs: ["Processing, Illustrator, Adobe XD"],
-    description:
-      "A generative installation that takes into consideration the singularity of each individual. Each painting is made unique by the visitor's own experience.",
-    visual1: feelsVisual1,
-  },
+  // {
+  //   name: "Feels",
+  //   path: "feels",
+  //   title: "Create with your feeling",
+  //   coverImg: feelsCover,
+  //   coverImgSmall: feelsCoverSmall,
+  //   component: Feels,
+  //   date: "Feb. 2022",
+  //   role: "Designer, developer",
+  //   techs: ["Processing, Illustrator, Adobe XD"],
+  //   description:
+  //     "A generative installation that takes into consideration the singularity of each individual. Each painting is made unique by the visitor's own experience.",
+  //   visual1: feelsVisual1,
+  // },
   // {
   //   name: "Shibuya",
   //   path: "shibuya",

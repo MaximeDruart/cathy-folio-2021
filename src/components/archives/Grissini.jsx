@@ -1,5 +1,3 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React from "react"
 import Responsive from "../shared/modules/Responsive";
 import Template from "./Template";
@@ -15,9 +13,6 @@ import Solo from "../shared/modules/Solo";
 
 
 const Grissini = () => {
-  AOS.init({
-    duration : 2000
-  })
   return (
     <Template>
       <Solo

@@ -110,8 +110,8 @@ export default css`
     font-size: 10px;
     text-transform: uppercase;
     &.tags{
-      padding: 10px 20px;
-      border: solid 1px ${({ theme }) => theme.colors.text.disabled};
+      padding: 8px 16px;
+      border: solid 1px ${({ theme }) => theme.colors.text.disabled2};
       border-radius: 32px;
       font-size: 10px;
     }
