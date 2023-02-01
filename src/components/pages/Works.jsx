@@ -30,7 +30,7 @@ const planeSizes = {
 }
 
 const planePositions = {
-  mobile: { distanceX: 0.06, distanceY: 3 },
+  mobile: { distanceX: 0.06, distanceY: 2 },
   tablet: { distanceX: 0.1, distanceY: 2 },
   desktop: { distanceX: 0.16, distanceY: 1.18 },
 }

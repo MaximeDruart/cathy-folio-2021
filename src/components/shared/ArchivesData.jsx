@@ -34,6 +34,9 @@ const StyledArchivesData = styled.div`
         &.date{
             width: 120px;
             align-self: right;
+            @media (max-width: 600px) {
+               width: 80px;
+            }
         }
         &.tags{
             @media (max-width: 600px) {
