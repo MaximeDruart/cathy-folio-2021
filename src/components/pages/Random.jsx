@@ -42,10 +42,9 @@ const Container = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  @media (max-width: 900px);
+  @media (max-width: 900px){
     justify-content: center;
   }
-
   .map {
     pointer-events: none;
     position: absolute;

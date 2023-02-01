@@ -23,12 +23,22 @@ const StyledArchivesData = styled.div`
         padding: 24px 0;
         display: block;
         color: ${({ theme }) => theme.colors.text.standard};
+        span{
+            color: ${({ theme }) => theme.colors.text.text};
+            margin-right: 6px;
+        }
         &.name{
-            width: 120px;
+            width: 140px;
+            text-align: left;
         }
         &.date{
             width: 120px;
-            text-align: right;
+            align-self: right;
+        }
+        &.tags{
+            @media (max-width: 600px) {
+                display: none;
+            }
         }
     }
 `
@@ -40,7 +50,7 @@ function ArchivesData(archives) {
             <Link to={archives.to}>
             <div className="separator"/>
             <div className="content">
-                <p className="text-button name">{archives.name}</p>
+                <p className="text-button name"><span>({archives.number})</span>{archives.name}</p>
                 <p className="text-button tags">{archives.tag}</p>
                 <p className="text-button date">{archives.date}</p>
             </div>

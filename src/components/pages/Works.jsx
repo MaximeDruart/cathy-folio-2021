@@ -65,7 +65,7 @@ const StyledWorks = styled(motion.div)`
       }
 
       .cta {
-        margin-top: 20px;
+        margin-top: 16px;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;

@@ -9,7 +9,6 @@ export default css`
     font-size: 100px;
     color: ${({ theme }) => theme.colors.text.standard};
     line-height: 0.9;
-    /* or 101px */
     letter-spacing: 0.03em;
 
     @media (max-width: 769px) {
@@ -24,12 +23,10 @@ export default css`
   }
   .text-h2 {
     font-family: "NeueMontrealRegular";
-    /* font-family: NeueMontrealRegular; */
     font-size: 46px;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
-    //margin-bottom: 10px;
     span.important_word {
       font-family: "NeueMontrealRegular";
       color: ${({ theme }) => theme.colors.primary1};
@@ -124,6 +121,13 @@ export default css`
     display: inline-block;
     overflow: hidden;
   }
+  .text-headline {
+      text-transform: uppercase;
+      font-size: 10px;
+      font-family: NeueMontrealRegular;
+      color: ${({ theme }) => theme.colors.text.text};
+
+  }
 
   .text-description{
     font-family: "NeueMontrealRegular";
@@ -141,9 +145,15 @@ export default css`
   }
 
   .text-link{
+    text-transform: uppercase;
     font-size: 10px;
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: ${({ theme }) => theme.colors.text.text};
     font-family: NeueMontrealRegular;
+    transition: color 0.5s;
+    &:hover {
+      transition: color 0.5s;
+      color: ${({ theme }) => theme.colors.text.standard};
+   }
   }
 
   .mail{
@@ -158,6 +168,13 @@ export default css`
     }
   }
 
+  .separator{
+      margin: 4vh 0;
+      width: 100%;
+      height: 1px;
+      transition: background-color 0.6s;
+      background-color: ${({ theme }) => theme.colors.text.disabled2};
+  }
   .button{
     display: flex;
     justify-content: center;
@@ -231,10 +248,6 @@ export const marginPage = css`
   @media (max-width: 769px) {
     padding: 0 20px;
   }
-
-  // @media (max-width: 480px) {
-  //   padding: 0 20px;
-  // }
 `
 
 

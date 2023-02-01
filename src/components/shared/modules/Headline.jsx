@@ -5,11 +5,6 @@ const StyledHeadline = styled.div`
     width: 100%;
     margin-top: 124px;
     text-align: center;
-    .headline {
-      text-transform: uppercase;
-      font-size: 10px;
-      font-family: NeueMontrealRegular;
-    }
     .separator {
         margin-top: 10px;
         margin-bottom: 24px;
@@ -17,7 +12,6 @@ const StyledHeadline = styled.div`
         height: 1px;
         transition: background-color 0.6s;
         background-color: ${({ theme }) => theme.colors.text.disabled2};
-
         @media (max-width: 769px) {
         margin-bottom: 24px;
         }
@@ -39,7 +33,7 @@ const StyledHeadline = styled.div`
 function Headline(headline) {
     return (
         <StyledHeadline>
-            <div className='headline text-regular'>{headline.name}</div>
+            <div className='text-headline'>{headline.name}</div>
             <div className='separator'></div>
         </StyledHeadline>
     );

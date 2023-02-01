@@ -11,17 +11,15 @@ const StyledHeader = styled.div`
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   top: 46px;
   z-index: 100;
   a{
-    color: ${({ theme }) => theme.colors.text.text};
-    font-size: 12px;
+    color: ${({ theme }) => theme.colors.text.standard};
     @media (max-width: 800px) {
     font-size: 10px;
     }
-
   }
   @media (max-width: 700px) {
     top: 20px;
@@ -51,9 +49,9 @@ const StyledHeader = styled.div`
 const Header = () => {
   return (
     <StyledHeader>
-      <Link to='/' className='text-button'>Cathy DOLLE</Link>
+      <Link to='/' className='text-h6'>CATHY DOLLE<br/><span className="text-description">Paris, France</span></Link>
       <nav>
-        <Link className="text-button" to='/about'>ABOUT</Link>
+        <Link className="text-h6" to='/about'>ABOUT</Link>
         <div className="mail">
           <a href="mailto:cathy.dolle@live.fr"><Mail/></a>
         </div>

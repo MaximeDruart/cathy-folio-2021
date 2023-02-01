@@ -1,32 +1,16 @@
 import { motion } from "framer-motion"
 import React from "react"
+import Headline from "./modules/Headline"
 import styled from "styled-components"
 
 const Container = styled.div`
   .home-section {
     margin: 0 auto;
     width: 80vw;
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-
-    .headline {
-      text-transform: uppercase;
-      color: ${({ theme }) => theme.colors.text.standard};
-      font-family: NeueMontrealRegular;
-      font-size: 10px;
-    }
-
-    .separator {
-      margin-top: 14px;
-      margin-bottom: 40px;
-      width: 100%;
-      height: 1px;
-      background-color: ${({ theme }) => theme.colors.text.disabled2};
-    }
   }
-
   .contact {
     margin-top: 20vh;
     padding-bottom: 15vh;
@@ -68,11 +52,9 @@ const Container = styled.div`
             display: inline-block;
             position: relative;
             transition: transform ease-in-out 0.3s;
-
             &:hover {
               transform: translateY(-100%);
             }
-
             span.post {
               position: absolute;
               left: 0;
@@ -85,36 +67,23 @@ const Container = styled.div`
     .small-line {
       font-size: 10px;
       margin-top: -20px;
-      @media (max-width: 750px) {
-        .left {
-          display: none;
-        }
-      }
-      * {
-        font-family: NeueMontrealRegular;
-        color: ${({ theme }) => theme.colors.text.standard};
-      }
       width: 100%;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: 750px) {
+        .left {
+          display: none;
+        }
+      }
 
       .socials {
         display: flex;
         flex-flow: row wrap;
         li {
-          text-transform: uppercase;
           margin-right: 10px;
-          margin: 0 20px;
-          font-size: 10px;
-          a {
-            transition: color 0.5s;
-          }
-          a:hover {
-            transition: color 0.5s;
-            color: ${({ theme }) => theme.colors.primary1};
-          }
+          margin: 0 24px;
         }
         @media (max-width: 750px) {
           width: 100%;
@@ -138,9 +107,7 @@ const Footer = () => {
   return (
     <Container>
       <div className='home-section contact'>
-        <div className='headline'>contact me</div>
-        <div className='separator'></div>
-
+        <Headline name="contact me"/>
         <div className='footer-body'>
           <motion.a href='mailto:cathy.dolle@live.fr' className='text-h1'>
             Drop me an
@@ -159,30 +126,30 @@ const Footer = () => {
         </div>
         <div className='separator'></div>
         <div className='small-line'>
-          <div className='left'>@2021</div>
+          <div className='left text-link'>@2021</div>
           <ul className='socials'>
             <li>
-              <a href='https://www.linkedin.com/in/cathy-dolle/?originalSubdomain=fr' target='_blank'>
+              <a className="text-link" href='https://www.linkedin.com/in/cathy-dolle/?originalSubdomain=fr' target='_blank'>
                 linkedin
               </a>
             </li>
             <li>
-              <a href='https://twitter.com/cathydolle' target='_blank'>
+              <a className="text-link" href='https://twitter.com/cathydolle' target='_blank'>
                 twitter
               </a>
             </li>
             <li>
-              <a href='https://www.instagram.com/cathydolle/' target='_blank'>
+              <a className="text-link"  href='https://www.instagram.com/cathydolle/' target='_blank'>
                 instagram
               </a>
             </li>
             <li>
-              <a href='https://www.behance.net/cathydolle' target='_blank'>
+              <a className="text-link" href='https://www.behance.net/cathydolle' target='_blank'>
                 behance
               </a>
             </li>
             <li>
-              <a href='https://discord.com/users/169782332247506944' target='_blank'>
+              <a className="text-link" href='https://discord.com/users/169782332247506944' target='_blank'>
                 discord
               </a>
             </li>

@@ -16,11 +16,11 @@ import twitch from "../../../assets/img/about/twitch.jpg"
 import resume from "../../../assets/img/about/resume.pdf"
 
 const StyledHome = styled.div`
-  background:  ${({ theme }) => theme.colors.background};  
-  transition: background-color 0.6s;
   * {
     color: ${({ theme }) => theme.colors.text.standard};
   }
+  background:  ${({ theme }) => theme.colors.background};  
+  transition: background-color 0.6s;
   .button{
     margin-top: 30px;
   }
@@ -230,7 +230,6 @@ const StyledHome = styled.div`
   }
 
   .what-i-do {
-    margin-top: 30vh;
     @media (max-width: 700px) {
       margin-top: 20vh;
     }
@@ -244,18 +243,6 @@ const StyledHome = styled.div`
         color: ${({ theme }) => theme.colors.primary1};
       }
     }
-  }
-
-  .skills {
-    margin-top: 20vh;
-  }
-
-  .projects {
-    margin-top: 20vh;
-  }
-
-  .contact {
-    margin-top: 20vh;
   }
 
 `
@@ -299,29 +286,34 @@ const Home = () => {
           <Headline name="what I do"/>
           <div className='title text-h2-5'>
             I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design
-            and brand identity. Currently in internship at <span className='saol'>AKQA</span> as UI/UX Designer
+            and brand identity. Currently in internship at <span className='saol'>Immersive Garden</span> as Designer
           </div>
           <a className='button big' href={resume} download='cathy_resume.pdf'>
             Download my resume
           </a>
         </div>
+
+        <div className="spacer"/>
+
         <div className='home-section skills'>
-          <Headline name="skills"/>
-          <div className='separator text-top'></div>
+          <div className='separator'></div>
           <InfiniteText />
-          <div className='separator text-bot'></div>
-          <div className="demi-spacer"></div>
+          <div className='separator'></div>
         </div>
+
+        <div className="spacer"/>
+
         {/* projects */}
         <div className='home-section projects'>
-          <Headline name="projects"/>
           <div className='separator'></div>
           <HomeProjects />
         </div>
+        
+        <div className="spacer"/>
+
         {/* twitch */}
         <div className='home-section what-i-do'>
           <Headline name="streaming"/>
-          <div className='separator'></div>
           <div className='title text-h2-5'>
             I'm also a <span className='saol'>Twitch partner</span> and I stream my work on my Twitch channel
           </div>
@@ -329,6 +321,7 @@ const Home = () => {
             Twitch.tv/Katy_v4
           </a>
         </div>
+        
         <div className='demi-spacer'></div>
         <FullImage src={twitch} alt='moodboard' />
         <div className='spacer'></div>

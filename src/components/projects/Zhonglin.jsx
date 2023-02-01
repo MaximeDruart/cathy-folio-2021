@@ -41,12 +41,7 @@ const Zhonglin = () => {
                 {
                   type: "image",
                   src: z2
-                }
-              ]
-            }
-          />
-           <Solo
-            medias={[
+                },
                 {
                   type: "video",
                   src: loader
@@ -67,8 +62,10 @@ const Zhonglin = () => {
                   type: "image",
                   src: z1
                 },
-              ]}
+              ]
+            }
           />
+
       </div>
     
       <FullImage src={preview} alt='prototype' />

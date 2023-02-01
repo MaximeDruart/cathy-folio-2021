@@ -11,7 +11,7 @@ const StyledArchives = styled.div`
   background:  ${({ theme }) => theme.colors.background};  
   width: 100vw;
   height: 100vh;
-  padding: 14vh 4vw;
+  padding: 20vh 4vw;
   h1{
     margin-bottom: 32px;
   }
@@ -30,11 +30,11 @@ function Archives(props) {
                 <h1 className="text-h2">Archives (05)</h1>
                 <div className="archivesContainer">
                   {/* <ArchivesData name="Fuelband" tag="Generative Art" date="08.11.2022" to="/fuelband"/> */}
-                  <ArchivesData name="Capsule Room" tag="3D" date="02.10.2021" to="/capsule"/>
-                  <ArchivesData name="Grissini" tag="Design / Dev" date="20.04.2019" to="/Grissini"/>
-                  <ArchivesData name="Nyx" tag="Design / Dev" date="30.11.2022" to="/Nyx"/>
-                  <ArchivesData name="Chanel" tag="Experience / UI" date="03.12.2021" to="/chanel"/>
-                  <ArchivesData name="Project X Paris" tag="Design / Dev" date="24.10.2020" to="/pxp"/>
+                  <ArchivesData number="01" name="Capsule Room" tag="3D" date="2021" to="/capsule"/>
+                  <ArchivesData number="02" name="Grissini" tag="UI / Dev" date="2019" to="/Grissini"/>
+                  <ArchivesData number="03" name="Nyx" tag="UI / Dev" date="2022" to="/Nyx"/>
+                  <ArchivesData number="04" name="Chanel" tag="3D / UI" date="2021" to="/chanel"/>
+                  <ArchivesData number="05" name="Project X Paris" tag="UI / Dev" date="2020" to="/pxp"/>
                 </div>
             </StyledArchives>
         </PageTemplate>
