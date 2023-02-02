@@ -9,6 +9,10 @@ const StyledResponsive = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     gap: var(--gap);
+    margin-bottom: 32px;
+    @media (max-width: 769px) {
+        margin-bottom: 16px;
+    }
     img, .video {
         width: calc((100% / 4) - var(--gap) + var(--gap) / 4);
         height: auto;

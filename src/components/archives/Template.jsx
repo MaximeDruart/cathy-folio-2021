@@ -11,7 +11,7 @@ const StyledTemplate = styled.div`
     flex-wrap: wrap;
     video{
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         margin-bottom: 32px;
         @media (max-width: 769px) {

@@ -81,7 +81,7 @@ const Nyx = () => {
               src: passion
             },
             {
-              type: "image",
+              type: "video",
               src: nft
             }
           ]}
@@ -93,11 +93,11 @@ const Nyx = () => {
               src: bloom
             },
             {
-              type: "video",
+              type: "image",
               src: winx1
             },
             {
-              type: "image",
+              type: "video",
               src: exp
             },
             {
