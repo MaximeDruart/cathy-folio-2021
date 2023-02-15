@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Parallax, Background } from "react-parallax"
+import { Parallax } from "react-parallax"
 
 
 const Container = styled.div`

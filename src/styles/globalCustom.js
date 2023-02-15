@@ -168,6 +168,17 @@ export default css`
     }
   }
 
+  .parallax{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100vw !important;
+      height: 100vh !important;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
   .separator{
       margin: 4vh 0;
       width: 100%;

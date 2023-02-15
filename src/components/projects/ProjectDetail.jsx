@@ -4,6 +4,7 @@ import styled from "styled-components"
 import PageTemplate from "../pages/PageTemplate"
 import projectsData from "../../projectsData"
 import { Link, useHistory } from "react-router-dom"
+import { Parallax } from "react-parallax"
 
 
 const StyledProjectDetail = styled.div`
@@ -213,13 +214,15 @@ const ProjectDetail = ({ project }) => {
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
         <div className='hero'>
-          <motion.img
+          <Parallax className="parallax" onLoad={() => setImageHasLoaded(true)} strength={100} bgImage={project.visual1}>
+          </Parallax>
+          {/* <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
             animate={{ opacity: imageHasLoaded ? 1 : 0 }}
             transition={{ duration: 0.4 }}
             src={project.visual1}
-          />
+          /> */}
           <div className="voile"></div>
           <div data-aos="fade-left" data-aos-duration="800" className="project-description">
             <h2 className='text-h2 title'>{project.title}</h2>
