@@ -1,58 +1,20 @@
-import React, { useLayoutEffect, useRef, useState } from "react"
-import { useViewportScroll, useTransform, useSpring, motion } from "framer-motion"
+import React from "react"
 import styled from "styled-components"
+import { Parallax, Background } from "react-parallax"
 
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  margin-bottom: auto;
-  img {
-    border-radius: 0px ;
+  .parallax{
     width: 100vw;
-    height: 110vh;
-    object-fit: cover;
-    margin-bottom: 0;
-  }
-  @media (max-width: 769px) {
-    width: 100vw;
-    height: 80vh;
-  }
-  @media (max-width: 480px) {
-    width: 100vw;
-    height: 40vh;
+    height: 100vh;
   }
 `
 
-const FullImage = ({ src, alt }) => {
-  const ref = useRef()
-  const [offsetTop, setOffsetTop] = useState(0)
-
-  const { scrollY } = useViewportScroll()
-  const physics = { damping: 20, mass: 0.21, stiffness: 100 }
-  const spring = useSpring(scrollY, physics)
-  const y = useTransform(
-    spring,
-    [offsetTop - window.innerHeight * 0.5, offsetTop + window.innerHeight * 0.75],
-    ["10%", "-10%"]
-  )
-
-  useLayoutEffect(() => {
-    if (!ref.current) return null
-    const onResize = () => {
-      setOffsetTop(ref.current.offsetTop)
-    }
-
-    onResize()
-    window.addEventListener("resize", onResize)
-
-    return () => window.removeEventListener("resize", onResize)
-  }, [ref])
-
+const FullImage = ({ src }) => {
   return (
-    <Container ref={ref} alt={alt}>
-      <motion.img style={{ y }} src={src}></motion.img>
+    <Container>
+      <Parallax className="parallax" strength={100} bgImage={src}>
+      </Parallax>
     </Container>
   )
 }
