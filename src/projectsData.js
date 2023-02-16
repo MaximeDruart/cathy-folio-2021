@@ -16,6 +16,10 @@ import elijahCover from "./assets/img/works/covers/elijah.jpg"
 import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
+import Hana from "./components/projects/Hana"
+import hanaCover from "./assets/img/works/covers/hana.jpg"
+import hanaCoverSmall from "./assets/img/works/covers-small/hana-min.jpg"
+import hanaVisual1 from "./assets/img/works/hana/visual1.jpg"
 
 // import Feels from "./components/projects/Feels"
 // import feelsCover from "./assets/img/works/covers/feels.jpg"
@@ -71,6 +75,21 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop, Protopie"],
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },
+  {
+    name: "Hana",
+    path: "hana",
+    title: "3D with Unreal Engine",
+    coverImg: hanaCover,
+    coverImgSmall: hanaCoverSmall,
+    visual1: hanaVisual1,
+    component: Hana,
+    date: "Feb. 2023",
+    websiteLink: "https://hanak7.netlify.app/",
+    role: "3D, Dev, Designer",
+    techs: ["Unreal, Figma, Premiere"],
+    description:
+      "This project was realized by students from ESD Paris as part of the Digital Event. During 2 weeks, we learned how to use Unreal Engine and how to create characters and settings. This resulted in this short film. Thanks to Stéphane Bodin and Thomas Hubert for their intervention on our workshop.",
   },
   {
     name: "Type",

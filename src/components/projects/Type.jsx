@@ -1,5 +1,4 @@
 import React from "react"
-import ReactPlayer from 'react-player'
 
 // modules
 import Solo from "../shared/modules/Solo"
