@@ -73,7 +73,7 @@ export default css`
     font-family: 6px;
     line-height: 1.2;
     @media (max-width: 769px) {
-      font-size: 24px;
+      font-size: 16px;
     }
   }
   .text-h5 {
@@ -172,7 +172,10 @@ export default css`
     width: 100vw;
     height: 100vh;
     img{
-      object-fit: cover;
+      object-fit: cover !important;
+      object-position: top;
+      height: 100vh !important;
+      width: 100vw !important;
     }
   }
 

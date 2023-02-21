@@ -10,6 +10,14 @@ import { Parallax } from "react-parallax"
 const StyledProjectDetail = styled.div`
   transition: background-color 0.6s;
   background:  ${({ theme }) => theme.colors.background};  
+  .parallax{
+    width: 100vw;
+    height: 100vh;
+    img{
+      object-fit: cover !important;
+      object-position: top;
+    }
+  }
   .hero {
     position: relative;
     width: 100vw;
