@@ -21,11 +21,6 @@ import hanaCover from "./assets/img/works/covers/hana.jpg"
 import hanaCoverSmall from "./assets/img/works/covers-small/hana-min.jpg"
 import hanaVisual1 from "./assets/img/works/hana/visual1.jpg"
 
-// import Feels from "./components/projects/Feels"
-// import feelsCover from "./assets/img/works/covers/feels.jpg"
-// import feelsCoverSmall from "./assets/img/works/covers-small/feels-min.jpg"
-// import feelsVisual1 from "./assets/img/works/feels/visual1.jpg"
-
 import Branding from "./components/projects/Branding"
 import brandingCover from "./assets/img/works/covers/branding.jpg"
 import brandingCoverSmall from "./assets/img/works/covers-small/branding-min.jpg"
