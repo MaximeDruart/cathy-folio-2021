@@ -9,6 +9,7 @@ const StyledHeader = styled.div`
   ${horizontalPadding};
   position: fixed;
   width: 100vw;
+  /* mix-blend-mode: difference; */
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
