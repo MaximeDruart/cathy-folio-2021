@@ -153,7 +153,7 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 32px 32px 0 0;
+      border-radius: 16px 16px 0 0;
 
     }
     .block{
@@ -185,37 +185,34 @@ const StyledProjectDetail = styled.div`
 
 const ProjectDetail = ({ project }) => {
   const ProjectComponent = project.component
-  const [imageHasLoaded, setImageHasLoaded] = useState(false)
+  // const [imageHasLoaded, setImageHasLoaded] = useState(false)
 
-  const history = useHistory()
+  // const history = useHistory()
 
   const page = useRef(null)
 
   const pathToNextProject =
     project.index >= projectsData.length - 1 ? null : `/works/${projectsData[project.index + 1].path}`
 
-  const { scrollY } = useViewportScroll() // measures how many pixels user has scrolled vertically
-  // as scrollY changes between 0px and the scrollable height, create a negative scroll value...
-  // ... based on current scroll position to translateY the document in a natural way
-  const physics = { damping: 20, mass: 0.21, stiffness: 100 } // easing of smooth scroll
-  const spring = useSpring(scrollY, physics) // apply easing to the negative scroll value
+  // const { scrollY } = useViewportScroll() 
+  // const physics = { damping: 20, mass: 0.21, stiffness: 100 } 
+  // const spring = useSpring(scrollY, physics) 
 
-  useLayoutEffect(() => {
-    const unsubscribeX = spring.onChange((y) => {
-      // guy needs to chill
-      if (Math.abs(spring.getVelocity()) > 200) return
-      if (y + 20 >= page.current.scrollHeight - window.innerHeight && pathToNextProject) history.push(pathToNextProject)
-    })
+  // useLayoutEffect(() => {
+  //   const unsubscribeX = spring.onChange((y) => {
+  //     // guy needs to chill
+  //     if (Math.abs(spring.getVelocity()) > 200) return
+  //     if (y + 20 >= page.current.scrollHeight - window.innerHeight && pathToNextProject) history.push(pathToNextProject)
+  //   })
 
-    return () => unsubscribeX()
-  }, [scrollY, page])
+  //   return () => unsubscribeX()
+  // }, [scrollY, page])
 
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
+        <Parallax className="parallax" strength={100} bgImage={project.visual1}>
         <div className='hero'>
-          <Parallax className="parallax" onLoad={() => setImageHasLoaded(true)} strength={100} bgImage={project.visual1}>
-          </Parallax>
           {/* <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
@@ -249,6 +246,7 @@ const ProjectDetail = ({ project }) => {
             <span className="text-small discover">(scroll down)</span>
           </div>
         </div>
+        </Parallax>
         <div className="project-description-mobile">
               {/* intro */}
             <div className='infos'>
