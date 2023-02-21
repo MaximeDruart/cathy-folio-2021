@@ -77,21 +77,6 @@ let projectsData = [
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },
   {
-    name: "Hana",
-    path: "hana",
-    title: "3D with Unreal Engine",
-    coverImg: hanaCover,
-    coverImgSmall: hanaCoverSmall,
-    visual1: hanaVisual1,
-    component: Hana,
-    date: "Feb. 2023",
-    websiteLink: "https://hanak7.netlify.app/",
-    role: "3D, Dev, Designer",
-    techs: ["Unreal, Figma, Premiere"],
-    description:
-      "This project was realized by students from ESD Paris as part of the Digital Event. During 2 weeks, we learned how to use Unreal Engine and how to create characters and settings. This resulted in this short film. Thanks to Stéphane Bodin and Thomas Hubert for their intervention on our workshop.",
-  },
-  {
     name: "Type",
     path: "Type",
     title: "Type Department",
@@ -219,34 +204,21 @@ let projectsData = [
     description:
       "Creation of poster for an art center: musical cultures and experiments, in an exceptional architectural building.",
   },
-  // {
-  //   name: "Paco",
-  //   path: "paco",
-  //   title: "Paco digging culture",
-  //   coverImg: pacoCover,
-  //   coverImgSmall: pacoCoverSmall,
-  //   component: Paco,
-  //   date: "March. 2022",
-  //   role: "Designer, Project Manager",
-  //   techs: ["Figma, After effect, Protopie"],
-  //   description:
-  //     "The goal was to find an original post format and concept for the Paco app. Paco is for the diggers. It's the place where we share our artistic references and discover the gems of the people who inspire us: artists, friends, creatives, critics, etc.",
-  //   visual1: pacoVisual1,
-  // },
-  // {
-  //   name: "Feels",
-  //   path: "feels",
-  //   title: "Create with your feeling",
-  //   coverImg: feelsCover,
-  //   coverImgSmall: feelsCoverSmall,
-  //   component: Feels,
-  //   date: "Feb. 2022",
-  //   role: "Designer, developer",
-  //   techs: ["Processing, Illustrator, Adobe XD"],
-  //   description:
-  //     "A generative installation that takes into consideration the singularity of each individual. Each painting is made unique by the visitor's own experience.",
-  //   visual1: feelsVisual1,
-  // },
+  {
+    name: "Hana",
+    path: "hana",
+    title: "3D with Unreal Engine",
+    coverImg: hanaCover,
+    coverImgSmall: hanaCoverSmall,
+    visual1: hanaVisual1,
+    component: Hana,
+    date: "Feb. 2023",
+    websiteLink: "https://hanak7.netlify.app/",
+    role: "3D, Dev, Designer",
+    techs: ["Unreal, Figma, Premiere"],
+    description:
+      "This project was realized by students from ESD Paris as part of the Digital Event. During 2 weeks, we learned how to use Unreal Engine and how to create characters and settings. This resulted in this short film. Thanks to Stéphane Bodin and Thomas Hubert for their intervention on our workshop.",
+  }
   // {
   //   name: "Shibuya",
   //   path: "shibuya",
