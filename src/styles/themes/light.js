@@ -12,7 +12,7 @@ lightTheme.colors = {
     standard: "#323232",
     text: "#666666",
     disabled: "#9a9a9a",
-    disabled2: "#e7e7e7",
+    disabled2: "#D6D6D6",
   },
 }
 
