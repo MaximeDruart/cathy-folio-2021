@@ -9,6 +9,7 @@ const StyledMouseFollower = styled.div`
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
+  mix-blend-mode: difference;
 
   .pointer {
     z-index: 1000;
