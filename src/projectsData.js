@@ -16,11 +16,6 @@ import elijahCover from "./assets/img/works/covers/elijah.jpg"
 import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
-import Hana from "./components/projects/Hana"
-import hanaCover from "./assets/img/works/covers/hana.jpg"
-import hanaCoverSmall from "./assets/img/works/covers-small/hana-min.jpg"
-import hanaVisual1 from "./assets/img/works/hana/visual1.jpg"
-
 import Branding from "./components/projects/Branding"
 import brandingCover from "./assets/img/works/covers/branding.jpg"
 import brandingCoverSmall from "./assets/img/works/covers-small/branding-min.jpg"
@@ -56,6 +51,11 @@ import typeCover from "./assets/img/works/covers/type.jpg"
 import typeCoverSmall from "./assets/img/works/covers-small/type-min.jpg"
 import typeVisual1 from "./assets/img/works/type/visual1.jpg"
 
+import Projekt2023 from "./components/projects/Projekt2023"
+import Projekt2023Cover from "./assets/img/works/covers/projekt2023.jpg"
+import Projekt2023CoverSmall from "./assets/img/works/covers-small/projekt2023-min.jpg"
+import Projekt2023Visual1 from "./assets/img/works/projekt2023/visual1.jpg"
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -65,6 +65,19 @@ let projectsData = [
     coverImgSmall: ZhonglinCoverSmall,
     visual1: zhonglinVisual1,
     component: Zhonglin,
+    date: "Apr. 2022",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop, Protopie"],
+    description:
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },  {
+    name: "Projekt 2023",
+    path: "projekt2023",
+    title: "Unreal Workspace",
+    coverImg: Projekt2023Cover,
+    coverImgSmall: Projekt2023CoverSmall,
+    visual1: Projekt2023Visual1,
+    component: Projekt2023,
     date: "Apr. 2022",
     role: "Designer",
     techs: ["AdobeXD, Photoshop, Protopie"],
@@ -198,36 +211,7 @@ let projectsData = [
     techs: ["Illustrator, Photoshop"],
     description:
       "Creation of poster for an art center: musical cultures and experiments, in an exceptional architectural building.",
-  },
-  {
-    name: "Hana",
-    path: "hana",
-    title: "3D with Unreal Engine",
-    coverImg: hanaCover,
-    coverImgSmall: hanaCoverSmall,
-    visual1: hanaVisual1,
-    component: Hana,
-    date: "Feb. 2023",
-    websiteLink: "https://hanak7.netlify.app/",
-    role: "3D, Dev, Designer",
-    techs: ["Unreal, Figma, Premiere"],
-    description:
-      "This project was realized by students from ESD Paris as part of the Digital Event. During 2 weeks, we learned how to use Unreal Engine and how to create characters and settings. This resulted in this short film. Thanks to Stéphane Bodin and Thomas Hubert for their intervention on our workshop.",
   }
-  // {
-  //   name: "Shibuya",
-  //   path: "shibuya",
-  //   coverImg: shibuyaCover,
-  //   coverImgSmall: shibuyaCoverSmall,
-  //   title: "Logo creation for Shibuya",
-  //   visual1: shibuyaVisual1,
-  //   component: Shibuya,
-  //   date: "Dec. 2021",
-  //   role: "Designer",
-  //   techs: ["Illustrator, Photoshop"],
-  //   description:
-  //     "Shibuya is known for its crossing, which is used by more than 100,000 people every day. The streets are very square and strict, and the area is very chic, minimalist and modern. My goal was to redesign their logo.",
-  // },
 ]
 
 projectsData = projectsData.map((project, index) => ({

@@ -32,10 +32,11 @@ function Archives(props) {
                   {/* <ArchivesData name="Fuelband" tag="Generative Art" date="08.11.2022" to="/fuelband"/> */}
                   <ArchivesData number="01" name="Capsule Room" tag="3D" date="2021" to="/capsule"/>
                   <ArchivesData number="02" name="Feels" tag="art coding" date="2022" to="/Feels"/>
-                  <ArchivesData number="03" name="Grissini" tag="UI / Dev" date="2019" to="/Grissini"/>
-                  <ArchivesData number="04" name="Nyx" tag="UI / Dev" date="2022" to="/Nyx"/>
-                  <ArchivesData number="05" name="Chanel" tag="3D / UI" date="2021" to="/chanel"/>
-                  <ArchivesData number="06" name="Project X Paris" tag="UI / Dev" date="2020" to="/pxp"/>
+                  <ArchivesData number="03" name="Grissini" tag="UI / Dev" date="2019" to="/Grissini"/>                
+                  <ArchivesData number="04" name="Hana" tag="UI / Dev" date="2022" to="/Hana"/>
+                  <ArchivesData number="05" name="Nyx" tag="UI / Dev" date="2022" to="/Nyx"/>
+                  <ArchivesData number="06" name="Chanel" tag="3D / UI" date="2021" to="/chanel"/>
+                  <ArchivesData number="07" name="Project X Paris" tag="UI / Dev" date="2020" to="/pxp"/>
                 </div>
             </StyledArchives>
         </PageTemplate>

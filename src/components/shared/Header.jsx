@@ -52,7 +52,7 @@ const Header = () => {
     <StyledHeader>
       <Link to='/' className='text-h6'>CATHY DOLLE<br/><span className="text-description">Paris, France</span></Link>
       <nav>
-        <Link className="text-h6" to='/about'>ABOUT</Link>
+        <Link className="text-h6" to='/about'>( ABOUT ) </Link>
         <div className="mail">
           <a href="mailto:cathy.dolle@live.fr"><Mail/></a>
         </div>

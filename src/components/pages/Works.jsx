@@ -360,7 +360,7 @@ const Works = () => {
           animate={{ opacity: hasScrolled ? 0 : 1 }}
           className='scroll-inv'
         >
-          (scroll down)
+          ( scroll down )
         </motion.div>
         <motion.div
           ref={scrollProgressContainer}

@@ -23,6 +23,7 @@ import Chanel from './components/archives/Chanel.jsx'
 import Feels from './components/archives/Feels.jsx'
 import Nyx from './components/archives/Nyx.jsx'
 import Grissini from './components/archives/Grissini.jsx'
+import Hana from './components/archives/Hana.jsx'
 
 
 
@@ -58,6 +59,7 @@ const App = () => {
             <AnimatePresence exitBeforeEnter initial={true}>
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
+                <Route path='/Hana' component={Hana} />
                 <Route path='/Feels' component={Feels} />
                 <Route path='/Nyx' component={Nyx} />
                 <Route path='/Grissini' component={Grissini} />
