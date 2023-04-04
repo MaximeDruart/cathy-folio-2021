@@ -78,11 +78,11 @@ let projectsData = [
     coverImgSmall: Projekt2023CoverSmall,
     visual1: Projekt2023Visual1,
     component: Projekt2023,
-    date: "Apr. 2022",
+    date: "Apr. 2023",
     role: "Designer",
-    techs: ["AdobeXD, Photoshop, Protopie"],
+    techs: ["Unreal Engine 5, Premiere Pro, After"],
     description:
-      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+      "I created my [atelier] in 3D with unreal engine, creating a new art direction for my Twitch channel and a teaser for my next project...",
   },
   {
     name: "Type",
