@@ -41,10 +41,10 @@ import cyberpunkCover from "./assets/img/works/covers/cyberpunk.jpg"
 import cyberpunkCoverSmall from "./assets/img/works/covers-small/cyberpunk-min.jpg"
 import cyberpunkVisual1 from "./assets/img/works/cyberpunk/visual1.jpg"
 
-import Ando from "./components/projects/Ando"
-import andoCover from "./assets/img/works/covers/ando.jpg"
-import andoCoverSmall from "./assets/img/works/covers-small/ando-min.jpg"
-import andoVisual1 from "./assets/img/works/ando/visual1.jpg"
+// import Ando from "./components/projects/Ando"
+// import andoCover from "./assets/img/works/covers/ando.jpg"
+// import andoCoverSmall from "./assets/img/works/covers-small/ando-min.jpg"
+// import andoVisual1 from "./assets/img/works/ando/visual1.jpg"
 
 import Type from "./components/projects/Type"
 import typeCover from "./assets/img/works/covers/type.jpg"
@@ -70,20 +70,7 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop, Protopie"],
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
-  },  {
-    name: "Projekt 2023",
-    path: "projekt2023",
-    title: "Unreal Workspace",
-    coverImg: Projekt2023Cover,
-    coverImgSmall: Projekt2023CoverSmall,
-    visual1: Projekt2023Visual1,
-    component: Projekt2023,
-    date: "Apr. 2023",
-    role: "Designer",
-    techs: ["Unreal Engine 5, Premiere Pro, After"],
-    description:
-      "I created my [atelier] in 3D with unreal engine, creating a new art direction for my Twitch channel and a teaser for my next project...",
-  },
+  },  
   {
     name: "Type",
     path: "Type",
@@ -128,19 +115,33 @@ let projectsData = [
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
   {
-    name: "Ando",
-    path: "ando",
-    title: "Some AI Experimentation",
-    coverImg: andoCover,
-    coverImgSmall: andoCoverSmall,
-    visual1: andoVisual1,
-    component: Ando,
-    date: "Nov. 2022",
+    name: "Projekt 2023",
+    path: "projekt2023",
+    title: "Unreal Workspace",
+    coverImg: Projekt2023Cover,
+    coverImgSmall: Projekt2023CoverSmall,
+    visual1: Projekt2023Visual1,
+    component: Projekt2023,
+    date: "Apr. 2023",
     role: "Designer",
-    techs: ["Figma, Photoshop"],
+    techs: ["Unreal Engine 5, Premiere Pro, After"],
     description:
-      "Small chromed generations thanks to the Ando plugin on Figma from references and handmade abstract shapes.",
+      "I created my [atelier] in 3D with unreal engine, creating a new art direction for my Twitch channel and a teaser for my next project...",
   },
+  // {
+  //   name: "Ando",
+  //   path: "ando",
+  //   title: "Some AI Experimentation",
+  //   coverImg: andoCover,
+  //   coverImgSmall: andoCoverSmall,
+  //   visual1: andoVisual1,
+  //   component: Ando,
+  //   date: "Nov. 2022",
+  //   role: "Designer",
+  //   techs: ["Figma, Photoshop"],
+  //   description:
+  //     "Small chromed generations thanks to the Ando plugin on Figma from references and handmade abstract shapes.",
+  // },
   {
     name: "Arcane",
     path: "arcane",
