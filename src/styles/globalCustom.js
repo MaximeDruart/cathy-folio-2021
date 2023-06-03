@@ -79,7 +79,7 @@ export default css`
   .text-h5 {
     font-family: "NeueMontrealRegular";
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.2;
     color: ${({ theme }) => theme.colors.text.standard};
   }
   .text-h6 {
@@ -90,8 +90,7 @@ export default css`
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.text};
-    // letter-spacing: 0.2rem;
-    line-height: 1.4;
+    line-height: 1.2;
     font-size: 14px;
     opacity: 0.8;
     font-family: "NeueMontrealRegular";
@@ -134,7 +133,7 @@ export default css`
     color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
     font-size: 12px;
-    line-height: 1.6;
+    line-height: 1.2;
     opacity: 1;
     @media (max-width: 600px) {
       margin: 10px 0px;

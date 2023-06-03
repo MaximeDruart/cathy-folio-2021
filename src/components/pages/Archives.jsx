@@ -27,7 +27,7 @@ function Archives(props) {
     return (
         <PageTemplate hasFooter={false} initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
             <StyledArchives>
-                <h1 className="text-h2">Archives (08)</h1>
+                <h1 className="text-h2">Archives (07)</h1>
                 <div className="archivesContainer">
                   <ArchivesData number="01" name="Projekt 2023" tag="3D Unreal" date="2023" to="/Projekt2023"/>
                   <ArchivesData number="02" name="Feels" tag="art coding" date="2022" to="/Feels"/>
@@ -36,7 +36,6 @@ function Archives(props) {
                   <ArchivesData number="05" name="Hana" tag="UI / Dev" date="2022" to="/Hana"/>
                   <ArchivesData number="06" name="Nyx" tag="UI / Dev" date="2022" to="/Nyx"/>
                   <ArchivesData number="07" name="Chanel" tag="3D / UI" date="2021" to="/chanel"/>
-                  <ArchivesData number="08" name="Project X Paris" tag="UI / Dev" date="2020" to="/pxp"/>
                   
                 </div>
             </StyledArchives>

@@ -19,7 +19,7 @@ const StyledHeader = styled.div`
   a{
     color: white;
     @media (max-width: 800px) {
-    font-size: 10px;
+    font-size: 12px;
     }
   }
   @media (max-width: 700px) {

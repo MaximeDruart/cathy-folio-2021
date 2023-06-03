@@ -19,7 +19,6 @@ import { AnimatePresence } from "framer-motion"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
 
 // Archives
-import PXP from './components/archives/PXP.jsx'
 import Chanel from './components/archives/Chanel.jsx'
 import Feels from './components/archives/Feels.jsx'
 import Nyx from './components/archives/Nyx.jsx'
@@ -68,7 +67,6 @@ const App = () => {
                 <Route path='/Projekt2023' component={Projekt2023} />
                 <Route path='/Nyx' component={Nyx} />
                 <Route path='/Grissini' component={Grissini} />
-                <Route path='/pxp' component={PXP} />
                 <Route path='/chanel' component={Chanel} />
                 <Route path='/about' exact component={Home} />
                 <Route path='/reel' exact component={Reel} />
