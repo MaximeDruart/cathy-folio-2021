@@ -4,7 +4,7 @@ import useStore from "../../store"
 import { horizontalPadding } from "../../styles/globalCustom"
 // import ColorPicker from "./ColorPicker"
 import { Link, NavLink } from "react-router-dom"
-import Play from "../../assets/icons/play.svg?component"
+// import Play from "../../assets/icons/play.svg?component"
 
 
 const StyledStyleSwitcher = styled.div`
@@ -13,7 +13,7 @@ const StyledStyleSwitcher = styled.div`
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   bottom: 32px;
   z-index: 100;
   align-items: center;
@@ -30,7 +30,7 @@ const StyledStyleSwitcher = styled.div`
     height: 20px;
     transition: background-color 0.4s;
   }
-  .reel{
+  /* .reel{
     position: relative;
     pointer-events: auto;
     display: flex;
@@ -61,11 +61,14 @@ const StyledStyleSwitcher = styled.div`
         display: none;
       }
     }
-  }
+  } */
   .style{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    right: 2vw;
+    margin-bottom: 24px;
     button{
       font-size: 10px;
       padding: 8px;
@@ -77,30 +80,19 @@ const StyledStyleSwitcher = styled.div`
   }
   nav{
     pointer-events: auto;
-    margin-right: 12px;
     display: flex;
-    background: rgba(120, 120, 120, 0.2);
-    padding: 3px 3px;
-    border-radius: 90px;
-    backdrop-filter: blur(10px);
-    @media (max-width: 600px){
-      margin-right: 0px;
-    }
     a{
-        margin: 0 0px;
-        padding: 12px 28px;
-        background-color: rgba(255, 255, 255, 0);
-        border-radius: 90px;
-        color: white;
+        margin: 0 14px;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: ${({ theme }) => theme.colors.text.disabled};
         @media (max-width: 800px) {
           padding: 10px 20px;
         }
         &.active{
-          background-color: rgba(120, 120, 120, 0.5);
+          color: ${({ theme }) => theme.colors.text.standard};
+          text-decoration : line-through;
         }
-        &:first-child {
-           margin-right: 4px;
-      }
   }
 }
 
@@ -110,15 +102,15 @@ const StyleSwitcher = () => {
   const toggleDarkMode = useStore((state) => state.toggleDarkMode)
   return (
     <StyledStyleSwitcher>
-      <Link to='/reel'>
+      {/* <Link to='/reel'>
         <div className="reel">
           <Play/>
         </div>
-      </Link>
+      </Link> */}
       <nav>
-        <NavLink exact to='/'>Works</NavLink>
-        <NavLink  to="/random">Random</NavLink>
-        <NavLink  to="/archives">Archives</NavLink>
+        <NavLink exact to='/'>( Works )</NavLink>
+        <NavLink  to="/random">( Random )</NavLink>
+        <NavLink  to="/archives">( Archives )</NavLink>
       </nav>
       <div className="style">
         <div className="style">
