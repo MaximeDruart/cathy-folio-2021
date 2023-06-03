@@ -31,12 +31,13 @@ const StyledProjectDetail = styled.div`
       width: 100vw;
       height: 100%;
       background: black;
-      opacity: 0.4;
+      opacity: 0.2;
       @media (max-width: 800px) {
         opacity: 0.6;
       }
     }
     .project-description{
+      mix-blend-mode: difference;
       position: absolute;
       width: 24vw;
       right : 10vw;
@@ -57,6 +58,10 @@ const StyledProjectDetail = styled.div`
           margin-top: 50px;
           .text-h5{
             margin: 16px 0 2px 0;
+            color: white;
+          }
+          .text-h6{
+            color: #ffffff69;
           }
         }
       }

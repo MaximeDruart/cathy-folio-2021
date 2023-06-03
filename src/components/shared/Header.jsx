@@ -7,9 +7,9 @@ import { horizontalPadding } from "../../styles/globalCustom"
 
 const StyledHeader = styled.div`
   ${horizontalPadding};
+  mix-blend-mode: difference;
   position: fixed;
   width: 100vw;
-  /* mix-blend-mode: difference; */
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
@@ -17,7 +17,7 @@ const StyledHeader = styled.div`
   top: 46px;
   z-index: 100;
   a{
-    color: ${({ theme }) => theme.colors.text.standard};
+    color: white;
     @media (max-width: 800px) {
     font-size: 10px;
     }
@@ -28,10 +28,6 @@ const StyledHeader = styled.div`
   nav{
     display: flex;
     align-items: center;
-    .text-button{
-      margin-bottom: -1px;
-      color: ${({ theme }) => theme.colors.text.text};
-    }
   }
 
   .logo {
@@ -42,7 +38,7 @@ const StyledHeader = styled.div`
     svg {
       width: 100%;
       height: 100%;
-      fill: ${({ theme }) => theme.colors.primary1};
+      fill: gray;
     }
   }
 `

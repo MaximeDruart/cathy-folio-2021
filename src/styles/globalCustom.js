@@ -163,7 +163,7 @@ export default css`
       height: 12px;
       width: 20px;
       path, rect{
-        stroke: ${({ theme }) => theme.colors.text.standard};
+        stroke: gray;
       }
     }
   }

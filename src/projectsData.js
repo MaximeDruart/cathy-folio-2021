@@ -16,11 +16,6 @@ import elijahCover from "./assets/img/works/covers/elijah.jpg"
 import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
 import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
 
-import Branding from "./components/projects/Branding"
-import brandingCover from "./assets/img/works/covers/branding.jpg"
-import brandingCoverSmall from "./assets/img/works/covers-small/branding-min.jpg"
-import brandingVisual1 from "./assets/img/works/branding/visual1.jpg"
-
 import Zhonglin from "./components/projects/Zhonglin"
 import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
 import ZhonglinCoverSmall from "./assets/img/works/covers-small/zhonglin-min.jpg"
@@ -36,25 +31,15 @@ import hublotCover from "./assets/img/works/covers/hublot.jpg"
 import hublotCoverSmall from "./assets/img/works/covers-small/hublot-min.jpg"
 import hublotVisual1 from "./assets/img/works/hublot/visual1.jpg"
 
-import Cyberpunk from "./components/projects/Cyberpunk"
-import cyberpunkCover from "./assets/img/works/covers/cyberpunk.jpg"
-import cyberpunkCoverSmall from "./assets/img/works/covers-small/cyberpunk-min.jpg"
-import cyberpunkVisual1 from "./assets/img/works/cyberpunk/visual1.jpg"
-
-// import Ando from "./components/projects/Ando"
-// import andoCover from "./assets/img/works/covers/ando.jpg"
-// import andoCoverSmall from "./assets/img/works/covers-small/ando-min.jpg"
-// import andoVisual1 from "./assets/img/works/ando/visual1.jpg"
-
 import Type from "./components/projects/Type"
 import typeCover from "./assets/img/works/covers/type.jpg"
 import typeCoverSmall from "./assets/img/works/covers-small/type-min.jpg"
 import typeVisual1 from "./assets/img/works/type/visual1.jpg"
 
-import Projekt2023 from "./components/projects/Projekt2023"
-import Projekt2023Cover from "./assets/img/works/covers/projekt2023.jpg"
-import Projekt2023CoverSmall from "./assets/img/works/covers-small/projekt2023-min.jpg"
-import Projekt2023Visual1 from "./assets/img/works/projekt2023/visual1.jpg"
+import Sylvia from "./components/projects/Sylvia"
+import sylviaCover from "./assets/img/works/covers/sylvia.jpg"
+import sylviaCoverSmall from "./assets/img/works/covers-small/sylvia-min.jpg"
+import sylviaVisual1 from "./assets/img/works/sylvia/visual1.jpeg"
 
 let projectsData = [
   {
@@ -86,19 +71,19 @@ let projectsData = [
       "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
   },
   {
-    name: "Hublot",
-    path: "hublot",
-    title: "Hublot x Murakami",
-    coverImg: hublotCover,
-    coverImgSmall: hublotCoverSmall,
-    visual1: hublotVisual1,
-    component: Hublot,
-    date: "Aug. 2022",
-    role: "Designer, Dev",
-    techs: ["Figma, Photoshop, React"],
+    name: "Sylvia",
+    path: "Sylvia",
+    title: "Sylvia",
+    coverImg: sylviaCover,
+    coverImgSmall: sylviaCoverSmall,
+    visual1: sylviaVisual1,
+    component: Sylvia,
+    date: "June 2023",
+    role: "Designer",
+    techs: ["Figma, Unreal, Premiere"],
     description:
-      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
-    websiteLink: "https://hublotxtakashi.netlify.app/",
+      "Imagine the future of fashion, using scenographie and 3D movement",
+    websiteLink: "https://sylvia-clothes.netlify.app/"
   },
   {
     name: "Bohinc",
@@ -115,33 +100,20 @@ let projectsData = [
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
   {
-    name: "Projekt 2023",
-    path: "projekt2023",
-    title: "Unreal Workspace",
-    coverImg: Projekt2023Cover,
-    coverImgSmall: Projekt2023CoverSmall,
-    visual1: Projekt2023Visual1,
-    component: Projekt2023,
-    date: "Apr. 2023",
-    role: "Designer",
-    techs: ["Unreal Engine 5, Premiere Pro, After"],
+    name: "Hublot",
+    path: "hublot",
+    title: "Hublot x Murakami",
+    coverImg: hublotCover,
+    coverImgSmall: hublotCoverSmall,
+    visual1: hublotVisual1,
+    component: Hublot,
+    date: "Aug. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, Photoshop, React"],
     description:
-      "I created my [atelier] in 3D with unreal engine, creating a new art direction for my Twitch channel and a teaser for my next project...",
+      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
+    websiteLink: "https://hublotxtakashi.netlify.app/",
   },
-  // {
-  //   name: "Ando",
-  //   path: "ando",
-  //   title: "Some AI Experimentation",
-  //   coverImg: andoCover,
-  //   coverImgSmall: andoCoverSmall,
-  //   visual1: andoVisual1,
-  //   component: Ando,
-  //   date: "Nov. 2022",
-  //   role: "Designer",
-  //   techs: ["Figma, Photoshop"],
-  //   description:
-  //     "Small chromed generations thanks to the Ando plugin on Figma from references and handmade abstract shapes.",
-  // },
   {
     name: "Arcane",
     path: "arcane",
@@ -157,21 +129,6 @@ let projectsData = [
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
   },
   {
-    name: "Cyberpunk",
-    path: "cyberpunk",
-    title: "Cyberpunk design",
-    coverImg: cyberpunkCover,
-    coverImgSmall: cyberpunkCoverSmall,
-    visual1: cyberpunkVisual1,
-    component: Cyberpunk,
-    date: "Oct. 2022",
-    role: "Designer, Dev",
-    techs: ["Figma, React"],
-    description:
-      "Being an avid Cyberpunk2077 player, I fell in love with the Cyberpunk series. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-    websiteLink: "https://cyberpunkv4.netlify.app/",
-  },
-  {
     name: "Elijah",
     path: "elijah",
     title: "Elijah's portfolio",
@@ -184,20 +141,6 @@ let projectsData = [
     techs: ["Adobe XD, HTML, CSS, JS"],
     description: "Elijah is a photograph based in Paris! I designed and developed his website.",
     websiteLink: "https://www.elijahbenhammou.com/",
-  },
-  {
-    name: "Branding",
-    path: "branding",
-    title: "Self branding",
-    coverImg: brandingCover,
-    coverImgSmall: brandingCoverSmall,
-    visual1: brandingVisual1,
-    component: Branding,
-    date: "Feb. 2022",
-    role: "Art direction",
-    techs: ["AdobeXD, Photoshop, Illustrator"],
-    description:
-      "For several months I had a desire to create a graphic charter and a universe around my personality. I finally succeeded! I let you discover me : Cathy Dolle",
   },
   {
     name: "5 Sens",

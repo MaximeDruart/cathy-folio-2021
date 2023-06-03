@@ -12,17 +12,20 @@ import MouseFollower from "./components/shared/MouseFollower"
 import Home from "./components/pages/Home"
 import Archives from "./components/pages/Archives"
 import Reel from "./components/pages/Reel"
-import Capsule from "./components/pages/Capsule"
 import Works from "./components/pages/Works"
 import Random from "./components/pages/Random"
 import ProjectDetail from "./components/projects/ProjectDetail"
 import { AnimatePresence } from "framer-motion"
 import StyleSwitcher from "./components/shared/StyleSwitcher"
+
+// Archives
 import PXP from './components/archives/PXP.jsx'
 import Chanel from './components/archives/Chanel.jsx'
 import Feels from './components/archives/Feels.jsx'
 import Nyx from './components/archives/Nyx.jsx'
 import Grissini from './components/archives/Grissini.jsx'
+import Projekt2023 from './components/archives/Projekt2023.jsx'
+import Cyberpunk from './components/archives/Cyberpunk.jsx'
 import Hana from './components/archives/Hana.jsx'
 
 
@@ -61,6 +64,8 @@ const App = () => {
                 {projectRoutes}
                 <Route path='/Hana' component={Hana} />
                 <Route path='/Feels' component={Feels} />
+                <Route path='/Cyberpunk' component={Cyberpunk} />
+                <Route path='/Projekt2023' component={Projekt2023} />
                 <Route path='/Nyx' component={Nyx} />
                 <Route path='/Grissini' component={Grissini} />
                 <Route path='/pxp' component={PXP} />
@@ -68,7 +73,6 @@ const App = () => {
                 <Route path='/about' exact component={Home} />
                 <Route path='/reel' exact component={Reel} />
                 <Route path='/archives' exact component={Archives} />
-                <Route path='/capsule' exact component={Capsule} />
                 <Route path='/random' exact component={Random} />
                 <Route path='/' component={Works} />
               </Switch>

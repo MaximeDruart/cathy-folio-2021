@@ -124,6 +124,7 @@ const StyledWorks = styled(motion.div)`
     font-family: "NeueMontrealRegular";
     color: ${({ theme }) => theme.colors.text.text};
     z-index: 1000;
+    margin-bottom: 16px;
     text-transform: uppercase;
     letter-spacing: 0.2px;
     font-size: 10px;
@@ -131,12 +132,12 @@ const StyledWorks = styled(motion.div)`
 
   .scroll-progress {
     position: absolute;
-    top:0;
+    bottom:0;
     left: 50%;
     transform: translateX(-50%);
-    // bottom: 120px;
+    /* // bottom: 120px; */
     width: 100vw;
-    height: 1.5px;
+    height: 2px;
     background:  ${({ theme }) => theme.colors.text.disabled2};
     @media (max-width: 700px) {
       bottom: 0;

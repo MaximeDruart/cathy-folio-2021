@@ -8,38 +8,30 @@ import blue from "./assets/img/archives/blue.jpg"
 import pink from "./assets/img/archives/pink.jpg"
 
 // posters colo
-import feelsRed from "./assets/img/archives/feelsRed.jpg"
 import feelsBlue from "./assets/img/archives/feelsBlue.jpg"
-import killPoster from "./assets/img/archives/killPoster.jpg"
 import volPoster from "./assets/img/archives/volPoster.jpg"
 // posters expo
 import gardenPoster from "./assets/img/archives/gardenPoster.jpg"
 import auraePoster from "./assets/img/archives/auraePoster.jpg"
 import gardenTickets from "./assets/img/archives/gardenTickets.jpg"
 import auraeTickets from "./assets/img/archives/auraeTickets.jpg"
-import auraeKit from "./assets/img/archives/auraeKit.jpg"
+
+import sylviaWeb from "./assets/img/archives/sylvia-web.jpg"
 
 // processing
 import lila from "./assets/img/archives/lila.jpg"
-import distortion from "./assets/img/archives/distortion.jpg"
 import Blob from "./assets/img/archives/blob.jpg"
 
 // ghibli/game
-import mandala from "./assets/img/archives/mandala.jpg"
 import kaonashi from "./assets/img/archives/kaonashi.jpg"
 import mononoke from "./assets/img/archives/mononoke.jpg"
-import acnh from "./assets/img/archives/acnh.jpg"
 
 // UI
 import elijah from "./assets/img/archives/elijah.jpg"
 import designr from "./assets/img/archives/designr.jpg"
 
 // Edito
-import parallele from "./assets/img/archives/parallele.jpg"
 import zero from "./assets/img/archives/zero.jpg"
-
-// 3D
-import isometricRoom from "./assets/img/archives/isometricRoom.jpg"
 
 // myself
 import selfBranding from "./assets/img/archives/selfBranding.jpg"
@@ -47,17 +39,12 @@ import selfCard from "./assets/img/archives/selfCard.jpg"
 
 
 // 2022
-import room2 from "./assets/img/archives/room2.jpg"
-import voxel from "./assets/img/archives/voxel.jpg"
 import planetaria from "./assets/img/archives/planetaria.jpg"
 import peaches from "./assets/img/archives/peaches.jpg"
 import apollo from "./assets/img/archives/apollo.jpg"
 
 // IA
-
-import i4 from "./assets/img/archives/i4.png"
-import i5 from "./assets/img/archives/i5.png"
-import i6 from "./assets/img/archives/i6.png"
+import i7 from "./assets/img/archives/i7.png"
 
 let archivesData = [
   {
@@ -68,10 +55,10 @@ let archivesData = [
     websiteLink: "https://www.cathydolle.com/works/bohinc",
   },
   {
-    name: "Chrome 0.4",
-    coverImg: i4,
-    type: "IA",
-    description: "Generated with MidJourney",
+    name: "sylvia website",
+    coverImg: sylviaWeb,
+    type: "UI Design",
+    websiteLink: "https://sylvia-clothes.netlify.app/",
   },
   {
     name: "elijah",
@@ -88,8 +75,8 @@ let archivesData = [
     websiteLink: "https://www.cathydolle.com/works/bohinc",
   },
   {
-    name: "Chrome 0.6",
-    coverImg: i6,
+    name: "Chrome 0.7",
+    coverImg: i7,
     type: "IA",
     description: "Generated with MidJourney",
   },
@@ -107,24 +94,6 @@ let archivesData = [
     description: "This is black is an UI composition inspired by MarcZeni. I used Zhong Lin's Picture for this design, an amazing photographer.",
   },
   {
-    name: "Isometric 3D room",
-    coverImg: isometricRoom,
-    type: "3D",
-    description: "This is my first 3D creation using Blender. Thanks to PolygonRunaway for his amazing course.",
-  },
-  {
-    name: "Magica Voxel",
-    coverImg: voxel,
-    type: "3D",
-    description: "I had to create a level for the game Monument Valley, so I decided to create a Japanese map inspired from Le Voyage de Chihiro. I used Magica Voxel for that.",
-  },
-  {
-    name: "Chrome 0.5",
-    coverImg: i5,
-    type: "IA",
-    description: "Generated with MidJourney",
-  },
-  {
     name: "DesignR",
     coverImg: designr,
     type: "ui",
@@ -132,30 +101,10 @@ let archivesData = [
     websiteLink: "https://designr.cathydolle.com/",
   },
   {
-    name: "My room in 3D",
-    coverImg: room2,
-    type: "3D",
-    description: "I created my room on spline, and put a lot of my passions on it, it was a very nice experience! Love the soft",
-  },
-  {
     name: "Zero10",
     coverImg: zero,
     type: "Print",
     description: "Preview of a magazine page about Fashion digital clothes NFT.",
-  },
-  {
-    name: "My ACNH Island",
-    coverImg: acnh,
-    type: "print",
-    description: "Being a big fan of animal crossing, I always liked to create my own little universe. I find the ACNH version very complete, which has allowed me to expand and develop my creativity. My island named 'Eldia' (a little reference to SNK ;) ) has been recorded in a video, and viewed over than 1 million times on Youtube !! For those who are curious, don't hesitate to watch it :D. All these helped me a lot for my creativity and inspiration, I highly recommend the game for those who don't have it ^-^",
-    websiteLink: "https://www.youtube.com/watch?v=QbiMWZTUefU&t=31s",
-  },
-  {
-    name: "Aurae Kit",
-    coverImg: auraeKit,
-    type: "print",
-    description: "Summer edition : Aurae Exposition for 5SENS, an experimental fictive place. Picture by Yomagick. If you want to see the project you can check my case study.",
-    websiteLink: "https://www.cathydolle.com/works/sens",
   },
   {
     name: "Business Card",
@@ -243,47 +192,10 @@ let archivesData = [
     websiteLink: "https://www.cathydolle.com/works/feels",
   },
   {
-    name: "kill Poster geometry print",
-    coverImg: killPoster,
-    type: "Print",
-    description: "Creation of a poster, the 'killPoster' pattern was generated with my code on Processing",
-  },
-  {
-    name: "Parallele magazine",
-    coverImg: parallele,
-    type: "Print",
-    description: "Realization of a cover for the magazine 'parallele', art in the culture of science.",
-  },
-  // {
-  //   name: "Flamalice portfolio",
-  //   coverImg: flamalice,
-  //   type: "website",
-  //   description: "Portfolio I designed and developed for the artist Flamalice",
-  //   websiteLink: "https://flamalice.com/",
-  // },
-  {
-    name: "Feels Red",
-    coverImg: feelsRed,
-    type: "processing",
-    description: "Post and pattern create and generate with a code on Processing, red palette. If you want to see more you can check my Feel's case study.",
-    websiteLink: "https://www.cathydolle.com/works/feels",
-  },
-  {
     name: "Kaonashi human",
     coverImg: kaonashi,
     type: "Illustration",
     description: "Drawing made on a graphic tablet on the illustrator software, inspired by Suzani",
-  },
-  {
-    name: "Mandala",
-    coverImg: mandala,
-    type: "Illustrator",
-    description: "Mandala made on Illustrator for a homework, using the main elements of the movie 'Spirited Away'.",
-  },
-  {
-    name: "Distorsion Processing",
-    coverImg: distortion,
-    description: "Creating a distortion canva on Processing",
   },
   {
     name: "Princess Mononoke",

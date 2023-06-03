@@ -19,15 +19,19 @@ const StyledStyleSwitcher = styled.div`
   align-items: center;
   ${horizontalPadding};
   pointer-events: none;
+  mix-blend-mode: difference;
   color: ${({ theme }) => theme.colors.text.standard};
   font-family: "NeueMontrealRegular";
   font-size: 12px;
+  @media (max-width: 800px) {
+    justify-content: flex-start;
+  }
   .theme-toggle {
     pointer-events: auto;
-    background-color: ${({ theme }) => theme.colors.text.standard};
+    background-color: white;
     border-radius: 30px;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     transition: background-color 0.4s;
   }
   /* .reel{
@@ -68,7 +72,7 @@ const StyledStyleSwitcher = styled.div`
     align-items: center;
     position: absolute;
     right: 2vw;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     button{
       font-size: 10px;
       padding: 8px;
@@ -85,12 +89,13 @@ const StyledStyleSwitcher = styled.div`
         margin: 0 14px;
         text-transform: uppercase;
         font-size: 12px;
-        color: ${({ theme }) => theme.colors.text.disabled};
+        color: #ffffff69;
         @media (max-width: 800px) {
-          padding: 10px 20px;
+          margin: 0;
+          margin-right: 16px;
         }
         &.active{
-          color: ${({ theme }) => theme.colors.text.standard};
+          color: white;
           text-decoration : line-through;
         }
   }
