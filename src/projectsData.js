@@ -41,6 +41,11 @@ import sylviaCover from "./assets/img/works/covers/sylvia.jpg"
 import sylviaCoverSmall from "./assets/img/works/covers-small/sylvia-min.jpg"
 import sylviaVisual1 from "./assets/img/works/sylvia/visual1.jpeg"
 
+import Eden from "./components/projects/Eden"
+import edenCover from "./assets/img/works/covers/eden.jpg"
+import edenCoverSmall from "./assets/img/works/covers-small/eden-min.jpg"
+import edenVisual1 from "./assets/img/works/eden/visual1.jpg"
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -55,6 +60,20 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop, Protopie"],
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },  
+  {
+    name: "Eden",
+    path: "eden",
+    title: "Nature & Tech",
+    coverImg: edenCover,
+    coverImgSmall: edenCoverSmall,
+    visual1: edenVisual1,
+    component: Eden,
+    date: "June 2023",
+    role: "Designer",
+    techs: ["Midjourney, Photoshop, Figma"],
+    description:
+      "Eden is a new way to inspire designer  et creatives with help of AI like midjourney or stable diffusion. We tried it on the Spring 2012 Collection of KOCHE a Famous fashion brand from Paris. This Collection mix Tech & Nature.",
   },  
   {
     name: "Type",
