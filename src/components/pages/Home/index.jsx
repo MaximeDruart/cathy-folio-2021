@@ -12,7 +12,7 @@ import TextSpawn from "../../shared/TextSpawn"
 import FullImage from "../../shared/FullImage"
 import { marginPage } from "../../../styles/globalCustom"
 
-import twitch from "../../../assets/img/about/desk.png"
+import twitch from "../../../assets/img/about/flower.jpg"
 import resume from "../../../assets/img/about/resume.pdf"
 
 const StyledHome = styled.div`

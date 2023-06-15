@@ -64,7 +64,7 @@ let projectsData = [
   {
     name: "Eden",
     path: "eden",
-    title: "Nature & Tech",
+    title: "Nature &",
     coverImg: edenCover,
     coverImgSmall: edenCoverSmall,
     visual1: edenVisual1,
