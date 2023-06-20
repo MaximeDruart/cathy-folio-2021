@@ -166,7 +166,6 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 16px 16px 0 0;
 
     }
     .block{

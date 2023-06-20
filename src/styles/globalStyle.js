@@ -1,10 +1,6 @@
 import NeueMontrealLight from "../assets/fonts/NeueMontreal-Light.otf"
 import NeueMontrealRegular from "../assets/fonts/NeueMontreal-Regular.otf"
-import SaolDisplayLight from "../assets/fonts/SaolDisplay-Light.ttf"
-import SaolDisplaySemiboldItalic from "../assets/fonts/SaolDisplay-SemiboldItalic.ttf"
-import Helvetica from "../assets/fonts/Helvetica.ttf"
 import Ginger from "../assets/fonts/Ginger.ttf"
-import DisplayNew from "../assets/fonts/display-new.otf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
@@ -199,22 +195,6 @@ export default createGlobalStyle`
     @font-face {
       font-family: "NeueMontrealRegular";
       src: url(${NeueMontrealRegular});
-    }
-    @font-face {
-      font-family: "SaolDisplayLight";
-      src: url(${SaolDisplayLight});
-    }
-    @font-face {
-      font-family: "SaolDisplaySemiboldItalic";
-      src: url(${SaolDisplaySemiboldItalic});
-    }
-    @font-face {
-      font-family: "Helvetica";
-      src: url(${Helvetica});
-    }
-    @font-face {
-      font-family: "DisplayNew";
-      src: url(${DisplayNew});
     }
     @font-face {
       font-family: "Ginger";

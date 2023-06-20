@@ -10,7 +10,7 @@ import archivesData from "../../archivesData"
 import PageTemplate from "./PageTemplate"
 import { mfIsHoveringCanvas } from "../../store"
 
-import saolFont from "../../assets/fonts/display-new.otf"
+import saolFont from "../../assets/fonts/Ginger.ttf"
 
 import Effects, { myLensDistortionPass } from "../shared/three/Effects"
 
