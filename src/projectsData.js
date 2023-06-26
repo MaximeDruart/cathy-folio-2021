@@ -60,21 +60,7 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop, Protopie"],
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
-  },  
-  {
-    name: "Eden",
-    path: "eden",
-    title: "Nature &",
-    coverImg: edenCover,
-    coverImgSmall: edenCoverSmall,
-    visual1: edenVisual1,
-    component: Eden,
-    date: "June 2023",
-    role: "Designer",
-    techs: ["Midjourney, Photoshop, Figma"],
-    description:
-      "Eden is a new way to inspire designer  et creatives with help of AI like midjourney or stable diffusion. We tried it on the Spring 2012 Collection of KOCHE a Famous fashion brand from Paris. This Collection mix Tech & Nature.",
-  },  
+  },   
   {
     name: "Type",
     path: "Type",
@@ -88,21 +74,6 @@ let projectsData = [
     techs: ["Figma, Photoshop, Protopie"],
     description:
       "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
-  },
-  {
-    name: "Sylvia",
-    path: "Sylvia",
-    title: "Sylvia",
-    coverImg: sylviaCover,
-    coverImgSmall: sylviaCoverSmall,
-    visual1: sylviaVisual1,
-    component: Sylvia,
-    date: "June 2023",
-    role: "Designer",
-    techs: ["Figma, Unreal, Premiere"],
-    description:
-      "Imagine the future of fashion, using scenographie and 3D movement",
-    websiteLink: "https://sylvia-clothes.netlify.app/"
   },
   {
     name: "Bohinc",
@@ -133,6 +104,35 @@ let projectsData = [
       "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
     websiteLink: "https://hublotxtakashi.netlify.app/",
   },
+  {
+    name: "Sylvia",
+    path: "Sylvia",
+    title: "Sylvia",
+    coverImg: sylviaCover,
+    coverImgSmall: sylviaCoverSmall,
+    visual1: sylviaVisual1,
+    component: Sylvia,
+    date: "June 2023",
+    role: "Designer",
+    techs: ["Figma, Unreal, Premiere"],
+    description:
+      "Imagine the future of fashion, using scenographie and 3D movement",
+    websiteLink: "https://sylvia-clothes.netlify.app/"
+  },
+  {
+    name: "Eden",
+    path: "eden",
+    title: "Nature &",
+    coverImg: edenCover,
+    coverImgSmall: edenCoverSmall,
+    visual1: edenVisual1,
+    component: Eden,
+    date: "June 2023",
+    role: "Designer",
+    techs: ["Midjourney, Photoshop, Figma"],
+    description:
+      "Eden is a new way to inspire designer  et creatives with help of AI like midjourney or stable diffusion. We tried it on the Spring 2012 Collection of KOCHE a Famous fashion brand from Paris. This Collection mix Tech & Nature.",
+  }, 
   {
     name: "Arcane",
     path: "arcane",
