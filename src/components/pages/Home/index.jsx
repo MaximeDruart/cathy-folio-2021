@@ -21,9 +21,6 @@ const StyledHome = styled.div`
   }
   background:  ${({ theme }) => theme.colors.background};  
   transition: background-color 0.6s;
-  .button{
-    margin-top: 30px;
-  }
   .hero {
     width: 100vw;
     height: 100vh;

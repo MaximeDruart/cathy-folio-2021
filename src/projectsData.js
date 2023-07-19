@@ -46,6 +46,11 @@ import edenCover from "./assets/img/works/covers/eden.jpg"
 import edenCoverSmall from "./assets/img/works/covers-small/eden-min.jpg"
 import edenVisual1 from "./assets/img/works/eden/visual1.jpg"
 
+import Blossom from "./components/projects/Blossom"
+import BlossomCover from "./assets/img/works/covers/Blossom.jpg"
+import BlossomCoverSmall from "./assets/img/works/covers-small/Blossom-min.jpg"
+import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -61,6 +66,20 @@ let projectsData = [
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },   
+  {
+    name: "Blossom",
+    path: "blossom",
+    title: "Unleash your full potential",
+    coverImg: BlossomCover,
+    coverImgSmall: BlossomCoverSmall,
+    visual1: BlossomVisual1,
+    component: Blossom,
+    date: "June 2023",
+    role: "Designer, Writer",
+    techs: ["Figma, Photoshop, Blender"],
+    description:
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  }, 
   {
     name: "Type",
     path: "Type",

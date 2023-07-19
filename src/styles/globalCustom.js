@@ -205,6 +205,7 @@ export default css`
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: center;
     pointer-events: auto;
     border: solid 1px #96969640;
     /* border-radius: 30px; */
@@ -213,6 +214,7 @@ export default css`
     transition: background-color 0.3s; 
     backdrop-filter: blur(6px);
     font-size: 10px;
+    color: ${({ theme }) => theme.colors.text.standard};
     a{
       padding: 12px 24px;
       color: ${({ theme }) => theme.colors.text.standard};
@@ -226,6 +228,7 @@ export default css`
     }
     &.big{
       padding: 16px 32px;
+      margin-top: 30px;
     }
   }
 
