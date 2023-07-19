@@ -10,7 +10,7 @@ function Thanks(thanks) {
     return (
         <StyledThanks>
             <div className="spacer"></div>
-            <h2 className='text-h2'>Thanks for scrolling</h2>
+            <h2 className='text-h2 serif'>Thanks for scrolling</h2>
             <p className="text-description">{thanks.text}</p>
             <div className="big-spacer"></div>
         </StyledThanks>

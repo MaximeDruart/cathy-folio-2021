@@ -20,6 +20,9 @@ export default css`
       font-size: 40px;
       line-height: 1.1;
     }
+    &.serif{
+      font-family: "Ginger";
+    }
   }
   .text-h2 {
     font-family: "NeueMontrealRegular";
@@ -39,6 +42,9 @@ export default css`
 
     @media (max-width: 480px) {
       font-size: 44px;
+    }
+    &.serif{
+      font-family: "Ginger";
     }
   }
   .text-h2-5 {
@@ -143,6 +149,16 @@ export default css`
     }
   }
 
+  .text-centered{
+    font-family: "Ginger";
+    font-size: 24px;
+    text-align: center;
+    line-height: 130%;
+    span{
+      color: ${({ theme }) => theme.colors.primary1};
+    }
+  }
+
   .text-link{
     text-transform: uppercase;
     font-size: 10px;
@@ -191,7 +207,7 @@ export default css`
     align-items: center;
     pointer-events: auto;
     border: solid 1px #96969640;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     font-family: NeueMontrealRegular;
     text-transform: uppercase;
     transition: background-color 0.3s; 

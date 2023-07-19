@@ -1,6 +1,6 @@
 import NeueMontrealLight from "../assets/fonts/NeueMontreal-Light.otf"
 import NeueMontrealRegular from "../assets/fonts/NeueMontreal-Regular.otf"
-import Ginger from "../assets/fonts/Ginger.ttf"
+import Ginger from "../assets/fonts/Romie-Regular.ttf"
 
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"

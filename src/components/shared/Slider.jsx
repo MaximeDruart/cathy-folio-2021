@@ -10,7 +10,7 @@ const StyledSlider = styled.div`
     width: 250px;
     height: 160px;
     overflow: hidden;
-    border-radius: 100px;
+    /* border-radius: 100px; */
     img {
       width: 100%;
       height: 100%;

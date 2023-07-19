@@ -78,7 +78,7 @@ const StyledHome = styled.div`
               text-transform: uppercase;
               white-space: initial;
               color: ${({ theme }) => theme.colors.text.standard};
-              line-height: 1.8;
+              line-height: 130%;
               letter-spacing: 0.01em;
             }
           }
@@ -162,7 +162,7 @@ const StyledHome = styled.div`
               &::after {
                 top: -30px;
                 right: 0;
-                line-height: 1.8;
+                line-height: 130%;
               }
             }
             .important_word {
@@ -284,9 +284,9 @@ const Home = () => {
         {/* what I do */}
         <div data-aos="fade-up" data-aos-duration="1000" className='home-section what-i-do'>
           <Headline name="what I do"/>
-          <div className='title text-h2-5'>
+          <div className='text-centered'>
             I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design
-            and brand identity. Currently in internship at <span className='saol'>Immersive Garden</span> as Designer
+            and brand identity. <br/>Currently in internship at <span className='saol'>Immersive Garden</span> as Designer
           </div>
           <a className='button big' href={resume} download='cathy_resume.pdf'>
             Download my resume
@@ -314,7 +314,7 @@ const Home = () => {
         {/* twitch */}
         <div className='home-section what-i-do'>
           <Headline name="streaming"/>
-          <div className='title text-h2-5'>
+          <div className='text-centered'>
             I'm also a <span className='saol'>Twitch partner</span> and I stream my work on my Twitch channel
           </div>
           <a className='button big' href='https://www.twitch.tv/katy_v4' target='_blank'>
