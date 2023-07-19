@@ -78,7 +78,7 @@ let projectsData = [
     role: "Designer, Writer",
     techs: ["Figma, Photoshop, Blender"],
     description:
-      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+      "Blossom: A white paper created as part of my final year of Master's in digital creation at ESD Paris, with the objective of guiding individuals to discover their identity through an authentic portfolio",
   }, 
   {
     name: "Type",
