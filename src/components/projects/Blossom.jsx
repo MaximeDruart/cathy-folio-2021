@@ -14,7 +14,7 @@ import visual5 from "../../assets/img/works/blossom/stan.jpg"
 import visual6 from "../../assets/img/works/blossom/typo.jpg"
 import visual7 from "../../assets/img/works/blossom/time.jpg"
 import Headline from "../shared/modules/Headline";
-import ebook from "../../assets/img/works/blossom/ebook.pdf"
+import ebook from "../../assets/img/works/blossom/blossom.pdf"
 import mockup from "../../assets/img/works/blossom/mockup.png"
 
 
