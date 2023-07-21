@@ -56,7 +56,7 @@ const Blossom = () => {
         />
         <Headline name="table of content"/>
         <p className="text-centered">
-        Blossom est composé de <span>13 chapitres</span>, dont les résumés et les <span>objectifs</span> sont téléchargeables<br/>pour faciliter votre projection.
+        Blossom est composé de <span>13 chapitres</span>, dont les résumés et les <span>objectifs</span> sont téléchargeables pour faciliter votre projection.
         </p>
         <a className='button big' href={table} download='table_of_content'>
             table of content
