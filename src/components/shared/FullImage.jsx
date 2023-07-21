@@ -13,7 +13,7 @@ const Container = styled.div`
 const FullImage = ({ src }) => {
   return (
     <Container>
-      <Parallax className="parallax" strength={100} bgImage={src}>
+      <Parallax className="parallax" strength={0} bgImage={src}>
       </Parallax>
     </Container>
   )

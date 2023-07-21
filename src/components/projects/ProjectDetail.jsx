@@ -226,7 +226,7 @@ const ProjectDetail = ({ project }) => {
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
-        <Parallax className="parallax" strength={100} bgImage={project.visual1}>
+        <Parallax className="parallax" strength={0} bgImage={project.visual1}>
         <div className='hero'>
           {/* <motion.img
             onLoad={() => setImageHasLoaded(true)}
