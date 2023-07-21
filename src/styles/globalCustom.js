@@ -154,6 +154,7 @@ export default css`
     font-size: 24px;
     text-align: center;
     line-height: 130%;
+    color: ${({ theme }) => theme.colors.text.standard};
     span{
       color: ${({ theme }) => theme.colors.primary1};
     }
