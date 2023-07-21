@@ -6,16 +6,17 @@ import Solo from "../shared/modules/Solo"
 import Thanks from "../shared/modules/Thanks"
 import fullImage from "../../assets/img/works/blossom/fullImage.jpg"
 import FullImage from "../shared/FullImage"
-import visual1 from "../../assets/img/works/blossom/moodboard.jpg"
-import visual2 from "../../assets/img/works/blossom/compo.jpg"
-import visual3 from "../../assets/img/works/blossom/creation.jpg"
-import visual4 from "../../assets/img/works/blossom/ikigai.jpg"
-import visual5 from "../../assets/img/works/blossom/stan.jpg"
-import visual6 from "../../assets/img/works/blossom/typo.jpg"
-import visual7 from "../../assets/img/works/blossom/time.jpg"
+import visual1 from "../../assets/img/works/blossom/duo1.png"
+import visual2 from "../../assets/img/works/blossom/bio.png"
+import visual3 from "../../assets/img/works/blossom/sommaire.png"
+import visual4 from "../../assets/img/works/blossom/flower.jpg"
+import visual5 from "../../assets/img/works/blossom/flower2.jpg"
 import Headline from "../shared/modules/Headline";
 import ebook from "../../assets/img/works/blossom/blossom.pdf"
+import table from "../../assets/img/works/blossom/table.pdf"
 import mockup from "../../assets/img/works/blossom/mockup.png"
+
+import video1 from "../../assets/img/works/blossom/blossom.mp4"
 
 
 const Blossom = () => {
@@ -26,8 +27,9 @@ const Blossom = () => {
     <section>
       <div className="details">
         <Headline name="blossom book"/>
-        <p className="text-centered">Comment transmettre son <span>identité</span> à travers un portfolio <span>authentique</span> ?<br/>
-        La version de mon livre blanc est accessible gratuitement ci-dessous.</p>
+        <p className="text-centered">
+        Blossom est une invitation à cultiver nos <span>passions</span> intérieures, et à explorer notre <span>identité</span> créative. Il est le fruit d'expérimentation et de recherches, afin de vous guider à dévoiler votre <span>identité</span> à travers un portfolio <span>authentique</span>.
+        </p>
         <a className='button big' href={ebook} download='blossom_ebook.pdf'>
             Download Blossom
         </a>
@@ -35,12 +37,36 @@ const Blossom = () => {
         <Solo
           medias={[
             {
+              type: "video",
+              src: video1
+            },
+            {
                 type: "image",
                 src: mockup
-              },
+            },
             {
               type: "image",
               src: visual1
+            },
+            {
+              type: "image",
+              src: visual4
+            },
+          ]}
+        />
+        <Headline name="table of content"/>
+        <p className="text-centered">
+        Blossom est composé de <span>13 chapitres</span>, dont les résumés et les <span>objectifs</span> sont téléchargeables<br/>pour faciliter votre projection.
+        </p>
+        <a className='button big' href={table} download='table_of_content'>
+            table of content
+        </a>
+        <div className="demi-spacer"/>
+        <Solo
+          medias={[
+            {
+              type: "image",
+              src: visual3
             },
             {
               type: "image",
@@ -48,23 +74,7 @@ const Blossom = () => {
             },
             {
               type: "image",
-              src: visual3
-            },
-            {
-              type: "image",
-              src: visual4
-            },
-            {
-              type: "image",
               src: visual5
-            },
-            {
-                type: "image",
-                src: visual6
-              },
-              {
-                type: "image",
-                src: visual7
             }
           ]}
         />
