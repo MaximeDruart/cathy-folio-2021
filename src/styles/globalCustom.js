@@ -158,6 +158,9 @@ export default css`
     span{
       color: ${({ theme }) => theme.colors.primary1};
     }
+    @media (max-width: 700px) {
+      font-size: 20px;
+    }
   }
 
   .text-link{
