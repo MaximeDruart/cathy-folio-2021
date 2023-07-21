@@ -139,7 +139,7 @@ export default css`
     color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
     font-size: 12px;
-    line-height: 1.2;
+    line-height: 130%;
     opacity: 1;
     @media (max-width: 600px) {
       margin: 10px 0px;

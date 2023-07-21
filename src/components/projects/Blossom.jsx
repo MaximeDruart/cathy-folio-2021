@@ -25,7 +25,7 @@ const Blossom = () => {
   })  
   return (
     <section>
-      <div className="details">
+      <div className="details no-padding">
         <Headline name="blossom book"/>
         <p className="text-centered">
         Blossom est une invitation à cultiver nos <span>passions</span> intérieures, et à explorer notre <span>identité</span> créative. Il est le fruit d'expérimentation et de recherches, afin de vous guider à dévoiler votre <span>identité</span> à travers un portfolio <span>authentique</span>.

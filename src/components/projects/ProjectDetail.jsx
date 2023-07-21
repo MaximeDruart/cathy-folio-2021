@@ -143,6 +143,9 @@ const StyledProjectDetail = styled.div`
     }
     @media (max-width: 600px) {
         padding: 10vh 16px;
+        &.no-padding{
+          padding: 0 16px;
+        }
     }
   }
   img.little {

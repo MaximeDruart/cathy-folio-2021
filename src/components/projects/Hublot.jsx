@@ -31,7 +31,7 @@ const Hublot = () => {
   
   return (
     <section>
-      <div className="details">
+      <div className="details no-padding">
         <Headline name="Homepage"/>
         <Solo
           medias={[

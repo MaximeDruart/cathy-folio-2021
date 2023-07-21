@@ -5,6 +5,9 @@ const StyledHeadline = styled.div`
     width: 100%;
     margin-top: 124px;
     text-align: center;
+    @media (max-width: 769px) {
+        margin-top: 24px;
+    }
     .separator {
         margin-top: 10px;
         margin-bottom: 24px;
