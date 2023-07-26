@@ -49,7 +49,7 @@ const StyledHome = styled.div`
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
         font-size: 114px;
-        line-height: 1.05; 
+        line-height: 110%; 
 
         &.first_line {
           text-align: start;
@@ -124,7 +124,6 @@ const StyledHome = styled.div`
       @media (max-width: 769px) {
         .line {
           font-size: 60px;
-          line-height: 1;
           &.second_line {
             padding-left: 0px;
           }
@@ -147,8 +146,7 @@ const StyledHome = styled.div`
 
       @media (max-width: 500px) {
         .line {
-          font-size: 46px;
-          line-height: 1.3;
+          font-size: 40px;
           &.third_line {
             .slider-container {
               display: flex;
@@ -171,7 +169,7 @@ const StyledHome = styled.div`
 
       @media (max-width: 380px) {
         .line {
-          font-size: 40px;
+          font-size: 38px;
           &.third_line {
             .slider-container {
               display: flex;
