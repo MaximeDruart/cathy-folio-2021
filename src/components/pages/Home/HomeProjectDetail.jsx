@@ -12,6 +12,10 @@ const StyledHomeProjectDetail = styled.div`
     font-size: 12px;
     .index{
       color: ${({ theme }) => theme.colors.text.text};
+      margin-top: 6px;
+      @media (max-width: 769px) {
+        margin-top: 4px;
+      }
     }
     .title {
       margin-left: 30px;

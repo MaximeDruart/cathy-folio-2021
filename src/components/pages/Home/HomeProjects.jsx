@@ -21,7 +21,11 @@ const Container = styled.div`
     .content {
       display: flex;
       .index{
-        font-size: 12px
+        margin-top: 6px;
+        font-size: 12px;
+        @media (max-width: 769px) {
+          margin-top: 4px;
+        }
       }
       .title {
         margin-left: 30px;

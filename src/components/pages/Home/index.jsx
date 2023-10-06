@@ -124,6 +124,7 @@ const StyledHome = styled.div`
       @media (max-width: 769px) {
         .line {
           font-size: 60px;
+          line-height: 100%;
           &.second_line {
             padding-left: 0px;
           }
@@ -152,10 +153,10 @@ const StyledHome = styled.div`
               display: flex;
               justify-content: flex-end;
               width: 100%;
-              top: 100px;
+              top: 130px;
               right: 0;
               &::after {
-                top: -30px;
+                top: -60px;
                 right: 0;
                 line-height: 130%;
               }
