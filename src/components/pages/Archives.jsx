@@ -14,6 +14,8 @@ const StyledArchives = styled.div`
   padding: 20vh 4vw;
   h1{
     margin-bottom: 32px;
+    font-family: Ginger;
+    text-transform: uppercase;
   }
 `
 
@@ -27,7 +29,7 @@ function Archives(props) {
     return (
         <PageTemplate hasFooter={false} initial={{ opacity: 0 }} animate={{ opacity: 1 }} hasTransitionPanel={true}>
             <StyledArchives>
-                <h1 className="text-h2">Archives (07)</h1>
+                <h1 className="text-h2">Archives</h1>
                 <div className="archivesContainer">
                   <ArchivesData number="01" name="Projekt 2023" tag="3D Unreal" date="2023" to="/Projekt2023"/>
                   <ArchivesData number="02" name="Feels" tag="art coding" date="2022" to="/Feels"/>

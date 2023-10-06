@@ -152,6 +152,7 @@ export default css`
   .text-centered{
     font-family: "Ginger";
     font-size: 24px;
+    text-transform: uppercase;
     text-align: center;
     line-height: 130%;
     color: ${({ theme }) => theme.colors.text.standard};

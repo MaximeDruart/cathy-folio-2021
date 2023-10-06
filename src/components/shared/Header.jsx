@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import katy from './../../assets/img/katy.svg'
 import { Link } from "react-router-dom"
 
 import Mail from "../../assets/icons/mail.svg?component"
@@ -18,6 +19,10 @@ const StyledHeader = styled.div`
   z-index: 100;
   a{
     color: white;
+    img{
+      margin: 0 0 4px 1px;
+      width: 72px;
+    }
     @media (max-width: 800px) {
     font-size: 12px;
     }
@@ -46,7 +51,7 @@ const StyledHeader = styled.div`
 const Header = () => {
   return (
     <StyledHeader>
-      <Link to='/' className='text-h6'>CATHY DOLLE<br/><span className="text-description">Paris, France</span></Link>
+      <Link to='/' className='text-h6'><img src={katy} alt='logo'/><br/><span className="text-description">Paris, France</span></Link>
       <nav>
         <Link className="text-h6" to='/about'>( ABOUT ) </Link>
         <div className="mail">
