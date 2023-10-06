@@ -49,7 +49,7 @@ const StyledHome = styled.div`
         letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
         font-size: 114px;
-        line-height: 96%; 
+        line-height: 92%; 
 
         &.first_line {
           text-align: start;
