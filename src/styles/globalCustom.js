@@ -150,7 +150,7 @@ export default css`
   }
 
   .text-centered{
-    font-family: "Neue Montreal";
+    font-family: "NeueMontrealRegular";
     font-size: 20px;
     // text-transform: uppercase;
     text-align: center;
