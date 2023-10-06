@@ -150,11 +150,12 @@ export default css`
   }
 
   .text-centered{
-    font-family: "Ginger";
-    font-size: 24px;
-    text-transform: uppercase;
+    font-family: "Neue Montreal";
+    font-size: 20px;
+    // text-transform: uppercase;
     text-align: center;
     line-height: 130%;
+    font-weight: 400;
     color: ${({ theme }) => theme.colors.text.standard};
     span{
       color: ${({ theme }) => theme.colors.primary1};
