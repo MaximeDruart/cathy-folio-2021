@@ -3,7 +3,7 @@ import { lightColors } from "./colors"
 const lightTheme = {}
 
 lightTheme.colors = {
-  background: "#FFFDF9",
+  background: "#F8F8F8",
   opacity: "#0000008F",
   panel : "#FFFFFF8F",
   placeholder: "#2E2E2E",

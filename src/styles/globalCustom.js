@@ -117,7 +117,7 @@ export default css`
     &.tags{
       padding: 8px 16px;
       border: solid 1px ${({ theme }) => theme.colors.text.disabled2};
-      border-radius: 32px;
+      border-radius: 0px;
       font-size: 10px;
     }
   }
