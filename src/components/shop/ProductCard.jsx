@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+// import Video from '../shared/modules/Video';
 
 const StyledProductCard = styled.div`
     width: calc(100% / 3 - 16px);
@@ -23,7 +24,7 @@ const StyledProductCard = styled.div`
     a.button{
         margin: 8px 0 40px 0 !important;
     }
-    img{
+    img, .video{
         width: 100%;
         aspect-ratio: 3/3.5;
         object-fit: cover;
@@ -33,7 +34,10 @@ const StyledProductCard = styled.div`
 function card(card) {
     return (
         <StyledProductCard  data-aos="fade-up" data-aos-duration="1000">
-            <Link to={card.page}><img src={card.src} alt="img"/></Link>
+            <Link to={card.page}>
+                {/* <Video src={card.src}/> */}
+                <img src={card.src} alt="img"/>
+            </Link>
             <div className="infos">
                 <h5 className="text-h5">{card.name}</h5>
                 <p className="text-regular">{card.price} €</p>

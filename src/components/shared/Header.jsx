@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import katy from './../../assets/img/katy.svg'
-import { Link } from "react-router-dom"
+import { Link , NavLink } from "react-router-dom"
 
 import Mail from "../../assets/icons/mail.svg?component"
 import { horizontalPadding } from "../../styles/globalCustom"
@@ -35,6 +35,11 @@ const StyledHeader = styled.div`
     align-items: center;
     a{
       margin-left: 20px;
+      color: #ffffff69;
+      &.active{
+          color: white;
+          text-decoration : line-through;
+      }
     }
   }
 
@@ -56,8 +61,8 @@ const Header = () => {
     <StyledHeader>
       <Link to='/' className='text-h6'><img src={katy} alt='logo'/><br/><span className="text-description">Paris, France</span></Link>
       <nav>
-        <Link className="text-h6" to='/labs'>( LABS ) </Link>
-        <Link className="text-h6" to='/about'>( ABOUT ) </Link>
+        <NavLink className="text-h6" to='/labs'>( LABS ) </NavLink>
+        <NavLink className="text-h6" to='/about'>( ABOUT ) </NavLink>
         <div className="mail">
           <a href="mailto:cathy.dolle@live.fr"><Mail/></a>
         </div>
