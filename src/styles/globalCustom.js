@@ -167,6 +167,7 @@ export default css`
     }
   }
 
+
   .text-link{
     text-transform: uppercase;
     font-size: 10px;

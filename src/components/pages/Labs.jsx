@@ -33,15 +33,18 @@ const StyledShop = styled.div `
   @media (max-width: 750px) {
     padding-top: 15vh !important;
  }
-  h1{
+ p.desc{
+    margin-top: 10px;
     margin-bottom: 64px;
+    opacity: 0.6;
+  }
+  h1{
     span{
         font-family: Ginger;
         font-size: 50px;
     }
     @media (max-width: 750px) {
       font-size: 32px;
-      margin-bottom: 40px;
       span{
         font-size: 36px;
     }
@@ -61,6 +64,7 @@ function Shop() {
     return (
         <StyledShop>
             <h1 className="text-h2">[KT.<span>LABS</span>]</h1>
+            <p className="text-regular desc">Laboratoire d'expérimentation <span>créative</span>.</p>
             {/* <img className="logo" src={logo} alt="logo"/> */}
             <div className="product_list">
                 <ProductCard link="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" 

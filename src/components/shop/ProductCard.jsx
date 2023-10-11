@@ -21,7 +21,7 @@ const StyledProductCard = styled.div`
         justify-content: space-between;
     }
     a.button{
-        margin: 20px 0 !important;
+        margin: 8px 0 40px 0 !important;
     }
     img{
         width: 100%;

@@ -56,7 +56,7 @@ const Header = () => {
     <StyledHeader>
       <Link to='/' className='text-h6'><img src={katy} alt='logo'/><br/><span className="text-description">Paris, France</span></Link>
       <nav>
-        <Link className="text-h6" to='/shop'>( SHOP ) </Link>
+        <Link className="text-h6" to='/labs'>( LABS ) </Link>
         <Link className="text-h6" to='/about'>( ABOUT ) </Link>
         <div className="mail">
           <a href="mailto:cathy.dolle@live.fr"><Mail/></a>
