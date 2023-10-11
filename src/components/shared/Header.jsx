@@ -19,7 +19,6 @@ const StyledHeader = styled.div`
   z-index: 100;
   a{
     color: white;
-    margin-left: 20px;
     img{
       margin: 0 0 4px 1px;
       width: 72px;
@@ -34,6 +33,9 @@ const StyledHeader = styled.div`
   nav{
     display: flex;
     align-items: center;
+    a{
+      margin-left: 20px;
+    }
   }
 
   .logo {

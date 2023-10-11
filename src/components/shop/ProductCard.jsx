@@ -28,7 +28,7 @@ const StyledProductCard = styled.div`
 
 function card(card) {
     return (
-        <StyledProductCard>
+        <StyledProductCard  data-aos="fade-up" data-aos-duration="1000">
             <img src={card.src} alt="img"/>
             <div className="infos">
                 <h5 className="text-h5">[Product Name]</h5>

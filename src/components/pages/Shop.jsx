@@ -24,9 +24,12 @@ const StyledShop = styled.div `
   align-items: center;
   padding-top: 10vh !important;
   padding-bottom: 10vh !important;
-  .logo{
+  /* .logo{
     width: 100px;
     mix-blend-mode: difference;
+    margin-bottom: 64px;
+  } */
+  h1{
     margin-bottom: 64px;
   }
   .product_list{
@@ -42,8 +45,8 @@ const StyledShop = styled.div `
 function Shop() {
     return (
         <StyledShop>
-            {/* <h1 className="text-h1 serif">Featured</h1> */}
-            <img className="logo" src={logo} alt="logo"/>
+            <h1 className="text-h2">[KT.LABS]</h1>
+            {/* <img className="logo" src={logo} alt="logo"/> */}
             <div className="product_list">
                 <ProductCard src={blossom}/>
                 <ProductCard src={soon}/>
