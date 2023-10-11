@@ -190,6 +190,9 @@ const StyledProjectDetail = styled.div`
       letter-spacing: 0;
       h4{
         color: white;
+        margin-top: 16px;
+        opacity: 0.5;
+        font-size: 16px;
       }
       @media (max-width: 900px) {
         font-size: 80px;

@@ -8,7 +8,8 @@ const StyledProductCard = styled.div`
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
     @media screen and (max-width: 1200px) {
         width: calc(100% / 2 - 16px);
@@ -22,7 +23,7 @@ const StyledProductCard = styled.div`
         justify-content: space-between;
     }
     a.button{
-        margin: 8px 0 40px 0 !important;
+        margin: 16px 0 40px 0 !important;
     }
     img, .video{
         width: 100%;

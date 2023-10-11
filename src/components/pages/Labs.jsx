@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { marginPage } from '../../styles/globalCustom';
 import ProductCard from '../shop/ProductCard';
-// import logo from './../../assets/img/shop/logo.svg'
+import logo from './../../assets/img/shop/logo.svg'
 import soon from './../../assets/img/shop/soon.jpg'
 import soon2 from './../../assets/img/shop/soon_purple.jpg'
 import blossom from './../../assets/img/shop/blossom.jpg'
@@ -33,10 +33,13 @@ const StyledShop = styled.div `
   @media (max-width: 750px) {
     padding-top: 15vh !important;
  }
+ .logo{
+    width: 200px;
+    mix-blend-mode: difference;
+ }
  p.desc{
-    margin-top: 6px;
+    margin-top: 8px;
     font-size: 12px;
-    margin-bottom: 64px;
     opacity: 0.6;
   }
   h1{
@@ -52,6 +55,7 @@ const StyledShop = styled.div `
     }
   }
   .product_list{
+    margin-top: 64px;
     width: 100%;
     height: auto;
     display: flex;
@@ -64,24 +68,24 @@ const StyledShop = styled.div `
 function Shop() {
     return (
         <StyledShop>
-            <h1 className="text-h2">[KT.<span>LABS</span>]</h1>
+            <img className="logo" src={logo} alt="logo"/>
+            {/* <h1 className="text-h2">( KT.<span>LABS</span> )</h1> */}
             <p className="text-regular desc">Création, passion, transmission.</p>
-            {/* <img className="logo" src={logo} alt="logo"/> */}
             <div className="product_list">
                 <ProductCard link="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" 
                 src={blossom}
-                name="[BLOSSOM]"
+                name="BLOSSOM"
                 page="/works/blossom"
                 price="29"
                 linkName="pre-order"
                 />
                 <ProductCard src={soon}
-                 name="[????]"
+                 name="( ???? )"
                  price="???"                
                  linkName="locked"
                  />
                 <ProductCard src={soon2}
-                 name="[????]"
+                 name="( ???? )"
                  price="???"
                  linkName="locked"
                  />
