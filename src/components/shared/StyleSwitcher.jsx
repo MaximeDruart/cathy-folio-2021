@@ -33,39 +33,11 @@ const StyledStyleSwitcher = styled.div`
     width: 18px;
     height: 18px;
     transition: background-color 0.4s;
-  }
-  /* .reel{
-    position: relative;
-    pointer-events: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 14px;
-    border-radius: 90px;
-    border: solid 0.5px ${({ theme }) => theme.colors.text.disabled};
-    svg{
-      width: 6px;
-      height: auto;
-      path{
-        fill: ${({ theme }) => theme.colors.text.standard};
-      }
+    @media (max-width: 900px) {
+    width: 10px;
+    height: 10px;
     }
-    &:hover{
-      background-color: ${({ theme }) => theme.colors.text.disabled2};
-    }
-    &::after{
-      text-transform: uppercase;
-      position: absolute;
-      content: 'Play showreel';
-      font-size: 10px;
-      line-height: 1.4;
-      margin-left: 28px;
-      color: ${({ theme }) => theme.colors.text.standard};
-      @media (max-width: 800px){
-        display: none;
-      }
-    }
-  } */
+  } 
   .style{
     display: flex;
     flex-direction: column;

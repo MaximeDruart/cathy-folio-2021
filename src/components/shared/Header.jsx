@@ -19,6 +19,7 @@ const StyledHeader = styled.div`
   z-index: 100;
   a{
     color: white;
+    margin-left: 20px;
     img{
       margin: 0 0 4px 1px;
       width: 72px;
@@ -53,6 +54,7 @@ const Header = () => {
     <StyledHeader>
       <Link to='/' className='text-h6'><img src={katy} alt='logo'/><br/><span className="text-description">Paris, France</span></Link>
       <nav>
+        <Link className="text-h6" to='/shop'>( SHOP ) </Link>
         <Link className="text-h6" to='/about'>( ABOUT ) </Link>
         <div className="mail">
           <a href="mailto:cathy.dolle@live.fr"><Mail/></a>

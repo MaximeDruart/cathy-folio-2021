@@ -26,6 +26,7 @@ import Grissini from './components/archives/Grissini.jsx'
 import Projekt2023 from './components/archives/Projekt2023.jsx'
 import Cyberpunk from './components/archives/Cyberpunk.jsx'
 import Hana from './components/archives/Hana.jsx'
+import Shop from "./components/pages/Shop"
 
 
 
@@ -69,6 +70,7 @@ const App = () => {
                 <Route path='/Grissini' component={Grissini} />
                 <Route path='/chanel' component={Chanel} />
                 <Route path='/about' exact component={Home} />
+                <Route path='/shop' exact component={Shop} />
                 <Route path='/reel' exact component={Reel} />
                 <Route path='/archives' exact component={Archives} />
                 <Route path='/random' exact component={Random} />

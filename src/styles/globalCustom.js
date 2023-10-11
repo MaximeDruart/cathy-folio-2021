@@ -178,7 +178,6 @@ export default css`
   }
 
   .mail{
-    margin-left: 32px;
     svg{
       margin-top: 3px ;
       height: 12px;
