@@ -32,7 +32,6 @@ const StyledArchivesData = styled.div`
             text-align: left;
         }
         &.date{
-            width: 120px;
             align-self: right;
             @media (max-width: 600px) {
                width: 80px;

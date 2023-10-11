@@ -31,6 +31,10 @@ const StyledShop = styled.div `
   } */
   h1{
     margin-bottom: 64px;
+    span{
+        font-family: Ginger;
+        font-size: 50px;
+    }
   }
   .product_list{
     width: 100%;
@@ -45,7 +49,7 @@ const StyledShop = styled.div `
 function Shop() {
     return (
         <StyledShop>
-            <h1 className="text-h2">[KT.LABS]</h1>
+            <h1 className="text-h2">[KT.<span>LABS</span>]</h1>
             {/* <img className="logo" src={logo} alt="logo"/> */}
             <div className="product_list">
                 <ProductCard src={blossom}/>
