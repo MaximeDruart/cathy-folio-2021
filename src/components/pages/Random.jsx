@@ -241,14 +241,14 @@ function ShaderPlane(props) {
 
   const [selfIsOpened, setSelfIsOpened] = useState(false)
 
-  const isSmallDesktop = useMediaQuery("(min-width: 960px) and (max-width: 1240px)")
+  // const isSmallDesktop = useMediaQuery("(min-width: 960px) and (max-width: 1240px)")
   const isTablet = useMediaQuery("(min-width: 480px) and (max-width: 960px)")
   const isMobile = useMediaQuery("(max-width: 479px)")
-  const zoomOffset = {
-    x: isMobile ? 0 : isTablet ? 0 : isSmallDesktop ? 0.8 : 0.7,
-    y: isMobile || isTablet ? -1 : 0,
-    z: isMobile ? 0.99 : isTablet ? 0.8 : isSmallDesktop ? 0.7 : 0.5,
-  }
+  // const zoomOffset = {
+  //   x: isMobile ? 0 : isTablet ? 0 : isSmallDesktop ? 0.8 : 0.7,
+  //   y: isMobile || isTablet ? -1 : 0,
+  //   z: isMobile ? 0.99 : isTablet ? 0.8 : isSmallDesktop ? 0.7 : 0.5,
+  // }
 
   const openTl = useRef(null)
   const closeTl = useRef(null)
@@ -293,39 +293,39 @@ function ShaderPlane(props) {
   }, [])
 
   const openProject = useCallback(() => {
-    controlsRef.current.enabled = false
+    // controlsRef.current.enabled = false
 
-    openTl.current = gsap
-      .timeline({
-        onStart: () => {
-          setSelfIsOpened(true)
-          setHovering(false)
-        },
-        onComplete: () => {
-          projectIsOpened.current = {
-            isOpened: true,
-            id: props.project.id,
-          }
-        },
-      })
-      .to(meshRef.current.position, {
-        x: camera.position.x - zoomOffset.x,
-        y: camera.position.y - zoomOffset.y,
-        z: camera.position.z - zoomOffset.z,
-        duration: 0.5,
-        ease: "Power3.easeOut",
-      })
-      .addLabel("sync", "-=0.3")
-      .set(filterRef.current.position, { z: camera.position.z - 1 }, "sync")
-      .set(clickOutPlaneRef.current.scale, { x: 50, y: 50, z: 50 }, "sync")
-      .to(filterRef.current.material, { opacity: 0.85, duration: 0.3 }, "sync")
-      .to(mapRef.current, { opacity: 0.15 }, "sync")
-      .addLabel("sync2", "-=0.2")
-      .to(domTextRef.current, { opacity: 1, duration: 0.25 }, "sync2")
-      .to(domLinkRef.current, { opacity: 1, duration: 0.25 }, "sync2")
-      .to(textMaterial.current, { opacity: 0 }, "sync")
+    // openTl.current = gsap
+    //   .timeline({
+    //     onStart: () => {
+    //       setSelfIsOpened(true)
+    //       setHovering(false)
+    //     },
+    //     onComplete: () => {
+    //       projectIsOpened.current = {
+    //         isOpened: true,
+    //         id: props.project.id,
+    //       }
+    //     },
+    //   })
+    //   .to(meshRef.current.position, {
+    //     x: camera.position.x - zoomOffset.x,
+    //     y: camera.position.y - zoomOffset.y,
+    //     z: camera.position.z - zoomOffset.z,
+    //     duration: 0.5,
+    //     ease: "Power3.easeOut",
+    //   })
+    //   .addLabel("sync", "-=0.3")
+    //   .set(filterRef.current.position, { z: camera.position.z - 1 }, "sync")
+    //   .set(clickOutPlaneRef.current.scale, { x: 50, y: 50, z: 50 }, "sync")
+    //   .to(filterRef.current.material, { opacity: 0.85, duration: 0.3 }, "sync")
+    //   .to(mapRef.current, { opacity: 0.15 }, "sync")
+    //   .addLabel("sync2", "-=0.2")
+    //   .to(domTextRef.current, { opacity: 1, duration: 0.25 }, "sync2")
+    //   .to(domLinkRef.current, { opacity: 1, duration: 0.25 }, "sync2")
+    //   .to(textMaterial.current, { opacity: 0 }, "sync")
 
-    gsap.to(textMaterial.current, { opacity: 0 })
+    // gsap.to(textMaterial.current, { opacity: 0 })
   }, [])
 
   const clickHandler = useCallback(
@@ -352,7 +352,7 @@ function ShaderPlane(props) {
 
   useFrame((_, delta) => {
     matRef.current.time += delta
-    matRef.current.speed = speed.current * 15
+    matRef.current.speed = speed.current * 1
   })
 
   useLayoutEffect(() => {
@@ -429,15 +429,15 @@ function ShaderPlane(props) {
         className={`archive-item ${selfIsOpened ? "" : "hidden"}`}
       >
         <motion.div className='wrapper'>
-          <div className='title'>{props.project.name}</div>
-          <div className='body'>
+          {/* <div className='title'>{props.project.name}</div> */}
+          {/* <div className='body'>
             <div className='desc'>{props.project.description}</div>
             {(isMobile || isTablet) && props.project.websiteLink && (
               <a className='text-link website-link mobile' href={props.project.websiteLink} target='_blank'>
                 Visit the website
               </a>
             )}
-          </div>
+          </div> */}
         </motion.div>
       </Html>
 
@@ -490,7 +490,7 @@ const Scene = () => {
     const focalValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.3 : 0
     focalStrength.current = lerp(focalStrength.current, focalValue, 0.1, delta)
 
-    let distortionValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.2 : 0
+    let distortionValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.1 : 0
     distortionValue += speed.current * 1
     distortionStrength.current = lerp(distortionStrength.current, distortionValue, 0.2, delta)
     myLensDistortionPass.distortion.set(distortionStrength.current, distortionStrength.current)
