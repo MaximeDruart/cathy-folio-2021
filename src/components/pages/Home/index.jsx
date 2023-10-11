@@ -282,7 +282,7 @@ const Home = () => {
           <Headline name="what I do"/>
           <div className='text-centered'>
             I am a multidisciplinary <span className='saol'>graphic designer</span> based in Paris, focus on web design
-            and brand identity. <br/>Currently in internship at <span className='saol'>Immersive Garden</span> as Designer
+            and brand identity. Currently in internship at <span className='saol'>Immersive Garden</span> as Designer
           </div>
           <a className='button big' href={resume} download='cathy_resume.pdf'>
             Download my resume
@@ -311,7 +311,7 @@ const Home = () => {
         <div className='home-section what-i-do'>
           <Headline name="streaming"/>
           <div className='text-centered'>
-            I'm also a <span className='saol'>Twitch partner</span> and I stream my work on my Twitch channel
+            I also stream my work on <span className='saol'>Twitch</span> feel free to join <span className='saol'>(ɔ◔‿◔)ɔ ♥</span>
           </div>
           <a className='button big' href='https://www.twitch.tv/katy_v4' target='_blank'>
             Twitch.tv/Katy_v4

@@ -156,11 +156,13 @@ export default css`
     text-align: center;
     line-height: 130%;
     font-weight: 400;
+    /* width: 60%; */
     color: ${({ theme }) => theme.colors.text.standard};
     span{
       color: ${({ theme }) => theme.colors.primary1};
     }
-    @media (max-width: 700px) {
+    @media (max-width: 1000px) {
+      width: 100%;
       font-size: 20px;
     }
   }

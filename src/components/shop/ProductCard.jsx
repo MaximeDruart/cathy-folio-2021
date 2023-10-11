@@ -6,7 +6,7 @@ const StyledProductCard = styled.div`
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: center;
     gap: 8px;
     @media screen and (max-width: 1200px) {
         width: calc(100% / 2 - 16px);
@@ -18,6 +18,9 @@ const StyledProductCard = styled.div`
         display: flex;
         width: 100%;
         justify-content: space-between;
+    }
+    a{
+        margin: 20px 0 !important;
     }
     img{
         width: 100%;
@@ -31,9 +34,10 @@ function card(card) {
         <StyledProductCard  data-aos="fade-up" data-aos-duration="1000">
             <img src={card.src} alt="img"/>
             <div className="infos">
-                <h5 className="text-h5">[Product Name]</h5>
+                <h5 className="text-h5">[????]</h5>
                 <p className="text-regular">??? €</p>
             </div>
+            <a className="button big" target="_blank" href={card.link}>Buy now</a>
         </StyledProductCard>
     );
 }

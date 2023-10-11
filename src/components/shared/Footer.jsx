@@ -2,11 +2,13 @@ import { motion } from "framer-motion"
 import React from "react"
 import Headline from "./modules/Headline"
 import styled from "styled-components"
+import { marginPage } from '../../styles/globalCustom';
 
 const Container = styled.div`
+  ${marginPage};
   .home-section {
     margin: 0 auto;
-    width: 80vw;
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
