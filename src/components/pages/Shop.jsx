@@ -4,6 +4,7 @@ import { marginPage } from '../../styles/globalCustom';
 import ProductCard from '../shop/ProductCard';
 // import logo from './../../assets/img/shop/logo.svg'
 import soon from './../../assets/img/shop/soon.jpg'
+import soon2 from './../../assets/img/shop/soon_purple.jpg'
 import blossom from './../../assets/img/shop/blossom.jpg'
 
 
@@ -62,9 +63,23 @@ function Shop() {
             <h1 className="text-h2">[KT.<span>LABS</span>]</h1>
             {/* <img className="logo" src={logo} alt="logo"/> */}
             <div className="product_list">
-                <ProductCard link="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" src={blossom}/>
-                <ProductCard src={soon}/>
-                <ProductCard src={soon}/>
+                <ProductCard link="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" 
+                src={blossom}
+                name="[BLOSSOM]"
+                page="/works/blossom"
+                price="29"
+                linkName="pre-order"
+                />
+                <ProductCard src={soon}
+                 name="[????]"
+                 price="???"                
+                 linkName="locked"
+                 />
+                <ProductCard src={soon2}
+                 name="[????]"
+                 price="???"
+                 linkName="locked"
+                 />
             </div>
         </StyledShop>
     );
