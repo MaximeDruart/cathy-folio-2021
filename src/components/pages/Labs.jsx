@@ -72,7 +72,8 @@ function Shop() {
             {/* <h1 className="text-h2">( KT.<span>LABS</span> )</h1> */}
             <p className="text-regular desc">Création, passion, transmission.</p>
             <div className="product_list">
-                <ProductCard link="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" 
+                <ProductCard 
+                // link="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" 
                 src={blossom}
                 name="BLOSSOM"
                 page="/works/blossom"

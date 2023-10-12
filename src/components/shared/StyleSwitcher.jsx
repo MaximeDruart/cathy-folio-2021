@@ -57,6 +57,13 @@ const StyledStyleSwitcher = styled.div`
   nav{
     pointer-events: auto;
     display: flex;
+    @media (max-width: 700px){
+     a{
+      :nth-child(2){
+      display: none;
+      }
+    }
+    }
     a{
         margin: 0 14px;
         text-transform: uppercase;
