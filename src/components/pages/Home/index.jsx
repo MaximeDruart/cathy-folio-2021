@@ -29,21 +29,19 @@ const StyledHome = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    @media (max-width: 700px) {
-      justify-content: left;
-      ${marginPage};
-    }
-    @media (min-width: 2400px) {
-      scale: 1.4;
+    @media (max-width: 900px) {
+      justify-content: flex-start;
+      ${marginPage}
+      @media (max-width: 700px) {
+      justify-content: flex-start;
+      padding: 0;
+     }
     }
     .text {
       position: relative;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      @media (max-width: 780px) {
-        margin-top: -25vh;
-      }
       .line {
         text-transform: uppercase;
         width: auto;
@@ -81,6 +79,21 @@ const StyledHome = styled.div`
               line-height: 130%;
               letter-spacing: 0.01em;
             }
+            @media (max-width: 900px){
+              position: relative;
+              top: 24px;
+              left: 35vw;
+              .page{
+                display: none;
+              }
+               &::after {
+                display: block;
+                /* width: 50vw; */
+                position: relative;
+                top: 24px;
+                left: 0;
+              }
+            }
           }
         }
 
@@ -92,102 +105,33 @@ const StyledHome = styled.div`
           margin-left: 10px;
         }
       }
-      @media (max-width: 1200px) {
-        .line {
-          font-size: 80px;
-          &.second_line {
-            padding-left: 150px;
-          }
-          &.third_line {
-            padding-left: 80px;
-            .slider-container {
-              right: 20px;
-            }
-          }
-        }
+      /* RESPONSIVE TEXT HERO */
+      @media (max-width: 700px) {
+      justify-content: left;
+      ${marginPage};
       }
-      @media (max-width: 950px) {
-        .line {
-          font-size: 70px;
-          &.second_line {
-            padding-left: 100px;
-          }
-          &.third_line {
-            padding-left: 50px;
-            .slider-container {
-              right: -30px;
-              top: 60px;
-              &:after {
-                top: -50px;
-              }
-            }
-          }
-        }
+      @media (max-width: 1400px) {
+        scale: 0.8;
       }
-      @media (max-width: 769px) {
-        .line {
-          font-size: 60px;
-          line-height: 100%;
-          &.second_line {
-            padding-left: 0px;
-          }
-          &.third_line {
-            padding-left: 0px;
-            .slider-container {
-              display: flex;
-              justify-content: flex-end;
-              width: 100%;
-              top: 90px;
-              right: 0;
-              &::after {
-                top: -14px;
-                left: 0;
-              }
+      /* @media (max-width: 900px) {
+        scale: 0.65;
+      } */
+      @media (max-width: 900px) {
+        scale: 1;
+          .line, &.first_line, &.second_line, &.third_line{
+            font-size: 5rem;
+            line-height: 100%;
+            padding-left: 0 !important;
+            @media (max-width: 700px){
+              font-size: 46px;
+            }
+            @media (max-width: 375px){
+              font-size: 36px;
             }
           }
         }
-      }
-
-      @media (max-width: 500px) {
-        .line {
-          font-size: 40px;
-          &.third_line {
-            .slider-container {
-              display: flex;
-              justify-content: flex-end;
-              width: 100%;
-              top: 130px;
-              right: 0;
-              &::after {
-                top: -60px;
-                right: 0;
-                line-height: 130%;
-              }
-            }
-            .important_word {
-              margin-left: 5px;
-            }
-          }
-        }
-      }
-
-      @media (max-width: 380px) {
-        .line {
-          font-size: 38px;
-          &.third_line {
-            .slider-container {
-              display: flex;
-              justify-content: flex-end;
-              width: 100%;
-              top: 112px;
-              right: 0;
-              &::after {
-                top: -60px;
-                right: 0;
-              }
-            }
-          }
-        }
+      @media (min-width: 2400px) {
+        scale: 1.4;
       }
     }
 

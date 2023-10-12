@@ -284,7 +284,7 @@ export const marginPage = css`
   padding: 0 10vw;
 
   @media (max-width: 769px) {
-    padding: 0 20px;
+    padding: 0 6vw;
   }
 `
 
@@ -293,10 +293,10 @@ export const horizontalPadding = css`
   padding: 0 4vw;
 
   @media (max-width: 769px) {
-    padding: 0 20px;
+    padding: 0 6vw;
   }
 
   @media (max-width: 480px) {
-    padding: 0 20px;
+    padding: 0 6vw;
   }
 `
