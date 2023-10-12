@@ -151,7 +151,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a className="text-link" href='https://discord.com/users/169782332247506944' target='_blank'>
+              <a className="text-link" href='https://discord.gg/MNSR6Cxpk2' target='_blank'>
                 discord
               </a>
             </li>

@@ -12,7 +12,7 @@ import visual3 from "../../assets/img/works/blossom/sommaire.png"
 import visual4 from "../../assets/img/works/blossom/flower.jpg"
 import visual5 from "../../assets/img/works/blossom/flower2.jpg"
 import Headline from "../shared/modules/Headline";
-import ebook from "../../assets/img/works/blossom/blossom.pdf"
+// import ebook from "../../assets/img/works/blossom/blossom.pdf"
 import table from "../../assets/img/works/blossom/table.pdf"
 import mockup from "../../assets/img/works/blossom/mockup.png"
 

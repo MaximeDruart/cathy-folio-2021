@@ -156,7 +156,8 @@ export default css`
     text-align: center;
     line-height: 130%;
     font-weight: 400;
-    /* width: 60%; */
+    align-self: center;
+    width: 80%;
     color: ${({ theme }) => theme.colors.text.standard};
     span{
       color: ${({ theme }) => theme.colors.primary1};
