@@ -292,7 +292,7 @@ function ShaderPlane(props) {
       .to(domLinkRef.current, { opacity: 0, duration: 0.25 }, "sync1")
   }, [])
 
-  const openProject = useCallback(() => {
+  // const openProject = useCallback(() => {
     // controlsRef.current.enabled = false
 
     // openTl.current = gsap
@@ -326,7 +326,7 @@ function ShaderPlane(props) {
     //   .to(textMaterial.current, { opacity: 0 }, "sync")
 
     // gsap.to(textMaterial.current, { opacity: 0 })
-  }, [])
+  // }, [])
 
   const clickHandler = useCallback(
     (e) => {
@@ -335,11 +335,14 @@ function ShaderPlane(props) {
 
       if (projectIsOpened.current.isOpened && !selfIsOpened) {
         closeProject()
-      } else {
-        openProject()
-      }
+      } 
+      // else {
+        // openProject()
+      // }
     },
-    [closeProject, openProject]
+    [closeProject
+      // , openProject
+    ]
   )
 
   const handleClickOut = useCallback(() => {
@@ -348,7 +351,9 @@ function ShaderPlane(props) {
     if (projectIsOpened.current.isOpened && !selfIsOpened) {
       closeProject()
     }
-  }, [closeProject, openProject])
+  }, [closeProject
+    // , openProject
+  ])
 
   useFrame((_, delta) => {
     matRef.current.time += delta
@@ -428,7 +433,7 @@ function ShaderPlane(props) {
         position={isMobile || isTablet ? [-width / 2, -height / 2, 0] : [width / 2, height / 2, 0]}
         className={`archive-item ${selfIsOpened ? "" : "hidden"}`}
       >
-        <motion.div className='wrapper'>
+        {/* <motion.div className='wrapper'> */}
           {/* <div className='title'>{props.project.name}</div> */}
           {/* <div className='body'>
             <div className='desc'>{props.project.description}</div>
@@ -438,7 +443,7 @@ function ShaderPlane(props) {
               </a>
             )}
           </div> */}
-        </motion.div>
+        {/* </motion.div> */}
       </Html>
 
       <Html
@@ -491,7 +496,7 @@ const Scene = () => {
     focalStrength.current = lerp(focalStrength.current, focalValue, 0.1, delta)
 
     // plane sensi
-    let distortionValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.2 : 0
+    let distortionValue = isHolding.current && !projectIsOpened.current.isOpened ? 0 : 0
     distortionValue += speed.current * 1
     distortionStrength.current = lerp(distortionStrength.current, distortionValue, 0.2, delta)
     myLensDistortionPass.distortion.set(distortionStrength.current, distortionStrength.current)
@@ -517,6 +522,7 @@ const Scene = () => {
 
       camBox.current = visibleBox(camera, 0)
 
+      // taille cam box
       mapPosRef.current.style.width = camBox.current.width * 7 + "px"
       mapPosRef.current.style.height = camBox.current.height * 7 + "px"
     }

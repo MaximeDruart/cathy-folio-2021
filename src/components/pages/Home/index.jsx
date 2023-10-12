@@ -33,6 +33,9 @@ const StyledHome = styled.div`
       justify-content: left;
       ${marginPage};
     }
+    @media (min-width: 2400px) {
+      scale: 1.4;
+    }
     .text {
       position: relative;
       display: flex;
