@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { marginPage } from '../../styles/globalCustom';
 import ProductCard from '../shop/ProductCard';
 import logo from './../../assets/img/shop/logo.svg'
-import soon from './../../assets/img/shop/soon.jpg'
-import soon2 from './../../assets/img/shop/soon_purple.jpg'
+import chess from './../../assets/img/shop/chess.jpg'
+import keycaps from './../../assets/img/shop/keycaps.jpg'
 import blossom from './../../assets/img/shop/blossom.jpg'
 
 
@@ -80,15 +80,17 @@ function Shop() {
                 price="29"
                 linkName="pre-order"
                 />
-                <ProductCard src={soon}
-                 name="( ???? )"
-                 price="???"                
+                <ProductCard src={chess}
+                 name="CHESS GAME"
+                 price="???"   
+                //  page="/works/chess"     
                  linkName="locked"
                  />
-                <ProductCard src={soon2}
-                 name="( ???? )"
+                <ProductCard src={keycaps}
+                 name="KEYCAPS"
                  price="???"
                  linkName="locked"
+                //  page="/works/keycaps"     
                  />
             </div>
         </StyledShop>

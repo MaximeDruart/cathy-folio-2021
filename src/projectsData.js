@@ -51,6 +51,17 @@ import BlossomCover from "./assets/img/works/covers/Blossom.jpg"
 import BlossomCoverSmall from "./assets/img/works/covers-small/Blossom-min.jpg"
 import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
 
+import Chess from "./components/projects/Chess"
+import ChessCover from "./assets/img/works/covers/Chess.jpg"
+import ChessCoverSmall from "./assets/img/works/covers-small/Chess-min.jpg"
+import ChessVisual1 from "./assets/img/works/Chess/visual1.jpg"
+
+
+import Keycaps from "./components/projects/Keycaps"
+import KeycapsCover from "./assets/img/works/covers/Keycaps.jpg"
+import KeycapsCoverSmall from "./assets/img/works/covers-small/Keycaps-min.jpg"
+import KeycapsVisual1 from "./assets/img/works/Keycaps/visual1.jpg"
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -193,7 +204,35 @@ let projectsData = [
     techs: ["Illustrator, Photoshop"],
     description:
       "Creation of poster for an art center: musical cultures and experiments, in an exceptional architectural building.",
-  }
+  },
+  // {
+  //   name: "Chess",
+  //   path: "Chess",
+  //   title: "Chess Game",
+  //   coverImg: ChessCover,
+  //   coverImgSmall: ChessCoverSmall,
+  //   visual1: ChessVisual1,
+  //   component: Chess,
+  //   date: "Nov. 2023",
+  //   role: "DA, Designer",
+  //   techs: ["Figma, Photoshop"],
+  //   description:
+  //     "????",
+  // },
+  // {
+  //   name: "Keycaps",
+  //   path: "Keycaps",
+  //   title: "Keycaps Game",
+  //   coverImg: KeycapsCover,
+  //   coverImgSmall: KeycapsCoverSmall,
+  //   visual1: KeycapsVisual1,
+  //   component: Keycaps,
+  //   date: "Nov. 2023",
+  //   role: "DA, Designer",
+  //   techs: ["Figma, Photoshop"],
+  //   description:
+  //     "????",
+  // }
 ]
 
 projectsData = projectsData.map((project, index) => ({
