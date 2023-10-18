@@ -219,20 +219,20 @@ let projectsData = [
   //   description:
   //     "????",
   // },
-  // {
-  //   name: "Keycaps",
-  //   path: "Keycaps",
-  //   title: "Keycaps Game",
-  //   coverImg: KeycapsCover,
-  //   coverImgSmall: KeycapsCoverSmall,
-  //   visual1: KeycapsVisual1,
-  //   component: Keycaps,
-  //   date: "Nov. 2023",
-  //   role: "DA, Designer",
-  //   techs: ["Figma, Photoshop"],
-  //   description:
-  //     "????",
-  // }
+  {
+    name: "Keycaps",
+    path: "Keycaps",
+    title: "Keycaps Game",
+    coverImg: KeycapsCover,
+    coverImgSmall: KeycapsCoverSmall,
+    visual1: KeycapsVisual1,
+    component: Keycaps,
+    date: "Nov. 2023",
+    role: "DA, Designer",
+    techs: ["Figma, Photoshop"],
+    description:
+      "????",
+  }
 ]
 
 projectsData = projectsData.map((project, index) => ({
