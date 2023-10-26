@@ -12,7 +12,7 @@ import visual3 from "../../assets/img/works/blossom/sommaire.png"
 import visual4 from "../../assets/img/works/blossom/flower.jpg"
 import visual5 from "../../assets/img/works/blossom/flower2.jpg"
 import Headline from "../shared/modules/Headline";
-// import ebook from "../../assets/img/works/blossom/blossom.pdf"
+import ebook from "../../assets/img/works/blossom/blossom.pdf"
 import table from "../../assets/img/works/blossom/table.pdf"
 import mockup from "../../assets/img/works/blossom/mockup.png"
 
@@ -30,8 +30,8 @@ const Blossom = () => {
         <p className="text-centered">
         Blossom est une invitation à cultiver nos <span>passions</span> intérieures, et à explorer notre <span>identité</span> créative. Il est le fruit d'expérimentation et de recherches, afin de vous guider à dévoiler votre <span>identité</span> à travers un portfolio <span>authentique</span>.
         </p>
-        <a className='button big' href="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" target="_blank">
-            pre-order blossom
+        <a className='button big' href={ebook} download="blossom_ebook" target="_blank">
+            download e-book
         </a>
         <Headline name="preview"/>
         <Solo
