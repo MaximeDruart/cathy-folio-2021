@@ -51,16 +51,21 @@ import BlossomCover from "./assets/img/works/covers/Blossom.jpg"
 import BlossomCoverSmall from "./assets/img/works/covers-small/Blossom-min.jpg"
 import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
 
-import Chess from "./components/projects/Chess"
-import ChessCover from "./assets/img/works/covers/Chess.jpg"
-import ChessCoverSmall from "./assets/img/works/covers-small/Chess-min.jpg"
-import ChessVisual1 from "./assets/img/works/Chess/visual1.jpg"
+// import Chess from "./components/projects/Chess"
+// import ChessCover from "./assets/img/works/covers/Chess.jpg"
+// import ChessCoverSmall from "./assets/img/works/covers-small/Chess-min.jpg"
+// import ChessVisual1 from "./assets/img/works/Chess/visual1.jpg"
 
 
 import Keycaps from "./components/projects/Keycaps"
 import KeycapsCover from "./assets/img/works/covers/Keycaps.jpg"
 import KeycapsCoverSmall from "./assets/img/works/covers-small/Keycaps-min.jpg"
 import KeycapsVisual1 from "./assets/img/works/Keycaps/visual1.jpg"
+
+import Branding from "./components/projects/Branding"
+import BrandingCover from "./assets/img/works/covers/Branding.jpg"
+import BrandingCoverSmall from "./assets/img/works/covers-small/Branding-min.jpg"
+import BrandingVisual1 from "./assets/img/works/Branding/visual1.jpg"
 
 let projectsData = [
   {
@@ -119,6 +124,20 @@ let projectsData = [
     description:
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
+  {
+    name: "Branding",
+    path: "branding",
+    title: "Personal branding identity",
+    coverImg: BrandingCover,
+    coverImgSmall: BrandingCoverSmall,
+    visual1: BrandingVisual1,
+    component: Branding,
+    date: "Oct. 2023",
+    role: "Designer",
+    techs: ["After, Figma, Premiere"],
+    description:
+      "I've crafted a unique personal brand centered around the minimalist theme. Through a careful selection of clean and simple design elements, I've cultivated a distinct image that embodies simplicity, elegance, and clarity. My minimalist aesthetic reflects my commitment to simplicity in both my personal and professional life.",
+  }, 
   {
     name: "Hublot",
     path: "hublot",
