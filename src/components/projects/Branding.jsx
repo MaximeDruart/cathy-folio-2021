@@ -18,7 +18,7 @@ import v5 from "../../assets/img/works/branding/v5.jpg"
 import v6 from "../../assets/img/works/branding/v6.jpg"
 // import v7 from "../../assets/img/works/branding/v7.jpg"
 import v8 from "../../assets/img/works/branding/v8.jpg"
-// import v9 from "../../assets/img/works/branding/v9.jpg"
+import v10 from "../../assets/img/works/branding/v10.jpg"
 
 
 
@@ -55,6 +55,10 @@ function Branding() {
               {
                   type: "image",
                   src: v4
+              },
+              {
+                type: "image",
+                src: v10
               },
             //   {
             //       type: "image",
