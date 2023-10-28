@@ -101,7 +101,7 @@ const Hublot = () => {
     </div>
 
     <Thanks
-        text="Project made withl ove"
+        text="Project made with love"
     /> 
 
     </section>

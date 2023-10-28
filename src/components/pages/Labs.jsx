@@ -11,6 +11,8 @@ import blossom from './../../assets/img/shop/blossom.jpg'
 // import figma_template from './../../assets/img/shop/figma_template.fig'
 import figmaImg from './../../assets/img/shop/figma_starter.jpg'
 import reactImg from './../../assets/img/shop/react_starter.jpg'
+import inspiImg from './../../assets/img/shop/inspi_web.jpg'
+
 import react from 'react';
 
 
@@ -78,14 +80,14 @@ function Shop() {
             {/* <h1 className="text-h2">( KT.<span>LABS</span> )</h1> */}
             <p className="text-regular desc">Création, passion, transmission.</p>
             <div className="product_list">
-                <ProductCard 
+                {/* <ProductCard 
                 // link="https://buy.stripe.com/00gdRA9n7b5ubiU7ss" 
                 src={blossom}
                 name="BLOSSOM"
                 page="/works/blossom"
                 price="29"
                 linkName="WIP..."
-                />
+                /> */}
                 {/* <ProductCard src={chess}
                  name="CHESS GAME"
                  price="???"   
@@ -99,13 +101,18 @@ function Shop() {
                  linkName="locked"
                 //  page="/works/keycaps"     
                  /> */}
+                <ProductCard src={inspiImg}
+                  name="Inspi Web"
+                  price="0.00"
+                  link="https://mica-farm-042.notion.site/Webdesign-103235638be74397b1a561f8d37ae9aa"
+                  linkName="go to notion"   
+                 />
 
                 <ProductCard src={figmaImg}
                   name="Starter Figma"
                   price="0.00"
                   link="https://www.figma.com/file/A6R9JTu0UfdyUOTzxK2yqw/Project-Template?type=design&node-id=0%3A1&mode=design&t=DUrXoJT1e9v0MqP4-1"
                   linkName="go to file"   
-                  download="figma_template"
                  />
 
                 <ProductCard src={reactImg}
@@ -113,7 +120,6 @@ function Shop() {
                   price="0.00"
                   link="https://github.com/CathyDolle/template"
                   linkName="go to github"   
-                  download="react_template"
                  />
             </div>
         </StyledShop>
