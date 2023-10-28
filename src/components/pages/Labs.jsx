@@ -102,7 +102,7 @@ function Shop() {
 
                 <ProductCard src={figmaImg}
                   name="Starter Figma"
-                  price="0.00€"
+                  price="0.00"
                   link="https://www.figma.com/file/A6R9JTu0UfdyUOTzxK2yqw/Project-Template?type=design&node-id=0%3A1&mode=design&t=DUrXoJT1e9v0MqP4-1"
                   linkName="go to file"   
                   download="figma_template"
@@ -110,7 +110,7 @@ function Shop() {
 
                 <ProductCard src={reactImg}
                   name="Starter React"
-                  price="0.00€"
+                  price="0.00"
                   link="https://github.com/CathyDolle/template"
                   linkName="go to github"   
                   download="react_template"
