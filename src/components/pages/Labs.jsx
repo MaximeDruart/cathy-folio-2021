@@ -8,6 +8,11 @@ import vod from './../../assets/img/shop/vod.jpg'
 import keycaps from './../../assets/img/shop/keycaps.jpg'
 import blossom from './../../assets/img/shop/blossom.jpg'
 
+// import figma_template from './../../assets/img/shop/figma_template.fig'
+import figmaImg from './../../assets/img/shop/figma_starter.jpg'
+import reactImg from './../../assets/img/shop/react_starter.jpg'
+import react from 'react';
+
 
 const StyledShop = styled.div `
   * {
@@ -79,7 +84,7 @@ function Shop() {
                 name="BLOSSOM"
                 page="/works/blossom"
                 price="29"
-                linkName="pre-order"
+                linkName="WIP..."
                 />
                 {/* <ProductCard src={chess}
                  name="CHESS GAME"
@@ -87,17 +92,28 @@ function Shop() {
                 //  page="/works/chess"     
                  linkName="locked"
                  /> */}
+{/*                  
                 <ProductCard src={keycaps}
                  name="KEYCAPS"
                  price="???"
                  linkName="locked"
                 //  page="/works/keycaps"     
+                 /> */}
+
+                <ProductCard src={figmaImg}
+                  name="Starter Figma"
+                  price="0.00€"
+                  link="https://www.figma.com/file/A6R9JTu0UfdyUOTzxK2yqw/Project-Template?type=design&node-id=0%3A1&mode=design&t=DUrXoJT1e9v0MqP4-1"
+                  linkName="go to file"   
+                  download="figma_template"
                  />
-                <ProductCard src={vod}
-                 name="Twitch"
-                 price="???"
-                 linkName="locked"
-                //  page="/works/keycaps"     
+
+                <ProductCard src={reactImg}
+                  name="Starter React"
+                  price="0.00€"
+                  link="https://github.com/CathyDolle/template"
+                  linkName="go to github"   
+                  download="react_template"
                  />
             </div>
         </StyledShop>

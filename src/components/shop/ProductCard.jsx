@@ -43,7 +43,7 @@ function card(card) {
                 <h5 className="text-h5">{card.name}</h5>
                 <p className="text-regular">{card.price} €</p>
             </div>
-            <a className="button big" target="_blank" href={card.link}>{card.linkName}</a>
+            <a className="button big" target="_blank" download={card.download} href={card.link}>{card.linkName}</a>
         </StyledProductCard>
     );
 }
