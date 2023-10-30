@@ -19,13 +19,12 @@ import auraeTickets from "./assets/img/archives/auraeTickets.jpg"
 // processing
 import lila from "./assets/img/archives/lila.jpg"
 
-// ghibli/game
-import kaonashi from "./assets/img/archives/kaonashi.jpg"
-import mononoke from "./assets/img/archives/mononoke.jpg"
-
-// UI
-import elijah from "./assets/img/archives/elijah.jpg"
 import designr from "./assets/img/archives/designr.jpg"
+
+// archi
+import archi1 from "./assets/img/archives/archi1.jpg"
+import archi2 from "./assets/img/archives/archi2.jpg"
+import archi3 from "./assets/img/archives/archi3.jpg"
 
 // Edito
 import zero from "./assets/img/archives/zero.jpg"
@@ -57,6 +56,10 @@ let archivesData = [
     coverImg: i7,
   },
   {
+    name: "archi3",
+    coverImg: archi3,
+  },
+  {
     name: "peaches",
     coverImg: peaches,
   },
@@ -67,6 +70,10 @@ let archivesData = [
   {
     name: "DesignR",
     coverImg: designr,
+  },
+  {
+    name: "archi2",
+    coverImg: archi2,
   },
   {
     name: "Zero10",
@@ -117,12 +124,8 @@ let archivesData = [
     coverImg: pink,
   },
   {
-    name: "Kaonashi human",
-    coverImg: kaonashi,
-  },
-  {
-    name: "Princess Mononoke",
-    coverImg: mononoke,
+    name: "archi1",
+    coverImg: archi1,
   },
 ]
 
