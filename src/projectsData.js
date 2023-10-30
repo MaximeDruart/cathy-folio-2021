@@ -67,6 +67,11 @@ import BrandingCover from "./assets/img/works/covers/Branding.jpg"
 import BrandingCoverSmall from "./assets/img/works/covers-small/Branding-min.jpg"
 import BrandingVisual1 from "./assets/img/works/Branding/visual1.jpg"
 
+import Architech from "./components/projects/Architech"
+import ArchitechCover from "./assets/img/works/covers/Architech.jpg"
+import ArchitechCoverSmall from "./assets/img/works/covers-small/Architech-min.jpg"
+import ArchitechVisual1 from "./assets/img/works/Architech/visual1.webp"
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -81,6 +86,21 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop, Protopie"],
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },   
+  {
+    name: "Architech",
+    path: "Architech",
+    title: "Virtual Architectural Innovation",
+    coverImg: ArchitechCover,
+    coverImgSmall: ArchitechCoverSmall,
+    visual1: ArchitechVisual1,
+    component: Architech,
+    date: "Oct. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, Midjourney, React"],
+    description:
+      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience in under four lines of text.",
+    websiteLink: 'https://archi-tech-v4.netlify.app/'
   },   
   {
     name: "Blossom",
