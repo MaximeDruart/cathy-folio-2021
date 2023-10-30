@@ -57,10 +57,10 @@ import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
 // import ChessVisual1 from "./assets/img/works/Chess/visual1.jpg"
 
 
-import Keycaps from "./components/projects/Keycaps"
-import KeycapsCover from "./assets/img/works/covers/Keycaps.jpg"
-import KeycapsCoverSmall from "./assets/img/works/covers-small/Keycaps-min.jpg"
-import KeycapsVisual1 from "./assets/img/works/Keycaps/visual1.jpg"
+// import Keycaps from "./components/projects/Keycaps"
+// import KeycapsCover from "./assets/img/works/covers/Keycaps.jpg"
+// import KeycapsCoverSmall from "./assets/img/works/covers-small/Keycaps-min.jpg"
+// import KeycapsVisual1 from "./assets/img/works/Keycaps/visual1.jpg"
 
 import Branding from "./components/projects/Branding"
 import BrandingCover from "./assets/img/works/covers/Branding.jpg"
@@ -258,20 +258,20 @@ let projectsData = [
   //   description:
   //     "????",
   // },
-  {
-    name: "Keycaps",
-    path: "Keycaps",
-    title: "Keycaps Game",
-    coverImg: KeycapsCover,
-    coverImgSmall: KeycapsCoverSmall,
-    visual1: KeycapsVisual1,
-    component: Keycaps,
-    date: "Nov. 2023",
-    role: "DA, Designer",
-    techs: ["Figma, Photoshop"],
-    description:
-      "????",
-  }
+  // {
+  //   name: "Keycaps",
+  //   path: "Keycaps",
+  //   title: "Keycaps Game",
+  //   coverImg: KeycapsCover,
+  //   coverImgSmall: KeycapsCoverSmall,
+  //   visual1: KeycapsVisual1,
+  //   component: Keycaps,
+  //   date: "Nov. 2023",
+  //   role: "DA, Designer",
+  //   techs: ["Figma, Photoshop"],
+  //   description:
+  //     "????",
+  // }
 ]
 
 projectsData = projectsData.map((project, index) => ({
