@@ -93,21 +93,6 @@ let projectsData = [
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },   
   {
-    name: "Architech",
-    path: "Architech",
-    title: "Virtual Architectural Innovation",
-    coverImg: ArchitechCover,
-    coverImgSmall: ArchitechCoverSmall,
-    visual1: ArchitechVisual1,
-    component: Architech,
-    date: "Oct. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, Midjourney, React"],
-    description:
-      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
-    websiteLink: 'https://archi-tech-v4.netlify.app/'
-  },   
-  {
     name: "Discogs",
     path: "Discogs",
     title: "Discogs Remastered",
@@ -122,6 +107,21 @@ let projectsData = [
       "In the scope of this project, I completely revamped the Discogs website, specialized in vinyl sales, by giving it a fresh design and developing the platform using React. The aim is to provide an outstanding user experience and redefine the standards in the online vinyl music industry.",
       websiteLink: 'https://discogs-v4.netlify.app/'
   },  
+  {
+    name: "Architech",
+    path: "Architech",
+    title: "Virtual Architectural Innovation",
+    coverImg: ArchitechCover,
+    coverImgSmall: ArchitechCoverSmall,
+    visual1: ArchitechVisual1,
+    component: Architech,
+    date: "Oct. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, Midjourney, React"],
+    description:
+      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
+    websiteLink: 'https://archi-tech-v4.netlify.app/'
+  },   
   {
     name: "Blossom",
     path: "blossom",
