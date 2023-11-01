@@ -99,7 +99,7 @@ let projectsData = [
     role: "Designer, Developer",
     techs: ["Figma, Midjourney, React"],
     description:
-      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience in under four lines of text.",
+      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
     websiteLink: 'https://archi-tech-v4.netlify.app/'
   },   
   {
