@@ -72,6 +72,11 @@ import ArchitechCover from "./assets/img/works/covers/Architech.jpg"
 import ArchitechCoverSmall from "./assets/img/works/covers-small/Architech-min.jpg"
 import ArchitechVisual1 from "./assets/img/works/Architech/visual1.webp"
 
+import Discogs from "./components/projects/Discogs"
+import DiscogsCover from "./assets/img/works/covers/Discogs.jpg"
+import DiscogsCoverSmall from "./assets/img/works/covers-small/Discogs-min.jpg"
+import DiscogsVisual1 from "./assets/img/works/Discogs/visual1.jpg"
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -102,6 +107,21 @@ let projectsData = [
       "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
     websiteLink: 'https://archi-tech-v4.netlify.app/'
   },   
+  {
+    name: "Discogs",
+    path: "Discogs",
+    title: "Discogs Remastered",
+    coverImg: DiscogsCover,
+    coverImgSmall: DiscogsCoverSmall,
+    visual1: DiscogsVisual1,
+    component: Discogs,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "In the scope of this project, I completely revamped the Discogs website, specialized in vinyl sales, by giving it a fresh design and developing the platform using React. The aim is to provide an outstanding user experience and redefine the standards in the online vinyl music industry.",
+      websiteLink: 'https://discogs-v4.netlify.app/'
+  },  
   {
     name: "Blossom",
     path: "blossom",
