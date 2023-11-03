@@ -77,6 +77,13 @@ import DiscogsCover from "./assets/img/works/covers/Discogs.jpg"
 import DiscogsCoverSmall from "./assets/img/works/covers-small/Discogs-min.jpg"
 import DiscogsVisual1 from "./assets/img/works/Discogs/visual1.jpg"
 
+
+import Skincare from "./components/projects/Skincare"
+import SkincareCover from "./assets/img/works/covers/Skincare.jpg"
+import SkincareCoverSmall from "./assets/img/works/covers-small/Skincare-min.jpg"
+import SkincareVisual1 from "./assets/img/works/Skincare/visual1.jpg"
+
+
 let projectsData = [
   {
     name: "Zhong lin",
@@ -92,6 +99,21 @@ let projectsData = [
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },   
+  {
+    name: "Skincare",
+    path: "Skincare",
+    title: "Skincare Remastered",
+    coverImg: SkincareCover,
+    coverImgSmall: SkincareCoverSmall,
+    visual1: SkincareVisual1,
+    component: Skincare,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
+      websiteLink: 'https://skincare-v4.netlify.app/'
+  }, 
   {
     name: "Discogs",
     path: "Discogs",
