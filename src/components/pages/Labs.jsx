@@ -229,9 +229,9 @@ function Shop() {
 
       {/* DIY */}
       <section className="product_list">
-        <Headline name="Free ressources" />
+        <Headline name="Coming soon" />
 
-        {/* SLIDER Ressources */}
+        {/* SLIDER coming soon */}
         <Splide
           options={{
             type: "loop",
