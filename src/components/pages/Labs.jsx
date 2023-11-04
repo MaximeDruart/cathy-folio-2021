@@ -4,6 +4,7 @@ import { marginPage } from "../../styles/globalCustom";
 import ProductCard from "../shop/ProductCard";
 import logo from "./../../assets/img/shop/logo.svg";
 import Headline from "../shared/modules/Headline";
+import PageTemplate from "../pages/PageTemplate";
 
 // SLIDER
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -135,7 +136,7 @@ const StyledShop = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 16px;
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
     .splide {
       margin-left: -10vw;
     }
@@ -164,108 +165,110 @@ const StyledShop = styled.div`
 
 function Shop() {
   return (
-    <StyledShop>
-      <img className="logo" src={logo} alt="logo" />
-      {/* <h1 className="text-h2">( KT.<span>LABS</span> )</h1> */}
-      <p className="text-regular desc">Création, passion, transmission.</p>
+    <PageTemplate hasTransitionPanel={true}>
+      <StyledShop>
+        <img className="logo" src={logo} alt="logo" />
+        {/* <h1 className="text-h2">( KT.<span>LABS</span> )</h1> */}
+        <p className="text-regular desc">Création, passion, transmission.</p>
 
-      {/* FREE RESSOURCES */}
-      <section className="product_list">
-        <Headline name="Free ressources" />
+        {/* FREE RESSOURCES */}
+        <section className="product_list">
+          <Headline name="Free ressources" />
 
-        {/* SLIDER Ressources */}
-        <Splide
-          options={{
-            type: "loop",
-            gap: "64px",
-            drag: "free",
-            autoWidth: true,
-            arrows: false,
-            pagination: false,
-            autoScroll: {
-              pauseOnHover: false,
-              pauseOnFocus: false,
-              rewind: false,
-              speed: 1.5,
-            },
-          }}
-          extensions={{ AutoScroll }}
-        >
-          {listRessources.map((ressource) => (
-            <React.Fragment key={ressource.name}>
-              <SplideSlide>
-                <ProductCard
-                  src={ressource.src}
-                  name={ressource.name}
-                  price={ressource.price}
-                  link={ressource.link}
-                />
-              </SplideSlide>
-              <SplideSlide>
-                <span>{ressource.span}</span>
-              </SplideSlide>
-            </React.Fragment>
-          ))}
-        </Splide>
-      </section>
+          {/* SLIDER Ressources */}
+          <Splide
+            options={{
+              type: "loop",
+              gap: "64px",
+              drag: "free",
+              autoWidth: true,
+              arrows: false,
+              pagination: false,
+              autoScroll: {
+                pauseOnHover: false,
+                pauseOnFocus: false,
+                rewind: false,
+                speed: 1.5,
+              },
+            }}
+            extensions={{ AutoScroll }}
+          >
+            {listRessources.map((ressource) => (
+              <React.Fragment key={ressource.name}>
+                <SplideSlide>
+                  <ProductCard
+                    src={ressource.src}
+                    name={ressource.name}
+                    price={ressource.price}
+                    link={ressource.link}
+                  />
+                </SplideSlide>
+                <SplideSlide>
+                  <span>{ressource.span}</span>
+                </SplideSlide>
+              </React.Fragment>
+            ))}
+          </Splide>
+        </section>
 
-      {/* ARC FOLDERRS */}
-      <section className="product_list">
-        <Headline name="arc folder" />
-        <div className="row_content">
-          {listFolders.map((folder) => (
-            <ProductCard
-              key={folder.name}
-              src={folder.src}
-              folder={folder.folder}
-              name={folder.name}
-              price={folder.price}
-              link={folder.link}
-            />
-          ))}
-        </div>
-        {/* SLIDER DIY */}
-      </section>
+        {/* ARC FOLDERRS */}
+        <section className="product_list">
+          <Headline name="arc folder" />
+          <div className="row_content">
+            {listFolders.map((folder) => (
+              <ProductCard
+                key={folder.name}
+                src={folder.src}
+                folder={folder.folder}
+                name={folder.name}
+                price={folder.price}
+                link={folder.link}
+              />
+            ))}
+          </div>
+          {/* SLIDER DIY */}
+        </section>
 
-      {/* DIY */}
-      <section className="product_list">
-        <Headline name="Coming soon" />
+        {/* DIY */}
+        <section className="product_list">
+          <Headline name="Coming soon" />
 
-        {/* SLIDER coming soon */}
-        <Splide
-          options={{
-            type: "loop",
-            gap: "64px",
-            drag: "free",
-            autoWidth: true,
-            arrows: false,
-            pagination: false,
-            autoScroll: {
-              pauseOnHover: false,
-              pauseOnFocus: false,
-              rewind: false,
-              speed: 1.5,
-            },
-          }}
-          extensions={{ AutoScroll }}
-        >
-          {listProducts.map((product) => (
-            <React.Fragment key={product.name}>
-              <SplideSlide>
-                <ProductCard
-                  src={product.src}
-                  name={product.name}
-                  price={product.price}
-                />
-              </SplideSlide>
-              <SplideSlide>
-                <span>{product.span}</span>
-              </SplideSlide>
-            </React.Fragment>
-          ))}
-        </Splide>
-      </section>
-    </StyledShop>
+          {/* SLIDER coming soon */}
+          <Splide
+            options={{
+              type: "loop",
+              gap: "64px",
+              drag: "free",
+              autoWidth: true,
+              arrows: false,
+              pagination: false,
+              autoScroll: {
+                pauseOnHover: false,
+                pauseOnFocus: false,
+                rewind: false,
+                speed: 1.5,
+              },
+            }}
+            extensions={{ AutoScroll }}
+          >
+            {listProducts.map((product) => (
+              <React.Fragment key={product.name}>
+                <SplideSlide>
+                  <ProductCard
+                    src={product.src}
+                    name={product.name}
+                    price={product.price}
+                  />
+                </SplideSlide>
+                <SplideSlide>
+                  <span>{product.span}</span>
+                </SplideSlide>
+              </React.Fragment>
+            ))}
+          </Splide>
+        </section>
+      </StyledShop>
+    </PageTemplate>
   );
 }
 

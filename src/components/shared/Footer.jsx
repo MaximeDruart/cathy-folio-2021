@@ -14,7 +14,7 @@ const Container = styled.div`
     align-items: center;
   }
   .contact {
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
     padding-bottom: 15vh;
     @media (max-width: 750px) {
       padding-bottom: 12vh;
