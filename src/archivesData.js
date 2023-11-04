@@ -7,18 +7,13 @@ import black from "./assets/img/archives/black.jpg"
 import blue from "./assets/img/archives/blue.jpg"
 import pink from "./assets/img/archives/pink.jpg"
 
-// posters colo
-import volPoster from "./assets/img/archives/volPoster.jpg"
 // posters expo
 import gardenPoster from "./assets/img/archives/gardenPoster.jpg"
-import auraePoster from "./assets/img/archives/auraePoster.jpg"
 import gardenTickets from "./assets/img/archives/gardenTickets.jpg"
-import auraeTickets from "./assets/img/archives/auraeTickets.jpg"
+import auraePoster from "./assets/img/archives/auraePoster.jpg"
 
 
 // processing
-import lila from "./assets/img/archives/lila.jpg"
-
 import designr from "./assets/img/archives/designr.jpg"
 
 // archi
@@ -30,14 +25,18 @@ import archi3 from "./assets/img/archives/archi3.jpg"
 import zero from "./assets/img/archives/zero.jpg"
 
 // myself
-import selfBranding from "./assets/img/archives/selfBranding.jpg"
 import selfCard from "./assets/img/archives/selfCard.jpg"
 
 
 // 2022
-import planetaria from "./assets/img/archives/planetaria.jpg"
 import peaches from "./assets/img/archives/peaches.jpg"
 import apollo from "./assets/img/archives/apollo.jpg"
+
+// 2023
+import discogs from "./assets/img/archives/discogs.jpg"
+import discogs2 from "./assets/img/archives/discogs2.jpg"
+import skincare from "./assets/img/archives/skincare.jpg"
+import skincare2 from "./assets/img/archives/skincare2.jpg"
 
 // IA
 import i7 from "./assets/img/archives/i7.png"
@@ -48,12 +47,16 @@ let archivesData = [
     coverImg: apollo,
   },
   {
-    name: "planetaria",
-    coverImg: planetaria,
+    name: "skincare",
+    coverImg: skincare,
   },
   {
     name: "Chrome 0.7",
     coverImg: i7,
+  },
+  {
+    name: "skincare2",
+    coverImg: skincare2,
   },
   {
     name: "archi3",
@@ -62,6 +65,14 @@ let archivesData = [
   {
     name: "peaches",
     coverImg: peaches,
+  },
+  {
+    name: "discogs",
+    coverImg: discogs,
+  },
+  {
+    name: "discogs2",
+    coverImg: discogs2,
   },
   {
     name: "This is black",
@@ -80,24 +91,16 @@ let archivesData = [
     coverImg: zero,
   },
   {
-    name: "Business Card",
-    coverImg: selfCard,
-  },
-  {
     name: "Aurae poster",
     coverImg: auraePoster,
   },
   {
-    name: "lila",
-    coverImg: lila,
+    name: "selfCard",
+    coverImg: selfCard,
   },
   {
     name: "This is blue",
     coverImg: blue,
-  },
-  {
-    name: "volPoster",
-    coverImg: volPoster,
   },
   {
     name: "Garden poster",
@@ -110,14 +113,6 @@ let archivesData = [
   {
     name: "This is green",
     coverImg: green,
-  },
-  {
-    name: "Self Kit",
-    coverImg: selfBranding,
-  },
-  {
-    name: "Aurae Tickets",
-    coverImg: auraeTickets,
   },
   {
     name: "This is pink",

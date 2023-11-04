@@ -63,7 +63,7 @@ const listFolders = [
     name: "Design",
     price: "0.00",
     link: "https://arc.net/folder/F9B9869D-A2AA-4F42-B08E-76F84599E314",
-  }
+  },
 ];
 
 const listProducts = [
@@ -99,16 +99,22 @@ const StyledShop = styled.div`
   padding-top: 10vh !important;
   padding-bottom: 10vh !important;
   @media (max-width: 750px) {
-    padding-top: 15vh !important;
+    padding-top: 0;
   }
   .logo {
     width: 200px;
     mix-blend-mode: difference;
+    @media (max-width: 750px) {
+      display: none;
+    }
   }
   p.desc {
     margin-top: 8px;
     font-size: 12px;
     opacity: 0.6;
+    @media (max-width: 750px) {
+      display: none;
+    }
   }
   h1 {
     span {
@@ -141,6 +147,9 @@ const StyledShop = styled.div`
       display: flex;
       flex-wrap: wrap;
       gap: 56px;
+      @media (max-width: 750px) {
+        gap: 32px;
+      }
     }
     span {
       font-family: Ginger;
