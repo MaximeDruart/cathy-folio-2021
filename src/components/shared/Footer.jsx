@@ -1,8 +1,8 @@
-import { motion } from "framer-motion"
-import React from "react"
-import Headline from "./modules/Headline"
-import styled from "styled-components"
-import { marginPage } from '../../styles/globalCustom';
+import { motion } from "framer-motion";
+import React from "react";
+import Headline from "./modules/Headline";
+import styled from "styled-components";
+import { marginPage } from "../../styles/globalCustom";
 
 const Container = styled.div`
   ${marginPage};
@@ -98,69 +98,89 @@ const Container = styled.div`
       }
     }
   }
-`
+`;
 
 const item = {
   visible: { y: 0 },
   hidden: { y: "100%" },
-}
+};
 
 const Footer = () => {
   return (
     <Container>
-      <div className='home-section contact'>
-        <Headline name="contact me"/>
-        <div className='footer-body'>
-          <motion.a href='mailto:cathy.dolle@live.fr' className='text-h1'>
+      <div className="home-section contact">
+        <Headline name="contact me" />
+        <div className="footer-body">
+          <motion.a href="mailto:cathy.dolle@live.fr" className="text-h1">
             Drop me an
             <motion.div
-              className='text-h1 important-word'
+              className="text-h1 important-word"
               variants={item}
               exit={item.hidden}
               transition={{ type: "tween", duration: 0.6, ease: "circOut" }}
             >
-              <span className='word'>
+              <span className="word">
                 <span>email</span>
-                <span className='post'>email</span>
+                <span className="post">email</span>
               </span>
             </motion.div>
           </motion.a>
         </div>
-        <div className='separator'></div>
-        <div className='small-line'>
-          <div className='left text-link'>@2021</div>
-          <ul className='socials'>
+        <div className="separator"></div>
+        <div className="small-line">
+          <div className="left text-link">@2021</div>
+          <ul className="socials">
             <li>
-              <a className="text-link" href='https://www.linkedin.com/in/cathy-dolle/?originalSubdomain=fr' target='_blank'>
+              <a
+                className="text-link"
+                href="https://www.linkedin.com/in/cathy-dolle/?originalSubdomain=fr"
+                target="_blank"
+              >
                 linkedin
               </a>
             </li>
             <li>
-              <a className="text-link" href='https://twitter.com/cathydolle' target='_blank'>
+              <a
+                className="text-link"
+                href="https://twitter.com/cathydolle"
+                target="_blank"
+              >
                 twitter
               </a>
             </li>
             <li>
-              <a className="text-link"  href='https://www.instagram.com/cathydolle/' target='_blank'>
+              <a
+                className="text-link"
+                href="https://www.instagram.com/cathydolle/"
+                target="_blank"
+              >
                 instagram
               </a>
             </li>
             <li>
-              <a className="text-link" href='https://www.behance.net/cathydolle' target='_blank'>
+              <a
+                className="text-link"
+                href="https://www.behance.net/cathydolle"
+                target="_blank"
+              >
                 behance
               </a>
             </li>
             <li>
-              <a className="text-link" href='https://discord.gg/MNSR6Cxpk2' target='_blank'>
+              <a
+                className="text-link"
+                href="https://discord.gg/MNSR6Cxpk2"
+                target="_blank"
+              >
                 discord
               </a>
             </li>
           </ul>
-          <div className='right'></div>
+          <div className="right"></div>
         </div>
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

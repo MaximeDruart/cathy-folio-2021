@@ -18,6 +18,7 @@ import inspiImg from "./../../assets/img/shop/inspi_web.jpg";
 import folder from "./../../assets/img/shop/folder.svg";
 import keycaps from "./../../assets/img/shop/keycaps.jpg";
 import blossom from "./../../assets/img/shop/blossom.jpg";
+import blossomPdf from './../../assets/img/works/blossom/blossom.pdf'
 
 const listRessources = [
   {
@@ -64,6 +65,14 @@ const listFolders = [
     name: "Design",
     price: "0.00",
     link: "https://arc.net/folder/F9B9869D-A2AA-4F42-B08E-76F84599E314",
+  },
+  {
+    src: folder,
+    folder: "folder",
+    name: "Free fonts",
+    price: "0.00",
+    link: "/fonts.zip",
+    download: "free fonts"
   },
 ];
 
@@ -223,6 +232,7 @@ function Shop() {
                 name={folder.name}
                 price={folder.price}
                 link={folder.link}
+                download={folder.download}
               />
             ))}
           </div>

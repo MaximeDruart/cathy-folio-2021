@@ -1,19 +1,18 @@
-import { motion, useSpring, useViewportScroll } from "framer-motion"
-import React, { useLayoutEffect, useRef, useState } from "react"
-import styled from "styled-components"
-import PageTemplate from "../pages/PageTemplate"
-import projectsData from "../../projectsData"
-import { Link, useHistory } from "react-router-dom"
-import { Parallax } from "react-parallax"
-
+import { motion, useSpring, useViewportScroll } from "framer-motion";
+import React, { useLayoutEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import PageTemplate from "../pages/PageTemplate";
+import projectsData from "../../projectsData";
+import { Link, useHistory } from "react-router-dom";
+import { Parallax } from "react-parallax";
 
 const StyledProjectDetail = styled.div`
   transition: background-color 0.6s;
-  background:  ${({ theme }) => theme.colors.background};  
-  .parallax{
+  background: ${({ theme }) => theme.colors.background};
+  .parallax {
     width: 100vw;
     height: 100vh;
-    img{
+    img {
       object-fit: cover !important;
       object-position: top;
     }
@@ -26,7 +25,7 @@ const StyledProjectDetail = styled.div`
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    .voile{
+    .voile {
       position: absolute;
       width: 100vw;
       height: 100%;
@@ -36,36 +35,38 @@ const StyledProjectDetail = styled.div`
         opacity: 0.6;
       }
     }
-    .project-description{
+    .project-description {
       mix-blend-mode: difference;
       position: absolute;
       width: 24vw;
-      right : 10vw;
+      right: 10vw;
       height: 100vh;
       padding: 10vh 0;
-      h2, a, h3{
+      h2,
+      a,
+      h3 {
         color: white;
       }
-      .infos{
-        .infos-intro{
-          .text-description{
+      .infos {
+        .infos-intro {
+          .text-description {
             width: 100%;
             margin: 20px 0;
             color: #ffffff69;
           }
         }
-        .infos-column{
+        .infos-column {
           margin-top: 50px;
-          .text-h5{
+          .text-h5 {
             margin: 16px 0 2px 0;
             color: white;
           }
-          .text-h6{
+          .text-h6 {
             color: #ffffff69;
           }
         }
       }
-      .discover{
+      .discover {
         position: absolute;
         bottom: 8vh;
         color: white;
@@ -82,14 +83,15 @@ const StyledProjectDetail = styled.div`
         right: 0;
         display: flex;
         flex-direction: column;
-        text-align:center;
+        text-align: center;
         justify-content: flex-end;
         align-items: center;
         padding: 24vh 10vw;
-        .text-h2{
+        .text-h2 {
           width: 80%;
         }
-        .infos-column, .infos-intro{
+        .infos-column,
+        .infos-intro {
           display: none;
         }
       }
@@ -106,13 +108,13 @@ const StyledProjectDetail = styled.div`
       }
     }
   }
-  img.border{
+  img.border {
     border: solid 1px #ebebeb;
   }
-  video{
+  video {
     width: 100%;
   }
-  .project-description-mobile{
+  .project-description-mobile {
     display: none;
     @media (max-width: 600px) {
       display: block;
@@ -120,15 +122,15 @@ const StyledProjectDetail = styled.div`
       .text-h2 {
         font-size: 32px;
       }
-      .infos-intro{
-        .text-description{
+      .infos-intro {
+        .text-description {
           margin: 10px 0 24px 0;
         }
       }
-      .infos-column{
+      .infos-column {
         margin-top: 48px;
       }
-      .text-h5{
+      .text-h5 {
         margin: 14px 0 2px 0;
       }
     }
@@ -139,13 +141,13 @@ const StyledProjectDetail = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     @media (max-width: 1000px) {
-        padding: 10vh 5vw;
+      padding: 10vh 5vw;
     }
     @media (max-width: 600px) {
-        padding: 10vh 16px;
-        &.no-padding{
-          padding: 0 16px;
-        }
+      padding: 10vh 16px;
+      &.no-padding {
+        padding: 0 16px;
+      }
     }
   }
   img.little {
@@ -169,9 +171,8 @@ const StyledProjectDetail = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-
     }
-    .block{
+    .block {
       width: 100%;
       height: 100%;
     }
@@ -188,7 +189,7 @@ const StyledProjectDetail = styled.div`
       font-family: Ginger;
       white-space: nowrap;
       letter-spacing: 0;
-      h4{
+      h4 {
         color: white;
         /* margin-top: 16px; */
         opacity: 0.7;
@@ -199,22 +200,24 @@ const StyledProjectDetail = styled.div`
       }
     }
   }
-`
+`;
 
 const ProjectDetail = ({ project }) => {
-  const ProjectComponent = project.component
+  const ProjectComponent = project.component;
   // const [imageHasLoaded, setImageHasLoaded] = useState(false)
 
   // const history = useHistory()
 
-  const page = useRef(null)
+  const page = useRef(null);
 
   const pathToNextProject =
-    project.index >= projectsData.length - 1 ? null : `/works/${projectsData[project.index + 1].path}`
+    project.index >= projectsData.length - 1
+      ? null
+      : `/works/${projectsData[project.index + 1].path}`;
 
-  // const { scrollY } = useViewportScroll() 
-  // const physics = { damping: 20, mass: 0.21, stiffness: 100 } 
-  // const spring = useSpring(scrollY, physics) 
+  // const { scrollY } = useViewportScroll()
+  // const physics = { damping: 20, mass: 0.21, stiffness: 100 }
+  // const spring = useSpring(scrollY, physics)
 
   // useLayoutEffect(() => {
   //   const unsubscribeX = spring.onChange((y) => {
@@ -230,70 +233,82 @@ const ProjectDetail = ({ project }) => {
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <StyledProjectDetail ref={page}>
         <Parallax className="parallax" strength={0} bgImage={project.visual1}>
-        <div className='hero'>
-          {/* <motion.img
+          <div className="hero">
+            {/* <motion.img
             onLoad={() => setImageHasLoaded(true)}
             initial={{ opacity: 0 }}
             animate={{ opacity: imageHasLoaded ? 1 : 0 }}
             transition={{ duration: 0.4 }}
             src={project.visual1}
           /> */}
-          <div className="voile"></div>
-          <div data-aos="fade-left" data-aos-duration="800" className="project-description">
-            <h2 className='text-h2 title'>{project.title}</h2>
+            <div className="voile"></div>
+            <div
+              data-aos="fade-left"
+              data-aos-duration="800"
+              className="project-description"
+            >
+              <h2 className="text-h2 title">{project.title}</h2>
               {/* intro */}
-            <div className='infos'>
-              <div className='infos-intro'>
-                <p className='text-description'>{project.description}</p>
-                {project.websiteLink && (
-                  <a className='text-h5 website-link' href={project.websiteLink} target='_blank'>
-                    Visit the website
-                  </a>
-                )}
+              <div className="infos">
+                <div className="infos-intro">
+                  <p className="text-description">{project.description}</p>
+                  {project.websiteLink && (
+                    <a
+                      className="text-h5 website-link"
+                      href={project.websiteLink}
+                      target="_blank"
+                    >
+                      Visit the website
+                    </a>
+                  )}
+                </div>
+                {/* infos */}
+                <div className="infos-column">
+                  <h3 className="text-h5">Date</h3>
+                  <div className="text-h6">{project.date}</div>
+                  <h3 className="text-h5">Roles</h3>
+                  <div className="text-h6">{project.role}</div>
+                  <h3 className="text-h5">Techs</h3>
+                  <div className="text-h6">{project.techs}</div>
+                </div>
               </div>
-              {/* infos */}
-              <div className='infos-column'>
-                <h3 className='text-h5'>Date</h3>
-                <div className='text-h6'>{project.date}</div>
-                <h3 className='text-h5'>Roles</h3>
-                <div className='text-h6'>{project.role}</div>
-                <h3 className='text-h5'>Techs</h3>
-                <div className='text-h6'>{project.techs}</div>
-              </div>
+              <span className="text-small discover">(scroll down)</span>
             </div>
-            <span className="text-small discover">(scroll down)</span>
           </div>
-        </div>
         </Parallax>
         <div className="project-description-mobile">
-              {/* intro */}
-            <div className='infos'>
-              <div className='infos-intro'>
-                <p className='text-description'>{project.description}</p>
-                {project.websiteLink && (
-                  <a className='text-h5 website-link' href={project.websiteLink} target='_blank'>
-                    Visit the website
-                  </a>
-                )}
-              </div>
-              {/* infos */}
-              <div className='infos-column'>
-                <h3 className='text-h5'>Date</h3>
-                <div className='text-h6'>{project.date}</div>
-                <h3 className='text-h5'>Roles</h3>
-                <div className='text-h6'>{project.role}</div>
-                <h3 className='text-h5'>Techs</h3>
-                <div className='text-h6'>{project.techs}</div>
-              </div>
+          {/* intro */}
+          <div className="infos">
+            <div className="infos-intro">
+              <p className="text-description">{project.description}</p>
+              {project.websiteLink && (
+                <a
+                  className="text-h5 website-link"
+                  href={project.websiteLink}
+                  target="_blank"
+                >
+                  Visit the website
+                </a>
+              )}
             </div>
+            {/* infos */}
+            <div className="infos-column">
+              <h3 className="text-h5">Date</h3>
+              <div className="text-h6">{project.date}</div>
+              <h3 className="text-h5">Roles</h3>
+              <div className="text-h6">{project.role}</div>
+              <h3 className="text-h5">Techs</h3>
+              <div className="text-h6">{project.techs}</div>
+            </div>
+          </div>
         </div>
         <ProjectComponent />
         {pathToNextProject && (
-          <Link className='next-project' to={pathToNextProject}>
+          <Link className="next-project" to={pathToNextProject}>
             <img src={projectsData[project.index + 1].coverImg} />
             <div className="voile"></div>
             <div className="block"></div>
-            <div className='text-h1'>
+            <div className="text-h1">
               {projectsData[project.index + 1].name}
               <h4 className="text-h4">Next Project</h4>
             </div>
@@ -301,7 +316,7 @@ const ProjectDetail = ({ project }) => {
         )}
       </StyledProjectDetail>
     </PageTemplate>
-  )
-}
+  );
+};
 
-export default ProjectDetail
+export default ProjectDetail;
