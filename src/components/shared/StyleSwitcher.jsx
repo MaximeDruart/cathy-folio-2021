@@ -86,22 +86,15 @@ const StyleSwitcher = () => {
   const toggleDarkMode = useStore((state) => state.toggleDarkMode)
   return (
     <StyledStyleSwitcher>
-      {/* <Link to='/reel'>
-        <div className="reel">
-          <Play/>
-        </div>
-      </Link> */}
       <nav>
         <NavLink exact to='/'>( Works )</NavLink>
         <NavLink  to="/random">( Random )</NavLink>
-        {/* <NavLink  to="/archives">( Archives )</NavLink> */}
       </nav>
       <div className="style">
         <div className="style">
           <button onClick={toggleDarkMode} className='theme-toggle'>
           </button>
         </div>
-        {/* <ColorPicker /> */}
       </div>
     </StyledStyleSwitcher>
   )

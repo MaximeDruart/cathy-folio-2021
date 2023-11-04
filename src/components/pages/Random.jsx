@@ -1,48 +1,62 @@
-import React, { Suspense, useRef, useState, useEffect, useLayoutEffect, createRef, useCallback } from "react"
-import { Canvas, useFrame, useThree, extend } from "@react-three/fiber"
-import { OrbitControls, Plane, Text, useContextBridge, useTexture, Html } from "@react-three/drei"
-import * as THREE from "three"
-import styled, { ThemeContext, useTheme } from "styled-components"
-import lerp from "@14islands/lerp"
-import gsap from "gsap"
+import React, {
+  Suspense,
+  useRef,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  createRef,
+  useCallback,
+} from "react";
+import { Canvas, useFrame, useThree, extend } from "@react-three/fiber";
+import {
+  OrbitControls,
+  Plane,
+  Text,
+  useContextBridge,
+  useTexture,
+  Html,
+} from "@react-three/drei";
+import * as THREE from "three";
+import styled, { ThemeContext, useTheme } from "styled-components";
+import lerp from "@14islands/lerp";
+import gsap from "gsap";
 
-import archivesData from "../../archivesData"
-import PageTemplate from "./PageTemplate"
-import { mfIsHoveringCanvas } from "../../store"
+import archivesData from "../../archivesData";
+import PageTemplate from "./PageTemplate";
+import { mfIsHoveringCanvas } from "../../store";
 
-import saolFont from "../../assets/fonts/Ginger.ttf"
+import saolFont from "../../assets/fonts/Ginger.ttf";
 
-import Effects, { myLensDistortionPass } from "../shared/three/Effects"
+import Effects, { myLensDistortionPass } from "../shared/three/Effects";
 
-import DistortionMaterial from "../shared/three/DistortionMaterial"
-import { motion } from "framer-motion"
-import { useMediaQuery } from "beautiful-react-hooks"
+import DistortionMaterial from "../shared/three/DistortionMaterial";
+import { motion } from "framer-motion";
+import { useMediaQuery } from "beautiful-react-hooks";
 
+extend({ DistortionMaterial });
 
-extend({ DistortionMaterial })
+const vec3 = new THREE.Vector3();
 
-const vec3 = new THREE.Vector3()
+const filterRef = createRef();
+const controlsRef = createRef();
 
-const filterRef = createRef()
-const controlsRef = createRef()
+const mapRef = createRef();
+const mapPosRef = createRef();
+const mapItemsRef = createRef();
 
-const mapRef = createRef()
-const mapPosRef = createRef()
-const mapItemsRef = createRef()
-
-let speed = createRef(0)
-let projectIsOpened = createRef()
+let speed = createRef(0);
+let projectIsOpened = createRef();
 
 const Container = styled.div`
   height: 100vh;
   width: 100vw;
-  background:  ${({ theme }) => theme.colors.background};  
+  background: ${({ theme }) => theme.colors.background};
   transition: background-color 0.6s;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  @media (max-width: 900px){
+  @media (max-width: 900px) {
     justify-content: center;
   }
   .map {
@@ -60,7 +74,6 @@ const Container = styled.div`
       scale: 0.6;
       display: none;
     }
-    
 
     .item-container {
       width: 0;
@@ -74,13 +87,13 @@ const Container = styled.div`
     .item {
       position: absolute;
       transform: translateX(-50%) translateY(-50%);
-      border: 1px solid #BCBCBC80;
+      border: 1px solid #bcbcbc80;
       transition: all ease-in-out 0.4s;
       border-radius: 1px;
 
       &.is-active {
-        border: 1px solid  ${({ theme }) => theme.colors.primary1};
-        background:  ${({ theme }) => theme.colors.primary1};  
+        border: 1px solid ${({ theme }) => theme.colors.primary1};
+        background: ${({ theme }) => theme.colors.primary1};
         border-radius: 1px;
       }
     }
@@ -89,14 +102,14 @@ const Container = styled.div`
       position: absolute;
       border-radius: 4px;
       transform: translateX(-50%) translateY(-50%);
-      border: 1px solid #B5B5B5;
+      border: 1px solid #b5b5b5;
     }
   }
 
   .archive-item {
     * {
       font-family: NeueMontrealRegular;
-      color:  ${({ theme }) => theme.colors.text.standard};  
+      color: ${({ theme }) => theme.colors.text.standard};
     }
     opacity: 0;
 
@@ -178,17 +191,17 @@ const Container = styled.div`
       }
     }
   }
-`
+`;
 
 function visibleBox(camera, z) {
-  const t = Math.tan(THREE.Math.degToRad(camera.fov) / 2)
-  const height = t * 2 * (camera.position.z - z)
-  const width = height * camera.aspect
-  return { width, height }
+  const t = Math.tan(THREE.Math.degToRad(camera.fov) / 2);
+  const height = t * 2 * (camera.position.z - z);
+  const width = height * camera.aspect;
+  return { width, height };
 }
 
 const isColliding = (items, testedItem) => {
-  let colliding = false
+  let colliding = false;
   for (const item of items) {
     if (
       testedItem.x < item.x + item.width * 1.5 &&
@@ -196,84 +209,88 @@ const isColliding = (items, testedItem) => {
       testedItem.y < item.y + item.height * 1.5 &&
       testedItem.height * 1.5 + testedItem.y > item.y
     ) {
-      colliding = true
+      colliding = true;
     }
   }
-  return colliding
-}
+  return colliding;
+};
 const isCollidingOne = (item, testedItem) => {
-  let colliding = false
+  let colliding = false;
   if (
     testedItem.x < item.x + item.width &&
     testedItem.x + testedItem.width > item.x &&
     testedItem.y < item.y + item.height &&
     testedItem.height + testedItem.y > item.y
   ) {
-    colliding = true
+    colliding = true;
   }
-  return colliding
-}
+  return colliding;
+};
 
 const getNewPosition = (item, minRadius) => {
   vec3
     .set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)
     .normalize()
-    .multiplyScalar(minRadius)
-  return { x: vec3.x, y: vec3.y }
-}
+    .multiplyScalar(minRadius);
+  return { x: vec3.x, y: vec3.y };
+};
 
 function ShaderPlane(props) {
-  const { width, height, x, y } = props.itemData
+  const { width, height, x, y } = props.itemData;
 
-  const camera = useThree((state) => state.camera)
-  const theme = useTheme()
+  const camera = useThree((state) => state.camera);
+  const theme = useTheme();
 
-  const meshRef = useRef()
-  const matRef = useRef()
-  const textMaterial = useRef()
-  const domTextRef = useRef()
-  const domLinkRef = useRef()
-  const clickOutPlaneRef = useRef()
+  const meshRef = useRef();
+  const matRef = useRef();
+  const textMaterial = useRef();
+  const domTextRef = useRef();
+  const domLinkRef = useRef();
+  const clickOutPlaneRef = useRef();
 
-  const [hovering, setHovering] = useState(false)
+  const [hovering, setHovering] = useState(false);
   // only using an object because thats what gsap wants
-  const hoverValue = useRef({ value: 0 })
+  const hoverValue = useRef({ value: 0 });
 
-  const [selfIsOpened, setSelfIsOpened] = useState(false)
+  const [selfIsOpened, setSelfIsOpened] = useState(false);
 
   // const isSmallDesktop = useMediaQuery("(min-width: 960px) and (max-width: 1240px)")
-  const isTablet = useMediaQuery("(min-width: 480px) and (max-width: 960px)")
-  const isMobile = useMediaQuery("(max-width: 479px)")
+  const isTablet = useMediaQuery("(min-width: 480px) and (max-width: 960px)");
+  const isMobile = useMediaQuery("(max-width: 479px)");
   // const zoomOffset = {
   //   x: isMobile ? 0 : isTablet ? 0 : isSmallDesktop ? 0.8 : 0.7,
   //   y: isMobile || isTablet ? -1 : 0,
   //   z: isMobile ? 0.99 : isTablet ? 0.8 : isSmallDesktop ? 0.7 : 0.5,
   // }
 
-  const openTl = useRef(null)
-  const closeTl = useRef(null)
+  const openTl = useRef(null);
+  const closeTl = useRef(null);
 
   const closeProject = useCallback(() => {
-    controlsRef.current.enabled = true
+    controlsRef.current.enabled = true;
 
     if (openTl.current) {
-      openTl.current.progress(1)
+      openTl.current.progress(1);
     }
 
     closeTl.current = gsap
       .timeline({
         onComplete: () => {
-          setSelfIsOpened(false)
+          setSelfIsOpened(false);
           projectIsOpened.current = {
             isOpened: false,
             id: null,
-          }
+          };
         },
       })
       .addLabel("sync1")
       .to(domTextRef.current, { opacity: 0, duration: 0.25 }, "sync1")
       .to(domLinkRef.current, { opacity: 0, duration: 0.25 }, "sync1")
-      .set(clickOutPlaneRef.current.scale, { x: 0.01, y: 0.01, z: 0.01 }, "sync1")
+      .set(
+        clickOutPlaneRef.current.scale,
+        { x: 0.01, y: 0.01, z: 0.01 },
+        "sync1"
+      )
       .to(
         meshRef.current.position,
         {
@@ -289,106 +306,121 @@ function ShaderPlane(props) {
       .set(filterRef.current.position, { z: -1.2 })
       .to(mapRef.current, { opacity: 1 }, "sync")
       .to(domTextRef.current, { opacity: 0, duration: 0.25 }, "sync1")
-      .to(domLinkRef.current, { opacity: 0, duration: 0.25 }, "sync1")
-  }, [])
+      .to(domLinkRef.current, { opacity: 0, duration: 0.25 }, "sync1");
+  }, []);
 
   // const openProject = useCallback(() => {
-    // controlsRef.current.enabled = false
+  // controlsRef.current.enabled = false
 
-    // openTl.current = gsap
-    //   .timeline({
-    //     onStart: () => {
-    //       setSelfIsOpened(true)
-    //       setHovering(false)
-    //     },
-    //     onComplete: () => {
-    //       projectIsOpened.current = {
-    //         isOpened: true,
-    //         id: props.project.id,
-    //       }
-    //     },
-    //   })
-    //   .to(meshRef.current.position, {
-    //     x: camera.position.x - zoomOffset.x,
-    //     y: camera.position.y - zoomOffset.y,
-    //     z: camera.position.z - zoomOffset.z,
-    //     duration: 0.5,
-    //     ease: "Power3.easeOut",
-    //   })
-    //   .addLabel("sync", "-=0.3")
-    //   .set(filterRef.current.position, { z: camera.position.z - 1 }, "sync")
-    //   .set(clickOutPlaneRef.current.scale, { x: 50, y: 50, z: 50 }, "sync")
-    //   .to(filterRef.current.material, { opacity: 0.85, duration: 0.3 }, "sync")
-    //   .to(mapRef.current, { opacity: 0.15 }, "sync")
-    //   .addLabel("sync2", "-=0.2")
-    //   .to(domTextRef.current, { opacity: 1, duration: 0.25 }, "sync2")
-    //   .to(domLinkRef.current, { opacity: 1, duration: 0.25 }, "sync2")
-    //   .to(textMaterial.current, { opacity: 0 }, "sync")
+  // openTl.current = gsap
+  //   .timeline({
+  //     onStart: () => {
+  //       setSelfIsOpened(true)
+  //       setHovering(false)
+  //     },
+  //     onComplete: () => {
+  //       projectIsOpened.current = {
+  //         isOpened: true,
+  //         id: props.project.id,
+  //       }
+  //     },
+  //   })
+  //   .to(meshRef.current.position, {
+  //     x: camera.position.x - zoomOffset.x,
+  //     y: camera.position.y - zoomOffset.y,
+  //     z: camera.position.z - zoomOffset.z,
+  //     duration: 0.5,
+  //     ease: "Power3.easeOut",
+  //   })
+  //   .addLabel("sync", "-=0.3")
+  //   .set(filterRef.current.position, { z: camera.position.z - 1 }, "sync")
+  //   .set(clickOutPlaneRef.current.scale, { x: 50, y: 50, z: 50 }, "sync")
+  //   .to(filterRef.current.material, { opacity: 0.85, duration: 0.3 }, "sync")
+  //   .to(mapRef.current, { opacity: 0.15 }, "sync")
+  //   .addLabel("sync2", "-=0.2")
+  //   .to(domTextRef.current, { opacity: 1, duration: 0.25 }, "sync2")
+  //   .to(domLinkRef.current, { opacity: 1, duration: 0.25 }, "sync2")
+  //   .to(textMaterial.current, { opacity: 0 }, "sync")
 
-    // gsap.to(textMaterial.current, { opacity: 0 })
+  // gsap.to(textMaterial.current, { opacity: 0 })
   // }, [])
 
   const clickHandler = useCallback(
     (e) => {
-      e.stopPropagation()
-      if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
+      e.stopPropagation();
+      if (
+        projectIsOpened.current.isOpened &&
+        projectIsOpened.current.id !== props.project.id
+      )
+        return;
 
       if (projectIsOpened.current.isOpened && !selfIsOpened) {
-        closeProject()
-      } 
+        closeProject();
+      }
       // else {
-        // openProject()
+      // openProject()
       // }
     },
-    [closeProject
+    [
+      closeProject,
       // , openProject
     ]
-  )
+  );
 
   const handleClickOut = useCallback(() => {
-    if (projectIsOpened.current.isOpened && projectIsOpened.current.id !== props.project.id) return
+    if (
+      projectIsOpened.current.isOpened &&
+      projectIsOpened.current.id !== props.project.id
+    )
+      return;
 
     if (projectIsOpened.current.isOpened && !selfIsOpened) {
-      closeProject()
+      closeProject();
     }
-  }, [closeProject
+  }, [
+    closeProject,
     // , openProject
-  ])
+  ]);
 
   useFrame((_, delta) => {
-    matRef.current.time += delta
-    matRef.current.speed = speed.current * 1
-  })
+    matRef.current.time += delta;
+    matRef.current.speed = speed.current * 1;
+  });
 
   useLayoutEffect(() => {
-    mfIsHoveringCanvas.current = hovering
+    mfIsHoveringCanvas.current = hovering;
 
-    let tween
+    let tween;
 
-    if (textMaterial.current && hoverValue.current && !projectIsOpened.current.isOpened) {
+    if (
+      textMaterial.current &&
+      hoverValue.current &&
+      !projectIsOpened.current.isOpened
+    ) {
       tween = gsap.to(hoverValue.current, {
         value: hovering ? 1 : 0,
         onUpdate: () => {
-          if (hoverValue.current) textMaterial.current.opacity = hoverValue.current.value
+          if (hoverValue.current)
+            textMaterial.current.opacity = hoverValue.current.value;
         },
-      })
+      });
     }
     return () => {
-      tween && tween.kill()
-      mfIsHoveringCanvas.current = false
-    }
-  }, [hovering])
+      tween && tween.kill();
+      mfIsHoveringCanvas.current = false;
+    };
+  }, [hovering]);
 
   useEffect(() => {
     const closeProjectWithKey = (e) => {
-      e.key === "Escape" && handleClickOut()
-    }
-    window.addEventListener("keydown", closeProjectWithKey)
+      e.key === "Escape" && handleClickOut();
+    };
+    window.addEventListener("keydown", closeProjectWithKey);
 
     return () => {
-      window.removeEventListener("keydown", closeProjectWithKey)
-    }
-  }, [handleClickOut])
+      window.removeEventListener("keydown", closeProjectWithKey);
+    };
+  }, [handleClickOut]);
 
   return (
     <mesh
@@ -402,7 +434,9 @@ function ShaderPlane(props) {
       <planeGeometry args={[width, height, 32, 32]} />
       <distortionMaterial
         frameAspect={width / height}
-        textureAspect={props.texture.image.naturalWidth / props.texture.image.naturalHeight}
+        textureAspect={
+          props.texture.image.naturalWidth / props.texture.image.naturalHeight
+        }
         ref={matRef}
         tex={props.texture}
       />
@@ -414,28 +448,37 @@ function ShaderPlane(props) {
         position-z={-0.001}
         args={[1, 1]}
       >
-        <meshNormalMaterial transparent={true} opacity={0} attach='material' />
+        <meshNormalMaterial transparent={true} opacity={0} attach="material" />
       </Plane>
       <Text
         font={saolFont}
-        anchorY='top'
-        anchorX='left'
-        textAlign='left'
+        anchorY="top"
+        anchorX="left"
+        textAlign="left"
         maxWidth={width}
         position={[-width / 2, -(height / 2 + 0.1), 0.001]}
         fontSize={0.14}
       >
-        <meshBasicMaterial ref={textMaterial} transparent={true} color={theme.colors.text.standard} attach='material' />
+        <meshBasicMaterial
+          ref={textMaterial}
+          transparent={true}
+          color={theme.colors.text.standard}
+          attach="material"
+        />
         {props.project.name.toUpperCase()}
       </Text>
       <Html
         ref={domTextRef}
-        position={isMobile || isTablet ? [-width / 2, -height / 2, 0] : [width / 2, height / 2, 0]}
+        position={
+          isMobile || isTablet
+            ? [-width / 2, -height / 2, 0]
+            : [width / 2, height / 2, 0]
+        }
         className={`archive-item ${selfIsOpened ? "" : "hidden"}`}
       >
         {/* <motion.div className='wrapper'> */}
-          {/* <div className='title'>{props.project.name}</div> */}
-          {/* <div className='body'>
+        {/* <div className='title'>{props.project.name}</div> */}
+        {/* <div className='body'>
             <div className='desc'>{props.project.description}</div>
             {(isMobile || isTablet) && props.project.websiteLink && (
               <a className='text-link website-link mobile' href={props.project.websiteLink} target='_blank'>
@@ -448,201 +491,236 @@ function ShaderPlane(props) {
 
       <Html
         ref={domLinkRef}
-        position={isMobile || isTablet ? [-width / 2, -height / 2, 0] : [width / 2, -height / 2, 0]}
+        position={
+          isMobile || isTablet
+            ? [-width / 2, -height / 2, 0]
+            : [width / 2, -height / 2, 0]
+        }
         className={`archive-item ${selfIsOpened ? "" : "hidden"}`}
       >
         {props.project.websiteLink && !(isMobile || isTablet) && (
-          <motion.div className='wrapper desktop'>
-            <a className='text-link website-link' href={props.project.websiteLink} target='_blank'>
+          <motion.div className="wrapper desktop">
+            <a
+              className="text-link website-link"
+              href={props.project.websiteLink}
+              target="_blank"
+            >
               Visit the website
             </a>
           </motion.div>
         )}
       </Html>
     </mesh>
-  )
+  );
 }
 
-const _v = new THREE.Vector3()
-const panMargin = -2
+const _v = new THREE.Vector3();
+const panMargin = -2;
 
 const Scene = () => {
-  const camera = useThree((state) => state.camera)
+  const camera = useThree((state) => state.camera);
 
-  const covers = useTexture(archivesData.map((archiveItem) => archiveItem.coverImg))
-  const [itemsData, setItemsData] = useState([])
+  const covers = useTexture(
+    archivesData.map((archiveItem) => archiveItem.coverImg)
+  );
+  const [itemsData, setItemsData] = useState([]);
 
-  const lastPos = useRef(new THREE.Vector3(0, 0, 0))
-  const isHolding = useRef(false)
-  const distortionStrength = useRef(0)
-  const focalStrength = useRef(2)
+  const lastPos = useRef(new THREE.Vector3(0, 0, 0));
+  const isHolding = useRef(false);
+  const distortionStrength = useRef(0);
+  const focalStrength = useRef(2);
 
-  const theme = useTheme()
+  const theme = useTheme();
 
-  const camBox = useRef()
-  const canvasBox = useRef()
+  const camBox = useRef();
+  const canvasBox = useRef();
 
-  const mapItemRects = useRef([])
-  const mapPosRect = useRef()
+  const mapItemRects = useRef([]);
+  const mapPosRect = useRef();
 
-  const panLimits = useRef({ min: new THREE.Vector3(-10, -10, -10), max: new THREE.Vector3(10, 10, 10) })
+  const panLimits = useRef({
+    min: new THREE.Vector3(-10, -10, -10),
+    max: new THREE.Vector3(10, 10, 10),
+  });
 
   useFrame(({ camera }, delta) => {
-    let hasChanged = lastPos.current.distanceTo(camera.position) > 0.005
-    speed.current = lerp(speed.current, camera.position.distanceTo(lastPos.current), 0.2, delta)
-    lastPos.current.copy(camera.position)
+    let hasChanged = lastPos.current.distanceTo(camera.position) > 0.005;
+    speed.current = lerp(
+      speed.current,
+      camera.position.distanceTo(lastPos.current),
+      0.2,
+      delta
+    );
+    lastPos.current.copy(camera.position);
 
-    const focalValue = isHolding.current && !projectIsOpened.current.isOpened ? 0.1 : 0
-    focalStrength.current = lerp(focalStrength.current, focalValue, 0.1, delta)
+    const focalValue =
+      isHolding.current && !projectIsOpened.current.isOpened ? 0.1 : 0;
+    focalStrength.current = lerp(focalStrength.current, focalValue, 0.1, delta);
 
     // plane sensi
-    let distortionValue = isHolding.current && !projectIsOpened.current.isOpened ? 0 : 0
-    distortionValue += speed.current * 1
-    distortionStrength.current = lerp(distortionStrength.current, distortionValue, 0.2, delta)
-    myLensDistortionPass.distortion.set(distortionStrength.current, distortionStrength.current)
-    myLensDistortionPass.focalLength.set(1 - focalStrength.current, 1 - focalStrength.current)
+    let distortionValue =
+      isHolding.current && !projectIsOpened.current.isOpened ? 0 : 0;
+    distortionValue += speed.current * 1;
+    distortionStrength.current = lerp(
+      distortionStrength.current,
+      distortionValue,
+      0.2,
+      delta
+    );
+    myLensDistortionPass.distortion.set(
+      distortionStrength.current,
+      distortionStrength.current
+    );
+    myLensDistortionPass.focalLength.set(
+      1 - focalStrength.current,
+      1 - focalStrength.current
+    );
 
-    let top = (1 - (camera.position.y / canvasBox.current.height + 0.5)) * 100 + "%"
-    let left = (camera.position.x / canvasBox.current.width + 0.5) * 100 + "%"
+    let top =
+      (1 - (camera.position.y / canvasBox.current.height + 0.5)) * 100 + "%";
+    let left = (camera.position.x / canvasBox.current.width + 0.5) * 100 + "%";
 
-    mapPosRef.current.style.top = top
-    mapPosRef.current.style.left = left
+    mapPosRef.current.style.top = top;
+    mapPosRef.current.style.left = left;
 
     if (hasChanged) {
-      mapPosRect.current = mapPosRef.current.getBoundingClientRect()
+      mapPosRect.current = mapPosRef.current.getBoundingClientRect();
       if (itemsData.length) {
         mapItemsRef.current.forEach((mapItem, index) => {
           if (isCollidingOne(mapPosRect.current, mapItemRects.current[index])) {
-            mapItem.classList.add("is-active")
+            mapItem.classList.add("is-active");
           } else {
-            mapItem.classList.remove("is-active")
+            mapItem.classList.remove("is-active");
           }
-        })
+        });
       }
 
-      camBox.current = visibleBox(camera, 0)
+      camBox.current = visibleBox(camera, 0);
 
       // taille cam box
-      mapPosRef.current.style.width = camBox.current.width * 7 + "px"
-      mapPosRef.current.style.height = camBox.current.height * 7 + "px"
+      mapPosRef.current.style.width = camBox.current.width * 7 + "px";
+      mapPosRef.current.style.height = camBox.current.height * 7 + "px";
     }
-  })
+  });
 
   useEffect(() => {
-    if (!covers) return
+    if (!covers) return;
 
-    let items = []
+    let items = [];
 
-    let minX = 0
-    let minY = 0
-    let maxX = 0
-    let maxY = 0
+    let minX = 0;
+    let minY = 0;
+    let maxX = 0;
+    let maxY = 0;
 
     covers.forEach((cover, index) => {
-      let size
-      const ratio = cover.image.naturalWidth / cover.image.naturalHeight
+      let size;
+      const ratio = cover.image.naturalWidth / cover.image.naturalHeight;
 
       if (ratio < 1) {
-        size = { width: 2 * ratio, height: 2 }
-      } else size = { width: 2, height: 2 / ratio }
+        size = { width: 2 * ratio, height: 2 };
+      } else size = { width: 2, height: 2 / ratio };
 
-      let item = { x: 0, y: 0, width: size.width, height: size.height }
+      let item = { x: 0, y: 0, width: size.width, height: size.height };
 
       if (index === 0) {
-        items.push(item)
-        return
+        items.push(item);
+        return;
       }
 
-      let positionIsValid = false
+      let positionIsValid = false;
 
-      let numberOfTests = 0
-      let minRadius = 2
+      let numberOfTests = 0;
+      let minRadius = 2;
 
-      let tempPos
+      let tempPos;
 
       while (!positionIsValid) {
-        tempPos = getNewPosition(item, minRadius)
+        tempPos = getNewPosition(item, minRadius);
         // add space for the text in height
         positionIsValid = !isColliding(items, {
           ...tempPos,
           width: item.width,
           height: item.height + 0.35,
-        })
+        });
 
-        numberOfTests++
-        if (numberOfTests > 10) minRadius += 0.1
+        numberOfTests++;
+        if (numberOfTests > 10) minRadius += 0.1;
       }
 
-      minX = Math.min(minX, tempPos.x - item.width)
-      maxX = Math.max(maxX, tempPos.x + item.width)
-      minY = Math.min(minY, tempPos.y - item.height)
-      maxY = Math.max(maxY, tempPos.y + item.height)
+      minX = Math.min(minX, tempPos.x - item.width);
+      maxX = Math.max(maxX, tempPos.x + item.width);
+      minY = Math.min(minY, tempPos.y - item.height);
+      maxY = Math.max(maxY, tempPos.y + item.height);
 
-      items.push({ ...item, ...tempPos })
-    })
+      items.push({ ...item, ...tempPos });
+    });
 
-    panLimits.current.min.set(minX - panMargin, minY - panMargin, -10)
-    panLimits.current.max.set(maxX + panMargin, maxY + panMargin, 10)
+    panLimits.current.min.set(minX - panMargin, minY - panMargin, -10);
+    panLimits.current.max.set(maxX + panMargin, maxY + panMargin, 10);
 
     canvasBox.current = {
       width: maxX - minX,
       height: maxY - minY,
-    }
+    };
 
-    camBox.current = visibleBox(camera, 0)
+    camBox.current = visibleBox(camera, 0);
 
-    mapPosRef.current.style.width = camBox.current.width * 10 + "px"
-    mapPosRef.current.style.height = camBox.current.height * 10 + "px"
+    mapPosRef.current.style.width = camBox.current.width * 10 + "px";
+    mapPosRef.current.style.height = camBox.current.height * 10 + "px";
 
-    mapRef.current.style.width = canvasBox.current.width * 10 + "px"
-    mapRef.current.style.height = canvasBox.current.height * 10 + "px"
+    mapRef.current.style.width = canvasBox.current.width * 10 + "px";
+    mapRef.current.style.height = canvasBox.current.height * 10 + "px";
 
-    mapItemsRef.current = mapRef.current.querySelectorAll(".item")
+    mapItemsRef.current = mapRef.current.querySelectorAll(".item");
 
-    mapPosRect.current = mapPosRef.current.getBoundingClientRect()
+    mapPosRect.current = mapPosRef.current.getBoundingClientRect();
     setTimeout(() => {
       mapItemsRef.current.forEach((mapItem, index) => {
-        mapItem.style.left = items[index].x * 10 + "px"
-        mapItem.style.top = (1 - items[index].y) * 10 + "px"
-        mapItem.style.width = items[index].width * 8 + "px"
-        mapItem.style.height = items[index].height * 8 + "px"
+        mapItem.style.left = items[index].x * 10 + "px";
+        mapItem.style.top = (1 - items[index].y) * 10 + "px";
+        mapItem.style.width = items[index].width * 8 + "px";
+        mapItem.style.height = items[index].height * 8 + "px";
 
-        const rect = mapItem.getBoundingClientRect()
-        mapItemRects.current.push(rect)
+        const rect = mapItem.getBoundingClientRect();
+        mapItemRects.current.push(rect);
 
         if (isCollidingOne(mapPosRect.current, rect)) {
-          mapItem.classList.add("is-active")
+          mapItem.classList.add("is-active");
         } else {
-          mapItem.classList.remove("is-active")
+          mapItem.classList.remove("is-active");
         }
-      })
-    }, 10)
+      });
+    }, 10);
 
-    setItemsData(items)
-  }, [covers])
+    setItemsData(items);
+  }, [covers]);
 
   // ENFORCE PAN LIMITS
   useLayoutEffect(() => {
     const handlePan = () => {
-      _v.copy(controlsRef.current.target)
-      controlsRef.current.target.clamp(panLimits.current.min, panLimits.current.max)
-      _v.sub(controlsRef.current.target)
-      camera.position.sub(_v)
-    }
+      _v.copy(controlsRef.current.target);
+      controlsRef.current.target.clamp(
+        panLimits.current.min,
+        panLimits.current.max
+      );
+      _v.sub(controlsRef.current.target);
+      camera.position.sub(_v);
+    };
 
-    controlsRef.current.addEventListener("change", handlePan)
-    return () => controlsRef.current.removeEventListener("change", handlePan)
-  }, [])
+    controlsRef.current.addEventListener("change", handlePan);
+    return () => controlsRef.current.removeEventListener("change", handlePan);
+  }, []);
 
   // INIT
   useEffect(() => {
     projectIsOpened.current = {
       isOpened: false,
       id: null,
-    }
+    };
 
-    speed.current = 1000
-  }, [])
+    speed.current = 1000;
+  }, []);
 
   return (
     <>
@@ -658,7 +736,12 @@ const Scene = () => {
         maxDistance={1.6}
       />
       <Plane ref={filterRef} position-z={-1.2} args={[30, 30]}>
-        <meshBasicMaterial color={theme.colors.background} transparent={true} opacity={0} attach='material' />
+        <meshBasicMaterial
+          color={theme.colors.background}
+          transparent={true}
+          opacity={0}
+          attach="material"
+        />
       </Plane>
       <group>
         <Plane
@@ -680,16 +763,20 @@ const Scene = () => {
           ))}
       </group>
     </>
-  )
-}
+  );
+};
 
 const Archives = () => {
-  const ContextBridge = useContextBridge(ThemeContext)
+  const ContextBridge = useContextBridge(ThemeContext);
 
   return (
     <PageTemplate hasFooter={false} hasTransitionPanel={true}>
       <Container>
-        <Canvas dpr={[1, 1.5]} mode='concurrent' camera={{ position: [0, 0, 1.2], fov: 140, far: 10 }}>
+        <Canvas
+          dpr={[1, 1.5]}
+          mode="concurrent"
+          camera={{ position: [0, 0, 1.2], fov: 140, far: 10 }}
+        >
           <ContextBridge>
             <Suspense fallback={null}>
               <Scene />
@@ -697,26 +784,32 @@ const Archives = () => {
             <Effects />
           </ContextBridge>
         </Canvas>
-        <div ref={mapRef} className='map'>
-          <div className='item-container'>
+        <div ref={mapRef} className="map">
+          <div className="item-container">
             {archivesData.map((project, i) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.4 + i / 15, duration: 0.4 } }}
-                className='item'
+                animate={{
+                  opacity: 1,
+                  transition: { delay: 0.4 + i / 15, duration: 0.4 },
+                }}
+                className="item"
               ></motion.div>
             ))}
           </div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 0.6 + archivesData.length / 10 } }}
+            animate={{
+              opacity: 1,
+              transition: { delay: 0.6 + archivesData.length / 10 },
+            }}
             ref={mapPosRef}
-            className='position'
+            className="position"
           ></motion.div>
         </div>
       </Container>
     </PageTemplate>
-  )
-}
-export default Archives
+  );
+};
+export default Archives;
