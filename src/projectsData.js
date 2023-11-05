@@ -6,16 +6,6 @@ import arcaneCover from "./assets/img/works/covers/arcane.jpg"
 import arcaneCoverSmall from "./assets/img/works/covers-small/arcane-min.jpg"
 import arcaneVisual1 from "./assets/img/works/arcane/visual1.jpg"
 
-import sens from "./components/projects/Sens"
-import sensCover from "./assets/img/works/covers/5sens.jpg"
-import sensCoverSmall from "./assets/img/works/covers-small/5sens-min.jpg"
-import sensVisual1 from "./assets/img/works/sens/visual1.jpg"
-
-import Elijah from "./components/projects/Elijah"
-import elijahCover from "./assets/img/works/covers/elijah.jpg"
-import elijahCoverSmall from "./assets/img/works/covers-small/elijah-min.jpg"
-import elijahVisual1 from "./assets/img/works/elijah/visual1.jpg"
-
 import Zhonglin from "./components/projects/Zhonglin"
 import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
 import ZhonglinCoverSmall from "./assets/img/works/covers-small/zhonglin-min.jpg"
@@ -36,11 +26,6 @@ import typeCover from "./assets/img/works/covers/type.jpg"
 import typeCoverSmall from "./assets/img/works/covers-small/type-min.jpg"
 import typeVisual1 from "./assets/img/works/type/visual1.jpg"
 
-import Sylvia from "./components/projects/Sylvia"
-import sylviaCover from "./assets/img/works/covers/sylvia.jpg"
-import sylviaCoverSmall from "./assets/img/works/covers-small/sylvia-min.jpg"
-import sylviaVisual1 from "./assets/img/works/sylvia/visual1.jpeg"
-
 import Eden from "./components/projects/Eden"
 import edenCover from "./assets/img/works/covers/eden.jpg"
 import edenCoverSmall from "./assets/img/works/covers-small/eden-min.jpg"
@@ -51,21 +36,10 @@ import BlossomCover from "./assets/img/works/covers/Blossom.jpg"
 import BlossomCoverSmall from "./assets/img/works/covers-small/Blossom-min.jpg"
 import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
 
-// import Chess from "./components/projects/Chess"
-// import ChessCover from "./assets/img/works/covers/Chess.jpg"
-// import ChessCoverSmall from "./assets/img/works/covers-small/Chess-min.jpg"
-// import ChessVisual1 from "./assets/img/works/Chess/visual1.jpg"
-
-
-// import Keycaps from "./components/projects/Keycaps"
-// import KeycapsCover from "./assets/img/works/covers/Keycaps.jpg"
-// import KeycapsCoverSmall from "./assets/img/works/covers-small/Keycaps-min.jpg"
-// import KeycapsVisual1 from "./assets/img/works/Keycaps/visual1.jpg"
-
-import Branding from "./components/projects/Branding"
-import BrandingCover from "./assets/img/works/covers/Branding.jpg"
-import BrandingCoverSmall from "./assets/img/works/covers-small/Branding-min.jpg"
-import BrandingVisual1 from "./assets/img/works/Branding/visual1.jpg"
+// import Branding from "./components/projects/Branding"
+// import BrandingCover from "./assets/img/works/covers/Branding.jpg"
+// import BrandingCoverSmall from "./assets/img/works/covers-small/Branding-min.jpg"
+// import BrandingVisual1 from "./assets/img/works/Branding/visual1.jpg"
 
 import Architech from "./components/projects/Architech"
 import ArchitechCover from "./assets/img/works/covers/Architech.jpg"
@@ -86,19 +60,19 @@ import SkincareVisual1 from "./assets/img/works/Skincare/visual1.jpg"
 
 let projectsData = [
   {
-    name: "Zhong lin",
-    path: "zhonglin",
-    title: "A creative photographer",
-    coverImg: ZhonglinCover,
-    coverImgSmall: ZhonglinCoverSmall,
-    visual1: zhonglinVisual1,
-    component: Zhonglin,
-    date: "Apr. 2022",
-    role: "Designer",
-    techs: ["AdobeXD, Photoshop, Protopie"],
+    name: "Blossom",
+    path: "blossom",
+    title: "Unleash your full potential",
+    coverImg: BlossomCover,
+    coverImgSmall: BlossomCoverSmall,
+    visual1: BlossomVisual1,
+    component: Blossom,
+    date: "June 2023",
+    role: "Designer, Writer",
+    techs: ["Figma, Photoshop, Blender"],
     description:
-      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
-  },   
+      "Blossom: A white paper created as part of my final year of Master's in digital creation at ESD Paris, with the objective of guiding individuals to discover their identity through an authentic portfolio",
+  }, 
   {
     name: "Skincare",
     path: "Skincare",
@@ -115,21 +89,6 @@ let projectsData = [
       websiteLink: 'https://skincare-v4.netlify.app/'
   }, 
   {
-    name: "Discogs",
-    path: "Discogs",
-    title: "Discogs Remastered",
-    coverImg: DiscogsCover,
-    coverImgSmall: DiscogsCoverSmall,
-    visual1: DiscogsVisual1,
-    component: Discogs,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React"],
-    description:
-      "In the scope of this project, I completely revamped the Discogs website, specialized in vinyl sales, by giving it a fresh design and developing the platform using React. The aim is to provide an outstanding user experience and redefine the standards in the online vinyl music industry.",
-      websiteLink: 'https://discogs-v4.netlify.app/'
-  },  
-  {
     name: "Architech",
     path: "Architech",
     title: "Virtual Architectural Innovation",
@@ -143,20 +102,20 @@ let projectsData = [
     description:
       "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
     websiteLink: 'https://archi-tech-v4.netlify.app/'
-  },   
+  }, 
   {
-    name: "Blossom",
-    path: "blossom",
-    title: "Unleash your full potential",
-    coverImg: BlossomCover,
-    coverImgSmall: BlossomCoverSmall,
-    visual1: BlossomVisual1,
-    component: Blossom,
-    date: "June 2023",
-    role: "Designer, Writer",
-    techs: ["Figma, Photoshop, Blender"],
+    name: "Zhong lin",
+    path: "zhonglin",
+    title: "A creative photographer",
+    coverImg: ZhonglinCover,
+    coverImgSmall: ZhonglinCoverSmall,
+    visual1: zhonglinVisual1,
+    component: Zhonglin,
+    date: "Apr. 2022",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop, Protopie"],
     description:
-      "Blossom: A white paper created as part of my final year of Master's in digital creation at ESD Paris, with the objective of guiding individuals to discover their identity through an authentic portfolio",
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   }, 
   {
     name: "Type",
@@ -173,6 +132,20 @@ let projectsData = [
       "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
   },
   {
+    name: "Arcane",
+    path: "arcane",
+    title: "We lie when we are afraid",
+    coverImg: arcaneCover,
+    coverImgSmall: arcaneCoverSmall,
+    visual1: arcaneVisual1,
+    component: Arcane,
+    date: "Nov. 2021",
+    role: "Designer",
+    techs: ["AdobeXD, Photoshop"],
+    description:
+      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+  },  
+  {
     name: "Bohinc",
     path: "bohinc",
     title: "Minimalist Furniture",
@@ -187,19 +160,34 @@ let projectsData = [
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
   {
-    name: "Branding",
-    path: "branding",
-    title: "Personal branding identity",
-    coverImg: BrandingCover,
-    coverImgSmall: BrandingCoverSmall,
-    visual1: BrandingVisual1,
-    component: Branding,
-    date: "Oct. 2023",
-    role: "Designer",
-    techs: ["After, Figma, Premiere"],
+    name: "Discogs",
+    path: "Discogs",
+    title: "Discogs Remastered",
+    coverImg: DiscogsCover,
+    coverImgSmall: DiscogsCoverSmall,
+    visual1: DiscogsVisual1,
+    component: Discogs,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
     description:
-      "I've crafted a unique personal brand centered around the minimalist theme. Through a careful selection of clean and simple design elements, I've cultivated a distinct image that embodies simplicity, elegance, and clarity. My minimalist aesthetic reflects my commitment to simplicity in both my personal and professional life.",
-  }, 
+      "In the scope of this project, I completely revamped the Discogs website, specialized in vinyl sales, by giving it a fresh design and developing the platform using React. The aim is to provide an outstanding user experience and redefine the standards in the online vinyl music industry.",
+      websiteLink: 'https://discogs-v4.netlify.app/'
+  },    
+  // {
+  //   name: "Branding",
+  //   path: "branding",
+  //   title: "Personal branding identity",
+  //   coverImg: BrandingCover,
+  //   coverImgSmall: BrandingCoverSmall,
+  //   visual1: BrandingVisual1,
+  //   component: Branding,
+  //   date: "Oct. 2023",
+  //   role: "Designer",
+  //   techs: ["After, Figma, Premiere"],
+  //   description:
+  //     "I've crafted a unique personal brand centered around the minimalist theme. Through a careful selection of clean and simple design elements, I've cultivated a distinct image that embodies simplicity, elegance, and clarity. My minimalist aesthetic reflects my commitment to simplicity in both my personal and professional life.",
+  // }, 
   {
     name: "Hublot",
     path: "hublot",
@@ -216,21 +204,6 @@ let projectsData = [
     websiteLink: "https://hublotxtakashi.netlify.app/",
   },
   {
-    name: "Sylvia",
-    path: "Sylvia",
-    title: "Sylvia",
-    coverImg: sylviaCover,
-    coverImgSmall: sylviaCoverSmall,
-    visual1: sylviaVisual1,
-    component: Sylvia,
-    date: "June 2023",
-    role: "Designer",
-    techs: ["Figma, Unreal, Premiere"],
-    description:
-      "Imagine the future of fashion, using scenographie and 3D movement",
-    websiteLink: "https://sylvia-clothes.netlify.app/"
-  },
-  {
     name: "Eden",
     path: "eden",
     title: "Nature &",
@@ -243,77 +216,7 @@ let projectsData = [
     techs: ["Midjourney, Photoshop, Figma"],
     description:
       "Eden is a new way to inspire designer  et creatives with help of AI like midjourney or stable diffusion. We tried it on the Spring 2012 Collection of KOCHE a Famous fashion brand from Paris. This Collection mix Tech & Nature.",
-  }, 
-  {
-    name: "Arcane",
-    path: "arcane",
-    title: "We lie when we are afraid",
-    coverImg: arcaneCover,
-    coverImgSmall: arcaneCoverSmall,
-    visual1: arcaneVisual1,
-    component: Arcane,
-    date: "Nov. 2021",
-    role: "Designer",
-    techs: ["AdobeXD, Photoshop"],
-    description:
-      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-  },
-  {
-    name: "Elijah",
-    path: "elijah",
-    title: "Elijah's portfolio",
-    coverImg: elijahCover,
-    coverImgSmall: elijahCoverSmall,
-    visual1: elijahVisual1,
-    component: Elijah,
-    date: "Jan. 2022",
-    role: "Designer, Dev",
-    techs: ["Adobe XD, HTML, CSS, JS"],
-    description: "Elijah is a photograph based in Paris! I designed and developed his website.",
-    websiteLink: "https://www.elijahbenhammou.com/",
-  },
-  {
-    name: "5 Sens",
-    path: "sens",
-    title: "An experimental place",
-    coverImg: sensCover,
-    coverImgSmall: sensCoverSmall,
-    visual1: sensVisual1,
-    component: sens,
-    date: "Feb. 2022",
-    role: "DA, Designer",
-    techs: ["Illustrator, Photoshop"],
-    description:
-      "Creation of poster for an art center: musical cultures and experiments, in an exceptional architectural building.",
-  },
-  // {
-  //   name: "Chess",
-  //   path: "Chess",
-  //   title: "Chess Game",
-  //   coverImg: ChessCover,
-  //   coverImgSmall: ChessCoverSmall,
-  //   visual1: ChessVisual1,
-  //   component: Chess,
-  //   date: "Nov. 2023",
-  //   role: "DA, Designer",
-  //   techs: ["Figma, Photoshop"],
-  //   description:
-  //     "????",
-  // },
-  // {
-  //   name: "Keycaps",
-  //   path: "Keycaps",
-  //   title: "Keycaps Game",
-  //   coverImg: KeycapsCover,
-  //   coverImgSmall: KeycapsCoverSmall,
-  //   visual1: KeycapsVisual1,
-  //   component: Keycaps,
-  //   date: "Nov. 2023",
-  //   role: "DA, Designer",
-  //   techs: ["Figma, Photoshop"],
-  //   description:
-  //     "????",
-  // }
+  }
 ]
 
 projectsData = projectsData.map((project, index) => ({

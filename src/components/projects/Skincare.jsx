@@ -32,7 +32,7 @@ const Skincare = () => {
             },
             {
               type: "image",
-              src: img1,
+              src: img2,
             },
             {
               type: "image",
@@ -40,7 +40,7 @@ const Skincare = () => {
             },
             {
               type: "image",
-              src: img2,
+              src: img1,
             },
             {
               type: "image",

@@ -1,38 +1,35 @@
 // modules
-import Solo from "../shared/modules/Solo"
-import Thanks from "../shared/modules/Thanks"
-import Responsive from "../shared/modules/Responsive"
-import Headline from "../shared/modules/Headline"
+import Solo from "../shared/modules/Solo";
+import Thanks from "../shared/modules/Thanks";
+import Responsive from "../shared/modules/Responsive";
+import Headline from "../shared/modules/Headline";
 
-import React from "react"
+import React from "react";
 
 //video
-import home from "../../assets/img/works/hublot/home.mp4"
-import responsive from "../../assets/img/works/hublot/responsive.jpg"
-import product from "../../assets/img/works/hublot/product.png"
-import unico from "../../assets/img/works/hublot/unico.png"
-import takashi from "../../assets/img/works/hublot/takashi.png"
-import slider from "../../assets/img/works/hublot/slider.png"
-import details from "../../assets/img/works/hublot/details.mp4"
-import concept from "../../assets/img/works/hublot/concept.mp4"
+import home from "../../assets/img/works/hublot/home.mp4";
+import responsive from "../../assets/img/works/hublot/responsive.jpg";
+import product from "../../assets/img/works/hublot/product.png";
+import unico from "../../assets/img/works/hublot/unico.png";
+import takashi from "../../assets/img/works/hublot/takashi.png";
+import slider from "../../assets/img/works/hublot/slider.png";
+import details from "../../assets/img/works/hublot/details.mp4";
+import concept from "../../assets/img/works/hublot/concept.mp4";
 
 // responsive
 
-import homeMobile from "../../assets/img/works/hublot/home-phone.mp4"
-import productMobile from "../../assets/img/works/hublot/product-phone.png"
-import productsMobile from "../../assets/img/works/hublot/products-phone.png"
-import detailsMobile from "../../assets/img/works/hublot/details-phone.mp4"
+import homeMobile from "../../assets/img/works/hublot/home-phone.mp4";
+import productMobile from "../../assets/img/works/hublot/product-phone.png";
+import productsMobile from "../../assets/img/works/hublot/products-phone.png";
+import detailsMobile from "../../assets/img/works/hublot/details-phone.mp4";
 
-
-import FullImage from "../shared/FullImage"
-
+import FullImage from "../shared/FullImage";
 
 const Hublot = () => {
-  
   return (
     <section>
       <div className="details no-padding">
-        <Headline name="Homepage"/>
+        <Headline name="Homepage" />
         <Solo
           medias={[
             {
@@ -41,18 +38,12 @@ const Hublot = () => {
             },
             {
               type: "image",
-              src: product
+              src: product,
             },
             {
               type: "video",
-              src: details
-            }
-          ]}
-        />
-
-        <Headline name="Product Details"/>
-        <Solo
-          medias={[
+              src: details,
+            },
             {
               type: "image",
               src: unico,
@@ -63,49 +54,45 @@ const Hublot = () => {
             },
             {
               type: "image",
-              src: takashi
+              src: takashi,
             },
             {
               type: "image",
-              src: slider
-            }
+              src: slider,
+            },
           ]}
         />
-      </div> 
+      </div>
 
+      <FullImage src={responsive} alt="prototype" />
 
-    <FullImage src={responsive} alt='prototype' />
+      <div className="details">
+        <Headline name="Responsive Selection" />
+        <Responsive
+          medias={[
+            {
+              type: "video",
+              src: homeMobile,
+            },
+            {
+              type: "image",
+              src: productMobile,
+            },
+            {
+              type: "video",
+              src: detailsMobile,
+            },
+            {
+              type: "image",
+              src: productsMobile,
+            },
+          ]}
+        />
+      </div>
 
-    <div className="details">
-      <Headline name="Responsive Selection"/>
-      <Responsive
-        medias={[
-          {
-            type: "video",
-            src: homeMobile,
-          },
-          {
-            type: "image",
-            src: productMobile,
-          },
-          {
-            type: "video",
-            src: detailsMobile
-          },
-          {
-            type: "image",
-            src: productsMobile
-          }
-        ]}
-      />
-    </div>
-
-    <Thanks
-        text="Project made with love"
-    /> 
-
+      <Thanks text="Project made with love" />
     </section>
-  )
-}
+  );
+};
 
-export default Hublot
+export default Hublot;

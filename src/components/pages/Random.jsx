@@ -25,7 +25,7 @@ import archivesData from "../../archivesData";
 import PageTemplate from "./PageTemplate";
 import { mfIsHoveringCanvas } from "../../store";
 
-import saolFont from "../../assets/fonts/Ginger.ttf";
+import serifFont from "../../assets/fonts/display-new.otf";
 
 import Effects, { myLensDistortionPass } from "../shared/three/Effects";
 
@@ -451,7 +451,7 @@ function ShaderPlane(props) {
         <meshNormalMaterial transparent={true} opacity={0} attach="material" />
       </Plane>
       <Text
-        font={saolFont}
+        font={serifFont}
         anchorY="top"
         anchorX="left"
         textAlign="left"

@@ -30,9 +30,9 @@ const Blossom = () => {
         <p className="text-centered">
         Blossom est une invitation à cultiver nos <span>passions</span> intérieures, et à explorer notre <span>identité</span> créative. Il est le fruit d'expérimentation et de recherches, afin de vous guider à dévoiler votre <span>identité</span> à travers un portfolio <span>authentique</span>.
         </p>
-        <a className='button big' href={ebook} download="blossom_ebook" target="_blank">
+        {/* <a className='button big' href={ebook} download="blossom_ebook" target="_blank">
             download e-book
-        </a>
+        </a> */}
         <Headline name="preview"/>
         <Solo
           medias={[

@@ -17,7 +17,7 @@ const AppWrap = () => {
     <ThemeProvider theme={isDarkMode ? darkThemes[activeColorIndex] : lightThemes[activeColorIndex]}>
       <GlobalStyle />
       <Router>
-        <App></App>
+        <App/>
       </Router>
     </ThemeProvider>
   )

@@ -10,7 +10,7 @@ import Header from "./components/shared/Header";
 import MouseFollower from "./components/shared/MouseFollower";
 
 // import Archives from "./components/pages/Archives";
-import Home from "./components/pages/Home/index.jsx";
+import Home from "./components/pages/About/About.jsx";
 import Works from "./components/pages/Works";
 import Labs from "./components/pages/Labs";
 import Capsule from "./components/pages/Capsule";
@@ -18,15 +18,6 @@ import Random from "./components/pages/Random";
 import ProjectDetail from "./components/projects/ProjectDetail";
 import { AnimatePresence } from "framer-motion";
 import StyleSwitcher from "./components/shared/StyleSwitcher";
-
-// Archives
-// import Chanel from "./components/archives/Chanel.jsx";
-// import Feels from "./components/archives/Feels.jsx";
-// import Nyx from "./components/archives/Nyx.jsx";
-// import Grissini from "./components/archives/Grissini.jsx";
-// import Projekt2023 from "./components/archives/Projekt2023.jsx";
-// import Cyberpunk from "./components/archives/Cyberpunk.jsx";
-// import Hana from "./components/archives/Hana.jsx";
 
 const App = () => {
   AOS.init({
@@ -60,15 +51,6 @@ const App = () => {
             <AnimatePresence exitBeforeEnter initial={true}>
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
-                {/* <Route path="/Hana" component={Hana} />
-                <Route path="/Feels" component={Feels} />
-                <Route path="/Cyberpunk" component={Cyberpunk} />
-                <Route path="/Projekt2023" component={Projekt2023} />
-                <Route path="/Nyx" component={Nyx} />
-                <Route path="/Grissini" component={Grissini} />
-                <Route path="/chanel" component={Chanel} />
-                <Route path="/reel" exact component={Reel} />
-                <Route path="/archives" exact component={Archives} /> */}
                 <Route path="/about" exact component={Home} />
                 <Route path="/labs" exact component={Labs} />
                 <Route path="/Capsule" component={Capsule} />

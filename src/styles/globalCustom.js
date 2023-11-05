@@ -1,7 +1,10 @@
-import styled, { css } from "styled-components"
+import { css } from "styled-components"
 
 export default css`
   /* TYPO */
+  a{
+    text-decoration: none;
+  }
   .text-h1 {
     font-family: NeueMontrealRegular;
     font-style: normal;
@@ -12,7 +15,6 @@ export default css`
     letter-spacing: 0.03em;
 
     @media (max-width: 769px) {
-      font-size: 60px;
       font-size: 60px;
     }
 
@@ -40,9 +42,6 @@ export default css`
       font-size: 44px;
     }
 
-    @media (max-width: 480px) {
-      font-size: 44px;
-    }
     &.serif{
       font-family: "Ginger";
     }
@@ -170,6 +169,7 @@ export default css`
 
 
   .text-link{
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 10px;
     color: ${({ theme }) => theme.colors.text.text};
