@@ -37,6 +37,9 @@ const StyledSlider = styled.div`
     font-size: 10px;
     letter-spacing: 0;
     color: ${({ theme }) => theme.colors.text.text};
+    &.text-small{
+      line-height: 100%;
+    }
   }
 `
 
