@@ -31,6 +31,7 @@ const StyledStyleSwitcher = styled.div`
     background-color: white;
     border-radius: 30px;
     width: 18px;
+    border: none;
     height: 18px;
     transition: background-color 0.4s;
     @media (max-width: 900px) {
