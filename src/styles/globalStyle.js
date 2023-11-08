@@ -1,6 +1,7 @@
 import NeueMontrealLight from "../assets/fonts/NeueMontreal-Light.otf"
 import NeueMontrealRegular from "../assets/fonts/NeueMontreal-Regular.otf"
 import Ginger from "../assets/fonts/Chloe-Regular.otf"
+import Romie from "../assets/fonts/Romie-Regular.ttf"
 import { createGlobalStyle } from "styled-components"
 import globalCustom from "./globalCustom"
 
@@ -17,6 +18,11 @@ export default createGlobalStyle`
     @font-face {
       font-family: "Ginger";
       src: url(${Ginger});
+    }
+
+    @font-face {
+      font-family: "Romie";
+      src: url(${Romie});
     }
 
     /* GLOBAL STYLES */

@@ -50,7 +50,7 @@ const StyledProjectDetail = styled.div`
       .infos {
         .infos-intro {
           .text-description {
-            width: 100%;
+            width: 80%;
             margin: 32px 0;
             color: #ffffff69;
           }

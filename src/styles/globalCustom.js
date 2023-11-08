@@ -97,7 +97,7 @@ export default css`
   }
   .text-regular {
     color: ${({ theme }) => theme.colors.text.text};
-    line-height: 1.2;
+    line-height: 1.4;
     font-size: 14px;
     opacity: 0.8;
     font-family: "NeueMontrealRegular";
@@ -151,7 +151,7 @@ export default css`
   }
 
   .text-centered{
-    font-family: "NeueMontrealRegular";
+    font-family: "Romie";
     font-size: 16px;
     // text-transform: uppercase;
     text-align: center;
@@ -169,7 +169,6 @@ export default css`
     }
     @media (max-width: 700px) {
       width: 100%;
-      text-align: left;
       font-size: 14px;
     }
   }

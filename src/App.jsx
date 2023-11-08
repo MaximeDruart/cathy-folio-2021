@@ -12,6 +12,7 @@ import MouseFollower from "./components/shared/MouseFollower";
 // import Archives from "./components/pages/Archives";
 import Home from "./components/pages/About/About.jsx";
 import Works from "./components/pages/Works";
+import Courses from "./components/pages/Courses/Courses.jsx";
 import Labs from "./components/pages/Labs";
 import Capsule from "./components/pages/Capsule";
 import Random from "./components/pages/Random";
@@ -52,6 +53,7 @@ const App = () => {
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
                 <Route path="/about" exact component={Home} />
+                <Route path="/courses" exact component={Courses} />
                 <Route path="/labs" exact component={Labs} />
                 <Route path="/Capsule" component={Capsule} />
                 <Route path="/random" exact component={Random} />

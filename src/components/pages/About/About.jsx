@@ -30,28 +30,28 @@ const listProducts = [
     name: "spirited away",
     price: "???",
     span: "animes",
-    filter: "grayscale"
+    filter: "grayscale",
   },
   {
     src: pokemon,
     name: "pokemon",
     price: "???",
     span: "games",
-    filter: "grayscale"
+    filter: "grayscale",
   },
   {
     src: travel,
     name: "travel",
     price: "???",
     span: "travel",
-    filter: "grayscale"
+    filter: "grayscale",
   },
   {
     src: music,
     name: "music",
     price: "???",
     span: "music",
-    filter: "grayscale"
+    filter: "grayscale",
   },
 ];
 
@@ -226,7 +226,11 @@ const Home = () => {
 
         {/* DIY */}
         <div className="home-section">
-          <section className="product_list">
+          <section
+            className="product_list"
+            data-aos="fade"
+            data-aos-duration="800"
+          >
             {/* <Headline name="Coming soon" /> */}
 
             {/* SLIDER coming soon */}

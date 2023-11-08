@@ -186,6 +186,8 @@ function Shop() {
 
           {/* SLIDER Ressources */}
           <Splide
+            data-aos="fade"
+            data-aos-duration="800"
             options={{
               type: "loop",
               gap: "64px",
@@ -197,7 +199,7 @@ function Shop() {
                 pauseOnHover: false,
                 pauseOnFocus: false,
                 rewind: false,
-                speed: 1.5,
+                speed: 1.8,
               },
             }}
             extensions={{ AutoScroll }}
@@ -223,7 +225,11 @@ function Shop() {
         {/* ARC FOLDERRS */}
         <section className="product_list">
           <Headline name="arc folder" />
-          <div className="row_content">
+          <div
+            className="row_content"
+            data-aos="fade"
+            data-aos-duration="800"
+          >
             {listFolders.map((folder) => (
               <ProductCard
                 key={folder.name}
@@ -245,6 +251,8 @@ function Shop() {
 
           {/* SLIDER coming soon */}
           <Splide
+            data-aos="fade"
+            data-aos-duration="800"
             options={{
               type: "loop",
               gap: "64px",
@@ -256,7 +264,7 @@ function Shop() {
                 pauseOnHover: false,
                 pauseOnFocus: false,
                 rewind: false,
-                speed: 1.5,
+                speed: -1.5,
               },
             }}
             extensions={{ AutoScroll }}

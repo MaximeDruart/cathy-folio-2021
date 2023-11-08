@@ -106,7 +106,7 @@ let projectsData = [
   {
     name: "Zhong lin",
     path: "zhonglin",
-    title: "A creative photographer",
+    title: "Creative Photo's",
     coverImg: ZhonglinCover,
     coverImgSmall: ZhonglinCoverSmall,
     visual1: zhonglinVisual1,
