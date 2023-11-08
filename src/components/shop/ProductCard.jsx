@@ -48,15 +48,22 @@ const StyledProductCard = styled.div`
   .video {
     width: 100%;
     object-fit: cover;
+    transition: filter 0.5s;
+    &.grayscale{
+      filter: grayscale(100%);
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
   }
 `;
 
-function card({ folder, download, link, src, name, price }) {
+function card({ folder, download, link, src, name, price, filter }) {
   return (
     <StyledProductCard className={folder}>
       <a target="_blank" download={download} href={link}>
         {/* <Video src={card.src}/> */}
-        <img src={src} alt="img" />
+        <img className={filter} src={src} alt="img" />
       </a>
       <div className="infos">
         <h5 className="text-h5">{name}</h5>

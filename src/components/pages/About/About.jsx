@@ -18,36 +18,40 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-import keycaps from "./../../../assets/img/shop/keycaps.jpg";
-import blossom from "./../../../assets/img/shop/blossom.jpg";
-import key01 from "./../../../assets/img/shop/key01.png";
-import key02 from "./../../../assets/img/shop/key02.png";
+import anime from "./../../../assets/img/about/passions/anime.gif";
+import music from "./../../../assets/img/about/passions/music.gif";
+import pokemon from "./../../../assets/img/about/passions/pokemon.gif";
+import travel from "./../../../assets/img/about/passions/travel.gif";
 import ProductCard from "../../shop/ProductCard";
 
 const listProducts = [
   {
-    src: keycaps,
-    name: "key02",
+    src: anime,
+    name: "spirited away",
     price: "???",
-    span: "key02",
+    span: "animes",
+    filter: "grayscale"
   },
   {
-    src: key01,
-    name: "key01",
+    src: pokemon,
+    name: "pokemon",
     price: "???",
-    span: "key01",
+    span: "games",
+    filter: "grayscale"
   },
   {
-    src: key02,
-    name: "keycaps",
+    src: travel,
+    name: "travel",
     price: "???",
-    span: "keycaps",
+    span: "travel",
+    filter: "grayscale"
   },
   {
-    src: blossom,
-    name: "blossom",
+    src: music,
+    name: "music",
     price: "???",
-    span: "back",
+    span: "music",
+    filter: "grayscale"
   },
 ];
 
@@ -250,6 +254,7 @@ const Home = () => {
                       src={product.src}
                       name={product.name}
                       price={product.price}
+                      filter={product.filter}
                     />
                   </SplideSlide>
                   <SplideSlide>
