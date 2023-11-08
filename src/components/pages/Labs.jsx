@@ -176,9 +176,15 @@ function Shop() {
   return (
     <PageTemplate hasTransitionPanel={true}>
       <StyledShop>
-        <img className="logo" src={logo} alt="logo" />
+        <img
+          data-aos="fade"
+          data-aos-duration="600"
+          className="logo"
+          src={logo}
+          alt="logo"
+        />
         {/* <h1 className="text-h2">( KT.<span>LABS</span> )</h1> */}
-        <p className="text-regular desc">Création, passion, transmission.</p>
+        <p  data-aos="fade" data-aos-duration="600" className="text-regular desc">Création, passion, transmission.</p>
 
         {/* FREE RESSOURCES */}
         <section className="product_list">
@@ -225,11 +231,7 @@ function Shop() {
         {/* ARC FOLDERRS */}
         <section className="product_list">
           <Headline name="arc folder" />
-          <div
-            className="row_content"
-            data-aos="fade"
-            data-aos-duration="800"
-          >
+          <div className="row_content" data-aos="fade" data-aos-duration="800">
             {listFolders.map((folder) => (
               <ProductCard
                 key={folder.name}

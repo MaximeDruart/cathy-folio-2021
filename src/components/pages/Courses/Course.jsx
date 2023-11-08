@@ -3,7 +3,6 @@ import styled from "styled-components";
 import open from "./../../../assets/img/courses/open.svg";
 import close from "./../../../assets/img/courses/close.svg";
 import shop from "./../../../assets/img/courses/shop.svg";
-import link from "./../../../assets/img/courses/link.svg";
 import user from "./../../../assets/img/courses/user.svg";
 import clock from "./../../../assets/img/courses/clock.svg";
 import skill from "./../../../assets/img/courses/skill.svg";
@@ -60,7 +59,7 @@ const StyledItem = styled.div`
     visibility: visible;
     height: 476.16px;
     opacity: 1;
-    transition: all 0.8s ease;
+    transition: all 0.6s ease;
     @media (max-width: 1000px) {
       height: 358px;
     }
@@ -111,13 +110,9 @@ const StyledItem = styled.div`
             gap: 4px;
             transition: all 0.5s;
             padding-bottom: 2px;
-            border-bottom: solid 0.8px
-              ${({ theme }) => theme.colors.text.standard};
+            border-bottom: solid 0.8px;
+            color: ${({ theme }) => theme.colors.text.standard};
             width: fit-content;
-            img.icon {
-              width: 16px;
-              height: fit-content;
-            }
             &:hover {
               letter-spacing: 1px;
               /* background-color: ${({ theme }) => theme.colors.primary1}; */
@@ -230,7 +225,6 @@ function Item({
               <p className="text-regular">{description}</p>
               <a className="price text-h6">
                 {price}
-                <img className="icon" src={link} alt="icon" />
               </a>
             </div>
             <div className="tags_container">

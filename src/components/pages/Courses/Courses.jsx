@@ -126,8 +126,8 @@ function Courses() {
   return (
     <PageTemplate hasTransitionPanel={true}>
       <StyledCourses>
-        <img className="logo" src={logo} alt="img" />
-        <p className="text-regular desc">
+        <img  data-aos="fade" data-aos-duration="600" className="logo" src={logo} alt="img" />
+        <p  data-aos="fade" data-aos-duration="600" className="text-regular desc">
           Accédez aux secrets du Web Design en 1 Heure
         </p>
         <div className="demi-spacer" />
@@ -138,15 +138,14 @@ function Courses() {
             d’1h ont pour objectif de maximiser votre temps et votre
             apprentissage. Que vous soyez novice ou que vous cherchiez à affiner
             vos compétences, je vous offre mes clés les plus précieuses que j’ai
-            acquises durant mes années dernières années d’expériences.
+            acquises durant mes dernières années d’expériences.
           </p>
           <p className="text-regular">
             Avec plus de 5 ans d'expérience dans ce domaine, mon parcours m'a
             conduit à la passion du partage de connaissances, principalement via
             des streams sur Twitch. C'est cet enthousiasme pour l'enseignement
-            qui m'a inspiré à créer ce projet. Je serai ravie de vous guider et
-            vous inspirer lors de votre apprentissage dans ce domaine
-            passionnant qui est le webdesign :3
+            qui m'a inspiré à créer ce projet. Les cours seront segmentés en 2 partes : 60% de théorie et 40% de pratique. Je serai ravie de vous guider et
+            vous inspirer lors de votre apprentissage
           </p>
         </div>
         <div className="demi-spacer" />
