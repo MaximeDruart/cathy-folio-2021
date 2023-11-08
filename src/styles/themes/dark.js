@@ -3,7 +3,7 @@ import { darkColors } from "./colors"
 const darkTheme = {}
 
 darkTheme.colors = {
-  background: "#090909",
+  background: "#0A0A0A",
   opacity: "#0000008F",
   panel : "#FFFFFF8F",
   placeholder: "#2E2E2E",

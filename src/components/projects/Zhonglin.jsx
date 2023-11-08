@@ -23,8 +23,7 @@ import z2 from "../../assets/img/works/zhonglin/z2.jpg"
 const Zhonglin = () => {
   return (
     <section>
-      <div className="details no-padding">
-        <Headline name="Grids"/>
+      <div className="details">
           <Solo
             medias={
               [

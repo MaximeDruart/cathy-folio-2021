@@ -9,14 +9,14 @@ import { Parallax } from "react-parallax";
 const StyledProjectDetail = styled.div`
   transition: background-color 0.6s;
   background: ${({ theme }) => theme.colors.background};
-  .parallax {
+  /* .parallax {
     width: 100vw;
     height: 100vh;
     img {
       object-fit: cover !important;
       object-position: top;
     }
-  }
+  } */
   .hero {
     position: relative;
     width: 100vw;
@@ -51,14 +51,14 @@ const StyledProjectDetail = styled.div`
         .infos-intro {
           .text-description {
             width: 100%;
-            margin: 20px 0;
+            margin: 32px 0;
             color: #ffffff69;
           }
         }
         .infos-column {
-          margin-top: 50px;
+          margin-top: 80px;
           .text-h5 {
-            margin: 16px 0 2px 0;
+            margin: 16px 0 6px 0;
             color: white;
           }
           .text-h6 {
@@ -68,14 +68,13 @@ const StyledProjectDetail = styled.div`
       }
       .discover {
         position: absolute;
-        bottom: 8vh;
-        color: white;
+        bottom: 32px;
+        color: #ffffff69;
         text-transform: uppercase;
         text-align: center;
-        opacity: 0.6;
+        font-size: 12px;
         @media (max-width: 800px) {
-          width: 80vw;
-          bottom: 20vh;
+          bottom: 20px;
         }
       }
       @media (max-width: 800px) {
@@ -87,9 +86,6 @@ const StyledProjectDetail = styled.div`
         justify-content: flex-end;
         align-items: center;
         padding: 24vh 10vw;
-        .text-h2 {
-          width: 80%;
-        }
         .infos-column,
         .infos-intro {
           display: none;
@@ -118,7 +114,7 @@ const StyledProjectDetail = styled.div`
     display: none;
     @media (max-width: 600px) {
       display: block;
-      padding: 10vh 5vw 0 5vw;
+      padding: 10vh 4vw 0 4vw;
       .text-h2 {
         font-size: 32px;
       }
@@ -128,10 +124,10 @@ const StyledProjectDetail = styled.div`
         }
       }
       .infos-column {
-        margin-top: 48px;
+        margin-top: 10vh;
       }
       .text-h5 {
-        margin: 14px 0 2px 0;
+        margin: 20px 0 6px 0;
       }
     }
   }
@@ -141,12 +137,12 @@ const StyledProjectDetail = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     @media (max-width: 1000px) {
-      padding: 10vh 5vw;
+      padding: 10vh 4vw;
     }
     @media (max-width: 600px) {
-      padding: 10vh 16px;
+      padding: 10vh 4vw;
       &.no-padding {
-        padding: 0 16px;
+        padding: 0 4vw;
       }
     }
   }
@@ -163,7 +159,7 @@ const StyledProjectDetail = styled.div`
   .next-project {
     display: block;
     width: 100vw;
-    height: 88vh;
+    height: 100vh;
     position: relative;
     cursor: pointer;
 
@@ -183,7 +179,7 @@ const StyledProjectDetail = styled.div`
       transform: translate(-50%, -50%);
       text-align: center;
       color: white;
-      font-size: 100px;
+      font-size: 200px;
       font-weight: 400;
       line-height: 1.2;
       font-family: Ginger;
@@ -247,7 +243,7 @@ const ProjectDetail = ({ project }) => {
               data-aos-duration="800"
               className="project-description"
             >
-              <h2 className="text-h2 title">{project.title}</h2>
+              <h2 className="text-h2 serif title">{project.title}</h2>
               {/* intro */}
               <div className="infos">
                 <div className="infos-intro">

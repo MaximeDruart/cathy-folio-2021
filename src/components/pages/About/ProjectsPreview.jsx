@@ -68,7 +68,7 @@ const Container = styled.div`
 const HomeProjects = () => {
   return (
     <Container>
-      {projectsData.slice(0, 3).map((project, index) => (
+      {projectsData.slice(0, 4).map((project, index) => (
         <HomeProjectDetail key={index} index={index} project={project} />
       ))}
       <div className="project">

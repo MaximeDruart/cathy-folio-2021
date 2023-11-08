@@ -1,10 +1,16 @@
-import React, { useLayoutEffect, useRef } from "react"
-import styled from "styled-components"
-import { motion } from "framer-motion"
-import gsap from "gsap"
+import React, { useLayoutEffect, useRef } from "react";
+import styled from "styled-components";
+// import { motion } from "framer-motion";
+import gsap from "gsap";
 
-const topWords = ["digital", "creative", "design", "UI/UX", "Product"]
-const bottomWords = ["photoshop", "figma", "illustrator", "adobexd", "indesign"]
+const topWords = ["digital", "creative", "design", "UI/UX", "Product"];
+const bottomWords = [
+  "photoshop",
+  "figma",
+  "illustrator",
+  "adobexd",
+  "indesign",
+];
 
 const Container = styled.div`
   .line {
@@ -22,15 +28,11 @@ const Container = styled.div`
     span {
       text-transform: uppercase;
       line-height: auto;
+      font-family: "Ginger";
 
       &:not(:last-child) {
         margin-right: 2vw;
       }
-    }
-  }
-  .top-line {
-    span {
-      font-family: "Ginger";
     }
   }
 
@@ -46,71 +48,82 @@ const Container = styled.div`
       margin-top: 0px;
     }
   }
-`
+`;
 
 const InfiniteText = () => {
-  const topStringRef = useRef(null)
-  const topLineContainer = useRef(null)
-  const bottomStringRef = useRef(null)
-  const bottomLineContainer = useRef(null)
+  const topStringRef = useRef(null);
+  const topLineContainer = useRef(null);
+  const bottomStringRef = useRef(null);
+  const bottomLineContainer = useRef(null);
 
   useLayoutEffect(() => {
-    const topStringWidth = topStringRef.current.getBoundingClientRect().width
-    gsap.to(topLineContainer.current, { x: topStringWidth, ease: "linear", duration: 22, repeat: -1 })
+    const topStringWidth = topStringRef.current.getBoundingClientRect().width;
+    gsap.to(topLineContainer.current, {
+      x: topStringWidth,
+      ease: "linear",
+      duration: 22,
+      repeat: -1,
+    });
 
-    const bottomStringWidth = bottomStringRef.current.getBoundingClientRect().width
-    gsap.to(bottomLineContainer.current, { x: -bottomStringWidth, ease: "linear", duration: 22, repeat: -1 })
-  }, [])
+    const bottomStringWidth =
+      bottomStringRef.current.getBoundingClientRect().width;
+    gsap.to(bottomLineContainer.current, {
+      x: -bottomStringWidth,
+      ease: "linear",
+      duration: 22,
+      repeat: -1,
+    });
+  }, []);
   return (
     <Container>
-      <div ref={topLineContainer} className='line top-line'>
-        <div ref={topStringRef} className='string'>
+      <div ref={topLineContainer} className="line top-line">
+        <div ref={topStringRef} className="string">
           {topWords.map((text, i) => (
-            <span key={i} className='text-h1'>
+            <span key={i} className="text-h1">
               {text}
             </span>
           ))}
         </div>
-        <div className='string'>
+        <div className="string">
           {topWords.map((text, i) => (
-            <span key={i} className='text-h1'>
+            <span key={i} className="text-h1">
               {text}
             </span>
           ))}
         </div>
-        <div className='string'>
+        <div className="string">
           {topWords.map((text, i) => (
-            <span key={i} className='text-h1'>
+            <span key={i} className="text-h1">
               {text}
             </span>
           ))}
         </div>
       </div>
-      <div ref={bottomLineContainer} className='line bottom-line'>
-        <div ref={bottomStringRef} className='string'>
+      <div ref={bottomLineContainer} className="line bottom-line">
+        <div ref={bottomStringRef} className="string">
           {bottomWords.map((text, i) => (
-            <span key={i} className='text-h1'>
+            <span key={i} className="text-h1">
               {text}
             </span>
           ))}
         </div>
-        <div className='string'>
+        <div className="string">
           {bottomWords.map((text, i) => (
-            <span key={i} className='text-h1'>
+            <span key={i} className="text-h1">
               {text}
             </span>
           ))}
         </div>
-        <div className='string'>
+        <div className="string">
           {bottomWords.map((text, i) => (
-            <span key={i} className='text-h1'>
+            <span key={i} className="text-h1">
               {text}
             </span>
           ))}
         </div>
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default InfiniteText
+export default InfiniteText;

@@ -6,14 +6,50 @@ import Slider from "../../shared/Slider";
 import ArrowDownSVG from "../../../assets/icons/arrow_down.svg?component";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import PageTemplate from "../PageTemplate";
-import InfiniteText from "../../shared/InfiniteText";
 import HomeProjects from "./ProjectsPreview";
 import TextSpawn from "../../shared/TextSpawn";
 import FullImage from "../../shared/FullImage";
 import { marginPage } from "../../../styles/globalCustom";
-
 import twitch from "../../../assets/img/about/flower.jpg";
 import resume from "../../../assets/img/about/resume.pdf";
+
+// SLIDER
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
+
+import keycaps from "./../../../assets/img/shop/keycaps.jpg";
+import blossom from "./../../../assets/img/shop/blossom.jpg";
+import key01 from "./../../../assets/img/shop/key01.png";
+import key02 from "./../../../assets/img/shop/key02.png";
+import ProductCard from "../../shop/ProductCard";
+
+const listProducts = [
+  {
+    src: keycaps,
+    name: "key02",
+    price: "???",
+    span: "key02",
+  },
+  {
+    src: key01,
+    name: "key01",
+    price: "???",
+    span: "key01",
+  },
+  {
+    src: key02,
+    name: "keycaps",
+    price: "???",
+    span: "keycaps",
+  },
+  {
+    src: blossom,
+    name: "blossom",
+    price: "???",
+    span: "back",
+  },
+];
 
 const StyledHome = styled.div`
   * {
@@ -30,11 +66,9 @@ const StyledHome = styled.div`
     justify-content: center;
     position: relative;
     @media (max-width: 900px) {
-      justify-content: flex-start;
       ${marginPage}
       @media (max-width: 700px) {
-        justify-content: flex-start;
-        padding: 0;
+        padding: 0vw;
       }
     }
     .text {
@@ -43,98 +77,41 @@ const StyledHome = styled.div`
       flex-wrap: wrap;
       flex-direction: column;
       .line {
+        display: flex;
         text-transform: uppercase;
+        align-items: center;
+        gap: 2vw;
         width: auto;
         white-space: nowrap;
         font-family: Ginger;
-        letter-spacing: 0.03em;
         color: ${({ theme }) => theme.colors.text.standard};
-        font-size: 114px;
-        line-height: 92%;
-
+        font-size: 14vw;
+        line-height: 0.8;
+        height: auto;
         &.first_line {
           text-align: start;
+          .slider-container {
+            width: 15vw;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            @media (max-width: 600px) {
+              width: 50vw;
+              margin-bottom: 16px;
+            }
+          }
         }
         &.second_line {
-          padding-left: 240px;
+          padding-left: 64px;
         }
-        &.third_line {
-          position: relative;
-          padding-left: 150px;
-          .slider-container {
-            position: absolute;
-            top: 80px;
-            right: 160px;
-            &::after {
-              position: absolute;
-              content: "Graphic Designer & front end developer based in paris.";
-              width: 220px;
-              top: -64px;
-              left: -20px;
-              font-family: NeueMontrealRegular;
-              font-size: 10px;
-              text-transform: uppercase;
-              white-space: initial;
-              color: ${({ theme }) => theme.colors.text.standard};
-              line-height: 130%;
-              letter-spacing: 0.01em;
-            }
-            @media (max-width: 900px) {
-              position: relative;
-              top: 24px;
-              left: 35vw;
-              .page {
-                display: none;
-              }
-              &::after {
-                display: block;
-                /* width: 50vw; */
-                position: relative;
-                top: 24px;
-                left: 0;
-              }
-            }
+        @media (max-width: 600px) {
+          flex-direction: column;
+          font-size: 17vw;
+          gap: 16px;
+          &.second_line {
+            padding-left: 0;
           }
         }
-
-        .important_word {
-          font-family: "Ginger";
-          text-transform: uppercase;
-          color: ${({ theme }) => theme.colors.primary1};
-          position: relative;
-          margin-left: 10px;
-        }
-      }
-      /* RESPONSIVE TEXT HERO */
-      @media (max-width: 700px) {
-        justify-content: left;
-        ${marginPage};
-      }
-      @media (max-width: 1400px) {
-        scale: 0.8;
-      }
-      /* @media (max-width: 900px) {
-        scale: 0.65;
-      } */
-      @media (max-width: 900px) {
-        scale: 1;
-        .line,
-        &.first_line,
-        &.second_line,
-        &.third_line {
-          font-size: 5rem;
-          line-height: 100%;
-          padding-left: 0 !important;
-          @media (max-width: 700px) {
-            font-size: 46px;
-          }
-          @media (max-width: 375px) {
-            font-size: 36px;
-          }
-        }
-      }
-      @media (min-width: 2400px) {
-        scale: 1.4;
       }
     }
 
@@ -176,9 +153,6 @@ const StyledHome = styled.div`
   }
 
   .what-i-do {
-    @media (max-width: 700px) {
-      margin-top: 20vh;
-    }
     img,
     video {
       width: 100%;
@@ -207,18 +181,13 @@ const Home = () => {
         <div className="hero">
           <div className="text">
             <div className="line first_line">
-              <TextSpawn>let's discover</TextSpawn>
-            </div>
-            <div className="line second_line important_word">
-              <TextSpawn direction={"LEFT"}>the workspace</TextSpawn>
-            </div>
-            <div className="line third_line">
-              <TextSpawn direction={"LEFT"}>
-                of <span className="important_word">Cathy</span>
-              </TextSpawn>
+              <TextSpawn>Designer</TextSpawn>
               <div className="slider-container">
                 <Slider />
               </div>
+            </div>
+            <div className="line second_line">
+              <TextSpawn direction={"LEFT"}>& Frontend</TextSpawn>
             </div>
           </div>
           <motion.div
@@ -230,7 +199,6 @@ const Home = () => {
             <ArrowDownSVG />
           </motion.div>
         </div>
-        {/* START */}
 
         {/* what I do */}
         <div
@@ -250,12 +218,47 @@ const Home = () => {
           </a>
         </div>
 
-        <div className="spacer" />
+        <div className="demi-spacer" />
 
-        <div className="home-section skills">
-          <div className="separator"></div>
-          <InfiniteText />
-          <div className="separator"></div>
+        {/* DIY */}
+        <div className="home-section">
+          <section className="product_list">
+            {/* <Headline name="Coming soon" /> */}
+
+            {/* SLIDER coming soon */}
+            <Splide
+              options={{
+                type: "loop",
+                gap: "64px",
+                drag: "free",
+                autoWidth: true,
+                arrows: false,
+                pagination: false,
+                autoScroll: {
+                  pauseOnHover: false,
+                  pauseOnFocus: false,
+                  rewind: false,
+                  speed: 2,
+                },
+              }}
+              extensions={{ AutoScroll }}
+            >
+              {listProducts.map((product) => (
+                <React.Fragment key={product.name}>
+                  <SplideSlide>
+                    <ProductCard
+                      src={product.src}
+                      name={product.name}
+                      price={product.price}
+                    />
+                  </SplideSlide>
+                  <SplideSlide>
+                    <span>{product.span}</span>
+                  </SplideSlide>
+                </React.Fragment>
+              ))}
+            </Splide>
+          </section>
         </div>
 
         <div className="spacer" />
@@ -286,7 +289,6 @@ const Home = () => {
 
         <div className="demi-spacer"></div>
         <FullImage src={twitch} alt="moodboard" />
-        <div className="spacer"></div>
       </StyledHome>
     </PageTemplate>
   );

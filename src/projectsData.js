@@ -91,7 +91,7 @@ let projectsData = [
   {
     name: "Architech",
     path: "Architech",
-    title: "Virtual Architectural Innovation",
+    title: "Virtual Architect Innovation",
     coverImg: ArchitechCover,
     coverImgSmall: ArchitechCoverSmall,
     visual1: ArchitechVisual1,

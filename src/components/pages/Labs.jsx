@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { marginPage } from "../../styles/globalCustom";
 import ProductCard from "../shop/ProductCard";
-import logo from "./../../assets/img/shop/logo.svg";
+import logo from "./../../assets/img/shop/labs.svg";
 import Headline from "../shared/modules/Headline";
 import PageTemplate from "../pages/PageTemplate";
 
@@ -18,7 +18,7 @@ import inspiImg from "./../../assets/img/shop/inspi_web.jpg";
 import folder from "./../../assets/img/shop/folder.svg";
 import keycaps from "./../../assets/img/shop/keycaps.jpg";
 import blossom from "./../../assets/img/shop/blossom.jpg";
-import blossomPdf from './../../assets/img/works/blossom/blossom.pdf'
+// import blossomPdf from './../../assets/img/works/blossom/blossom.pdf'
 
 const listRessources = [
   {
@@ -72,7 +72,7 @@ const listFolders = [
     name: "Free fonts",
     price: "0.00",
     link: "/fonts.zip",
-    download: "free fonts"
+    download: "free fonts",
   },
 ];
 
@@ -119,7 +119,7 @@ const StyledShop = styled.div`
     }
   }
   p.desc {
-    margin-top: 8px;
+    margin-top: 16px;
     font-size: 12px;
     opacity: 0.6;
     @media (max-width: 750px) {

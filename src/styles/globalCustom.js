@@ -28,8 +28,8 @@ export default css`
   }
   .text-h2 {
     font-family: "NeueMontrealRegular";
-    font-size: 46px;
-    line-height: 1.2;
+    font-size: 5vw;
+    line-height: 1;
     color: ${({ theme }) => theme.colors.text.standard};
     letter-spacing: 0;
     span.important_word {
@@ -39,11 +39,12 @@ export default css`
     }
 
     @media (max-width: 769px) {
-      font-size: 44px;
+      font-size: 12vw;
     }
 
     &.serif{
       font-family: "Ginger";
+      font-weight: 100;
     }
   }
   .text-h2-5 {
@@ -83,7 +84,8 @@ export default css`
   }
   .text-h5 {
     font-family: "NeueMontrealRegular";
-    font-size: 14px;
+    font-size: 12px;
+    text-transform: uppercase;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.text.standard};
   }
@@ -138,10 +140,10 @@ export default css`
     color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
     font-size: 12px;
-    line-height: 130%;
+    line-height: 140%;
     opacity: 1;
     @media (max-width: 600px) {
-      margin: 10px 0px;
+      margin: 24px 0px;
     }
     a{
       color: ${({ theme }) => theme.colors.text.standard};
@@ -150,13 +152,13 @@ export default css`
 
   .text-centered{
     font-family: "NeueMontrealRegular";
-    font-size: 20px;
+    font-size: 16px;
     // text-transform: uppercase;
     text-align: center;
-    line-height: 130%;
+    line-height: 140%;
     font-weight: 400;
     align-self: center;
-    width: 80%;
+    width: 50%;
     color: ${({ theme }) => theme.colors.text.standard};
     span{
       color: ${({ theme }) => theme.colors.primary1};
@@ -164,6 +166,11 @@ export default css`
     @media (max-width: 1000px) {
       width: 100%;
       font-size: 20px;
+    }
+    @media (max-width: 700px) {
+      width: 100%;
+      text-align: left;
+      font-size: 14px;
     }
   }
 
@@ -284,19 +291,13 @@ export const marginPage = css`
   padding: 0 10vw;
 
   @media (max-width: 769px) {
-    padding: 0 6vw;
+    padding: 0 4vw;
   }
 `
 
 
 export const horizontalPadding = css`
   padding: 0 4vw;
-
-  @media (max-width: 769px) {
-    padding: 0 6vw;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 6vw;
-  }
 `
+
+

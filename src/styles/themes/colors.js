@@ -1,19 +1,19 @@
 const darkColors = [
   {
     name: "amethyst",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
   {
     name: "saphir",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
   {
     name: "kaki",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
   {
     name: "gold",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
 
 ]
@@ -21,19 +21,19 @@ const darkColors = [
 const lightColors = [
   {
     name: "amethyst",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
   {
     name: "saphir",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
   {
     name: "kaki",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
   {
     name: "gold",
-    color: "#9BAFB5",
+    color: "#A8A7CA",
   },
 
 ]

@@ -9,8 +9,8 @@ lightTheme.colors = {
   placeholder: "#2E2E2E",
   primary1: "#A696DD",
   text: {
-    standard: "#323232",
-    text: "#666666",
+    standard: "#444444",
+    text: "#A7A7A7",
     disabled: "#9a9a9a",
     disabled2: "#D6D6D6",
   },

@@ -33,7 +33,7 @@ const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     a{
-      margin-left: 20px;
+      margin-left: 32px;
       color: #ffffff69;
       &.active{
           color: white;

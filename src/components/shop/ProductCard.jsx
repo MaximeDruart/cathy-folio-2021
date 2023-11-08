@@ -14,11 +14,15 @@ const StyledProductCard = styled.div`
   &.folder {
     width: 80px;
     transition: filter 0.6s;
+
     .infos p {
       display: none;
     }
-    &:hover{
-        filter: brightness(120%);
+    &:hover {
+      filter: brightness(120%);
+    }
+    @media screen and (max-width: 768px) {
+      width: calc(100% / 4 - 24px);
     }
   }
   @media screen and (max-width: 768px) {
@@ -29,8 +33,12 @@ const StyledProductCard = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    h5, p{
-        font-size: 12px;
+    h5,
+    p {
+      font-size: 12px;
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+      }
     }
   }
   a.button {

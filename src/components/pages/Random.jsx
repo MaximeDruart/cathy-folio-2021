@@ -25,7 +25,7 @@ import archivesData from "../../archivesData";
 import PageTemplate from "./PageTemplate";
 import { mfIsHoveringCanvas } from "../../store";
 
-import serifFont from "../../assets/fonts/display-new.otf";
+import serifFont from "../../assets/fonts/Chloe-Regular.otf";
 
 import Effects, { myLensDistortionPass } from "../shared/three/Effects";
 

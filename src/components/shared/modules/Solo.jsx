@@ -9,9 +9,9 @@ const StyledSolo = styled.div`
   img,
   .video {
     width: 100%;
-    margin-bottom: 32px;
-    @media (max-width: 769px) {
-      margin-bottom: 16px;
+    margin-bottom: 24px;
+    @media (max-width: 750px) {
+      margin-bottom: 4vw;
     }
   }
 `;
