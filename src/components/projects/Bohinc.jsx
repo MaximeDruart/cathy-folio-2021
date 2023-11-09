@@ -80,7 +80,7 @@ const Bohinc = () => {
 
       <FullImage src={lights} alt='preview' />
       
-      <div className="details">
+      <div className="details responsive">
         <Responsive
           medias={[
             {

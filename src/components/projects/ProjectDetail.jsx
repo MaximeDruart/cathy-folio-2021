@@ -136,11 +136,20 @@ const StyledProjectDetail = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    &.responsive {
+      padding: 0 20vw 15vh 20vw;
+    }
     @media (max-width: 1000px) {
       padding: 10vh 4vw;
+      &.responsive {
+        padding: 0 4vw 10vh 4vw;
+      }
     }
     @media (max-width: 600px) {
-      padding: 10vh 4vw;
+      /* padding: 10vh 4vw;
+      &.responsive {
+        padding: 0 4vw 10vh 4vw;
+      } */
       &.no-padding {
         padding: 0 4vw;
       }

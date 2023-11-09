@@ -59,7 +59,7 @@ const StyledItem = styled.div`
     visibility: visible;
     height: 476.16px;
     opacity: 1;
-    transition: all 0.6s ease;
+    transition: all 0.6s ease-in-out;
     @media (max-width: 1000px) {
       height: 358px;
     }

@@ -10,8 +10,9 @@ const Container = styled.div`
     height: 100vh;
     margin-bottom: 20vh;
     @media (max-width: 765px) {
-      display: none;
+      /* display: none; */
       margin-bottom: 10vh;
+      height: 60vh;
     }
   }
 `;

@@ -144,8 +144,7 @@ function Courses() {
             Avec plus de 5 ans d'expérience dans ce domaine, mon parcours m'a
             conduit à la passion du partage de connaissances, principalement via
             des streams sur Twitch. C'est cet enthousiasme pour l'enseignement
-            qui m'a inspiré à créer ce projet. Les cours seront segmentés en 2 partes : 60% de théorie et 40% de pratique. Je serai ravie de vous guider et
-            vous inspirer lors de votre apprentissage
+            qui m'a inspiré à créer ce projet. Les cours seront segmentés en 2 parties : 60% de théorie et 40% de pratique vous permettant ainsi de vous guider durant votre apprentissage et mise en oeuvre.
           </p>
         </div>
         <div className="demi-spacer" />

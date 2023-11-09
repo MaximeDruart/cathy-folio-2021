@@ -59,7 +59,7 @@ const Discogs = () => {
         />
       </div>
       
-      <FullImage src={fullImage} alt='preview' />
+      <FullImage src={fullImage} alt='preview responsive' />
 
       <div className="details">
         <Responsive

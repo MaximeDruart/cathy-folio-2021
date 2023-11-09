@@ -60,7 +60,7 @@ const Skincare = () => {
 
       <FullImage src={fullImage} alt="preview" />
 
-      <div className="details">
+      <div className="details responsive">
         <Responsive
           medias={[
             {

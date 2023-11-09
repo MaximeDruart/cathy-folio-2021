@@ -65,7 +65,7 @@ const Hublot = () => {
 
       <FullImage src={responsive} alt="prototype" />
 
-      <div className="details">
+      <div className="details responsive">
         <Headline name="Responsive Selection" />
         <Responsive
           medias={[

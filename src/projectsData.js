@@ -57,6 +57,11 @@ import SkincareCover from "./assets/img/works/covers/Skincare.jpg"
 import SkincareCoverSmall from "./assets/img/works/covers-small/Skincare-min.jpg"
 import SkincareVisual1 from "./assets/img/works/Skincare/visual1.jpg"
 
+import Poterie from "./components/projects/Poterie"
+import PoterieCover from "./assets/img/works/covers/Poterie.jpg"
+import PoterieCoverSmall from "./assets/img/works/covers-small/Poterie-min.jpg"
+import PoterieVisual1 from "./assets/img/works/Poterie/visual1.jpg"
+
 
 let projectsData = [
   {
@@ -87,6 +92,20 @@ let projectsData = [
     description:
       "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
       websiteLink: 'https://skincare-v4.netlify.app/'
+  }, 
+  {
+    name: "Poterie",
+    path: "Poterie",
+    title: "Elegant Clay",
+    coverImg: PoterieCover,
+    coverImgSmall: PoterieCoverSmall,
+    visual1: PoterieVisual1,
+    component: Poterie,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React JS, Midjourney"],
+    description:
+      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures was generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
   }, 
   {
     name: "Architech",

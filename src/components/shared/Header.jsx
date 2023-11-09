@@ -67,9 +67,9 @@ const Header = () => {
         <span className="text-description">Paris, France</span>
       </Link>
       <nav>
-        <NavLink className="text-h6" to="/courses">
+        {/* <NavLink className="text-h6" to="/courses">
           ( COURSES ){" "}
-        </NavLink>
+        </NavLink> */}
         <NavLink className="text-h6" to="/labs">
           ( LABS ){" "}
         </NavLink>
