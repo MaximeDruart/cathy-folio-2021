@@ -7,7 +7,7 @@ import b2 from "./../../assets/img/books/b2.png";
 import b3 from "./../../assets/img/books/b3.png";
 import b4 from "./../../assets/img/books/b4.webp";
 import b5 from "./../../assets/img/books/b5.webp";
-import b6 from "./../../assets/img/books/b6.webp";
+import b6 from "./../../assets/img/books/b6.png";
 import b7 from "./../../assets/img/books/b7.jpeg";
 
 const booksList = [
@@ -50,14 +50,14 @@ const booksList = [
     img: b6,
     name: "Made in Japan",
     price:  "39.95€",
-    size: "medium",
+    size: "",
     url: "https://victionary.com/products/made-in-japan-1",
   },
   {
     img: b7,
     name: "Logos from japan",
     price: "14.00€",
-    size: "medium",
+    size: "",
     url: "https://www.counter-print.co.uk/products/logos-from-japan",
   },
 ];
@@ -94,12 +94,9 @@ const StyledProductCanvas = styled.div`
     grid-row: span 1 / span 1;
     aspect-ratio: inherit;
     img.book {
-      aspect-ratio: 2/1;
+      aspect-ratio: 1/1;
       height: auto;
-      width: 20vw;
-      @media (max-width: 1000px) {
-        width: 36vw;
-      }
+      /* width: 18vw; */
     }
     @media (max-width: 1000px) {
       aspect-ratio: 1/1;

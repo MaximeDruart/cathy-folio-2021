@@ -6,7 +6,7 @@ export default css`
     text-decoration: none;
   }
   .text-h1 {
-    font-family: NeueMontrealRegular;
+    font-family: "NeueMontrealRegular";
     font-style: normal;
     font-weight: normal;
     font-size: 100px;
@@ -130,7 +130,7 @@ export default css`
   .text-headline {
       text-transform: uppercase;
       font-size: 10px;
-      font-family: NeueMontrealRegular;
+      font-family: "NeueMontrealRegular";
       color: ${({ theme }) => theme.colors.text.text};
 
   }
@@ -179,7 +179,7 @@ export default css`
     text-transform: uppercase;
     font-size: 10px;
     color: ${({ theme }) => theme.colors.text.text};
-    font-family: NeueMontrealRegular;
+    font-family: "NeueMontrealRegular";
     transition: color 0.5s;
     &:hover {
       transition: color 0.5s;
@@ -224,7 +224,7 @@ export default css`
     pointer-events: auto;
     border: solid 1px #96969640;
     /* border-radius: 30px; */
-    font-family: NeueMontrealRegular;
+    font-family: "NeueMontrealRegular";
     text-transform: uppercase;
     transition: background-color 0.3s; 
     backdrop-filter: blur(6px);

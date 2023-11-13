@@ -8,29 +8,36 @@ const StyledBookCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
   @media (max-width: 600px) {
-    padding: 16px;
+    padding: 12px;
   }
   img.book {
     width: 10vw;
     aspect-ratio: 1/1;
     object-fit: contain;
+    margin-bottom: auto;
+    margin-top: auto;
     @media (max-width: 1000px) {
       width: 24vw;
     }
   }
   .infos {
-    position: relative;
+    padding: 20px;
+    top: 0;
+    position: absolute;
     z-index: 2;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 600px) {
+      padding: 12px;
+    }
   }
   a {
-    position: relative;
+    position: absolute;
     z-index: 2;
     width: 36px;
     height: 36px;
@@ -39,6 +46,14 @@ const StyledBookCard = styled.div`
     justify-content: center;
     align-items: center;
     margin-left: auto;
+    bottom: 20px;
+    right: 20px;
+    @media (max-width: 600px) {
+      width:26px;
+      height:26px;
+      bottom: 12px;
+      right: 12px;
+    }
     img {
       width: 12px;
       height: 12px;
