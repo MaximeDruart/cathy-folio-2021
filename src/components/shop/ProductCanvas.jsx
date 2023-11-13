@@ -48,10 +48,10 @@ const booksList = [
   },
   {
     img: b6,
-    name: "Minimalist Bundle",
-    price: "113.95€",
+    name: "Made in Japan",
+    price:  "39.95€",
     size: "medium",
-    url: "https://victionary.com/products/minimalist-bundle-2",
+    url: "https://victionary.com/products/made-in-japan-1",
   },
   {
     img: b7,
