@@ -99,7 +99,7 @@ const StyledItem = styled.div`
           p {
             width: 300px;
           }
-          a.price {
+          button.price {
             width: 100%;
             margin-top: 32px;
             text-align: center;
@@ -110,9 +110,11 @@ const StyledItem = styled.div`
             gap: 4px;
             transition: all 0.5s;
             padding-bottom: 2px;
+            border: none;
             border-bottom: solid 0.8px;
             color: ${({ theme }) => theme.colors.text.standard};
             width: fit-content;
+            background-color: transparent;
             &:hover {
               letter-spacing: 1px;
               /* background-color: ${({ theme }) => theme.colors.primary1}; */
@@ -199,6 +201,7 @@ function Item({
   level,
   contents,
   time,
+  link,
 }) {
   const [visible, setVisible] = useState(false);
   return (
@@ -208,9 +211,12 @@ function Item({
           {name}
         </h2>
         <div className="actions">
-          <a href="/" target="_blank">
+          <button
+            data-cal-link={link}
+            data-cal-config='{"layout":"month_view"}'
+          >
             <img src={shop} alt="img" />
-          </a>
+          </button>
           <button onClick={() => setVisible(!visible)}>
             <img src={visible ? close : open} alt="img" />
           </button>
@@ -223,9 +229,13 @@ function Item({
             <div className="desc">
               <h5 className="text-h5">description</h5>
               <p className="text-regular">{description}</p>
-              <a className="price text-h6">
+              <button
+                data-cal-link={link}
+                data-cal-config='{"layout":"month_view"}'
+                className="price text-h6"
+              >
                 {price}
-              </a>
+              </button>
             </div>
             <div className="tags_container">
               <div className="tag">

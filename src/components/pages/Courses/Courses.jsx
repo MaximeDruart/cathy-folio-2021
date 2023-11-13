@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { marginPage } from "../../../styles/globalCustom";
 import logo from "./../../../assets/img/courses/logo.svg";
 import Item from "./Course";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 // courses img assets
 
@@ -15,7 +17,7 @@ const coursesList = [
     img: course1,
     description:
       "Cours d'initiation de Figma pour réaliser des maquettes web de manière efficace. Ojectif principal : vous fournir les clés essentielles pour commencer à utiliser Figma de manière autonome. 60% de théorie, et 40% de pratique.",
-    price: "COMING SOON",
+    price: "50€ L'HEURE",
     people: "6",
     level: "easy",
     content: [
@@ -27,25 +29,26 @@ const coursesList = [
       "shortcuts",
     ],
     time: "1H - 1H30",
+    link: "katy-v4/figma-initiation"
   },
-  {
-    name: "branding identity",
-    img: course1,
-    description:
-      "Cours d'identité graphique pour découvrir comment développer votre propre style créatif. Des conseils pour vous démarquer et exprimer votre patte artistique de manière distinctive.",
-    price: "COMING SOON",
-    people: "6",
-    level: "intermédiaire",
-    content: [
-      "Colorimétrie",
-      "Moodboard",
-      "Typographie",
-      "Assets",
-      "Spécialisations",
-      "Propulsion",
-    ],
-    time: "1H",
-  },
+  // {
+  //   name: "branding identity",
+  //   img: course1,
+  //   description:
+  //     "Cours d'identité graphique pour découvrir comment développer votre propre style créatif. Des conseils pour vous démarquer et exprimer votre patte artistique de manière distinctive.",
+  //   price: "COMING SOON",
+  //   people: "6",
+  //   level: "intermédiaire",
+  //   content: [
+  //     "Colorimétrie",
+  //     "Moodboard",
+  //     "Typographie",
+  //     "Assets",
+  //     "Spécialisations",
+  //     "Propulsion",
+  //   ],
+  //   time: "1H",
+  // },
   {
     name: "veille & inspiration",
     img: course1,
@@ -123,11 +126,31 @@ const StyledCourses = styled.div`
 `;
 
 function Courses() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("ui", {
+        styles: { branding: { brandColor: "#AFB6CE" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
   return (
     <PageTemplate hasTransitionPanel={true}>
       <StyledCourses>
-        <img  data-aos="fade" data-aos-duration="600" className="logo" src={logo} alt="img" />
-        <p  data-aos="fade" data-aos-duration="600" className="text-regular desc">
+        <img
+          data-aos="fade"
+          data-aos-duration="600"
+          className="logo"
+          src={logo}
+          alt="img"
+        />
+        <p
+          data-aos="fade"
+          data-aos-duration="600"
+          className="text-regular desc"
+        >
           Accédez aux secrets du Web Design en 1 Heure
         </p>
         <div className="demi-spacer" />
@@ -144,7 +167,9 @@ function Courses() {
             Avec plus de 5 ans d'expérience dans ce domaine, mon parcours m'a
             conduit à la passion du partage de connaissances, principalement via
             des streams sur Twitch. C'est cet enthousiasme pour l'enseignement
-            qui m'a inspiré à créer ce projet. Les cours seront segmentés en 2 parties : 60% de théorie et 40% de pratique vous permettant ainsi de vous guider durant votre apprentissage et mise en oeuvre.
+            qui m'a inspiré à créer ce projet. Les cours seront segmentés en 2
+            parties : 60% de théorie et 40% de pratique vous permettant ainsi de
+            vous guider durant votre apprentissage et mise en oeuvre.
           </p>
         </div>
         <div className="demi-spacer" />
@@ -159,6 +184,7 @@ function Courses() {
             level={course.level}
             time={course.time}
             contents={course.content}
+            link={course.link}
           />
         ))}
       </StyledCourses>

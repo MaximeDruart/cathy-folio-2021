@@ -33,9 +33,13 @@ const StyledProductCard = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    h5,
     p {
       font-size: 10px;
+      font-family: "NeueMontrealRegular";
+      color: ${({ theme }) => theme.colors.text.text};
+      &:nth-child(2) {
+        color: ${({ theme }) => theme.colors.text.standard};
+      }
     }
   }
   a.button {
@@ -46,9 +50,9 @@ const StyledProductCard = styled.div`
     width: 100%;
     object-fit: cover;
     transition: filter 0.5s;
-    &.grayscale{
+    &.grayscale {
       filter: grayscale(100%);
-      &:hover{
+      &:hover {
         filter: grayscale(0);
       }
     }
@@ -63,8 +67,8 @@ function card({ folder, download, link, src, name, price, filter }) {
         <img className={filter} src={src} alt="img" />
       </a>
       <div className="infos">
-        <h5 className="text-h5">{name}</h5>
-        <p className="text-regular">{price} €</p>
+        <p>{name}</p>
+        <p>{price} €</p>
       </div>
       {/* <a className="button big" target="_blank" download={card.download} href={card.link}>{card.linkName}</a> */}
     </StyledProductCard>

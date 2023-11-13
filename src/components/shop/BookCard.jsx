@@ -35,6 +35,15 @@ const StyledBookCard = styled.div`
     @media (max-width: 600px) {
       padding: 12px;
     }
+    p {
+      font-size: 10px;
+      font-family: "NeueMontrealRegular";
+      color: ${({ theme }) => theme.colors.text.standard};
+      text-transform: uppercase;
+      &:nth-child(2) {
+        color: ${({ theme }) => theme.colors.text.disabled};
+      }
+    }
   }
   a {
     position: absolute;
@@ -49,8 +58,8 @@ const StyledBookCard = styled.div`
     bottom: 20px;
     right: 20px;
     @media (max-width: 600px) {
-      width:26px;
-      height:26px;
+      width: 26px;
+      height: 26px;
       bottom: 12px;
       right: 12px;
     }
@@ -70,8 +79,8 @@ function BookCard({ size, name, price, img, delay, url }) {
       className={size}
     >
       <div className="infos">
-        <h5 className="text-headline">{name}</h5>
-        <h5 className="text-headline">{price}</h5>
+        <p>{name}</p>
+        <p>{price}</p>
       </div>
       <img className="book" src={img} alt="img" />
       <a href={url} target="_blank">
