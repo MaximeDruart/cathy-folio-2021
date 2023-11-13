@@ -20,6 +20,8 @@ import keycaps from "./../../assets/img/shop/keycaps.jpg";
 import blossom from "./../../assets/img/shop/blossom.jpg";
 // import blossomPdf from './../../assets/img/works/blossom/blossom.pdf'
 
+import ProductCanvas from "../shop/ProductCanvas";
+
 const listRessources = [
   {
     src: inspiImg,
@@ -176,6 +178,7 @@ function Shop() {
   return (
     <PageTemplate hasTransitionPanel={true}>
       <StyledShop>
+        {/* introduction */}
         <img
           data-aos="fade"
           data-aos-duration="600"
@@ -184,8 +187,19 @@ function Shop() {
           alt="logo"
         />
         {/* <h1 className="text-h2">( KT.<span>LABS</span> )</h1> */}
-        <p  data-aos="fade" data-aos-duration="600" className="text-regular desc">Création, passion, transmission.</p>
+        <p
+          data-aos="fade"
+          data-aos-duration="600"
+          className="text-regular desc"
+        >
+          Création, passion, transmission.
+        </p>
 
+        {/* Book case */}
+        <section className="product_list">
+          <Headline name="Book case" />
+          <ProductCanvas />
+        </section>
         {/* FREE RESSOURCES */}
         <section className="product_list">
           <Headline name="Free ressources" />
