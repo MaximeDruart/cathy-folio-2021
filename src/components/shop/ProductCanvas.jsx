@@ -6,59 +6,59 @@ import b1 from "./../../assets/img/books/b1.png";
 import b2 from "./../../assets/img/books/b2.png";
 import b3 from "./../../assets/img/books/b3.png";
 import b4 from "./../../assets/img/books/b4.webp";
-import b5 from "./../../assets/img/books/b5.png";
-import b6 from "./../../assets/img/books/b6.jpeg";
+import b5 from "./../../assets/img/books/b5.webp";
+import b6 from "./../../assets/img/books/b6.webp";
 import b7 from "./../../assets/img/books/b7.jpeg";
 
 const booksList = [
   {
     img: b1,
-    name: "book 1",
-    price: "4.00€",
+    name: "design{h}ers",
+    price: "39.95€",
     size: "",
-    url: "/",
+    url: "https://victionary.com/products/design-h-ers-1?variant=35147436425378",
   },
   {
     img: b2,
-    name: "book 2",
-    price: "4.00€",
+    name: "printable",
+    price: "39.95€",
     size: "",
-    url: "/",
+    url: "https://victionary.com/products/printable",
   },
   {
     img: b3,
-    name: "book 3",
-    price: "4.00€",
+    name: "palette mini series",
+    price: "29.95€",
     size: "",
-    url: "/",
+    url: "https://victionary.com/collections/art-design/products/palette-mini-06-transparent?variant=41122084880546",
   },
   {
     img: b4,
-    name: "book 4",
-    price: "4.00€",
+    name: "Palette 08 : Iridiscent",
+    price: "39.95€",
     size: "",
-    url: "/",
+    url: "https://victionary.com/products/palette-08-iridescent-1",
   },
   {
     img: b5,
-    name: "book 5",
-    price: "4.00€",
+    name: "Less is more",
+    price: "39.95€",
     size: "large",
-    url: "/",
+    url: "https://victionary.com/collections/all/products/less-is-more-20th-anniversary-edition-1?variant=42134128656626",
   },
   {
     img: b6,
-    name: "book 6",
-    price: "4.00€",
+    name: "Minimalist Bundle",
+    price: "113.95€",
     size: "medium",
-    url: "/",
+    url: "https://victionary.com/products/minimalist-bundle-2",
   },
   {
     img: b7,
-    name: "book 7",
-    price: "4.00€",
+    name: "Logos from japan",
+    price: "14.00€",
     size: "medium",
-    url: "/",
+    url: "https://www.counter-print.co.uk/products/logos-from-japan",
   },
 ];
 
