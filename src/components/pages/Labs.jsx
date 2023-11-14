@@ -12,40 +12,16 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 
 // import figma_template from './../../assets/img/shop/figma_template.fig'
-import figmaImg from "./../../assets/img/shop/figma_starter.jpg";
-import reactImg from "./../../assets/img/shop/react_starter.jpg";
-import inspiImg from "./../../assets/img/shop/inspi_web.jpg";
+
 import folder from "./../../assets/img/shop/folder.svg";
 import keycaps from "./../../assets/img/shop/keycaps.jpg";
 import blossom from "./../../assets/img/shop/blossom.jpg";
 // import blossomPdf from './../../assets/img/works/blossom/blossom.pdf'
 
 import ProductCanvas from "../shop/ProductCanvas";
+import RessourceCanvas from "../shop/RessourceCanvas";
 import Calendar from "./Courses/Calendar";
 
-const listRessources = [
-  {
-    src: inspiImg,
-    name: "Inspi Web",
-    price: "0.00",
-    link: "https://mica-farm-042.notion.site/Webdesign-103235638be74397b1a561f8d37ae9aa",
-    span: "inspiWeb",
-  },
-  {
-    src: figmaImg,
-    name: "Figma Starter",
-    price: "0.00",
-    link: "https://www.figma.com/file/A6R9JTu0UfdyUOTzxK2yqw/Project-Template?type=design&node-id=0%3A1&mode=design&t=DUrXoJT1e9v0MqP4-1",
-    span: "figma",
-  },
-  {
-    src: reactImg,
-    name: "Starter React",
-    price: "0.00",
-    link: "https://github.com/CathyDolle/template",
-    span: "react",
-  },
-];
 
 const listFolders = [
   {
@@ -68,14 +44,6 @@ const listFolders = [
     name: "Design",
     price: "0.00",
     link: "https://arc.net/folder/F9B9869D-A2AA-4F42-B08E-76F84599E314",
-  },
-  {
-    src: folder,
-    folder: "folder",
-    name: "Free fonts",
-    price: "0.00",
-    link: "/fonts.zip",
-    download: "free fonts",
   },
 ];
 
@@ -197,10 +165,10 @@ function Shop() {
         </p>
 
         {/* Calendar */}
-        {/* <section className="product_list">
+        <section className="product_list">
           <Headline name="Calendrier de l'avent" />
           <Calendar />
-        </section> */}
+        </section>
 
         {/* Book case */}
         <section className="product_list">
@@ -210,9 +178,9 @@ function Shop() {
         {/* FREE RESSOURCES */}
         <section className="product_list">
           <Headline name="Free ressources" />
-
+          <RessourceCanvas />
           {/* SLIDER Ressources */}
-          <Splide
+          {/* <Splide
             data-aos="fade"
             data-aos-duration="800"
             options={{
@@ -246,7 +214,7 @@ function Shop() {
                 </SplideSlide>
               </React.Fragment>
             ))}
-          </Splide>
+          </Splide> */}
         </section>
 
         {/* ARC FOLDERRS */}
