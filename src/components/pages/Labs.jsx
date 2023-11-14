@@ -21,6 +21,7 @@ import blossom from "./../../assets/img/shop/blossom.jpg";
 // import blossomPdf from './../../assets/img/works/blossom/blossom.pdf'
 
 import ProductCanvas from "../shop/ProductCanvas";
+import Calendar from "./Courses/Calendar";
 
 const listRessources = [
   {
@@ -194,6 +195,12 @@ function Shop() {
         >
           Création, passion, transmission.
         </p>
+
+        {/* Calendar */}
+        {/* <section className="product_list">
+          <Headline name="Calendrier de l'avent" />
+          <Calendar />
+        </section> */}
 
         {/* Book case */}
         <section className="product_list">

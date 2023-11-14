@@ -20,6 +20,10 @@ import ProjectDetail from "./components/projects/ProjectDetail";
 import { AnimatePresence } from "framer-motion";
 import StyleSwitcher from "./components/shared/StyleSwitcher";
 
+// LEGALS
+import CGV from "./components/pages/Legals/CGV.jsx";
+import Mentions from "./components/pages/Legals/Mentions.jsx";
+
 const App = () => {
   AOS.init({
     duration: 2000,
@@ -52,12 +56,15 @@ const App = () => {
             <AnimatePresence exitBeforeEnter initial={true}>
               <Switch location={location} key={location.pathname}>
                 {projectRoutes}
+                <Route path="/cgv" component={CGV} />
+                <Route path="/mentions" component={Mentions} />
                 <Route path="/about" exact component={Home} />
                 <Route path="/courses" exact component={Courses} />
                 <Route path="/labs" exact component={Labs} />
                 <Route path="/Capsule" component={Capsule} />
                 <Route path="/random" exact component={Random} />
                 <Route path="/" component={Works} />
+                {/* legals */}
               </Switch>
             </AnimatePresence>
           )}

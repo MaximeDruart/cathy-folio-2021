@@ -71,6 +71,10 @@ export default css`
     font-family: "NeueMontrealRegular";
     font-size: 30px;
     color: ${({ theme }) => theme.colors.text.standard};
+    &.serif{
+      font-family: "Ginger";
+      font-weight: 100;
+    }
   }
   .text-h4 {
     font-family: "NeueMontrealRegular";

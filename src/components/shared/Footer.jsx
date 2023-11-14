@@ -3,6 +3,7 @@ import React from "react";
 import Headline from "./modules/Headline";
 import styled from "styled-components";
 import { marginPage } from "../../styles/globalCustom";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Container = styled.div`
   ${marginPage};
@@ -167,7 +168,10 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <div className="right"></div>
+          <div className="right">
+            <Link className="text-link" to='/cgv'>CGV</Link>
+            <Link className="text-link" to='/mentions'>Mentions légales</Link>
+          </div>
         </div>
       </div>
     </Container>

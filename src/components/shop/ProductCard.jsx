@@ -14,8 +14,8 @@ const StyledProductCard = styled.div`
   &.folder {
     width: 80px;
     transition: filter 0.6s;
-
-    .infos p {
+    gap: 2px;
+    .infos p.price{
       display: none;
     }
     &:hover {
@@ -68,7 +68,7 @@ function card({ folder, download, link, src, name, price, filter }) {
       </a>
       <div className="infos">
         <p>{name}</p>
-        <p>{price} €</p>
+        <p className="price">{price} €</p>
       </div>
       {/* <a className="button big" target="_blank" download={card.download} href={card.link}>{card.linkName}</a> */}
     </StyledProductCard>

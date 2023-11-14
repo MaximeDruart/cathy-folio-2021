@@ -16,7 +16,7 @@ const coursesList = [
     name: "figma initiation",
     img: course1,
     description:
-      "Cours d'initiation de Figma pour réaliser des maquettes web de manière efficace. Ojectif principal : vous fournir les clés essentielles pour commencer à utiliser Figma de manière autonome. 60% de théorie, et 40% de pratique.",
+      "Cours d'initiation de Figma pour réaliser des maquettes web de manière efficace. Ojectif principal : vous fournir les clés essentielles pour commencer à utiliser Figma de manière autonome.",
     price: "50€ L'HEURE",
     people: "6",
     level: "easy",
@@ -151,13 +151,13 @@ function Courses() {
           data-aos-duration="600"
           className="text-regular desc"
         >
-          Accédez aux secrets du Web Design en 1 Heure
+          Les conseils pratiques du Webdesign en 1H
         </p>
         <div className="demi-spacer" />
         <div className="intro" data-aos="fade" data-aos-duration="800">
           <p className="text-regular">
             Quick Courses a été conçu spécialement pour ceux et celles qui
-            souhaiteraient se lancer dans le domaine du web design. Ces sessions
+            souhaiteraient se lancer dans le domaine du webdesign. Ces sessions
             d’1h ont pour objectif de maximiser votre temps et votre
             apprentissage. Que vous soyez novice ou que vous cherchiez à affiner
             vos compétences, je vous offre mes clés les plus précieuses que j’ai
