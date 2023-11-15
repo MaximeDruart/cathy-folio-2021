@@ -63,6 +63,10 @@ const Container = styled.div`
         }
       }
     }
+    .right{
+      display: flex;
+      gap: 16px;
+    }
     .small-line {
       font-size: 10px;
       margin-top: -20px;
@@ -131,7 +135,7 @@ const Footer = () => {
         <div className="small-line">
           <div className="left text-link">@2021</div>
           <ul className="socials">
-            <li>
+            {/* <li>
               <a
                 className="text-link"
                 href="https://www.linkedin.com/in/cathy-dolle/?originalSubdomain=fr"
@@ -139,7 +143,7 @@ const Footer = () => {
               >
                 linkedin
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 className="text-link"

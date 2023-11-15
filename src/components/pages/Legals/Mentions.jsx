@@ -1,7 +1,43 @@
 import React from "react";
 import PageTemplate from "../PageTemplate";
 import styled from "styled-components";
+import Headline from "../../shared/modules/Headline";
 import { marginPage } from "../../../styles/globalCustom";
+
+const contentsList = [
+  {
+    headline: "info 01",
+    title: "Éditeur",
+    text: `Cathy Dollé, auto-entrepreneuse enregistrée sous le numéro SIRET 907 438 840 00015, spécialisée dans la formation sur le web design, le branding et domaines connexes.`,
+  },
+  {
+    headline: "info 02",
+    title: "Contact",
+    text: `Pour toute question ou demande, veuillez contacter Cathy Dollé par e-mail à cathy.dolle@live.fr ou par téléphone au +336 52 81 19 79.`,
+  },
+  {
+    headline: "Info 3",
+    title: "Hébergement",
+    text: `Le site est hébergé par OVH SAS, société au capital de 10 174 560 €, inscrite au RCS Lille Métropole sous le numéro 424 761 419 00045, située au 2 rue Kellermann, 59100 Roubaix, France.`,
+  },
+  {
+    headline: "Info 4",
+    title: "Propriété intellectuelle",
+    text: `Les éléments du site tels que les textes, images, graphismes et logos sont la propriété exclusive de Cathy Dollé, sauf mentions contraires. Toute reproduction non autorisée est interdite.`,
+  },
+  {
+    headline: "Info 5",
+    title: "Protection des données personnelles :",
+    text: `Conformément aux dispositions de la loi « informatique et libertés » et du RGPD, tout utilisateur dispose d'un droit d'accès, de rectification et d'opposition aux données personnelles le concernant.
+    `,
+  },
+  {
+    headline: "Info 6",
+    title: "Droit applicable :",
+    text: `Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront compétents.
+    `,
+  },
+];
 
 const StyledMentions = styled.div`
   width: 100%;
@@ -10,37 +46,47 @@ const StyledMentions = styled.div`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   ${marginPage};
+  h1 {
+    text-align: center;
+  }
+  .content {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @media (max-width: 769px) {
+      width: 60%;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
 `;
 
 function Mentions() {
   return (
     <PageTemplate hasTransitionPanel={true}>
       <StyledMentions>
-        <h1>mentions</h1>
-        <p>
-          Le Contrat a pour objet de définir les modalités d’accès et
-          d'utilisation de la Plateforme par l’Utilisateur. Tout Utilisateur
-          souhaitant accéder à la Plateforme doit avoir préalablement consulté
-          le Contrat. En outre, lors de son inscription, l'Utilisateur est
-          invité à accepter le Contrat en cochant la case prévue à cet effet. Si
-          l'Utilisateur refuse de se conformer à l'une quelconque des
-          obligations et conditions contenues dans le Contrat, il doit renoncer
-          à accéder à la plateforme éditée par TJJ et à l’utiliser.
-          L'Utilisateur déclare être majeur, ou être un mineur émancipé, ou, si
-          ce n'est pas le cas, avoir obtenu le consentement de ses parents ou de
-          ses représentants légaux pour accéder à la Plateforme et à l’utiliser.
-          TJJ se réserve le droit de modifier à tout moment le Contrat. Toute
-          modification prendra effet immédiatement à compter de la mise en ligne
-          de la nouvelle version du Contrat sur la Plateforme. L'Utilisateur
-          s'engage donc à consulter régulièrement le Contrat pour prendre
-          connaissance des modifications y ayant été apportées. L'Utilisateur
-          est libre de se désinscrire et d’arrêter tout utilisation du site
-          édité par TJJ si le Contrat modifié ne lui convient pas. A défaut, il
-          sera réputé accepter sans réserve la nouvelle version du Contrat.
-        </p>
+        <h1 className="text-h2 serif">
+          Conditions générales
+          <br />
+          de vente
+        </h1>
+        {contentsList.map((content) => (
+          <React.Fragment key={content.headline}>
+            <Headline name={content.headline} />
+            <div className="content">
+              <h2 className="text-h3 serif">{content.title}</h2>
+              <p className="text-regular">{content.text}</p>
+            </div>
+          </React.Fragment>
+        ))}
       </StyledMentions>
     </PageTemplate>
   );
