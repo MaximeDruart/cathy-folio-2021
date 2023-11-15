@@ -17,7 +17,7 @@ const coursesList = [
     img: course1,
     description:
       "Cours d'initiation de Figma pour réaliser des maquettes web de manière efficace. Ojectif principal : vous fournir les clés essentielles pour commencer à utiliser Figma de manière autonome.",
-    price: "50€ L'HEURE",
+    price: "25€ L'HEURE (-50%)",
     people: "6",
     level: "easy",
     content: [
