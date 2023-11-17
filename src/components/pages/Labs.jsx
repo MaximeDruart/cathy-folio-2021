@@ -165,10 +165,10 @@ function Shop() {
         </p>
 
         {/* Calendar */}
-        <section className="product_list">
+        {/* <section className="product_list">
           <Headline name="Calendrier de l'avent" />
           <Calendar />
-        </section>
+        </section> */}
 
         {/* Book case */}
         <section className="product_list">
