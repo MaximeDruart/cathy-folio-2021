@@ -7,6 +7,7 @@ import user from "./../../../assets/img/courses/user.svg";
 import clock from "./../../../assets/img/courses/clock.svg";
 import skill from "./../../../assets/img/courses/skill.svg";
 import { useState } from "react";
+import Video from "./../../shared/modules/Video";
 
 const StyledItem = styled.div`
   width: 100%;
@@ -63,7 +64,7 @@ const StyledItem = styled.div`
     @media (max-width: 1000px) {
       height: 358px;
     }
-    img {
+    video {
       height: 400px;
       aspect-ratio: 1/1;
       @media (max-width: 1000px) {
@@ -273,7 +274,7 @@ function Item({
               </ul>
             </div>
           </div>
-          <img src={img} alt="img" />
+          <Video src={img}/>
         </div>
       </div>
     </StyledItem>

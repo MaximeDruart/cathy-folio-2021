@@ -90,7 +90,6 @@ const Container = styled.div`
           margin: 0 24px;
         }
         @media (max-width: 750px) {
-          width: 100%;
           justify-content: space-between;
           li {
             margin: 5px 6px;

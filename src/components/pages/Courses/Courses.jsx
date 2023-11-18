@@ -9,12 +9,14 @@ import { useEffect } from "react";
 
 // courses img assets
 
-import course1 from "./../../../assets/img/courses/course1.png";
+import coaching from "./../../../assets/img/courses/coaching.mp4";
+import figma from "./../../../assets/img/courses/figma.mp4";
+import inspi from "./../../../assets/img/courses/inspi.mp4";
 
 const coursesList = [
   {
     name: "figma initiation",
-    img: course1,
+    img: figma,
     description:
       "Cours d'initiation de Figma pour réaliser des maquettes web de manière efficace. Ojectif principal : vous fournir les clés essentielles pour commencer à utiliser Figma de manière autonome.",
     price: "25€ L'HEURE (-50%)",
@@ -29,11 +31,11 @@ const coursesList = [
       "shortcuts",
     ],
     time: "1H - 1H30",
-    link: "katy-v4/figma-initiation"
+    link: "katy-v4/figma-initiation",
   },
   // {
   //   name: "branding identity",
-  //   img: course1,
+  //   img: coaching,
   //   description:
   //     "Cours d'identité graphique pour découvrir comment développer votre propre style créatif. Des conseils pour vous démarquer et exprimer votre patte artistique de manière distinctive.",
   //   price: "COMING SOON",
@@ -51,18 +53,19 @@ const coursesList = [
   // },
   {
     name: "veille & inspiration",
-    img: course1,
+    img: inspi,
     description:
-      "Cours dédié à la recherche d'inspiration: astuces de veille, création de moodboard percutants. Conseils et outils pratiques afin de mettre en place des concepts visuels uniques.",
-    price: "COMING SOON",
+      "Cours dédié à la recherche d'inspiration: astuces de veille, création de moodboard et d'itentité web. Conseils et outils pratiques afin de mettre en place des concepts visuels uniques sur Figma.",
+    price: "35€ L'HEURE (-30%)",
     people: "6",
     level: "intermédiaire",
     content: ["veille", "moodboard", "inspiration", "outils", "concepts"],
-    time: "1H",
+    time: "1H - 1H30",
+    link: "katy-v4/inspiration-identite-web",
   },
   {
     name: "Design Mentoring",
-    img: course1,
+    img: coaching,
     description:
       "Session sur-mesure où je vous accompagne personnellement dans le développement de votre projet. Aide, feedbacks, et conseils en design personnalisés. Veuillez noter qu'un briefing de votre projet est requis avant la séance.",
     price: "COMING SOON",
