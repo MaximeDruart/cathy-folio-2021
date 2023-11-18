@@ -65,8 +65,8 @@ const StyledItem = styled.div`
       height: 358px;
     }
     video {
-      height: 400px;
-      aspect-ratio: 1/1;
+      height: 400px !important;
+      aspect-ratio: 1/1 !important;
       @media (max-width: 1000px) {
         display: none;
       }
