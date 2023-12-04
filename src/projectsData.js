@@ -105,7 +105,7 @@ let projectsData = [
     role: "Designer, Developer",
     techs: ["Figma, React JS, Midjourney"],
     description:
-      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures was generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
+      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
       websiteLink: "https://poterie.netlify.app/"
   }, 
   {
