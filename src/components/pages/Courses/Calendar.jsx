@@ -2,12 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import CalendarCard from "./CalendarCard";
 
-
 const cardsList = [
   {
-    name: "courses",
+    name: "keycap",
+    number: "1",
+    winner: "tang_xvt",
+  },
+  {
+    name: "keycap",
     number: "3",
     size: "landscape",
+    winner: "Niikk0",
   },
   {
     name: "courses",
@@ -68,11 +73,6 @@ const cardsList = [
   },
   {
     name: "courses",
-    number: "1",
-    winner: "catnoom",
-  },
-  {
-    name: "courses",
     number: "13",
   },
   {
@@ -81,13 +81,15 @@ const cardsList = [
     size: "portrait",
   },
   {
-    name: "courses",
+    name: "keycap",
     number: "2",
+    winner: "pog_stream",
   },
   {
     name: "courses",
     number: "4",
     size: "large",
+    winner: "Wann_R",
   },
   {
     name: "courses",
