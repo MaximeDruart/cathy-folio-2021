@@ -15,8 +15,9 @@ const cardsList = [
     winner: "Niikk0",
   },
   {
-    name: "courses",
+    name: "Keycaps",
     number: "5",
+    winner: 'LeiSua'
   },
   {
     name: "courses",
@@ -52,6 +53,7 @@ const cardsList = [
     name: "courses",
     number: "6",
     size: "portrait",
+    winner: "calflauren"
   },
   {
     name: "courses",
@@ -63,8 +65,9 @@ const cardsList = [
     number: "21",
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "7",
+    winner: 'RayleehHS'
   },
   {
     name: "courses",
