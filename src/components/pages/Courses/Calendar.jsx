@@ -24,9 +24,10 @@ const cardsList = [
     number: "16",
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "12",
     size: "portrait",
+    winner: "xdp__"
   },
   {
     name: "courses",
@@ -79,9 +80,10 @@ const cardsList = [
     number: "13",
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "9",
     size: "portrait",
+    winner: "deformotion"
   },
   {
     name: "keycap",
@@ -99,22 +101,25 @@ const cardsList = [
     number: "19",
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "11",
     size: "portrait",
+    winner: "nyxthoo"
   },
   {
     name: "courses",
     number: "22",
   },
   {
-    name: "courses",
+    name: "courses Three JS - 50%",
     number: "10",
     size: "landscape",
+    winner:'code: KATY0D6B8F1E - KATY9F9DD6E7'
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "8",
+    winner: "Dixies"
   },
 ];
 
