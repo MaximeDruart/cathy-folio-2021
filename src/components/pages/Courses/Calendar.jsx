@@ -20,8 +20,9 @@ const cardsList = [
     winner: 'LeiSua'
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "16",
+    winner:"Foxof846"
   },
   {
     name: "keycaps",
@@ -30,9 +31,10 @@ const cardsList = [
     winner: "xdp__"
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "18",
     size: "landscape",
+    winner: "NoYami_"
   },
   {
     name: "courses",
@@ -41,14 +43,16 @@ const cardsList = [
   {
     name: "courses",
     number: "14",
+    winner: "ofholic"
   },
   {
     name: "courses",
     number: "20",
   },
   {
-    name: "courses",
+    name: "Ubereat",
     number: "17",
+    winner: "reikoarts_ut"
   },
   {
     name: "courses",
@@ -71,13 +75,15 @@ const cardsList = [
     winner: 'RayleehHS'
   },
   {
-    name: "courses",
+    name: "ThreeJS",
     number: "15",
     size: "large",
+    winner: "kiox"
   },
   {
-    name: "courses",
+    name: "keycaps",
     number: "13",
+    winner:"Teloru"
   },
   {
     name: "keycaps",
