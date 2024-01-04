@@ -39,6 +39,7 @@ const cardsList = [
   {
     name: "courses",
     number: "23",
+    winner: "djmaliboy (english boy)"
   },
   {
     name: "courses",
@@ -46,8 +47,9 @@ const cardsList = [
     winner: "ofholic"
   },
   {
-    name: "courses",
+    name: "figma course",
     number: "20",
+    winner: "mickah_"
   },
   {
     name: "Ubereat",
@@ -61,13 +63,15 @@ const cardsList = [
     winner: "calflauren"
   },
   {
-    name: "courses",
+    name: "BLOSSOM",
     number: "24",
     size: "large",
+    winner: "kirikikikou"
   },
   {
-    name: "courses",
+    name: "ThreeJS",
     number: "21",
+    winner: "Kelbyyyy"
   },
   {
     name: "keycaps",
@@ -103,8 +107,9 @@ const cardsList = [
     winner: "Wann_R",
   },
   {
-    name: "courses",
+    name: "keycap",
     number: "19",
+    winner: "brakhe"
   },
   {
     name: "keycaps",
@@ -113,8 +118,9 @@ const cardsList = [
     winner: "nyxthoo"
   },
   {
-    name: "courses",
+    name: "Figurine Léa",
     number: "22",
+    winner: "iWaaze"
   },
   {
     name: "courses Three JS - 50%",
