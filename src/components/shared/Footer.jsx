@@ -43,7 +43,8 @@ const Container = styled.div`
           &:hover {
             transform: translateY(-100%);
           }
-          span.post {
+          span.post, a {
+            color: ${({ theme }) => theme.colors.primary1};
             position: absolute;
             left: 0;
             top: 100%;
@@ -63,7 +64,7 @@ const Container = styled.div`
         }
       }
     }
-    .right{
+    .right {
       display: flex;
       gap: 16px;
     }
@@ -125,7 +126,7 @@ const Footer = () => {
               an
               <span className="word">
                 <span> email</span>
-                <span className="post"> email</span>
+                <a href="mailto:cathy.dolle@live.fr" className="post"> email</a>
               </span>
             </span>
           </motion.div>
@@ -172,8 +173,12 @@ const Footer = () => {
             </li>
           </ul>
           <div className="right">
-            <Link className="text-link" to='/cgv'>CGV</Link>
-            <Link className="text-link" to='/mentions'>Mentions légales</Link>
+            <Link className="text-link" to="/cgv">
+              CGV
+            </Link>
+            <Link className="text-link" to="/mentions">
+              Mentions légales
+            </Link>
           </div>
         </div>
       </div>
