@@ -70,9 +70,9 @@ const Header = () => {
         <NavLink className="text-h6" to="/courses">
           ( COURSES ){" "}
         </NavLink>
-        <NavLink className="text-h6" to="/labs">
+        {/* <NavLink className="text-h6" to="/labs">
           ( LABS ){" "}
-        </NavLink>
+        </NavLink> */}
         <NavLink className="text-h6" to="/about">
           ( ABOUT ){" "}
         </NavLink>
