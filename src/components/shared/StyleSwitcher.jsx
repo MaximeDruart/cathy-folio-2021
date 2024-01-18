@@ -59,7 +59,7 @@ const StyledStyleSwitcher = styled.div`
     display: flex;
     @media (max-width: 700px) {
       a {
-        :nth-child(2) {
+        :nth-child(3) {
           display: none;
         }
       }
