@@ -59,7 +59,7 @@ const StyledStyleSwitcher = styled.div`
     display: flex;
     @media (max-width: 700px) {
       a {
-        :nth-child(3) {
+        :nth-child(2) {
           display: none;
         }
       }
@@ -89,8 +89,8 @@ const StyleSwitcher = () => {
         <NavLink exact to="/">
           ( Works )
         </NavLink>
-        <a href="https://labsv4.com/">( LABS_V4 )</a>
         <NavLink to="/random">( Random )</NavLink>
+        <a href="https://labsv4.com/">( LABS_V4 )</a>
       </nav>
       <div className="style">
         <div className="style">
