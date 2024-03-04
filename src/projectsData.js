@@ -79,6 +79,36 @@ let projectsData = [
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   }, 
   {
+    name: "Ceramic",
+    path: "Poterie",
+    title: "Elegant Clay",
+    coverImg: PoterieCover,
+    coverImgSmall: PoterieCoverSmall,
+    visual1: PoterieVisual1,
+    component: Poterie,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React JS, Midjourney"],
+    description:
+      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
+      websiteLink: "https://poterie.netlify.app/"
+  }, 
+  {
+    name: "Skincare",
+    path: "Skincare",
+    title: "Skincare Remastered",
+    coverImg: SkincareCover,
+    coverImgSmall: SkincareCoverSmall,
+    visual1: SkincareVisual1,
+    component: Skincare,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
+      websiteLink: 'https://skincare-v4.netlify.app/'
+  }, 
+  {
     name: "Arcane",
     path: "arcane",
     title: "We lie when we are afraid",
@@ -121,21 +151,6 @@ let projectsData = [
       "Blossom: A white paper created as part of my final year of Master's in digital creation at ESD Paris, with the objective of guiding individuals to discover their identity through an authentic portfolio",
   }, 
   {
-    name: "Poterie",
-    path: "Poterie",
-    title: "Elegant Clay",
-    coverImg: PoterieCover,
-    coverImgSmall: PoterieCoverSmall,
-    visual1: PoterieVisual1,
-    component: Poterie,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React JS, Midjourney"],
-    description:
-      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
-      websiteLink: "https://poterie.netlify.app/"
-  }, 
-  {
     name: "Type",
     path: "Type",
     title: "Type Department",
@@ -149,21 +164,6 @@ let projectsData = [
     description:
       "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
   },
-  {
-    name: "Skincare",
-    path: "Skincare",
-    title: "Skincare Remastered",
-    coverImg: SkincareCover,
-    coverImgSmall: SkincareCoverSmall,
-    visual1: SkincareVisual1,
-    component: Skincare,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React"],
-    description:
-      "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
-      websiteLink: 'https://skincare-v4.netlify.app/'
-  }, 
   {
     name: "Architech",
     path: "Architech",
