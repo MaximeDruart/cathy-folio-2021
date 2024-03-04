@@ -65,65 +65,6 @@ import PoterieVisual1 from "./assets/img/works/Poterie/visual1.jpg"
 
 let projectsData = [
   {
-    name: "Blossom",
-    path: "blossom",
-    title: "Unleash your full potential",
-    coverImg: BlossomCover,
-    coverImgSmall: BlossomCoverSmall,
-    visual1: BlossomVisual1,
-    component: Blossom,
-    date: "June 2023",
-    role: "Designer, Writer",
-    techs: ["Figma, Photoshop, Blender"],
-    description:
-      "Blossom: A white paper created as part of my final year of Master's in digital creation at ESD Paris, with the objective of guiding individuals to discover their identity through an authentic portfolio",
-  }, 
-  {
-    name: "Skincare",
-    path: "Skincare",
-    title: "Skincare Remastered",
-    coverImg: SkincareCover,
-    coverImgSmall: SkincareCoverSmall,
-    visual1: SkincareVisual1,
-    component: Skincare,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React"],
-    description:
-      "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
-      websiteLink: 'https://skincare-v4.netlify.app/'
-  }, 
-  {
-    name: "Poterie",
-    path: "Poterie",
-    title: "Elegant Clay",
-    coverImg: PoterieCover,
-    coverImgSmall: PoterieCoverSmall,
-    visual1: PoterieVisual1,
-    component: Poterie,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React JS, Midjourney"],
-    description:
-      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
-      websiteLink: "https://poterie.netlify.app/"
-  }, 
-  {
-    name: "Architech",
-    path: "Architech",
-    title: "Virtual Architect Innovation",
-    coverImg: ArchitechCover,
-    coverImgSmall: ArchitechCoverSmall,
-    visual1: ArchitechVisual1,
-    component: Architech,
-    date: "Oct. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, Midjourney, React"],
-    description:
-      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
-    websiteLink: 'https://archi-tech-v4.netlify.app/'
-  }, 
-  {
     name: "Zhong lin",
     path: "zhonglin",
     title: "Creative Photo's",
@@ -137,20 +78,6 @@ let projectsData = [
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   }, 
-  {
-    name: "Type",
-    path: "Type",
-    title: "Type Department",
-    coverImg: typeCover,
-    coverImgSmall: typeCoverSmall,
-    visual1: typeVisual1,
-    component: Type,
-    date: "Dec. 2022",
-    role: "Designer",
-    techs: ["Figma, Photoshop, Protopie"],
-    description:
-      "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
-  },
   {
     name: "Arcane",
     path: "arcane",
@@ -179,6 +106,79 @@ let projectsData = [
     description:
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
+  {
+    name: "Blossom",
+    path: "blossom",
+    title: "Unleash your full potential",
+    coverImg: BlossomCover,
+    coverImgSmall: BlossomCoverSmall,
+    visual1: BlossomVisual1,
+    component: Blossom,
+    date: "June 2023",
+    role: "Designer, Writer",
+    techs: ["Figma, Photoshop, Blender"],
+    description:
+      "Blossom: A white paper created as part of my final year of Master's in digital creation at ESD Paris, with the objective of guiding individuals to discover their identity through an authentic portfolio",
+  }, 
+  {
+    name: "Poterie",
+    path: "Poterie",
+    title: "Elegant Clay",
+    coverImg: PoterieCover,
+    coverImgSmall: PoterieCoverSmall,
+    visual1: PoterieVisual1,
+    component: Poterie,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React JS, Midjourney"],
+    description:
+      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
+      websiteLink: "https://poterie.netlify.app/"
+  }, 
+  {
+    name: "Type",
+    path: "Type",
+    title: "Type Department",
+    coverImg: typeCover,
+    coverImgSmall: typeCoverSmall,
+    visual1: typeVisual1,
+    component: Type,
+    date: "Dec. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop, Protopie"],
+    description:
+      "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
+  },
+  {
+    name: "Skincare",
+    path: "Skincare",
+    title: "Skincare Remastered",
+    coverImg: SkincareCover,
+    coverImgSmall: SkincareCoverSmall,
+    visual1: SkincareVisual1,
+    component: Skincare,
+    date: "Nov. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
+      websiteLink: 'https://skincare-v4.netlify.app/'
+  }, 
+  {
+    name: "Architech",
+    path: "Architech",
+    title: "Virtual Architect Innovation",
+    coverImg: ArchitechCover,
+    coverImgSmall: ArchitechCoverSmall,
+    visual1: ArchitechVisual1,
+    component: Architech,
+    date: "Oct. 2023",
+    role: "Designer, Developer",
+    techs: ["Figma, Midjourney, React"],
+    description:
+      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
+    websiteLink: 'https://archi-tech-v4.netlify.app/'
+  }, 
   {
     name: "Discogs",
     path: "Discogs",
