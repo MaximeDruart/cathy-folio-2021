@@ -67,14 +67,14 @@ const Header = () => {
         <span className="text-description">Paris, France</span>
       </Link>
       <nav>
-        <NavLink className="text-h6" to="/courses">
-          ( COURSES ){" "}
+        <NavLink className="text-h6" to="/random">
+          [ RANDOM ]{" "}
         </NavLink>
         {/* <NavLink className="text-h6" to="/labs">
           ( LABS ){" "}
         </NavLink> */}
         <NavLink className="text-h6" to="/about">
-          ( ABOUT ){" "}
+          [ ABOUT ]{" "}
         </NavLink>
         <div className="mail">
           <a href="mailto:cathy.dolle@live.fr">
