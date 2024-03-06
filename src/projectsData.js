@@ -91,7 +91,7 @@ let projectsData = [
     techs: ["Figma, React JS, Midjourney"],
     description:
       "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
-      websiteLink: "https://poterie.netlify.app/"
+      websiteLink: "https://poterie-katy-v4.vercel.app/"
   }, 
   {
     name: "Skincare",
@@ -106,7 +106,7 @@ let projectsData = [
     techs: ["Figma, React"],
     description:
       "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
-      websiteLink: 'https://skincare-v4.netlify.app/'
+      websiteLink: 'https://skincare-katy-v4.vercel.app/'
   }, 
   {
     name: "Arcane",
@@ -121,6 +121,7 @@ let projectsData = [
     techs: ["AdobeXD, Photoshop"],
     description:
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+      websiteLink:'https://arcane-ruddy.vercel.app/'
   },  
   {
     name: "Bohinc",
@@ -192,7 +193,7 @@ let projectsData = [
     techs: ["Figma, React"],
     description:
       "In the scope of this project, I completely revamped the Discogs website, specialized in vinyl sales, by giving it a fresh design and developing the platform using React. The aim is to provide an outstanding user experience and redefine the standards in the online vinyl music industry.",
-      websiteLink: 'https://discogs-v4.netlify.app/'
+      websiteLink: 'https://discogs-pink.vercel.app/'
   },    
   // {
   //   name: "Branding",
@@ -221,7 +222,7 @@ let projectsData = [
     techs: ["Figma, Photoshop, React"],
     description:
       "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
-    websiteLink: "https://hublotxtakashi.netlify.app/",
+    websiteLink: "https://takashi-ashy.vercel.app/",
   },
   {
     name: "Eden",
