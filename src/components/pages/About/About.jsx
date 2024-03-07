@@ -213,7 +213,7 @@ const Home = () => {
           <Headline name="what I do" />
           <div className="text-centered">
             I am a multidisciplinary{" "}
-            <span className="saol">graphic designer</span> based in Paris, <br/>focus
+            <span className="saol">graphic designer</span> & Front-end developer based in Paris, <br/>focus
             on web design and brand identity.
           </div>
           <a className="button big" href={resume} download="cathy_resume.pdf">
