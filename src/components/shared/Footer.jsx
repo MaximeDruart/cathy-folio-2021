@@ -156,7 +156,7 @@ const Footer = () => {
             <li>
               <a
                 className="text-link"
-                href="https://www.instagram.com/cathydolle/"
+                href="https://www.instagram.com/katy_v4/"
                 target="_blank"
               >
                 instagram

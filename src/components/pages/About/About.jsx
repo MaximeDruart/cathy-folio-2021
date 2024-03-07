@@ -213,9 +213,8 @@ const Home = () => {
           <Headline name="what I do" />
           <div className="text-centered">
             I am a multidisciplinary{" "}
-            <span className="saol">graphic designer</span> based in Paris, focus
-            on web design and brand identity. Currently in internship at{" "}
-            <span className="saol">Immersive Garden</span> as Designer
+            <span className="saol">graphic designer</span> based in Paris, <br/>focus
+            on web design and brand identity.
           </div>
           <a className="button big" href={resume} download="cathy_resume.pdf">
             Download my resume
