@@ -3,10 +3,10 @@ import styled from "styled-components";
 import katy from "./../../assets/img/katy.svg";
 import { Link, NavLink } from "react-router-dom";
 import Mail from "../../assets/icons/mail.svg?component";
-import { horizontalPadding } from "../../styles/globalCustom";
+import { globalPadding } from "../../styles/globalCustom";
 
 const StyledHeader = styled.div`
-  ${horizontalPadding};
+  ${globalPadding};
   mix-blend-mode: difference;
   position: fixed;
   width: 100vw;
@@ -14,7 +14,6 @@ const StyledHeader = styled.div`
   flex-flow: row nowrap;
   align-items: flex-start;
   justify-content: space-between;
-  top: 46px;
   z-index: 100;
   a {
     color: white;
@@ -26,21 +25,18 @@ const StyledHeader = styled.div`
       font-size: 12px;
     }
   }
-  @media (max-width: 700px) {
-    top: 20px;
-  }
   nav {
     display: flex;
     align-items: center;
+    gap: 24px;
+    @media (max-width: 750px) {
+      gap: 20px;
+    }
     a {
-      margin-left: 24px;
       color: #ffffff69;
       &.active {
         color: white;
         text-decoration: line-through;
-      }
-      @media (max-width: 750px) {
-        margin-left: 20px;
       }
     }
   }

@@ -300,7 +300,15 @@ export const marginPage = css`
 
 
 export const horizontalPadding = css`
-  padding: 0 4vw;
+  padding: 0 2.5vw;
+   @media (max-width: 769px) {
+    padding: 0 4vw;
+  }
 `
 
-
+export const globalPadding = css`
+  padding: 2.5vw;
+   @media (max-width: 769px) {
+    padding: 4vw;
+  }
+`
