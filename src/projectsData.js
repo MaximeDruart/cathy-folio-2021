@@ -74,7 +74,7 @@ let projectsData = [
     component: Zhonglin,
     date: "Apr. 2022",
     role: "Designer",
-    techs: ["AdobeXD, Photoshop, Protopie"],
+    techs: ["Figma, Photoshop, Protopie"],
     description:
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   }, 
@@ -88,7 +88,7 @@ let projectsData = [
     component: Arcane,
     date: "Nov. 2021",
     role: "Designer",
-    techs: ["AdobeXD, Photoshop"],
+    techs: ["Figma, Photoshop"],
     description:
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
       websiteLink:'https://arcane-ruddy.vercel.app/'
