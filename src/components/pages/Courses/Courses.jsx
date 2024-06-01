@@ -67,12 +67,13 @@ const coursesList = [
     name: "Design Mentoring",
     img: coaching,
     description:
-      "Session sur-mesure où je vous accompagne personnellement dans le développement de votre projet. Aide, feedbacks, et conseils en design personnalisés. Veuillez noter qu'un briefing de votre projet est requis avant la séance. ",
-    price: "80€ L'HEURE / RDV EN DM",
+      "Session sur-mesure où je vous accompagne personnellement dans le développement de votre projet. Aide, feedbacks, et conseils en design personnalisés. Veuillez noter qu'un briefing de votre projet est requis avant la séance. Possible de choisir votre horaire custom en DM.",
+    price: "80€ L'HEURE",
     people: "1",
     level: "easy",
     content: ["vision", "design", "conseils", "feedbacks", "sur-mesure"],
     time: "1 hour",
+    link: "katy-v4/design-mentoring"
   },
 ];
 
