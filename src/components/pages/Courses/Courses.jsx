@@ -18,8 +18,8 @@ const coursesList = [
     name: "figma initiation",
     img: figma,
     description:
-      "Cours d'initiation de Figma pour réaliser des maquettes web de manière efficace. Ojectif principal : vous fournir les clés essentielles pour commencer à utiliser Figma de manière autonome.",
-    price: "25€ L'HEURE (-50%)",
+      "Cours d'initiation de Figma pour réaliser des maquettes web de manière efficace. Objectif principal : vous fournir les clés essentielles pour commencer à utiliser Figma de manière autonome. Possible de choisir votre horaire custom en DM.",
+    price: "50€ L'HEURE",
     people: "6",
     level: "easy",
     content: [
@@ -55,8 +55,8 @@ const coursesList = [
     name: "veille & inspiration",
     img: inspi,
     description:
-      "Cours dédié à la recherche d'inspiration: astuces de veille, création de moodboard et d'itentité web. Conseils et outils pratiques afin de mettre en place des concepts visuels uniques sur Figma.",
-    price: "35€ L'HEURE (-30%)",
+      "Cours dédié à la recherche d'inspiration: astuces de veille, création de moodboard et d'itentité web. Conseils et outils pratiques afin de mettre en place des concepts visuels uniques sur Figma. Possible de choisir votre horaire custom en DM.",
+    price: "60€ L'HEURE",
     people: "6",
     level: "intermédiaire",
     content: ["veille", "moodboard", "inspiration", "outils", "concepts"],
@@ -67,8 +67,8 @@ const coursesList = [
     name: "Design Mentoring",
     img: coaching,
     description:
-      "Session sur-mesure où je vous accompagne personnellement dans le développement de votre projet. Aide, feedbacks, et conseils en design personnalisés. Veuillez noter qu'un briefing de votre projet est requis avant la séance.",
-    price: "COMING SOON",
+      "Session sur-mesure où je vous accompagne personnellement dans le développement de votre projet. Aide, feedbacks, et conseils en design personnalisés. Veuillez noter qu'un briefing de votre projet est requis avant la séance. ",
+    price: "80€ L'HEURE / RDV EN DM",
     people: "1",
     level: "easy",
     content: ["vision", "design", "conseils", "feedbacks", "sur-mesure"],
