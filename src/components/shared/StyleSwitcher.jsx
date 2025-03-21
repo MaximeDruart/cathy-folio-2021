@@ -70,8 +70,11 @@ const StyleSwitcher = () => {
         <NavLink exact to="/">
           [ Works ]
         </NavLink>
-        <NavLink to="/courses">[ Courses ]</NavLink>
-        <a href="https://labsv4.com/">[ LABS_V4 ]</a>
+        <NavLink className="text-h6" to="/random">
+          [ RANDOM ]{" "}
+        </NavLink>
+        {/* <NavLink to="/courses">[ Courses ]</NavLink>
+        <a href="https://labsv4.com/">[ LABS_V4 ]</a> */}
       </nav>
       <button onClick={toggleDarkMode} className="theme-toggle"></button>
     </StyledStyleSwitcher>

@@ -36,7 +36,6 @@ const StyledProjectDetail = styled.div`
       }
     }
     .project-description {
-      mix-blend-mode: difference;
       position: absolute;
       width: 24vw;
       right: 10vw;
@@ -52,7 +51,6 @@ const StyledProjectDetail = styled.div`
           .text-description {
             width: 80%;
             margin: 32px 0;
-            color: #ffffff69;
           }
         }
         .infos-column {
@@ -60,9 +58,6 @@ const StyledProjectDetail = styled.div`
           .text-h5 {
             margin: 16px 0 6px 0;
             color: white;
-          }
-          .text-h6 {
-            color: #ffffff69;
           }
         }
       }
@@ -72,7 +67,7 @@ const StyledProjectDetail = styled.div`
         color: #ffffff69;
         text-transform: uppercase;
         text-align: center;
-        font-size: 12px;
+        font-size: 10px;
         @media (max-width: 800px) {
           bottom: 20px;
         }
@@ -239,13 +234,6 @@ const ProjectDetail = ({ project }) => {
       <StyledProjectDetail ref={page}>
         <Parallax className="parallax" strength={0} bgImage={project.visual1}>
           <div className="hero">
-            {/* <motion.img
-            onLoad={() => setImageHasLoaded(true)}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: imageHasLoaded ? 1 : 0 }}
-            transition={{ duration: 0.4 }}
-            src={project.visual1}
-          /> */}
             <div className="voile"></div>
             <div
               data-aos="fade-left"

@@ -26,31 +26,27 @@ import typeCover from "./assets/img/works/covers/type.jpg"
 import typeCoverSmall from "./assets/img/works/covers-small/type-min.jpg"
 import typeVisual1 from "./assets/img/works/type/visual1.jpg"
 
-import Eden from "./components/projects/Eden"
-import edenCover from "./assets/img/works/covers/eden.jpg"
-import edenCoverSmall from "./assets/img/works/covers-small/eden-min.jpg"
-import edenVisual1 from "./assets/img/works/eden/visual1.jpg"
-
 import Blossom from "./components/projects/Blossom"
 import BlossomCover from "./assets/img/works/covers/Blossom.jpg"
 import BlossomCoverSmall from "./assets/img/works/covers-small/Blossom-min.jpg"
 import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
 
-// import Branding from "./components/projects/Branding"
-// import BrandingCover from "./assets/img/works/covers/Branding.jpg"
-// import BrandingCoverSmall from "./assets/img/works/covers-small/Branding-min.jpg"
-// import BrandingVisual1 from "./assets/img/works/Branding/visual1.jpg"
 
 import Architech from "./components/projects/Architech"
 import ArchitechCover from "./assets/img/works/covers/Architech.jpg"
 import ArchitechCoverSmall from "./assets/img/works/covers-small/Architech-min.jpg"
 import ArchitechVisual1 from "./assets/img/works/Architech/visual1.webp"
 
-import Discogs from "./components/projects/Discogs"
-import DiscogsCover from "./assets/img/works/covers/Discogs.jpg"
-import DiscogsCoverSmall from "./assets/img/works/covers-small/Discogs-min.jpg"
-import DiscogsVisual1 from "./assets/img/works/Discogs/visual1.jpg"
 
+import Lea from "./components/projects/Lea"
+import LeaCover from "./assets/img/works/covers/Lea.jpg"
+import LeaCoverSmall from "./assets/img/works/covers-small/Lea-min.jpg"
+import LeaVisual1 from "./assets/img/works/Lea/visual1.jpg"
+
+import Ley from "./components/projects/Ley"
+import LeyCover from "./assets/img/works/covers/Ley.jpg"
+import LeyCoverSmall from "./assets/img/works/covers-small/Ley-min.jpg"
+import LeyVisual1 from "./assets/img/works/Ley/visual1.jpg"
 
 import Skincare from "./components/projects/Skincare"
 import SkincareCover from "./assets/img/works/covers/Skincare.jpg"
@@ -93,6 +89,37 @@ let projectsData = [
       "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
       websiteLink:'https://arcane-ruddy.vercel.app/'
   },  
+  {
+    name: "Lea MUA",
+    path: "Lea",
+    title: "Portfolio for Lea MUA",
+    coverImg: LeaCover,
+    coverImgSmall: LeaCoverSmall,
+    visual1: LeaVisual1,
+    component: Lea,
+    date: "Jan. 2024",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "I designed and developed a portfolio website for a talented makeup artist, showcasing her work and expertise in a modern and elegant way. The website features a clean design that highlights her makeup artistry through a carefully curated gallery of her best work.",
+
+  },  
+  {
+    name: "Leana",
+    path: "Ley",
+    title: "Portfolio for Leana",
+    coverImg: LeyCover,
+    coverImgSmall: LeyCoverSmall,
+    visual1: LeyVisual1,
+    component: Ley,
+    date: "Feb. 2024",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "I designed and developed a portfolio website for Leana, a talented photographer based in Dubai. The website showcases her stunning photography work through an elegant and minimalist design that lets her images take center stage.",
+      websiteLink: "https://leanainan.com/"
+
+  }, 
   {
     name: "Ceramic",
     path: "Poterie",
@@ -179,36 +206,7 @@ let projectsData = [
     description:
       "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
     websiteLink: 'https://archi-tech-v4.netlify.app/'
-  }, 
-  {
-    name: "Discogs",
-    path: "Discogs",
-    title: "Discogs Remastered",
-    coverImg: DiscogsCover,
-    coverImgSmall: DiscogsCoverSmall,
-    visual1: DiscogsVisual1,
-    component: Discogs,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React"],
-    description:
-      "In the scope of this project, I completely revamped the Discogs website, specialized in vinyl sales, by giving it a fresh design and developing the platform using React. The aim is to provide an outstanding user experience and redefine the standards in the online vinyl music industry.",
-      websiteLink: 'https://discogs-pink.vercel.app/'
-  },    
-  // {
-  //   name: "Branding",
-  //   path: "branding",
-  //   title: "Personal branding identity",
-  //   coverImg: BrandingCover,
-  //   coverImgSmall: BrandingCoverSmall,
-  //   visual1: BrandingVisual1,
-  //   component: Branding,
-  //   date: "Oct. 2023",
-  //   role: "Designer",
-  //   techs: ["After, Figma, Premiere"],
-  //   description:
-  //     "I've crafted a unique personal brand centered around the minimalist theme. Through a careful selection of clean and simple design elements, I've cultivated a distinct image that embodies simplicity, elegance, and clarity. My minimalist aesthetic reflects my commitment to simplicity in both my personal and professional life.",
-  // }, 
+  },   
   {
     name: "Hublot",
     path: "hublot",
@@ -224,20 +222,6 @@ let projectsData = [
       "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
     websiteLink: "https://takashi-ashy.vercel.app/",
   },
-  {
-    name: "Eden",
-    path: "eden",
-    title: "Nature &",
-    coverImg: edenCover,
-    coverImgSmall: edenCoverSmall,
-    visual1: edenVisual1,
-    component: Eden,
-    date: "June 2023",
-    role: "Designer",
-    techs: ["Midjourney, Photoshop, Figma"],
-    description:
-      "Eden is a new way to inspire designer  et creatives with help of AI like midjourney or stable diffusion. We tried it on the Spring 2012 Collection of KOCHE a Famous fashion brand from Paris. This Collection mix Tech & Nature.",
-  }
 ]
 
 projectsData = projectsData.map((project, index) => ({

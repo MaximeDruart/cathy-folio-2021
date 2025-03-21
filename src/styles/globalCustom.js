@@ -144,7 +144,7 @@ export default css`
     color: ${({ theme }) => theme.colors.text.text};
     margin: 20px 0px;
     font-size: 12px;
-    line-height: 140%;
+    line-height: 110%;
     opacity: 1;
     @media (max-width: 600px) {
       margin: 24px 0px;
@@ -300,14 +300,14 @@ export const marginPage = css`
 
 
 export const horizontalPadding = css`
-  padding: 0 2.5vw;
+  padding: 0 1.5vw;
    @media (max-width: 769px) {
     padding: 0 4vw;
   }
 `
 
 export const globalPadding = css`
-  padding: 2.5vw;
+  padding: 1.5vw;
    @media (max-width: 769px) {
     padding: 4vw;
   }

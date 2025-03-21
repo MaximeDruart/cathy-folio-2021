@@ -547,20 +547,20 @@ const Scene = () => {
     let hasChanged = lastPos.current.distanceTo(camera.position) > 0.005;
     speed.current = lerp(
       speed.current,
-      camera.position.distanceTo(lastPos.current),
+      camera.position.distanceTo(lastPos.current) * 0.5,
       0.2,
       delta
     );
     lastPos.current.copy(camera.position);
 
     const focalValue =
-      isHolding.current && !projectIsOpened.current.isOpened ? 0.1 : 0;
+      isHolding.current && !projectIsOpened.current.isOpened ? 0.05 : 0;
     focalStrength.current = lerp(focalStrength.current, focalValue, 0.1, delta);
 
     // plane sensi
     let distortionValue =
       isHolding.current && !projectIsOpened.current.isOpened ? 0 : 0;
-    distortionValue += speed.current * 1;
+    distortionValue += speed.current * 0.2;
     distortionStrength.current = lerp(
       distortionStrength.current,
       distortionValue,
@@ -719,7 +719,7 @@ const Scene = () => {
       id: null,
     };
 
-    speed.current = 1000;
+    speed.current = 0;
   }, []);
 
   return (

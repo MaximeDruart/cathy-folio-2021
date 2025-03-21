@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import katy from "./../../assets/img/katy.svg";
+// import katy from "./../../assets/img/katy.svg";
 import { Link, NavLink } from "react-router-dom";
 import Mail from "../../assets/icons/mail.svg?component";
 import { globalPadding } from "../../styles/globalCustom";
@@ -40,32 +40,18 @@ const StyledHeader = styled.div`
       }
     }
   }
-
-  .logo {
-    width: 36px;
-    height: 36px;
-    pointer-events: auto;
-    margin-left: -4px;
-    svg {
-      width: 100%;
-      height: 100%;
-      fill: gray;
-    }
-  }
 `;
 
 const Header = () => {
   return (
     <StyledHeader>
       <Link to="/" className="text-h6">
-        <img src={katy} alt="logo" />
+        {/* <img src={katy} alt="logo" /> */}
+        <span className="name">CATHY DOLLE</span>
         <br />
         <span className="text-description">Paris, France</span>
       </Link>
       <nav>
-        <NavLink className="text-h6" to="/random">
-          [ RANDOM ]{" "}
-        </NavLink>
         {/* <NavLink className="text-h6" to="/labs">
           ( LABS ){" "}
         </NavLink> */}
