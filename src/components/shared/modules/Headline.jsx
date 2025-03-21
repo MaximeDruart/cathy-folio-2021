@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const StyledHeadline = styled.div`
   width: 100%;
-  margin-top: 124px;
+  /* margin-top: 124px; */
+  margin-top: 15vh;
   text-align: center;
   @media (max-width: 769px) {
     margin-top: 100px;

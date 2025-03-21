@@ -3,9 +3,9 @@ import React from "react"
 // modules
 import Solo from "../shared/modules/Solo"
 import Responsive from "../shared/modules/Responsive"
-import Thanks from "../shared/modules/Thanks"
-
+import Headline from "../shared/modules/Headline"
 import lights from "../../assets/img/works/bohinc/lights.jpg"
+
 
 import peachHome from "../../assets/img/works/bohinc/peachHome.png"
 import peach2 from "../../assets/img/works/bohinc/peach2.png"
@@ -81,6 +81,7 @@ const Bohinc = () => {
       <FullImage src={lights} alt='preview' />
       
       <div className="details responsive">
+      <Headline name="Responsive Selection" />
         <Responsive
           medias={[
             {
@@ -102,10 +103,6 @@ const Bohinc = () => {
           ]}
         />
       </div>
-
-      <Thanks
-        text="Project made with fun and love"
-      />
     </section>
   )
 }

@@ -3,7 +3,6 @@ import React from "react"
 // modules
 import Solo from "../shared/modules/Solo"
 import Responsive from "../shared/modules/Responsive"
-import Thanks from "../shared/modules/Thanks"
 
 import fullImage from "../../assets/img/works/architech/fullImage.webp"
 import motion from "../../assets/img/works/architech/motion.mp4"
@@ -78,10 +77,6 @@ const Architech = () => {
           ]}
         />
       </div>
-     
-      <Thanks
-        text="Content made with love for Elijah <3"
-      />
     </section>
   )
 }

@@ -172,14 +172,14 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <div className="right">
+          {/* <div className="right">
             <Link className="text-link" to="/cgv">
               CGV
             </Link>
             <Link className="text-link" to="/mentions">
               Mentions légales
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </Container>

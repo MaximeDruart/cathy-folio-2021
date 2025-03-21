@@ -2,11 +2,10 @@ import React from "react"
 
 // modules
 import Solo from "../shared/modules/Solo"
-import Thanks from "../shared/modules/Thanks"
 
 import home from "../../assets/img/works/type/home.png"
 import product from "../../assets/img/works/type/product.png"
-import full from "../../assets/img/works/type/full.jpg"
+import full from "../../assets/img/works/type/fullimage.jpg"
 
 
 // videos
@@ -42,7 +41,16 @@ const Type = () => {
             {
               type: "image",
               src: product
-            },
+            }
+          ]}
+        />
+      </div>
+
+      <FullImage src={full} alt='preview' />
+
+      <div className="details">
+        <Solo
+          medias={[
             {
               type: "video",
               src: drag
@@ -62,13 +70,6 @@ const Type = () => {
           ]}
         />
       </div>
-
-      <FullImage src={full} alt='preview' />
-
-      <Thanks
-        text="Made with love at ESD Paris"
-      />
-
     </section>
   )
 }

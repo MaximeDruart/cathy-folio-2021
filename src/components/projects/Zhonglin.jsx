@@ -4,7 +4,6 @@ import React from "react"
 // Modules
 import Headline from "../shared/modules/Headline"
 import Solo from "../shared/modules/Solo"
-import Thanks from "../shared/modules/Thanks"
 
 //video
 import preview from "../../assets/img/works/zhonglin/preview.jpg"
@@ -50,6 +49,19 @@ const Zhonglin = () => {
                   type: "video",
                   src: menu
                 },
+              ]
+            }
+          />
+
+      </div>
+    
+      <FullImage src={preview} alt='prototype' />
+
+      <div className="details">
+      <Solo
+            medias={
+              [
+
                 {
                   type: "video",
                   src: home
@@ -67,12 +79,8 @@ const Zhonglin = () => {
           />
 
       </div>
-    
-      <FullImage src={preview} alt='prototype' />
+  
 
-      <Thanks
-        text="Made with love at ESD Paris"
-      />
     </section>
   )
 }

@@ -10,7 +10,7 @@ import HomeProjects from "./ProjectsPreview";
 import TextSpawn from "../../shared/TextSpawn";
 import FullImage from "../../shared/FullImage";
 import { marginPage } from "../../../styles/globalCustom";
-import twitch from "../../../assets/img/about/flower.jpg";
+import twitch from "../../../assets/img/about/fullimage.jpg";
 import resume from "../../../assets/img/about/resume.pdf";
 
 // SLIDER
@@ -210,64 +210,25 @@ const Home = () => {
           data-aos-duration="1000"
           className="home-section what-i-do"
         >
-          <Headline name="what I do" />
+          <Headline name="Biography" />
           <div className="text-centered">
-            I am a multidisciplinary{" "}
-            <span className="saol">graphic designer</span> & Front-end developer based in Paris, <br/>focus
-            on web design and brand identity.
+          Cathy Dolle is a designer and front-end developer dedicated to crafting bespoke digital experiences for luxury, fashion, and the arts.
+
+          With a background at AKQA and Immersive Garden, she combines branding and web design to create thoughtful, modern identities. Guided by minimalism and attention to detail, she designs tailored experiences that bring each brand’s vision to life with clarity and elegance. She also shares her workflow and creative process through live streams on Twitch.
           </div>
-          <a className="button big" href={resume} download="cathy_resume.pdf">
-            Download my resume
+          <a
+            className="button big"
+            href="https://www.twitch.tv/katy_v4"
+            target="_blank"
+          >
+            Twitch.tv/Katy_v4
           </a>
         </div>
 
         <div className="demi-spacer" />
 
         {/* DIY */}
-        <div className="home-section">
-          <section
-            className="product_list"
-            data-aos="fade"
-            data-aos-duration="800"
-          >
-            {/* <Headline name="Coming soon" /> */}
 
-            {/* SLIDER coming soon */}
-            <Splide
-              options={{
-                type: "loop",
-                gap: "64px",
-                drag: "free",
-                autoWidth: true,
-                arrows: false,
-                pagination: false,
-                autoScroll: {
-                  pauseOnHover: false,
-                  pauseOnFocus: false,
-                  rewind: false,
-                  speed: 2,
-                },
-              }}
-              extensions={{ AutoScroll }}
-            >
-              {listProducts.map((product) => (
-                <React.Fragment key={product.name}>
-                  <SplideSlide>
-                    <ProductCard
-                      src={product.src}
-                      name={product.name}
-                      price={product.price}
-                      filter={product.filter}
-                    />
-                  </SplideSlide>
-                  <SplideSlide>
-                    <span>{product.span}</span>
-                  </SplideSlide>
-                </React.Fragment>
-              ))}
-            </Splide>
-          </section>
-        </div>
 
         <div className="spacer" />
 
@@ -278,22 +239,6 @@ const Home = () => {
         </div>
 
         <div className="spacer" />
-
-        {/* twitch */}
-        <div className="home-section what-i-do">
-          <Headline name="streaming" />
-          <div className="text-centered">
-            I also stream my work on <span className="saol">Twitch</span> feel
-            free to join <span className="saol">(ɔ◔‿◔)ɔ ♥</span>
-          </div>
-          <a
-            className="button big"
-            href="https://www.twitch.tv/katy_v4"
-            target="_blank"
-          >
-            Twitch.tv/Katy_v4
-          </a>
-        </div>
 
         <div className="demi-spacer"></div>
         <FullImage src={twitch} alt="moodboard" />

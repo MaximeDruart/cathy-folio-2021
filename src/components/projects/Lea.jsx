@@ -3,7 +3,6 @@ import React from "react"
 
 // modules
 import Solo from "../shared/modules/Solo"
-import Thanks from "../shared/modules/Thanks"
 
 import lea1 from "../../assets/img/works/lea/lea1.jpg"
 import lea2 from "../../assets/img/works/lea/lea2.jpg"
@@ -39,11 +38,20 @@ const Lea = () => {
             },
             {
               type: "image",
-              src: lea4
-            },
+              src: lea5
+            }
+          ]}
+        />
+      </div>
+
+      <FullImage src={fullimage} alt='prototype' />
+
+      <div className="details">
+        <Solo
+          medias={[
             {
               type: "image",
-              src: lea5         
+              src: lea4         
             },
             {
               type: "image",
@@ -52,21 +60,10 @@ const Lea = () => {
             {
               type: "image",
               src: lea7
-            },
-            {
-              type: "image",
-              src: lea8
             }
           ]}
         />
       </div>
-
-      <FullImage src={fullimage} alt='prototype' />
-
-      <Thanks
-        text="Project made with fun and love"
-      />
-
     </section>
   )
 }

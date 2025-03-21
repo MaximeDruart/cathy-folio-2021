@@ -3,7 +3,6 @@ import React from "react"
 
 // modules
 import Solo from "../shared/modules/Solo"
-import Thanks from "../shared/modules/Thanks"
 import fullImage from "../../assets/img/works/blossom/fullImage.jpg"
 import FullImage from "../shared/FullImage"
 import visual1 from "../../assets/img/works/blossom/duo1.png"
@@ -81,12 +80,6 @@ const Blossom = () => {
       </div>
 
       <FullImage src={fullImage} alt='prototype' />
-      
-
-      <Thanks
-        text="Project réalisé avec amour & passion à l'ESD, Paris pour l'occasion de ma dernière année de master en création digitale."
-      />
-
     </section>
   )
 }

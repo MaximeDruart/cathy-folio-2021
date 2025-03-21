@@ -3,11 +3,10 @@ import React from "react"
 
 // modules
 import Solo from "../shared/modules/Solo"
-import Thanks from "../shared/modules/Thanks"
 
 import jinx from "../../assets/img/works/arcane/jinx.jpg"
 import jinx2 from "../../assets/img/works/arcane/jinx2.jpg"
-import arcane from "../../assets/img/works/arcane/arcane.jpg"
+import arcane from "../../assets/img/works/arcane/fullimage.jpg"
 import silco from "../../assets/img/works/arcane/silco.jpg"
 import silco2 from "../../assets/img/works/arcane/silco2.jpg"
 import vi from "../../assets/img/works/arcane/vi.jpg"
@@ -67,11 +66,6 @@ const Arcane = () => {
       </div>
 
       <FullImage src={arcane} alt='prototype' />
-
-      <Thanks
-        text="Project made with fun and love"
-      />
-
     </section>
   )
 }

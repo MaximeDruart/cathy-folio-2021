@@ -56,7 +56,7 @@ const StyledProjectDetail = styled.div`
         .infos-column {
           margin-top: 80px;
           .text-h5 {
-            margin: 16px 0 6px 0;
+            margin: 16px 0 0px 0;
             color: white;
           }
         }

@@ -3,7 +3,6 @@ import React from "react";
 // modules
 import Solo from "../shared/modules/Solo";
 import Responsive from "../shared/modules/Responsive";
-import Thanks from "../shared/modules/Thanks";
 
 import fullImage from "../../assets/img/works/poterie/fullImage.jpg";
 import video from "../../assets/img/works/poterie/preview.mp4";
@@ -18,7 +17,7 @@ import img8 from "../../assets/img/works/poterie/img8.jpg";
 import img9 from "../../assets/img/works/poterie/img9.jpg";
 import img10 from "../../assets/img/works/poterie/img10.jpg";
 import img11 from "../../assets/img/works/poterie/img11.jpg";
-
+import Headline from "../shared/modules/Headline"
 import FullImage from "../shared/FullImage";
 
 const Poterie = () => {
@@ -62,6 +61,7 @@ const Poterie = () => {
       <FullImage src={fullImage} alt="preview" />
 
       <div className="details responsive">
+      <Headline name="Responsive Selection" />
         <Responsive
           medias={[
             {
@@ -83,8 +83,6 @@ const Poterie = () => {
           ]}
         />
       </div>
-
-      <Thanks text="Content made with love for Elijah <3" />
     </section>
   );
 };

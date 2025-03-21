@@ -2,7 +2,6 @@ import React from 'react';
 
 // modules
 import Solo from "../shared/modules/Solo"
-import Thanks from "../shared/modules/Thanks"
 import Responsive from "../shared/modules/Responsive"
 
 import M2 from "../../assets/img/works/sylvia/M2.png"
@@ -71,11 +70,6 @@ function Branding() {
             ]}
           />
         </div>
-  
-        <Thanks
-          text="Made with love at ESD Paris Credits : Marie Lavotte - Viriany Norodom - Daniel.da.c "
-        />
-  
       </section>
     );
 }

@@ -1,6 +1,5 @@
 // modules
 import Solo from "../shared/modules/Solo";
-import Thanks from "../shared/modules/Thanks";
 import Responsive from "../shared/modules/Responsive";
 import Headline from "../shared/modules/Headline";
 
@@ -88,8 +87,6 @@ const Hublot = () => {
           ]}
         />
       </div>
-
-      <Thanks text="Project made with love" />
     </section>
   );
 };

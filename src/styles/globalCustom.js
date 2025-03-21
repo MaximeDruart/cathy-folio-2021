@@ -156,24 +156,24 @@ export default css`
 
   .text-centered{
     font-family: "Romie";
-    font-size: 16px;
+    font-size: 14px;
     // text-transform: uppercase;
     text-align: center;
     line-height: 140%;
     font-weight: 400;
     align-self: center;
-    width: 50%;
-    color: ${({ theme }) => theme.colors.text.standard};
+    width: 60%;
+    color: ${({ theme }) => theme.colors.text.text};
     span{
       color: ${({ theme }) => theme.colors.primary1};
     }
     @media (max-width: 1000px) {
       width: 100%;
-      font-size: 20px;
+      font-size: 18px;
     }
     @media (max-width: 700px) {
       width: 100%;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 

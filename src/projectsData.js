@@ -1,10 +1,10 @@
 /* eslint-disable no-dupe-keys */
 import { v4 as uuidv4 } from "uuid"
 
-import Arcane from "./components/projects/Arcane"
-import arcaneCover from "./assets/img/works/covers/arcane.jpg"
-import arcaneCoverSmall from "./assets/img/works/covers-small/arcane-min.jpg"
-import arcaneVisual1 from "./assets/img/works/arcane/visual1.jpg"
+// import Arcane from "./components/projects/Arcane"
+// import arcaneCover from "./assets/img/works/covers/arcane.jpg"
+// import arcaneCoverSmall from "./assets/img/works/covers-small/arcane-min.jpg"
+// import arcaneVisual1 from "./assets/img/works/arcane/visual1.jpg"
 
 import Zhonglin from "./components/projects/Zhonglin"
 import ZhonglinCover from "./assets/img/works/covers/zhonglin.jpg"
@@ -26,16 +26,16 @@ import typeCover from "./assets/img/works/covers/type.jpg"
 import typeCoverSmall from "./assets/img/works/covers-small/type-min.jpg"
 import typeVisual1 from "./assets/img/works/type/visual1.jpg"
 
-import Blossom from "./components/projects/Blossom"
-import BlossomCover from "./assets/img/works/covers/Blossom.jpg"
-import BlossomCoverSmall from "./assets/img/works/covers-small/Blossom-min.jpg"
-import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
+// import Blossom from "./components/projects/Blossom"
+// import BlossomCover from "./assets/img/works/covers/Blossom.jpg"
+// import BlossomCoverSmall from "./assets/img/works/covers-small/Blossom-min.jpg"
+// import BlossomVisual1 from "./assets/img/works/Blossom/visual1.jpg"
 
 
-import Architech from "./components/projects/Architech"
-import ArchitechCover from "./assets/img/works/covers/Architech.jpg"
-import ArchitechCoverSmall from "./assets/img/works/covers-small/Architech-min.jpg"
-import ArchitechVisual1 from "./assets/img/works/Architech/visual1.webp"
+// import Architech from "./components/projects/Architech"
+// import ArchitechCover from "./assets/img/works/covers/Architech.jpg"
+// import ArchitechCoverSmall from "./assets/img/works/covers-small/Architech-min.jpg"
+// import ArchitechVisual1 from "./assets/img/works/Architech/visual1.jpg"
 
 
 import Lea from "./components/projects/Lea"
@@ -48,16 +48,26 @@ import LeyCover from "./assets/img/works/covers/Ley.jpg"
 import LeyCoverSmall from "./assets/img/works/covers-small/Ley-min.jpg"
 import LeyVisual1 from "./assets/img/works/Ley/visual1.jpg"
 
-import Skincare from "./components/projects/Skincare"
-import SkincareCover from "./assets/img/works/covers/Skincare.jpg"
-import SkincareCoverSmall from "./assets/img/works/covers-small/Skincare-min.jpg"
-import SkincareVisual1 from "./assets/img/works/Skincare/visual1.jpg"
 
 import Poterie from "./components/projects/Poterie"
 import PoterieCover from "./assets/img/works/covers/Poterie.jpg"
 import PoterieCoverSmall from "./assets/img/works/covers-small/Poterie-min.jpg"
 import PoterieVisual1 from "./assets/img/works/Poterie/visual1.jpg"
 
+import Nicolas from "./components/projects/Nicolas"
+import NicolasCover from "./assets/img/works/covers/Nico.jpg"
+import NicolasCoverSmall from "./assets/img/works/covers-small/Nico-min.jpg"
+import NicolasVisual1 from "./assets/img/works/Nico/visual1.jpg"
+
+import Grace from "./components/projects/Grace"
+import GraceCover from "./assets/img/works/covers/Grace.jpg"
+import GraceCoverSmall from "./assets/img/works/covers-small/Grace-min.jpg"
+import GraceVisual1 from "./assets/img/works/Grace/visual1.jpg"
+
+import Pxp from "./components/projects/Pxp"
+import PxpCover from "./assets/img/works/covers/Pxp.jpg"
+import PxpCoverSmall from "./assets/img/works/covers-small/Pxp-min.jpg"
+import PxpVisual1 from "./assets/img/works/Pxp/visual1.jpg"
 
 let projectsData = [
   {
@@ -75,24 +85,53 @@ let projectsData = [
       "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   }, 
   {
-    name: "Arcane",
-    path: "arcane",
-    title: "We lie when we are afraid",
-    coverImg: arcaneCover,
-    coverImgSmall: arcaneCoverSmall,
-    visual1: arcaneVisual1,
-    component: Arcane,
-    date: "Nov. 2021",
-    role: "Designer",
-    techs: ["Figma, Photoshop"],
+    name: "Hublot",
+    path: "hublot",
+    title: "Hublot x Murakami",
+    coverImg: hublotCover,
+    coverImgSmall: hublotCoverSmall,
+    visual1: hublotVisual1,
+    component: Hublot,
+    date: "Aug. 2022",
+    role: "Designer, Dev",
+    techs: ["Figma, Photoshop, React"],
     description:
-      "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
-      websiteLink:'https://arcane-ruddy.vercel.app/'
-  },  
+      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
+    websiteLink: "https://takashi-ashy.vercel.app/",
+  },
+  {
+    name: "PXP",
+    path: "pxp",
+    title: "PXP",
+    coverImg: PxpCover,
+    coverImgSmall: PxpCoverSmall,
+    visual1: PxpVisual1,
+    component: Pxp,
+    date: "Dec. 2023",
+    role: "Designer, AD",
+    techs: ["Figma, React"],
+    description:
+      "I designed the new art direction and redesigned the e-commerce platform for Project X Paris, a streetwear fashion brand. The project focused on modernizing their visual identity while creating an engaging online shopping experience.",
+  },
+  {
+    name: "Nicolas",
+    path: "Nicolas",
+    title: "Nicolas Rollin",
+    coverImg: NicolasCover,
+    coverImgSmall: NicolasCoverSmall,
+    visual1: NicolasVisual1,
+    component: Nicolas,
+    date: "Mar. 2024",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "I designed and developed a portfolio website for Nicolas Rollin, a talented photographer based in Paris. The website features a clean and minimalist design that elegantly showcases his photography work through a carefully curated gallery.",
+      websiteLink: "https://www.nicolasrollin.com/"
+  },
   {
     name: "Lea MUA",
     path: "Lea",
-    title: "Portfolio for Lea MUA",
+    title: "Makeup Artist Portfolio",
     coverImg: LeaCover,
     coverImgSmall: LeaCoverSmall,
     visual1: LeaVisual1,
@@ -103,6 +142,36 @@ let projectsData = [
     description:
       "I designed and developed a portfolio website for a talented makeup artist, showcasing her work and expertise in a modern and elegant way. The website features a clean design that highlights her makeup artistry through a carefully curated gallery of her best work.",
 
+  }, 
+  // {
+  //   name: "Arcane",
+  //   path: "arcane",
+  //   title: "We lie when we are afraid",
+  //   coverImg: arcaneCover,
+  //   coverImgSmall: arcaneCoverSmall,
+  //   visual1: arcaneVisual1,
+  //   component: Arcane,
+  //   date: "Nov. 2021",
+  //   role: "Designer",
+  //   techs: ["Figma, Photoshop"],
+  //   description:
+  //     "Being an avid League of Legends player, I fell in love with the Arcane series from Riot Games. This made me want to add my creative touch by combining my passions, so I created pages for each main character of the series. I let you admire the result!",
+  //     websiteLink:'https://arcane-ruddy.vercel.app/'
+  // }, 
+  {
+    name: "Grâce",
+    path: "Grace",
+    title: "Grace",
+    coverImg: GraceCover,
+    coverImgSmall: GraceCoverSmall,
+    visual1: GraceVisual1,
+    component: Grace,
+    date: "Mar. 2024",
+    role: "Designer, Developer",
+    techs: ["Figma, React"],
+    description:
+      "I designed and developed a portfolio website for Grace, a talented photographer based in Paris. The website features a clean and minimalist design that elegantly showcases her photography work through a carefully curated gallery.",
+      websiteLink: "https://www.grace-aymone.com/"
   },  
   {
     name: "Leana",
@@ -121,21 +190,6 @@ let projectsData = [
 
   }, 
   {
-    name: "Ceramic",
-    path: "Poterie",
-    title: "Elegant Clay",
-    coverImg: PoterieCover,
-    coverImgSmall: PoterieCoverSmall,
-    visual1: PoterieVisual1,
-    component: Poterie,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React JS, Midjourney"],
-    description:
-      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
-      websiteLink: "https://poterie-katy-v4.vercel.app/"
-  }, 
-  {
     name: "Bohinc",
     path: "bohinc",
     title: "Minimalist Furniture",
@@ -150,35 +204,6 @@ let projectsData = [
       "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
   },
   {
-    name: "Skincare",
-    path: "Skincare",
-    title: "Skincare Remastered",
-    coverImg: SkincareCover,
-    coverImgSmall: SkincareCoverSmall,
-    visual1: SkincareVisual1,
-    component: Skincare,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React"],
-    description:
-      "UI design and front-end development project centered around skincare. Embracing a minimalist aesthetic, I crafted a seamless experience with React that's as clean and soothing as a fresh skincare routine.",
-      websiteLink: 'https://skincare-katy-v4.vercel.app/'
-  }, 
-  {
-    name: "Blossom",
-    path: "blossom",
-    title: "Unleash your full potential",
-    coverImg: BlossomCover,
-    coverImgSmall: BlossomCoverSmall,
-    visual1: BlossomVisual1,
-    component: Blossom,
-    date: "June 2023",
-    role: "Designer, Writer",
-    techs: ["Figma, Photoshop, Blender"],
-    description:
-      "Blossom: A white paper created as part of my final year of Master's in digital creation at ESD Paris, with the objective of guiding individuals to discover their identity through an authentic portfolio",
-  }, 
-  {
     name: "Type",
     path: "Type",
     title: "Type Department",
@@ -192,36 +217,36 @@ let projectsData = [
     description:
       "Redesign of the website Type Department, a fonderie of Typography. Minimalist & Modern interactive design.",
   },
+  // {
+  //   name: "Architech",
+  //   path: "Architech",
+  //   title: "Virtual Architect Innovation",
+  //   coverImg: ArchitechCover,
+  //   coverImgSmall: ArchitechCoverSmall,
+  //   visual1: ArchitechVisual1,
+  //   component: Architech,
+  //   date: "Oct. 2023",
+  //   role: "Designer, Developer",
+  //   techs: ["Figma, Midjourney, React"],
+  //   description:
+  //     "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
+  //   websiteLink: 'https://archi-tech-v4.netlify.app/'
+  // },  
   {
-    name: "Architech",
-    path: "Architech",
-    title: "Virtual Architect Innovation",
-    coverImg: ArchitechCover,
-    coverImgSmall: ArchitechCoverSmall,
-    visual1: ArchitechVisual1,
-    component: Architech,
-    date: "Oct. 2023",
+    name: "Ceramic",
+    path: "Poterie",
+    title: "Ceramic Shop ",
+    coverImg: PoterieCover,
+    coverImgSmall: PoterieCoverSmall,
+    visual1: PoterieVisual1,
+    component: Poterie,
+    date: "Nov. 2023",
     role: "Designer, Developer",
-    techs: ["Figma, Midjourney, React"],
+    techs: ["Figma, React JS, Midjourney"],
     description:
-      "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
-    websiteLink: 'https://archi-tech-v4.netlify.app/'
-  },   
-  {
-    name: "Hublot",
-    path: "hublot",
-    title: "Hublot x Murakami",
-    coverImg: hublotCover,
-    coverImgSmall: hublotCoverSmall,
-    visual1: hublotVisual1,
-    component: Hublot,
-    date: "Aug. 2022",
-    role: "Designer, Dev",
-    techs: ["Figma, Photoshop, React"],
-    description:
-      "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
-    websiteLink: "https://takashi-ashy.vercel.app/",
-  },
+      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
+      websiteLink: "https://poterie-katy-v4.vercel.app/"
+  },  
 ]
 
 projectsData = projectsData.map((project, index) => ({
