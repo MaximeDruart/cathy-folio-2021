@@ -225,9 +225,6 @@ const Home = () => {
           </a>
         </div>
 
-        <div className="demi-spacer" />
-
-        {/* DIY */}
 
 
         <div className="spacer" />
@@ -239,8 +236,6 @@ const Home = () => {
         </div>
 
         <div className="spacer" />
-
-        <div className="demi-spacer"></div>
         <FullImage src={twitch} alt="moodboard" />
       </StyledHome>
     </PageTemplate>

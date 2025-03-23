@@ -49,10 +49,10 @@ import LeyCoverSmall from "./assets/img/works/covers-small/Ley-min.jpg"
 import LeyVisual1 from "./assets/img/works/Ley/visual1.jpg"
 
 
-import Poterie from "./components/projects/Poterie"
-import PoterieCover from "./assets/img/works/covers/Poterie.jpg"
-import PoterieCoverSmall from "./assets/img/works/covers-small/Poterie-min.jpg"
-import PoterieVisual1 from "./assets/img/works/Poterie/visual1.jpg"
+// import Poterie from "./components/projects/Poterie"
+// import PoterieCover from "./assets/img/works/covers/Poterie.jpg"
+// import PoterieCoverSmall from "./assets/img/works/covers-small/Poterie-min.jpg"
+// import PoterieVisual1 from "./assets/img/works/Poterie/visual1.jpg"
 
 import Nicolas from "./components/projects/Nicolas"
 import NicolasCover from "./assets/img/works/covers/Nico.jpg"
@@ -190,20 +190,6 @@ let projectsData = [
 
   }, 
   {
-    name: "Bohinc",
-    path: "bohinc",
-    title: "Minimalist Furniture",
-    coverImg: bohincCover,
-    coverImgSmall: bohincCoverSmall,
-    visual1: bohincVisual1,
-    component: Bohinc,
-    date: "Sept. 2022",
-    role: "Designer",
-    techs: ["Figma, Photoshop"],
-    description:
-      "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
-  },
-  {
     name: "Type",
     path: "Type",
     title: "Type Department",
@@ -232,21 +218,35 @@ let projectsData = [
   //     "Explore a cutting-edge web design project for architecture enthusiasts where AI-generated images take center stage. Midjourney seamlessly combines artificial intelligence and architectural aesthetics, offering a visually stunning experience.",
   //   websiteLink: 'https://archi-tech-v4.netlify.app/'
   // },  
+  // {
+  //   name: "Ceramic",
+  //   path: "Poterie",
+  //   title: "Ceramic Shop ",
+  //   coverImg: PoterieCover,
+  //   coverImgSmall: PoterieCoverSmall,
+  //   visual1: PoterieVisual1,
+  //   component: Poterie,
+  //   date: "Nov. 2023",
+  //   role: "Designer, Developer",
+  //   techs: ["Figma, React JS, Midjourney"],
+  //   description:
+  //     "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
+  //     websiteLink: "https://poterie-katy-v4.vercel.app/"
+  // }, 
   {
-    name: "Ceramic",
-    path: "Poterie",
-    title: "Ceramic Shop ",
-    coverImg: PoterieCover,
-    coverImgSmall: PoterieCoverSmall,
-    visual1: PoterieVisual1,
-    component: Poterie,
-    date: "Nov. 2023",
-    role: "Designer, Developer",
-    techs: ["Figma, React JS, Midjourney"],
+    name: "Bohinc",
+    path: "bohinc",
+    title: "Minimalist Furniture",
+    coverImg: bohincCover,
+    coverImgSmall: bohincCoverSmall,
+    visual1: bohincVisual1,
+    component: Bohinc,
+    date: "Sept. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop"],
     description:
-      "I wanted to create a pottery website, a curated space where artistry meets minimalism. All pictures were generated with Midjourney and shaped with precision on Figma and React, it's a digital canvas highlighting the pure essence of each ceramic creation. Experience the beauty of simplicity in a seamless and immersive exploration of pottery art.",
-      websiteLink: "https://poterie-katy-v4.vercel.app/"
-  },  
+      "Bohinc studio creates work of iconic beauty that honours traditional principles of craft and employs expertise in material and manufacturing techniques. I redesigned their website.",
+  }, 
 ]
 
 projectsData = projectsData.map((project, index) => ({

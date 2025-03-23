@@ -86,10 +86,7 @@ const Container = styled.div`
         display: flex;
         flex-flow: row wrap;
         list-style: none;
-        li {
-          margin-right: 10px;
-          margin: 0 24px;
-        }
+        gap: 24px;
         @media (max-width: 750px) {
           justify-content: space-between;
           li {
@@ -111,7 +108,7 @@ const Footer = () => {
   return (
     <Container>
       <div className="home-section contact">
-        <Headline name="contact me" />
+        <Headline name="work together" />
         <div className="footer-body">
           <motion.a href="mailto:cathy.dolle@live.fr" className="text-h1">
             Drop me
@@ -124,6 +121,7 @@ const Footer = () => {
           >
             <span className="text-h1">
               an
+              <br/>
               <span className="word">
                 <span> email</span>
                 <a href="mailto:cathy.dolle@live.fr" className="post"> email</a>
