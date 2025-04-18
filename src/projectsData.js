@@ -16,6 +16,11 @@ import bohincCover from "./assets/img/works/covers/bohinc.jpg"
 import bohincCoverSmall from "./assets/img/works/covers-small/bohinc-min.jpg"
 import bohincVisual1 from "./assets/img/works/bohinc/visual1.jpg"
 
+import Yeng from "./components/projects/Yeng"
+import YengCover from "./assets/img/works/covers/yeng.jpg"
+import YengCoverSmall from "./assets/img/works/covers-small/yeng-min.jpg"
+import YengVisual1 from "./assets/img/works/Yeng/visual1.jpg"
+
 import Hublot from "./components/projects/Hublot"
 import hublotCover from "./assets/img/works/covers/hublot.jpg"
 import hublotCoverSmall from "./assets/img/works/covers-small/hublot-min.jpg"
@@ -100,18 +105,18 @@ let projectsData = [
     websiteLink: "https://takashi-ashy.vercel.app/",
   },
   {
-    name: "PXP",
-    path: "pxp",
-    title: "PXP",
-    coverImg: PxpCover,
-    coverImgSmall: PxpCoverSmall,
-    visual1: PxpVisual1,
-    component: Pxp,
-    date: "Dec. 2023",
-    role: "Designer, AD",
+    name: "Yeng",
+    path: "yeng",
+    title: "Yeng",
+    coverImg: YengCover,
+    coverImgSmall: YengCoverSmall,
+    visual1: YengVisual1,
+    component: Yeng,
+    date: "Apr. 2025",
+    role: "Designer, Dev",
     techs: ["Figma, React"],
     description:
-      "I designed the new art direction and redesigned the e-commerce platform for Project X Paris, a streetwear fashion brand. The project focused on modernizing their visual identity while creating an engaging online shopping experience.",
+      "Yeng is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
   },
   {
     name: "Nicolas",
@@ -127,6 +132,20 @@ let projectsData = [
     description:
       "I designed and developed a portfolio website for Nicolas Rollin, a talented photographer based in Paris. The website features a clean and minimalist design that elegantly showcases his photography work through a carefully curated gallery.",
       websiteLink: "https://www.nicolasrollin.com/"
+  },
+  {
+    name: "PXP",
+    path: "pxp",
+    title: "PXP",
+    coverImg: PxpCover,
+    coverImgSmall: PxpCoverSmall,
+    visual1: PxpVisual1,
+    component: Pxp,
+    date: "Dec. 2023",
+    role: "Designer, AD",
+    techs: ["Figma, React"],
+    description:
+      "I designed the new art direction and redesigned the e-commerce platform for Project X Paris, a streetwear fashion brand. The project focused on modernizing their visual identity while creating an engaging online shopping experience.",
   },
   {
     name: "Lea MUA",
