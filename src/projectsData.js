@@ -74,22 +74,44 @@ import PxpCover from "./assets/img/works/covers/Pxp.jpg"
 import PxpCoverSmall from "./assets/img/works/covers-small/Pxp-min.jpg"
 import PxpVisual1 from "./assets/img/works/Pxp/visual1.jpg"
 
+import Pierre from "./components/projects/Pierre"
+import PierreCover from "./assets/img/works/covers/Pierre.jpg"
+import PierreCoverSmall from "./assets/img/works/covers-small/Pierre-min.jpg"
+import PierreVisual1 from "./assets/img/works/Pierre/visual1.jpg"
+
 let projectsData = [
   {
-    name: "Zhong lin",
-    path: "zhonglin",
-    title: "Creative Photo's",
-    coverImg: ZhonglinCover,
-    coverImgSmall: ZhonglinCoverSmall,
-    visual1: zhonglinVisual1,
-    component: Zhonglin,
-    date: "Apr. 2022",
-    role: "Designer",
-    techs: ["Figma, Photoshop, Protopie"],
+    name: "Yeng",
+    path: "yeng",
+    title: "Yeng",
+    coverImg: YengCover,
+    coverImgSmall: YengCoverSmall,
+    visual1: YengVisual1,
+    component: Yeng,
+    date: "Apr. 2025",
+    role: "Designer, Dev",
+    techs: ["Figma, React"],
+    websiteLink: "https://yeng.vercel.app/",
     description:
-      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
-  }, 
-  {
+      "Yeng is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  },
+
+  { 
+    name: "Pierre",
+    path: "Pierre",
+    title: "Pierre",
+    coverImg: PierreCover,
+    coverImgSmall: PierreCoverSmall,
+    visual1: PierreVisual1,
+    component: Pierre,
+    date: "May 2025",
+    role: "Designer, Dev",
+    techs: ["Figma, Photoshop, React"],
+    description:
+      "PIERRE CATHALA is a color-first editorial and commercial photographer and art director based in Paris. His style revolves around contrasty, surreal and extravagant sceneries. Often characterized as bold and strong.",
+    websiteLink: "https://pierre-six.vercel.app/",
+  },
+  { 
     name: "Hublot",
     path: "hublot",
     title: "Hublot x Murakami",
@@ -104,20 +126,21 @@ let projectsData = [
       "Hublot did a collaboration with Takashi Murakami, one of my favorite artist. My goal was to redesign the product page. I also challenged myself to develop it",
     websiteLink: "https://takashi-ashy.vercel.app/",
   },
+
   {
-    name: "Yeng",
-    path: "yeng",
-    title: "Yeng",
-    coverImg: YengCover,
-    coverImgSmall: YengCoverSmall,
-    visual1: YengVisual1,
-    component: Yeng,
-    date: "Apr. 2025",
-    role: "Designer, Dev",
-    techs: ["Figma, React"],
+    name: "Zhong lin",
+    path: "zhonglin",
+    title: "Creative Photo's",
+    coverImg: ZhonglinCover,
+    coverImgSmall: ZhonglinCoverSmall,
+    visual1: zhonglinVisual1,
+    component: Zhonglin,
+    date: "Apr. 2022",
+    role: "Designer",
+    techs: ["Figma, Photoshop, Protopie"],
     description:
-      "Yeng is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
-  },
+      "Zhong Lin is a self-taught photographer with a seductive color palette and an eccentricity to her work. I decided to create a modern portfolio for this amazing artist.",
+  }, 
   {
     name: "Nicolas",
     path: "Nicolas",
